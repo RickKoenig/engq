@@ -1,0 +1,26 @@
+// The pixel shader, texture only, just like tex.ps but adds instead of multipying tex by matcolor
+ps_2_0
+
+// interpolated inputs from vertex shader
+dcl t0.xy		// texture uv
+dcl_2d s0	// color sample from texture uv
+
+// constant inputs
+// c6		// mat color
+//	def c20,1,0,0,0
+// code
+// get texture color into r0
+	texld r0, t0,s0 // Stage 0 has the texture color
+	mov r0.r,c6.r
+	mov r0.g,c6.g
+	mov r0.b,c6.b
+//	add r0.r,c6.r,r0.r
+//	add r0.g,c6.g,r0.g
+//	add r0.b,c6.b,r0.b
+	mul r0.a,c6.a,r0.a
+// output final color
+//	mov r0.w,c20.x
+	mov oC0,r0
+
+// outputs
+// oC0 final pixel color

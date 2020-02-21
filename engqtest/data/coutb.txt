@@ -1,0 +1,2 @@
+open coutb.txt at LOCAL 2020_01_10_22_16_14
+close coutfile

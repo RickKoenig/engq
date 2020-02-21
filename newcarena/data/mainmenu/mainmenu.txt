@@ -1,0 +1,35 @@
+statedesc  0 "main menu"
+statedesc  1 braid
+statedesc  2 "simple browser"
+statedesc  3 "\"tritest1 test shadows\""
+statedesc  4 "many"
+statedesc  5 "new carena lobby"
+statedesc  6 "new carena connect"
+//statedesc  7 "new carena old track constructor"
+//statedesc  8 "new carena new track constructor"
+//statedesc  9 "new carena status"
+//statedesc 10 "new carena game"
+statedesc 11 "play ogg theora movies"
+statedesc 12 "marching cube test"
+statedesc 13 "2d float scratch plotter"
+statedesc 14 "match server" // match should start here
+statedesc 15 "match logon"  // or here
+
+# 16 match lobby, don't go here
+//statedesc 17 "match results (test only)"
+//statedesc 18 "match hiscores (test only)"
+//statedesc 19 "match pickgame (test only)"
+//statedesc 20 "match options (test only)"
+
+statedesc 21 "match quickgame, skip using matching server"
+//statedesc 22 "match game1 (test only)"
+statedesc 23 "match register // or here"
+statedesc 24 "match pickserver (test only)"
+statedesc 25 "match title" // or here
+# end match lobby
+statedesc 26 "newton's method"
+statedesc 27 "marble maze"
+statedesc 28 "matrix test"
+statedesc 29 "matrix test 2"
+statedesc 30 "lightup"
+statedesc 31 "riemann hypothesis"

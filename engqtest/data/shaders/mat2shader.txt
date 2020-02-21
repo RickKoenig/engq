@@ -1,0 +1,19 @@
+// global / default / generic mat2shader
+// translate from material name to shader name, default mat2shader.txt file
+// matname shadername
+// keyword * matches any matname left over
+// 'include' is the only keyword, merge filename with current script, matches occur on first match (duplicates)
+
+	include ../racenetdata/globalmat2shader.txt	// main shader library
+	
+// set by 	tooningame 0,1,2		// carmat extensions
+	include ../racenetdata/carmat2shader.txt		// carmat extensions	// include tweek for toon shaders
+//	include ../racenetdata/toon_carmat2shader.txt	// carmat extensions	// include tweek for toon shaders
+//	include ../racenetdata/toon2_carmat2shader.txt	// carmat extensions	// include tweek for toon shaders
+
+	cubemaptest cubemaptest
+//--------------------------------------------------------
+// Anything else not known ? make it a tex/cvert shader ||
+//--------------------------------------------------------
+
+	*			pdiff // pdiff // tex // cvert

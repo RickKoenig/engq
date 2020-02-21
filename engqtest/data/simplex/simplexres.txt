@@ -1,0 +1,74 @@
+shape gametheoryres 0 0 {
+	
+	pbut PBUTGAME
+	856 642
+	160 20
+	"GAME THEORY"
+	
+	pbut PBUTRESET
+	856 682
+	160 20
+	RESET
+	
+	pbut PBUTLOAD
+	856 722
+	160 20
+	LOAD
+	
+	pbut PBUTSAVE
+	856 762
+	160 20
+	SAVE
+	
+	pbut PBUTQUIT
+	856 802
+	160 20
+	QUIT
+	
+	
+	pbut PBUTBIASP
+	1040 642
+	160 20
+	"PAYOFF +"
+	
+	pbut PBUTBIASM
+	1040 682
+	160 20
+	"PAYOFF -"
+	
+	pbut PBUTBIASZ
+	1040 722
+	160 20
+	"PAYOFF 0"
+	
+	pbut PBUTREDUCE
+	1040 762
+	160 20
+	"REDUCE"
+	
+	pbut PBUTSOLVE
+	1040 802
+	160 20
+	"SOLVE"
+	
+	
+	hscroll SCLHDX
+	430 740
+	100 15
+
+	text TEXTDX
+	430 715
+	60 16
+	"dim 8"
+	
+	hscroll SCLHDY
+	630 740
+	100 15
+
+	text TEXTDY
+	630 715
+	60 16
+	"dim 8"
+
+	
+}

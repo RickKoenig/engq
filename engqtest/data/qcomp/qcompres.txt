@@ -1,0 +1,115 @@
+shape quant3res 0 0 {
+
+// file list
+	text TFILE
+	10 10
+	212 10
+	"Files (.qcmp)"
+	
+	listbox LFILES
+	10 30
+	212 130
+
+// current file
+	edit EFILE
+	10 170
+	212 20
+	"current file"
+
+// load save delete
+
+	pbut BLOAD
+	10 200
+	212 20
+	LOAD
+	
+	pbut BSAVE
+	10 230
+	212 20
+	SAVE
+	
+	pbut BDELETE
+	10 270
+	212 20
+	DELETE
+
+	text TQGATES
+	10 330
+	212 10
+	"Select QGate"
+	
+	listbox LQGATES
+	10 350
+	212 180
+	
+	
+	pbut MOREQB
+	1274 40
+	80 20
+	"More Qbits"
+
+	pbut LESSQB
+	1274 80
+	80 20
+	"Less Qbits"
+
+	pbut RESET
+	1274 120
+	80 20
+	RESET
+
+
+	text SHOWMODE
+	1274 160
+	80 20
+	"mode"
+
+	pbut QSTATE
+	1274 200
+	80 20
+	"Q STATE"
+	
+	pbut MATACC
+	1274 240
+	80 20
+	"MATRIX ACC"
+
+	pbut MATCOL
+	1274 280
+	80 20
+	"MATRIX COL"
+	
+	hscroll SLIDEQFXOFFSET
+	550 528
+	266 15
+	
+	
+	text TFILE
+	1274 340
+	80 10
+	"middle"
+	text TFILE
+	1274 348
+	80 10
+	"mouse"
+	text TFILE
+	1274 356
+	80 10
+	"button"
+	text TFILE
+	1274 364
+	80 10
+	"links"
+	text TFILE
+	1274 372
+	80 10
+	"columns"
+
+
+// quit
+	pbut BQUIT
+	10 738
+	120 20
+	QUIT
+	
+}

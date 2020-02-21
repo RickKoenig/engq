@@ -1,0 +1,11 @@
+object box1
+	scale 10 10 10
+	pos -5 20 0
+#	notrans
+
+object tetra
+	scale 10 10 10
+	pos 5 20 0
+#	notrans
+
+littlegee 0

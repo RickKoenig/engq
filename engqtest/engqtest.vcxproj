@@ -1,0 +1,2254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4D76C5EA-DDA1-490F-8476-96163BCB3D1A}</ProjectGuid>
+    <RootNamespace>engqtest</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28127.55</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files %28x86%29\Microsoft DirectX SDK %28April 2007%29\Include</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28April 2007%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files %28x86%29\Microsoft DirectX SDK %28April 2007%29\Include</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28April 2007%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../engq;../lua;../misclibq;../tinyxml;../pnglib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;D3D_DEBUG_INFO;TIXML_USE_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wsock32.lib;winmm.lib;d3d9.lib;dinput8.lib;dsound.lib;dxguid.lib;ddraw.lib;vfw32.lib;d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>engqtestd.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>engqtestd.map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>16777216</StackReserveSize>
+      <StackCommitSize>16777216</StackCommitSize>
+      <LargeAddressAware>true</LargeAddressAware>
+      <TargetMachine>MachineX86</TargetMachine>
+      <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>../engq;../lua;../misclibq;../tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;TIXML_USE_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wsock32.lib;winmm.lib;d3d9.lib;dinput8.lib;dsound.lib;dxguid.lib;ddraw.lib;vfw32.lib;d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>engqtest.exe</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>engqtest.map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <OptimizeReferences />
+      <EnableCOMDATFolding />
+      <LinkTimeCodeGeneration />
+      <TargetMachine>MachineX86</TargetMachine>
+      <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Data">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Xml">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\engine7testdata\constructed\bigtrack.trk" />
+    <None Include="data\engine7testdata\constructed\default.trk" />
+    <None Include="data\engine7testdata\constructed\forks.trk" />
+    <None Include="data\engine7testdata\constructed\jackiep.trk" />
+    <None Include="data\engine7testdata\constructed\loop1.trk" />
+    <None Include="data\engine7testdata\constructed\loop1_a.trk" />
+    <None Include="data\engine7testdata\constructed\newdefault.trk" />
+    <None Include="data\engine7testdata\constructed\testnew1.trk" />
+    <None Include="data\engine7testdata\constructed\testnew1x.trk" />
+    <None Include="data\engine7testdata\constructed\testnew2.trk" />
+    <None Include="data\engine7testdata\constructed\testnew3.trk" />
+    <None Include="data\engine7testdata\constructed\track1.trk" />
+    <None Include="data\gfxtest\seq0.ifl" />
+    <None Include="data\gfxtest\seqnew.ifl" />
+    <None Include="data\luascripts\default.lua" />
+    <None Include="data\luascripts\inside1.lua" />
+    <None Include="data\luascripts\inside2.lua" />
+    <None Include="data\luascripts\lualib.lua" />
+    <None Include="data\luascripts\npc1.lua" />
+    <None Include="data\luascripts\npc2.lua" />
+    <None Include="data\luascripts\npc3.lua" />
+    <None Include="data\luascripts\npc4.lua" />
+    <None Include="data\luascripts\outside.lua" />
+    <None Include="data\luascripts\player1.lua" />
+    <None Include="data\luascripts\scratch.lua" />
+    <None Include="data\luascripts\test1.lua" />
+    <None Include="data\luascripts\test2.lua" />
+    <None Include="data\qcomp\1qubit gates.qcmp" />
+    <None Include="data\qcomp\2qubit gates.qcmp" />
+    <None Include="data\qcomp\3qubit gates.qcmp" />
+    <None Include="data\qcomp\4qubit gates.qcmp" />
+    <None Include="data\qcomp\5qubit gates.qcmp" />
+    <None Include="data\qcomp\6qubit gates.qcmp" />
+    <None Include="data\qcomp\90 degrees Y.qcmp" />
+    <None Include="data\qcomp\bell state 00.qcmp" />
+    <None Include="data\qcomp\bell state 01.qcmp" />
+    <None Include="data\qcomp\bell state 10.qcmp" />
+    <None Include="data\qcomp\bell state 11.qcmp" />
+    <None Include="data\qcomp\bell state measure.qcmp" />
+    <None Include="data\qcomp\BellState measure CP 30.qcmp" />
+    <None Include="data\qcomp\blank.qcmp" />
+    <None Include="data\qcomp\bloch test.qcmp" />
+    <None Include="data\qcomp\Cat 4.qcmp" />
+    <None Include="data\qcomp\Cat 5.qcmp" />
+    <None Include="data\qcomp\cat state.qcmp" />
+    <None Include="data\qcomp\cnot hadamard test.qcmp" />
+    <None Include="data\qcomp\control gates.qcmp" />
+    <None Include="data\qcomp\Controlled H test 0.qcmp" />
+    <None Include="data\qcomp\Controlled H test 1.qcmp" />
+    <None Include="data\qcomp\Controlled Hadamard.qcmp" />
+    <None Include="data\qcomp\Controlled X.qcmp" />
+    <None Include="data\qcomp\Controlled Y.qcmp" />
+    <None Include="data\qcomp\Controlled Z.qcmp" />
+    <None Include="data\qcomp\Controlled Z2.qcmp" />
+    <None Include="data\qcomp\cz gate.qcmp" />
+    <None Include="data\qcomp\detect phase 0.qcmp" />
+    <None Include="data\qcomp\detect phase 1.qcmp" />
+    <None Include="data\qcomp\detect phase 2.qcmp" />
+    <None Include="data\qcomp\detect phase 3.qcmp" />
+    <None Include="data\qcomp\detect phase.qcmp" />
+    <None Include="data\qcomp\Deutsch-Jozsa.qcmp" />
+    <None Include="data\qcomp\entangle 1.qcmp" />
+    <None Include="data\qcomp\factor.qcmp" />
+    <None Include="data\qcomp\G gate.qcmp" />
+    <None Include="data\qcomp\game bot left.qcmp" />
+    <None Include="data\qcomp\game bot mid.qcmp" />
+    <None Include="data\qcomp\game bot right.qcmp" />
+    <None Include="data\qcomp\game mid left.qcmp" />
+    <None Include="data\qcomp\game mid mid.qcmp" />
+    <None Include="data\qcomp\game mid right.qcmp" />
+    <None Include="data\qcomp\game top left.qcmp" />
+    <None Include="data\qcomp\game top mid.qcmp" />
+    <None Include="data\qcomp\game top right.qcmp" />
+    <None Include="data\qcomp\GHZ XXX.qcmp" />
+    <None Include="data\qcomp\GHZ XYY.qcmp" />
+    <None Include="data\qcomp\GHZ YXY.qcmp" />
+    <None Include="data\qcomp\GHZ YYX.qcmp" />
+    <None Include="data\qcomp\GHZ.qcmp" />
+    <None Include="data\qcomp\grover2link.qcmp" />
+    <None Include="data\qcomp\grover3link.qcmp" />
+    <None Include="data\qcomp\grover4link.qcmp" />
+    <None Include="data\qcomp\grover5link.qcmp" />
+    <None Include="data\qcomp\grover6link.qcmp" />
+    <None Include="data\qcomp\hadnot.qcmp" />
+    <None Include="data\qcomp\hads.qcmp" />
+    <None Include="data\qcomp\mermin square.qcmp" />
+    <None Include="data\qcomp\nothad.qcmp" />
+    <None Include="data\qcomp\phase test 0.qcmp" />
+    <None Include="data\qcomp\Quantum Fourier Transform.qcmp" />
+    <None Include="data\qcomp\qubit 2.qcmp" />
+    <None Include="data\qcomp\s and t gates.qcmp" />
+    <None Include="data\qcomp\splitter mirror detect.qcmp" />
+    <None Include="data\qcomp\splitter mirror.qcmp" />
+    <None Include="data\qcomp\teleport.qcmp" />
+    <None Include="data\qcomp\teleport2.qcmp" />
+    <None Include="data\qcomp\test bloch.qcmp" />
+    <None Include="data\qcomp\testsave.qcmp" />
+    <None Include="data\qcomp\W state.qcmp" />
+    <None Include="data\qcomp\you dont know 0FY.qcmp" />
+    <None Include="data\qcomp\you dont know 1FY.qcmp" />
+    <None Include="data\qcomp\you dont know AFY.qcmp" />
+    <None Include="data\qcomp\you dont know NFY.qcmp" />
+    <None Include="data\racenetdata\2009_testcheck\newcheck.cfg" />
+    <None Include="data\racenetdata\2009_testcheck\newcheck2.cfg" />
+    <None Include="data\racenetdata\2009_track_5b\track_5.cfg" />
+    <None Include="data\racenetdata\Coliseum\Coliseum.cfg" />
+    <None Include="data\racenetdata\config\tdefault.cfg" />
+    <None Include="data\racenetdata\GhostCity\ghostcity.cfg" />
+    <None Include="data\racenetdata\headon\headon.cfg" />
+    <None Include="data\racenetdata\onlineopt\game.cfg" />
+    <None Include="data\racenetdata\onlineopt\newlobby.cfg" />
+    <None Include="data\racenetdata\Prehistoric\prehistoric.cfg" />
+    <None Include="data\racenetdata\Space\space.cfg" />
+    <None Include="data\racenetdata\TarPits\tarpits.cfg" />
+    <None Include="data\racenetdata\thefalls\thefalls.cfg" />
+    <None Include="data\searcher\back.html" />
+    <None Include="data\searcher\built.html" />
+    <None Include="data\searcher\exclude.lst" />
+    <None Include="data\searcher\front.html" />
+    <None Include="data\searcher\got_A.html" />
+    <None Include="data\searcher\got_G.html" />
+    <None Include="data\searcher\got_Y.html" />
+    <None Include="data\searcher\got_Y_back.html" />
+    <None Include="data\searcher\head.html" />
+    <None Include="data\searcher\include.lst" />
+    <None Include="data\searcher\index.html" />
+    <None Include="data\searcher\indexo.html" />
+    <None Include="data\searcher\indexo2o.html" />
+    <None Include="data\searcher\indexoo.html" />
+    <None Include="data\searcher\middle.html" />
+    <None Include="data\searcher\middle2.html" />
+    <None Include="data\searcher\page0.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="data\searcher\page0.js" />
+    <None Include="data\searcher\redir.html" />
+    <None Include="data\searcher\redir_foot.html" />
+    <None Include="data\searcher\redir_head.html" />
+    <None Include="data\searcher\searcher_res.ui" />
+    <None Include="data\searcher\tail.html" />
+    <None Include="data\shaders\cvert.asm" />
+    <None Include="data\shaders\cvert.ps" />
+    <None Include="data\shaders\cvert.vs" />
+    <None Include="data\shaders\env.ps" />
+    <None Include="data\shaders\env.vs" />
+    <None Include="data\shaders\makeshadowmap.ps" />
+    <None Include="data\shaders\makeshadowmap.vs" />
+    <None Include="data\shaders\pdiff.ps" />
+    <None Include="data\shaders\pdiff.vs" />
+    <None Include="data\shaders\pdiffspec.ps" />
+    <None Include="data\shaders\pdiffspec.vs" />
+    <None Include="data\shaders\pnormalmap.ps" />
+    <None Include="data\shaders\pnormalmap.vs" />
+    <None Include="data\shaders\shadowmapviewer.ps" />
+    <None Include="data\shaders\shadowmapviewer.vs" />
+    <None Include="data\shaders\tex.ps" />
+    <None Include="data\shaders\tex.vs" />
+    <None Include="data\shaders\tex2c.ps" />
+    <None Include="data\shaders\tex2c.vs" />
+    <None Include="data\shaders\texadd.ps" />
+    <None Include="data\shaders\useshadowmap.ps" />
+    <None Include="data\shaders\useshadowmap.vs" />
+    <None Include="data\shaders\vdiff.ps" />
+    <None Include="data\shaders\vdiff.vs" />
+    <None Include="data\shaders\vdiffspec.ps" />
+    <None Include="data\shaders\vdiffspec.vs" />
+    <None Include="data\turing\BINARY.TUR" />
+    <None Include="data\turing\COPY.TUR" />
+    <None Include="data\ui\changename.uis" />
+    <None Include="data\ui\default.uis" />
+    <None Include="data\ui\default2.uis" />
+    <None Include="data\ui\load.uis" />
+    <None Include="data\ui\overlap.uis" />
+    <None Include="data\ui\save.uis" />
+    <None Include="data\ui\testhier.uis" />
+    <None Include="data\ui\testloadscript.uis" />
+    <None Include="data\ui\testnewsave.uis" />
+    <None Include="data\ui\who.uis" />
+    <None Include="engqtest.map" />
+    <None Include="engqtestd.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\AR\ar_res.txt" />
+    <Text Include="data\browser\browserres.txt" />
+    <Text Include="data\browser\postres.txt" />
+    <Text Include="data\chatter\chatterres.txt" />
+    <Text Include="data\config\config.txt" />
+    <Text Include="data\config\device.txt" />
+    <Text Include="data\config\gamexy.txt" />
+    <Text Include="data\config\test.txt" />
+    <Text Include="data\connect4\connect4res.txt" />
+    <Text Include="data\cout.txt" />
+    <Text Include="data\endgame\level1.txt" />
+    <Text Include="data\endgame\level2.txt" />
+    <Text Include="data\engine7testdata\carenalobby\carenalobbyres.txt" />
+    <Text Include="data\engine7testdata\carenalobby\energymatrix.txt" />
+    <Text Include="data\engine7testdata\carenalobby\gamedomain.txt" />
+    <Text Include="data\engine7testdata\carenalobby\gamepicked.txt" />
+    <Text Include="data\engine7testdata\carenalobby\ips.txt" />
+    <Text Include="data\engine7testdata\constructed\collist.txt" />
+    <Text Include="data\engine7testdata\constructed\constructorres.txt" />
+    <Text Include="data\engine7testdata\constructed\newconstructorres.txt" />
+    <Text Include="data\engine7testdata\constructed\newnameres.txt" />
+    <Text Include="data\engine7testdata\rematchres\online_rematchres.txt" />
+    <Text Include="data\fifteen.txt" />
+    <Text Include="data\game2_endgame\30krrvsk.txt" />
+    <Text Include="data\game2_endgame\31krvskr.txt" />
+    <Text Include="data\game2_endgame\32krpvskr.txt" />
+    <Text Include="data\game2_endgame\40kpvsk.txt" />
+    <Text Include="data\game2_endgame\41kpvsk.txt" />
+    <Text Include="data\game2_endgame\42kpvsk.txt" />
+    <Text Include="data\game2_endgame\43kpvsk.txt" />
+    <Text Include="data\game2_endgame\44kpvsk.txt" />
+    <Text Include="data\game2_endgame\50kqvsk.txt" />
+    <Text Include="data\game2_endgame\51knnvsk.txt" />
+    <Text Include="data\game2_endgame\52krvsk.txt" />
+    <Text Include="data\game2_endgame\53kbnvsk.txt" />
+    <Text Include="data\game2_endgame\55test.txt" />
+    <Text Include="data\game2_endgame\56kvsk.txt" />
+    <Text Include="data\game2_endgame\57kbbvsk.txt" />
+    <Text Include="data\game2_foxgoose\foxgoose4.txt" />
+    <Text Include="data\game2_foxgoose\foxgoose8.txt" />
+    <Text Include="data\game2_nim\nim1.txt" />
+    <Text Include="data\game2_nim\nim3.txt" />
+    <Text Include="data\game2_opposition\opp3.txt" />
+    <Text Include="data\game2_opposition\opp4.txt" />
+    <Text Include="data\game2_opposition\opp5.txt" />
+    <Text Include="data\game2_opposition\opp6.txt" />
+    <Text Include="data\game2_opposition\opp7.txt" />
+    <Text Include="data\game2_opposition\opp8.txt" />
+    <Text Include="data\game2_ttt\ttt2x2.txt" />
+    <Text Include="data\game2_ttt\ttt3x3.txt" />
+    <Text Include="data\game2_ttt\ttt4x4.txt" />
+    <Text Include="data\gametheory\gametheoryres.txt" />
+    <Text Include="data\grouptheory2\perm1.txt" />
+    <Text Include="data\grouptheory\rcube.txt" />
+    <Text Include="data\halfpipe\halfpipeui.txt" />
+    <Text Include="data\holoview2dbrush\settings.txt" />
+    <Text Include="data\HONEYCOM\3BY3.txt" />
+    <Text Include="data\HONEYCOM\4SQUARE.txt" />
+    <Text Include="data\HONEYCOM\BOARD0.txt" />
+    <Text Include="data\HONEYCOM\BOARD1.txt" />
+    <Text Include="data\HONEYCOM\BOARD2.txt" />
+    <Text Include="data\HONEYCOM\BOARD3.txt" />
+    <Text Include="data\HONEYCOM\BOARD4.txt" />
+    <Text Include="data\HONEYCOM\FUN.txt" />
+    <Text Include="data\HONEYCOM\FUN4.txt" />
+    <Text Include="data\HONEYCOM\FUNS.txt" />
+    <Text Include="data\HONEYCOM\HONEYCOM.txt" />
+    <Text Include="data\HONEYCOM\NIM.txt" />
+    <Text Include="data\HONEYCOM\ten.txt" />
+    <Text Include="data\HONEYCOM\ten2.txt" />
+    <Text Include="data\HONEYCOM\TEST1.txt" />
+    <Text Include="data\HONEYCOM\TEST2.txt" />
+    <Text Include="data\HONEYCOM\TEST3.txt" />
+    <Text Include="data\HONEYCOM\tritri.txt" />
+    <Text Include="data\HONEYCOM\ZIGZAG.txt" />
+    <Text Include="data\ifield\ifieldres.txt" />
+    <Text Include="data\ifield\qrcode2res.txt" />
+    <Text Include="data\ifield\qrcoderes.txt" />
+    <Text Include="data\igroup\igroupres.txt" />
+    <Text Include="data\jelly\lev01.txt" />
+    <Text Include="data\jelly\lev02.txt" />
+    <Text Include="data\jelly\lev03.txt" />
+    <Text Include="data\jelly\lev04.txt" />
+    <Text Include="data\jelly\lev05.txt" />
+    <Text Include="data\jelly\lev06.txt" />
+    <Text Include="data\jelly\lev07.txt" />
+    <Text Include="data\jelly\lev08.txt" />
+    <Text Include="data\jelly\lev09.txt" />
+    <Text Include="data\jelly\lev10.txt" />
+    <Text Include="data\jelly\lev11.txt" />
+    <Text Include="data\jelly\lev12.txt" />
+    <Text Include="data\jelly\lev13.txt" />
+    <Text Include="data\jelly\lev14.txt" />
+    <Text Include="data\jelly\lev15.txt" />
+    <Text Include="data\jelly\lev16.txt" />
+    <Text Include="data\jelly\lev17.txt" />
+    <Text Include="data\jelly\lev18.txt" />
+    <Text Include="data\jelly\lev19.txt" />
+    <Text Include="data\jelly\lev20.txt" />
+    <Text Include="data\jelly\lev32.txt" />
+    <Text Include="data\jelly\lev35.txt" />
+    <Text Include="data\jelly\level01.txt" />
+    <Text Include="data\jelly\level02.txt" />
+    <Text Include="data\jelly\level03.txt" />
+    <Text Include="data\jelly\level04.txt" />
+    <Text Include="data\jelly\level05.txt" />
+    <Text Include="data\jelly\level06.txt" />
+    <Text Include="data\jelly\level07.txt" />
+    <Text Include="data\jelly\level08.txt" />
+    <Text Include="data\jsontest\test1.txt" />
+    <Text Include="data\jsontest\test2.txt" />
+    <Text Include="data\jsontest\test3.txt" />
+    <Text Include="data\jsontest\testres1.txt" />
+    <Text Include="data\jsontest\testres3.txt" />
+    <Text Include="data\jsontest\testrjsave.txt" />
+    <Text Include="data\lobbysystem\chatres.txt" />
+    <Text Include="data\lobbysystem\hiscoresres.txt" />
+    <Text Include="data\lobbysystem\lobbyres.txt" />
+    <Text Include="data\lobbysystem\logoncfg.txt" />
+    <Text Include="data\lobbysystem\logonres.txt" />
+    <Text Include="data\lobbysystem\optionsres.txt" />
+    <Text Include="data\lobbysystem\pickgameres.txt" />
+    <Text Include="data\lobbysystem\pickservercfg.txt" />
+    <Text Include="data\lobbysystem\pickserverres.txt" />
+    <Text Include="data\lobbysystem\quickgamecfg.txt" />
+    <Text Include="data\lobbysystem\quickgameres.txt" />
+    <Text Include="data\lobbysystem\registerres.txt" />
+    <Text Include="data\lobbysystem\resultsres.txt" />
+    <Text Include="data\lobbysystem\servercfg.txt" />
+    <Text Include="data\lobbysystem\serverres.txt" />
+    <Text Include="data\lobbysystem\serverusers.txt" />
+    <Text Include="data\lobbysystem\titleres.txt" />
+    <Text Include="data\logfile.txt" />
+    <Text Include="data\logfileb.txt" />
+    <Text Include="data\mainmenu\maincfg.txt" />
+    <Text Include="data\mainmenu\mainmenu.txt" />
+    <Text Include="data\mainmenu\mainres.txt" />
+    <Text Include="data\nfs_shell\nfs_shellres.txt" />
+    <Text Include="data\occ\occclientres.txt" />
+    <Text Include="data\occ\svlogfile.txt" />
+    <Text Include="data\particles\particle_list.txt" />
+    <Text Include="data\physics3d\building.txt" />
+    <Text Include="data\physics3d\dominos.txt" />
+    <Text Include="data\physics3d\objects.txt" />
+    <Text Include="data\physics3d\phyobjs.txt" />
+    <Text Include="data\physics3d\pickscene.txt" />
+    <Text Include="data\physics3d\simple.txt" />
+    <Text Include="data\physics3d\testang.txt" />
+    <Text Include="data\physics3d\testcoll.txt" />
+    <Text Include="data\physics3d\testtime.txt" />
+    <Text Include="data\physics3d\tops.txt" />
+    <Text Include="data\plotter\depthLUT_module66_500lux_100cm.txt" />
+    <Text Include="data\prims.txt" />
+    <Text Include="data\qcomp\lastfile.txt" />
+    <Text Include="data\qcomp\qcompres.txt" />
+    <Text Include="data\racenetdata\2009_testcheck\mat2shader.txt" />
+    <Text Include="data\racenetdata\2009_testcheck\newcheck.txt" />
+    <Text Include="data\racenetdata\2009_testcheck\newcheck2.txt" />
+    <Text Include="data\racenetdata\2009_track_5b\mat2shader.txt" />
+    <Text Include="data\racenetdata\2009_track_5b\track_5.txt" />
+    <Text Include="data\racenetdata\altcaenergy.txt" />
+    <Text Include="data\racenetdata\altcaweapons.txt" />
+    <Text Include="data\racenetdata\broadcast\broadcast_servercfg.txt" />
+    <Text Include="data\racenetdata\broadcast\broadcast_serverres.txt" />
+    <Text Include="data\racenetdata\broadcast\broadcast_testclientres.txt" />
+    <Text Include="data\racenetdata\broadcast\broadcast_testserverres.txt" />
+    <Text Include="data\racenetdata\caenergy.txt" />
+    <Text Include="data\racenetdata\carmat2shader.txt" />
+    <Text Include="data\racenetdata\caweapons.txt" />
+    <Text Include="data\racenetdata\Coliseum\Coliseum.txt" />
+    <Text Include="data\racenetdata\Coliseum\mat2shader.txt" />
+    <Text Include="data\racenetdata\GhostCity\ghostcity.txt" />
+    <Text Include="data\racenetdata\GhostCity\mat2shader.txt" />
+    <Text Include="data\racenetdata\globalmat2shader.txt" />
+    <Text Include="data\racenetdata\headon\headon.txt" />
+    <Text Include="data\racenetdata\headon\mat2shader.txt" />
+    <Text Include="data\racenetdata\onlineopt\altonline_seltrackcfg.txt" />
+    <Text Include="data\racenetdata\onlineopt\config.txt" />
+    <Text Include="data\racenetdata\onlineopt\detachweaps.txt" />
+    <Text Include="data\racenetdata\onlineopt\energymatrix.txt" />
+    <Text Include="data\racenetdata\onlineopt\freeweaps.txt" />
+    <Text Include="data\racenetdata\onlineopt\gameinfo.txt" />
+    <Text Include="data\racenetdata\onlineopt\newdetachweaps.txt" />
+    <Text Include="data\racenetdata\onlineopt\newlobbyres.txt" />
+    <Text Include="data\racenetdata\onlineopt\online_rematchres.txt" />
+    <Text Include="data\racenetdata\onlineopt\online_seltrack.txt" />
+    <Text Include="data\racenetdata\onlineopt\online_seltrackcfg.txt" />
+    <Text Include="data\racenetdata\onlineopt\startraceinfov2.txt" />
+    <Text Include="data\racenetdata\onlineopt\thecars.txt" />
+    <Text Include="data\racenetdata\onlineopt\weapenable.txt" />
+    <Text Include="data\racenetdata\onlineopt\weapmaster.txt" />
+    <Text Include="data\racenetdata\onlineopt\weapxlate.txt" />
+    <Text Include="data\racenetdata\Prehistoric\mat2shader.txt" />
+    <Text Include="data\racenetdata\Prehistoric\prehistoric.txt" />
+    <Text Include="data\racenetdata\Space\mat2shader.txt" />
+    <Text Include="data\racenetdata\Space\space.txt" />
+    <Text Include="data\racenetdata\st2_game\gardentag.txt" />
+    <Text Include="data\racenetdata\TarPits\mat2shader.txt" />
+    <Text Include="data\racenetdata\TarPits\tarpits.txt" />
+    <Text Include="data\racenetdata\thefalls\mat2shader.txt" />
+    <Text Include="data\racenetdata\thefalls\thefalls.txt" />
+    <Text Include="data\racenetdata\toon2_carmat2shader.txt" />
+    <Text Include="data\racenetdata\toon_carmat2shader.txt" />
+    <Text Include="data\racenetdata\updater\updaterres.txt" />
+    <Text Include="data\racenetdata\updater\updatestatus.txt" />
+    <Text Include="data\scratch\polyres.txt" />
+    <Text Include="data\scratch\polysymres.txt" />
+    <Text Include="data\scratch\textxmlout.txt" />
+    <Text Include="data\searcher\filtermode.txt" />
+    <Text Include="data\searcher\redirstrs.txt" />
+    <Text Include="data\shaders\mat2shader.txt" />
+    <Text Include="data\shaders\shadelistasm.txt" />
+    <Text Include="data\shaders\shadelistfx.txt" />
+    <Text Include="data\simplex\simplexres.txt" />
+    <Text Include="data\slider\aband.txt" />
+    <Text Include="data\slider\eight.txt" />
+    <Text Include="data\slider\level01.txt" />
+    <Text Include="data\slider\level02.txt" />
+    <Text Include="data\slider\level03.txt" />
+    <Text Include="data\slider\level04.txt" />
+    <Text Include="data\slider\level05.txt" />
+    <Text Include="data\slider\level06.txt" />
+    <Text Include="data\slider\level07.txt" />
+    <Text Include="data\slider\level08.txt" />
+    <Text Include="data\slider\levele.txt" />
+    <Text Include="data\slider\levelm.txt" />
+    <Text Include="data\testres3d\testres3dres.txt" />
+    <Text Include="data\toon\toon_mat2shader.txt" />
+    <Text Include="data\turing\turingres.txt" />
+    <Text Include="data\vidcap\vcres.txt" />
+    <Text Include="data\wat_physics\quant3\quant3res.txt" />
+    <Text Include="data\wat_physics\quant4\quant4res.txt" />
+    <Text Include="hsv_doc.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="data\shaders\cubemaptest.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\cvert.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\cvertvel.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\edge.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\edge2.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\env.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\envv2.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\envv2texvel.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\laserbeam.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\lightmap.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\makeshadowmap.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\omni.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\pdiff.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\pdiffspec.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\pnormalmap.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\shadowmapviewer.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\spotlight.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\stan.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\tex.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\tex2c.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\texadd.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\texvel.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\toon.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\toon2.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\useshadowmap.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\vdiff.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="data\shaders\vdiffspec.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="collutil.h" />
+    <CustomBuild Include="engine1test_lobby_ref\st_chat.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_game1.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_hiscores.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_lobby.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_logon.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_options.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_pickgame.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_quickgame.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_results.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_server.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <ClInclude Include="engine7test\alcatrazcpp.h" />
+    <ClInclude Include="engine7test\appcpp.h" />
+    <ClInclude Include="engine7test\aviplayer.h" />
+    <ClInclude Include="engine7test\bobject.h" />
+    <ClInclude Include="engine7test\bpatchcpp.h" />
+    <ClInclude Include="engine7test\buttons.h" />
+    <ClInclude Include="engine7test\carenalobbyres.h" />
+    <ClInclude Include="engine7test\carobjectcpp.h" />
+    <ClInclude Include="engine7test\chores.h" />
+    <ClInclude Include="engine7test\choresderived.h" />
+    <ClInclude Include="engine7test\chunk.h" />
+    <ClInclude Include="engine7test\chunktestcpp.h" />
+    <ClInclude Include="engine7test\cinccpp.h" />
+    <ClInclude Include="engine7test\cincres.h" />
+    <ClInclude Include="engine7test\cir.h" />
+    <ClInclude Include="engine7test\circleobjectcpp.h" />
+    <ClInclude Include="engine7test\circlewcpp.h" />
+    <ClInclude Include="engine7test\coloredit.h" />
+    <ClInclude Include="engine7test\constructorres.h" />
+    <ClInclude Include="engine7test\cubrious.h" />
+    <ClInclude Include="engine7test\Curve.h" />
+    <ClInclude Include="engine7test\cyclescpp.h" />
+    <ClInclude Include="engine7test\da.h" />
+    <ClInclude Include="engine7test\domino.h" />
+    <ClInclude Include="engine7test\dominopusher.h" />
+    <ClInclude Include="engine7test\editor.h" />
+    <ClInclude Include="engine7test\factory.h" />
+    <ClInclude Include="engine7test\fbuilder.h" />
+    <ClInclude Include="engine7test\fdump.h" />
+    <ClInclude Include="engine7test\FMat.h" />
+    <ClInclude Include="engine7test\fonter.h" />
+    <ClInclude Include="engine7test\fractcpp.h" />
+    <ClInclude Include="engine7test\fracttut2cpp.h" />
+    <ClInclude Include="engine7test\fracttut2rescpp.h" />
+    <ClInclude Include="engine7test\fracttutcpp.h" />
+    <ClInclude Include="engine7test\fracttutrescpp.h" />
+    <ClInclude Include="engine7test\gallonscpp.h" />
+    <ClInclude Include="engine7test\gallonsres.h" />
+    <ClInclude Include="engine7test\geomcpp.h" />
+    <ClInclude Include="engine7test\hail2.h" />
+    <ClInclude Include="engine7test\hailcpp.h" />
+    <ClInclude Include="engine7test\jigpuzz.h" />
+    <ClInclude Include="engine7test\kenocpp.h" />
+    <ClInclude Include="engine7test\kenorescpp.h" />
+    <ClInclude Include="engine7test\listutils.h" />
+    <ClInclude Include="engine7test\mainmenucpp.h" />
+    <ClInclude Include="engine7test\mainmenures.h" />
+    <ClInclude Include="engine7test\mandljulia.h" />
+    <ClInclude Include="engine7test\marchcpp.h" />
+    <ClInclude Include="engine7test\MATRIX.H" />
+    <ClInclude Include="engine7test\menageriecpp.h" />
+    <ClInclude Include="engine7test\menus.h" />
+    <ClInclude Include="engine7test\meshtest2cpp.h" />
+    <ClInclude Include="engine7test\meshtest3cpp.h" />
+    <ClInclude Include="engine7test\meshtest4cpp.h" />
+    <ClInclude Include="engine7test\messagepusher.h" />
+    <ClInclude Include="engine7test\minimathcpp.h" />
+    <ClInclude Include="engine7test\minimodelcpp.h" />
+    <ClInclude Include="engine7test\minitexcpp.h" />
+    <ClInclude Include="engine7test\minitreecpp.h" />
+    <ClInclude Include="engine7test\minitypes.h" />
+    <ClInclude Include="engine7test\mockscenecpp.h" />
+    <ClInclude Include="engine7test\monkey.h" />
+    <ClInclude Include="engine7test\mystery.h" />
+    <ClInclude Include="engine7test\nettestcpp.h" />
+    <ClInclude Include="engine7test\newconstructorres.h" />
+    <ClInclude Include="engine7test\newnameres.h" />
+    <ClInclude Include="engine7test\newscripter.h" />
+    <ClInclude Include="engine7test\n_aicpp.h" />
+    <ClInclude Include="engine7test\n_carclass.h" />
+    <ClInclude Include="engine7test\n_carenaconnectcpp.h" />
+    <ClInclude Include="engine7test\n_carenagamecpp.h" />
+    <ClInclude Include="engine7test\n_carenalobbycpp.h" />
+    <ClInclude Include="engine7test\n_constructorcpp.h" />
+    <ClInclude Include="engine7test\n_facevertscpp.h" />
+    <ClInclude Include="engine7test\n_jrmcarscpp.h" />
+    <ClInclude Include="engine7test\n_line2roadcpp.h" />
+    <ClInclude Include="engine7test\n_loadweapcpp.h" />
+    <ClInclude Include="engine7test\n_marching.h" />
+    <ClInclude Include="engine7test\n_marchingdata.h" />
+    <ClInclude Include="engine7test\n_marchingtest.h" />
+    <ClInclude Include="engine7test\n_meshtestcpp.h" />
+    <ClInclude Include="engine7test\n_newconstructorcpp.h" />
+    <ClInclude Include="engine7test\n_packetcpp.h" />
+    <ClInclude Include="engine7test\n_physicscpp.h" />
+    <ClInclude Include="engine7test\n_polylistcpp.h" />
+    <ClInclude Include="engine7test\n_rematchcpp.h" />
+    <ClInclude Include="engine7test\n_scrlinecpp.h" />
+    <ClInclude Include="engine7test\n_trackhashcpp.h" />
+    <ClInclude Include="engine7test\n_tracklistcpp.h" />
+    <ClInclude Include="engine7test\n_twobjcpp.h" />
+    <ClInclude Include="engine7test\n_usefulcpp.h" />
+    <ClInclude Include="engine7test\objcollisionscpp.h" />
+    <ClInclude Include="engine7test\objectmakercpp.h" />
+    <ClInclude Include="engine7test\objintsectcpp.h" />
+    <ClInclude Include="engine7test\objlinelinecpp.h" />
+    <ClInclude Include="engine7test\objmaker2cpp.h" />
+    <ClInclude Include="engine7test\objmaker3cpp.h" />
+    <ClInclude Include="engine7test\objmaker4cpp.h" />
+    <ClInclude Include="engine7test\objmaker5.h" />
+    <ClInclude Include="engine7test\objphysicscpp.h" />
+    <ClInclude Include="engine7test\om.h" />
+    <ClInclude Include="engine7test\orbox.h" />
+    <ClInclude Include="engine7test\oshirocpp.h" />
+    <ClInclude Include="engine7test\pbn.h" />
+    <ClInclude Include="engine7test\pbnsolver.h" />
+    <ClInclude Include="engine7test\phyobjectcpp.h" />
+    <ClInclude Include="engine7test\plottercpp.h" />
+    <ClInclude Include="engine7test\pnt2dcpp.h" />
+    <ClInclude Include="engine7test\polylineobjectcpp.h" />
+    <ClInclude Include="engine7test\qalloc.h" />
+    <ClInclude Include="engine7test\qalloca.h" />
+    <ClInclude Include="engine7test\rec.h" />
+    <ClInclude Include="engine7test\rectobjectcpp.h" />
+    <ClInclude Include="engine7test\rematchrescpp.h" />
+    <ClInclude Include="engine7test\render.h" />
+    <ClInclude Include="engine7test\rendercpp.h" />
+    <ClInclude Include="engine7test\resource.h" />
+    <ClInclude Include="engine7test\rktestcpp.h" />
+    <ClInclude Include="engine7test\roulettecpp.h" />
+    <ClInclude Include="engine7test\scanboard.h" />
+    <ClInclude Include="engine7test\scene.h" />
+    <ClInclude Include="engine7test\scripter.h" />
+    <ClInclude Include="engine7test\scrollill.h" />
+    <ClInclude Include="engine7test\shape1.h" />
+    <ClInclude Include="engine7test\shape1family.h" />
+    <ClInclude Include="engine7test\shape1family2.h" />
+    <ClInclude Include="engine7test\shape2.h" />
+    <ClInclude Include="engine7test\sjoy.h" />
+    <ClInclude Include="engine7test\slider.h" />
+    <ClInclude Include="engine7test\sobject.h" />
+    <ClInclude Include="engine7test\sokoban.h" />
+    <ClInclude Include="engine7test\spawner.h" />
+    <ClInclude Include="engine7test\spgfile.h" />
+    <ClInclude Include="engine7test\spgplayer.h" />
+    <ClInclude Include="engine7test\spgscript.h" />
+    <ClInclude Include="engine7test\spgtools.h" />
+    <ClInclude Include="engine7test\spgtoolsres.h" />
+    <ClInclude Include="engine7test\sprite2.h" />
+    <ClInclude Include="engine7test\spritemod.h" />
+    <ClInclude Include="engine7test\spritemodres.h" />
+    <ClInclude Include="engine7test\sprites.h" />
+    <ClInclude Include="engine7test\ss.h" />
+    <ClInclude Include="engine7test\sudoku.h" />
+    <ClInclude Include="engine7test\sudokures.h" />
+    <ClInclude Include="engine7test\switches.h" />
+    <ClInclude Include="engine7test\terraincpp.h" />
+    <ClInclude Include="engine7test\test9cpp.h" />
+    <ClInclude Include="engine7test\testphysicscpp.h" />
+    <ClInclude Include="engine7test\testresize.h" />
+    <ClInclude Include="engine7test\textedit.h" />
+    <ClInclude Include="engine7test\textshow.h" />
+    <ClInclude Include="engine7test\tomb3dtestcpp.h" />
+    <ClInclude Include="engine7test\tree1family.h" />
+    <ClInclude Include="engine7test\tree1family2.h" />
+    <ClInclude Include="engine7test\treecir.h" />
+    <ClInclude Include="engine7test\treelogger.h" />
+    <ClInclude Include="engine7test\treerec.h" />
+    <ClInclude Include="engine7test\treeshape1.h" />
+    <ClInclude Include="engine7test\treess.h" />
+    <ClInclude Include="engine7test\twobj.h" />
+    <ClInclude Include="engine7test\types.h" />
+    <ClInclude Include="engine7test\vector.h" />
+    <ClInclude Include="engine7test\viewport2dcpp.h" />
+    <ClInclude Include="engine7test\wallobjectcpp.h" />
+    <ClInclude Include="engine7test\whereiscpp.h" />
+    <ClInclude Include="engine7test\windowscanner.h" />
+    <ClInclude Include="engine7test\woodpuzzcpp.h" />
+    <ClInclude Include="engine7test\xfont.h" />
+    <CustomBuild Include="flate\crc32.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="flate\deflate.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="flate\inffast.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="flate\inffixed.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="flate\inflate.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="flate\inftrees.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="flate\trees.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="flate\zconf.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="flate\zconf.in.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="flate\zlib.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="flate\zutil.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <ClInclude Include="helperobj.h" />
+    <ClInclude Include="hw35_line2road.h" />
+    <ClInclude Include="nfs_choose.h" />
+    <ClInclude Include="nfs_entername.h" />
+    <ClInclude Include="nfs_game.h" />
+    <ClInclude Include="nfs_readyrace.h" />
+    <ClInclude Include="nfs_result.h" />
+    <ClInclude Include="nfs_shell.h" />
+    <ClInclude Include="nfs_smile.h" />
+    <ClInclude Include="nfs_utils.h" />
+    <CustomBuild Include="objcollisions.h" />
+    <ClInclude Include="primcoll.h" />
+    <ClInclude Include="racenet\bluered.h" />
+    <ClInclude Include="racenet\box2box.h" />
+    <ClInclude Include="racenet\boxai.h" />
+    <ClInclude Include="racenet\broadcast_server.h" />
+    <ClInclude Include="racenet\broadcast_testclient.h" />
+    <ClInclude Include="racenet\broadcast_testserver.h" />
+    <ClInclude Include="racenet\camera.h" />
+    <ClInclude Include="racenet\carclass.h" />
+    <ClInclude Include="racenet\coins.h" />
+    <ClInclude Include="racenet\crasheditor.h" />
+    <ClInclude Include="racenet\gameinfo.h" />
+    <ClInclude Include="racenet\gamestate.h" />
+    <ClInclude Include="racenet\hr_boxai.h" />
+    <CustomBuild Include="racenet\hw35_boxai.h" />
+    <ClInclude Include="racenet\match_game1.h" />
+    <ClInclude Include="racenet\match_hiscores.h" />
+    <ClInclude Include="racenet\match_lobby.h" />
+    <ClInclude Include="racenet\match_logon.h" />
+    <ClInclude Include="racenet\match_options.h" />
+    <ClInclude Include="racenet\match_pickgame.h" />
+    <ClInclude Include="racenet\match_pickserver.h" />
+    <ClInclude Include="racenet\match_quickgame.h" />
+    <ClInclude Include="racenet\match_register.h" />
+    <ClInclude Include="racenet\match_results.h" />
+    <ClInclude Include="racenet\match_server.h" />
+    <ClInclude Include="racenet\match_title.h" />
+    <ClInclude Include="racenet\newlobby.h" />
+    <ClInclude Include="racenet\onlinecars.h" />
+    <ClInclude Include="racenet\online_seltrack.h" />
+    <ClInclude Include="racenet\online_uphysics.h" />
+    <ClInclude Include="racenet\online_uplay.h" />
+    <ClInclude Include="racenet\packet.h" />
+    <ClInclude Include="racenet\scenetest.h" />
+    <ClInclude Include="racenet\scrline.h" />
+    <ClInclude Include="racenet\soundlst.h" />
+    <ClInclude Include="racenet\soundtest.h" />
+    <ClInclude Include="racenet\stubhelper.h" />
+    <ClInclude Include="racenet\tsp.h" />
+    <ClInclude Include="racenet\updater.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="rungekutta.h" />
+    <ClInclude Include="testclassfactory.h" />
+    <ClInclude Include="timelogger.h" />
+    <ClInclude Include="u_ar_parse.h" />
+    <ClInclude Include="u_ar_scan.h" />
+    <ClInclude Include="u_bch.h" />
+    <ClInclude Include="u_cayley.h" />
+    <ClInclude Include="u_circularA.h" />
+    <ClInclude Include="u_circularB.h" />
+    <ClInclude Include="u_factory.h" />
+    <ClInclude Include="u_file_nh.h" />
+    <ClInclude Include="u_fplot.h" />
+    <ClInclude Include="u_game2.h" />
+    <ClInclude Include="u_gametheory.h" />
+    <ClInclude Include="u_goldbach.h" />
+    <ClInclude Include="u_groupanalyze.h" />
+    <ClInclude Include="u_group_field.h" />
+    <ClInclude Include="u_json.h" />
+    <ClInclude Include="u_list.h" />
+    <ClInclude Include="u_listtest.h" />
+    <ClInclude Include="u_mandl.h" />
+    <ClInclude Include="u_median.h" />
+    <ClInclude Include="u_modelutil.h" />
+    <ClInclude Include="u_oddOneOut.h" />
+    <ClInclude Include="u_packer.h" />
+    <ClInclude Include="u_permiter.h" />
+    <ClInclude Include="u_platonic.h" />
+    <ClInclude Include="u_plotter2.h" />
+    <ClInclude Include="u_ply.h" />
+    <ClInclude Include="u_pointcloudfile.h" />
+    <ClInclude Include="u_pointcloudkdtree.h" />
+    <ClInclude Include="u_qcolumn.h" />
+    <ClInclude Include="u_qfieldui.h" />
+    <ClInclude Include="u_qgatebase.h" />
+    <ClInclude Include="u_qgatederived.h" />
+    <ClInclude Include="u_qmat.h" />
+    <ClInclude Include="u_qr_code2parse.h" />
+    <ClInclude Include="u_qr_code2scan.h" />
+    <ClInclude Include="u_qr_code_layout_v2.h" />
+    <ClInclude Include="u_qstate.h" />
+    <ClInclude Include="u_searcher_mandle_thread.h" />
+    <ClInclude Include="u_smallgroups.h" />
+    <ClInclude Include="u_spinners.h" />
+    <ClInclude Include="u_states.h" />
+    <ClInclude Include="u_s_3dtest.h" />
+    <ClInclude Include="u_s_ar.h" />
+    <ClInclude Include="u_s_arena1.h" />
+    <ClInclude Include="u_s_arena2.h" />
+    <ClInclude Include="u_s_basic3d.h" />
+    <ClInclude Include="u_s_braid.h" />
+    <ClInclude Include="u_s_browser.h" />
+    <ClInclude Include="u_s_castle.h" />
+    <ClInclude Include="u_s_chattertest.h" />
+    <ClInclude Include="u_s_conduit.h" />
+    <ClInclude Include="u_s_connect4.h" />
+    <ClInclude Include="u_s_cubemaptest.h" />
+    <ClInclude Include="u_s_cubemaptest2.h" />
+    <ClInclude Include="u_s_digital.h" />
+    <ClInclude Include="u_s_game2_endgame.h" />
+    <ClInclude Include="u_s_game2_foxgoose.h" />
+    <ClInclude Include="u_s_game2_nim.h" />
+    <ClInclude Include="u_s_game2_opposition.h" />
+    <ClInclude Include="u_s_game2_ttt.h" />
+    <ClInclude Include="u_s_game2_ttt2.h" />
+    <ClInclude Include="u_s_gametheory.h" />
+    <ClInclude Include="u_s_gfxtest.h" />
+    <ClInclude Include="u_s_gfxview.h" />
+    <ClInclude Include="u_s_grouptheory.h" />
+    <ClInclude Include="u_s_halfpipe.h" />
+    <ClInclude Include="u_s_heathouse.h" />
+    <ClInclude Include="u_s_holoview2d.h" />
+    <ClInclude Include="u_s_holoview2db.h" />
+    <ClInclude Include="u_s_holoview3d.h" />
+    <ClInclude Include="u_s_honeycomb.h" />
+    <ClInclude Include="u_s_ifield.h" />
+    <ClInclude Include="u_s_igroup.h" />
+    <ClInclude Include="u_s_jelly.h" />
+    <ClInclude Include="u_s_jigpuzz.h" />
+    <ClInclude Include="u_s_joetest.h" />
+    <ClInclude Include="u_s_joetest2.h" />
+    <ClInclude Include="u_s_joytest.h" />
+    <ClInclude Include="u_s_laplace_heat.h" />
+    <ClInclude Include="u_s_lightsout.h" />
+    <ClInclude Include="u_s_lighttest.h" />
+    <ClInclude Include="u_s_plot2linear.h" />
+    <ClInclude Include="u_s_luatest.h" />
+    <ClInclude Include="u_s_mainmenu.h" />
+    <ClInclude Include="u_s_mandl.h" />
+    <ClInclude Include="u_s_many.h" />
+    <ClInclude Include="u_s_mattest.h" />
+    <ClInclude Include="u_s_occclient.h" />
+    <ClInclude Include="u_s_occclient2.h" />
+    <ClInclude Include="u_s_occserver.h" />
+    <ClInclude Include="u_s_onebit.h" />
+    <ClInclude Include="u_s_particles.h" />
+    <ClInclude Include="u_s_penrose.h" />
+    <ClInclude Include="u_s_physics2d.h" />
+    <ClInclude Include="u_s_physics3d.h" />
+    <ClInclude Include="u_s_playamovie.h" />
+    <ClInclude Include="u_s_plot2bezier.h" />
+    <ClInclude Include="u_s_plot2eigen.h" />
+    <ClInclude Include="u_s_plot2fourducks.h" />
+    <ClInclude Include="u_s_plot2lens.h" />
+    <ClInclude Include="u_s_plot2octmirror.h" />
+    <ClInclude Include="u_s_plot2pointcloud.h" />
+    <ClInclude Include="u_s_plot2poles.h" />
+    <ClInclude Include="u_s_plot2power.h" />
+    <ClInclude Include="u_s_plot2quant.h" />
+    <ClInclude Include="u_s_plot2quantsho.h" />
+    <ClInclude Include="u_s_plot2simple.h" />
+    <ClInclude Include="u_s_plot2zeta.h" />
+    <ClInclude Include="u_s_plotter.h" />
+    <ClInclude Include="u_s_pointcloud.h" />
+    <ClInclude Include="u_s_polynomial.h" />
+    <ClInclude Include="u_s_poly_sym.h" />
+    <ClInclude Include="u_s_post.h" />
+    <ClInclude Include="u_s_qcomp.h" />
+    <ClInclude Include="u_s_qr_code.h" />
+    <ClInclude Include="u_s_qr_code2.h" />
+    <ClInclude Include="u_s_rcastle.h" />
+    <ClInclude Include="u_s_renamer.h" />
+    <ClInclude Include="u_s_riemann.h" />
+    <ClInclude Include="u_s_rubikscube.h" />
+    <ClInclude Include="u_s_scratch.h" />
+    <ClInclude Include="u_s_searcher.h" />
+    <ClInclude Include="u_s_simplex.h" />
+    <ClInclude Include="u_s_slider.h" />
+    <ClInclude Include="u_s_plot2soccergoal.h" />
+    <ClInclude Include="u_s_sokoban.h" />
+    <ClInclude Include="u_s_sokoban2.h" />
+    <ClInclude Include="u_s_spawner.h" />
+    <ClInclude Include="u_s_spritetest2.h" />
+    <ClInclude Include="u_s_spritetest3.h" />
+    <ClInclude Include="u_s_stoid.h" />
+    <ClInclude Include="u_stoid_data.h" />
+    <ClInclude Include="u_s_syncro.h" />
+    <ClInclude Include="u_s_testres3d.h" />
+    <ClInclude Include="u_s_toon.h" />
+    <ClInclude Include="u_s_tritest1.h" />
+    <ClInclude Include="u_s_tritest2.h" />
+    <ClInclude Include="u_s_tritest3.h" />
+    <ClInclude Include="u_s_tritest4.h" />
+    <ClInclude Include="u_s_tritest5.h" />
+    <ClInclude Include="u_s_ttt.h" />
+    <ClInclude Include="u_s_turing.h" />
+    <ClInclude Include="u_s_ui.h" />
+    <ClInclude Include="u_s_user0.h" />
+    <ClInclude Include="u_s_user1.h" />
+    <ClInclude Include="u_s_user2.h" />
+    <ClInclude Include="u_s_vidcap.h" />
+    <ClInclude Include="u_s_vidtest.h" />
+    <ClInclude Include="u_s_wriggler.h" />
+    <ClInclude Include="u_testasmmacros.h" />
+    <ClInclude Include="u_trackpath.h" />
+    <ClInclude Include="u_uiclass.h" />
+    <ClInclude Include="u_uiclass2.h" />
+    <ClInclude Include="u_uipopup_info.h" />
+    <ClInclude Include="u_volley.h" />
+    <ClInclude Include="u_z2p.h" />
+    <ClInclude Include="wat_physics\QUANT3\quant3.h" />
+    <ClInclude Include="wat_physics\QUANT3\quant_sho.h" />
+    <ClInclude Include="wat_physics\quant4\quant4.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="colutil.cpp" />
+    <ClCompile Include="engine1test_lobby_ref\st_chat.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_game1.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_hiscores.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_lobby.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_logon.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_options.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_pickgame.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_quickgame.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_results.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_server.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\alcatraz.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\app.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\aviplayer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\bobject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\bpatch.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\buttons.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\carobject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\chores.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\choresderived.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\chunk.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\chunktest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\cinc.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\circleobject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\circlew.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\Copy of meshtest3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\cubrious.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\cycles.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\da.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\debvars.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\domino.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\dominopusher.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\fdump.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\fonter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\fract.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\fracttut.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\fracttut2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\gallons.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\geom.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\hail.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\hail2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\jigpuzz.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\keno.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\mainmenu.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\mandljulia.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\march.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\menagerie.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\meshtest2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\meshtest3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\meshtest4.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\messagepusher.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\messagepushero.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\minimath.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\minimodel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\minitex.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\minitree.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\mockscene.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\monkey.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\mystery.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\nettest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\newscripter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_ai.cpp" />
+    <ClCompile Include="engine7test\n_carclass.cpp" />
+    <ClCompile Include="engine7test\n_carenaconnect.cpp" />
+    <ClCompile Include="engine7test\n_carenagame.cpp" />
+    <ClCompile Include="engine7test\n_carenalobby.cpp" />
+    <ClCompile Include="engine7test\n_constructor.cpp" />
+    <ClCompile Include="engine7test\n_faceverts.cpp" />
+    <ClCompile Include="engine7test\n_jrmcars.cpp" />
+    <ClCompile Include="engine7test\n_line2road.cpp" />
+    <ClCompile Include="engine7test\n_loadweap.cpp" />
+    <ClCompile Include="engine7test\n_marching.cpp" />
+    <ClCompile Include="engine7test\n_marchingdata.cpp" />
+    <ClCompile Include="engine7test\n_marchingtest.cpp" />
+    <ClCompile Include="engine7test\n_meshtest.cpp" />
+    <ClCompile Include="engine7test\n_newconstructor.cpp" />
+    <ClCompile Include="engine7test\n_packet.cpp" />
+    <ClCompile Include="engine7test\n_physics.cpp" />
+    <ClCompile Include="engine7test\n_polylist.cpp" />
+    <ClCompile Include="engine7test\n_rematch.cpp" />
+    <ClCompile Include="engine7test\n_scrline.cpp" />
+    <ClCompile Include="engine7test\n_trackhash.cpp" />
+    <ClCompile Include="engine7test\n_tracklist.cpp" />
+    <ClCompile Include="engine7test\n_twobj.cpp" />
+    <ClCompile Include="engine7test\n_useful.cpp" />
+    <ClCompile Include="engine7test\objcollisions.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\objectmaker.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\objintsect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\objlineline.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\objmaker2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\objmaker3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\objmaker3old.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\objmaker4.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\objmaker5.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\objphysics.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\om.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\orbox.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\oshiro.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\pbn.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\pbno.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\pbnsolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\phyobject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\plotter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\pnt2d.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\polylineobject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\qalloc.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\qalloca.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\rectobject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\render.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\render_asm.CPP">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\rktest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\roulette.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\scanboard.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\scene.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\scripter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\scrollill.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\shape1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\shape2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\sjoy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\sobject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\sokoban.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\spawner.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\spgfile.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\spgplayer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\spgscript.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\spgtools.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\spgtoolso.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\sprite2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\spritemod.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\sprites.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\sudoku.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\switches.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\terrain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\test9.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\testphysics.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\testresize.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\textshow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\tomb3dtest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\treelogger.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\treeshape1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\viewport2d.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\wallobject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\whereis.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\windowscanner.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\windowscannero.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\woodpuzz.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine7test\xfont.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="flate\adler32.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="flate\compress.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="flate\crc32.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="flate\deflate.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="flate\example.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="flate\gzio.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="flate\infback.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="flate\inffast.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="flate\inflate.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="flate\inftrees.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="flate\minigzip.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="flate\trees.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="flate\uncompr.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="flate\zutil.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="helperobj.cpp" />
+    <ClCompile Include="hw35_line2road.cpp" />
+    <ClCompile Include="modernCppTests\cpl4e1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="modernCppTests\cpl4e2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="modernCppTests\cpl4e3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="modernCppTests\modernCppTests.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="nfs_choose.cpp" />
+    <ClCompile Include="nfs_entername.cpp" />
+    <ClCompile Include="nfs_game.cpp" />
+    <ClCompile Include="nfs_readyrace.cpp" />
+    <ClCompile Include="nfs_result.cpp" />
+    <ClCompile Include="nfs_shell.cpp" />
+    <ClCompile Include="nfs_smile.cpp" />
+    <ClCompile Include="nfs_utils.cpp" />
+    <ClCompile Include="objcollisions.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="u_listtest.cpp" />
+    <ClCompile Include="u_oddOneOut.cpp" />
+    <ClCompile Include="u_permiter.cpp" />
+    <ClCompile Include="plotter_code\alphatest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\ar_plot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\bell_small_angle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\centroid.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\coll2d.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\containertest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\cousin.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\cpptest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\cubic.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\cubic2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\dds2png.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\decimal_rat.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\depthLUT.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\fib.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\glyph.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\hough_test.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\interp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\interstellar.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\lens.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\lindiff.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\line2sphere.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\linreg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\macrotest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\makeamaptest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\makeasmallfont.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\makesquid.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\make_penrose.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\millibel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\needle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\passport.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\pers.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\poles.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\power.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\provider.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\quant.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\quantsho.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\regex.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\rotatepic.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\rotrect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\slerptest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\sort2test.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\strtoktest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\sumtest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\tang.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\testline2btri.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\writebin.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="plotter_code\zeta.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="primcoll.cpp" />
+    <ClCompile Include="racenet\bluered.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="racenet\box2box.cpp" />
+    <ClCompile Include="racenet\boxai.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="racenet\broadcast_server.cpp" />
+    <ClCompile Include="racenet\broadcast_testclient.cpp" />
+    <ClCompile Include="racenet\broadcast_testserver.cpp" />
+    <ClCompile Include="racenet\camera.cpp" />
+    <ClCompile Include="racenet\carclass.cpp" />
+    <ClCompile Include="racenet\coins.cpp" />
+    <ClCompile Include="racenet\crasheditor.cpp" />
+    <ClCompile Include="racenet\ddstest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="racenet\debvars.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="racenet\deflate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="racenet\deflateo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="racenet\gameinfo.cpp" />
+    <ClCompile Include="racenet\gamestate.cpp" />
+    <ClCompile Include="racenet\globalres.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="racenet\hr_boxai.cpp" />
+    <ClCompile Include="racenet\hw35_boxai.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="racenet\line2road.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="racenet\mainmenu.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="racenet\match_game1.cpp" />
+    <ClCompile Include="racenet\match_hiscores.cpp" />
+    <ClCompile Include="racenet\match_lobby.cpp" />
+    <ClCompile Include="racenet\match_logon.cpp" />
+    <ClCompile Include="racenet\match_options.cpp" />
+    <ClCompile Include="racenet\match_pickgame.cpp" />
+    <ClCompile Include="racenet\match_pickserver.cpp" />
+    <ClCompile Include="racenet\match_quickgame.cpp" />
+    <ClCompile Include="racenet\match_register.cpp" />
+    <ClCompile Include="racenet\match_results.cpp" />
+    <ClCompile Include="racenet\match_server.cpp" />
+    <ClCompile Include="racenet\match_title.cpp" />
+    <ClCompile Include="racenet\newlobby.cpp" />
+    <ClCompile Include="racenet\onlinecars.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="racenet\online_seltrack.cpp" />
+    <ClCompile Include="racenet\online_uphysics.cpp" />
+    <ClCompile Include="racenet\online_uplay.cpp" />
+    <ClCompile Include="racenet\packet.cpp" />
+    <ClCompile Include="racenet\scenetest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="racenet\scrline.cpp" />
+    <ClCompile Include="racenet\soundtest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="racenet\states.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="racenet\stubhelper.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="racenet\tsp.cpp" />
+    <ClCompile Include="racenet\updater.cpp" />
+    <ClCompile Include="rungekutta.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="testclassfactory.cpp" />
+    <ClCompile Include="timelogger.cpp" />
+    <ClCompile Include="u_ar_parse.cpp" />
+    <ClCompile Include="u_ar_scan.cpp" />
+    <ClCompile Include="u_bch.cpp" />
+    <ClCompile Include="u_cayley.cpp" />
+    <ClCompile Include="u_circularA.cpp" />
+    <ClCompile Include="u_circularB.cpp" />
+    <ClCompile Include="u_file_nh.cpp" />
+    <ClCompile Include="u_font.cpp" />
+    <ClCompile Include="u_fplot.cpp" />
+    <ClCompile Include="u_game2.cpp" />
+    <ClCompile Include="u_gametheory.cpp" />
+    <ClCompile Include="u_goldbach.cpp" />
+    <ClCompile Include="u_groupanalyze.cpp" />
+    <ClCompile Include="u_group_field.cpp" />
+    <ClCompile Include="u_json.cpp" />
+    <ClCompile Include="u_list.cpp" />
+    <ClCompile Include="u_mandl.cpp" />
+    <ClCompile Include="u_modelutil.cpp" />
+    <ClCompile Include="u_packer.cpp" />
+    <ClCompile Include="u_platonic.cpp" />
+    <ClCompile Include="u_plotter2.cpp" />
+    <ClCompile Include="u_ply.cpp" />
+    <ClCompile Include="u_pointcloudfile.cpp" />
+    <ClCompile Include="u_pointcloudkdtree.cpp" />
+    <ClCompile Include="u_qcolumn.cpp" />
+    <ClCompile Include="u_qfieldui.cpp" />
+    <ClCompile Include="u_qgatebase.cpp" />
+    <ClCompile Include="u_qgatederived.cpp" />
+    <ClCompile Include="u_qmat.cpp" />
+    <ClCompile Include="u_qr_code2parse.cpp" />
+    <ClCompile Include="u_qr_code2scan.cpp" />
+    <ClCompile Include="u_qr_code_layout_v2.cpp" />
+    <ClCompile Include="u_qstate.cpp" />
+    <ClCompile Include="u_searcher_mandle_thread.cpp" />
+    <ClCompile Include="u_smallgroups.cpp" />
+    <ClCompile Include="u_spinners.cpp" />
+    <ClCompile Include="u_states.cpp" />
+    <ClCompile Include="u_sysdebvars.cpp" />
+    <ClCompile Include="u_s_3dtest.cpp" />
+    <ClCompile Include="u_s_ar.cpp" />
+    <ClCompile Include="u_s_arena1.cpp" />
+    <ClCompile Include="u_s_arena2.cpp" />
+    <ClCompile Include="u_s_basic3d.cpp" />
+    <ClCompile Include="u_s_braid.cpp" />
+    <ClCompile Include="u_s_browser.cpp" />
+    <ClCompile Include="u_s_castle.cpp" />
+    <ClCompile Include="u_s_castle_bfp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="u_s_chattertest.cpp" />
+    <ClCompile Include="u_s_conduit.cpp" />
+    <ClCompile Include="u_s_connect4.cpp" />
+    <ClCompile Include="u_s_cubemaptest.cpp" />
+    <ClCompile Include="u_s_cubemaptest2.cpp" />
+    <ClCompile Include="u_s_digital.cpp" />
+    <ClCompile Include="u_s_endgame_old.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="u_s_game2_endgame.cpp" />
+    <ClCompile Include="u_s_game2_foxgoose.cpp" />
+    <ClCompile Include="u_s_game2_nim.cpp" />
+    <ClCompile Include="u_s_game2_opposition.cpp" />
+    <ClCompile Include="u_s_game2_ttt.cpp" />
+    <ClCompile Include="u_s_game2_ttt2.cpp" />
+    <ClCompile Include="u_s_gametheory.cpp" />
+    <ClCompile Include="u_s_gfxtest.cpp" />
+    <ClCompile Include="u_s_gfxview.cpp" />
+    <ClCompile Include="u_s_grouptheory.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="u_s_halfpipe.cpp" />
+    <ClCompile Include="u_s_heathouse.cpp" />
+    <ClCompile Include="u_s_holoview2d.cpp" />
+    <ClCompile Include="u_s_holoview2db.cpp" />
+    <ClCompile Include="u_s_holoview3d.cpp" />
+    <ClCompile Include="u_s_honeycomb.cpp" />
+    <ClCompile Include="u_s_ifield.cpp" />
+    <ClCompile Include="u_s_igroup.cpp" />
+    <ClCompile Include="u_s_jelly.cpp" />
+    <ClCompile Include="u_s_jigpuzz.cpp" />
+    <ClCompile Include="u_s_joetest.cpp" />
+    <ClCompile Include="u_s_joetest2.cpp" />
+    <ClCompile Include="u_s_joytest.cpp" />
+    <ClCompile Include="u_s_laplace_heat.cpp" />
+    <ClCompile Include="u_s_lightsout.cpp" />
+    <ClCompile Include="u_s_lighttest.cpp" />
+    <ClCompile Include="u_s_plot2linear.cpp" />
+    <ClCompile Include="u_s_luatest.cpp" />
+    <ClCompile Include="u_s_mainmenu.cpp" />
+    <ClCompile Include="u_s_mandl.cpp" />
+    <ClCompile Include="u_s_many.cpp" />
+    <ClCompile Include="u_s_mattest.cpp" />
+    <ClCompile Include="u_s_occclient.cpp" />
+    <ClCompile Include="u_s_occclient2.cpp" />
+    <ClCompile Include="u_s_occserver.cpp" />
+    <ClCompile Include="u_s_onebit.cpp" />
+    <ClCompile Include="u_s_particles.cpp" />
+    <ClCompile Include="u_s_penrose.cpp" />
+    <ClCompile Include="u_s_physics2d.cpp" />
+    <ClCompile Include="u_s_physics3d.cpp" />
+    <ClCompile Include="u_s_playamovie.cpp" />
+    <ClCompile Include="u_s_plot2bezier.cpp" />
+    <ClCompile Include="u_s_plot2eigen.cpp" />
+    <ClCompile Include="u_s_plot2fourducks.cpp" />
+    <ClCompile Include="u_s_plot2lens.cpp" />
+    <ClCompile Include="u_s_plot2octmirror.cpp" />
+    <ClCompile Include="u_s_plot2pointcloud.cpp" />
+    <ClCompile Include="u_s_plot2poles.cpp" />
+    <ClCompile Include="u_s_plot2power.cpp" />
+    <ClCompile Include="u_s_plot2quant.cpp" />
+    <ClCompile Include="u_s_plot2quantsho.cpp" />
+    <ClCompile Include="u_s_plot2simple.cpp" />
+    <ClCompile Include="u_s_plot2zeta.cpp" />
+    <ClCompile Include="u_s_plotter.cpp" />
+    <ClCompile Include="u_s_pointcloud.cpp" />
+    <ClCompile Include="u_s_polynomial.cpp" />
+    <ClCompile Include="u_s_poly_sym.cpp" />
+    <ClCompile Include="u_s_post.cpp" />
+    <ClCompile Include="u_s_qcomp.cpp" />
+    <ClCompile Include="u_s_qr_code.cpp" />
+    <ClCompile Include="u_s_qr_code2.cpp" />
+    <ClCompile Include="u_s_rcastle.cpp" />
+    <ClCompile Include="u_s_renamer.cpp" />
+    <ClCompile Include="u_s_riemann.cpp" />
+    <ClCompile Include="u_s_rubikscube.cpp" />
+    <ClCompile Include="u_s_scratch.cpp" />
+    <ClCompile Include="u_s_searcher.cpp" />
+    <ClCompile Include="u_s_simplex.cpp" />
+    <ClCompile Include="u_s_slider.cpp" />
+    <ClCompile Include="u_s_plot2soccergoal.cpp" />
+    <ClCompile Include="u_s_sokoban.cpp" />
+    <ClCompile Include="u_s_sokoban2.cpp" />
+    <ClCompile Include="u_s_spawner.cpp" />
+    <ClCompile Include="u_s_spritetest2.cpp" />
+    <ClCompile Include="u_s_spritetest3.cpp" />
+    <ClCompile Include="u_s_stoid.cpp" />
+    <ClCompile Include="u_stoid_data.cpp" />
+    <ClCompile Include="u_s_syncro.cpp" />
+    <ClCompile Include="u_s_testres3d.cpp" />
+    <ClCompile Include="u_s_toon.cpp" />
+    <ClCompile Include="u_s_tritest1.cpp" />
+    <ClCompile Include="u_s_tritest2.cpp" />
+    <ClCompile Include="u_s_tritest3.cpp" />
+    <ClCompile Include="u_s_tritest4.cpp" />
+    <ClCompile Include="u_s_tritest5.cpp" />
+    <ClCompile Include="u_s_ttt.cpp" />
+    <ClCompile Include="u_s_turing.cpp" />
+    <ClCompile Include="u_s_ui.cpp" />
+    <ClCompile Include="u_s_user0.cpp" />
+    <ClCompile Include="u_s_user1.cpp" />
+    <ClCompile Include="u_s_user2.cpp" />
+    <ClCompile Include="u_s_vidcap.cpp" />
+    <ClCompile Include="u_s_vidtest.cpp" />
+    <ClCompile Include="u_s_wriggler.cpp" />
+    <ClCompile Include="u_testasmmacros.cpp" />
+    <ClCompile Include="u_trackpath.cpp" />
+    <ClCompile Include="u_uiclass.cpp" />
+    <ClCompile Include="u_uiclass2.cpp" />
+    <ClCompile Include="u_uipopup_info.cpp" />
+    <ClCompile Include="u_volley.cpp" />
+    <ClCompile Include="u_z2p.cpp" />
+    <ClCompile Include="wat_physics\QUANT3\quant3.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotSet</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="wat_physics\QUANT3\quant_sho.cpp" />
+    <ClCompile Include="wat_physics\quant4\quant4.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="data\scratch\test.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="engqtest.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\engq\engq.vcxproj">
+      <Project>{5ae1fe21-0705-49ec-a3cd-e094095df7f5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libogg-1.1.3\win32\ogg_static.vcxproj">
+      <Project>{7a1da762-d12f-403d-898f-8b1f0cbd59e0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libtheora-1.0beta3\win32\VS2005\libtheora\libtheora.vcxproj">
+      <Project>{653f3841-3f26-49b9-afcf-091db4b67031}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libvorbis-1.2.0\win32\VS2005\libvorbisfile\libvorbisfile.vcxproj">
+      <Project>{cebde98b-a6aa-46e6-bc79-faaf823db9ec}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libvorbis-1.2.0\win32\VS2005\libvorbis\libvorbis.vcxproj">
+      <Project>{3a214e06-b95e-4d61-a291-1f8df2ec10fd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\lua\lua.vcxproj">
+      <Project>{0b3f82a9-d1fe-459a-a08b-fa6058de893f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\misclibq\misclibq.vcxproj">
+      <Project>{f2f381c6-fc0a-4c50-91d6-a7d410efdb6c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\tinyxml\tinyxmlSTL.vcxproj">
+      <Project>{a3a84737-5017-4577-b8a2-79429a25b8b6}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

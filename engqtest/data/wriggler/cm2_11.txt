@@ -1,0 +1,8 @@
+7 7
+W      W      W      W      W      W      W      
+W      .        P0RD G1P0RL G1P0RL G0P0XL W      
+W      G2     G2P0UD G2P1RD G1P1RL G0P1DL W      
+W      G2P1DX G1P0UX G1P1UD G1P2XD G0P1XU W      
+W      G2P1RU G1P1RL G0P1UL G0P2UD G0     W      
+W      G2P2RX G1P2RL G1P2RL   P2UL .      W      
+W      W      W      W      W      W      W      

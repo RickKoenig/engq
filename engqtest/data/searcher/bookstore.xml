@@ -1,0 +1,20 @@
+<bookstore>
+	<book category="COOKING">
+	<title>The Art of Simple Food</title>
+		<author>Alice Waters</author>
+		<published>2007</published>
+		<price>35.00</price>
+	</book>
+	<book category="AUTOBIOGRAPHY">
+		<title>Moments of Being</title>
+		<author>Virginia Woolf</author>
+		<published>1985</published>
+		<price>14.00</price>
+	</book>
+	<book category="FICTION">
+		<title>Plain Truth</title>
+		<author>Judy Picoult</author>
+		<published>2000</published>
+		<price>15.00</price>
+	</book>
+</bookstore>

@@ -1,0 +1,21 @@
+shape rootmenu 0 0 {
+
+	back BACK1
+		0 0
+		 800 600
+
+	pbut LOGON
+		350 400
+		 160 20
+		 LOGON
+		
+	pbut REGISTER
+		350 460
+		 160 20
+		 REGISTER
+		
+	pbut QUIT
+		725 550
+		 50 30
+		 QUIT
+}

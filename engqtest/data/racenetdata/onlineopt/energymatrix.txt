@@ -1,0 +1,89 @@
+# internal fusion,electrical,magnetic,plasma,antimatter,chemical
+# external antimatter,chemical,electrical,fusion,magnetic,plasma
+# internal weapon list, see weapxlate.txt
+#FE M P A C
+0 2 0 0 0 0 # laser
+0 0 1 0 1 0 # klondyke
+0 1 1 0 0 1 # missiles
+0 0 0 0 0 2 # oil
+0 1 1 0 0 0 # emb
+0 0 0 2 0 0 # ecto
+0 1 0 0 0 0 # dielectric
+0 0 1 0 0 0 # transducer
+0 0 0 2 0 0 # plasma
+0 0 0 0 0 2 # ramjet
+0 0 1 0 1 1 # intake
+0 0 1 0 0 0 # spikes
+1 0 0 0 0 0 # bainite
+0 0 0 0 1 0 # aerodyne
+0 0 0 0 1 0 # ferrite
+0 1 0 0 0 0 # weapboost
+0 0 0 0 1 0 # rpd
+0 0 0 1 0 0 # nano
+0 1 0 0 1 1 # randomizer
+0 1 0 0 0 1 # icrms
+0 0 0 0 0 1 # bigtires
+0 1 1 0 0 0 # buzz
+0 0 0 0 1 0 # enleech
+2 1 0 0 1 0 # fsncan
+0 1 1 0 0 1 # grapple
+0 0 0 0 1 0 # magnet
+0 0 1 0 0 1 # mines
+0 1 1 1 0 0 # pouncer
+0 1 1 1 0 1 # prism
+1 1 0 0 0 0 # sonic
+0 1 1 1 1 1 # sledge
+1 0 0 0 0 0 # energywall
+0 0 0 0 2 0 # stasis
+1 0 0 0 1 0 # supajump
+1 0 0 0 1 1 # forklift
+0 0 0 0 0 1 # bumpercar
+1 0 0 1 0 1 # gyroscope
+0 0 0 0 1 0 # gravitybomb
+1 0 0 1 1 1 # flasher
+0 0 0 0 1 2 # charger
+1 0 1 0 0 1 # switcharoo
+0 1 0 0 0 1 # minigun
+1 1 1 0 0 0 # particle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+shape quant3res 0 0 {
+	
+// background
+	back BACK
+	0 0
+	1024 768
+	
+	text INFO
+	312 20
+	400 40
+	"i^4 = w^3 = 1, permutes a thru h"
+
+// quit
+	pbut BQUIT
+	860 744
+	160 20
+	QUIT
+
+// 
+	edit EPOLY
+	112 80
+	800 40
+	"(a+bw+cw2)3+(a+bw2+cw)3"
+
+	pbut BCALC
+	462 150
+	100 25
+	CALC
+
+	text TRESULT
+	112 250
+	800 40
+	Result
+	
+}

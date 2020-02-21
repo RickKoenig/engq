@@ -1,0 +1,18 @@
+﻿  vorbisfile.c
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\include\vorbis\vorbisfile.h(53): warning C4244: 'function': conversion from 'ogg_int64_t' to 'long', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(216): warning C4244: 'return': conversion from 'ogg_int64_t' to 'int', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(259): warning C4244: 'return': conversion from 'ogg_int64_t' to 'int', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(276): warning C4244: 'return': conversion from 'ogg_int64_t' to 'int', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(278): warning C4244: 'return': conversion from 'ogg_int64_t' to 'int', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(287): warning C4244: 'return': conversion from 'ogg_int64_t' to 'int', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(569): warning C4244: 'return': conversion from 'ogg_int64_t' to 'int', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(800): warning C4244: 'function': conversion from 'ogg_int64_t' to 'long', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(1017): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(1018): warning C4244: 'return': conversion from 'double' to 'long', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(1022): warning C4244: 'return': conversion from 'double' to 'long', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(1050): warning C4244: '=': conversion from 'double' to 'long', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(1553): warning C4244: '=': conversion from 'ogg_int64_t' to 'long', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(1589): warning C4244: 'initializing': conversion from 'double' to 'ogg_int64_t', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(1619): warning C4244: 'initializing': conversion from 'double' to 'ogg_int64_t', possible loss of data
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\vorbisfile.c(1939): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  libvorbisfile.vcxproj -> C:\srcw32\vs2017\engq\libvorbis-1.2.0\win32\VS2005\libvorbisfile\.\libvorbisfile.lib

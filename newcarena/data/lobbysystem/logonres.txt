@@ -1,0 +1,62 @@
+shape rootmenu 0 0 {
+
+	back BACK1
+		0 0
+		 800 600 
+
+	text TEXT1
+		175 70
+		 190 20
+		 NAMES
+
+	text TEXTPW
+		375 70
+		 190 20
+		 PASSWORDS
+
+/*	listbox LISTBOXTEST
+		25 110
+		 140 160
+		 
+	hscroll HSLIDETEST
+		50 550
+		 200 20
+*/
+/*
+	listbox LISTBOXPW
+		385 110
+		 190 154
+*/
+	listboxn LISTBOXNP
+		175 110
+		400 160
+		
+	edit EDIT1
+		175 284
+		 190 30
+		 ""
+	edit EDITPW
+		385 284
+		 190 30
+		 ""
+	pbut PBUT3
+		245 340
+		 260 20
+		 "DELETE USERNAME/PASSWORD"
+		
+	pbut PBUT1
+		300 400
+		 160 20
+		 LOGON
+		
+	pbut PBUTPICKSERVER
+		625 500
+		 150 30
+		 "PICK SERVER"
+		
+	pbut PBUT6
+		725 550
+		 50 30
+		 "BACK"
+	
+}

@@ -1,0 +1,2 @@
+//#define USEASMSHADERS
+#define USEEFFECTSSHADERS

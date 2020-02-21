@@ -1,0 +1,18 @@
+HTTP/1.1 301 Moved Permanently
+Date: Thu, 01 Nov 2018 06:37:30 GMT
+Server: Apache/2.4.35
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Location: https://www.janko.at/
+Content-Length: 229
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.janko.at/">here</a>.</p>
+</body></html>

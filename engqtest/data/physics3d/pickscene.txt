@@ -1,0 +1,8 @@
+#phyobjs.txt
+#testang.txt
+#dominos.txt
+#simple.txt
+building.txt
+#tops.txt
+#testtime.txt
+#testcoll.txt

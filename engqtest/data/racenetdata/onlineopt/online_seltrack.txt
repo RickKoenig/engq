@@ -1,0 +1,56 @@
+#track selected in online_seltrackcfg.txt
+#more stuff in 'trackname'.cfg
+
+#usage: trackdesc trackname.bws scale startframe finishframe skyboxname rules
+# rule 0 null
+# rule 1 oldpaths nocombat
+# rule 2 oldpaths combat
+# rule 3 CTF nocombat (NYI)
+# rule 4 CTF combat (NYI)
+# rule 5 stunts (NYI)
+# rule 6 boxes nocombat
+# rule 7 boxes combat
+# scale is being used to scale track relative to old crash reset planes, should be 1 otherwise
+
+# 0 'constructor' is always 0 for onlinetrackum (implied, doesn't work anymore)
+
+///////////// production tracks
+
+# 1 Prehistoric Track
+trackdesc "prehistoric\prehistoric.bws" 1 0 0 prehistoric.jpg 7
+
+# 2 Tarpits Track
+trackdesc "tarpits\tarpits.bws" 1 0 0 tarpits.jpg 7
+
+# 3 GhostCity Track
+trackdesc "ghostcity\ghostcity.bws" 1 0 0 ghostcity.jpg 7
+
+# 4 Aftermath Track
+trackdesc "aftermath\aftermath.bws" 1 0 0 aftermath.jpg 7
+
+# 5 Coliseum Track
+trackdesc "Coliseum\coliseum.bws" 1 0 0 tarpits.jpg 7
+
+# 6 Space Track
+trackdesc "Space\Space.bws" 1 0 0 Space.jpg 7
+
+# 7 Timelesscity Track
+#trackdesc "Timelesscity\Timelesscity.bws" 1 0 0 Space.jpg 7
+
+# 8 Mechworld Track
+trackdesc "Mechworld\Mechworld.bws" 1 0 0 Mechworld.jpg 7
+
+///////////// debug tracks
+
+# 7 kevin, 4 player track man made hitech
+trackdesc  "headon\headon.bws" .01 .1 199.9 cubemap_mountains.jpg 2
+
+# 8 jeff, 2 player track dirt canyons
+trackdesc  "thefalls\thefalls.bws" .01 0 187 cubemap_mountains.jpg 2
+
+# 9 2009 dakar desert track
+trackdesc  "2009_track_5b\track_5.bws" 1 0 0 cubemap_mountains.jpg 7
+
+# 10 test track highway35 era (has working teleporters, but not portal animation)
+trackdesc  "2009_testcheck\newcheck.bws" 1 0 0 cubemap_mountains.jpg 7
+trackdesc  "2009_testcheck\newcheck2.bws" 1 0 0 cubemap_mountains.jpg 7 // smaller version

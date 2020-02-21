@@ -1,0 +1,7 @@
+open minutelog at Thu Oct 15 08:13:08 2009
+BR    6970, BW    6970, S  10, BR/S     697, BW/S     697
+BR    5373, BW    5260, S  10, BR/S     537, BW/S     526
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+close minutelog at Thu Oct 15 08:14:02 2009

@@ -1,0 +1,31 @@
+//---------------------USER car/weapon shaders ------------------------
+//|| Name in MAx: || Type of Shader: ||
+//--------------------------------------------------------------
+// Car Shaders >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	body		toon		// variable reflect with spec
+	chrome		toon
+	windshield	toon
+	rims		toon
+	solarpanel	toon	// diffuse lighting with spec
+	solarpanel2	toon
+	plastic		toon		// diffuse lighting
+	interior	toon
+	rubber		toon
+	reg			toon		// no lighting
+
+// Weapons >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	rocket		toon
+	launcher	toon
+	mine		toon
+	CannonMetal	toon
+	CannonChrome toon
+	CannonGlass	toon
+	CannonPlastic toon
+	LaserMat	toon	// red neon glow shader
+	FusionBall	toon
+	AerodyneMat	toon
+	Sparks		toon
+	ice			toon
+// toon redirect
+	toon toon
+	edge edge	

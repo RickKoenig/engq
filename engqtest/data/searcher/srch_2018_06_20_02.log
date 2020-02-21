@@ -1,0 +1,83 @@
+open hourlylog at Wed Jun 20 02:09:55 2018
+getbuffer '76.218.105.191:52084': 'GET /'
+getbuffer '76.218.105.191:52085': 'GET /sake0018.jpg'
+getbuffer '76.218.105.191:52086': 'GET /favicon.ico'
+getbuffer '76.218.105.191:52090': 'GET /page0.htm'
+getbuffer '76.218.105.191:52091': 'GET /mystyle0.css'
+getbuffer '76.218.105.191:52092': 'GET /page0.js'
+getbuffer '76.218.105.191:52093': 'GET /_mandl_1_0_0.png'
+getbuffer '76.218.105.191:52094': 'GET /_mandl_0_0_0.png'
+getbuffer '76.218.105.191:52095': 'GET /_mandl_1_1_0.png'
+getbuffer '76.218.105.191:52096': 'GET /_mandl_1_0_1.png'
+getbuffer '76.218.105.191:52097': 'GET /_mandl_1_1_1.png'
+getbuffer '76.218.105.191:52101': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:52102': 'GET /_mandl_2_0_0.png'
+getbuffer '76.218.105.191:52103': 'GET /_mandl_2_1_0.png'
+getbuffer '76.218.105.191:52104': 'GET /_mandl_2_2_0.png'
+getbuffer '76.218.105.191:52105': 'GET /_mandl_2_3_0.png'
+getbuffer '76.218.105.191:52106': 'GET /_mandl_2_0_1.png'
+getbuffer '76.218.105.191:52107': 'GET /_mandl_2_1_1.png'
+getbuffer '76.218.105.191:52109': 'GET /_mandl_2_2_1.png'
+getbuffer '76.218.105.191:52110': 'GET /_mandl_2_3_1.png'
+getbuffer '76.218.105.191:52111': 'GET /_mandl_2_0_2.png'
+getbuffer '76.218.105.191:52112': 'GET /_mandl_2_1_2.png'
+getbuffer '76.218.105.191:52113': 'GET /_mandl_2_2_2.png'
+getbuffer '76.218.105.191:52115': 'GET /_mandl_2_3_2.png'
+getbuffer '76.218.105.191:52114': 'GET /_mandl_2_0_3.png'
+getbuffer '76.218.105.191:52116': 'GET /_mandl_2_1_3.png'
+getbuffer '76.218.105.191:52117': 'GET /_mandl_2_2_3.png'
+getbuffer '76.218.105.191:52118': 'GET /_mandl_2_3_3.png'
+close hourlylog at Wed Jun 20 02:16:44 2018
+append hourlylog at Wed Jun 20 02:21:27 2018
+getbuffer '76.218.105.191:52464': 'GET /_mandl_9_0_0.png'
+close hourlylog at Wed Jun 20 02:21:36 2018
+append hourlylog at Wed Jun 20 02:22:28 2018
+getbuffer '76.218.105.191:52551': 'GET /_mandl_9_0_0.png'
+close hourlylog at Wed Jun 20 02:22:42 2018
+append hourlylog at Wed Jun 20 02:22:50 2018
+getbuffer '76.218.105.191:52582': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:52617': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:52626': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:52631': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:52637': 'GET /_mandl_9_0_0.png'
+close hourlylog at Wed Jun 20 02:23:33 2018
+append hourlylog at Wed Jun 20 02:23:39 2018
+getbuffer '76.218.105.191:52654': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:52659': 'GET /_mandl_9_0_0.png'
+close hourlylog at Wed Jun 20 02:23:51 2018
+append hourlylog at Wed Jun 20 02:26:06 2018
+getbuffer '76.218.105.191:52902': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:52907': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:52912': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:52917': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:52922': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:52927': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:52932': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:52937': 'GET /_mandl_9_0_0.png'
+close hourlylog at Wed Jun 20 02:26:30 2018
+append hourlylog at Wed Jun 20 02:30:07 2018
+getbuffer '76.218.105.191:53535': 'GET /_mandl_9_0_0.png'
+close hourlylog at Wed Jun 20 02:30:12 2018
+append hourlylog at Wed Jun 20 02:31:29 2018
+getbuffer '76.218.105.191:53659': 'GET /_mandl_9_0_0.png'
+close hourlylog at Wed Jun 20 02:31:33 2018
+append hourlylog at Wed Jun 20 02:50:01 2018
+getbuffer '76.218.105.191:56030': 'GET /_mandl_9_0_0.png'
+close hourlylog at Wed Jun 20 02:50:05 2018
+append hourlylog at Wed Jun 20 02:51:08 2018
+getbuffer '76.218.105.191:56122': 'GET /_mandl_9_0_0.png'
+close hourlylog at Wed Jun 20 02:52:57 2018
+append hourlylog at Wed Jun 20 02:57:35 2018
+getbuffer '76.218.105.191:56780': 'GET /_mandl_9_0_0.png?t=1529463465739'
+getbuffer '76.218.105.191:56785': 'GET /_mandl_9_0_0.png?t=1529463468739'
+getbuffer '76.218.105.191:56790': 'GET /_mandl_9_0_0.png?t=1529463471738'
+getbuffer '76.218.105.191:56795': 'GET /_mandl_9_0_0.png?t=1529463474739'
+getbuffer '76.218.105.191:56800': 'GET /_mandl_9_0_0.png?t=1529463477739'
+getbuffer '76.218.105.191:56805': 'GET /_mandl_9_0_0.png?t=1529463480738'
+getbuffer '76.218.105.191:56842': 'GET /_mandl_9_0_0.png?t=1529463508474'
+getbuffer '76.218.105.191:56847': 'GET /_mandl_9_0_0.png?t=1529463511474'
+getbuffer '76.218.105.191:56852': 'GET /_mandl_9_0_0.png?t=1529463514473'
+getbuffer '76.218.105.191:56858': 'GET /_mandl_9_0_0.png?t=1529463517474'
+getbuffer '76.218.105.191:56863': 'GET /_mandl_9_0_0.png?t=1529463520475'
+getbuffer '76.218.105.191:56868': 'GET /_mandl_9_0_0.png?t=1529463523474'
+close hourlylog at Wed Jun 20 02:59:20 2018

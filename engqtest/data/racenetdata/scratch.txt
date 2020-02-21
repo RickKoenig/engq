@@ -1,0 +1,43 @@
+JR:
+
+Sorry I haven't gotten back to you sooner. (Fighting fires)
+
+
+My stuff is for dx7 probably not much help but here goes...
+
+// hook a texture to a texture stage
+	if (cm->thetex) {
+		hr=IDirect3DDevice7_SetTexture(
+			td3ddevice7,0,(LPDIRECTDRAWSURFACE7)cm->thetex->tdsurftex7a[0]);
+		if (hr!=DD_OK)
+			errorexit("DDirect3DDevice7_SetTexture %08x",hr);
+
+
+// setting up a render state for textures or no textures
+	if (cm->msflags&SMAT_HASTEX) {
+		if ((cm->msflags&SMAT_HASSHADE) || (matcol&0xffffff)!=0xffffff)
+			hr=IDirect3DDevice7_SetTextureStageState(td3ddevice7,0,D3DTSS_COLOROP,D3DTOP_MODULATE); // c: t*d
+		else
+			hr=IDirect3DDevice7_SetTextureStageState(td3ddevice7,0,D3DTSS_COLOROP,D3DTOP_SELECTARG1); // c: t
+		if (doalpha) {
+			if (hasxlu) {
+				hr=IDirect3DDevice7_SetTextureStageState(td3ddevice7,0,D3DTSS_ALPHAOP,D3DTOP_MODULATE); // a: t*d
+			} else {
+				hr=IDirect3DDevice7_SetTextureStageState(td3ddevice7,0,D3DTSS_ALPHAOP,D3DTOP_SELECTARG1); // a: t
+			}
+		} else {
+			hr=IDirect3DDevice7_SetTextureStageState(td3ddevice7,0,D3DTSS_ALPHAOP,D3DTOP_SELECTARG2); // a: d
+		}
+	} else {
+		hr=IDirect3DDevice7_SetTextureStageState(td3ddevice7,0,D3DTSS_COLOROP,D3DTOP_SELECTARG2); // c: d
+		hr=IDirect3DDevice7_SetTextureStageState(td3ddevice7,0,D3DTSS_ALPHAOP,D3DTOP_SELECTARG2); // a: d
+	}
+
+// unhook a texture from a texture state
+	if (cm->thetex) {
+		hr=IDirect3DDevice7_SetTexture(td3ddevice7,0,NULL);
+		if (hr!=DD_OK)
+			errorexit("(0) DDirect3DDevice7_SetTexture %08x",hr);
+	}
+
+Rick

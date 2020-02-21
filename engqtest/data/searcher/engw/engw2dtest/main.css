@@ -1,0 +1,131 @@
+body {
+	margin:2px;
+}
+	
+h1 {
+	margin:0;
+	padding:8px;
+}
+h2 {
+	margin:0;
+	padding:4px;
+}
+h3 {
+	margin:0;
+	padding:4px;
+}
+	
+p {
+	font-size: 10px;
+	margin:0;
+}
+
+hr {
+	margin:2px;
+	height:5px;
+}
+
+a {
+	font-size: 20px;
+}
+
+div {
+	text-align:center;
+	line-height:120%;
+}
+div.top {
+ 	margin:auto;
+	background-color: lightgreen;
+ 	width: 1000px;
+	clear: both;
+}
+div.instructions {
+	font-size: 16px;
+ 	margin:auto;
+	background-color: yellow;
+ 	width:1000px; 
+ 	height:155px;
+	clear: both;
+}
+div.middle {
+ 	margin:auto;
+ 	width:1000px; 
+}
+div.left {
+	background-color: lightblue;
+ 	width:300px;
+ 	/* height:200px; */
+ 	float:left;
+	/* font-size: 2px; */
+}
+div.centerg {
+	background-color:#996633;
+ 	float:left;
+	position:relative;
+}
+div.right {
+	background-color: brown;
+ 	width:100px;
+ 	float:left;
+}
+div.bottom {
+	background-color: red;
+ 	width:1000px;
+ 	margin: auto; 
+	clear: both;
+}
+
+.center {
+	font-size: 8px;
+	border-width: 2px;
+	width: 28px;
+}
+.centerb {
+	text-align:center;
+	font-size: 8px;
+	border-width: 2px;
+	width: 68px;
+}
+.centerv {
+	text-align:center;
+	font-size: 8px;
+	border-width: 2px;
+}
+
+.centerbwm { /* wide button margins */
+	text-align:center;
+	font-size: 8px;
+	border-width: 2px;
+	width: 68px;
+	margin: 0 10px 0 10px;
+}
+
+#myform {
+	text-align:left;
+}
+
+img.normal {
+	margin:0;
+	padding:0;
+	float:left;
+}
+img.clear {
+	margin:0;
+	padding:0;
+	float:left;
+	clear:both;
+}
+img.absol {
+	clear:both;
+	margin:0;
+	padding:0;
+	position:absolute;
+}
+#mycanvas {
+	margin:0;
+	padding:0;
+ 	width:600px;
+ 	height:500px;
+	background-color: brown;
+ 	display:block;
+}

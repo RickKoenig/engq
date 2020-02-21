@@ -1,0 +1,18 @@
+// shadername vs ps vd
+	tex tex.vs tex.ps VCT			// no lighting // can be VT or VCT see u_s_3dtest.cpp and fonts for why
+	texadd tex.vs texadd.ps VCT		// no lighting // can be VT or VCT see u_s_3dtest.cpp and fonts for why
+	cvert cvert.vs cvert.ps VCT		// colored verts
+	vdiff vdiff.vs vdiff.ps VNT		// vertex diffuse lighting
+	pdiff pdiff.vs pdiff.ps VNT		// pixel diffuse lighting
+	vdiffspec vdiffspec.vs vdiffspec.ps VNT						// vertex amb/diff/spec lighting
+	pdiffspec pdiffspec.vs pdiffspec.ps VNT						// pixel amb/diff/spec lighting and with 2 textures with common uvs
+
+	pnormalmap pnormalmap.vs pnormalmap.ps VNTM					// main texture and a normal map with amb/diff/spec
+	
+	makeshadowmap makeshadowmap.vs makeshadowmap.ps VNT			// shadow map maker
+	useshadowmap useshadowmap.vs useshadowmap.ps VNT			// shadow map user
+	shadowmapviewer shadowmapviewer.vs shadowmapviewer.ps VT	// no lighting // can be VT
+	
+	env env.vs env.ps VNT			// environment mapper
+	
+	tex2c tex2c.vs tex2c.ps VCT		// uses 2 matcolors, nonzero tex gets main color, zero gets alt color, for fonts

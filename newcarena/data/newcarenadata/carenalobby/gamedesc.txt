@@ -1,0 +1,68 @@
+{
+	"avatar" : {
+		"avaj" : {
+			"carbodyname" : "100twinmill",
+			"decal" : 22,
+			"energies" : [
+				5,
+				17,
+				4,
+				2,
+				6,
+				3
+			],
+			"ownerid" : -1,
+			"paint" : 19,
+			"playername" : "rickers",
+			"weaps" : [
+				"buzz",
+				"charger",
+				"emb",
+				"ferrite",
+				"forklift",
+				"grapple",
+				"intake",
+				"laser",
+				"minigun"
+			]
+		}
+	},
+	"environment" : {
+		"envj" : {
+			"nlaps" : 1,
+			"rules" : 6,
+			"trackhash" : {
+				"hash" : {
+					"data" : [
+						192,
+						200,
+						185,
+						252,
+						120,
+						21,
+						59,
+						170,
+						228,
+						95,
+						254,
+						246,
+						36,
+						90,
+						52,
+						24
+					]
+				}
+			},
+			"trackname" : "forksx"
+		}
+	},
+	"nbotplayers" : 0,
+	"net" : {
+		"netdescj" : {
+			"gamenet" : 0,
+			"serverip" : "127.0.0.1",
+			"serverport" : 5426
+		}
+	},
+	"nhumanplayers" : 1
+}

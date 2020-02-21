@@ -1,0 +1,48 @@
+shape gametheoryres 0 0 {
+
+	pbut PBUT3X3
+	625 335
+	160 20
+	"Lightup 3x3"
+	
+	pbut PBUT4X4
+	625 365
+	160 20
+	"Lightup 4x4"
+	
+	pbut PBUTMOD
+	625 395
+	160 20
+	"Mod"
+	
+	pbut PBUTNVAR
+	625 425
+	160 20
+	"Num Var"
+	
+	pbut PBUTNEQU
+	625 455
+	160 20
+	"Num Equ"
+	
+	pbut PBUTRESET
+	625 485
+	160 20
+	RESET
+	
+	pbut PBUTSTEP
+	625 515
+	160 20
+	STEP
+	
+	pbut PBUTCALC
+	625 545
+	160 20
+	CALC
+	
+	pbut PBUTQUIT
+	625 575
+	160 20
+	QUIT
+	
+}

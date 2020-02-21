@@ -1,0 +1,393 @@
+########### these are defined ######################
+# globalname hello
+#system
+releasemode 47
+enabledebprint 1
+runinbackground 0
+### states
+# startstate -1 # just exit without running any states
+# startstate 0 # mainmenu, default
+# startstate 1 # user0, right now test res
+# startstate 2 # user1, right now test mt rand, more group stuff
+# startstate 3 # user2, right now test lines and rectangles, Dave's pic codes
+# startstate 4 # lightsout
+
+# startstate 5 # matrix tests
+# startstate 6 # vidcap
+startstate 7 # scratch, simple shapes
+# startstate 8 # jigpuzz
+# startstate 9 # 3dtest
+
+# startstate 10 # gfxtest
+# startstate 11 # file, code renamer
+# startstate 12 # lighting tests
+# startstate 13 # vid tests, drag and drop .bws or .bwo here.
+# startstate 14 # lua tests
+
+# startstate 15 # game theory
+# startstate 16 # 1 bit pixel compression
+# startstate 17 # braid
+# startstate 18 # simple browser
+# startstate 19 # joetest
+
+# startstate 20 # occserver
+# startstate 21 # occclient
+# startstate 22 # sokoban
+# startstate 23 # slider
+# startstate 24 # occclient2
+
+# startstate 25 # joetest2
+# startstate 26 # sokoban2
+# startstate 27 # wriggler
+# startstate 28 # ui
+# startstate 29 # "tritest1 test shadows"
+
+# startstate 30 # "tritest2 test pixels"
+# startstate 31 # "tritest3 test viewports"
+# startstate 32 # "tritest4 test sprites"
+# startstate 33 # "tritest5 test bbox"
+# startstate 34 # plotter
+
+# startstate 35 # many
+# startstate 36 # arena 1
+# startstate 37 # arena 2
+# startstate 38 # plotter2 simple
+# startstate 39 # plotter2 quant
+
+# startstate 40 # plotter2 quant SHO
+# startstate 41 # plotter2 lens
+# startstate 42 # plotter2 poles
+# startstate 43 # plotter2 zeta
+# startstate 44 # plotter2 power complex
+
+# startstate 45 # plotter2 Eigen tests
+# startstate 46 # plotter2 four ducks pond brilliant
+# startstate 47 # plotter2 bezier
+# startstate 48 # plotter2 oct mirror
+# startstate 49 # plotter2 linear regression
+
+# startstate 50 # plotter2 soccer goal angle
+
+// skip some states
+
+# startstate 67 # Stoid Command!
+# startstate 68 # Test 3D res
+# startstate 69 # Basic 3D
+# engine7test states
+# startstate 70 # new carena lobby
+# startstate 71 # new carena connect
+# startstate 72 # new old cons
+# startstate 73 # new new cons
+# startstate 74 # meshtest
+
+# 75 new status, don't go here first
+# 76 new game, don't go here first
+
+# old carena lobby
+# startstate 77 # old carena lobby, go here first, writes racenetdata/onlineopt/online_seltrackcfg.txt
+# startstate 78 # check for updates then go race (state sequence, or go here first, reads racenetdata/onlineopt/online_seltrackcfg.txt
+# startstate 79 # connect state, go here first, if not using updater
+# 80 car extract state (not used much, bypass at some point), don't go here first
+
+# startstate 81 # rubiks cube
+# startstate 82 # "Snowboard Half-pipe builder"
+# startstate 83 # syncro mutex/semaphores test
+# startstate 84 # spawner
+# startstate 85 # search engine
+# startstate 86 # toon effect
+# startstate 87 # play a theora movie
+# startstate 88 # collage viewer
+# startstate 89 # new sprite 2d
+# startstate 90 # new sprite 3d
+# startstate 91 # joystick test di
+# startstate 92 # joystick test mm
+# startstate 93 # "match server" // match should start here
+# startstate 94 # "match logon"  // or here
+/*
+# 95 match lobby
+# statedesc 96 "match results (test only)"
+# statedesc 97 "match hiscores (test only)"
+# statedesc 98 "match pickgame (test only)"
+# statedesc 99 "match options (test only)"
+
+# statedesc 100 "quickgame (no lobby, test only)"
+# statedesc 101 "game1 (test only)"
+*/
+# match system and "match server" above
+# startstate 102 # match register
+# startstate 103 # match pickserver
+# startstate 104 # match title // or here
+
+# 105 online race main, don't go here first
+# startstate 106 # broadcast testserver
+# startstate 107 # broadcast testclient 
+# startstate 108 # broadcast server
+# startstate 109 # POST tester
+
+# startstate 110 # quant3, quantum mechanics simulator from watcom env year 1992 (had no float, and 1024 energies, dos)
+# startstate 111 # quant4, quantum mechanics simulator, with varing potentials (see debprint menu)
+# startstate 112 # igroup
+# startstate 113 # polynomials
+# startstate 114 # ifield
+
+# startstate 115 # marching cubes test, json test
+# startstate 116 # jelly no puzzle
+# startstate 117 # tictactoe
+# startstate 118 # game2 tictactoe 2 turns each 4 by 4
+# startstate 119 # honeycomb strategy game
+
+# startstate 120 # simplex method
+# startstate 121 # mandl
+# startstate 122 # poly sim
+# startstate 123 # qrcode math
+# startstate 124 # qrcode cam
+
+# startstate 125 # Penrose tiles
+# startstate 126 # physics 3d
+# startstate 127 # physics 2d
+# startstate 128 # heat in a house
+# startstate 129 # endgame (chess)
+
+# startstate 130 # game2 ttt
+# startstate 131 # game2 nim
+# startstate 132 # game2 opposition, chess like
+# startstate 133 # game2 foxes vs goose
+# startstate 134 # quant sho
+
+# startstate 135 # nfs shell
+
+# startstate 142 # particles
+# startstate 143 # riemann
+# startstate 144 # augmented reality AR
+
+# startstate 145 # conduit
+# startstate 146 # cube map test
+# startstate 147 # cube map test II
+# startstate 148 # Q comp
+# startstate 149 # laplace, heat, study
+
+# startstate 150 # Glenn's castle
+# startstate 151 # Rick's castle
+# startstate 152 # Turing Machine
+# startstate 153 # Digital Electonics Simulator
+# startstate 154 # Mesh and point cloud
+
+# startstate 155 # plotter2 pointcloud tests
+# startstate 156 # chatter socket tests
+# startstate 157 # 2d fourview tests
+# startstate 158 # 3d fourview tests
+# startstate 159 # 2d fourview tests brush
+
+# fpswanted 1 # default is 30
+hiprioritywanted 0
+nosleep 1 # seems to run smoother if nosleep is set to 1
+
+# '##'s means that that entry was moved to device.txt
+#video
+##startvideomaindriver 0 # -1 none, 0 gdi, 1 directdraw, 2 direct3d
+##startvideosubdriver 0 # 0 subdevice 0 ati rage pro, 1 subdevice 1 voodoo 2 etc.
+dopaintmessages 1
+
+#audio
+##startaudiomaindriver 0 # -1 none, 0 waveplayer, 1 directsound
+##startaudiosubdriver 0 # 0 subdevice 0 RipTide Playback, 1 subdevice 1 Game Compatible Device etc.
+##startaudiomicsubdriver 0 # 0 subdevice for mic
+
+#input
+##startusedirectinput 0 # -1 none (later), 0 message based, 1 directinput (keyboard, mouse and joystick)
+repdelay 20
+repperiod 2
+dinput_nomouse 0 # when set, don't use directinput with the mouse, just the keyboard and joystick
+##mousemode 0 # 0 normal, 1 infinite
+use8way 1 # 0 no diagonals, 1 diagonals
+
+#3d
+zenable 2 # 2 no, 1 yes, 2 from model
+// clearzbuffval 0
+perscorrect 1 # 0 no, 1 yes, 2 when clipped?
+usecolorkey 1 # use alpha channel if texture has it
+dumpbwo 0	# show all info in .bwo files, can be very large
+dumpbws 0	# show all info in .bws files
+showcheckboxes 1
+showphysics 0
+
+relquat 1	# max exporter issues, 0 occusim, 1 racenet, sigh, maybe switch to 'blender'?
+
+#tree3d
+flycamrevy 0 # rick likes 1, everyone else likes 0, rick now likes 0
+flycamspeed .0625
+favorshading 0
+favorlightmap 0 # show lightmap as main by setting main tex and main uvs
+
+#lights3d
+uselights 1
+dodefaultlights 0
+
+#treeinfo
+defaultdissolvecutoff .05 # anything below this value will not be drawn, this is the default
+treedissolvecutoffenable 1 # 0: use default, 1: use tree
+dissolvestart  .99 # anything above this value will disable alpha blending
+
+#dx9
+hiendmachine 1	# 1 will enable 32 bit vertex indices and hardware vert processing
+fogenable 0
+fogcolorx .5
+fogcolory .5
+fogcolorz .5
+fogmode 3
+fogstart 15
+fogend 75
+fogdensity .03225
+usemip 1 # auto generate mipmaps if true
+miplodbias -1 # -2 sharper
+shadowepsilon .001
+# tex01blend .5 // no longer used
+
+# toon stuff
+cullmode 3 # 1 none, 2 cull cw, 3 cull ccw
+fillmode 3 # 1 point, 2 wireframe, 3 solid
+toonedgesize .1
+
+# stan stuff
+stanx 1
+stany 1
+
+#edge stuff, (new toon)
+edgesize .004
+edgezoff .003
+edgecosang .9
+normallength 1 # .025
+
+#toon cars in game
+tooningame 2 # 0 back to normal (faster loads), 1 toon cars in lobby and in game ('toon_') , 2 newer toon effect ('toon2_')
+usehelper 0
+
+/*
+// from engine7test new carena
+// (local user 3d) 
+//jrmcarscale .014 // was .014 // temp just easier to see..
+jrmcarscale .1 // was .014 // temp just easier to see.. , not this one..
+jrmcartrans.y -.07
+jrmcarrot.x -90
+weapscale .5
+*/
+
+lobbycamtrans.x 0
+lobbycamtrans.y 2
+lobbycamtrans.z -5.7
+lobbycamrot.x .25
+lobbycamrot.y 0
+lobbycamrot.z 0
+lobbycamzoom 2
+
+trackcamtrans.x 160
+trackcamtrans.y 264
+trackcamtrans.z -32
+trackcamrot.x 1
+trackcamrot.y 0
+trackcamrot.z 0
+trackcamzoom 2
+
+constructorcamtrans.x 160
+constructorcamtrans.y 288
+constructorcamtrans.z 0
+constructorcamrot.x 1.15
+constructorcamrot.y 0
+constructorcamrot.z 0
+constructorcamzoom 2
+
+constructorcamtrans2.x 20
+constructorcamtrans2.y 41
+constructorcamtrans2.z 9
+constructorcamrot2.x 1.375
+constructorcamrot2.y 0
+constructorcamrot2.z 0
+constructorcamzoom2 2
+
+/* constructorcamtrans3.x 13.64
+constructorcamtrans3.y 16.44
+constructorcamtrans3.z -4.79
+constructorcamrot3.x .67
+constructorcamrot3.y 5.79
+constructorcamrot3.z 0
+constructorcamzoom3 2 */
+
+
+beforeloadtimeoutserver 35 # seconds for waiting around for initial connections
+beforeloadtimeoutclient 52 # seconds for waiting around for initial connections
+afterloadtimeoutserver 60 # seconds for waiting for other players to load game
+afterloadtimeoutclient 120 # seconds for waiting for other players to load game
+
+statustime 1 # seconds for status after connect
+ingametimeout 30 # for waiting for probably disconnected player during game
+
+loadinggoal 1000
+scrlinez 240
+defuloop 0
+rematchtime 540
+norematchtime 560
+car2cardist 4.7
+
+
+gamecamtrans.x 0
+gamecamtrans.y 6
+gamecamtrans.z -13
+gamecamrot.x .2
+gamecamrot.y 0
+gamecamrot.z 0
+gamecamzoom 2
+
+// listen port for searcher web server
+// sport 80
+sport 8080
+
+/*
+
+###### menagerie settings ###########
+menageriecamtrans.x -50
+menageriecamtrans.y 4
+menageriecamtrans.z 35
+menageriecamrot.x 0
+menageriecamrot.y 1.75
+menageriecamrot.z 0
+menageriecamzoom 2
+
+velxfactor 1.8
+velyfactor 3
+*/
+
+
+
+
+/*
+from another time
+#model3d
+fastnorms 0
+smoverride 2 #0 facet, 1 smooth, 2 from smang
+########### not yet defined ######################
+#disablewpsetvol 0 # turn on to disable waveplayer volume settings, annoying green volume bars on my screen
+timalpha 0 # if a 1 then you need an opacity map in max to get any alpha at all
+d3denhancedwanted 1
+#input
+
+disabledissolve 0
+forcealphamodulate 1
+#winsock
+
+#misc engine variables
+speedupdeformobjects 1 # don't drawc and don't animatec them for awhile if off screen
+#vsync 1
+hardwareclipping 0
+texwrap 2 # 0 no, 1 yes, 2 from model
+filter 1
+clipmap 3 # 0 none, 1 colorkey, 2 1bit alpha, 3 4bit alpha
+#alphacutoff 32
+defaultalphacutoff 64
+
+shadowzoff .0008
+numviewports 1
+helperscale 1
+#camrotdrift 1
+camposdrift .08
+colcamdist 1.5
+*/

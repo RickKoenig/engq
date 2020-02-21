@@ -1,0 +1,11 @@
+beachhead.mxo
+smasher.mxo
+lights.mxo
+PWstand01.mxo
+PWstand02.mxo
+4p_glass.mxo
+liljump.mxo
+#start.lwo
+#finish.lwo
+
+slecs 9870

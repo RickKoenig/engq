@@ -1,0 +1,9 @@
+order 4
+	init
+		cycle 0 1
+		cycle 2 3
+	init
+		cycle 0 2
+		cycle 1 3
+	goal
+		cycle 0 1

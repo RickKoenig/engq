@@ -1,0 +1,35 @@
+//res pic BACK1 0
+//	loc 10 10 
+//	size 120 70
+//	name rematch.jpg
+
+#res text PTEXTQ 1
+#	loc 195 45
+#	size 120 15
+#	name "Do you want"
+#	
+#res text PTEXTQ2 4
+#	loc 195 60
+#	size 120 15
+#	name "a rematch ?"
+#	
+#res pbut PBUTYES 2
+#	loc 215 85
+#	size 30 20
+#	name "YES"
+#
+#res pbut PBUTNO 3
+#	loc 265 85
+#	size 30 20
+#	name "NO"
+shape rematchres 0 0 {
+	pbut PBUTYES
+	21 49
+	47 19
+	"YES"
+
+	pbut PBUTNO
+	71 49
+	47 19
+	"NO"
+}

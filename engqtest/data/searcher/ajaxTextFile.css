@@ -1,0 +1,8 @@
+body{background-color:aliceblue;}
+.divStyle {
+	margin-left:5px;
+	margin-right:200px;
+	border-style:solid;
+	border-color:blue;
+	font-size:150%;
+}

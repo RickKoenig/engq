@@ -1,0 +1,202 @@
+
+### start state
+# startstate -1 # just exit without running any states
+startstate  0 # mainmenu, default
+# startstate  1 # braid
+# startstate  2 # simple browser
+# startstate  3 # "tritest1 test shadows"
+# startstate  4 # many
+# startstate  5 # new carena lobby
+# startstate  6 # new carena connect
+## don't startstate these
+## startstate  7 # new carena old track constructor
+## startstate  8 # new carena new track constructor
+## startstate  9 # new carena status
+## startstate 10 # new carena game
+# startstate 11 # play ogg theora movies
+# startstate 12 # marching cube test
+# startstate 13 # plotter 2d float scratch with grid
+# startstate 14 # "match server" // match should start here
+# startstate 15 # "match logon"  // or here
+/*
+# 16 match lobby
+# statedesc 17 "match results (test only)"
+# statedesc 18 "match hiscores (test only)"
+# statedesc 19 "match pickgame (test only)"
+# statedesc 20 "match options (test only)"
+# statedesc 21 "quickgame (no lobby, test only)"
+# statedesc 22 "game1 (test only)"
+*/
+# match system and "match server" above
+# startstate 23 # match register
+# startstate 24 # match pickserver
+# startstate 25 # match title // or here
+# startstate 26 # newton's method
+# startstate 27 # marble maze
+# startstate 28 # matrix test
+# startstate 29 # matrix test 2
+# startstate 30 # lightup
+# startstate 31 # riemann
+
+##### system section #####
+releasemode 47
+enabledebprint 1
+runinbackground 0
+nosleep 0
+# fpswanted 1 # default is 30
+hiprioritywanted 0
+dopaintmessages 1
+
+### input
+repdelay 10
+repperiod 2
+dinput_nomouse 0 # when set, don't use directinput with the mouse, just the keyboard and joystick
+use8way 1 # 0 no diagonals, 1 diagonals
+
+### 3d
+zenable 2 # 2 no, 1 yes, 2 from model
+perscorrect 1 # 0 no, 1 yes, 2 when clipped?
+usecolorkey 1 # use alpha channel if texture has it
+dumpbwo 0	# show all info in .bwo files, can be very large
+dumpbws 0	# show all info in .bws files
+//showcheckboxes 1
+//showphysics 0
+//usehelper 0
+relquat 1	# max exporter issues, 0 occusim, 1 racenet, sigh, maybe switch to 'blender'?
+cullmode 3 # 1 none, 2 cull cw, 3 cull ccw
+fillmode 3 # 1 point, 2 wireframe, 3 solid
+
+# tree3d
+flycamrevy 0 # rick likes 1, everyone else likes 0
+flycamspeed .5
+favorshading 0
+favorlightmap 0 # show lightmap as main by setting main tex and main uvs
+
+# lights3d
+uselights 1
+dodefaultlights 0
+
+# treeinfo
+defaultdissolvecutoff .05 # anything below this value will not be drawn, this is the default
+treedissolvecutoffenable 1 # 0: use default, 1: use tree
+dissolvestart  .99 # anything above this value will disable alpha blending
+
+# dx9
+hiendmachine 1	# 1 will enable 32 bit vertex indices and hardware vert processing
+fogenable 0
+fogcolorx .5
+fogcolory .5
+fogcolorz .5
+fogmode 3
+fogstart 15
+fogend 75
+fogdensity .03225
+usemip 1 # auto generate mipmaps if true
+miplodbias -1 # -2 sharper
+shadowepsilon .001
+
+### toon stuff
+toonedgesize .1
+
+### stan stuff
+stanx 1
+stany 1
+
+### edge stuff, (new toon)
+edgesize .004
+edgezoff .003
+edgecosang .9
+normallength 1 # .025
+
+### toon cars in game
+tooningame 2 # 0 back to normal (faster loads), 1 toon cars in lobby and in game ('toon_') , 2 newer toon effect ('toon2_')
+
+##### user section #####
+
+### various cameras
+## lobby
+lobbycamtrans.x 0
+lobbycamtrans.y 2
+lobbycamtrans.z -5.7
+lobbycamrot.x .25
+lobbycamrot.y 0
+lobbycamrot.z 0
+lobbycamzoom 2
+
+trackcamtrans.x 160
+trackcamtrans.y 264
+trackcamtrans.z -32
+trackcamrot.x 1
+trackcamrot.y 0
+trackcamrot.z 0
+trackcamzoom 2
+
+## old constructor
+constructorcamtrans.x 160
+constructorcamtrans.y 288
+constructorcamtrans.z 0
+constructorcamrot.x 1.15
+constructorcamrot.y 0
+constructorcamrot.z 0
+constructorcamzoom 2
+
+constructorcamtrans2.x 20
+constructorcamtrans2.y 41
+constructorcamtrans2.z 9
+constructorcamrot2.x 1.375
+constructorcamrot2.y 0
+constructorcamrot2.z 0
+constructorcamzoom2 2
+
+## ingame
+# main
+/*
+gamecamtrans.x 0
+gamecamtrans.y 6
+gamecamtrans.z -13
+gamecamrot.x .2
+gamecamrot.y 0
+gamecamrot.z 0
+gamecamzoom 2
+*/
+gamecamtrans.x 0
+gamecamtrans.y 0
+gamecamtrans.z 0
+gamecamrot.x 0
+gamecamrot.y 0
+gamecamrot.z 0
+gamecamzoom 2
+
+# scrline/hud
+scrlinez 240
+
+### various times in seconds:  mostly network timeouts
+//beforeloadtimeoutserver 35 # seconds for waiting around for initial connections
+//beforeloadtimeoutclient 52 # seconds for waiting around for initial connections
+//afterloadtimeoutserver 60 # seconds for waiting for other players to load game
+//afterloadtimeoutclient 120 # seconds for waiting for other players to load game
+//ingametimeout 30 # for waiting for probably disconnected player during game
+# non network timeouts
+statustime 1 # seconds for display of status after connect
+
+defuloop 0 # 
+# <0: freeze
+#  0: run in realtime 60fps
+#  1: run at 60fps
+#  2: run at 30fps
+# etc
+
+/*
+# move to physics  constants
+### times in 1/60 sec
+candrivetime 90 // countdown to 'GO!', 180
+### times in 1 sec
+rematchtime 1 # 5 # seconds after finish, turn on rematch dialog
+norematchtime 40 # 7 # seconds after finish, turn off rematch dialog
+
+### various distances in 'meters' ?
+car2cardist 4.7
+
+### other settings
+// loadinggoal 1000 # for loading progress bar
+*/

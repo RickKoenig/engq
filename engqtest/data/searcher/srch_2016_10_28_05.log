@@ -1,0 +1,11 @@
+open hourlylog at Fri Oct 28 05:37:07 2016
+getbuffer '76.218.105.191:51915': 'GET /'
+getbuffer '76.218.105.191:51916': 'GET /sake0018.jpg'
+getbuffer '76.218.105.191:51918': 'GET /favicon.ico'
+getbuffer '76.218.105.191:51919': 'GET /search?q=velcro'
+ip '76.218.105.191' searching for 'search?q=velcro' at Fri Oct 28 05:37:26 2016
+getbuffer '76.218.105.191:51923': 'GET /search?q=velcro+wiki'
+ip '76.218.105.191' searching for 'search?q=velcro+wiki' at Fri Oct 28 05:37:47 2016
+getbuffer '76.218.105.191:51933': 'GET /search?q=velcro+wikipedia'
+ip '76.218.105.191' searching for 'search?q=velcro+wikipedia' at Fri Oct 28 05:38:00 2016
+close hourlylog at Fri Oct 28 05:38:38 2016

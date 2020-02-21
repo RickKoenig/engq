@@ -1,0 +1,3 @@
+namespace goldbach {
+void rungoldbach();
+}

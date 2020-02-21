@@ -1,0 +1,97 @@
+shape rootmenu 0 0 {
+
+back BACK1
+	0 0
+	800 600
+
+pbut PBUT1
+	710 350
+	80 20
+	"START"
+	
+pbut PBUT2
+	710 390
+	80 20
+	"STOP"
+	
+pbut PBUT3
+	710 300
+	80 30
+	"DEL PORT"
+
+pbut PBUT4
+	710 560
+	80 30
+	"QUIT"	
+
+pbut PBUTERASE
+	710 500
+	80 30
+	ERASE
+
+pbut PBUT5
+	710 460
+	80 30
+	KICK
+
+listbox LISTBOX1
+	570 110
+	130 154
+
+listbox LISTBOX2
+	710 110
+	80 154
+
+listbox LISTBOX3
+	25 30
+	540 254
+
+listbox LISTBOX4
+	25 330
+	540 254
+
+listboxn LISTBOXU
+	570 330
+	130 254
+#	130 40
+	
+edit EDIT1 
+	710 266
+	80 30
+	"---"
+	
+edit EDIT2
+	590 30
+	200 20
+	"'GAMECOMM' LOBBY SERVER"
+
+text TEXT2
+	570 70
+	130 15
+	IPS
+
+text TEXT3
+	710 70
+	80 15
+	PORTS
+
+text TEXT4 
+	570 266
+	130 30
+	"---"
+
+text TEXT5 
+	75 9
+	190 20
+	send
+
+text TEXT6
+	75 309
+	190 20
+	recv
+
+text TEXT7 
+	570 309
+	130 20
+	users
+}

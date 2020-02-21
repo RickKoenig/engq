@@ -1,0 +1,6 @@
+﻿  tinystr.cpp
+  tinyxml.cpp
+  tinyxmlerror.cpp
+  tinyxmlparser.cpp
+  Generating Code...
+  tinyxmlSTL.vcxproj -> C:\srcw32\vs2017\engq\tinyxml\.\Release_STL\tinyxmlSTL.lib

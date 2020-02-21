@@ -1,0 +1,128 @@
+// rgb to hsv and back
+
+S32 supersat(S32 sat,S32 r,S32 g,S32 b,S32* r2,S32* g2,S32* b2)
+{
+	*r2=r;
+	*g2=g;
+	*b2=b;
+	if (sat>255) { // try to colorize the gray
+		S32 extra=sat-255;
+		sat=255;
+		*r2+=2*extra;
+		if (*r2>255)
+			*r2=255;
+		*g2-=2*extra;
+		if (*g2<0)
+			*g2=0;
+		*b2-=2*extra;
+		if (*b2<0)
+			*b2=0;
+	}
+	return sat;
+}
+
+void rgb2hsv(S32 r,S32 g,S32 b,S32* h,S32* s,S32* v)
+{
+	S32 vmin=min(min(r,g),b);
+	S32 vmax=max(max(r,g),b);
+	if (vmin==vmax) {
+		*h=0;
+	} else if (r==vmax) {
+		*h=(60*(g-b)/(vmax-vmin)+360)%360;
+	} else if (g==vmax) {
+		*h=60*(b-r)/(vmax-vmin)+120;
+	} else { // b==vmax
+		*h=60*(r-g)/(vmax-vmin)+240;
+	}
+	if (vmax==0)
+		*s=0;
+	else
+		*s=255*(vmax-vmin)/vmax;
+	*v=vmax;
+}
+
+void hsv2rgb(S32 h,S32 s,S32 v,S32* r,S32* g,S32* b)
+{
+	S32 hint=h/60%6;
+	S32 f60=h-hint*60;
+	S32 p=v*(255-s)/255;
+	S32 q=v*(60*255-f60*s)/(60*255);
+	S32 t=v*(60*255-(59-f60)*s)/(60*255);
+	switch(hint) {
+		case 0:
+			*r=v;
+			*g=t;
+			*b=p;
+			break;
+		case 1:
+			*r=q;
+			*g=v;
+			*b=p;
+			break;
+		case 2:
+			*r=p;
+			*g=v;
+			*b=t;
+			break;
+		case 3:
+			*r=p;
+			*g=q;
+			*b=v;
+			break;
+		case 4:
+			*r=t;
+			*g=p;
+			*b=v;
+			break;
+		case 5:
+			*r=v;
+			*g=p;
+			*b=q;
+			break;
+		default:
+			break;
+	}
+}
+
+static void applyhsv(const bitmap32* basepic,const bitmap8* palpic,textureb* outtex,const hsv* curhsvs)
+{
+	if (!basepic)
+		return;
+	if (!palpic)
+		return;
+	if (basepic->size.x!=palpic->size.x || basepic->size.y!=palpic->size.y)
+		return;
+	S32 prod=basepic->size.x*basepic->size.y;
+	S32 i,j;
+	C32* src=basepic->data;
+	U8* palp=palpic->data;
+	bitmap32* dest=bitmap32copy(basepic);
+	C32* dst=dest->data;
+	for (j=0;j<NUMHSVS;++j) {
+		for (i=0;i<prod;++i) {
+			U32 pv=254-j;
+			if (pv==palp[i]) {
+				S32 r,g,b,a,h,s,v;
+				r=src[i].r;
+				g=src[i].g;
+				b=src[i].b;
+				a=src[i].a;
+				S32 r2,g2,b2;
+				S32 s2=supersat(curhsvs[j].s,r,g,b,&r2,&g2,&b2); // sat 0-319, 256-319 (colorizes gray), returns sat 0-255
+				rgb2hsv(r2,g2,b2,&h,&s,&v);
+				h+=curhsvs[j].h;
+				s=s*s2/255;
+				v=v*curhsvs[j].v/255;
+				h%=360;
+				hsv2rgb(h,s,v,&r,&g,&b);
+				dst[i].r=r;
+				dst[i].g=g;
+				dst[i].b=b;
+				dst[i].a=a;
+			}
+		}
+	}
+	outtex->addbitmap(dest,false);
+	bitmap32free(dest);
+}
+

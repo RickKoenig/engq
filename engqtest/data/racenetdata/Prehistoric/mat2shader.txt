@@ -1,0 +1,18 @@
+// translate from material name to shader name, track specific mat2shader.txt file
+// matname shadername
+// keyword * matches any matname left over
+
+	include ../globalmat2shader.txt		// main shader library
+	include ../carmat2shader.txt		// carmat extensions
+
+// track specific
+
+	burst		tex
+	rays		tex
+	cliptree	tex
+	shrubs		tex
+        test            envv2
+	
+// default shader
+
+	*			pdiff // pdiff //tex // cvert

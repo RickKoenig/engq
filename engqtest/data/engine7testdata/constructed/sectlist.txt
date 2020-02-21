@@ -1,0 +1,22 @@
+sect hill1
+	nprim 7
+	prim  3 0 0 0
+	prim  3 0 10 0
+	prim  3 0 -10 0
+	prim  3 0 0 0
+	prim  3 0 -10 0
+	prim  3 0 10 0
+	prim  3 0 0 0
+sect straight1
+	nprim 3
+	prim  3 0 0 0
+	prim  3 0 0 0
+	prim  3 0 0 0
+sect right90
+	nprim 6
+	prim  3 15 0 0
+	prim  3 15 0 0
+	prim  3 15 0 0
+	prim  3 15 0 0
+	prim  3 15 0 0
+	prim  3 15 0 0

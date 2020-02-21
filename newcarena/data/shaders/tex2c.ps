@@ -1,0 +1,23 @@
+// The pixel shader, texture only
+ps_2_0
+
+// interpolated inputs from vertex shader
+dcl t0.xy		// texture uv
+dcl_2d s0	// color sample from texture uv
+
+// constant inputs
+// c6		// mat color
+// c9		// mat color2
+def c20,.5,.5,.5,.5
+// code
+// get texture color into r0
+	texld r0, t0,s0 // Stage 0 has the texture color
+	sub r0,r0,c20
+	mov r2,c9
+	cmp r1,r0.xxxx,c6,r2
+//	mul r0,c6,r0
+// output final color
+	mov oC0,r1
+
+// outputs
+// oC0 final pixel color

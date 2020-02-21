@@ -1,0 +1,24 @@
+open daylog at Fri Oct 23 19:19:32 2009
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR     664, BW     842, S  10, BR/S      66, BW/S      84
+BR    6895, BW    6895, S  10, BR/S     689, BW/S     689
+BR    6180, BW    6180, S  10, BR/S     618, BW/S     618
+BR    6250, BW    6250, S  10, BR/S     625, BW/S     625
+BR    6200, BW    6200, S  10, BR/S     620, BW/S     620
+BR    6560, BW    6560, S  10, BR/S     656, BW/S     656
+BR    6520, BW    6520, S  10, BR/S     652, BW/S     652
+BR    6530, BW    6530, S  10, BR/S     653, BW/S     653
+BR    6255, BW    6255, S  10, BR/S     625, BW/S     625
+BR    6155, BW    6155, S  10, BR/S     615, BW/S     615
+BR    6095, BW    6095, S  10, BR/S     609, BW/S     609
+BR    6140, BW    6140, S  10, BR/S     614, BW/S     614
+BR    6155, BW    6155, S  10, BR/S     615, BW/S     615
+BR    6200, BW    6200, S  10, BR/S     620, BW/S     620
+BR    6155, BW    6155, S  10, BR/S     615, BW/S     615
+BR    6168, BW    6110, S  10, BR/S     616, BW/S     611
+BR    6248, BW    6190, S  10, BR/S     624, BW/S     619
+BR    6187, BW    6187, S  10, BR/S     618, BW/S     618
+BR    1430, BW     968, S  10, BR/S     143, BW/S      96
+close daylog at Fri Oct 23 19:24:02 2009
+append daylog at Fri Oct 23 20:00:27 2009
+close daylog at Fri Oct 23 20:00:29 2009

@@ -1,0 +1,8 @@
+open minutelog at Thu Oct 15 08:09:08 2009
+BR    6955, BW    6955, S  10, BR/S     695, BW/S     695
+BR    7288, BW    7172, S  10, BR/S     728, BW/S     717
+BR    7065, BW    7065, S  10, BR/S     706, BW/S     706
+BR    6575, BW    6575, S  10, BR/S     657, BW/S     657
+BR    6740, BW    6740, S  10, BR/S     674, BW/S     674
+BR    6660, BW    6660, S  10, BR/S     666, BW/S     666
+close minutelog at Thu Oct 15 08:10:08 2009

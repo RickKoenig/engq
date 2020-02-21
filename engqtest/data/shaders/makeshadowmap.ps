@@ -1,0 +1,27 @@
+// The pixel shader, shadowmap maker
+ps_2_0
+
+// interpolated inputs from vertex shader
+dcl_2d s0
+dcl t0.xy		// texture uv
+dcl t1.xy		// actually z and w stored in x and y
+
+// constant inputs
+//def c20,1,1,-1,1
+//def c21,1,1,1,1
+// dev c6	// mat color, just the alpha cutoff c6.w
+// none
+
+// code
+	texld r2,t0,s0
+// get 1/w into y
+	rcp r0,t1.y
+// get z/w into r1.x, true z from 0 to 1
+	mul r1.x,t1.x,r0.x
+	sub r2.x,r2.w,c6.w
+	texkill r2 // r2.y and z should be >= 0,
+	mov r1,r1.xxxx
+	mov oC0,r1
+
+// outputs
+// oC0 final pixel color

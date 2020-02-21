@@ -1,0 +1,57 @@
+shape gametheoryres 0 0 {
+	
+	text TEXTSTATUS
+	140 160
+	160 20
+	"fetching myip"
+
+	text TEXTMYNAMEI
+	170 10
+	100 20
+	"server name"
+
+	text TEXTMYNAME
+	90 40
+	260 20
+	host
+
+	text TEXTMYIPI
+	150 90
+	140 20
+	"occ server ip"
+
+	text TEXTMYIP
+	140 120
+	160 20
+	0.0.0.0
+
+	pbut PBUTQUIT
+	225 575
+	160 20
+	QUIT
+	
+	pbut PBUTWEEK1
+	25 575
+	160 20
+	WEEK1
+	
+	pbut PBUTWEEK2
+	25 600
+	160 20
+	WEEK2
+	
+	pbut PBUTWEEK3
+	25 625
+	160 20
+	WEEK3
+	
+	pbut PBUTWEEK4
+	25 650
+	160 20
+	WEEK4
+	
+	text TEXTWEEK
+	225 675
+	160 20
+	WEEK1
+}

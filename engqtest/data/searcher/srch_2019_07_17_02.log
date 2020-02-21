@@ -1,0 +1,5 @@
+open hourlylog at Wed Jul 17 02:32:57 2019
+getbuffer '136.36.14.140:57720': 'GET /_mandl_9_0_0.png'
+getbuffer '46.174.191.28:34584': 'GET /'
+getbuffer '116.212.150.5:58386': 'GET /'
+close hourlylog at Wed Jul 17 03:02:43 2019

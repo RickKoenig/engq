@@ -1,0 +1,83 @@
+shape vidcap 0 0 {
+	
+pbut QUIT
+	740 560
+	50 30
+	Quit
+
+pbut VCSTART
+	10 560
+	90 30
+	"Init Driver"
+
+pbut SEE
+	110 560
+	50 30
+	"See!"
+
+pbut LOADM
+	170 560
+	85 30
+	"Load M"
+
+pbut LOADP
+	260 560
+	85 30
+	"Load P"
+
+pbut SAVE
+	360 560
+	45 30
+	"Save"
+
+pbut SCAN
+	410 560
+	45 30
+	"Scan"
+
+pbut CSCAN
+	460 560
+	45 30
+	"CScan"
+
+pbut DEL
+	510 560
+	30 30
+	"Del"
+
+pbut URL
+	510 560
+	30 30
+	"URL"
+
+pbut VCSTOP
+	550 560
+	50 30
+	Stop
+
+pbut VCQUIT
+	610 560
+	120 30
+	"Close Driver"
+
+pbut PVIDCOMP
+	10 160
+	50 20
+	VCOMP
+
+pbut PVIDFORMAT 
+	10 200
+	50 20
+	VFORM
+
+pbut PVIDSOURCE
+	10 240
+	50 20
+	VSRC
+
+text TSTATUS
+	0 530
+	200 20
+	status
+}
+	

@@ -1,0 +1,41 @@
+open logfile
+38 percent of memory is in use.
+There are 3084718080 total bytes of physical memory.
+There are 1888423936 free bytes of physical memory.
+There are 6402711552 total bytes of paging file.
+There are 4800061440 free bytes of paging file.
+There are 3221094400 total bytes of virtual memory.
+There are 3000926208 free bytes of virtual memory.
+There are 0 free bytes of extended memory.
+release mode
+datadir is 'c:\srcw32\engq\engqtest\data'
+initial fpu control word was at $0000027f, now setting to $0000007f (low precision, round nearest)
+loadconfigfile 'config.txt'
+loadconfigfile 'device.txt'
+pal 0, bp 32, pl 1
+input init 0.............................................
+  * maindriver  0 'message based'
+    maindriver  1 'directinput'
+audio init 0 0.............................................
+  * maindriver  0 'waveplayer'
+    maindriver  1 'directsound'
+ waveplayer init:
+result 0,WAVEOUTCAPS dwSupport = 0000002c
+  * subdriver  0 'Speakers (Realtek High Definiti'
+result 0,WAVEOUTCAPS dwSupport = 0000002c
+    subdriver  1 'Realtek Digital Output (Realtek'
+freq 00000000:017d7840, counter 000000b9:46ef98a2
+cpu in KHZ is 5793337
+^^^^^^^^^    begin main init    ^^^^^^^^^
+VVVVVVVVV    end main init    VVVVVVVVVVV
+begin init state 0
+     *    maindriver  0 "gdi"
+          maindriver  1 "ddraw fullscn"
+          maindriver  2 "d3d windowed"
+          maindriver  3 "d3d fullscn"
+   video_setupwindow x=800, y=600, bpp=32
+   pal 0, bp 32, pl 1
+   gdi setwindow pos 237 189 806 626
+   going to sleep, hope file 'sysfont.pcx' can be accessed later!
+   ERROR: 'can't open file 'sysfont.pcx' errno 2, mode 'rb' curdir 'c:\srcw32\engq\engqtest''
+added from ERROR: MEMCLEAN

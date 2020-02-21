@@ -1,0 +1,13 @@
+12  4
+"HADAMARD"  0   "NONE"  1   "NONE"  2   "NONE"  3   
+"NONE"  0   "HADAMARD"  0   "NONE"  2   "NONE"  3   
+"NONE"  0   "NONE"  1   "HADAMARD"  0   "NONE"  3   
+"NONE"  0   "NONE"  1   "NONE"  2   "HADAMARD"  0   
+"NONE"  3   "NONE"  2   "NONE"  1   "PZ"  0   
+"PY"  3   "PY"  2   "PY"  1   "PY"  0   
+"NONE"  0   "NONE"  1   "NONE"  2   "PY"  0   
+"NONE"  0   "NONE"  1   "PY"  0   "NONE"  3   
+"NONE"  0   "PY"  0   "NONE"  2   "NONE"  3   
+"PY"  0   "NONE"  1   "NONE"  2   "NONE"  3   
+"NONE"  0   "NONE"  1   "NONE"  2   "NONE"  3   
+"NONE"  0   "NONE"  1   "NONE"  2   "NONE"  3   

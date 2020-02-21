@@ -1,0 +1,5 @@
+# energy usage for different weapons
+ramjet
+electrical 1
+missiles
+electrical 1 fusion 2

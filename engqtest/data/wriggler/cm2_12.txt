@@ -1,0 +1,9 @@
+8 8
+W      W      W      W      W      W      W      W      
+W        P0DR G0P0LR G0P0LX G0P1RX G0P1RL   P1DL W      
+W      G0P0DU G0P0RD G0P0XL G0P1XR G0P1LD G0P1DU W      
+W      G0P0DU G0P0UD G0     G0     G0P1UD G0P1DU W      
+W        P0DU G1P0UD G1     G1     G1P1UD   P1DU W      
+W      G1P0DU G1P0UR G1P0LD G1P1RD G1P1UL G1P1DU W      
+W      G1P0RU G1P0RL G1P0UL G1P1UR G1P1LR G1P1LU W      
+W      W      W      W      W      W      W      W      

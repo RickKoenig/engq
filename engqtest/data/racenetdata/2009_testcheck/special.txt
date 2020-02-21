@@ -1,0 +1,8 @@
+# a list of checkboxes to pick/override tracknum for specials
+# does not work on 'i' boxes, do before 'i' boxes
+
+chk1.mxo 5			# arach (or junglewonder for human car) is now special
+chk6.mxo 1			# stockcar (or speedwonder for human car) is now special
+# chk7 0			# switch back to no specials
+
+chk04.mxo 6

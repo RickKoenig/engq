@@ -1,0 +1,16 @@
+// 0 blank
+// 1 player
+// 2 block
+// 4 goal
+// 5 goal and player
+// 6 goal and block
+// 8 wall
+// 9 bad
+// 10 bad and player
+8 6
+8  8  8  8 8 8 8 8
+8  0  0  2 4 8 1 8
+8  0  0  0 0 8 0 8
+8  0  8  8 8 8 0 8
+8  0  0  0 0 0 0 8
+8  8  8  8 8 8 8 8

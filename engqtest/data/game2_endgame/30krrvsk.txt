@@ -1,0 +1,9 @@
+// dimension
+8 8
+// numpieces
+4
+// pieces
+KW 4 0
+RW 0 0
+RW 7 0
+KB 4 7

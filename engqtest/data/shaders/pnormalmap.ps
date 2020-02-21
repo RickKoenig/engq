@@ -1,0 +1,148 @@
+//The pixel shader, diffuse/specular light done in pixel shader, light calcs done in object space
+ps_2_0
+
+/*
+// old interpolated inputs from vertex shader
+dcl t0.xy		// texture uv
+dcl t1.xyz		// normal
+dcl t2		// half vector
+dcl_2d s0	// color sample from texture uv
+dcl_2d s1	// normal sample from texture2 uv
+*/
+// new interpolated inputs from vertex shader
+dcl t0.xy		// texture uv
+dcl t1.xyz		// light dir tan space
+dcl t2.xyz		// half vector tan space
+dcl_2d s0	// color sample from texture uv
+dcl_2d s1	// normal sample from texture2 uv
+
+// constant inputs
+// // c0		// eye position in object space
+// // c1		// dir light 0, direction object space
+// c2		// dir light 0, color
+// c5		// amb light, color
+// c6		// mat color
+// c8.xy	// specular power, texture01 blend
+//def c9,0,0,.9999f,0 // default normal
+def c20,-.99999f,-.99999f,-.99999f,0 // bias
+def c21,0,1,0,0
+// code
+// get texture color into r0
+//	mov r3,t0
+//	add r3,r3,r3
+//	add r3,r3,r3
+	texld r0, t0,s0 // Stage 0 has the texture color
+	mul r0,c6,r0 // combine mat
+//	lrp r0,c8.yyyy,r0,r5 // combine the 2
+
+// // get normal into r1
+//	mov r1,t1 // get the interpolated normal
+// normalized normal into r2
+#define MAP
+//#define FRONT
+#ifdef FRONT
+	mov r2,c9 // fix norms to 0,0,1,0
+#endif
+#ifdef MAP
+//	mov r3,t0
+	texld r2, t0,s1 // Stage 1 has the normal map
+	add r2,r2,r2
+	add r2,c20,r2
+//	mov r2.x,-r2.x
+//	mov r2.y,-r2.y
+#endif
+// get half vector into r6
+	mov r6.xyz,t2 // get the half vector
+// normalized half into r7
+	nrm r7,r6 
+// dot half with normal into r5.x clamp to 0 to 1
+	dp3_sat r5,r7,-r2
+//// spec power it into r4.x
+	pow r4.xyz,r5.x,c8.x
+	mov r4.w,c21.x
+// dot normal with light into r3.x clamp to 0 to 1
+//	mov r3,t1
+	dp3_sat r3.xyz, -r2, t1
+// multiply in lightdir 0 color
+	mul r1.xyz,c2,r3.xxx
+// add ambient
+	add_sat r1.xyz,c5,r1
+// multiply in texture
+	mov r1.w,c21.y
+	mul r1.xyz,r0,r1
+// add specular
+	add r1,r4,r1
+// output final color
+	mov oC0,r1
+
+// outputs
+// oC0 final pixel color
+
+
+
+
+
+
+
+// from c++ code
+//	reads 1 dirlight from c1.xyz
+//	reads spec power from c28.x
+// from vertex shader
+//	reads texture from t0,s0
+//	reads normal from t1
+
+// ps_1_4
+
+// dcl v0.xyz // 
+
+// def c6, -0.5f, -0.5f, 0.0f, 1.0f
+// def c1, 0,0,.999999f,0
+// def c1, 0,0,-1.0001,0 // can't seem to set -1 and have it work, (works in D3DDEVTYPE_REF tho, also works from c++ side)
+// def c9, 0,0,-1.000,0
+// def c5, -.5,-.5,-.5,0
+// def c0, .2,.2,.2,0
+// def c28,30,0,0,0
+// def c6,.5,.5,.5,.5
+
+// I am assuming there are no special tex
+// coords for the normal map.
+// Stage 1 has the normal map
+// texld r1, t0
+
+// This is actually the light vector calculated in
+// the vertex shader and interpolated across the face
+// texcrd r1.xyz, t1
+//	mov r1,c0
+
+// Set r1 to the normal in the normal map
+// Below, we are biasing and scaling the
+// value from the normal map. See Step 2 in
+// section 2.5. You can actually avoid this
+// step, but i'm including it here to keep
+// things simple
+// add_x2 r1, r1, c6.rrrr
+
+// Now calculate the dot product and
+// store the value in r3. Remember the
+// dot product is the brightness at the texel
+// so no further calculations need to be done
+// mov r5,c7
+// mul r5,r5,c9
+// sub r3,r3,c5
+// dp3_sat r3, r2, r2
+
+// Modulate the surface brightness and diffuse
+// texture color
+//	mov r3,c0
+
+// mov oC1,c6
+
+
+/*
+ps_1_1
+//def c0, 1.0f, 1.0f, 1.0f, 1.0f
+tex t0
+mul r0,t0,v0
+// sub r0,c0,r0
+//sub r0,c0,t0
+*/

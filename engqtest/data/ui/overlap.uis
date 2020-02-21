@@ -1,0 +1,5 @@
+uitree2drect "The root"  40.000000 13.000000 971.000000 740.000000 {
+    uitree2dbitmapscale "jacks"  78.000000 217.000000 194.000000 261.000000 0.000000 0.000000 "c:\download\pics\campics" "IMG_0042.JPG"
+    uitree2dbitmapscale "plant"  182.000000 107.000000 194.000000 261.000000 0.000000 0.000000 "c:\download\pics\campics" "IMG_0028.JPG"
+    uitree2dbitmapscale "xiao"  44.000000 62.000000 194.000000 261.000000 0.000000 0.000000 "c:\download\pics\campics" "IMG_0014.JPG"
+}

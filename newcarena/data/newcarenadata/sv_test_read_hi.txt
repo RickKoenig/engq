@@ -1,0 +1,27 @@
+{
+	"avatar" : {
+		"avaj" : {
+			"carbodyname" : "dodgecharger",
+			"decal" : 7,
+			"energies" : [
+				3,
+				1,
+				5,
+				4,
+				6,
+				2
+			],
+			"ownerid" : -1,
+			"paint" : 6,
+			"playername" : "altplayer3",
+			"weaps" : [
+				"dielectric",
+				"klondyke",
+				"laser",
+				"sonic",
+				"transducer"
+			]
+		}
+	},
+	"hastrack" : 0
+}

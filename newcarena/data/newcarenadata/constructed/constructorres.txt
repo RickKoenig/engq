@@ -1,0 +1,197 @@
+shape rootmenu 0 0 {
+
+# background
+//  back BACK1
+// 	0 0
+//	800 600
+
+# current track
+	text TEXTTRACK
+	630 10
+	160 20
+	"Track Name"
+
+# exit
+	pbut PBUTBACKDELETE
+	630 510
+	160 20
+	"Delete and Back"
+	pbut PBUTBACKSAVE
+	630 540
+	160 20
+	"Save and Back"
+	pbut PBUTBACKNOSAVE
+	630 570
+	160 20
+	"No Save and Back"
+
+# copy
+	pbut PBUTCOPY
+	630 40
+	160 20
+	"Copy and Name"
+
+# clear
+	pbut PBUTCLEAR
+	630 70
+	160 20
+	"Clear Track"
+
+# base tex
+	text TEXTBASETEX
+	530 10
+	98 20
+	"Base Texture"
+	vscroll VSLIDERBASETEX
+	570 30
+	20 80
+
+# skybox
+	text TEXTSKYBOX
+	530 120
+	98 20
+	"Skybox"
+	vscroll VSLIDERSKYBOX
+	570 140
+	20 80
+
+# background sound
+	text TEXTBACKSND
+	430 450
+	98 20
+	"Skybox"
+	vscroll VSLIDERBACKSND
+	470 470
+	20 80
+
+# piece types
+	listbox LISTPIECETYPES
+	630 140
+	160 100
+	text TEXTPIECETYPES
+	680 120
+	100 15
+	"Piece types"
+
+# rotate track piece
+	text TEXTROTATE
+	600 250
+	60 15
+	"Rotate"
+	pbut PBUTROTATELEFT
+	660 250
+	50 15
+	"Left"
+	pbut PBUTROTATERIGHT
+	720 250
+	50 15
+	"Right"
+
+# track width
+	text TEXTTRACKWIDTH
+	10 450
+	100 20
+	"Track Width"
+	
+	text TEXTTRACKWIDTH
+	10 555
+	100 20
+	"Track Height"
+	
+	vscroll VSLIDERTRACKLEFTWIDTH0
+	125 400
+	10 50
+
+	vscroll VSLIDERTRACKRIGHTWIDTH0
+	125 470
+	10 50
+
+	vscroll VSLIDERTRACKHEIGHT0
+	125 540
+	10 50
+
+	vscroll VSLIDERTRACKLEFTWIDTH1
+	145 400
+	10 50
+
+	vscroll VSLIDERTRACKRIGHTWIDTH1
+	145 470
+	10 50
+
+	vscroll VSLIDERTRACKHEIGHT1
+	145 540
+	10 50
+
+	vscroll VSLIDERTRACKLEFTWIDTH2
+	165 400
+	10 50
+
+	vscroll VSLIDERTRACKRIGHTWIDTH2
+	165 470
+	10 50
+
+	vscroll VSLIDERTRACKHEIGHT2
+	165 540
+	10 50
+
+	vscroll VSLIDERTRACKLEFTWIDTH3
+	185 400
+	10 50
+
+	vscroll VSLIDERTRACKRIGHTWIDTH3
+	185 470
+	10 50
+
+	vscroll VSLIDERTRACKHEIGHT3
+	185 540
+	10 50
+
+	vscroll VSLIDERTRACKLEFTWIDTH4
+	205 400
+	10 50
+
+	vscroll VSLIDERTRACKRIGHTWIDTH4
+	205 470
+	10 50
+
+	vscroll VSLIDERTRACKHEIGHT4
+	205 540
+	10 50
+
+	vscroll VSLIDERTRACKLEFTWIDTH5
+	225 400
+	10 50
+
+	vscroll VSLIDERTRACKRIGHTWIDTH5
+	225 470
+	10 50
+
+	vscroll VSLIDERTRACKHEIGHT5
+	225 540
+	10 50
+
+	vscroll VSLIDERTRACKLEFTWIDTH6
+	245 400
+	10 50
+
+	vscroll VSLIDERTRACKRIGHTWIDTH6
+	245 470
+	10 50
+
+	vscroll VSLIDERTRACKHEIGHT6
+	245 540
+	10 50
+
+	vscroll VSLIDERTRACKLEFTWIDTHG
+	285 400
+	10 50
+
+	vscroll VSLIDERTRACKRIGHTWIDTHG
+	285 470
+	10 50
+
+	vscroll VSLIDERTRACKHEIGHTG
+	285 540
+	10 50
+}
+

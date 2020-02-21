@@ -1,0 +1,19 @@
+HTTP/1.0 301 Moved Permanently
+Date: Sun, 30 Oct 2011 08:19:28 GMT
+Server: Apache
+Location: http://www.wikimedia.org/
+Content-Length: 233
+Content-Type: text/html; charset=iso-8859-1
+X-Cache: MISS from sq78.wikimedia.org
+X-Cache-Lookup: MISS from sq78.wikimedia.org:3128
+X-Cache: MISS from sq71.wikimedia.org
+X-Cache-Lookup: MISS from sq71.wikimedia.org:80
+Connection: close
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.wikimedia.org/">here</a>.</p>
+</body></html>

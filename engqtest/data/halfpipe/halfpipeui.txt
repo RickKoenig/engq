@@ -1,0 +1,8 @@
+shape gametheory  0 0 {
+	
+  pbut QUIT1 
+	  974 742
+	  44 20
+	  "QUIT"
+
+}

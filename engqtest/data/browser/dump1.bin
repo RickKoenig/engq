@@ -1,0 +1,13 @@
+HTTP/1.0 301 Moved Permanently
+Date: Thu, 01 Nov 2018 06:34:26 GMT
+Via: http/1.1 media-router-fp1010.prod.media.ne1.yahoo.com (ApacheTrafficServer [c s f ])
+Server: ATS
+Cache-Control: no-store, no-cache
+Content-Type: text/html
+Content-Language: en
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+Location: https://yahoo.com/wikipedia/commons/4/4b/Everest_kalapatthar_crop.jpg
+Content-Length: 8
+
+redirect

@@ -1,0 +1,8 @@
+system dos4g
+debug all
+option map
+name quant2
+file quant2,fastquan
+library clib3s,graph32
+
+

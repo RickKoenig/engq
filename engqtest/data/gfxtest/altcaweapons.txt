@@ -1,0 +1,1 @@
+["Blank","bumpercar","buzz","klondyke","laser","magnet","mines","nano","oil","plasma","ramjet","sonic"]

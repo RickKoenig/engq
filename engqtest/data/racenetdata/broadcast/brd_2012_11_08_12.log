@@ -1,0 +1,83 @@
+open hourlylog at Thu Nov 08 12:05:56 2012
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR     210, BW     382, S  10, BR/S      21, BW/S      38
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR    4514, BW    4002, S  10, BR/S     451, BW/S     400
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR     208, BW     378, S  10, BR/S      20, BW/S      37
+BR    3789, BW    3789, S  10, BR/S     378, BW/S     378
+BR    7245, BW    7245, S  10, BR/S     724, BW/S     724
+BR    7045, BW    7045, S  10, BR/S     704, BW/S     704
+BR    7180, BW    7180, S  10, BR/S     718, BW/S     718
+BR    6680, BW    6680, S  10, BR/S     668, BW/S     668
+BR    6695, BW    6695, S  10, BR/S     669, BW/S     669
+BR    6910, BW    6910, S  10, BR/S     691, BW/S     691
+BR    5760, BW    5760, S  10, BR/S     576, BW/S     576
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR       0, BW       3, S  10, BR/S       0, BW/S       0
+close hourlylog at Thu Nov 08 12:09:39 2012
+append hourlylog at Thu Nov 08 12:13:24 2012
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR     208, BW     378, S  10, BR/S      20, BW/S      37
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR       7, BW       7, S  10, BR/S       0, BW/S       0
+BR    6117, BW    6117, S  10, BR/S     611, BW/S     611
+BR    6680, BW    6680, S  10, BR/S     668, BW/S     668
+BR    7400, BW    7400, S  10, BR/S     740, BW/S     740
+BR    6465, BW    6465, S  10, BR/S     646, BW/S     646
+BR    7265, BW    7265, S  10, BR/S     726, BW/S     726
+BR    7595, BW    7595, S  10, BR/S     759, BW/S     759
+BR    6900, BW    6900, S  10, BR/S     690, BW/S     690
+BR    2895, BW    2895, S  10, BR/S     289, BW/S     289
+close hourlylog at Thu Nov 08 12:36:18 2012
+append hourlylog at Thu Nov 08 12:46:37 2012
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR     208, BW     378, S  10, BR/S      20, BW/S      37
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR       7, BW       7, S  10, BR/S       0, BW/S       0
+BR    6116, BW    6116, S  10, BR/S     611, BW/S     611
+BR    6005, BW    6005, S  10, BR/S     600, BW/S     600
+BR    7720, BW    7720, S  10, BR/S     772, BW/S     772
+BR    7610, BW    7610, S  10, BR/S     761, BW/S     761
+BR    6975, BW    6975, S  10, BR/S     697, BW/S     697
+BR    6340, BW    6340, S  10, BR/S     634, BW/S     634
+BR    6800, BW    6800, S  10, BR/S     680, BW/S     680
+BR    6755, BW    6755, S  10, BR/S     675, BW/S     675
+BR    4730, BW    4730, S  10, BR/S     473, BW/S     473
+BR    2990, BW    1313, S  10, BR/S     299, BW/S     131
+BR    3000, BW       0, S  10, BR/S     300, BW/S       0
+BR    3010, BW       0, S  10, BR/S     301, BW/S       0
+BR    2950, BW       0, S  10, BR/S     295, BW/S       0
+BR    3050, BW       0, S  10, BR/S     305, BW/S       0
+BR    3015, BW       0, S  10, BR/S     301, BW/S       0
+BR    3030, BW       0, S  10, BR/S     303, BW/S       0
+BR    2930, BW       0, S  10, BR/S     293, BW/S       0
+BR    3093, BW       0, S  10, BR/S     309, BW/S       0
+BR    2860, BW       0, S  10, BR/S     286, BW/S       0
+close hourlylog at Thu Nov 08 12:51:51 2012
+append hourlylog at Thu Nov 08 12:52:16 2012
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR     208, BW     378, S  10, BR/S      20, BW/S      37
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR       7, BW       7, S  10, BR/S       0, BW/S       0
+BR    5862, BW    5862, S  10, BR/S     586, BW/S     586
+BR    7470, BW    7470, S  10, BR/S     747, BW/S     747
+BR    6445, BW    6445, S  10, BR/S     644, BW/S     644
+BR    6215, BW    6215, S  10, BR/S     621, BW/S     621
+BR    6105, BW    6105, S  10, BR/S     610, BW/S     610
+BR    6070, BW    6070, S  10, BR/S     607, BW/S     607
+BR    6790, BW    6790, S  10, BR/S     679, BW/S     679
+BR    6675, BW    6675, S  10, BR/S     667, BW/S     667
+BR    6585, BW    6585, S  10, BR/S     658, BW/S     658
+BR    6150, BW    6150, S  10, BR/S     615, BW/S     615
+BR    6480, BW    6480, S  10, BR/S     648, BW/S     648
+BR    4670, BW    4670, S  10, BR/S     467, BW/S     467
+BR    5060, BW    5060, S  10, BR/S     506, BW/S     506
+BR    9730, BW    9730, S  10, BR/S     973, BW/S     973
+BR    7275, BW    7275, S  10, BR/S     727, BW/S     727
+BR    8558, BW    8500, S  10, BR/S     855, BW/S     850
+BR    7370, BW    7370, S  10, BR/S     737, BW/S     737
+BR    6100, BW    6100, S  10, BR/S     610, BW/S     610
+BR    8063, BW    8005, S  10, BR/S     806, BW/S     800
+close hourlylog at Thu Nov 08 12:57:44 2012

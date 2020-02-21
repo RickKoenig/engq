@@ -1,0 +1,31 @@
+//---------------------USER car/weapon shaders ------------------------
+//|| Name in MAx: || Type of Shader: ||
+//--------------------------------------------------------------
+// Car Shaders >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	body		envv2		// variable reflect with spec
+	chrome		envv2
+	windshield	envv2
+	rims		envv2
+	solarpanel	pdiffspec	// diffuse lighting with spec
+	solarpanel2	envv2
+	plastic		pdiff		// diffuse lighting
+	interior	pdiff
+	rubber		pdiff
+	reg		tex		// no lighting
+
+// Weapons >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	rocket		pdiffspec
+	launcher	pdiff
+	mine		pdiff
+	CannonMetal	pdiff
+	CannonChrome	envv2
+	CannonGlass	envv2
+	CannonPlastic	pdiff
+	LaserMat	laserbeam	// red neon glow shader
+	FusionBall	tex
+	AerodyneMat	tex
+	Sparks		tex
+	ice		envv2
+// toon redirect
+	toon toon
+	edge edge

@@ -1,0 +1,23 @@
+startarea.bwo
+finisharea.bwo
+table.bwo
+
+ramp1.bwo
+ramp2.bwo
+hill1.bwo
+
+waterobj.bwo
+lavaobj.bwo
+
+box01.bwo
+box02.bwo
+box03.bwo
+box04.bwo
+box05.bwo
+
+sphere01.bwo
+
+testspikes.bwo
+
+1 lavamat lava
+0 watermat water

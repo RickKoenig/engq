@@ -1,0 +1,124 @@
+/*object box1
+	scale 5 20 5
+	pos 1.1 10 0
+	elast .9
+	mass 500 */
+
+object box1
+	scale 5 20 5
+	pos -20 10 -20
+	elast .9
+	mass 500
+	
+object box1
+	scale 5 20 5
+	pos -20 10 20
+	elast .9
+	mass 500
+		
+object box1
+	scale 5 20 5
+	pos 20 10 -20
+	elast .9
+	mass 500
+		
+object box1
+	scale 5 20 5
+	pos 20 10 20
+	elast .9
+	mass 500
+
+object box1
+	scale 50 5 50
+	pos 0 22.5 0
+	mass 10125
+
+object box1
+	scale 5 20 5
+	pos -20 35 -20
+	elast .9
+	mass 500
+		
+object box1
+	scale 5 20 5
+	pos -20 35 20
+	elast .9
+	mass 500
+		
+object box1
+	scale 5 20 5
+	pos 20 35 -20
+	elast .9
+	mass 500
+		
+object box1
+	scale 5 20 5
+	pos 20 35 20
+	elast .9
+	mass 500
+
+object box1
+	scale 50 5 50
+	pos 0 47.5 0
+	mass 10125
+
+object box1
+	scale 5 20 5
+	pos -20 60 -20
+	elast .9
+	mass 500
+		
+object box1
+	scale 5 20 5
+	pos -20 60 20
+	elast .9
+	mass 500
+		
+object box1
+	scale 5 20 5
+	pos 20 60 -20
+	elast .9
+	mass 500
+		
+object box1
+	scale 5 20 5
+	pos 20 60 20
+	elast .9
+	mass 500
+
+object box1
+	scale 50 5 50
+	pos 0 72.5 0
+	mass 10125
+
+object box1
+	pos	-20 85 -20
+	scale 10 10 10
+	rot 40 0 40
+	rotvel 0 300 0
+	elast .9
+	mass 1000
+
+object box1
+	pos	20 85 -20
+	scale 10 10 10
+	rot 40 0 40
+	rotvel 0 300 0
+	elast .9
+	mass 1000
+
+object box1
+	pos	-20 85 20
+	scale 10 10 10
+	rot 40 0 40
+	rotvel 0 300 0
+	elast .9
+	mass 1000
+
+object box1
+	pos	20 85 20
+	scale 10 10 10
+	rot 40 0 40
+	rotvel 0 300 0
+	elast .9
+	mass 1000

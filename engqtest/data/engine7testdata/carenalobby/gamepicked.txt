@@ -1,0 +1,17 @@
+playername "Rickers"
+body "muscletone"
+paint "Paint 17"
+decal "Decal 14"
+"fusion" 5
+"electrical" 1
+"magnetic" 7
+"plasma" 4
+"antimatter" 7
+"chemical" 2
+track "testnew1"
+rules 1
+humanplayers 64
+botplayers 64
+gamenet 0
+serverip "23.123.140.155"
+serverport 5426

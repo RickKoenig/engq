@@ -1,0 +1,583 @@
+open logfile
+34 percent of memory is in use.
+There are 3084718080 total bytes of physical memory.
+There are 2021523456 free bytes of physical memory.
+There are 6411067392 total bytes of paging file.
+There are 4722405376 free bytes of paging file.
+There are 3221094400 total bytes of virtual memory.
+There are 2883088384 free bytes of virtual memory.
+There are 0 free bytes of extended memory.
+debug mode
+datadir is 'c:\srcw32\engq\newcarena\data'
+initial fpu control word was at $0000027f, now setting to $0000007f (low precision, round nearest)
+loadconfigfile 'config.txt'
+WARNING: entry "showcheckboxes" in file 'config.txt' IS NOT in the list
+WARNING: entry "showphysics" in file 'config.txt' IS NOT in the list
+WARNING: entry "usehelper" in file 'config.txt' IS NOT in the list
+loadconfigfile 'device.txt'
+pal 0, bp 32, pl 1
+input init 0.............................................
+  * maindriver  0 'message based'
+    maindriver  1 'directinput'
+audio init 0 0.............................................
+  * maindriver  0 'waveplayer'
+    maindriver  1 'directsound'
+ waveplayer init:
+result 0,WAVEOUTCAPS dwSupport = 0000002c
+  * subdriver  0 'Speakers (Realtek High Definiti'
+result 0,WAVEOUTCAPS dwSupport = 0000002c
+    subdriver  1 'Realtek Digital Output (Realtek'
+freq 00000000:017d7840, counter 0000012a:a8633b72
+cpu in KHZ is 1347434
+^^^^^^^^^    begin main init    ^^^^^^^^^
+VVVVVVVVV    end main init    VVVVVVVVVVV
+begin init state 5
+   number of words 109582
+   word     45 : 'abatements     ' : value 100 : len 10
+   word    126 : 'abettors       ' : value 100 : len 8
+   word    307 : 'abrogative     ' : value 100 : len 10
+   word    333 : 'absconders     ' : value 100 : len 10
+   word    589 : 'acclimation    ' : value 100 : len 11
+   word    850 : 'acknowledge    ' : value 100 : len 11
+   word    870 : 'acolytes       ' : value 100 : len 8
+   word   1161 : 'adiabatically  ' : value 100 : len 13
+   word   1986 : 'agrology       ' : value 100 : len 8
+   word   2072 : 'airdrops       ' : value 100 : len 8
+   word   2285 : 'alertest       ' : value 100 : len 8
+   word   2678 : 'alpinist       ' : value 100 : len 8
+   word   3070 : 'amortise       ' : value 100 : len 8
+   word   3141 : 'amputees       ' : value 100 : len 8
+   word   3160 : 'amusedly       ' : value 100 : len 8
+   word   3233 : 'analysis       ' : value 100 : len 8
+   word   3378 : 'aneurism       ' : value 100 : len 8
+   word   3406 : 'anginous       ' : value 100 : len 8
+   word   3608 : 'annually       ' : value 100 : len 8
+   word   3758 : 'anterior       ' : value 100 : len 8
+   word   4242 : 'apostacy       ' : value 100 : len 8
+   word   4404 : 'applying       ' : value 100 : len 8
+   word   4542 : 'apropos        ' : value 100 : len 7
+   word   5051 : 'arrests        ' : value 100 : len 7
+   word   5081 : 'arrowy         ' : value 100 : len 6
+   word  11832 : 'bronzy         ' : value 100 : len 6
+   word  22359 : 'crusts         ' : value 100 : len 6
+   word  22966 : 'cutout         ' : value 100 : len 6
+   word  22989 : 'cutups         ' : value 100 : len 6
+   word  23883 : 'decalcomanias  ' : value 100 : len 13
+   word  29272 : 'drossy         ' : value 100 : len 6
+   word  29380 : 'dryrot         ' : value 100 : len 6
+   word  32190 : 'envoys         ' : value 100 : len 6
+   word  36975 : 'flurry         ' : value 100 : len 6
+   word  42080 : 'grouts         ' : value 100 : len 6
+   word  42107 : 'growly         ' : value 100 : len 6
+   word  42182 : 'grumpy         ' : value 100 : len 6
+   word  46526 : 'hysons         ' : value 100 : len 6
+   word  52757 : 'knouts         ' : value 100 : len 6
+   word  60184 : 'missus         ' : value 100 : len 6
+   word  61296 : 'motors         ' : value 100 : len 6
+   word  61336 : 'moults         ' : value 100 : len 6
+   word  61375 : 'mourns         ' : value 100 : len 6
+   word  61786 : 'murkly         ' : value 100 : len 6
+   word  62097 : 'mythos         ' : value 100 : len 6
+   word  62992 : 'nextly         ' : value 100 : len 6
+   word  64546 : 'nutty          ' : value 100 : len 5
+   word  75857 : 'pussy          ' : value 100 : len 5
+   number of words without ' 109562
+   char  97 'a' : count =  71188
+   char  98 'b' : count =  18292
+   char  99 'c' : count =  37836
+   char 100 'd' : count =  34302
+   char 101 'e' : count = 108556
+   char 102 'f' : count =  12795
+   char 103 'g' : count =  26926
+   char 104 'h' : count =  20756
+   char 105 'i' : count =  81948
+   char 106 'j' : count =   1758
+   char 107 'k' : count =   8147
+   char 108 'l' : count =  50290
+   char 109 'm' : count =  25671
+   char 110 'n' : count =  64899
+   char 111 'o' : count =  57389
+   char 112 'p' : count =  26413
+   char 113 'q' : count =   1712
+   char 114 'r' : count =  69016
+   char 115 's' : count =  83337
+   char 116 't' : count =  62147
+   char 117 'u' : count =  31234
+   char 118 'v' : count =   9723
+   char 119 'w' : count =   8018
+   char 120 'x' : count =   2718
+   char 121 'y' : count =  15845
+   char 122 'z' : count =   4101
+   ---------------------- carenalobbyinit -------------------------------
+     *    maindriver  0 "gdi"
+          maindriver  1 "ddraw fullscn"
+          maindriver  2 "d3d windowed"
+          maindriver  3 "d3d fullscn"
+   video_setupwindow x=800, y=600, bpp=32
+   pal 0, bp 32, pl 1
+   gdi setwindow pos 237 189 806 626
+   found track 'oval2'
+   lowest paint 1, highest 22
+   lowest decal 0, highest 35
+   loading carena car 'muscletone' 'dummy.tex'
+   the name is 'mdlcrmuscletone,0.0000,0.0000,1.0000,90.0000,0.0000,0.0000,1.0000,1.0000,1.0000,'
+   new prs for 'mdlcrmuscletone' is (0.000000,0.000000,1.000000) (90.000000,0.000000,0.000000) (1.000000,1.000000,1.000000)
+   CHLD: nchild 4
+          offset 8.962900,3.022900,-15.598800, rot -90.000000, 0.000000,0.000000, scale 1.000000,1.000000,1.000000, name 'muscletonetirebl'
+          offset -8.954800,3.022900,-15.598800, rot -90.000000, 0.000000,0.000000, scale 1.000000,1.000000,1.000000, name 'muscletonetirebr'
+          offset 8.632100,2.558200,14.452400, rot -90.000000, 0.000000,0.000000, scale 1.000000,1.000000,1.000000, name 'muscletonetirefl'
+          offset -8.642100,2.477600,14.452400, rot -90.000000, 0.000000,0.000000, scale 1.000000,1.000000,1.000000, name 'muscletonetirefr'
+   jrm model name 'mdlcrmuscletone'
+   the name is 'muscletonetirebl,8.9629,3.0229,-15.5988,-90.0000,0.0000,0.0000,1.0000,1.0000,1.0000,'
+   new prs for 'muscletonetirebl' is (8.962900,3.022900,-15.598800) (-90.000000,0.000000,0.000000) (1.000000,1.000000,1.000000)
+   CHLD: nchild 0
+   jrm model name 'muscletonetirebl'
+   the name is 'muscletonetirebr,-8.9548,3.0229,-15.5988,-90.0000,0.0000,0.0000,1.0000,1.0000,1.0000,'
+   new prs for 'muscletonetirebr' is (-8.954800,3.022900,-15.598800) (-90.000000,0.000000,0.000000) (1.000000,1.000000,1.000000)
+   CHLD: nchild 0
+   jrm model name 'muscletonetirebr'
+   the name is 'muscletonetirefl,8.6321,2.5582,14.4524,-90.0000,0.0000,0.0000,1.0000,1.0000,1.0000,'
+   new prs for 'muscletonetirefl' is (8.632100,2.558200,14.452400) (-90.000000,0.000000,0.000000) (1.000000,1.000000,1.000000)
+   CHLD: nchild 0
+   jrm model name 'muscletonetirefl'
+   the name is 'muscletonetirefr,-8.6421,2.4776,14.4524,-90.0000,0.0000,0.0000,1.0000,1.0000,1.0000,'
+   new prs for 'muscletonetirefr' is (-8.642100,2.477600,14.452400) (-90.000000,0.000000,0.000000) (1.000000,1.000000,1.000000)
+   CHLD: nchild 0
+   jrm model name 'muscletonetirefr'
+   the name is 'rmuscletone_regpoints,0.2079,-0.0578,7.4804,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,'
+   new prs for 'rmuscletone_regpoints' is (0.207900,-0.057800,7.480400) (0.000000,0.000000,0.000000) (1.000000,1.000000,1.000000)
+   CHLD: nchild 0
+   jrm model name 'rmuscletone_regpoints'
+   child k 0, j 0, (-90.000000 0.000000 0.000000)
+   child k 0, j 1, (-90.000000 0.000000 0.000000)
+   child k 0, j 2, (-90.000000 0.000000 0.000000)
+   child k 0, j 3, (-90.000000 0.000000 0.000000)
+   initsocker
+   got my hostname 'rickersPC'
+   allocmess: called with kind 1, val 0 and time 10000
+   allocmess: returning messnum 1024
+   gethostbyname messnum 1024
+end init state 5
+begin exit state 5
+   ---------------------- carenalobbyexit -------------------------------
+   logging lobby roottree
+      'roottree', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) 
+         'n_carclass', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.510000 0.000000 0.000000),(1.000000 1.000000 1.000000) 
+            'muscletone', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(4.712389 0.000000 0.000000 1.000000),(0.100000 0.100000 0.100000) 
+               'mdlcrmuscletone', o2p 'euler', drawpri 2 dco 0.050000 prs (0.000000 0.000000 1.000000),(1.570796 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'mdlcrmuscletone_0'
+                  'muscletonetirebl', o2p 'euler', drawpri 2 dco 0.050000 prs (8.962900 3.022900 -15.598800),(2.549999 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'muscletonetirebl_1'
+                  'muscletonetirebr', o2p 'euler', drawpri 2 dco 0.050000 prs (-8.954800 3.022900 -15.598800),(2.549999 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'muscletonetirebr_2'
+                  'muscletonetirefl', o2p 'euler', drawpri 2 dco 0.050000 prs (8.632100 2.558200 14.452400),(2.549999 0.510000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'muscletonetirefl_3'
+                  'muscletonetirefr', o2p 'euler', drawpri 2 dco 0.050000 prs (-8.642100 2.477600 14.452400),(2.549999 0.510000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'muscletonetirefr_4'
+               'rmuscletone_regpoints', o2p 'euler', drawpri 1 dco 0.050000 , flags 'dontdrawc' prs (0.207900 -0.057800 7.480400),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) 
+                  'rmuscletone_regpoints', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'rmuscletone_regpoints_5'
+                  'rmuscletone_regpoints', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'rmuscletone_regpoints_6'
+                  'rmuscletone_regpoints', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'rmuscletone_regpoints_7'
+                  'rmuscletone_regpoints', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'rmuscletone_regpoints_8'
+                  'rmuscletone_regpoints', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'rmuscletone_regpoints_9'
+                  'rmuscletone_regpoints', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'rmuscletone_regpoints_10'
+                  'rmuscletone_regpoints', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'rmuscletone_regpoints_11'
+                  'rmuscletone_regpoints', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'rmuscletone_regpoints_12'
+                  'rmuscletone_regpoints', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'rmuscletone_regpoints_13'
+                  'rmuscletone_regpoints', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'rmuscletone_regpoints_14'
+                  'rmuscletone_regpoints', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'rmuscletone_regpoints_15'
+                  'rmuscletone_regpoints', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'rmuscletone_regpoints_16'
+   logging track roottree
+      'consscene', o2p 'euler', drawpri 1 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) 
+         'pce00000000', o2p 'euler', drawpri 2 dco 0.050000 prs (0.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000000'
+         'pce00000001', o2p 'euler', drawpri 2 dco 0.050000 prs (40.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000001'
+         'pce00000002', o2p 'euler', drawpri 2 dco 0.050000 prs (80.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000002'
+         'pce00000003', o2p 'euler', drawpri 2 dco 0.050000 prs (120.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000003'
+         'pce00000004', o2p 'euler', drawpri 2 dco 0.050000 prs (160.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000004'
+         'pce00000005', o2p 'euler', drawpri 2 dco 0.050000 prs (200.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000005'
+         'pce00000006', o2p 'euler', drawpri 2 dco 0.050000 prs (240.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000006'
+         'pce00000007', o2p 'euler', drawpri 2 dco 0.050000 prs (280.000000 0.000000 0.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000007'
+         'pce00000008', o2p 'euler', drawpri 2 dco 0.050000 prs (0.000000 0.000000 40.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000008'
+         'pce00000009', o2p 'euler', drawpri 2 dco 0.050000 prs (40.000000 0.000000 40.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000009'
+         'pce0000000a', o2p 'euler', drawpri 2 dco 0.050000 prs (80.000000 0.000000 40.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000000a'
+         'pce0000000b', o2p 'euler', drawpri 2 dco 0.050000 prs (120.000000 0.000000 40.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000000b'
+         'pce0000000c', o2p 'euler', drawpri 2 dco 0.050000 prs (160.000000 0.000000 40.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000000c'
+         'pce0000000d', o2p 'euler', drawpri 2 dco 0.050000 prs (200.000000 0.000000 40.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000000d'
+         'pce0000000e', o2p 'euler', drawpri 2 dco 0.050000 prs (240.000000 0.000000 40.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000000e'
+         'pce0000000f', o2p 'euler', drawpri 2 dco 0.050000 prs (280.000000 0.000000 40.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000000f'
+         'pce00000010', o2p 'euler', drawpri 2 dco 0.050000 prs (0.000000 0.000000 80.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000010'
+         'pce00000011', o2p 'euler', drawpri 2 dco 0.050000 prs (40.000000 0.000000 80.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000011'
+         'pce00000012', o2p 'euler', drawpri 2 dco 0.050000 prs (80.000000 0.000000 80.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000012'
+         'pce00000013', o2p 'euler', drawpri 2 dco 0.050000 prs (120.000000 0.000000 80.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000013'
+         'pce00000014', o2p 'euler', drawpri 2 dco 0.050000 prs (160.000000 0.000000 80.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000014'
+         'pce00000015', o2p 'euler', drawpri 2 dco 0.050000 prs (200.000000 0.000000 80.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000015'
+         'pce00000016', o2p 'euler', drawpri 2 dco 0.050000 prs (240.000000 0.000000 80.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000016'
+         'pce00000017', o2p 'euler', drawpri 2 dco 0.050000 prs (280.000000 0.000000 80.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000017'
+         'pce00000018', o2p 'euler', drawpri 2 dco 0.050000 prs (0.000000 0.000000 120.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000018'
+         'pce00000019', o2p 'euler', drawpri 2 dco 0.050000 prs (40.000000 0.000000 120.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000019'
+         'pce0000001a', o2p 'euler', drawpri 2 dco 0.050000 prs (80.000000 0.000000 120.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000001a'
+         'pce0000001b', o2p 'euler', drawpri 2 dco 0.050000 prs (120.000000 0.000000 120.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000001b'
+         'pce0000001c', o2p 'euler', drawpri 2 dco 0.050000 prs (160.000000 0.000000 120.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000001c'
+         'pce0000001d', o2p 'euler', drawpri 2 dco 0.050000 prs (200.000000 0.000000 120.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000001d'
+         'pce0000001e', o2p 'euler', drawpri 2 dco 0.050000 prs (240.000000 0.000000 120.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000001e'
+         'pce0000001f', o2p 'euler', drawpri 2 dco 0.050000 prs (280.000000 0.000000 120.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000001f'
+         'pce00000020', o2p 'euler', drawpri 2 dco 0.050000 prs (0.000000 0.000000 160.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000020'
+         'pce00000021', o2p 'euler', drawpri 2 dco 0.050000 prs (40.000000 0.000000 160.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000021'
+         'pce00000022', o2p 'euler', drawpri 2 dco 0.050000 prs (80.000000 0.000000 160.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000022'
+         'pce00000023', o2p 'euler', drawpri 2 dco 0.050000 prs (120.000000 0.000000 160.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000023'
+         'pce00000024', o2p 'euler', drawpri 2 dco 0.050000 prs (160.000000 0.000000 160.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000024'
+         'pce00000025', o2p 'euler', drawpri 2 dco 0.050000 prs (200.000000 0.000000 160.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000025'
+         'pce00000026', o2p 'euler', drawpri 2 dco 0.050000 prs (240.000000 0.000000 160.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000026'
+         'pce00000027', o2p 'euler', drawpri 2 dco 0.050000 prs (280.000000 0.000000 160.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000027'
+         'pce00000028', o2p 'euler', drawpri 2 dco 0.050000 prs (0.000000 0.000000 200.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000028'
+         'pce00000029', o2p 'euler', drawpri 2 dco 0.050000 prs (40.000000 0.000000 200.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000029'
+         'pce0000002a', o2p 'euler', drawpri 2 dco 0.050000 prs (80.000000 0.000000 200.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000002a'
+         'pce0000002b', o2p 'euler', drawpri 2 dco 0.050000 prs (120.000000 0.000000 200.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000002b'
+         'pce0000002c', o2p 'euler', drawpri 2 dco 0.050000 prs (160.000000 0.000000 200.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000002c'
+         'pce0000002d', o2p 'euler', drawpri 2 dco 0.050000 prs (200.000000 0.000000 200.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000002d'
+         'pce0000002e', o2p 'euler', drawpri 2 dco 0.050000 prs (240.000000 0.000000 200.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000002e'
+         'pce0000002f', o2p 'euler', drawpri 2 dco 0.050000 prs (280.000000 0.000000 200.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000002f'
+         'pce00000030', o2p 'euler', drawpri 2 dco 0.050000 prs (0.000000 0.000000 240.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000030'
+         'pce00000031', o2p 'euler', drawpri 2 dco 0.050000 prs (40.000000 0.000000 240.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000031'
+         'pce00000032', o2p 'euler', drawpri 2 dco 0.050000 prs (80.000000 0.000000 240.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000032'
+         'pce00000033', o2p 'euler', drawpri 2 dco 0.050000 prs (120.000000 0.000000 240.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000033'
+         'pce00000034', o2p 'euler', drawpri 2 dco 0.050000 prs (160.000000 0.000000 240.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000034'
+         'pce00000035', o2p 'euler', drawpri 2 dco 0.050000 prs (200.000000 0.000000 240.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000035'
+         'pce00000036', o2p 'euler', drawpri 2 dco 0.050000 prs (240.000000 0.000000 240.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000036'
+         'pce00000037', o2p 'euler', drawpri 2 dco 0.050000 prs (280.000000 0.000000 240.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000037'
+         'pce00000038', o2p 'euler', drawpri 2 dco 0.050000 prs (0.000000 0.000000 280.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000038'
+         'pce00000039', o2p 'euler', drawpri 2 dco 0.050000 prs (40.000000 0.000000 280.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce00000039'
+         'pce0000003a', o2p 'euler', drawpri 2 dco 0.050000 prs (80.000000 0.000000 280.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000003a'
+         'pce0000003b', o2p 'euler', drawpri 2 dco 0.050000 prs (120.000000 0.000000 280.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000003b'
+         'pce0000003c', o2p 'euler', drawpri 2 dco 0.050000 prs (160.000000 0.000000 280.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000003c'
+         'pce0000003d', o2p 'euler', drawpri 2 dco 0.050000 prs (200.000000 0.000000 280.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000003d'
+         'pce0000003e', o2p 'euler', drawpri 2 dco 0.050000 prs (240.000000 0.000000 280.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000003e'
+         'pce0000003f', o2p 'euler', drawpri 2 dco 0.050000 prs (280.000000 0.000000 280.000000),(0.000000 0.000000 0.000000 0.000000),(1.000000 1.000000 1.000000) , modelname 'pce0000003f'
+   logging reference lists
+      show model list
+      showref
+           0[  0] : refcount   1, ptr 11f3e968, name 'dum         ' model2 [modelb] name 'dum         ', nverts     0, nfaces     0, boxmin (100000002004087730000.000000 100000002004087730000.000000 100000002004087730000.000000), boxmax (-100000002004087730000.000000 -100000002004087730000.000000 -100000002004087730000.000000)
+           1[  1] : refcount   1, ptr 127822f0, name 'pce00000000 ' model2 [modelb] name 'pce00000000 ', nverts    40, nfaces    30, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 20, fo 0, fs 16 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 20, vs 20, fo 16, fs 14 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+           2[  2] : refcount   1, ptr 11f67078, name 'pce00000001 ' model2 [modelb] name 'pce00000001 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+           3[  3] : refcount   1, ptr 11f6a648, name 'pce00000002 ' model2 [modelb] name 'pce00000002 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+           4[  4] : refcount   1, ptr 142205e8, name 'pce00000003 ' model2 [modelb] name 'pce00000003 ', nverts    48, nfaces    18, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 16, fo 0, fs 12 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 16, vs 16, fo 12, fs 4 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 2: vo 32, vs 16, fo 16, fs 2 , matname 'tex', texname0 'sanddbl.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+           5[  5] : refcount   1, ptr 14261be0, name 'pce00000004 ' model2 [modelb] name 'pce00000004 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+           6[  6] : refcount   1, ptr 14262978, name 'pce00000005 ' model2 [modelb] name 'pce00000005 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+           7[  7] : refcount   1, ptr 127878a8, name 'pce00000006 ' model2 [modelb] name 'pce00000006 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+           8[  8] : refcount   1, ptr 12788610, name 'pce00000007 ' model2 [modelb] name 'pce00000007 ', nverts    40, nfaces    30, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 20, fo 0, fs 16 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 20, vs 20, fo 16, fs 14 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+           9[  9] : refcount   1, ptr 12789de8, name 'pce00000008 ' model2 [modelb] name 'pce00000008 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          10[ 10] : refcount   1, ptr 11eb8d18, name 'pce00000009 ' model2 [modelb] name 'pce00000009 ', nverts    40, nfaces    30, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 20, fo 0, fs 16 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 20, vs 20, fo 16, fs 14 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          11[ 11] : refcount   1, ptr 11eb9610, name 'pce0000000a ' model2 [modelb] name 'pce0000000a ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          12[ 12] : refcount   1, ptr 11eba710, name 'pce0000000b ' model2 [modelb] name 'pce0000000b ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          13[ 13] : refcount   1, ptr 11ebac48, name 'pce0000000c ' model2 [modelb] name 'pce0000000c ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          14[ 14] : refcount   1, ptr 11ebb268, name 'pce0000000d ' model2 [modelb] name 'pce0000000d ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          15[ 15] : refcount   1, ptr 11ebb850, name 'pce0000000e ' model2 [modelb] name 'pce0000000e ', nverts    40, nfaces    30, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 20, fo 0, fs 16 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 20, vs 20, fo 16, fs 14 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          16[ 16] : refcount   1, ptr 11ebc488, name 'pce0000000f ' model2 [modelb] name 'pce0000000f ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          17[ 17] : refcount   1, ptr 11f6af10, name 'pce00000010 ' model2 [modelb] name 'pce00000010 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          18[ 18] : refcount   1, ptr 11f6b068, name 'pce00000011 ' model2 [modelb] name 'pce00000011 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          19[ 19] : refcount   1, ptr 11f6b1c0, name 'pce00000012 ' model2 [modelb] name 'pce00000012 ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          20[ 20] : refcount   1, ptr 11f6b318, name 'pce00000013 ' model2 [modelb] name 'pce00000013 ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          21[ 21] : refcount   1, ptr 11f6b470, name 'pce00000014 ' model2 [modelb] name 'pce00000014 ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          22[ 22] : refcount   1, ptr 11f6b5c8, name 'pce00000015 ' model2 [modelb] name 'pce00000015 ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          23[ 23] : refcount   1, ptr 11f6b720, name 'pce00000016 ' model2 [modelb] name 'pce00000016 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          24[ 24] : refcount   1, ptr 11f6b878, name 'pce00000017 ' model2 [modelb] name 'pce00000017 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          25[ 25] : refcount   1, ptr 11f6b9d0, name 'pce00000018 ' model2 [modelb] name 'pce00000018 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          26[ 26] : refcount   1, ptr 11f6bb28, name 'pce00000019 ' model2 [modelb] name 'pce00000019 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          27[ 27] : refcount   1, ptr 11f6bc80, name 'pce0000001a ' model2 [modelb] name 'pce0000001a ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          28[ 28] : refcount   1, ptr 11ec67b0, name 'pce0000001b ' model2 [modelb] name 'pce0000001b ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          29[ 29] : refcount   1, ptr 11ec6908, name 'pce0000001c ' model2 [modelb] name 'pce0000001c ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          30[ 30] : refcount   1, ptr 11ec6a60, name 'pce0000001d ' model2 [modelb] name 'pce0000001d ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          31[ 31] : refcount   1, ptr 11ec6bb8, name 'pce0000001e ' model2 [modelb] name 'pce0000001e ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          32[ 32] : refcount   1, ptr 11ec6d10, name 'pce0000001f ' model2 [modelb] name 'pce0000001f ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          33[ 33] : refcount   1, ptr 11ec6e68, name 'pce00000020 ' model2 [modelb] name 'pce00000020 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          34[ 34] : refcount   1, ptr 11ec6fc0, name 'pce00000021 ' model2 [modelb] name 'pce00000021 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          35[ 35] : refcount   1, ptr 11ec7118, name 'pce00000022 ' model2 [modelb] name 'pce00000022 ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          36[ 36] : refcount   1, ptr 11ec7270, name 'pce00000023 ' model2 [modelb] name 'pce00000023 ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          37[ 37] : refcount   1, ptr 11ec73c8, name 'pce00000024 ' model2 [modelb] name 'pce00000024 ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          38[ 38] : refcount   1, ptr 11ec7520, name 'pce00000025 ' model2 [modelb] name 'pce00000025 ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          39[ 39] : refcount   1, ptr 11ec7678, name 'pce00000026 ' model2 [modelb] name 'pce00000026 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          40[ 40] : refcount   1, ptr 11ec77d0, name 'pce00000027 ' model2 [modelb] name 'pce00000027 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          41[ 41] : refcount   1, ptr 11ec7928, name 'pce00000028 ' model2 [modelb] name 'pce00000028 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          42[ 42] : refcount   1, ptr 11ec7a80, name 'pce00000029 ' model2 [modelb] name 'pce00000029 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          43[ 43] : refcount   1, ptr 11ec7bd8, name 'pce0000002a ' model2 [modelb] name 'pce0000002a ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          44[ 44] : refcount   1, ptr 11ec7d30, name 'pce0000002b ' model2 [modelb] name 'pce0000002b ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          45[ 45] : refcount   1, ptr 11ec7e88, name 'pce0000002c ' model2 [modelb] name 'pce0000002c ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          46[ 46] : refcount   1, ptr 11ec7fe0, name 'pce0000002d ' model2 [modelb] name 'pce0000002d ', nverts     4, nfaces     2, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          47[ 47] : refcount   1, ptr 11ec8138, name 'pce0000002e ' model2 [modelb] name 'pce0000002e ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          48[ 48] : refcount   1, ptr 11ec8290, name 'pce0000002f ' model2 [modelb] name 'pce0000002f ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          49[ 49] : refcount   1, ptr 11ec83e8, name 'pce00000030 ' model2 [modelb] name 'pce00000030 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          50[ 50] : refcount   1, ptr 11ec8540, name 'pce00000031 ' model2 [modelb] name 'pce00000031 ', nverts    40, nfaces    30, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 20, fo 0, fs 16 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 20, vs 20, fo 16, fs 14 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          51[ 51] : refcount   1, ptr 11eec428, name 'pce00000032 ' model2 [modelb] name 'pce00000032 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          52[ 52] : refcount   1, ptr 11eec580, name 'pce00000033 ' model2 [modelb] name 'pce00000033 ', nverts    40, nfaces    30, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 20, fo 0, fs 16 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 20, vs 20, fo 16, fs 14 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          53[ 53] : refcount   1, ptr 11eec6d8, name 'pce00000034 ' model2 [modelb] name 'pce00000034 ', nverts    40, nfaces    30, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 20, fo 0, fs 16 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 20, vs 20, fo 16, fs 14 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          54[ 54] : refcount   1, ptr 11eec830, name 'pce00000035 ' model2 [modelb] name 'pce00000035 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          55[ 55] : refcount   1, ptr 11eec988, name 'pce00000036 ' model2 [modelb] name 'pce00000036 ', nverts    40, nfaces    30, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 20, fo 0, fs 16 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 20, vs 20, fo 16, fs 14 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          56[ 56] : refcount   1, ptr 11eecae0, name 'pce00000037 ' model2 [modelb] name 'pce00000037 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          57[ 57] : refcount   1, ptr 11eecc38, name 'pce00000038 ' model2 [modelb] name 'pce00000038 ', nverts    40, nfaces    30, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 20, fo 0, fs 16 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 20, vs 20, fo 16, fs 14 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          58[ 58] : refcount   1, ptr 11eecd90, name 'pce00000039 ' model2 [modelb] name 'pce00000039 ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          59[ 59] : refcount   1, ptr 11eecee8, name 'pce0000003a ' model2 [modelb] name 'pce0000003a ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          60[ 60] : refcount   1, ptr 11eed040, name 'pce0000003b ' model2 [modelb] name 'pce0000003b ', nverts    40, nfaces    30, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 20, fo 0, fs 16 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 20, vs 20, fo 16, fs 14 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          61[ 61] : refcount   1, ptr 11eed198, name 'pce0000003c ' model2 [modelb] name 'pce0000003c ', nverts    40, nfaces    30, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 20, fo 0, fs 16 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 20, vs 20, fo 16, fs 14 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          62[ 62] : refcount   1, ptr 11eed2f0, name 'pce0000003d ' model2 [modelb] name 'pce0000003d ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          63[ 63] : refcount   1, ptr 11eed448, name 'pce0000003e ' model2 [modelb] name 'pce0000003e ', nverts    16, nfaces     6, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 8, fo 0, fs 4 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 8, vs 8, fo 4, fs 2 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          64[ 64] : refcount   1, ptr 11eed5a0, name 'pce0000003f ' model2 [modelb] name 'pce0000003f ', nverts    40, nfaces    30, boxmin (0.000000 0.000000 0.000000), boxmax (40.000000 0.000000 40.000000)
+            group 0: vo 0, vs 20, fo 0, fs 16 , matname 'tex', texname0 'lusrocks.tga' shine 30.000000, refl 1.000000, specstr 1.000000
+            group 1: vo 20, vs 20, fo 16, fs 14 , matname 'tex', texname0 '4pl_tile01.jpg' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          65[ 65] : refcount   1, ptr 11eed6f8, name 'mdlcrmuscletone_0' model2 [modelb] name 'mdlcrmuscletone_0', nverts   150, nfaces    70, boxmin (-10.925800 -0.176600 -25.030001), boxmax (10.925800 12.360500 25.030001)
+            group 0: vo 0, vs 150, fo 0, fs 70 , matname 'tex', texname0 'ut_0' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          66[ 66] : refcount   1, ptr 11eed850, name 'muscletonetirebl_1' model2 [modelb] name 'muscletonetirebl_1', nverts    52, nfaces    28, boxmin (-2.462300 -4.092500 -4.092500), boxmax (2.462300 4.092500 4.092500)
+            group 0: vo 0, vs 52, fo 0, fs 28 , matname 'tex', texname0 'ut_0' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          67[ 67] : refcount   1, ptr 11eed9a8, name 'muscletonetirebr_2' model2 [modelb] name 'muscletonetirebr_2', nverts    53, nfaces    28, boxmin (-2.462300 -4.092500 -4.092500), boxmax (2.462300 4.092500 4.092500)
+            group 0: vo 0, vs 53, fo 0, fs 28 , matname 'tex', texname0 'ut_0' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          68[ 68] : refcount   1, ptr 11eedb00, name 'muscletonetirefl_3' model2 [modelb] name 'muscletonetirefl_3', nverts    52, nfaces    28, boxmin (-2.159800 -3.588500 -3.509700), boxmax (2.159800 3.588500 3.509700)
+            group 0: vo 0, vs 52, fo 0, fs 28 , matname 'tex', texname0 'ut_0' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          69[ 69] : refcount   1, ptr 11eedc58, name 'muscletonetirefr_4' model2 [modelb] name 'muscletonetirefr_4', nverts    52, nfaces    28, boxmin (-2.159900 -3.589900 -3.589900), boxmax (2.159900 3.589900 3.589900)
+            group 0: vo 0, vs 52, fo 0, fs 28 , matname 'tex', texname0 'ut_0' shine 30.000000, refl 1.000000, specstr 1.000000
+
+          70[ 70] : refcount   1, ptr 11eeddb0, name 'rmuscletone_regpoints_5' model2 [modelb] name 'rmuscletone_regpoints_5', nverts     4, nfaces     4, boxmin (-0.731900 24.193001 -3.303500), boxmax (1.266000 24.193001 -1.305600)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex'shine 30.000000, refl 1.000000, specstr 1.000000
+
+          71[ 71] : refcount   1, ptr 11eedf08, name 'rmuscletone_regpoints_6' model2 [modelb] name 'rmuscletone_regpoints_6', nverts     4, nfaces     4, boxmin (11.691000 14.697800 -4.470700), boxmax (11.691000 16.695700 -2.472700)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex'shine 30.000000, refl 1.000000, specstr 1.000000
+
+          72[ 72] : refcount   1, ptr 11eee060, name 'rmuscletone_regpoints_7' model2 [modelb] name 'rmuscletone_regpoints_7', nverts     4, nfaces     4, boxmin (-0.791300 -0.712100 -6.765300), boxmax (1.206700 1.305600 -6.765300)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex'shine 30.000000, refl 1.000000, specstr 1.000000
+
+          73[ 73] : refcount   1, ptr 11eee1b8, name 'rmuscletone_regpoints_8' model2 [modelb] name 'rmuscletone_regpoints_8', nverts     4, nfaces     4, boxmin (-11.275600 14.737400 -4.470700), boxmax (-11.275600 16.735300 -2.472700)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex'shine 30.000000, refl 1.000000, specstr 1.000000
+
+          74[ 74] : refcount   1, ptr 11f55930, name 'rmuscletone_regpoints_9' model2 [modelb] name 'rmuscletone_regpoints_9', nverts     4, nfaces     4, boxmin (11.038200 -15.390200 -4.806900), boxmax (11.038200 -13.392200 -2.809000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex'shine 30.000000, refl 1.000000, specstr 1.000000
+
+          75[ 75] : refcount   1, ptr 11f55a88, name 'rmuscletone_regpoints_10' model2 [modelb] name 'rmuscletone_regpoints_10', nverts     4, nfaces     4, boxmin (-10.642500 -15.449500 -4.826700), boxmax (-10.642500 -13.451500 -2.828800)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex'shine 30.000000, refl 1.000000, specstr 1.000000
+
+          76[ 76] : refcount   1, ptr 11f55be0, name 'rmuscletone_regpoints_11' model2 [modelb] name 'rmuscletone_regpoints_11', nverts     4, nfaces     4, boxmin (-0.731900 -22.017000 -2.927700), boxmax (1.266000 -22.017000 -0.929700)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex'shine 30.000000, refl 1.000000, specstr 1.000000
+
+          77[ 77] : refcount   1, ptr 11f55d38, name 'rmuscletone_regpoints_12' model2 [modelb] name 'rmuscletone_regpoints_12', nverts     4, nfaces     4, boxmin (-0.791300 -18.594801 1.226500), boxmax (1.206700 -16.596800 1.226500)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex'shine 30.000000, refl 1.000000, specstr 1.000000
+
+          78[ 78] : refcount   1, ptr 11f55e90, name 'rmuscletone_regpoints_13' model2 [modelb] name 'rmuscletone_regpoints_13', nverts     4, nfaces     4, boxmin (10.682100 -0.731900 -3.699200), boxmax (10.682100 1.266000 -1.701200)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex'shine 30.000000, refl 1.000000, specstr 1.000000
+
+          79[ 79] : refcount   1, ptr 11f55fe8, name 'rmuscletone_regpoints_14' model2 [modelb] name 'rmuscletone_regpoints_14', nverts     4, nfaces     4, boxmin (-0.791300 1.246200 5.796000), boxmax (1.206700 3.244200 5.796000)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex'shine 30.000000, refl 1.000000, specstr 1.000000
+
+          80[ 80] : refcount   1, ptr 11f56140, name 'rmuscletone_regpoints_15' model2 [modelb] name 'rmuscletone_regpoints_15', nverts     4, nfaces     4, boxmin (-10.306300 -0.731900 -3.738700), boxmax (-10.306300 1.266000 -1.740800)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex'shine 30.000000, refl 1.000000, specstr 1.000000
+
+          81[ 81] : refcount   1, ptr 11f56298, name 'rmuscletone_regpoints_16' model2 [modelb] name 'rmuscletone_regpoints_16', nverts     4, nfaces     4, boxmin (-0.791300 19.386101 2.729900), boxmax (1.206700 21.384001 2.729900)
+            group 0: vo 0, vs 4, fo 0, fs 2 , matname 'tex'shine 30.000000, refl 1.000000, specstr 1.000000
+
+      show texture list
+      showref
+           0[  0] : refcount   1, ptr 1278b8b0, name 'dumtex      ' [textureb] format  0, name 'dumtex      ' size    0,   0 orig size wid hit 0 0,hasalpha 0[texture2] sx -2147483648, sy -2147483648, orig wid hit 0 0 
+           1[  1] : refcount  64, ptr 12782448, name 'lusrocks.tga' [textureb] format  0, name 'lusrocks.tga' size  256, 256 orig size wid hit 256 256,hasalpha 0[texture2] sx  256, sy  256, orig wid hit 256 256 
+           2[  2] : refcount  48, ptr 11f3b3e0, name '4pl_tile01.jpg' [textureb] format  0, name '4pl_tile01.jpg' size  128, 128 orig size wid hit 128 128,hasalpha 0[texture2] sx  128, sy  128, orig wid hit 128 128 
+           3[  3] : refcount   1, ptr 11f6ade0, name 'sanddbl.tga ' [textureb] format  0, name 'sanddbl.tga ' size  256, 256 orig size wid hit 256 256,hasalpha 0[texture2] sx  256, sy  256, orig wid hit 256 256 
+           4[  4] : refcount   5, ptr 11ebc2c8, name 'ut_0        ' [textureb] format  0, name 'ut_0        ' size  128, 128 orig size wid hit 128 128,hasalpha 0[texture2] sx  128, sy  128, orig wid hit 128 128 
+   deleting 11F3D768
+   uninitsocker
+end exit state 5
+^^^^^^^^^    begin main exit    ^^^^^^^^^
+uninitsocker
+uninitsocker: not inited
+VVVVVVVVV    end main exit    VVVVVVVVVVV
+audio_uninit
+input uninit
+'class modelb' RCLIST now at 0
+'class textureb' RCLIST now at 0
+video_uninit
+final fpu control is at 0000007f
+close logfile, not quite
+mem leak: max chunks 1130, cur chunks 5
+max alloced 7406768, cur alloced 1108
+mem stats(MAXHASH ALLOWED=16000): maxmemsize 7406768, maxmemchunks 1130
+hash table, maxhash 8
+chunk not freed ptr 11EC1040, amount      72, id    8993, name 'inited'
+chunk not freed ptr 1278B9C0, amount      64, id    4273, name 'inited'
+chunk not freed ptr 11EFED50, amount     752, id    8869, name 'inited'
+chunk not freed ptr 12781B48, amount     136, id       0, name 'befmain'
+chunk not freed ptr 12781C20, amount      84, id       1, name 'befmain'
+sizeof CHECKPTRS structures 196612116
+memfree:  ptr 1278B9C0, size      64, id    4273, name 'inited'
+memfree:  ptr 12781C20, size      84, id       1, name 'befmain'
+memfree:  ptr 11EC1040, size      72, id    8993, name 'inited'
+memfree:  ptr 11EFED50, size     752, id    8869, name 'inited'
+memfree:  ptr 12781B48, size     136, id       0, name 'befmain'
+MEMCLEAN

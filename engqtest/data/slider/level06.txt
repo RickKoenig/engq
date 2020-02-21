@@ -1,0 +1,57 @@
+# board x y then xy of . blank, Pn piece n, Gn goal n, W wall
+11 13
+W     W     W     W     W     W     W     W     W     W     W
+W     P1G4  W     .     W     W     W     P4G1  W     .     W
+W     .     .     .     P0    .     .     .     .     .     W
+W     .     .     .     .     .     .     .     .     .     W
+W     .     .     .     .     .     .     .     .     .     W
+W     P2G5  .     .     .     .     .     P5G2  .     .     W
+W     .     .     .     .     .     .     .     .     .     W
+W     .     .     .     .     .     .     .     .     .     W
+W     P3G6  .     .     .     .     .     P6G3  .     .     W
+W     .     .     .     .     .     .     .     .     .     W
+W     .     .     .     .     .     .     .     .     .     W
+W     .     .     .     W     W     W     .     .     .     W
+W     W     W     W     W     W     W     W     W     W     W
+ 
+# number of shapes
+7
+
+# shape 0 x y then xy of . blank, 1 solid
+3 2
+1 1 1
+1 1 1
+# shape 1 x y then xy of . blank, 1 solid
+3 4
+1 0 1
+1 1 1
+1 1 1
+1 1 1
+# shape 2 x y then xy of . blank, 1 solid
+3 3
+1 1 1
+1 1 1
+1 1 1
+# shape 3 x y then xy of . blank, 1 solid
+3 4
+1 1 1
+1 1 1
+1 1 1
+1 1 1
+# shape 4 x y then xy of . blank, 1 solid
+3 4
+1 0 1
+1 1 1
+1 1 1
+1 1 1
+# shape 5 x y then xy of . blank, 1 solid
+3 3
+1 0 1
+1 1 1
+1 1 1
+# shape 6 x y then xy of . blank, 1 solid
+3 4
+1 1 1
+1 1 1
+1 1 1 
+1 1 1

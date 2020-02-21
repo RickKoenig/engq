@@ -1,0 +1,89 @@
+open daylog at Tue Feb 09 05:24:31 2016
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+close daylog at Tue Feb 09 05:25:32 2016
+append daylog at Tue Feb 09 05:27:40 2016
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR     104, BW      21, S  10, BR/S      10, BW/S       2
+BR    3741, BW    3993, S  10, BR/S     374, BW/S     399
+BR    6070, BW    6070, S  10, BR/S     607, BW/S     607
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6015, BW    6015, S  10, BR/S     601, BW/S     601
+BR    5930, BW    5930, S  10, BR/S     593, BW/S     593
+BR    8225, BW    8225, S  10, BR/S     822, BW/S     822
+BR    6035, BW    6035, S  10, BR/S     603, BW/S     603
+BR    6025, BW    6025, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6010, BW    6010, S  10, BR/S     601, BW/S     601
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    5370, BW    4803, S  10, BR/S     537, BW/S     480
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR    2802, BW    2981, S  10, BR/S     280, BW/S     298
+BR    6405, BW    6405, S  10, BR/S     640, BW/S     640
+BR    6275, BW    6275, S  10, BR/S     627, BW/S     627
+BR    6175, BW    6175, S  10, BR/S     617, BW/S     617
+BR    6240, BW    6240, S  10, BR/S     624, BW/S     624
+BR    6360, BW    6360, S  10, BR/S     636, BW/S     636
+BR    6355, BW    6355, S  10, BR/S     635, BW/S     635
+BR    6195, BW    6195, S  10, BR/S     619, BW/S     619
+BR    6230, BW    6230, S  10, BR/S     623, BW/S     623
+BR    6285, BW    6285, S  10, BR/S     628, BW/S     628
+BR    6285, BW    6285, S  10, BR/S     628, BW/S     628
+BR    6320, BW    6320, S  10, BR/S     632, BW/S     632
+BR    6340, BW    6340, S  10, BR/S     634, BW/S     634
+BR    6175, BW    6175, S  10, BR/S     617, BW/S     617
+BR    6288, BW    6230, S  10, BR/S     628, BW/S     623
+BR    6480, BW    6422, S  10, BR/S     648, BW/S     642
+BR    6550, BW    6550, S  10, BR/S     655, BW/S     655
+BR    6385, BW    6385, S  10, BR/S     638, BW/S     638
+BR    6140, BW    6140, S  10, BR/S     614, BW/S     614
+BR    6285, BW    6285, S  10, BR/S     628, BW/S     628
+BR    6330, BW    6330, S  10, BR/S     633, BW/S     633
+BR    6275, BW    6275, S  10, BR/S     627, BW/S     627
+BR    6120, BW    6120, S  10, BR/S     612, BW/S     612
+BR    6215, BW    6215, S  10, BR/S     621, BW/S     621
+BR    6375, BW    6375, S  10, BR/S     637, BW/S     637
+BR    6285, BW    6285, S  10, BR/S     628, BW/S     628
+BR    6355, BW    6355, S  10, BR/S     635, BW/S     635
+BR    6405, BW    6405, S  10, BR/S     640, BW/S     640
+BR    6115, BW    6115, S  10, BR/S     611, BW/S     611
+BR    6273, BW    6215, S  10, BR/S     627, BW/S     621
+BR    6334, BW    6334, S  10, BR/S     633, BW/S     633
+BR    6465, BW    6465, S  10, BR/S     646, BW/S     646
+BR    6505, BW    6505, S  10, BR/S     650, BW/S     650
+BR    6575, BW    6575, S  10, BR/S     657, BW/S     657
+BR    6420, BW    6420, S  10, BR/S     642, BW/S     642
+BR    6470, BW    6470, S  10, BR/S     647, BW/S     647
+BR    6360, BW    6360, S  10, BR/S     636, BW/S     636
+BR    6470, BW    6470, S  10, BR/S     647, BW/S     647
+BR    6430, BW    6430, S  10, BR/S     643, BW/S     643
+BR    6345, BW    6345, S  10, BR/S     634, BW/S     634
+BR    6570, BW    6570, S  10, BR/S     657, BW/S     657
+BR    6350, BW    6350, S  10, BR/S     635, BW/S     635
+BR    6175, BW    6175, S  10, BR/S     617, BW/S     617
+BR    6080, BW    6080, S  10, BR/S     608, BW/S     608
+BR    6458, BW    6400, S  10, BR/S     645, BW/S     640
+BR    6520, BW    6520, S  10, BR/S     652, BW/S     652
+BR    6488, BW    6430, S  10, BR/S     648, BW/S     643
+close daylog at Tue Feb 09 05:39:19 2016
+append daylog at Tue Feb 09 05:42:10 2016
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR     113, BW     107, S  10, BR/S      11, BW/S      10
+BR    1884, BW    2053, S  10, BR/S     188, BW/S     205
+BR    6340, BW    6340, S  10, BR/S     634, BW/S     634
+BR    6280, BW    6280, S  10, BR/S     628, BW/S     628
+BR    6030, BW    6030, S  10, BR/S     603, BW/S     603
+BR    6015, BW    6015, S  10, BR/S     601, BW/S     601
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+close daylog at Tue Feb 09 05:46:01 2016
+append daylog at Tue Feb 09 05:46:54 2016
+close daylog at Tue Feb 09 05:46:56 2016

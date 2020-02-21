@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\misclib">
+      <UniqueIdentifier>{d1480102-84c2-4b08-9754-76bcba982550}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="augmatz_ui.cpp">
+      <Filter>Source Files\misclib</Filter>
+    </ClCompile>
+    <ClCompile Include="l_res.cpp">
+      <Filter>Source Files\misclib</Filter>
+    </ClCompile>
+    <ClCompile Include="l_res3d.cpp">
+      <Filter>Source Files\misclib</Filter>
+    </ClCompile>
+    <ClCompile Include="l_socker.cpp">
+      <Filter>Source Files\misclib</Filter>
+    </ClCompile>
+    <ClCompile Include="l_socker_berk.cpp">
+      <Filter>Source Files\misclib</Filter>
+    </ClCompile>
+    <ClCompile Include="l_tagread.cpp">
+      <Filter>Source Files\misclib</Filter>
+    </ClCompile>
+    <ClCompile Include="l_vcam.cpp">
+      <Filter>Source Files\misclib</Filter>
+    </ClCompile>
+    <ClCompile Include="particles.cpp">
+      <Filter>Source Files\misclib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="augmatz_ui.h">
+      <Filter>Source Files\misclib</Filter>
+    </ClInclude>
+    <ClInclude Include="l_factory.h">
+      <Filter>Source Files\misclib</Filter>
+    </ClInclude>
+    <ClInclude Include="l_misclibm.h">
+      <Filter>Source Files\misclib</Filter>
+    </ClInclude>
+    <ClInclude Include="l_res.h">
+      <Filter>Source Files\misclib</Filter>
+    </ClInclude>
+    <ClInclude Include="l_res3d.h">
+      <Filter>Source Files\misclib</Filter>
+    </ClInclude>
+    <ClInclude Include="l_socker.h">
+      <Filter>Source Files\misclib</Filter>
+    </ClInclude>
+    <ClInclude Include="l_socker_berk.h">
+      <Filter>Source Files\misclib</Filter>
+    </ClInclude>
+    <ClInclude Include="l_tagread.h">
+      <Filter>Source Files\misclib</Filter>
+    </ClInclude>
+    <ClInclude Include="l_vcam.h">
+      <Filter>Source Files\misclib</Filter>
+    </ClInclude>
+    <ClInclude Include="particles.h">
+      <Filter>Source Files\misclib</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

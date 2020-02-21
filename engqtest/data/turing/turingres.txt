@@ -1,0 +1,41 @@
+shape quant3res 0 0 {
+
+// file list
+	text TFILE
+	450 160
+	180 10
+	"Files (.tur)"
+	
+	listbox LFILES
+	450 180
+	180 80
+
+// current file
+	edit EFILE
+	450 270
+	180 20
+	"current file"
+
+// load save delete
+
+	pbut BLOAD
+	450 300
+	180 20
+	LOAD
+	
+	pbut BSAVE
+	450 330
+	180 20
+	SAVE
+	
+	pbut BDELETE
+	460 370
+	70 20
+	DELETE
+	
+	pbut RESET
+	550 370
+	70 20
+	RESET
+
+}

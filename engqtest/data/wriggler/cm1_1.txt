@@ -1,0 +1,6 @@
+5 5
+W      W      W      W      W      
+W      G0     G0P0DX G0     W
+W      G0P0DR G0P0LU G0P0XD W
+W        P0RU G0P0RL   P0UL W
+W      W      W      W      W      

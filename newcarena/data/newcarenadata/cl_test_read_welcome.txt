@@ -1,0 +1,236 @@
+{
+	"environment" : {
+		"envj" : {
+			"nlaps" : 1,
+			"pc" : {
+				"calc" : {
+					"airfric" : 0.0625,
+					"c2celast" : 1.25,
+					"camatt" : {
+						"pointf3" : {
+							"w" : 1,
+							"x" : 75.875,
+							"y" : 5.875,
+							"z" : 15.75
+						}
+					},
+					"camattdist" : 16,
+					"camattpitch" : 0,
+					"candrivetime" : 90,
+					"car2cardist" : 4.7,
+					"carbboxmax" : {
+						"pointf3" : {
+							"w" : 1,
+							"x" : 1.15625,
+							"y" : 1.25,
+							"z" : 2.40625
+						}
+					},
+					"carbboxmin" : {
+						"pointf3" : {
+							"w" : 1,
+							"x" : -1.15625,
+							"y" : 0,
+							"z" : -2.40625
+						}
+					},
+					"carflipheight" : 2.375,
+					"carstartheight" : 1.125,
+					"defuextraheading" : 0.570312,
+					"drivemode" : 2,
+					"elast" : 0.59375,
+					"extrashocklen" : [
+						1,
+						1,
+						1,
+						1
+					],
+					"frictcarbody" : 0.00195312,
+					"fricttireroll" : 0.125,
+					"fricttireslide" : 1,
+					"littleg" : 22,
+					"mass" : 3.5,
+					"maxnocheckpointtime" : 289,
+					"maxnoresettime" : 60,
+					"maxnoshocktime" : 289,
+					"maxturnspeed" : 24,
+					"maxuextraheading" : 2.125,
+					"moi" : 10.5,
+					"norematchtime" : 40,
+					"normalshocklen" : [
+						1,
+						1,
+						1,
+						1
+					],
+					"p" : {
+						"pointf3" : [
+							{
+								"w" : 0,
+								"x" : -1.125,
+								"y" : 0.5,
+								"z" : 1.4375
+							},
+							{
+								"w" : 0,
+								"x" : -1.125,
+								"y" : -0.5,
+								"z" : 1.4375
+							},
+							{
+								"w" : 0,
+								"x" : 1.125,
+								"y" : 0.5,
+								"z" : 1.4375
+							},
+							{
+								"w" : 0,
+								"x" : 1.125,
+								"y" : -0.5,
+								"z" : 1.4375
+							},
+							{
+								"w" : 0,
+								"x" : -1.125,
+								"y" : 0.5,
+								"z" : -1.4375
+							},
+							{
+								"w" : 0,
+								"x" : -1.125,
+								"y" : -0.5,
+								"z" : -1.4375
+							},
+							{
+								"w" : 0,
+								"x" : 1.125,
+								"y" : 0.5,
+								"z" : -1.4375
+							},
+							{
+								"w" : 0,
+								"x" : 1.125,
+								"y" : -0.5,
+								"z" : -1.4375
+							},
+							{
+								"w" : 0,
+								"x" : -1.15625,
+								"y" : 0,
+								"z" : -2.40625
+							},
+							{
+								"w" : 0,
+								"x" : -1.15625,
+								"y" : 0,
+								"z" : 2.40625
+							},
+							{
+								"w" : 0,
+								"x" : -1.15625,
+								"y" : 1.25,
+								"z" : -2.40625
+							},
+							{
+								"w" : 0,
+								"x" : -1.15625,
+								"y" : 1.25,
+								"z" : 2.40625
+							},
+							{
+								"w" : 0,
+								"x" : 1.15625,
+								"y" : 0,
+								"z" : -2.40625
+							},
+							{
+								"w" : 0,
+								"x" : 1.15625,
+								"y" : 0,
+								"z" : 2.40625
+							},
+							{
+								"w" : 0,
+								"x" : 1.15625,
+								"y" : 1.25,
+								"z" : -2.40625
+							},
+							{
+								"w" : 0,
+								"x" : 1.15625,
+								"y" : 1.25,
+								"z" : 2.40625
+							},
+							{
+								"w" : 0,
+								"x" : 0,
+								"y" : 0.625,
+								"z" : -1.25
+							},
+							{
+								"w" : 0,
+								"x" : 0,
+								"y" : 0.625,
+								"z" : 1.25
+							}
+						]
+					},
+					"rematchtime" : 1,
+					"shockdamp" : 165.25,
+					"shockextra" : 1,
+					"shockoffsety" : 0.5,
+					"shockspacingx" : 2.25,
+					"shockspacingz" : 2.875,
+					"shockstr" : 80.125,
+					"sndc2cmag" : 7,
+					"speedofsound" : 100,
+					"startaccelspin" : 67.75,
+					"testimppnt" : {
+						"pointf3" : {
+							"w" : 1,
+							"x" : 0,
+							"y" : 0,
+							"z" : 4.625
+						}
+					},
+					"testimpval" : {
+						"pointf3" : {
+							"w" : 1,
+							"x" : 0,
+							"y" : 2,
+							"z" : 0
+						}
+					},
+					"wheelaccel" : 1.25,
+					"wheelrad" : 0.625
+				}
+			},
+			"rules" : 6,
+			"trackhash" : {
+				"hash" : {
+					"data" : [
+						150,
+						231,
+						120,
+						5,
+						10,
+						186,
+						157,
+						202,
+						100,
+						202,
+						183,
+						165,
+						38,
+						224,
+						9,
+						69
+					]
+				}
+			},
+			"trackname" : "verytiny"
+		}
+	},
+	"numplayers" : 2,
+	"yourid" : 1
+}

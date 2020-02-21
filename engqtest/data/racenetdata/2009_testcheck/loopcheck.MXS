@@ -1,0 +1,1277 @@
+*3DSMAX_ENGINE1EXPORTFP	200
+*COMMENT "max2eng Version  2.00 - Fri Jul 11 10:20:59 2003"
+*userunit per sysunit 0.010000
+*SCENE {
+	*SCENE_FILENAME "loopcheck.max"
+	*SCENE_FIRSTFRAME 0
+	*SCENE_LASTFRAME 200
+	*SCENE_FRAMESPEED 30
+	*SCENE_TICKSPERFRAME 160
+	*SCENE_BACKGROUND_STATIC 0.00000000	0.00000000	0.00000000
+	*SCENE_AMBIENT_STATIC 1.00000000	1.00000000	1.00000000
+}
+*MATERIAL_LIST {
+	*MATERIAL_COUNT 5
+	*MATERIAL 0 {
+		*MATERIAL_NAME "Material #3"
+		*MATERIAL_CLASS "Standard"
+		*MATERIAL_AMBIENT 1.00000000	1.00000000	1.00000000
+		*MATERIAL_DIFFUSE 1.00000000	1.00000000	1.00000000
+		*MATERIAL_SPECULAR 0.89999998	0.89999998	0.89999998
+		*MATERIAL_SHINE 0.25000000
+		*MATERIAL_SHINESTRENGTH 0.05000000
+		*MATERIAL_TRANSPARENCY 0.00000000
+		*MATERIAL_WIRESIZE 1.00000000
+		*MATERIAL_SHADING Blinn
+		*MATERIAL_XP_FALLOFF 0.00000000
+		*MATERIAL_SELFILLUM 0.00000000
+		*MATERIAL_FALLOFF In
+		*MATERIAL_XP_TYPE Filter
+		*MAP_DIFFUSE {
+			*MAP_NAME "Map #1"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 1
+			*MAP_AMOUNT 1.00000000
+			*BITMAP "C:\srcw32\highway35\sledhw35\common\maptestnck.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.00000000
+			*UVW_V_OFFSET 0.00000000
+			*UVW_U_TILING 1.00000000
+			*UVW_V_TILING 1.00000000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.00000000
+			*UVW_ROW0 1.00000000	0.00000000	0.00000000
+			*UVW_ROW1 0.00000000	1.00000000	0.00000000
+			*UVW_ROW2 0.00000000	0.00000000	1.00000000
+			*UVW_ROW3 0.00000000	0.00000000	0.00000000
+			*UVW_BLUR 1.00000000
+			*UVW_BLUR_OFFSET 0.00000000
+			*UVW_NOUSE_AMT 1.00000000
+			*UVW_NOISE_SIZE 1.00000000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.00000000
+			*BITMAP_FILTER Pyramidal
+		}
+	}
+	*MATERIAL 1 {
+		*MATERIAL_NAME "Material #1"
+		*MATERIAL_CLASS "Standard"
+		*MATERIAL_AMBIENT 1.00000000	1.00000000	1.00000000
+		*MATERIAL_DIFFUSE 1.00000000	1.00000000	1.00000000
+		*MATERIAL_SPECULAR 0.89999998	0.89999998	0.89999998
+		*MATERIAL_SHINE 0.25000000
+		*MATERIAL_SHINESTRENGTH 0.05000000
+		*MATERIAL_TRANSPARENCY 0.00000000
+		*MATERIAL_WIRESIZE 1.00000000
+		*MATERIAL_SHADING Blinn
+		*MATERIAL_XP_FALLOFF 0.00000000
+		*MATERIAL_SELFILLUM 0.00000000
+		*MATERIAL_FALLOFF In
+		*MATERIAL_XP_TYPE Filter
+		*MAP_DIFFUSE {
+			*MAP_NAME "Map #1"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 1
+			*MAP_AMOUNT 1.00000000
+			*BITMAP "C:\srcw32\highway35\sledhw35\common\maptestnck.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.17000000
+			*UVW_V_OFFSET 0.00000000
+			*UVW_U_TILING 3.40000010
+			*UVW_V_TILING 6.80000019
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.80285144
+			*UVW_ROW0 1.64067090	3.39792919	-0.71933979
+			*UVW_ROW1 0.24846864	5.40908623	0.60159183
+			*UVW_ROW2 2.96756840	-2.33149552	0.34732914
+			*UVW_ROW3 -2.20726824	-3.31540799	0.50749719
+			*UVW_BLUR 1.00000000
+			*UVW_BLUR_OFFSET 0.00000000
+			*UVW_NOUSE_AMT 1.00000000
+			*UVW_NOISE_SIZE 1.00000000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.00000000
+			*BITMAP_FILTER Pyramidal
+		}
+	}
+	*MATERIAL 2 {
+		*MATERIAL_NAME "Material #3"
+		*MATERIAL_CLASS "Standard"
+		*MATERIAL_AMBIENT 1.00000000	1.00000000	1.00000000
+		*MATERIAL_DIFFUSE 1.00000000	1.00000000	1.00000000
+		*MATERIAL_SPECULAR 0.89999998	0.89999998	0.89999998
+		*MATERIAL_SHINE 0.25000000
+		*MATERIAL_SHINESTRENGTH 0.05000000
+		*MATERIAL_TRANSPARENCY 0.00000000
+		*MATERIAL_WIRESIZE 1.00000000
+		*MATERIAL_SHADING Blinn
+		*MATERIAL_XP_FALLOFF 0.00000000
+		*MATERIAL_SELFILLUM 0.00000000
+		*MATERIAL_TWOSIDED
+		*MATERIAL_FALLOFF In
+		*MATERIAL_XP_TYPE Filter
+		*MAP_DIFFUSE {
+			*MAP_NAME "Map #2"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 1
+			*MAP_AMOUNT 1.00000000
+			*BITMAP "C:\srcw32\highway35_3_21_03_keep\sledhw35\drag\wiref.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.00000000
+			*UVW_V_OFFSET 0.00000000
+			*UVW_U_TILING 1.00000000
+			*UVW_V_TILING 1.00000000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.00000000
+			*UVW_ROW0 1.00000000	0.00000000	0.00000000
+			*UVW_ROW1 0.00000000	1.00000000	0.00000000
+			*UVW_ROW2 0.00000000	0.00000000	1.00000000
+			*UVW_ROW3 0.00000000	0.00000000	0.00000000
+			*UVW_BLUR 1.00000000
+			*UVW_BLUR_OFFSET 0.00000000
+			*UVW_NOUSE_AMT 1.00000000
+			*UVW_NOISE_SIZE 1.00000000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.00000000
+			*BITMAP_FILTER Pyramidal
+		}
+		*MAP_OPACITY {
+			*MAP_NAME "Map #3"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 6
+			*MAP_AMOUNT 1.00000000
+			*BITMAP "C:\srcw32\highway35_3_21_03_keep\sledhw35\drag\wirefa.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.00000000
+			*UVW_V_OFFSET 0.00000000
+			*UVW_U_TILING 1.00000000
+			*UVW_V_TILING 1.00000000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.00000000
+			*UVW_ROW0 1.00000000	0.00000000	0.00000000
+			*UVW_ROW1 0.00000000	1.00000000	0.00000000
+			*UVW_ROW2 0.00000000	0.00000000	1.00000000
+			*UVW_ROW3 0.00000000	0.00000000	0.00000000
+			*UVW_BLUR 1.00000000
+			*UVW_BLUR_OFFSET 0.00000000
+			*UVW_NOUSE_AMT 1.00000000
+			*UVW_NOISE_SIZE 1.00000000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.00000000
+			*BITMAP_FILTER Pyramidal
+		}
+	}
+	*MATERIAL 3 {
+		*MATERIAL_NAME "Material #2"
+		*MATERIAL_CLASS "Standard"
+		*MATERIAL_AMBIENT 1.00000000	1.00000000	1.00000000
+		*MATERIAL_DIFFUSE 1.00000000	1.00000000	1.00000000
+		*MATERIAL_SPECULAR 0.89999998	0.89999998	0.89999998
+		*MATERIAL_SHINE 0.25000000
+		*MATERIAL_SHINESTRENGTH 0.05000000
+		*MATERIAL_TRANSPARENCY 0.00000000
+		*MATERIAL_WIRESIZE 1.00000000
+		*MATERIAL_SHADING Blinn
+		*MATERIAL_XP_FALLOFF 0.00000000
+		*MATERIAL_SELFILLUM 0.00000000
+		*MATERIAL_TWOSIDED
+		*MATERIAL_FALLOFF In
+		*MATERIAL_XP_TYPE Filter
+		*MAP_DIFFUSE {
+			*MAP_NAME "Map #1"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 1
+			*MAP_AMOUNT 1.00000000
+			*BITMAP "C:\srcw32\highway35\sledhw35\common\maptestnck.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.00000000
+			*UVW_V_OFFSET 0.00000000
+			*UVW_U_TILING 1.00000000
+			*UVW_V_TILING 1.00000000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.00000000
+			*UVW_ROW0 1.00000000	0.00000000	0.00000000
+			*UVW_ROW1 0.00000000	1.00000000	0.00000000
+			*UVW_ROW2 0.00000000	0.00000000	1.00000000
+			*UVW_ROW3 0.00000000	0.00000000	0.00000000
+			*UVW_BLUR 1.00000000
+			*UVW_BLUR_OFFSET 0.00000000
+			*UVW_NOUSE_AMT 1.00000000
+			*UVW_NOISE_SIZE 1.00000000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.00000000
+			*BITMAP_FILTER Pyramidal
+		}
+	}
+	*MATERIAL 4 {
+		*MATERIAL_NAME "Material #4"
+		*MATERIAL_CLASS "Multi/Sub-Object"
+		*MATERIAL_AMBIENT 1.00000000	1.00000000	1.00000000
+		*MATERIAL_DIFFUSE 1.00000000	1.00000000	1.00000000
+		*MATERIAL_SPECULAR 0.89999998	0.89999998	0.89999998
+		*MATERIAL_SHINE 0.25000000
+		*MATERIAL_SHINESTRENGTH 0.05000000
+		*MATERIAL_TRANSPARENCY 0.00000000
+		*MATERIAL_WIRESIZE 1.00000000
+		*NUMSUBMTLS 2
+		*SUBMATERIAL 0 {
+			*MATERIAL_NAME "Material #36"
+			*MATERIAL_CLASS "Standard"
+			*MATERIAL_AMBIENT 1.00000000	1.00000000	1.00000000
+			*MATERIAL_DIFFUSE 1.00000000	1.00000000	1.00000000
+			*MATERIAL_SPECULAR 0.89999998	0.89999998	0.89999998
+			*MATERIAL_SHINE 0.25000000
+			*MATERIAL_SHINESTRENGTH 0.05000000
+			*MATERIAL_TRANSPARENCY 0.00000000
+			*MATERIAL_WIRESIZE 1.00000000
+			*MATERIAL_SHADING Blinn
+			*MATERIAL_XP_FALLOFF 0.00000000
+			*MATERIAL_SELFILLUM 0.00000000
+			*MATERIAL_FALLOFF In
+			*MATERIAL_XP_TYPE Filter
+			*MAP_DIFFUSE {
+				*MAP_NAME "lavamat"
+				*MAP_CLASS "Bitmap"
+				*MAP_SUBNO 1
+				*MAP_AMOUNT 1.00000000
+				*BITMAP "C:\srcw32\highway35\sledhw35\drag\grnd02M.tga"
+				*MAP_TYPE Screen
+				*UVW_U_OFFSET 0.00000000
+				*UVW_V_OFFSET 0.00000000
+				*UVW_U_TILING 1.00000000
+				*UVW_V_TILING 1.00000000
+				*UVW_UV_WRAPFLAGS 3
+				*UVW_ANGLE 0.00000000
+				*UVW_ROW0 1.00000000	0.00000000	0.00000000
+				*UVW_ROW1 0.00000000	1.00000000	0.00000000
+				*UVW_ROW2 0.00000000	0.00000000	1.00000000
+				*UVW_ROW3 0.00000000	0.00000000	0.00000000
+				*UVW_BLUR 1.00000000
+				*UVW_BLUR_OFFSET 0.00000000
+				*UVW_NOUSE_AMT 1.00000000
+				*UVW_NOISE_SIZE 1.00000000
+				*UVW_NOISE_LEVEL 1
+				*UVW_NOISE_PHASE 0.00000000
+				*BITMAP_FILTER Pyramidal
+			}
+		}
+		*SUBMATERIAL 1 {
+			*MATERIAL_NAME "Material #37"
+			*MATERIAL_CLASS "Standard"
+			*MATERIAL_AMBIENT 1.00000000	1.00000000	1.00000000
+			*MATERIAL_DIFFUSE 1.00000000	1.00000000	1.00000000
+			*MATERIAL_SPECULAR 0.89999998	0.89999998	0.89999998
+			*MATERIAL_SHINE 0.25000000
+			*MATERIAL_SHINESTRENGTH 0.05000000
+			*MATERIAL_TRANSPARENCY 0.00000000
+			*MATERIAL_WIRESIZE 1.00000000
+			*MATERIAL_SHADING Blinn
+			*MATERIAL_XP_FALLOFF 0.00000000
+			*MATERIAL_SELFILLUM 0.00000000
+			*MATERIAL_FALLOFF In
+			*MATERIAL_XP_TYPE Filter
+			*MAP_DIFFUSE {
+				*MAP_NAME "Map #1"
+				*MAP_CLASS "Bitmap"
+				*MAP_SUBNO 1
+				*MAP_AMOUNT 1.00000000
+				*BITMAP "C:\srcw32\highway35\sledhw35\common\maptestnck.tga"
+				*MAP_TYPE Screen
+				*UVW_U_OFFSET 0.00000000
+				*UVW_V_OFFSET 0.00000000
+				*UVW_U_TILING 1.00000000
+				*UVW_V_TILING 1.00000000
+				*UVW_UV_WRAPFLAGS 3
+				*UVW_ANGLE 0.00000000
+				*UVW_ROW0 1.00000000	0.00000000	0.00000000
+				*UVW_ROW1 0.00000000	1.00000000	0.00000000
+				*UVW_ROW2 0.00000000	0.00000000	1.00000000
+				*UVW_ROW3 0.00000000	0.00000000	0.00000000
+				*UVW_BLUR 1.00000000
+				*UVW_BLUR_OFFSET 0.00000000
+				*UVW_NOUSE_AMT 1.00000000
+				*UVW_NOISE_SIZE 1.00000000
+				*UVW_NOISE_LEVEL 1
+				*UVW_NOISE_PHASE 0.00000000
+				*BITMAP_FILTER Pyramidal
+			}
+		}
+	}
+}
+*GEOMOBJECT {
+	*NODE_ID "02168b90"
+	*NODE_NAME "table"
+	*NODE_TM {
+		*NODE_NAME "table"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.00000000	0.00000000	0.00000000
+		*TM_POS 0.00000000	0.00000000	0.00000000
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+0e§Â    €º­Â0e§B×¬ZA€º­B      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "05fafc28"
+	*NODE_NAME "hill1"
+	*NODE_TM {
+		*NODE_NAME "hill1"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -18.81567341	26.00042911	3.33645012
+		*TM_POS -18.81567341	26.00042911	3.33645012
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 482
+		*MESH_NUMFACES 960
+		*MESH_VERTEX_LIST {
+ùÂËœ5ÁÝ5A6„À0A*À"Bÿÿÿÿÿ‰ýø˜ {‰ý}˜qv‰ý—r‰ýÂ”Wn‰ý§‘<k‰ýßíh‰ý‰g‰ýÞ„g‰ýÿg‰ý {íh‰ýqv<k‰ýrWn‰ýWnr‰ý<kqv‰ýíh {‰ýgÿ‰ýgÞ„‰ýg‰‰ýíhß‰ý<k§‘‰ýWnÂ”‰ýr—‰ýqv}˜‰ý {ø˜‰ýÿ}˜‰ýÞ„—‰ý‰Â”‰ýß§‘‰ý§‘ß‰ýÂ”‰‰ý—Þ„‰ý}˜ÿ@öû°qv@ö
+°@m@ö@­Èd@ö¹¨\]@ö¢¢EW@ö6›¾R@ö¾’ôO@ö‰O@öÿôO@öqv¾R@ö@mEW@öÈd\]@ö\]Èd@öEW@m@ö¾Rqv@öôOÿ@öO‰@öôO¾’@ö¾R6›@öEW¢¢@ö\]¹¨@öÈd@­@ö@m
+°@öqvû°@öÿ
+°@ö‰@­@ö¾’¹¨@ö6›¢¢@ö¢¢6›@ö¹¨¾’@ö@­‰@ö
+°ÿlêÇrlê¾ÅÈdlê²Á}Xlê »¶MlêH²ÞDlê§L>lê6›@:lêßâ8lêÿ@:lêrL>lêÈdÞDlê}X¶Mlê¶M}XlêÞDÈdlêL>rlê@:ÿlêâ8ßlê@:6›lêL>§lêÞDH²lê¶M »lê}X²ÁlêÈd¾ÅlêrÇlêÿ¾Ålêß²Álê6› »lê§H²lêH²§lê »6›lê²Áßlê¾ÅÿÚÚWnÚÄØ\]ÚÓ¶MÚ@Ëÿ?Úÿ¿¾4ÚH²a,Ú¢¢:'Ú§‘}%Úÿ:'ÚWna,Ú\]¾4Ú¶Mÿ?Úÿ?¶MÚ¾4\]Úa,WnÚ:'ÿÚ}%§‘Ú:'¢¢Úa,H²Ú¾4ÿ¿Úÿ?@ËÚ¶MÓÚ\]ÄØÚWnÚÚÿÄØÚ§‘ÓÚ¢¢@ËÚH²ÿ¿Úÿ¿H²Ú@Ë¢¢ÚÓ§‘ÚÄØÿÇlê<kÇaèEWÇRâÞDÇ}Ø¾4Ç@Ë'Ç »¬Ç¹¨ÇÂ”’ÇÿÇ<k¬ÇEW'ÇÞD¾4Ç¾4ÞDÇ'EWÇ¬<kÇÿÇ’Â”Ç¹¨Ç¬ »Ç'@ËÇ¾4}ØÇÞDRâÇEWaèÇ<klêÇÿaèÇÂ”RâÇ¹¨}ØÇ »@ËÇ@Ë »Ç}Ø¹¨ÇRâÂ”Çaèÿû°@öíhû°ûó¾Rû°@íL>û°Râa,û°Ó¬û°²Á¾û°@­û°—¾	û°ÿû°íh¾û°¾R¬û°L>a,û°a,L>û°¬¾Rû°¾íhû°ÿû°¾	—û°@­û°¾²Áû°¬Óû°a,Râû°L>@íû°¾Rûóû°íh@öû°ÿûóû°—@íû°@­Râû°²ÁÓû°Ó²Áû°Râ@­û°@í—û°ûóÿø˜‰ýgø˜ûôOø˜ûó@:ø˜aè:'ø˜ÄØø˜¾Åø˜
+°ßø˜}˜uø˜ÿßø˜gø˜ôOø˜@::'ø˜:'@:ø˜ôOø˜gø˜ßÿø˜u}˜ø˜ß
+°ø˜¾Åø˜ÄØø˜:'aèø˜@:ûóø˜ôOûø˜g‰ýø˜ÿûø˜}˜ûóø˜
+°aèø˜¾ÅÄØø˜ÄØ¾Åø˜aè
+°ø˜ûó}˜ø˜ûÿÿÿÿgÿ‰ýOÿ@öâ8ÿlê}%ÿÚ’ÿÇ¾	ÿû°uÿø˜  ÿÿuÿg¾	ÿO’ÿâ8}%ÿ}%â8ÿ’Oÿ¾	gÿuÿÿ  ø˜ÿuû°ÿ¾	Çÿ’Úÿ}%lêÿâ8@öÿO‰ýÿgÿÿÿÿ‰ýÿø˜@öÿû°lêÿÇÚÿÚÇÿlêû°ÿ@öø˜ÿ‰ýÿg‰ýggûôOgûó@:gaè:'gÄØg¾Åg
+°ßg}˜ugÿßgggôOg@::'g:'@:gôOgggßÿgu}˜gß
+°g¾ÅgÄØg:'aèg@:ûógôOûgg‰ýgÿûg}˜ûóg
+°aèg¾ÅÄØgÄØ¾Ågaè
+°gûó}˜gûÿO@öíhOûó¾RO@íL>ORâa,OÓ¬O²Á¾O@­O—¾	OÿOíh¾O¾R¬OL>a,Oa,L>O¬¾RO¾íhOÿO¾	—O@­O¾²ÁO¬ÓOa,RâOL>@íO¾RûóOíh@öOÿûóO—@íO@­RâO²ÁÓOÓ²ÁORâ@­O@í—Oûóÿâ8lê<kâ8aèEWâ8RâÞDâ8}Ø¾4â8@Ë'â8 »¬â8¹¨â8Â”’â8ÿâ8<k¬â8EW'â8ÞD¾4â8¾4ÞDâ8'EWâ8¬<kâ8ÿâ8’Â”â8¹¨â8¬ »â8'@Ëâ8¾4}Øâ8ÞDRââ8EWaèâ8<klêâ8ÿaèâ8Â”Rââ8¹¨}Øâ8 »@Ëâ8@Ë »â8}Ø¹¨â8RâÂ”â8aèÿ}%ÚWn}%ÄØ\]}%Ó¶M}%@Ëÿ?}%ÿ¿¾4}%H²a,}%¢¢:'}%§‘}%}%ÿ:'}%Wna,}%\]¾4}%¶Mÿ?}%ÿ?¶M}%¾4\]}%a,Wn}%:'ÿ}%}%§‘}%:'¢¢}%a,H²}%¾4ÿ¿}%ÿ?@Ë}%¶MÓ}%\]ÄØ}%WnÚ}%ÿÄØ}%§‘Ó}%¢¢@Ë}%H²ÿ¿}%ÿ¿H²}%@Ë¢¢}%Ó§‘}%ÄØÿ’Çr’¾ÅÈd’²Á}X’ »¶M’H²ÞD’§L>’6›@:’ßâ8’ÿ@:’rL>’ÈdÞD’}X¶M’¶M}X’ÞDÈd’L>r’@:ÿ’â8ß’@:6›’L>§’ÞDH²’¶M »’}X²Á’Èd¾Å’rÇ’ÿ¾Å’ß²Á’6› »’§H²’H²§’ »6›’²Áß’¾Åÿ¾	û°qv¾	
+°@m¾	@­Èd¾	¹¨\]¾	¢¢EW¾	6›¾R¾	¾’ôO¾	‰O¾	ÿôO¾	qv¾R¾	@mEW¾	Èd\]¾	\]Èd¾	EW@m¾	¾Rqv¾	ôOÿ¾	O‰¾	ôO¾’¾	¾R6›¾	EW¢¢¾	\]¹¨¾	Èd@­¾	@m
+°¾	qvû°¾	ÿ
+°¾	‰@­¾	¾’¹¨¾	6›¢¢¾	¢¢6›¾	¹¨¾’¾	@­‰¾	
+°ÿuø˜ {u}˜qvu—ruÂ”Wnu§‘<kußíhu‰guÞ„guÿgu {íhuqv<kurWnuWnru<kqvuíh {ugÿugÞ„ug‰uíhßu<k§‘uWnÂ”ur—uqv}˜u {ø˜uÿ}˜uÞ„—u‰Â”uß§‘u§‘ßuÂ”‰u—Þ„u}˜ÿ  ÿ		}
+		*MESH_FACE_LIST {
+                                      	    	 
+    
+                                                                                                                    ! "   "    " #   #    # $   $    $ %   %    % &   &    & '   '    ' (   (    ( )   ) 	  	 ) *  	 * 
+  
+ * +  
+ +    + ,   ,    , -   -    - .   .    . /   /    / 0   0    0 1   1    1 2   2    2 3   3    3 4   4    4 5   5    5 6   6    6 7   7    7 8   8    8 9   9    9 :   :    : ;   ;    ; <   <    < =   =    = >   >    > ?   ?    ? @   @      @ !    !   ! A B  ! B "  " B C  " C #  # C D  # D $  $ D E  $ E %  % E F  % F &  & F G  & G '  ' G H  ' H (  ( H I  ( I )  ) I J  ) J *  * J K  * K +  + K L  + L ,  , L M  , M -  - M N  - N .  . N O  . O /  / O P  / P 0  0 P Q  0 Q 1  1 Q R  1 R 2  2 R S  2 S 3  3 S T  3 T 4  4 T U  4 U 5  5 U V  5 V 6  6 V W  6 W 7  7 W X  7 X 8  8 X Y  8 Y 9  9 Y Z  9 Z :  : Z [  : [ ;  ; [ \  ; \ <  < \ ]  < ] =  = ] ^  = ^ >  > ^ _  > _ ?  ? _ `  ? ` @  @ ` A  @ A !  A a b  A b B  B b c  B c C  C c d  C d D  D d e  D e E  E e f  E f F  F f g  F g G  G g h  G h H  H h i  H i I  I i j  I j J  J j k  J k K  K k l  K l L  L l m  L m M  M m n  M n N  N n o  N o O  O o p  O p P  P p q  P q Q  Q q r  Q r R  R r s  R s S  S s t  S t T  T t u  T u U  U u v  U v V  V v w  V w W  W w x  W x X  X x y  X y Y  Y y z  Y z Z  Z z {  Z { [  [ { |  [ | \  \ | }  \ } ]  ] } ~  ] ~ ^  ^ ~   ^  _  _  €  _ € `  ` € a  ` a A  a  ‚  a ‚ b  b ‚ ƒ  b ƒ c  c ƒ „  c „ d  d „ …  d … e  e … †  e † f  f † ‡  f ‡ g  g ‡ ˆ  g ˆ h  h ˆ ‰  h ‰ i  i ‰ Š  i Š j  j Š ‹  j ‹ k  k ‹ Œ  k Œ l  l Œ   l  m  m  Ž  m Ž n  n Ž   n  o  o    o  p  p  ‘  p ‘ q  q ‘ ’  q ’ r  r ’ “  r “ s  s “ ”  s ” t  t ” •  t • u  u • –  u – v  v – —  v — w  w — ˜  w ˜ x  x ˜ ™  x ™ y  y ™ š  y š z  z š ›  z › {  { › œ  { œ |  | œ   |  }  }  ž  } ž ~  ~ ž Ÿ  ~ Ÿ    Ÿ       €  €     €  a   ¡ ¢   ¢ ‚  ‚ ¢ £  ‚ £ ƒ  ƒ £ ¤  ƒ ¤ „  „ ¤ ¥  „ ¥ …  … ¥ ¦  … ¦ †  † ¦ §  † § ‡  ‡ § ¨  ‡ ¨ ˆ  ˆ ¨ ©  ˆ © ‰  ‰ © ª  ‰ ª Š  Š ª «  Š « ‹  ‹ « ¬  ‹ ¬ Œ  Œ ¬ ­  Œ ­    ­ ®   ® Ž  Ž ® ¯  Ž ¯    ¯ °   °    ° ±   ± ‘  ‘ ± ²  ‘ ² ’  ’ ² ³  ’ ³ “  “ ³ ´  “ ´ ”  ” ´ µ  ” µ •  • µ ¶  • ¶ –  – ¶ ·  – · —  — · ¸  — ¸ ˜  ˜ ¸ ¹  ˜ ¹ ™  ™ ¹ º  ™ º š  š º »  š » ›  › » ¼  › ¼ œ  œ ¼ ½  œ ½    ½ ¾   ¾ ž  ž ¾ ¿  ž ¿ Ÿ  Ÿ ¿ À  Ÿ À      À ¡    ¡   ¡ Á Â  ¡ Â ¢  ¢ Â Ã  ¢ Ã £  £ Ã Ä  £ Ä ¤  ¤ Ä Å  ¤ Å ¥  ¥ Å Æ  ¥ Æ ¦  ¦ Æ Ç  ¦ Ç §  § Ç È  § È ¨  ¨ È É  ¨ É ©  © É Ê  © Ê ª  ª Ê Ë  ª Ë «  « Ë Ì  « Ì ¬  ¬ Ì Í  ¬ Í ­  ­ Í Î  ­ Î ®  ® Î Ï  ® Ï ¯  ¯ Ï Ð  ¯ Ð °  ° Ð Ñ  ° Ñ ±  ± Ñ Ò  ± Ò ²  ² Ò Ó  ² Ó ³  ³ Ó Ô  ³ Ô ´  ´ Ô Õ  ´ Õ µ  µ Õ Ö  µ Ö ¶  ¶ Ö ×  ¶ × ·  · × Ø  · Ø ¸  ¸ Ø Ù  ¸ Ù ¹  ¹ Ù Ú  ¹ Ú º  º Ú Û  º Û »  » Û Ü  » Ü ¼  ¼ Ü Ý  ¼ Ý ½  ½ Ý Þ  ½ Þ ¾  ¾ Þ ß  ¾ ß ¿  ¿ ß à  ¿ à À  À à Á  À Á ¡  Á á â  Á â Â  Â â ã  Â ã Ã  Ã ã ä  Ã ä Ä  Ä ä å  Ä å Å  Å å æ  Å æ Æ  Æ æ ç  Æ ç Ç  Ç ç è  Ç è È  È è é  È é É  É é ê  É ê Ê  Ê ê ë  Ê ë Ë  Ë ë ì  Ë ì Ì  Ì ì í  Ì í Í  Í í î  Í î Î  Î î ï  Î ï Ï  Ï ï ð  Ï ð Ð  Ð ð ñ  Ð ñ Ñ  Ñ ñ ò  Ñ ò Ò  Ò ò ó  Ò ó Ó  Ó ó ô  Ó ô Ô  Ô ô õ  Ô õ Õ  Õ õ ö  Õ ö Ö  Ö ö ÷  Ö ÷ ×  × ÷ ø  × ø Ø  Ø ø ù  Ø ù Ù  Ù ù ú  Ù ú Ú  Ú ú û  Ú û Û  Û û ü  Û ü Ü  Ü ü ý  Ü ý Ý  Ý ý þ  Ý þ Þ  Þ þ ÿ  Þ ÿ ß  ß ÿ   ß  à  à  á  à á Á  á  á â  â  â ã  ã  ã ä  ä  ä å  å  å æ  æ  æ ç  ç  ç è  è 	 è 	é  é 	
+ é 
+ê  ê 
+ ê ë  ë  ë ì  ì  ì í  í  í î  î  î ï  ï  ï ð  ð  ð ñ  ñ  ñ ò  ò  ò ó  ó  ó ô  ô  ô õ  õ  õ ö  ö  ö ÷  ÷  ÷ ø  ø  ø ù  ù  ù ú  ú  ú û  û  û ü  ü  ü ý  ý  ý þ  þ  þ ÿ  ÿ   ÿ        á  !" " "# # #$ $ $% % %& & &' ' '( ( () )	 	)* 	*
+ 
+*+ 
++ +, , ,- - -. . ./ / /0 0 01 1 12 2 23 3 34 4 45 5 56 6 67 7 78 8 89 9 9: : :; ; ;< < <= = => > >? ? ?@ @   @!  ! !AB !B" "BC "C# #CD #D$ $DE $E% %EF %F& &FG &G' 'GH 'H( (HI (I) )IJ )J* *JK *K+ +KL +L, ,LM ,M- -MN -N. .NO .O/ /OP /P0 0PQ 0Q1 1QR 1R2 2RS 2S3 3ST 3T4 4TU 4U5 5UV 5V6 6VW 6W7 7WX 7X8 8XY 8Y9 9YZ 9Z: :Z[ :[; ;[\ ;\< <\] <]= =]^ =^> >^_ >_? ?_` ?`@ @`A @A! Aab AbB Bbc BcC Ccd CdD Dde DeE Eef EfF Ffg FgG Ggh GhH Hhi HiI Iij IjJ Jjk JkK Kkl KlL Llm LmM Mmn MnN Nno NoO Oop OpP Ppq PqQ Qqr QrR Rrs RsS Sst StT Ttu TuU Uuv UvV Vvw VwW Wwx WxX Xxy XyY Yyz YzZ Zz{ Z{[ [{| [|\ \|} \}] ]}~ ]~^ ^~ ^_ _€ _€` `€a `aA a‚ a‚b b‚ƒ bƒc cƒ„ c„d d„… d…e e…† e†f f†‡ f‡g g‡ˆ gˆh hˆ‰ h‰i i‰Š iŠj jŠ‹ j‹k k‹Œ kŒl lŒ lm mŽ mŽn nŽ no o op p‘ p‘q q‘’ q’r r’“ r“s s“” s”t t”• t•u u•– u–v v–— v—w w—˜ w˜x x˜™ x™y y™š yšz zš› z›{ {›œ {œ| |œ |} }ž }ž~ ~žŸ ~Ÿ Ÿ   € €  €a ¡¢ ¢‚ ‚¢£ ‚£ƒ ƒ£¤ ƒ¤„ „¤¥ „¥… …¥¦ …¦† †¦§ †§‡ ‡§¨ ‡¨ˆ ˆ¨© ˆ©‰ ‰©ª ‰ªŠ Šª« Š«‹ ‹«¬ ‹¬Œ Œ¬­ Œ­ ­® ®Ž Ž®¯ Ž¯ ¯° ° °± ±‘ ‘±² ‘²’ ’²³ ’³“ “³´ “´” ”´µ ”µ• •µ¶ •¶– –¶· –·— —·¸ —¸˜ ˜¸¹ ˜¹™ ™¹º ™ºš šº» š»› ›»¼ ›¼œ œ¼½ œ½ ½¾ ¾ž ž¾¿ ž¿Ÿ Ÿ¿À ŸÀ   À¡  ¡ ¡ÁÂ ¡Â¢ ¢ÂÃ ¢Ã£ £ÃÄ £Ä¤ ¤ÄÅ ¤Å¥ ¥ÅÆ ¥Æ¦ ¦ÆÇ ¦Ç§ §ÇÈ §È¨ ¨ÈÉ ¨É© ©ÉÊ ©Êª ªÊË ªË« «ËÌ «Ì¬ ¬ÌÍ ¬Í­ ­ÍÎ ­Î® ®ÎÏ ®Ï¯ ¯ÏÐ ¯Ð° °ÐÑ °Ñ± ±ÑÒ ±Ò² ²ÒÓ ²Ó³ ³ÓÔ ³Ô´ ´ÔÕ ´Õµ µÕÖ µÖ¶ ¶Ö× ¶×· ·×Ø ·Ø¸ ¸ØÙ ¸Ù¹ ¹ÙÚ ¹Úº ºÚÛ ºÛ» »ÛÜ »Ü¼ ¼ÜÝ ¼Ý½ ½ÝÞ ½Þ¾ ¾Þß ¾ß¿ ¿ßà ¿àÀ ÀàÁ ÀÁ¡ áÂÁ áÃÂ áÄÃ áÅÄ áÆÅ áÇÆ áÈÇ áÉÈ áÊÉ áËÊ áÌË áÍÌ áÎÍ áÏÎ áÐÏ áÑÐ áÒÑ áÓÒ áÔÓ áÕÔ áÖÕ á×Ö áØ× áÙØ áÚÙ áÛÚ áÜÛ áÝÜ áÞÝ áßÞ áàß áÁà 		}
+		*MESH_NUMTVERTEX 559
+		*MESH_TVERTLIST {
+    xÿV2  €?  €?  ÿÿ  ÿïÿÿïÿÿÿÿÿïÿÿÿÿÿïÿÿÿÿÿïÿÿÿÿ'ÿïÿ'ÿÿÿ/ÿïÿ/ÿÿÿ7ÿïÿ7ÿÿÿ?ÿïÿ?ÿÿÿGÿïÿGÿÿÿOÿïÿOÿÿÿWÿïÿWÿÿÿ_ÿïÿ_ÿÿÿgÿïÿgÿÿÿoÿïÿoÿÿÿwÿïÿwÿÿÿÿïÿÿÿÿ‡ÿïÿ‡ÿÿÿÿïÿÿÿÿ—ÿïÿ—ÿÿÿŸÿïÿŸÿÿÿ§ÿïÿ§ÿÿÿ¯ÿïÿ¯ÿÿÿ·ÿïÿ·ÿÿÿ¿ÿïÿ¿ÿÿÿÇÿïÿÇÿÿÿÏÿïÿÏÿÿÿ×ÿïÿ×ÿÿÿßÿïÿßÿÿÿçÿïÿçÿÿÿïÿïÿïÿÿÿ÷ÿïÿ÷ÿÿÿÿÿï  ÿßÿÿßÿÿßÿÿßÿÿßÿ'ÿßÿ/ÿßÿ7ÿßÿ?ÿßÿGÿßÿOÿßÿWÿßÿ_ÿßÿgÿßÿoÿßÿwÿßÿÿßÿ‡ÿßÿÿßÿ—ÿßÿŸÿßÿ§ÿßÿ¯ÿßÿ·ÿßÿ¿ÿßÿÇÿßÿÏÿßÿ×ÿßÿßÿßÿçÿßÿïÿßÿ÷ÿßÿÿÿß  ÿÏÿÿÏÿÿÏÿÿÏÿÿÏÿ'ÿÏÿ/ÿÏÿ7ÿÏÿ?ÿÏÿGÿÏÿOÿÏÿWÿÏÿ_ÿÏÿgÿÏÿoÿÏÿwÿÏÿÿÏÿ‡ÿÏÿÿÏÿ—ÿÏÿŸÿÏÿ§ÿÏÿ¯ÿÏÿ·ÿÏÿ¿ÿÏÿÇÿÏÿÏÿÏÿ×ÿÏÿßÿÏÿçÿÏÿïÿÏÿ÷ÿÏÿÿÿÏ  ÿ¿ÿÿ¿ÿÿ¿ÿÿ¿ÿÿ¿ÿ'ÿ¿ÿ/ÿ¿ÿ7ÿ¿ÿ?ÿ¿ÿGÿ¿ÿOÿ¿ÿWÿ¿ÿ_ÿ¿ÿgÿ¿ÿoÿ¿ÿwÿ¿ÿÿ¿ÿ‡ÿ¿ÿÿ¿ÿ—ÿ¿ÿŸÿ¿ÿ§ÿ¿ÿ¯ÿ¿ÿ·ÿ¿ÿ¿ÿ¿ÿÇÿ¿ÿÏÿ¿ÿ×ÿ¿ÿßÿ¿ÿçÿ¿ÿïÿ¿ÿ÷ÿ¿ÿÿÿ¿  ÿ¯ÿÿ¯ÿÿ¯ÿÿ¯ÿÿ¯ÿ'ÿ¯ÿ/ÿ¯ÿ7ÿ¯ÿ?ÿ¯ÿGÿ¯ÿOÿ¯ÿWÿ¯ÿ_ÿ¯ÿgÿ¯ÿoÿ¯ÿwÿ¯ÿÿ¯ÿ‡ÿ¯ÿÿ¯ÿ—ÿ¯ÿŸÿ¯ÿ§ÿ¯ÿ¯ÿ¯ÿ·ÿ¯ÿ¿ÿ¯ÿÇÿ¯ÿÏÿ¯ÿ×ÿ¯ÿßÿ¯ÿçÿ¯ÿïÿ¯ÿ÷ÿ¯ÿÿÿ¯  ÿŸÿÿŸÿÿŸÿÿŸÿÿŸÿ'ÿŸÿ/ÿŸÿ7ÿŸÿ?ÿŸÿGÿŸÿOÿŸÿWÿŸÿ_ÿŸÿgÿŸÿoÿŸÿwÿŸÿÿŸÿ‡ÿŸÿÿŸÿ—ÿŸÿŸÿŸÿ§ÿŸÿ¯ÿŸÿ·ÿŸÿ¿ÿŸÿÇÿŸÿÏÿŸÿ×ÿŸÿßÿŸÿçÿŸÿïÿŸÿ÷ÿŸÿÿÿŸ  ÿÿÿÿÿÿÿÿÿÿ'ÿÿ/ÿÿ7ÿÿ?ÿÿGÿÿOÿÿWÿÿ_ÿÿgÿÿoÿÿwÿÿÿÿ‡ÿÿÿÿ—ÿÿŸÿÿ§ÿÿ¯ÿÿ·ÿÿ¿ÿÿÇÿÿÏÿÿ×ÿÿßÿÿçÿÿïÿÿ÷ÿÿÿÿ  ÿÿÿÿÿÿÿÿÿÿ'ÿÿ/ÿÿ7ÿÿ?ÿÿGÿÿOÿÿWÿÿ_ÿÿgÿÿoÿÿwÿÿÿÿ‡ÿÿÿÿ—ÿÿŸÿÿ§ÿÿ¯ÿÿ·ÿÿ¿ÿÿÇÿÿÏÿÿ×ÿÿßÿÿçÿÿïÿÿ÷ÿÿÿÿ  ÿoÿÿoÿÿoÿÿoÿÿoÿ'ÿoÿ/ÿoÿ7ÿoÿ?ÿoÿGÿoÿOÿoÿWÿoÿ_ÿoÿgÿoÿoÿoÿwÿoÿÿoÿ‡ÿoÿÿoÿ—ÿoÿŸÿoÿ§ÿoÿ¯ÿoÿ·ÿoÿ¿ÿoÿÇÿoÿÏÿoÿ×ÿoÿßÿoÿçÿoÿïÿoÿ÷ÿoÿÿÿo  ÿ_ÿÿ_ÿÿ_ÿÿ_ÿÿ_ÿ'ÿ_ÿ/ÿ_ÿ7ÿ_ÿ?ÿ_ÿGÿ_ÿOÿ_ÿWÿ_ÿ_ÿ_ÿgÿ_ÿoÿ_ÿwÿ_ÿÿ_ÿ‡ÿ_ÿÿ_ÿ—ÿ_ÿŸÿ_ÿ§ÿ_ÿ¯ÿ_ÿ·ÿ_ÿ¿ÿ_ÿÇÿ_ÿÏÿ_ÿ×ÿ_ÿßÿ_ÿçÿ_ÿïÿ_ÿ÷ÿ_ÿÿÿ_  ÿOÿÿOÿÿOÿÿOÿÿOÿ'ÿOÿ/ÿOÿ7ÿOÿ?ÿOÿGÿOÿOÿOÿWÿOÿ_ÿOÿgÿOÿoÿOÿwÿOÿÿOÿ‡ÿOÿÿOÿ—ÿOÿŸÿOÿ§ÿOÿ¯ÿOÿ·ÿOÿ¿ÿOÿÇÿOÿÏÿOÿ×ÿOÿßÿOÿçÿOÿïÿOÿ÷ÿOÿÿÿO  ÿ?ÿÿ?ÿÿ?ÿÿ?ÿÿ?ÿ'ÿ?ÿ/ÿ?ÿ7ÿ?ÿ?ÿ?ÿGÿ?ÿOÿ?ÿWÿ?ÿ_ÿ?ÿgÿ?ÿoÿ?ÿwÿ?ÿÿ?ÿ‡ÿ?ÿÿ?ÿ—ÿ?ÿŸÿ?ÿ§ÿ?ÿ¯ÿ?ÿ·ÿ?ÿ¿ÿ?ÿÇÿ?ÿÏÿ?ÿ×ÿ?ÿßÿ?ÿçÿ?ÿïÿ?ÿ÷ÿ?ÿÿÿ?  ÿ/ÿÿ/ÿÿ/ÿÿ/ÿÿ/ÿ'ÿ/ÿ/ÿ/ÿ7ÿ/ÿ?ÿ/ÿGÿ/ÿOÿ/ÿWÿ/ÿ_ÿ/ÿgÿ/ÿoÿ/ÿwÿ/ÿÿ/ÿ‡ÿ/ÿÿ/ÿ—ÿ/ÿŸÿ/ÿ§ÿ/ÿ¯ÿ/ÿ·ÿ/ÿ¿ÿ/ÿÇÿ/ÿÏÿ/ÿ×ÿ/ÿßÿ/ÿçÿ/ÿïÿ/ÿ÷ÿ/ÿÿÿ/  ÿÿÿÿÿÿÿÿÿÿ'ÿÿ/ÿÿ7ÿÿ?ÿÿGÿÿOÿÿWÿÿ_ÿÿgÿÿoÿÿwÿÿÿÿ‡ÿÿÿÿ—ÿÿŸÿÿ§ÿÿ¯ÿÿ·ÿÿ¿ÿÿÇÿÿÏÿÿ×ÿÿßÿÿçÿÿïÿÿ÷ÿÿÿÿ  ÿÿÿÿÿÿÿÿÿÿ'ÿÿ/ÿÿ7ÿÿ?ÿÿGÿÿOÿÿWÿÿ_ÿÿgÿÿoÿÿwÿÿÿÿ‡ÿÿÿÿ—ÿÿŸÿÿ§ÿÿ¯ÿÿ·ÿÿ¿ÿÿÇÿÿÏÿÿ×ÿÿßÿÿçÿÿïÿÿ÷ÿÿÿÿ    ÿ  ÿ  ÿ  ÿ  ÿ'  ÿ/  ÿ7  ÿ?  ÿG  ÿO  ÿW  ÿ_  ÿg  ÿo  ÿw  ÿ  ÿ‡  ÿ  ÿ—  ÿŸ  ÿ§  ÿ¯  ÿ·  ÿ¿  ÿÇ  ÿÏ  ÿ×  ÿß  ÿç  ÿï  ÿ÷  		}
+		*MESH_NUMTVFACES 960
+		*MESH_TFACELIST {
+             	  
+  
+                                 !   " # " $ % $ & ' & ( ) ( * + * , - , . / . 0 1 0 2 3 2 4 5 4 6 7 6 8 9 8 : ; : < = < > ? > @  A B  B   B C  C   C D  D   D E  E   E F  F 
+ 
+ F G 
+ G   G H  H   H I  I   I J  J   J K  K   K L  L   L M  M   M N  N   N O  O   O P  P   P Q  Q     Q R   R " " R S " S $ $ S T $ T & & T U & U ( ( U V ( V * * V W * W , , W X , X . . X Y . Y 0 0 Y Z 0 Z 2 2 Z [ 2 [ 4 4 [ \ 4 \ 6 6 \ ] 6 ] 8 8 ] ^ 8 ^ : : ^ _ : _ < < _ ` < ` > > ` a > a @ A b c A c B B c d B d C C d e C e D D e f D f E E f g E g F F g h F h G G h i G i H H i j H j I I j k I k J J k l J l K K l m K m L L m n L n M M n o M o N N o p N p O O p q O q P P q r P r Q Q r s Q s R R s t R t S S t u S u T T u v T v U U v w U w V V w x V x W W x y W y X X y z X z Y Y z { Y { Z Z { | Z | [ [ | } [ } \ \ } ~ \ ~ ] ] ~  ]  ^ ^  € ^ € _ _ €  _  ` `  ‚ ` ‚ a b ƒ „ b „ c c „ … c … d d … † d † e e † ‡ e ‡ f f ‡ ˆ f ˆ g g ˆ ‰ g ‰ h h ‰ Š h Š i i Š ‹ i ‹ j j ‹ Œ j Œ k k Œ  k  l l  Ž l Ž m m Ž  m  n n   n  o o  ‘ o ‘ p p ‘ ’ p ’ q q ’ “ q “ r r “ ” r ” s s ” • s • t t • – t – u u – — u — v v — ˜ v ˜ w w ˜ ™ w ™ x x ™ š x š y y š › y › z z › œ z œ { { œ  {  | |  ž | ž } } ž Ÿ } Ÿ ~ ~ Ÿ   ~       ¡  ¡ € € ¡ ¢ € ¢   ¢ £  £ ‚ ƒ ¤ ¥ ƒ ¥ „ „ ¥ ¦ „ ¦ … … ¦ § … § † † § ¨ † ¨ ‡ ‡ ¨ © ‡ © ˆ ˆ © ª ˆ ª ‰ ‰ ª « ‰ « Š Š « ¬ Š ¬ ‹ ‹ ¬ ­ ‹ ­ Œ Œ ­ ® Œ ®   ® ¯  ¯ Ž Ž ¯ ° Ž °   ° ±  ±   ± ²  ² ‘ ‘ ² ³ ‘ ³ ’ ’ ³ ´ ’ ´ “ “ ´ µ “ µ ” ” µ ¶ ” ¶ • • ¶ · • · – – · ¸ – ¸ — — ¸ ¹ — ¹ ˜ ˜ ¹ º ˜ º ™ ™ º » ™ » š š » ¼ š ¼ › › ¼ ½ › ½ œ œ ½ ¾ œ ¾   ¾ ¿  ¿ ž ž ¿ À ž À Ÿ Ÿ À Á Ÿ Á     Á Â   Â ¡ ¡ Â Ã ¡ Ã ¢ ¢ Ã Ä ¢ Ä £ ¤ Å Æ ¤ Æ ¥ ¥ Æ Ç ¥ Ç ¦ ¦ Ç È ¦ È § § È É § É ¨ ¨ É Ê ¨ Ê © © Ê Ë © Ë ª ª Ë Ì ª Ì « « Ì Í « Í ¬ ¬ Í Î ¬ Î ­ ­ Î Ï ­ Ï ® ® Ï Ð ® Ð ¯ ¯ Ð Ñ ¯ Ñ ° ° Ñ Ò ° Ò ± ± Ò Ó ± Ó ² ² Ó Ô ² Ô ³ ³ Ô Õ ³ Õ ´ ´ Õ Ö ´ Ö µ µ Ö × µ × ¶ ¶ × Ø ¶ Ø · · Ø Ù · Ù ¸ ¸ Ù Ú ¸ Ú ¹ ¹ Ú Û ¹ Û º º Û Ü º Ü » » Ü Ý » Ý ¼ ¼ Ý Þ ¼ Þ ½ ½ Þ ß ½ ß ¾ ¾ ß à ¾ à ¿ ¿ à á ¿ á À À á â À â Á Á â ã Á ã Â Â ã ä Â ä Ã Ã ä å Ã å Ä Å æ ç Å ç Æ Æ ç è Æ è Ç Ç è é Ç é È È é ê È ê É É ê ë É ë Ê Ê ë ì Ê ì Ë Ë ì í Ë í Ì Ì í î Ì î Í Í î ï Í ï Î Î ï ð Î ð Ï Ï ð ñ Ï ñ Ð Ð ñ ò Ð ò Ñ Ñ ò ó Ñ ó Ò Ò ó ô Ò ô Ó Ó ô õ Ó õ Ô Ô õ ö Ô ö Õ Õ ö ÷ Õ ÷ Ö Ö ÷ ø Ö ø × × ø ù × ù Ø Ø ù ú Ø ú Ù Ù ú û Ù û Ú Ú û ü Ú ü Û Û ü ý Û ý Ü Ü ý þ Ü þ Ý Ý þ ÿ Ý ÿ Þ Þ ÿ  Þ  ß ß  ß à à à á á á â â â ã ã ã ä ä ä å æ æ ç ç 	ç 	è è 	
+è 
+é é 
+é ê ê ê ë ë ë ì ì ì í í í î î î ï ï ï ð ð ð ñ ñ ñ ò ò ò ó ó ó ô ô ô õ õ õ ö ö ö ÷ ÷ ÷ ø ø ø ù ù ù ú ú ú û û û ü ü ü ý ý ý þ þ  þ  ÿ ÿ  !ÿ !  !" ""###$$$%%%&&&''()))**		*+	+
+
++,
+,,---...///000111222333444555666777888999:::;;;<<<===>>>???@@@AA  AB B!!BC!C""CD"D##DE#E$$EF$F%%FG%G&&GH&H'(IJ(J))JK)K**KL*L++LM+M,,MN,N--NO-O..OP.P//PQ/Q00QR0R11RS1S22ST2T33TU3U44UV4V55VW5W66WX6X77XY7Y88YZ8Z99Z[9[::[\:\;;\];]<<]^<^==^_=_>>_`>`??`a?a@@ab@bAAbcAcBBcdBdCCdeCeDDefDfEEfgEgFFghFhGGhiGiHIjkIkJJklJlKKlmKmLLmnLnMMnoMoNNopNpOOpqOqPPqrPrQQrsQsRRstRtSStuSuTTuvTvUUvwUwVVwxVxWWxyWyXXyzXzYYz{Y{ZZ{|Z|[[|}[}\\}~\~]]~]^^€^€__€_``‚`‚aa‚ƒaƒbbƒ„b„cc„…c…dd…†d†ee†‡e‡ff‡ˆfˆggˆ‰g‰hh‰ŠhŠij‹ŒjŒkkŒkllŽlŽmmŽmnnnoo‘o‘pp‘’p’qq’“q“rr“”r”ss”•s•tt•–t–uu–—u—vv—˜v˜ww˜™w™xx™šxšyyš›y›zz›œzœ{{œ{||ž|ž}}žŸ}Ÿ~~Ÿ ~  ¡¡€€¡¢€¢¢££‚‚£¤‚¤ƒƒ¤¥ƒ¥„„¥¦„¦……¦§…§††§¨†¨‡‡¨©‡©ˆˆ©ªˆª‰‰ª«‰«Š‹¬­‹­ŒŒ­®Œ®®¯¯ŽŽ¯°Ž°°±±±²²‘‘²³‘³’’³´’´““´µ“µ””µ¶”¶••¶·•·––·¸–¸——¸¹—¹˜˜¹º˜º™™º»™»šš»¼š¼››¼½›½œœ½¾œ¾¾¿¿žž¿ÀžÀŸŸÀÁŸÁ  ÁÂ Â¡¡ÂÃ¡Ã¢¢ÃÄ¢Ä££ÄÅ£Å¤¤ÅÆ¤Æ¥¥ÆÇ¥Ç¦¦ÇÈ¦È§§ÈÉ§É¨¨ÉÊ¨Ê©©ÊË©ËªªËÌªÌ«¬ÍÎ¬Î­­ÎÏ­Ï®®ÏÐ®Ð¯¯ÐÑ¯Ñ°°ÑÒ°Ò±±ÒÓ±Ó²²ÓÔ²Ô³³ÔÕ³Õ´´ÕÖ´ÖµµÖ×µ×¶¶×Ø¶Ø··ØÙ·Ù¸¸ÙÚ¸Ú¹¹ÚÛ¹ÛººÛÜºÜ»»ÜÝ»Ý¼¼ÝÞ¼Þ½½Þß½ß¾¾ßà¾à¿¿àá¿áÀÀáâÀâÁÁâãÁãÂÂãäÂäÃÃäåÃåÄÄåæÄæÅÅæçÅçÆÆçèÆèÇÇèéÇéÈÈéêÈêÉÉêëÉëÊÊëìÊìËËìíËíÌÍîïÍïÎÎïðÎðÏÏðñÏñÐÐñòÐòÑÑòóÑóÒÒóôÒôÓÓôõÓõÔÔõöÔöÕÕö÷Õ÷ÖÖ÷øÖø××øù×ùØØùúØúÙÙúûÙûÚÚûüÚüÛÛüýÛýÜÜýþÜþÝÝþÿÝÿÞÞÿ Þ ßß ßàààáááâââãããäääåååæææçç	ç	èè	
+è
+éé
+éêêêëëëìììíïîðïñðòñóòôóõôöõ÷öø÷ùøúùûúüûýüþýÿþ  ÿ! "#$%&'()	*
+	+
+,-.		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+ÿ~üšyüšÿyüštü˜ÿtü˜oü•ÿoü•kü’ÿkü’hüŽÿhüŽeü‰ÿeü‰dü„ÿdü„dü~ÿdü~düyÿdüyfütÿfütiüoÿiüolükÿlükpühÿpühuüeÿuüezüdÿzüd€üdÿ€üd…üdÿ…üdŠüfÿŠüfüiÿüi“ülÿ“ül–üpÿ–üp™üuÿ™üušüzÿšüzšü€ÿšü€šü…ÿšü…˜üŠÿ˜üŠ•üÿ•ü’ü“ÿ’ü“Žü–ÿŽü–‰ü™ÿ‰ü™„üšÿ„üš~üš~üšõ°uõ¯~üšuõ¯yüšyüšuõ¯lõ¬yüšlõ¬tü˜tü˜lõ¬dõ§tü˜dõ§oü•oü•dõ§\õ¡oü•\õ¡kü’kü’\õ¡Võškü’VõšhüŽhüŽVõšRõ‘hüŽRõ‘eü‰eü‰Rõ‘Oõˆeü‰Oõˆdü„dü„OõˆNõdü„Nõdü~dü~NõOõudü~OõudüydüyOõuRõldüyRõlfütfütRõlWõdfütWõdiüoiüoWõd]õ\iüo]õ\lüklük]õ\dõVlükdõVpühpühdõVmõRpühmõRuüeuüemõRvõOuüevõOzüdzüdvõOõNzüdõN€üd€üdõN‰õO€üd‰õO…üd…üd‰õO’õR…üd’õRŠüfŠüf’õRšõWŠüfšõWüiüišõW¢õ]üi¢õ]“ül“ül¢õ]¨õd“ül¨õd–üp–üp¨õd¬õm–üp¬õm™üu™üu¬õm¯õv™üu¯õvšüzšüz¯õv°õšüz°õšü€šü€°õ¯õ‰šü€¯õ‰šü…šü…¯õ‰¬õ’šü…¬õ’˜üŠ˜üŠ¬õ’§õš˜üŠ§õš•ü•ü§õš¡õ¢•ü¡õ¢’ü“’ü“¡õ¢šõ¨’ü“šõ¨Žü–Žü–šõ¨‘õ¬Žü–‘õ¬‰ü™‰ü™‘õ¬ˆõ¯‰ü™ˆõ¯„üš„üšˆõ¯õ°„üšõ°~üšõ°éÆqéÄõ°qéÄuõ¯uõ¯qéÄdéÀuõ¯déÀlõ¬lõ¬déÀWéºlõ¬Wéºdõ§dõ§WéºMé±dõ§Mé±\õ¡\õ¡Mé±Dé¦\õ¡Dé¦VõšVõšDé¦=éšVõš=éšRõ‘Rõ‘=éš9éŒRõ‘9éŒOõˆOõˆ9éŒ8éOõˆ8éNõNõ8é:éqNõ:éqOõuOõu:éq>édOõu>édRõlRõl>édDéWRõlDéWWõdWõdDéWMéMWõdMéM]õ\]õ\MéMXéD]õ\XéDdõVdõVXéDdé=dõVdé=mõRmõRdé=ré9mõRré9võOvõOré9é8võOé8õNõNé8é:õNé:‰õO‰õOé:šé>‰õOšé>’õR’õRšé>§éD’õR§éDšõWšõW§éD±éMšõW±éM¢õ]¢õ]±éMºéX¢õ]ºéX¨õd¨õdºéXÁéd¨õdÁéd¬õm¬õmÁédÅér¬õmÅér¯õv¯õvÅérÆé¯õvÆé°õ°õÆéÄé°õÄé¯õ‰¯õ‰ÄéÀéš¯õ‰Àéš¬õ’¬õ’Àéšºé§¬õ’ºé§§õš§õšºé§±é±§õš±é±¡õ¢¡õ¢±é±¦éº¡õ¢¦éºšõ¨šõ¨¦éºšéÁšõ¨šéÁ‘õ¬‘õ¬šéÁŒéÅ‘õ¬ŒéÅˆõ¯ˆõ¯ŒéÅéÆˆõ¯éÆõ°éÆÙÙmÙ×éÆmÙ×qéÄqéÄmÙ×\ÙÒqéÄ\ÙÒdéÀdéÀ\ÙÒMÙÊdéÀMÙÊWéºWéºMÙÊ?Ù¿Wéº?Ù¿Mé±Mé±?Ù¿4Ù±Mé±4Ù±Dé¦Dé¦4Ù±,Ù¡Dé¦,Ù¡=éš=éš,Ù¡'Ù=éš'Ù9éŒ9éŒ'Ù%Ù9éŒ%Ù8é8é%Ù'Ùm8é'Ùm:éq:éq'Ùm,Ù\:éq,Ù\>éd>éd,Ù\4ÙM>éd4ÙMDéWDéW4ÙM?Ù?DéW?Ù?MéMMéM?Ù?MÙ4MéMMÙ4XéDXéDMÙ4]Ù,XéD]Ù,dé=dé=]Ù,nÙ'dé=nÙ'ré9ré9nÙ'Ù%ré9Ù%é8é8Ù%‘Ù'é8‘Ù'é:é:‘Ù'¢Ù,é:¢Ù,šé>šé>¢Ù,±Ù4šé>±Ù4§éD§éD±Ù4¿Ù?§éD¿Ù?±éM±éM¿Ù?ÊÙM±éMÊÙMºéXºéXÊÙMÒÙ]ºéXÒÙ]ÁédÁédÒÙ]×ÙnÁéd×ÙnÅérÅér×ÙnÙÙÅérÙÙÆéÆéÙÙ×Ù‘Æé×Ù‘ÄéÄé×Ù‘ÒÙ¢ÄéÒÙ¢ÀéšÀéšÒÙ¢ÊÙ±ÀéšÊÙ±ºé§ºé§ÊÙ±¿Ù¿ºé§¿Ù¿±é±±é±¿Ù¿±ÙÊ±é±±ÙÊ¦éº¦éº±ÙÊ¡ÙÒ¦éº¡ÙÒšéÁšéÁ¡ÙÒÙ×šéÁÙ×ŒéÅŒéÅÙ×ÙÙŒéÅÙÙéÆÙÙÆéjÆçÙÙjÆçmÙ×mÙ×jÆçVÆámÙ×VÆá\ÙÒ\ÙÒVÆáDÆ×\ÙÒDÆ×MÙÊMÙÊDÆ×4ÆÊMÙÊ4ÆÊ?Ù¿?Ù¿4ÆÊ'Æº?Ù¿'Æº4Ù±4Ù±'ÆºÆ§4Ù±Æ§,Ù¡,Ù¡Æ§Æ“,Ù¡Æ“'Ù'ÙÆ“Æ'ÙÆ%Ù%ÙÆÆj%ÙÆj'Ùm'ÙmÆjÆV'ÙmÆV,Ù\,Ù\ÆV'ÆD,Ù\'ÆD4ÙM4ÙM'ÆD4Æ44ÙM4Æ4?Ù??Ù?4Æ4DÆ'?Ù?DÆ'MÙ4MÙ4DÆ'WÆMÙ4WÆ]Ù,]Ù,WÆkÆ]Ù,kÆnÙ'nÙ'kÆÆnÙ'ÆÙ%Ù%Æ”ÆÙ%”Æ‘Ù'‘Ù'”Æ¨Æ‘Ù'¨Æ¢Ù,¢Ù,¨ÆºÆ'¢Ù,ºÆ'±Ù4±Ù4ºÆ'ÊÆ4±Ù4ÊÆ4¿Ù?¿Ù?ÊÆ4×ÆD¿Ù?×ÆDÊÙMÊÙM×ÆDáÆWÊÙMáÆWÒÙ]ÒÙ]áÆWçÆkÒÙ]çÆk×Ùn×ÙnçÆkéÆ×ÙnéÆÙÙÙÙéÆçÆ”ÙÙçÆ”×Ù‘×Ù‘çÆ”áÆ¨×Ù‘áÆ¨ÒÙ¢ÒÙ¢áÆ¨×ÆºÒÙ¢×ÆºÊÙ±ÊÙ±×ÆºÊÆÊÊÙ±ÊÆÊ¿Ù¿¿Ù¿ÊÆÊºÆ×¿Ù¿ºÆ×±ÙÊ±ÙÊºÆ×§Æá±ÙÊ§Æá¡ÙÒ¡ÙÒ§Æá“Æç¡ÙÒ“ÆçÙ×Ù×“ÆçÆéÙ×ÆéÙÙÆé°õh°òÆéh°òjÆçjÆçh°òR°ìjÆçR°ìVÆáVÆáR°ì=°áVÆá=°áDÆ×DÆ×=°á,°ÒDÆ×,°Ò4ÆÊ4ÆÊ,°Ò°À4ÆÊ°À'Æº'Æº°À°¬'Æº°¬Æ§Æ§°¬°–Æ§°–Æ“Æ“°–	°Æ“	°ÆÆ	°°hÆ°hÆjÆj°h°RÆj°RÆVÆV°R°=ÆV°='ÆD'ÆD°=,°,'ÆD,°,4Æ44Æ4,°,>°4Æ4>°DÆ'DÆ'>°R°DÆ'R°WÆWÆR°h°WÆh°kÆkÆh°°	kÆ°	ÆÆ°	–°Æ–°”Æ”Æ–°¬°”Æ¬°¨Æ¨Æ¬°Á°¨ÆÁ°ºÆ'ºÆ'Á°Ò°,ºÆ'Ò°,ÊÆ4ÊÆ4Ò°,á°>ÊÆ4á°>×ÆD×ÆDá°>ì°R×ÆDì°RáÆWáÆWì°Ró°háÆWó°hçÆkçÆkó°hõ°çÆkõ°éÆéÆõ°ò°–éÆò°–çÆ”çÆ”ò°–ì°¬çÆ”ì°¬áÆ¨áÆ¨ì°¬á°ÁáÆ¨á°Á×Æº×Æºá°ÁÒ°Ò×ÆºÒ°ÒÊÆÊÊÆÊÒ°ÒÀ°áÊÆÊÀ°áºÆ×ºÆ×À°á¬°ìºÆ×¬°ì§Æá§Æá¬°ì–°ó§Æá–°ó“Æç“Æç–°ó°õ“Æç°õÆé°õ˜üg˜ú°õg˜úh°òh°òg˜úO˜óh°òO˜óR°ìR°ìO˜ó9˜çR°ì9˜ç=°á=°á9˜ç'˜×=°á'˜×,°Ò,°Ò'˜×˜Ä,°Ò˜Ä°À°À˜Ä˜¯°À˜¯°¬°¬˜¯˜—°¬˜—°–°–˜—˜°–˜	°	°˜˜g	°˜g°h°h˜g˜O°h˜O°R°R˜O˜9°R˜9°=°=˜9'˜'°='˜',°,,°,'˜':˜,°,:˜>°>°:˜O˜>°O˜R°R°O˜g˜R°g˜h°h°g˜˜h°˜°	°	˜—˜°	—˜–°–°—˜¯˜–°¯˜¬°¬°¯˜Å˜¬°Å˜Á°Á°Å˜×˜'Á°×˜'Ò°,Ò°,×˜'ç˜:Ò°,ç˜:á°>á°>ç˜:ó˜Oá°>ó˜Oì°Rì°Ró˜Oú˜gì°Rú˜gó°hó°hú˜gü˜ó°hü˜õ°õ°ü˜ú˜—õ°ú˜—ò°–ò°–ú˜—ó˜¯ò°–ó˜¯ì°¬ì°¬ó˜¯ç˜Åì°¬ç˜Åá°Áá°Áç˜Å×˜×á°Á×˜×Ò°ÒÒ°Ò×˜×Ä˜çÒ°ÒÄ˜çÀ°áÀ°áÄ˜ç¯˜óÀ°á¯˜ó¬°ì¬°ì¯˜ó—˜ú¬°ì—˜ú–°ó–°ó—˜ú˜ü–°ó˜ü°õ˜üÿfü˜üfüg˜úg˜úfüNõg˜úNõO˜óO˜óNõ8éO˜ó8é9˜ç9˜ç8é%Ù9˜ç%Ù'˜×'˜×%ÙÆ'˜×Æ˜Ä˜ÄÆ	°˜Ä	°˜¯˜¯	°˜˜¯˜˜—˜—˜ ˜— ˜˜ f˜f˜g˜gf	N˜g	N˜O˜O	N8˜O8˜9˜98%%˜9%%'˜''˜'%%8'˜'8:˜:˜8N	:˜N	O˜O˜N	fO˜fg˜g˜f g˜ ˜˜ ˜˜˜—˜—˜˜°	—˜°	¯˜¯˜°	Æ¯˜ÆÅ˜Å˜ÆÙ%Å˜Ù%×˜'×˜'Ù%é8×˜'é8ç˜:ç˜:é8õNç˜:õNó˜Oó˜OõNüfó˜Oüfú˜gú˜güfÿú˜gÿü˜ü˜ÿü˜ü˜ü˜ú˜—ú˜—ü˜õ°ú˜—õ°ó˜¯ó˜¯õ°éÆó˜¯éÆç˜Åç˜ÅéÆÙÙç˜ÅÙÙ×˜××˜×ÙÙÆé×˜×ÆéÄ˜çÄ˜çÆé°õÄ˜ç°õ¯˜ó¯˜ó°õ˜ü¯˜ó˜ü—˜ú—˜ú˜üÿ—˜úÿ˜üÿfügfúÿgfúfüfügfúOfófüOfóNõNõOfó:fçNõ:fç8é8é:fç'f×8é'f×%Ù%Ù'f×fÅ%ÙfÅÆÆfÅf¯Æf¯	°	°f¯f—	°f—˜˜f—f˜f  ffg fgfffgfOffO	N	NfOf:	Nf:88f:'f'8'f'%%%%'f'9f%%9f889fOf8OfN	N	OfgfN	gfffgffff  f—f —f˜˜—f¯f˜¯f°	°	¯fÄf°	ÄfÆÆÄf×f'Æ×f'Ù%Ù%×f'çf9Ù%çf9é8é8çf9ófOé8ófOõNõNófOúfgõNúfgüfüfúfgüfüfüfÿÿüfúf—ÿúf—ü˜ü˜úf—óf¯ü˜óf¯õ°õ°óf¯çfÄõ°çfÄéÆéÆçfÄ×f×éÆ×f×ÙÙÙÙ×f×ÅfçÙÙÅfçÆéÆéÅfç¯fóÆé¯fó°õ°õ¯fó—fú°õ—fú˜ü˜ü—fúfü˜üfüÿfüNõhNófühNógfúgfúhNóRNìgfúRNìOfóOfóRNì>NáOfó>Ná:fç:fç>Ná,NÒ:fç,NÒ'f×'f×,NÒNÁ'f×NÁfÅfÅNÁN¬fÅN¬f¯f¯N¬N–f¯N–f—f—N–	Nf—	Nff	NNhfNhfgfgNhNRfgNRfOfONRN>fON>f:f:N>,N,f:,N,'f''f',N,=N'f'=N9f9f=NRN9fRNOfOfRNhNOfhNgfgfhNN	gfN	ffN	–Nf–N—f—f–N¬N—f¬N¯f¯f¬NÀN¯fÀNÄfÄfÀNÒN,ÄfÒN,×f'×f'ÒN,áN=×f'áN=çf9çf9áN=ìNRçf9ìNRófOófOìNRòNhófOòNhúfgúfgòNhõNúfgõNüfüfõNóN–üfóN–úf—úf—óN–ìN¬úf—ìN¬óf¯óf¯ìN¬áNÀóf¯áNÀçfÄçfÄáNÀÒNÒçfÄÒNÒ×f××f×ÒNÒÁNá×f×ÁNáÅfçÅfçÁNá¬NìÅfç¬Nì¯fó¯fó¬Nì–Nò¯fó–Nò—fú—fú–NòNõ—fúNõfüNõ8ék8çNõk8çhNóhNók8çW8áhNóW8áRNìRNìW8áD8×RNìD8×>Ná>NáD8×48Ê>Ná48Ê,NÒ,NÒ48Ê'8º,NÒ'8ºNÁNÁ'8º8¨NÁ8¨N¬N¬8¨8”N¬8”N–N–8”8N–8	N	N88k	N8kNhNh8k8WNh8WNRNR8W'8DNR'8DN>N>'8D484N>484,N,,N,484D8',N,D8'=N=ND8'V8=NV8RNRNV8j8RNj8hNhNj88hN8N	N	8“8N	“8–N–N“8§8–N§8¬N¬N§8º8'¬Nº8'ÀNÀNº8'Ê84ÀNÊ84ÒN,ÒN,Ê84×8DÒN,×8DáN=áN=×8Dá8VáN=á8VìNRìNRá8Vç8jìNRç8jòNhòNhç8jé8òNhé8õNõNé8ç8“õNç8“óN–óN–ç8“á8§óN–á8§ìN¬ìN¬á8§×8ºìN¬×8ºáNÀáNÀ×8ºÊ8ÊáNÀÊ8ÊÒNÒÒNÒÊ8Êº8×ÒNÒº8×ÁNáÁNáº8×¨8áÁNá¨8á¬Nì¬Nì¨8á”8ç¬Nì”8ç–Nò–Nò”8ç8é–Nò8éNõ8é%Ùn%×8én%×k8çk8çn%×]%Òk8ç]%ÒW8áW8á]%ÒM%ÊW8áM%ÊD8×D8×M%Ê?%¿D8×?%¿48Ê48Ê?%¿4%±48Ê4%±'8º'8º4%±,%¢'8º,%¢8¨8¨,%¢'%‘8¨'%‘8”8”'%‘%%8”%%88%%'%n8'%n8k8k'%n,%]8k,%]8W8W,%]4%M8W4%M'8D'8D4%M?%?'8D?%?484484?%?M%4484M%4D8'D8'M%4\%,D8'\%,V8V8\%,m%'V8m%'j8j8m%'%%j8%%88%%%'8%'“8“8%'¡%,“8¡%,§8§8¡%,±%4§8±%4º8'º8'±%4¿%?º8'¿%?Ê84Ê84¿%?Ê%MÊ84Ê%M×8D×8DÊ%MÒ%\×8DÒ%\á8Vá8VÒ%\×%má8V×%mç8jç8j×%mÙ%ç8jÙ%é8é8Ù%×%é8×%ç8“ç8“×%Ò%¡ç8“Ò%¡á8§á8§Ò%¡Ê%±á8§Ê%±×8º×8ºÊ%±¿%¿×8º¿%¿Ê8ÊÊ8Ê¿%¿±%ÊÊ8Ê±%Êº8×º8×±%Ê¢%Òº8×¢%Ò¨8á¨8á¢%Ò‘%×¨8á‘%×”8ç”8ç‘%×%Ù”8ç%Ù8é%ÙÆrÅ%ÙrÅn%×n%×rÅdÁn%×dÁ]%Ò]%ÒdÁXº]%ÒXºM%ÊM%ÊXºM±M%ÊM±?%¿?%¿M±D§?%¿D§4%±4%±D§>š4%±>š,%¢,%¢>š:,%¢:'%‘'%‘:8'%‘8%%%%89r%%9r'%n'%n9r=d'%n=d,%],%]=dDX,%]DX4%M4%MDXMM4%MMM?%??%?MMWD?%?WDM%4M%4WDd>M%4d>\%,\%,d>q:\%,q:m%'m%'q:8m%'8%%%%8Œ9%%Œ9%'%'Œ9š=%'š=¡%,¡%,š=¦D¡%,¦D±%4±%4¦D±M±%4±M¿%?¿%?±MºW¿%?ºWÊ%MÊ%MºWÀdÊ%MÀdÒ%\Ò%\ÀdÄqÒ%\Äq×%m×%mÄqÆ×%mÆÙ%Ù%ÆÅŒÙ%ÅŒ×%×%ÅŒÁš×%ÁšÒ%¡Ò%¡Ášº¦Ò%¡º¦Ê%±Ê%±º¦±±Ê%±±±¿%¿¿%¿±±§º¿%¿§º±%Ê±%Ê§ºšÀ±%ÊšÀ¢%Ò¢%ÒšÀÄ¢%ÒÄ‘%×‘%×ÄÆ‘%×Æ%ÙÆ	°v	¯Æv	¯rÅrÅv	¯m	¬rÅm	¬dÁdÁm	¬d	¨dÁd	¨XºXºd	¨]	¢Xº]	¢M±M±]	¢W	šM±W	šD§D§W	šR	’D§R	’>š>šR	’O	‰>šO	‰::O	‰N	:N	88N	O	v8O	v9r9rO	vR	m9rR	m=d=dR	mV	d=dV	dDXDXV	d\	]DX\	]MMMM\	]d	WMMd	WWDWDd	Wl	RWDl	Rd>d>l	Ru	Od>u	Oq:q:u	O	Nq:	N88	Nˆ	O8ˆ	OŒ9Œ9ˆ	O‘	RŒ9‘	Rš=š=‘	Rš	Vš=š	V¦D¦Dš	V¡	\¦D¡	\±M±M¡	\§	d±M§	dºWºW§	d¬	lºW¬	lÀdÀd¬	l¯	uÀd¯	uÄqÄq¯	u°	Äq°	ÆÆ°	¯	ˆÆ¯	ˆÅŒÅŒ¯	ˆ¬	‘ÅŒ¬	‘ÁšÁš¬	‘¨	šÁš¨	šº¦º¦¨	š¢	¡º¦¢	¡±±±±¢	¡š	§±±š	§§º§ºš	§’	¬§º’	¬šÀšÀ’	¬‰	¯šÀ‰	¯ÄÄ‰	¯	°Ä	°Æ	°€šzš	°zšv	¯v	¯zšu™v	¯u™m	¬m	¬u™p–m	¬p–d	¨d	¨p–l“d	¨l“]	¢]	¢l“i]	¢iW	šW	šifŠW	šfŠR	’R	’fŠd…R	’d…O	‰O	‰d…d€O	‰d€N	N	d€dzN	dzO	vO	vdzeuO	veuR	mR	meuhpR	mhpV	dV	dhpklV	dkl\	]\	]kloi\	]oid	Wd	Woitfd	Wtfl	Rl	Rtfydl	Rydu	Ou	Oyd~du	O~d	N	N~d„d	N„dˆ	Oˆ	O„d‰eˆ	O‰e‘	R‘	R‰eŽh‘	RŽhš	Vš	VŽh’kš	V’k¡	\¡	\’k•o¡	\•o§	d§	d•o˜t§	d˜t¬	l¬	l˜tšy¬	lšy¯	u¯	ušyš~¯	uš~°	°	š~š„°	š„¯	ˆ¯	ˆš„™‰¯	ˆ™‰¬	‘¬	‘™‰–Ž¬	‘–Ž¨	š¨	š–Ž“’¨	š“’¢	¡¢	¡“’•¢	¡•š	§š	§•Š˜š	§Š˜’	¬’	¬Š˜…š’	¬…š‰	¯‰	¯…š€š‰	¯€š	° zš€š u™zš p–u™ l“p– il“ fŠi d…fŠ d€d… dzd€ eudz hpeu klhp oikl tfoi ydtf ~dyd „d~d ‰e„d Žh‰e ’kŽh •o’k ˜t•o šy˜t š~šy š„š~ ™‰š„ –Ž™‰ “’–Ž •“’ Š˜• …šŠ˜ €š…š		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "05fafdd8"
+	*NODE_NAME "ramp2"
+	*NODE_TM {
+		*NODE_NAME "ramp2"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.93969262	0.00000000	0.34202015
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 -0.34202015	0.00000000	0.93969262
+		*TM_ROW3 8.03658673	68.05397309	0.00000000
+		*TM_POS 8.03658673	68.05397309	0.00000000
+		*TM_ROTAXIS 0.00000000	1.00000000	0.00000000
+		*TM_ROTANGLE 0.34906587
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+'zhÀ”ŽÀ7‚qBÑaAŸ›ŒA)v—B«P    ÿÿ:9  «P  ÿÿÿÿ:9ÿÿ  ÄÆ  S¯ÿÿ    ÄÆÿÿS¯ÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "05faff88"
+	*NODE_NAME "ramp1"
+	*NODE_TM {
+		*NODE_NAME "ramp1"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	-0.00000001
+		*TM_ROW1 0.00000000	0.95630479	0.29237169
+		*TM_ROW2 0.00000001	-0.29237169	0.95630479
+		*TM_ROW3 -39.19825840	61.10725938	11.20252661
+		*TM_POS -39.19825840	61.10725938	11.20252661
+		*TM_ROTAXIS -1.00000000	-0.00000004	-0.00000000
+		*TM_ROTANGLE 0.29670596
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+kjHÂ†AÕN\B<WâÁ‚A„B    3ÿÿ  3  vÿÿÿÿvÿÿ  ì‰  ÿÿì‰    ÿÿËæÿÿÿÿËæ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "05fb0138"
+	*NODE_NAME "remchk1"
+	*NODE_TM {
+		*NODE_NAME "remchk1"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 23.70412545	-60.81970567	251.06313892
+		*TM_POS 23.70412545	-60.81970567	251.06313892
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+‰A*{CàlÂ
+0òAÐ±€CµcÂ      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "05fc4008"
+	*NODE_NAME "downhill"
+	*NODE_TM {
+		*NODE_NAME "downhill"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000001	0.00000003
+		*TM_ROW1 0.00000001	0.80901700	-0.58778524
+		*TM_ROW2 -0.00000003	0.58778524	0.80901700
+		*TM_ROW3 23.22136423	-5.41544055	5.51669910
+		*TM_POS 23.22136423	-5.41544055	5.51669910
+		*TM_ROTAXIS 1.00000000	0.00000004	0.00000000
+		*TM_ROTANGLE 0.62831855
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+føAýpÂN,€ÂAGB…bB`¯mB  Òè  ÿÿÒè      7óÿÿ  7ó  ÿÿÇÿÿÿÿÇ  ,ÿÿÿÿ,ÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 36
+		*MESH_TVERTLIST {
+*›žÀ>’¢ÁÅ@gîÉA[Ž  [Žÿÿ£qþÿ£qþÿ£q  [Ž  £q  [Ž  [Žþÿ[Žþÿ£qÿÿ£q  £q0r[Ž0r[ŽUv[ŽUv£qUv£q0r  0rÿÿ0rÿÿUvÿÿUv  Uv  0r£q0r[Ž0r[ŽUv[ŽUv£qUv£q0r  0rÿÿ0rÿÿUvÿÿUv  Uv  0r		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+          	 
+                        ! " # 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "05fc41b8"
+	*NODE_NAME "chk2"
+	*NODE_TM {
+		*NODE_NAME "chk2"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.07640869	40.04687899	12.49032077
+		*TM_POS 0.07640869	40.04687899	12.49032077
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+ÆÏÀ[ØGA£Bæ©Ô@Þ‡–A^Â/B      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "05fc4368"
+	*NODE_NAME "startarea"
+	*NODE_TM {
+		*NODE_NAME "startarea"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 23.56051461	-64.39662942	240.71593212
+		*TM_POS 23.56051461	-64.39662942	240.71593212
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+$”KAG·pCg “Âæ–	B…‘zC~+]Â      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "05fc4518"
+	*NODE_NAME "loop1"
+	*NODE_TM {
+		*NODE_NAME "loop1"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00000000	0.00000000	-0.99999994
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.99999994	0.00000000	0.00000000
+		*TM_ROW3 2.10222896	4.90713246	16.07822596
+		*TM_POS 2.10222896	4.90713246	16.07822596
+		*TM_ROTAXIS 0.00000000	-1.00000000	0.00000000
+		*TM_ROTANGLE 1.57079637
+		*TM_SCALE 0.99999994	1.00000000	0.99999994
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 82
+		*MESH_NUMFACES 80
+		*MESH_VERTEX_LIST {
+ëŠ@j@YAv@˜UA5 ”A;í@    ÿþ“ùkýCqXüóãEûrÃ4ú}%}%ùÃ4røãEó÷qXCö#ùk“õ'ÿ  ô+”“ó/§Cò3ºóñ7;Ërï;Ú}%î?ŒçÃ4íCòãEìG»ùqXëKkþùkêOÿÿÿéSkþ”èW»ù§ç[òºæ_Œç;ËåcÚÚäg;ËŒçãkºòâo§»ùás”kþßwÿÿÿÞ{ùkkþÝqX»ùÜƒãEòÛ‡Ã4ŒçÚ‹}%ÚÙr;ËØ“óº×—C§Ö›“”ÕŸ  ÿ)`  ÿ(d“ùk'hCqX&lóãE%prÃ4$t}%}%#xÃ4r"|ãEó!€qXC „ùk“ˆÿ  Œ”“§C”ºó˜;ËrœÚ}% ŒçÃ4¤òãE¨»ùqX¬kþùk°ÿÿÿ´kþ”¸»ù§¼òºÀŒç;ËÄÚÚÈ;ËŒçÌºòÐ§»ù
+Ô”kþ	ØÿÿÿÜùkkþàqX»ùäãEòèÃ4Œçì}%Úðr;ËôóºøC§ ü“”ÿÿ  ÿ		}
+		*MESH_FACE_LIST {
+   *    * )    +   + *    ,   , +    -   - ,    .   . -    /   / .    0   0 /    1   1 0   	 2   2 1  	 
+ 3  	 3 2  
+  4  
+ 4 3    5   5 4    6   6 5    7   7 6    8   8 7    9   9 8    :   : 9    ;   ; :    <   < ;    =   = <    >   > =    ?   ? >    @   @ ?    A   A @    B   B A    C   C B    D   D C    E   E D    F   F E    G   G F    H   H G     I   I H    ! J    J I  ! " K  ! K J  " # L  " L K  # $ M  # M L  $ % N  $ N M  % & O  % O N  & ' P  & P O  ' ( Q  ' Q P  		}
+		*MESH_NUMTVERTEX 82
+		*MESH_TVERTLIST {
+          €?  €?    f  fÿÿ  ÿÿÌ  Ìÿÿ3  3ÿÿ™  ™ÿÿÿ  ÿÿÿf&  f&ÿÿÌ,  Ì,ÿÿ33  33ÿÿ™9  ™9ÿÿÿ?  ÿ?ÿÿfF  fFÿÿÌL  ÌLÿÿ2S  2Sÿÿ™Y  ™Yÿÿÿ_  ÿ_ÿÿff  ffÿÿÌl  Ìlÿÿ2s  2sÿÿ™y  ™yÿÿÿ  ÿÿÿe†  e†ÿÿÌŒ  ÌŒÿÿ2“  2“ÿÿ™™  ™™ÿÿÿŸ  ÿŸÿÿe¦  e¦ÿÿÌ¬  Ì¬ÿÿ2³  2³ÿÿ˜¹  ˜¹ÿÿÿ¿  ÿ¿ÿÿeÆ  eÆÿÿÌÌ  ÌÌÿÿ2Ó  2Óÿÿ˜Ù  ˜Ùÿÿÿß  ÿßÿÿeæ  eæÿÿËì  Ëìÿÿ2ó  2óÿÿ˜ù  ˜ùÿÿÿÿ  ÿÿÿÿ		}
+		*MESH_NUMTVFACES 80
+		*MESH_TFACELIST {
+                      	  	   
+    	 
+   
+                                                            !  !    " #   # ! " $ % " % # $ & ' $ ' % & ( ) & ) ' ( * + ( + ) * , - * - + , . / , / - . 0 1 . 1 / 0 2 3 0 3 1 2 4 5 2 5 3 4 6 7 4 7 5 6 8 9 6 9 7 8 : ; 8 ; 9 : < = : = ; < > ? < ? = > @ A > A ? @ B C @ C A B D E B E C D F G D G E F H I F I G H J K H K I J L M J M K L N O L O M N P Q N Q O 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+ ‰– ‰ ‰–ª£–£ª¼¶ª¶£¼ÍÇ¼Ç¶Í'Û#×Í#×Ç'Û7è1ä'Û1ä#×7èHòBï7èBï1äHò[ùT÷HòT÷Bï[ùnýhü[ùhüT÷ný‚þ|þný|þhü‚þ–üý‚þý|þ–üª÷£ù–ü£ùýª÷¼ï¶òª÷¶ò£ù¼ïÍäÇè¼ïÇè¶òÍäÛ××ÛÍä×ÛÇèÛ×èÇäÍÛ×äÍ×ÛèÇò¶ï¼èÇï¼äÍò¶ù£÷ªò¶÷ªï¼ù£ýü–ù£ü–÷ªýþ|þ‚ýþ‚ü–þ|ühýnþ|ýnþ‚üh÷Tù[ühù[ýn÷TïBòH÷TòHù[ïBä1è7ïBè7òHä1×#Û'ä1Û'è7×#ÇÍ×#ÍÛ'Ç¶¼Ç¼Í¶£ª¶ª¼£–£–ª| ‚ ‚ –| hn| n‚ hT[h[nTBHTH[B17B7H1#''#1'#7#'71#'1'#7HB7B1H[THTB[nh[hTn u un uh		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 3
+}
+*GEOMOBJECT {
+	*NODE_ID "05fc46c8"
+	*NODE_NAME "downhill2"
+	*NODE_TM {
+		*NODE_NAME "downhill2"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.00000010	0.94832367	-0.31730464
+		*TM_ROW1 0.00000006	0.31730467	0.94832367
+		*TM_ROW2 1.00000000	0.00000006	-0.00000009
+		*TM_ROW3 8.13960919	0.40134948	12.89944673
+		*TM_POS 8.13960919	0.40134948	12.89944673
+		*TM_ROTAXIS -0.50446123	-0.70074087	-0.50446123
+		*TM_ROTANGLE 1.91914678
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+Ö;A¢%AvGÀuõA¢±wA|Õz@  ,c      ~Ù  ÿÿ€&  Òœþÿÿÿ,c  þÿ  ~Ùÿÿþÿ€&þÿÒœÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "05fc4878"
+	*NODE_NAME "barrier1"
+	*NODE_TM {
+		*NODE_NAME "barrier1"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.00000000	0.00000000	0.00000000
+		*TM_POS 0.00000000	0.00000000	0.00000000
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+0e§Â    €º­Â0e§B×¬ZA€º­B      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 4
+}
+*GEOMOBJECT {
+	*NODE_ID "06c0faf8"
+	*NODE_NAME "barrier2"
+	*NODE_TM {
+		*NODE_NAME "barrier2"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000001	0.00000003
+		*TM_ROW1 0.00000001	0.80901700	-0.58778524
+		*TM_ROW2 -0.00000003	0.58778524	0.80901700
+		*TM_ROW3 23.22136423	-5.41544055	5.51669910
+		*TM_POS 23.22136423	-5.41544055	5.51669910
+		*TM_ROTAXIS 1.00000000	0.00000004	0.00000000
+		*TM_ROTANGLE 0.62831855
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+føAýpÂN,€ÂAGB…bB`¯mB  Òè  ÿÿÒè      7óÿÿ  7ó  ÿÿÇÿÿÿÿÇ  ,ÿÿÿÿ,ÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 36
+		*MESH_TVERTLIST {
+*›žÀ>’¢ÁÅ@gîÉA[Ž  [Žÿÿ£qþÿ£qþÿ£q  [Ž  £q  [Ž  [Žþÿ[Žþÿ£qÿÿ£q  £q0r[Ž0r[ŽUv[ŽUv£qUv£q0r  0rÿÿ0rÿÿUvÿÿUv  Uv  0r£q0r[Ž0r[ŽUv[ŽUv£qUv£q0r  0rÿÿ0rÿÿUvÿÿUv  Uv  0r		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+          	 
+                        ! " # 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 4
+}
+*GEOMOBJECT {
+	*NODE_ID "05fe6dc0"
+	*NODE_NAME "chk1"
+	*NODE_TM {
+		*NODE_NAME "chk1"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 14.98139127	-52.96909061	56.29709347
+		*TM_POS 14.98139127	-52.96909061	56.29709347
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+Í—A90aB¸rcÂág¬A~zBûMDÂ      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "060d8278"
+	*NODE_NAME "barrier03"
+	*NODE_TM {
+		*NODE_NAME "barrier03"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	0.70710677	0.70710677
+		*TM_ROW2 0.00000000	-0.70710677	0.70710677
+		*TM_ROW3 10.27696144	8.18867169	14.23882414
+		*TM_POS 10.27696144	8.18867169	14.23882414
+		*TM_ROTAXIS -1.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.78539819
+		*TM_SCALE 1.00000000	0.99999994	0.99999994
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+AÔAë.OAäNÂ@FAÊ×‚A¨A     >ÿÿ   >  ÞÁÿÿÿÿÞÁÿÿ   >  ÿÿ >    ÿÿÞÁÿÿÿÿÞÁ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 4
+}
+*GEOMOBJECT {
+	*NODE_ID "06275d50"
+	*NODE_NAME "barrier04"
+	*NODE_TM {
+		*NODE_NAME "barrier04"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	0.00000006	0.99999994
+		*TM_ROW2 0.00000000	-0.99999994	0.00000006
+		*TM_ROW3 10.27696144	8.53449688	16.37071497
+		*TM_POS 10.27696144	8.53449688	16.37071497
+		*TM_ROTAXIS -1.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 1.57079625
+		*TM_SCALE 1.00000000	0.99999994	0.99999994
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+AÔA»¾hAe±ë@FA‘AMA    ÿÿÿÿ  ÿÿ  ÿÿÿÿÿÿÿÿÿÿ      ÿÿ      ÿÿ  ÿÿÿÿ  		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 4
+}
+*GEOMOBJECT {
+	*NODE_ID "0600e550"
+	*NODE_NAME "barrier05"
+	*NODE_TM {
+		*NODE_NAME "barrier05"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	-0.70710671	0.70710683
+		*TM_ROW2 0.00000000	-0.70710683	-0.70710671
+		*TM_ROW3 8.44228070	7.11953048	19.01284748
+		*TM_POS 8.44228070	7.11953048	19.01284748
+		*TM_ROTAXIS -1.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 2.35619450
+		*TM_SCALE 1.00000000	0.99999994	0.99999994
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+ÎòÊ@¢+‡A| @Ä­(A÷k¢AæŒA   >ÿÿÿÿ >ÿÿ  ÿÿ >ÿÿÿÿ >    ÞÁÿÿ  ÞÁ  ÞÁ  ÿÿÞÁ  		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 4
+}
+*GEOMOBJECT {
+	*NODE_ID "05fcd240"
+	*NODE_NAME "barrier06"
+	*NODE_TM {
+		*NODE_NAME "barrier06"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	-1.00000000	-0.00000025
+		*TM_ROW2 0.00000000	0.00000025	-1.00000000
+		*TM_ROW3 7.48277205	4.85449483	19.66735430
+		*TM_POS 7.48277205	4.85449483	19.66735430
+		*TM_ROTAXIS -1.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 3.14159298
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+‚>¬@pü“A+ñA@SA¾VAu·Õ@  ÿÿÿÿÿÿÿÿÿÿ  ÿÿ  ÿÿÿÿ      ÿÿÿÿ  ÿÿ      ÿÿ    		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 4
+}
+*GEOMOBJECT {
+	*NODE_ID "06c11ed8"
+	*NODE_NAME "barrier07"
+	*NODE_TM {
+		*NODE_NAME "barrier07"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	-0.70710695	-0.70710653
+		*TM_ROW2 0.00000000	0.70710653	-0.70710695
+		*TM_ROW3 6.74521408	2.68794550	18.85258259
+		*TM_POS 6.74521408	2.68794550	18.85258259
+		*TM_ROTAXIS -1.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 3.92699051
+		*TM_SCALE 1.00000000	0.99999994	0.99999994
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+o¤”@iã…A*ô²?”†A½#¡A\¾™@  ÿÿÞÁÿÿÿÿÞÁ   >  ÿÿ >    ÞÁÿÿÿÿÞÁÿÿ     >ÿÿ   >		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 4
+}
+*GEOMOBJECT {
+	*NODE_ID "06c08c28"
+	*NODE_NAME "barrier08"
+	*NODE_TM {
+		*NODE_NAME "barrier08"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	0.00000000	-0.99999994
+		*TM_ROW2 0.00000000	0.99999994	0.00000000
+		*TM_ROW3 5.82084948	1.31566876	16.02958704
+		*TM_POS 5.82084948	1.31566876	16.02958704
+		*TM_ROTAXIS 1.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 1.57079637
+		*TM_SCALE 1.00000000	0.99999994	0.99999994
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+ n@xIcAÖg¨?Âxý@tÔŽAR@  ÿÿ  ÿÿÿÿ        ÿÿ      ÿÿÿÿÿÿÿÿÿÿ    ÿÿÿÿ  ÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 4
+}
+*GEOMOBJECT {
+	*NODE_ID "06ce6568"
+	*NODE_NAME "barrier09"
+	*NODE_TM {
+		*NODE_NAME "barrier09"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	0.70710677	-0.70710677
+		*TM_ROW2 0.00000000	0.70710677	0.70710677
+		*TM_ROW3 4.87076924	2.68794550	13.16327363
+		*TM_POS 4.87076924	2.68794550	13.16327363
+		*TM_ROTAXIS 1.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.78539819
+		*TM_SCALE 1.00000000	0.99999994	0.99999994
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+öQ1@wù=A-ô²?´ß@ ztA\¾™@  ÞÁ  ÿÿÞÁ      ÞÁÿÿ  ÞÁ  ÿÿ >ÿÿÿÿ >   >ÿÿÿÿ >ÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 4
+}

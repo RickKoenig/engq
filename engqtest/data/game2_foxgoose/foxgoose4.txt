@@ -1,0 +1,14 @@
+// dimension
+4 4
+// numpieces
+3
+// pieces
+
+FW 0 0
+FW 2 0
+GB 1 3
+/*
+FW 1 2
+FW 3 2
+GB 2 3
+*/

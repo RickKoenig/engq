@@ -1,0 +1,7 @@
+# board x y then xy of . blank, Pn piece n, Gn goal n, W wall
+5 5 
+W      W      W      W       W      
+W        P0XD G0     .       W      
+W        P0UD .      G0      W      
+W        P0UX G0     .       W      
+W      W      W      W       W

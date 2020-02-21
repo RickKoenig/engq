@@ -1,0 +1,83 @@
+shape root 0 0 {
+
+back BACK1
+	 0 0
+	 800 600
+
+pbut PJOIN
+	 20 310
+	 80 20
+	 "JOIN"
+	
+pbut PCREATE
+	 20 110
+	 80 20
+	 "CREATE"
+	
+pbut PQUIT
+	 380 550
+	 160 20
+	 "QUIT"
+	
+pbut PDELCLIP
+	 175 516
+	 160 20
+	 "DEL CL IP"
+	
+pbut PDELCLPORT
+	 575 520
+	 160 20
+	 "DEL CL PORT"
+	
+pbut PDELSVPORT
+	 575 266
+	 160 20
+	 "DEL SV PORT"
+	
+listbox LISTBOX1
+	 175 320
+	 190 154
+
+listbox LISTBOX2
+	 575 320
+	 190 154
+
+listbox LISTBOX3
+	 175 70
+	 190 154
+
+listbox LISTBOX4
+	 575 70
+	 190 154
+
+text TEXT1
+	 175 30
+	 190 20
+	 IPS
+
+text TEXT3
+	 575 30
+	 190 15
+	 PORTS
+
+edit ECLIP
+	 175 484
+	 190 30
+	 ---
+
+edit ECLPORT
+	 575 484
+	 190 30
+	 ---
+
+text TSVIP
+	 175 234
+	 190 30
+	 ---
+
+edit ESVPORT
+	 575 234
+	 190 30
+	 ---
+
+}

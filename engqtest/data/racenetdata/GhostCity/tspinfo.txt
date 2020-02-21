@@ -1,0 +1,5 @@
+# a list of animated textures for the track
+# 1) list of graphic frames, 2) name of an object 3) name of the material
+
+#portal.txt volc_track03.mxo track01b
+#portal.txt portal001.mxo "1 - Default"

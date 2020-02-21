@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="mystyle2.css" />
+		<title>Sprite test</title>
+		<script type="text/javascript" src="page2.js">
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="top" >
+				<h1 id="headertext">Map viewer demo</h1>
+			</div>
+			<div class="instructions">
+				<h2>Instructions</h2>
+				Use the buttons on the left to work the map.
+			</div>
+			<div class="middle">
+				<div class="left">
+					<form name="myForm">
+						Your name:<br />
+						<input type="text" onKeyUp="goAjax();"
+					  		name="username" id="username" class="centerb" value="Sam" size="12"/> <br />
+					  	<input type="button" class="center" value="UL"
+					  		onmousedown="buthandledown(this);"
+					  		onmouseup="buthandleup(this);"
+					  		onclick="buthandleclick(this);"
+					  		onmouseover="buthandleover(this);"
+					  		onmouseout="buthandleout(this);"
+					  		onmousemove="buthandlemove(this)"
+					  	/>
+					  	<input type="button" class="center" value="U"
+					  		onmousedown="buthandledown(this);"
+					  		onmouseup="buthandleup(this);"
+					  		onclick="buthandleclick(this);"
+					  		onmouseover="buthandleover(this);"
+					  		onmouseout="buthandleout(this);"
+					  		onmousemove="buthandlemove(this)"
+					  	/>
+					  	<input type="button" class="center" value="UR"
+					  		onmousedown="buthandledown(this);"
+					  		onmouseup="buthandleup(this);"
+					  		onclick="buthandleclick(this);"
+					  		onmouseover="buthandleover(this);"
+					  		onmouseout="buthandleout(this);"
+					  		onmousemove="buthandlemove(this)"
+					  	/>
+					  	<br />
+					  	<input type="button" class="center" value="L"
+					  		onmousedown="buthandledown(this);"
+					  		onmouseup="buthandleup(this);"
+					  		onclick="buthandleclick(this);"
+					  		onmouseover="buthandleover(this);"
+					  		onmouseout="buthandleout(this);"
+					  		onmousemove="buthandlemove(this)"
+					  	/>
+					  	<input type="button" class="center" value="C"
+					  		onmousedown="buthandledown(this);"
+					  		onmouseup="buthandleup(this);"
+					  		onclick="buthandleclick(this);"
+					  		onmouseover="buthandleover(this);"
+					  		onmouseout="buthandleout(this);"
+					  		onmousemove="buthandlemove(this)"
+					  	/>
+					  	<input type="button" class="center" value="R"
+					  		onmousedown="buthandledown(this);"
+					  		onmouseup="buthandleup(this);"
+					  		onclick="buthandleclick(this);"
+					  		onmouseover="buthandleover(this);"
+					  		onmouseout="buthandleout(this);"
+					  		onmousemove="buthandlemove(this)"
+					  	/>
+					  	<br /> 
+					  	<input type="button" class="center" value="DL"
+					  		onmousedown="buthandledown(this);"
+					  		onmouseup="buthandleup(this);"
+					  		onclick="buthandleclick(this);"
+					  		onmouseover="buthandleover(this);"
+					  		onmouseout="buthandleout(this);"
+					  		onmousemove="buthandlemove(this)"
+					  	/>
+					  	<input type="button" class="center" value="D"
+					  		onmousedown="buthandledown(this);"
+					  		onmouseup="buthandleup(this);"
+					  		onclick="buthandleclick(this);"
+					  		onmouseover="buthandleover(this);"
+					  		onmouseout="buthandleout(this);"
+					  		onmousemove="buthandlemove(this)"
+					  	/>
+					  	<input type="button" class="center" value="DR"
+					  		onmousedown="buthandledown(this);"
+					  		onmouseup="buthandleup(this);"
+					  		onclick="buthandleclick(this);"
+					  		onmouseover="buthandleover(this);"
+					  		onmouseout="buthandleout(this);"
+					  		onmousemove="buthandlemove(this)"
+					  	/>
+					  	<br />
+					 </form>
+					 <p id="out1">
+					 	out1
+					 </p>
+					 <p id="out2">
+					 	out2
+					 </p>
+					 <p id="out3">
+					 	out3
+					 </p>
+				</div>
+				<div class="centerg" id="drawarea" onmousedown="maphandledown(event);"
+				 onmousemove="maphandlemove(event);" onmouseup="maphandleup(event);"
+				  >
+					<!--	This is the map viewer.<br /> -->
+					
+				</div>
+				<div class="right">
+					<h3>Free Web Building Tutorials</h3>
+					<p>At W3Schools you will find all the Web-building tutorials you need,
+					from basic HTML and XHTML to advanced XML, XSL, Multimedia and WAP.</p>
+					<p>W3Schools - The Largest Web Developers Site On The Net!</p>
+				</div>
+			</div>
+			<div class="bottom">
+				Copyright &copy; 2012 &nbsp; &nbsp; Rick Koenig
+			</div>
+		</div>
+	</body>
+</html>

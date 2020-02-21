@@ -1,0 +1,1 @@
+void mandlinit(),mandlproc(),mandldraw2d(),mandlexit();

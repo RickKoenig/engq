@@ -1,0 +1,9 @@
+// dimension
+2 2
+// numpieces
+0 // 4
+/*WX 0 0
+WX O 1
+BX 1 O
+BX 1 1 */
+// pieces

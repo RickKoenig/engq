@@ -1,0 +1,17 @@
+#define BACK1 0
+#define PJOIN 1
+#define PCREATE 2
+#define PQUIT 3
+#define PDELCLIP 4
+#define PDELCLPORT 5
+#define PDELSVPORT 6
+#define LISTBOX1 7
+#define LISTBOX2 8
+#define LISTBOX3 9
+#define LISTBOX4 10
+#define TEXT1 11
+#define TEXT3 12
+#define ECLIP 13
+#define ECLPORT 14
+#define TSVIP 15
+#define ESVPORT 16

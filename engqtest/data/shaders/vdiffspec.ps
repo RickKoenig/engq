@@ -1,0 +1,95 @@
+//The pixel shader, diffuse/specular light done in vertex shader, light calcs done in object space
+ps_2_0
+
+// interpolated inputs from vertex shader
+dcl t0.xy		// texture uv
+dcl_2d s0	// color sample from texture uv
+dcl v0		// amb/diffuse color 
+dcl v1		// spec color, (for now always white)
+
+// constant inputs
+// c6		// mat color
+
+// code
+// get texture color into r0
+	texld r0, t0,s0 // Stage 0 has the texture color
+	mul r0,c6,r0
+// modulate texture with amb/diffuse to r0
+	mul r0,v0,r0
+// add specular to r0
+	add r0,v1,r0
+// output final color
+	mov oC0,r0
+
+// outputs
+// oC0 final pixel color
+
+
+
+
+
+
+
+// from c++ code
+//	reads 1 dirlight from c1.xyz
+//	reads spec power from c28.x
+// from vertex shader
+//	reads texture from t0,s0
+//	reads normal from t1
+
+// ps_1_4
+
+// dcl v0.xyz // 
+
+// def c6, -0.5f, -0.5f, 0.0f, 1.0f
+// def c1, 0,0,.999999f,0
+// def c1, 0,0,-1.0001,0 // can't seem to set -1 and have it work, (works in D3DDEVTYPE_REF tho, also works from c++ side)
+// def c9, 0,0,-1.000,0
+// def c5, -.5,-.5,-.5,0
+// def c0, .2,.2,.2,0
+// def c28,30,0,0,0
+// def c6,.5,.5,.5,.5
+
+
+// I am assuming there are no special tex
+// coords for the normal map.
+// Stage 1 has the normal map
+// texld r1, t0
+
+// This is actually the light vector calculated in
+// the vertex shader and interpolated across the face
+// texcrd r1.xyz, t1
+//	mov r1,c0
+
+// Set r1 to the normal in the normal map
+// Below, we are biasing and scaling the
+// value from the normal map. See Step 2 in
+// section 2.5. You can actually avoid this
+// step, but i'm including it here to keep
+// things simple
+// add_x2 r1, r1, c6.rrrr
+
+// Now calculate the dot product and
+// store the value in r3. Remember the
+// dot product is the brightness at the texel
+// so no further calculations need to be done
+// mov r5,c7
+// mul r5,r5,c9
+// sub r3,r3,c5
+// dp3_sat r3, r2, r2
+
+// Modulate the surface brightness and diffuse
+// texture color
+//	mov r3,c0
+
+// mov oC1,c6
+
+
+/*
+ps_1_1
+//def c0, 1.0f, 1.0f, 1.0f, 1.0f
+tex t0
+mul r0,t0,v0
+// sub r0,c0,r0
+//sub r0,c0,t0
+*/

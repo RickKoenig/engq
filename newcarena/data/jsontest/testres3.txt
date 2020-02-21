@@ -1,0 +1,100 @@
+{
+	"aaa" : {},
+	"anumber" : 3,
+	"apoint" : {
+		"pointf2" : {
+			"x" : 3,
+			"y" : 4
+		}
+	},
+	"atext" : {
+		"text" : {
+			"data" : "some text",
+			"floats" : [
+				3.14,
+				2.72
+			],
+			"ints" : [
+				47,
+				69
+			],
+			"loc" : {
+				"pointf2" : {
+					"x" : 30,
+					"y" : 40
+				}
+			},
+			"points" : {
+				"pointf2" : [
+					{
+						"x" : 3,
+						"y" : 4
+					},
+					{
+						"x" : 5,
+						"y" : 6
+					},
+					{
+						"x" : 7,
+						"y" : 8
+					},
+					{
+						"x" : 9,
+						"y" : 10
+					}
+				]
+			},
+			"priority" : 3,
+			"size" : {
+				"pointf2" : {
+					"x" : 200,
+					"y" : 100
+				}
+			},
+			"strings" : [
+				"hello",
+				"world"
+			]
+		}
+	},
+	"listofnames" : [
+		"joe",
+		"blow"
+	],
+	"listofpoints" : [
+		{
+			"pointf2" : {
+				"x" : 5,
+				"y" : 6
+			}
+		},
+		{
+			"pointf2" : {
+				"x" : 50,
+				"y" : 60
+			}
+		},
+		{
+			"pointf2" : {
+				"x" : 500,
+				"y" : 600
+			}
+		}
+	],
+	"parr" : {
+		"pointf2" : [
+			{
+				"x" : 3,
+				"y" : 4
+			},
+			{
+				"x" : 5,
+				"y" : 6
+			},
+			{
+				"x" : 7,
+				"y" : 8
+			}
+		]
+	}
+}

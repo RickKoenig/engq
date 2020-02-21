@@ -1,0 +1,69 @@
+shape rematchres 0 0 {
+	back BACK
+		6 95 
+		154 90
+
+	text PTEXTQ
+		12 101
+		141 19
+		"Do you want"
+		
+	text PTEXTQ2
+		12 127
+		141 19
+		"a rematch ?"
+	pbut PBUTYES
+		20 157
+		60 24
+		"YES"
+		
+	pbut PBUTNO
+		84 157
+		60 24
+		"NO"
+
+	listbox GAMENEWS
+		720 70
+		300 100
+	
+}
+
+/*
+res pic BACK1 0
+	loc 195 10 
+	size 120 70
+	name rematch.jpg
+
+res pbutpic PBUTYES 2
+	loc 206 49
+	size 47 19
+	name "YES.jpg"
+	name "YESd.jpg"
+
+res pbutpic PBUTNO 3
+	loc 256 49
+	size 47 19
+	name "NO.jpg"
+	name "NOd.jpg"
+
+#res text PTEXTQ 1
+#	loc 195 45
+#	size 120 15
+#	name "Do you want"
+#	
+#res text PTEXTQ2 4
+#	loc 195 60
+#	size 120 15
+#	name "a rematch ?"
+#	
+#res pbut PBUTYES 2
+#	loc 215 85
+#	size 30 20
+#	name "YES"
+#
+#res pbut PBUTNO 3
+#	loc 265 85
+#	size 30 20
+#	name "NO"
+slecs 55129
+*/

@@ -1,0 +1,33 @@
+# new art for detached weapons
+ecto ecto_ball // looks good
+laser Laserbeam
+oil oil
+emb emb
+mine mine
+//missiles MissileOBJ // way too big and turned 90 degrees
+missiles mine // temporary
+
+ghook mine
+sonic mine
+fusioncan mine
+thermocan mine
+gbomb mine
+stasis mine
+wall mine
+ramp mine
+
+#|------------|#
+#| NOT IN USE |#
+#|------------|#
+#plasma plasmaball
+#ghook ghook
+#sonic sonic
+#fusioncan fusioncan
+#thermocan thermocan
+#gbomb gbomb
+#stasis stasisd
+#wall wall
+#ramp ramp
+minigun mine
+particle mine
+

@@ -1,0 +1,87 @@
+probably want to read some on carena_help.txt and debprint_help.txt first
+3 Data types defined:
+	paths:
+	checkpoint planes:
+	crash reset points:
+These 3 things work together to create a driving force.
+
+
+//helper objects
+	{"selpath",&od.selpath,D_INT,1},
+		0 none, 1 path1, 2 path2, 3 both paths
+	{"showpathframe",&od.showpathframe,D_FLOAT,FLOATUP},
+		display this frame of paths above
+
+	{"showrabbits",&od.showrabbits,D_ENUM,1,ol_noyes},
+		this is what the bots follow
+	{"path2road",&od.path2road,D_ENUM,1,ol_noyes},
+		lines up rabbits path with the road
+
+	{"showcrashresetloc",&od.showcrashresetloc,D_ENUM,1,ol_noyes},
+		this is where you'll be reset
+
+{"-------- CRASH RESET EDITOR ----------",NULL,D_VOID,0},
+	{"editenable",&crashinfos.editenable,D_ENUM,1,ol_noyes},
+		suspends gameplay, allows edit of crash reset points
+
+	{"num",&crashinfos.num,D_INT|D_RDONLY,1},
+		read only, number of crash resets
+
+	{"cur",&crashinfos.cur,D_INT,1},   ( 0 to n-1)
+		select current crash reset location for adjusting
+
+	{"checkidx",&crashinfos.curedit.checkidx,D_INT,1},
+		select which checkpoint this crash reset is associated with
+
+	{"locx",&crashinfos.curedit.loc.x,D_FLOAT,FLOATUP/16},
+	{"locy",&crashinfos.curedit.loc.y,D_FLOAT,FLOATUP/16},
+	{"locz",&crashinfos.curedit.loc.z,D_FLOAT,FLOATUP/16},
+	{"rotx",&crashinfos.curedit.rot.x,D_FLOAT,FLOATUP/16},
+	{"roty",&crashinfos.curedit.rot.y,D_FLOAT,FLOATUP/16},
+	{"rotz",&crashinfos.curedit.rot.z,D_FLOAT,FLOATUP/16},
+	{"rotw",&crashinfos.curedit.rot.w,D_FLOAT,FLOATUP/16},
+		allows adjustment of position and rotation of crash reset points
+
+	{"doinsert",&crashinfos.doinsert,D_ENUM,1,ol_noyes},
+		insert a new crash reset point
+	{"dodelete",&crashinfos.dodelete,D_ENUM,1,ol_noyes},
+		remove this crash reset point
+	{"doload",&crashinfos.doload,D_ENUM,1,ol_noyes},
+	{"dosave",&crashinfos.dosave,D_ENUM,1,ol_noyes},
+		not needed, load and save are fully automatic
+
+{"-------- CHECKPOINT EDITOR ----------",NULL,D_VOID,0},
+	{"editenable",&checkinfos.editenable,D_ENUM,1,ol_noyes},
+		suspends gameplay, allows edit of check points
+		this and crashreset edit enable can both be turned on at the same time
+
+	{"num",&checkinfos.num,D_INT|D_RDONLY,1},
+		number of checkpoints
+
+	{"cur",&checkinfos.cur,D_INT,1},
+		current checkpoint (0 to n-1)
+
+	{"locx",&checkinfos.curedit.loc.x,D_FLOAT,FLOATUP/16},
+	{"locy",&checkinfos.curedit.loc.y,D_FLOAT,FLOATUP/16},
+	{"locz",&checkinfos.curedit.loc.z,D_FLOAT,FLOATUP/16},
+	{"rotx",&checkinfos.curedit.rot.x,D_FLOAT,FLOATUP/16},
+	{"roty",&checkinfos.curedit.rot.y,D_FLOAT,FLOATUP/16},
+	{"rotz",&checkinfos.curedit.rot.z,D_FLOAT,FLOATUP/16},
+	{"rotw",&checkinfos.curedit.rot.w,D_FLOAT,FLOATUP/16},
+		adjust current checkpoint
+
+	{"doinsert",&checkinfos.doinsert,D_ENUM,1,ol_noyes},
+		dup current checkpoint
+
+	{"dodelete",&checkinfos.dodelete,D_ENUM,1,ol_noyes},
+		remove checkpoint
+
+	{"doload",&checkinfos.doload,D_ENUM,1,ol_noyes},
+	{"dosave",&checkinfos.dosave,D_ENUM,1,ol_noyes},
+		not needed
+
+Rules:
+	last checkpoint should be lined up with the finish line
+	crash resets should be slightly behind the associated checkpoint
+	crash resets should be close to the path1 and path2
+	the path1 should pass thru all checkpoints

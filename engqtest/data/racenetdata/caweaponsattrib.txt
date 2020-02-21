@@ -1,0 +1,1 @@
+["[#ignore: 0, #WeaponName: "klondyke", #Energies: "[#electrical: "1", #chemical: "0", #fusion: "1", #cyber: "0", #geothermal: "0", #eparticle: "0"]"]"]

@@ -1,0 +1,75 @@
+#|--------------------------------------------|#
+#| These are the Wepaons enabled in the game  |#
+#|--------------------------------------------|#
+
+#|-----------|#
+#| Offensive |#
+#|-----------|#
+laser
+missiles
+buzz
+mines
+//particle
+fsncan
+emb
+sonic
+klondyke
+gravitybomb
+//minigun
+
+#|-----------|#
+#| Defensive |#
+#|-----------|#
+dielectric
+plasma
+
+#|----------|#
+#| Handling |#
+#|----------|#
+spikes
+bainite
+oil
+
+#|-------|#
+#| Speed |#
+#|-------|#
+ecto
+ramjet
+charger
+
+#|--------|#
+#| Flying |#
+#|--------|#
+aerodyne
+ferrite
+
+#|----------|#	
+#| Specials |#
+#|----------|#
+stasis
+magnet
+bigtires
+bumpercar
+weapboost
+nano
+enleech
+rpd
+icrms
+
+#|------------|#		
+#| NOT IN USE |#
+#|------------|#
+/*
+flasher
+forklift
+grapple
+gyroscope
+intake
+pouncer
+prism
+randomizer
+sledge
+supajump
+switcharoo
+transducer
+*/

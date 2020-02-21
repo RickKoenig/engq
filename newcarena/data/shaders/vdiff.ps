@@ -1,0 +1,22 @@
+//The pixel shader, diffuse light done in vertex shader, light calcs done in object space
+ps_2_0
+
+// interpolated inputs from vertex shader
+dcl t0.xy		// texture uv
+dcl_2d s0	// color sample from texture uv
+dcl v0		// vertex color
+
+// constant inputs
+// c6		// mat color
+
+// code
+// get texture color into r0
+	texld r0, t0,s0 // Stage 0 has the texture color
+	mul r0,c6,r0
+// modulate texture with cvert to r0
+	mul r0,v0,r0
+// output final color
+	mov oC0,r0
+
+// outputs
+// oC0 final pixel color

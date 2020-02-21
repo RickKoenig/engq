@@ -1,0 +1,58 @@
+shape gametheoryres 0 0 {
+
+	pbut PBUTRESETBOARD
+	825 435
+	160 20
+	"Reset Board"
+
+	pbut PBUTWIDTH
+	825 465
+	160 20
+	"Width"
+
+	pbut PBUTHEIGHT
+	825 495
+	160 20
+	"Height"
+
+	pbut PBUTPATTERN
+	825 525
+	160 20
+	"Pattern"
+
+	pbut PBUTNCOLORS
+	825 555
+	160 20
+	"Num Colors"
+
+	pbut PBUTWRAP
+	825 585
+	160 20
+	"Wrap"
+
+	pbut PBUTTOMATRIX
+	815 620
+	160 20
+	"Move to Matrix"
+
+	pbut PBUTRESETCALC
+	825 655
+	160 20
+	"Calc Reset" 
+
+	pbut PBUTSTEPCALC
+	825 685
+	160 20
+	"Calc Step NYI"
+
+	pbut PBUTCALC
+	825 715
+	160 20
+	"Calc All"
+
+	pbut PBUTQUIT
+	815 745
+	160 20
+	Quit
+	
+}

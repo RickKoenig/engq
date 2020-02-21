@@ -1,0 +1,8 @@
+open minutelog at Fri Oct 23 19:22:01 2009
+BR    6520, BW    6520, S  10, BR/S     652, BW/S     652
+BR    6530, BW    6530, S  10, BR/S     653, BW/S     653
+BR    6255, BW    6255, S  10, BR/S     625, BW/S     625
+BR    6155, BW    6155, S  10, BR/S     615, BW/S     615
+BR    6095, BW    6095, S  10, BR/S     609, BW/S     609
+BR    6140, BW    6140, S  10, BR/S     614, BW/S     614
+close minutelog at Fri Oct 23 19:23:01 2009

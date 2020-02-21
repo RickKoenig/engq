@@ -1,0 +1,12 @@
+HTTP/1.1 301 TLS Redirect
+Date: Thu, 01 Nov 2018 06:34:01 GMT
+Server: Varnish
+X-Varnish: 558987554
+X-Cache: cp4023 int
+X-Cache-Status: int-front
+Set-Cookie: WMF-Last-Access=01-Nov-2018;Path=/;HttpOnly;secure;Expires=Mon, 03 Dec 2018 00:00:00 GMT
+X-Client-IP: 76.218.105.191
+Location: https://upload.wikimedia.org/wikipedia/commons/4/4b/Everest_kalapatthar_crop.jpg
+Content-Length: 0
+Connection: close
+

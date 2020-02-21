@@ -1,0 +1,587 @@
+#include <m_eng.h>
+
+C32 stdpalette[256]={
+	C32(0x00,0x00,0x00), C32(0x00,0x00,0xaa), C32(0x00,0xaa,0x00), C32(0x00,0xaa,0xaa),
+	C32(0xaa,0x00,0x00), C32(0xaa,0x00,0xaa), C32(0xaa,0x55,0x00), C32(0xaa,0xaa,0xaa),
+	C32(0x55,0x55,0x55), C32(0x55,0x55,0xff), C32(0x55,0xff,0x55), C32(0x55,0xff,0xff),
+	C32(0xff,0x55,0x55), C32(0xff,0x55,0xff), C32(0xff,0xff,0x55), C32(0xff,0xff,0xff),
+
+	C32(0xef,0xef,0xef), C32(0xdf,0xdf,0xdf), C32(0xd3,0xd3,0xd3), C32(0xc3,0xc3,0xc3),
+	C32(0xb7,0xb7,0xb7), C32(0xab,0xab,0xab), C32(0x9b,0x9b,0x9b), C32(0x8f,0x8f,0x8f),
+	C32(0x7f,0x7f,0x7f), C32(0x73,0x73,0x73), C32(0x67,0x67,0x67), C32(0x57,0x57,0x57),
+	C32(0x4b,0x4b,0x4b), C32(0x3b,0x3b,0x3b), C32(0x2f,0x2f,0x2f), C32(0x23,0x23,0x23),
+
+	C32(0xff,0x00,0x00), C32(0xef,0x00,0x00), C32(0xe3,0x00,0x00), C32(0xd7,0x00,0x00),
+	C32(0xcb,0x00,0x00), C32(0xbf,0x00,0x00), C32(0xb3,0x00,0x00), C32(0xa7,0x00,0x00),
+	C32(0x9b,0x00,0x00), C32(0x8b,0x00,0x00), C32(0x7f,0x00,0x00), C32(0x73,0x00,0x00),
+	C32(0x67,0x00,0x00), C32(0x5b,0x00,0x00), C32(0x4f,0x00,0x00), C32(0x40,0x00,0x00),
+
+	C32(0xff,0xda,0xda), C32(0xff,0xba,0xba), C32(0xff,0x9f,0x9f), C32(0xff,0x7f,0x7f),
+	C32(0xff,0x5f,0x5f), C32(0xff,0x40,0x40), C32(0xff,0x20,0x20), C32(0xff,0x00,0x00),
+	C32(0xfc,0xa8,0x5c), C32(0xfc,0x98,0x40), C32(0xfc,0x88,0x20), C32(0xfc,0x78,0x00),
+	C32(0xe4,0x6c,0x00), C32(0xcc,0x60,0x00), C32(0xb4,0x54,0x00), C32(0x9c,0x4c,0x00),
+
+
+
+	C32(0xfc,0xfc,0xd8), C32(0xfc,0xfc,0xb8), C32(0xfc,0xfc,0x9c), C32(0xfc,0xfc,0x7c),
+	C32(0xfc,0xf8,0x5c), C32(0xfc,0xf4,0x40), C32(0xfc,0xf4,0x20), C32(0xfc,0xf4,0x00),
+	C32(0xe4,0xd8,0x00), C32(0xcc,0xc4,0x00), C32(0xb4,0xac,0x00), C32(0x9c,0x9c,0x00),
+	C32(0x84,0x84,0x00), C32(0x70,0x6c,0x00), C32(0x58,0x54,0x00), C32(0x40,0x40,0x00),
+
+	C32(0xd0,0xfc,0x5c), C32(0xc4,0xfc,0x40), C32(0xb4,0xfc,0x20), C32(0xa0,0xfc,0x00),
+	C32(0x90,0xe4,0x00), C32(0x80,0xcc,0x00), C32(0x74,0xb4,0x00), C32(0x60,0x9c,0x00),
+	C32(0xd8,0xfc,0xd8), C32(0xbc,0xfc,0xb8), C32(0x9c,0xfc,0x9c), C32(0x80,0xfc,0x7c),
+	C32(0x60,0xfc,0x5c), C32(0x40,0xfc,0x40), C32(0x20,0xfc,0x20), C32(0x00,0xfc,0x00),
+
+	C32(0x00,0xff,0x00), C32(0x00,0xef,0x00), C32(0x00,0xe3,0x00), C32(0x00,0xd7,0x00),
+	C32(0x07,0xcb,0x00), C32(0x07,0xbf,0x00), C32(0x07,0xb3,0x00), C32(0x07,0xa7,0x00),
+	C32(0x07,0x9b,0x00), C32(0x07,0x8b,0x00), C32(0x07,0x7f,0x00), C32(0x07,0x73,0x00),
+	C32(0x07,0x67,0x00), C32(0x07,0x5b,0x00), C32(0x07,0x4f,0x00), C32(0x04,0x40,0x00),
+
+	C32(0xda,0xff,0xff), C32(0xb8,0xfc,0xfc), C32(0x9c,0xfc,0xfc), C32(0x7c,0xfc,0xf8),
+	C32(0x5c,0xfc,0xfc), C32(0x40,0xfc,0xfc), C32(0x20,0xfc,0xfc), C32(0x00,0xfc,0xfc),
+	C32(0x00,0xe4,0xe4), C32(0x00,0xcc,0xcc), C32(0x00,0xb4,0xb4), C32(0x00,0x9c,0x9c),
+	C32(0x00,0x84,0x84), C32(0x00,0x70,0x70), C32(0x00,0x58,0x58), C32(0x00,0x40,0x40),
+
+
+
+	C32(0x5c,0xbc,0xfc), C32(0x40,0xb0,0xfc), C32(0x20,0xa8,0xfc), C32(0x00,0x9c,0xfc),
+	C32(0x00,0x8c,0xe4), C32(0x00,0x7c,0xcc), C32(0x00,0x6c,0xb4), C32(0x00,0x5c,0x9c),
+	C32(0xda,0xda,0xff), C32(0xba,0xbf,0xff), C32(0x9f,0x9f,0xff), C32(0x7f,0x80,0xff),
+	C32(0x5f,0x60,0xff), C32(0x40,0x40,0xff), C32(0x20,0x25,0xff), C32(0x00,0x05,0xff),
+
+	C32(0x00,0x00,0xff), C32(0x00,0x00,0xef), C32(0x00,0x00,0xe3), C32(0x00,0x00,0xd7),
+	C32(0x00,0x00,0xcb), C32(0x00,0x00,0xbf), C32(0x00,0x00,0xb3), C32(0x00,0x00,0xa7),
+	C32(0x00,0x00,0x9b), C32(0x00,0x00,0x8b), C32(0x00,0x00,0x7f), C32(0x00,0x00,0x73),
+	C32(0x00,0x00,0x67), C32(0x00,0x00,0x5b), C32(0x00,0x00,0x4f), C32(0x00,0x00,0x40),
+
+	C32(0xf0,0xda,0xff), C32(0xe5,0xba,0xff), C32(0xda,0x9f,0xff), C32(0xd0,0x7f,0xff),
+	C32(0xca,0x5f,0xff), C32(0xbf,0x40,0xff), C32(0xb5,0x20,0xff), C32(0xaa,0x00,0xff),
+	C32(0x9a,0x00,0xe5), C32(0x80,0x00,0xcf), C32(0x75,0x00,0xb5), C32(0x60,0x00,0x9f),
+	C32(0x50,0x00,0x85), C32(0x45,0x00,0x70), C32(0x35,0x00,0x5a), C32(0x2a,0x00,0x40),
+
+	C32(0xff,0xda,0xff), C32(0xff,0xba,0xff), C32(0xff,0x9f,0xff), C32(0xff,0x7f,0xff),
+	C32(0xff,0x5f,0xff), C32(0xff,0x40,0xff), C32(0xff,0x20,0xff), C32(0xff,0x00,0xff),
+	C32(0xe0,0x00,0xe5), C32(0xca,0x00,0xcf), C32(0xb5,0x00,0xb5), C32(0x9f,0x00,0x9f),
+	C32(0x85,0x00,0x85), C32(0x6f,0x00,0x70), C32(0x5a,0x00,0x5a), C32(0x40,0x00,0x40),
+
+
+
+	C32(0xff,0xea,0xdf), C32(0xff,0xe0,0xd0), C32(0xff,0xda,0xc5), C32(0xff,0xd5,0xbf),
+	C32(0xff,0xcf,0xb0), C32(0xff,0xc5,0xa5), C32(0xff,0xbf,0x9f), C32(0xff,0xba,0x90),
+	C32(0xff,0xb0,0x80), C32(0xff,0xa5,0x70), C32(0xff,0x9f,0x60), C32(0xf0,0x95,0x5f),
+	C32(0xea,0x8f,0x5a), C32(0xdf,0x8a,0x55), C32(0xd0,0x80,0x50), C32(0xca,0x7f,0x4f),
+
+	C32(0xbf,0x7a,0x4a), C32(0xb5,0x70,0x45), C32(0xaa,0x6a,0x40), C32(0xa0,0x65,0x3f),
+	C32(0x9f,0x60,0x3a), C32(0x90,0x5f,0x35), C32(0x8a,0x5a,0x30), C32(0x80,0x50,0x2f),
+	C32(0x75,0x4f,0x2a), C32(0x6f,0x4a,0x25), C32(0x5f,0x40,0x20), C32(0x55,0x3f,0x1f),
+	C32(0x4a,0x3a,0x1a), C32(0x40,0x30,0x1a), C32(0x3a,0x2f,0x15), C32(0x2a,0x20,0x0f),
+
+	C32(0x00,0x00,0x00), C32(0x00,0x00,0x00), C32(0x00,0x00,0x00), C32(0x00,0x00,0x00),
+	C32(0x00,0x00,0x00), C32(0x00,0x00,0x00), C32(0x00,0x00,0x00), C32(0x00,0x00,0x00),
+	C32(0xc7,0x2b,0x2b), C32(0xc7,0x4f,0x2b), C32(0xc7,0x77,0x2b), C32(0xc7,0x9f,0x2b),
+	C32(0xc7,0xc7,0x2b), C32(0x9f,0xc7,0x2b), C32(0x77,0xc7,0x2b), C32(0x4f,0xc7,0x2b),
+
+	C32(0x2b,0xc7,0x33), C32(0x2b,0xc7,0x5f), C32(0x2b,0xc7,0x8b), C32(0x2b,0xc7,0xb7),
+	C32(0x2b,0xab,0xc7), C32(0x2b,0x7f,0xc7), C32(0x2b,0x53,0xc7), C32(0x2f,0x2b,0xc7),
+	C32(0x5b,0x2b,0xc7), C32(0x87,0x2b,0xc7), C32(0xb3,0x2b,0xc7), C32(0xc7,0x2b,0xaf),
+	C32(0xc7,0x2b,0x83), C32(0xc7,0x2b,0x57), C32(0xc7,0x2b,0x2b), C32(0xff,0xff,0xff),
+};
+
+struct bitmap8* bitmap8alloc(S32 x,S32 y,S32 v)
+{
+	struct bitmap8* p;
+	S32 prod=x*y;
+//	p=(struct bitmap8*)memalloc(sizeof(struct bitmap8));
+	p=new bitmap8;
+//	p->data=(U8*)memalloc(sizeof(U8)*prod);
+	p->data=new U8[prod];
+	p->size.x=x;
+	p->size.y=y;
+	p->cliprect.topleft.x=0;
+	p->cliprect.topleft.y=0;
+	p->cliprect.size.x=x;
+	p->cliprect.size.y=y;
+	if (v>=0)
+		memset(p->data,v,prod);
+	return p;
+}
+
+void bitmap8free(struct bitmap8* p)
+{
+//	memfree(p->data);
+	delete[] p->data;
+//	memfree(p);
+	delete p;
+}
+
+/////////////////////// pixels ////////////////////////////////
+static U32 pclip(struct bitmap8* b,S32 x,S32 y)
+{
+	if (x<b->cliprect.topleft.x)
+		return 0;
+	if (y<b->cliprect.topleft.y)
+		return 0;
+	if (x>=b->cliprect.topleft.x+b->cliprect.size.x)
+		return 0;
+	if (y>=b->cliprect.topleft.y+b->cliprect.size.y)
+		return 0;
+	return 1;
+}
+
+U8 fastgetpixel8(struct bitmap8* p,S32 x0,S32 y0)
+{
+	return p->data[x0+y0*p->size.x];
+}
+
+U8 clipgetpixel8(struct bitmap8* p,S32 x0,S32 y0)
+{
+	if (pclip(p,x0,y0))
+		return p->data[x0+y0*p->size.x];
+	return 0;
+}
+
+void fastputpixel8(struct bitmap8* p,S32 x0,S32 y0,U8 color)
+{
+	p->data[x0+y0*p->size.x]=color;
+}
+
+void clipputpixel8(struct bitmap8* p,S32 x0,S32 y0,int color)
+{
+	if (pclip(p,x0,y0))
+		p->data[x0+y0*p->size.x]=color;
+}
+
+#if 0
+void clipfloodfill8(struct bitmap8* room,S32 mx,S32 my,S32 newcol)
+{
+}
+#else
+// CLIPPED DRAWING
+#define STACK 2000
+static int stackx[STACK];
+static int stacky[STACK];
+static int sp=0,maxsp;
+
+static int fillstack()
+{
+	return sp;
+}
+
+static void fillpush(int x,int y) {
+	if (sp<STACK) {
+		stackx[sp]=x;
+		stacky[sp++]=y;
+		if (sp>maxsp)
+			maxsp=sp;
+	} else
+		errorexit("out of fill stack");
+}
+
+static void fillpop(int *x,int *y)
+{
+	*x=stackx[--sp];
+	*y=stacky[sp];
+}
+
+void clipfloodfill8(struct bitmap8 *b,int x,int y,int c)
+{
+	int r;
+	int st,end,next,curr;
+	c&=0xff;
+	r=clipgetpixel8(b,x,y);
+	if (r==c)
+		return;
+	fillpush(x,y);
+	while(fillstack()) {
+	//////// get work to do
+		fillpop(&x,&y);
+		clipputpixel8(b,x,y,c);
+	////// find start of run
+		st=x;
+		while(1) {
+			if (clipgetpixel8(b,--st,y)!=r) {
+				st++;
+				break;
+			}
+			clipputpixel8(b,st,y,c);
+		}
+	///// find end of run
+		end=x;
+		while(1) {
+			if (clipgetpixel8(b,++end,y)!=r) {
+				end--;
+				break;
+			}
+			clipputpixel8(b,end,y,c);
+		}
+	/////// scan for upper runs to do
+		curr=clipgetpixel8(b,st,y-1);
+		for (x=st;x<=end;x++) {
+			next=clipgetpixel8(b,x+1,y-1);
+			if (((next!=r)||(x==end))&&(curr==r))
+				fillpush(x,y-1);
+			curr=next;
+		}
+	////// scan for lower runs to do
+		curr=clipgetpixel8(b,st,y+1);
+		for (x=st;x<=end;x++) {
+			next=clipgetpixel8(b,x+1,y+1);
+			if (((next!=r)||(x==end))&&(curr==r))
+				fillpush(x,y+1);
+			curr=next;
+		}
+	}
+}
+
+
+#endif
+
+static U32 lclip8(const struct bitmap8* b,S32* x0,S32* y0,S32* x1,S32* y1)
+{
+	const S32 bigclip = 500000000;
+	if (*x0<-bigclip)
+		return 0;
+	if (*x0>bigclip)
+		return 0;
+	if (*y0<-bigclip)
+		return 0;
+	if (*y0>bigclip)
+		return 0;
+	if (*x1<-bigclip)
+		return 0;
+	if (*x1>bigclip)
+		return 0;
+	if (*y1<-bigclip)
+		return 0;
+	if (*y1>bigclip)
+		return 0;
+	U32 code0,code1;
+	S32 left,right,top,bot;
+	left=b->cliprect.topleft.x;
+	right=b->cliprect.topleft.x+b->cliprect.size.x;
+	top=b->cliprect.topleft.y;
+	bot=b->cliprect.topleft.y+b->cliprect.size.y;
+	while(1) {
+		code0=0;
+		if (*x0<left)
+			code0=1;
+		else if (*x0>=right)
+			code0=4;
+		if (*y0<top)
+			code0|=2;
+		else if (*y0>=bot)
+			code0|=8;
+		code1=0;
+		if (*x1<left)
+			code1=1;
+		else if (*x1>=right)
+			code1=4;
+		if (*y1<top)
+			code1|=2;
+		else if (*y1>=bot)
+			code1|=8;
+		if (!(code0|code1))
+			return 1;
+		if (code0&code1)
+			return 0;
+		if (!code0) {
+			exch(*x0,*x1);
+			exch(*y0,*y1);
+			exch(code0,code1);
+		}
+		if (code0&1) { //left
+
+			S32 ynew=*y0;
+			LONGMULDIV(left-*x0,*y1-*y0,*x1-*x0,ynew);
+			*y0+=ynew;
+			*x0=left;
+		}
+		else if (code0&2) {	// top
+
+			S32 xnew=*x0;
+			LONGMULDIV(top-*y0,*x1-*x0,*y1-*y0,xnew);
+			*x0+=xnew;
+			*y0=top;
+		}
+		else if (code0&4) {	// right
+
+			S32 ynew=*y0;
+			LONGMULDIV(right-1-*x0,*y1-*y0,*x1-*x0,ynew);
+			*y0+=ynew;
+			*x0=right-1;
+		}
+		else { // bottom
+
+			S32 xnew=*x0;
+			LONGMULDIV(bot-1-*y0,*x1-*x0,*y1-*y0,xnew);
+			*x0+=xnew;
+			*y0=bot-1;
+		}
+	}
+}
+
+void clipline8(struct bitmap8* b8,S32 x0,S32 y0,S32 x1,S32 y1,S32 color)
+{
+	if (lclip8(b8,&x0,&y0,&x1,&y1))
+		fastline8(b8,x0,y0,x1,y1,color);
+}
+
+
+void fastline8(struct bitmap8* b8,S32 x0,S32 y0,S32 x1,S32 y1,S32 color)
+{
+	U8* ptr;
+	S32 dx=x1-x0;
+	S32 dy=y1-y0;
+	S32 ostep=b8->size.x;
+	S32 cstep=1;
+	S32 cnt;
+	S32 err;
+//	outtextxyf32(b8,x0,y0,color,"fastline from %d %d to %d %d",x0,y0,x1,y1);
+	if (dx<0) {
+		dx = -dx;
+		dy = -dy;
+		exch(x0,x1);
+		exch(y0,y1);
+	}
+	ptr=b8->data+x0+y0*b8->size.x;
+	if (dy<0) {
+		ostep=-ostep;
+		dy = -dy;
+	}
+	if (dx<dy) {
+		exch(x0,y0);
+		exch(x1,y1);
+		exch(dx,dy);
+		exch(ostep,cstep);
+	}
+	err=dx>>1;
+	cnt=dx;
+	do {
+		*ptr=color;
+		err-=dy;
+		if (err<0) {
+			err+=dx;
+			ptr+=ostep;
+		}
+		ptr+=cstep;
+	} while(cnt--);
+}
+
+/////////////////////////// rectangles ///////////////////////////////////////
+
+static U32 rclip8(const struct bitmap8* b,S32* x,S32* y,S32* sx,S32* sy)
+{
+	S32 move;
+// trivial check
+	if (*sx == 0 || *sy == 0)
+		return 0;
+	if (*sx<0) {
+		*sx = - *sx;
+		*x -= *sx;
+	}
+	if (*sy<0) {
+		*sy = - *sy;
+		*y -= *sy;
+	}
+// left
+	move = b->cliprect.topleft.x - *x;
+	if (move>0) {
+		*x += move;
+		*sx -= move;
+	}
+	if (*sx <= 0)
+		return 0;
+// top
+	move = b->cliprect.topleft.y - *y;
+	if (move>0) {
+		*y += move;
+		*sy -= move;
+	}
+	if (*sy <= 0)
+		return 0;
+// right
+	move = (*x + *sx) - (b->cliprect.topleft.x + b->cliprect.size.x);
+	if (move>0)
+		*sx -= move;
+	if (*sx <= 0)
+		return 0;
+// bottom
+	move = (*y + *sy) - (b->cliprect.topleft.y + b->cliprect.size.y);
+	if (move>0)
+		*sy -= move;
+	if (*sy <= 0)
+		return 0;
+	return 1;
+}
+
+void fastrect8(struct bitmap8* b8,S32 x0,S32 y0,S32 sx,S32 sy,S32 color)
+{
+	S32 i,j;
+	U32 dinc;
+	register U8 *dp;
+	register U8 val=color;
+	dp=b8->data+b8->size.x*y0+x0;
+	dinc=b8->size.x;
+	for (j=0;j<sy;j++) {
+		for (i=0;i<sx;i++)
+			dp[i]=val;
+		dp+=dinc;
+	}
+}
+
+void cliprect8(struct bitmap8* b8,S32 x0,S32 y0,S32 sx,S32 sy,S32 color)
+{
+	if (rclip8(b8,&x0,&y0,&sx,&sy))
+		fastrect8(b8,x0,y0,sx,sy,color);
+}
+
+
+bool bclip8(const struct bitmap8* s,const struct bitmap8* d,S32* sx,S32* sy,S32* dx,S32* dy,S32* tx,S32* ty)
+{
+	S32 move;
+// trivial check
+	if ((*tx<=0)||(*ty<=0))
+		return 0;
+// left source
+	move = s->cliprect.topleft.x - *sx;
+	if (move>0) {
+		*sx += move;
+		*dx += move;
+		*tx -= move;
+	}
+	if (*tx <= 0)
+		return 0;
+// left dest
+	move = d->cliprect.topleft.x - *dx;
+	if (move>0) {
+		*sx += move;
+		*dx += move;
+		*tx -= move;
+	}
+	if (*tx <= 0)
+		return 0;
+// top source
+	move = s->cliprect.topleft.y - *sy;
+	if (move>0) {
+		*sy += move;
+		*dy += move;
+		*ty -= move;
+	}
+	if (*ty <= 0)
+		return 0;
+// top dest
+	move = d->cliprect.topleft.y - *dy;
+	if (move>0) {
+		*sy += move;
+		*dy += move;
+		*ty -= move;
+	}
+	if (*ty <= 0)
+		return 0;
+// right source
+	move = (*sx + *tx) - (s->cliprect.topleft.x + s->cliprect.size.x);
+	if (move>0)
+		*tx -= move;
+	if (*tx <= 0)
+		return 0;
+// right dest
+	move = (*dx + *tx) - (d->cliprect.topleft.x + d->cliprect.size.x);
+	if (move>0)
+		*tx -= move;
+	if (*tx <= 0)
+		return 0;
+// bottom source
+	move = (*sy + *ty) - (s->cliprect.topleft.y + s->cliprect.size.y);
+	if (move>0)
+		*ty -= move;
+	if (*ty <= 0)
+		return 0;
+// bottom dest
+	move = (*dy + *ty) - (d->cliprect.topleft.y + d->cliprect.size.y);
+	if (move>0)
+		*ty -= move;
+	if (*ty <= 0)
+		return 0;
+	return 1;
+}
+
+/*void clipmask8(struct bitmap8 *s,struct bitmap8 *d,int sx,int sy,int dx,int dy,int tx,int ty,unsigned char *andor)
+{
+	if (bclip8(s,d,&sx,&sy,&dx,&dy,&tx,&ty))
+		fastmask8(s,d,sx,sy,dx,dy,tx,ty,andor);
+}
+
+void fastmask8(struct bitmap8 *s,struct bitmap8 *d,int sx,int sy,int dx,int dy,int tx,int ty,unsigned char *andor)
+{
+}
+*/
+
+void clipmask8(struct bitmap8 *src,struct bitmap8 *dst,unsigned char *andor)
+{
+	if (src->size.x != dst->size.x || src->size.y != dst->size.y)
+		errorexit("bad sizes in clipmask8");
+	S32 p = src->size.x*src->size.y;
+	U8* s = src->data;
+	U8* d = dst->data;
+	//copy(s,s+p,d);
+	S32 i;
+	for (i=0;i<p;++i) {
+		U8 vin = s[i];
+		U8 and8 = andor[vin];
+		U8 or8 = andor[vin+256];
+		d[i] = d[i] & and8 | or8;
+	}
+}
+
+void fastblit8(const bitmap8* s, const struct bitmap8* d, S32 sx, S32 sy, S32 dx, S32 dy, S32 tx, S32 ty)
+{
+	S32 i, j;
+	U32 sinc, dinc;
+	register U8 *sp, *dp;
+	if (tx <= 0 || ty <= 0)
+		return;
+	sp = s->data + s->size.x*sy + sx;
+	dp = d->data + d->size.x*dy + dx;
+	sinc = s->size.x;
+	dinc = d->size.x;
+	for (j = 0; j < ty; j++) {
+		for (i = 0; i < tx; i++)
+			dp[i] = sp[i];
+		//		memcpy(dp,sp,tx<<2);
+		sp += sinc;
+		dp += dinc;
+	}
+}
+
+void clipblit8(const struct bitmap8* s, const struct bitmap8* d, S32 sx, S32 sy, S32 dx, S32 dy, S32 tx, S32 ty)
+{
+	if (bclip8(s, d, &sx, &sy, &dx, &dy, &tx, &ty))
+		fastblit8(s, d, sx, sy, dx, dy, tx, ty);
+}
+
+
+
+/*
+void clipscalexpar8(struct bitmap8 *src,struct bitmap8 *dst,
+				   int ssx,int ssy,
+				   int sex,int sey,
+				   int dsx,int dsy,
+				   int dex,int dey,int xpar)
+{
+}
+*/
+void clipscaleblit8(const struct bitmap8* src,struct bitmap8* dst)
+{
+	S32 sx,sy,dx,dy;
+	U8* d = dst->data;
+	U8* s = src->data;
+
+	for (dy=0;dy<dst->size.y;++dy) {
+		sy = dy*src->size.y/dst->size.y;
+		for (dx=0;dx<dst->size.x;++dx) {
+			sx = dx*src->size.x/dst->size.x;
+			*d++ = s[sy*src->size.x + sx];
+		}
+	}
+}

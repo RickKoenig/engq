@@ -1,0 +1,120 @@
+shape rootmenu 0 0 {
+
+back BACK1
+	0 0
+	 800 600
+
+pbut PBUT1
+	50 400
+	 80 20
+	 HISCORES
+	
+pbut PBUT2
+	200 450
+	 90 30
+	 CREATE
+
+pbut PBUT3
+	200 500
+	 90 30
+	 JOIN
+	
+#pbut PBUT4
+#	450 450
+#	 90 30
+#	 CHAT
+	
+pbut PBUT5
+	450 500
+	 90 30
+	 LOGOFF
+	
+text TEXT1
+	300 400
+	 190 15
+	 "your name"
+
+text TEXT2
+	10 30
+	 90 15
+	 Users
+
+text TEXT3
+	108 30
+	180 15
+	 Games
+
+listbox LISTBOX1
+	15 50
+	 80 300
+#	80 40
+	
+/*vscroll SCL1
+	95 50
+	 25 300
+	range 0 0 */
+
+listbox LISTBOX2
+	108 50
+	 80 300
+#	80 40
+
+listbox LISTBOX6
+	190 50
+	 50 300
+#	50 40
+	
+listbox LISTBOX7
+	242 50
+	 60 300
+#	60 40
+
+/*vscroll SCL2
+	495 50
+	 25 300
+#	range 0 0*/
+
+text TEXT4
+	550 30
+	 205 15
+	 Chat
+
+listbox LISTBOX3
+	525 50
+	 250 300
+
+/*vscroll SCL3
+	775 50
+	 25 300
+	 chatscl*/
+
+edit EDIT1
+	440 360
+	 300 30
+	 chatenter
+
+/*
+text TEXT5
+	550 580
+	 30 15
+	 0
+*/
+text TEXT5
+	550 525
+	200 20
+	"chat bot speed 0.0"
+	
+hscroll HSLIDE1
+	550 550
+	 200 20
+
+listbox LISTBOX4 
+	306 50
+	 138 300
+#	138 40
+
+listbox LISTBOX5
+	446 50
+	 50 300
+#	50 40
+}

@@ -1,0 +1,87 @@
+##new physics state 52
+littlegee 10
+
+object box1 
+	pos -30 20 20
+	scale 35 5 10
+	rot 20 0 60
+	mass 9
+	elast .9
+
+object box1 
+	pos 0 20 20
+	scale 35 5 10
+	rot 20 0 60
+	mass 9
+	elast .9
+
+object box1 
+	pos 30 20 20
+	scale 35 5 10
+	rot 20 0 60
+	mass 9
+	elast .9
+
+object box1 
+	pos -30 20 -20
+	scale 35 5 10
+	rot 20 0 60
+	mass 9
+	elast .9
+
+object box1 
+	pos 0 20 -20
+	scale 35 5 10
+	rot 20 0 60
+	mass 9
+	elast .9
+
+object box1 
+	pos 30 20 -20
+	scale 35 5 10
+	rot 20 0 60
+	mass 9
+	elast .9
+
+object box1 
+	pos -30 40 20
+	scale 35 5 10
+	rot 20 0 60
+	mass 9
+	elast .9
+
+object box1 
+	pos 0 40 20
+	scale 35 5 10
+	rot 20 0 60
+	mass 9
+	elast .9
+
+object box1 
+	pos 30 40 20
+	scale 35 5 10
+	rot 20 0 60
+	mass 9
+	elast .9
+
+object box1 
+	pos -30 40 -20
+	scale 35 5 10
+	rot 20 0 60
+	mass 9
+	elast .9
+
+object box1 
+	pos 0 40 -20
+	scale 35 5 10
+	rot 20 0 60
+	mass 9
+	elast .9
+
+object box1 
+	pos 30 40 -20
+	scale 35 5 10
+	rot 20 0 60
+	mass 9
+	elast .9
+

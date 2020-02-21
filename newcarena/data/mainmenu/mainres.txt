@@ -1,0 +1,212 @@
+shape rootmenu 0 0 {
+	
+	back BACK1
+	0 0
+	800 600
+
+	pbut PBUT1
+	625 550
+	160 20
+	"START STATE"
+	
+	pbut PBUT2
+	625 575
+	160 20
+	"BACK / QUIT"
+	
+	listbox LISTBOX1
+	200 25
+	438 300
+
+/*	vscroll SCL1 
+	730 25
+	30 400
+*/
+	listbox LISTBOX2
+	13 461
+	105 50
+
+	listbox LISTBOX3
+	120 461
+	108 50
+
+	listbox LISTBOX4
+	232 461
+	105 50
+
+	listbox LISTBOX5
+	339 461
+	108 50
+
+	listbox LISTBOX6
+	670 461
+	120 50
+
+	text TEXT1
+	104 430
+	45 12
+	video
+
+	text TEXT2
+	60 444
+	40 12
+	main
+
+	text TEXT3
+	155 444
+	30 12
+	sub
+
+	text TEXT4
+	321 430
+	50 12
+	audio
+
+	text TEXT5
+	276 444
+	40 12
+	main
+
+	text TEXT6
+	371 444
+	30 12
+	sub
+
+	text TEXT7
+	686 445
+	50 12
+	input
+
+	pbut PBUT3
+	89 513
+	90 12
+	"set driver"
+
+	pbut PBUT4
+	289 513
+	30 12
+	set
+
+	pbut PBUT5
+	330 513
+	40 12
+	test
+
+	pbut PBUT6
+	704 513
+	30 12
+	set
+
+	text TEXT8
+	375 550
+	140 12
+	"test mousemode"
+
+	listbox LISTBOX7
+	395 565
+	100 30
+
+/*	listbox LISTBOX8
+	665 25
+	60 400
+*/
+	text TEXTMIC
+	467 444
+	60 12
+	micsub
+
+	listbox LISTMIC
+	449 461
+	218 50
+
+
+	listbox LISTXY
+	69 537
+	100 50
+
+/*	vscroll SCLXY
+	170 537
+	15 50
+*/
+	pbut PBUT7
+	380 513
+	80 12
+	"test midi"
+	
+	
+// test rgb to hsv
+	hscroll sliderr
+	5 5
+	80 12
+	
+	hscroll sliderg
+	5 25
+	80 12
+	
+	hscroll sliderb
+	5 45
+	80 12
+	
+	text textrgb
+	5 65
+	140 8
+	"----"
+
+	text texthsv
+	5 85
+	140 8
+	"----"
+
+	text textrgb2
+	5 105
+	140 8
+	"----"
+
+	text texthue
+	40 180
+	70 8
+	"hue"
+	
+	hscroll sliderhue
+	5 188
+	140 12
+	
+	text textsat
+	40 220
+	70 8
+	"sat"
+	
+	hscroll slidersat
+	5 228
+	140 12
+	
+	text textval
+	40 260
+	70 8
+	"val"
+	
+	hscroll sliderval
+	5 268
+	140 12
+	
+	text txthex
+	10 300
+	170 12
+	"hex"
+	
+	edit testhex
+	10 320
+	170 12
+	"00000000"
+	
+	text txtfloat
+	10 350
+	170 12
+	"float"
+	
+	edit testfloat
+	10 370
+	170 12
+	"0"
+	
+}

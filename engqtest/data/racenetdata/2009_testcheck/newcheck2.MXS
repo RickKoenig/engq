@@ -1,0 +1,2582 @@
+*3DSMAX_ENGINE1EXPORTFP	400
+*COMMENT "RK2 Export Version  4.00 - Tue Jul 08 21:55:01 2008"
+*userunit per sysunit 1.000000
+*SCENE {
+	*SCENE_FILENAME "newcheck2.max"
+	*SCENE_FIRSTFRAME 0
+	*SCENE_LASTFRAME 200
+	*SCENE_FRAMESPEED 30
+	*SCENE_TICKSPERFRAME 160
+	*SCENE_BACKGROUND_STATIC 0.0000	0.0000	0.0000
+	*SCENE_AMBIENT_STATIC 1.0000	1.0000	1.0000
+}
+*MATERIAL_LIST {
+	*MATERIAL_COUNT 6
+	*MATERIAL 0 {
+		*MATERIAL_NAME "Material #2"
+		*MATERIAL_CLASS "Standard"
+		*MATERIAL_AMBIENT 1.0000	1.0000	1.0000
+		*MATERIAL_DIFFUSE 1.0000	1.0000	1.0000
+		*MATERIAL_SPECULAR 0.9000	0.9000	0.9000
+		*MATERIAL_SHINE 0.2500
+		*MATERIAL_SHINESTRENGTH 0.0500
+		*MATERIAL_TRANSPARENCY 0.0000
+		*MATERIAL_WIRESIZE 1.0000
+		*MATERIAL_SHADING Blinn
+		*MATERIAL_XP_FALLOFF 0.0000
+		*MATERIAL_SELFILLUM 0.0000
+		*MATERIAL_FALLOFF In
+		*MATERIAL_XP_TYPE Filter
+		*MAP_DIFFUSE {
+			*MAP_NAME "Map #1"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 1
+			*MAP_AMOUNT 1.0000
+			*BITMAP "C:\srcw32\highway35\sledhw35\common\maptestnck.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.0000
+			*UVW_V_OFFSET 0.0000
+			*UVW_U_TILING 7.4000
+			*UVW_V_TILING 10.2000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.0000
+			*UVW_ROW0 7.4000	0.0000	0.0000
+			*UVW_ROW1 0.0000	10.2000	0.0000
+			*UVW_ROW2 0.0000	0.0000	1.0000
+			*UVW_ROW3 -3.2000	-4.6000	0.0000
+			*UVW_BLUR 1.0000
+			*UVW_BLUR_OFFSET 0.0000
+			*UVW_NOUSE_AMT 1.0000
+			*UVW_NOISE_SIZE 1.0000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.0000
+			*BITMAP_FILTER Pyramidal
+		}
+	}
+	*MATERIAL 1 {
+		*MATERIAL_NAME "Material #3"
+		*MATERIAL_CLASS "Standard"
+		*MATERIAL_AMBIENT 1.0000	1.0000	1.0000
+		*MATERIAL_DIFFUSE 1.0000	1.0000	1.0000
+		*MATERIAL_SPECULAR 0.9000	0.9000	0.9000
+		*MATERIAL_SHINE 0.2500
+		*MATERIAL_SHINESTRENGTH 0.0500
+		*MATERIAL_TRANSPARENCY 0.0000
+		*MATERIAL_WIRESIZE 1.0000
+		*MATERIAL_SHADING Blinn
+		*MATERIAL_XP_FALLOFF 0.0000
+		*MATERIAL_SELFILLUM 0.0000
+		*MATERIAL_TWOSIDED
+		*MATERIAL_FALLOFF In
+		*MATERIAL_XP_TYPE Filter
+		*MAP_DIFFUSE {
+			*MAP_NAME "Map #2"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 1
+			*MAP_AMOUNT 1.0000
+			*BITMAP "C:\srcw32\highway35_3_21_03_keep\sledhw35\drag\wiref.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.0000
+			*UVW_V_OFFSET 0.0000
+			*UVW_U_TILING 1.0000
+			*UVW_V_TILING 1.0000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.0000
+			*UVW_ROW0 1.0000	0.0000	0.0000
+			*UVW_ROW1 0.0000	1.0000	0.0000
+			*UVW_ROW2 0.0000	0.0000	1.0000
+			*UVW_ROW3 0.0000	0.0000	0.0000
+			*UVW_BLUR 1.0000
+			*UVW_BLUR_OFFSET 0.0000
+			*UVW_NOUSE_AMT 1.0000
+			*UVW_NOISE_SIZE 1.0000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.0000
+			*BITMAP_FILTER Pyramidal
+		}
+		*MAP_OPACITY {
+			*MAP_NAME "Map #3"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 6
+			*MAP_AMOUNT 1.0000
+			*BITMAP "C:\srcw32\highway35_3_21_03_keep\sledhw35\drag\wirefa.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.0000
+			*UVW_V_OFFSET 0.0000
+			*UVW_U_TILING 1.0000
+			*UVW_V_TILING 1.0000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.0000
+			*UVW_ROW0 1.0000	0.0000	0.0000
+			*UVW_ROW1 0.0000	1.0000	0.0000
+			*UVW_ROW2 0.0000	0.0000	1.0000
+			*UVW_ROW3 0.0000	0.0000	0.0000
+			*UVW_BLUR 1.0000
+			*UVW_BLUR_OFFSET 0.0000
+			*UVW_NOUSE_AMT 1.0000
+			*UVW_NOISE_SIZE 1.0000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.0000
+			*BITMAP_FILTER Pyramidal
+		}
+	}
+	*MATERIAL 2 {
+		*MATERIAL_NAME "watermat"
+		*MATERIAL_CLASS "Standard"
+		*MATERIAL_AMBIENT 1.0000	1.0000	1.0000
+		*MATERIAL_DIFFUSE 1.0000	1.0000	1.0000
+		*MATERIAL_SPECULAR 0.9000	0.9000	0.9000
+		*MATERIAL_SHINE 0.2500
+		*MATERIAL_SHINESTRENGTH 0.0500
+		*MATERIAL_TRANSPARENCY 0.0000
+		*MATERIAL_WIRESIZE 1.0000
+		*MATERIAL_SHADING Blinn
+		*MATERIAL_XP_FALLOFF 0.0000
+		*MATERIAL_SELFILLUM 0.0000
+		*MATERIAL_FALLOFF In
+		*MATERIAL_XP_TYPE Filter
+		*MAP_DIFFUSE {
+			*MAP_NAME "watermat"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 1
+			*MAP_AMOUNT 1.0000
+			*BITMAP "C:\srcw32\highway35\sledhw35\drag\grnd02M.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.0000
+			*UVW_V_OFFSET 0.0000
+			*UVW_U_TILING 1.0000
+			*UVW_V_TILING 1.0000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.0000
+			*UVW_ROW0 1.0000	0.0000	0.0000
+			*UVW_ROW1 0.0000	1.0000	0.0000
+			*UVW_ROW2 0.0000	0.0000	1.0000
+			*UVW_ROW3 0.0000	0.0000	0.0000
+			*UVW_BLUR 1.0000
+			*UVW_BLUR_OFFSET 0.0000
+			*UVW_NOUSE_AMT 1.0000
+			*UVW_NOISE_SIZE 1.0000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.0000
+			*BITMAP_FILTER Pyramidal
+		}
+	}
+	*MATERIAL 3 {
+		*MATERIAL_NAME "lavamat"
+		*MATERIAL_CLASS "Standard"
+		*MATERIAL_AMBIENT 1.0000	1.0000	1.0000
+		*MATERIAL_DIFFUSE 1.0000	1.0000	1.0000
+		*MATERIAL_SPECULAR 0.9000	0.9000	0.9000
+		*MATERIAL_SHINE 0.2500
+		*MATERIAL_SHINESTRENGTH 0.0500
+		*MATERIAL_TRANSPARENCY 0.0000
+		*MATERIAL_WIRESIZE 1.0000
+		*MATERIAL_SHADING Blinn
+		*MATERIAL_XP_FALLOFF 0.0000
+		*MATERIAL_SELFILLUM 0.0000
+		*MATERIAL_FALLOFF In
+		*MATERIAL_XP_TYPE Filter
+		*MAP_DIFFUSE {
+			*MAP_NAME "lavamat"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 1
+			*MAP_AMOUNT 1.0000
+			*BITMAP "C:\srcw32\highway35\sledhw35\drag\magma2.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.0000
+			*UVW_V_OFFSET 0.0000
+			*UVW_U_TILING 1.0000
+			*UVW_V_TILING 1.0000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.0000
+			*UVW_ROW0 1.0000	0.0000	0.0000
+			*UVW_ROW1 0.0000	1.0000	0.0000
+			*UVW_ROW2 0.0000	0.0000	1.0000
+			*UVW_ROW3 0.0000	0.0000	0.0000
+			*UVW_BLUR 1.0000
+			*UVW_BLUR_OFFSET 0.0000
+			*UVW_NOUSE_AMT 1.0000
+			*UVW_NOISE_SIZE 1.0000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.0000
+			*BITMAP_FILTER Pyramidal
+		}
+	}
+	*MATERIAL 4 {
+		*MATERIAL_NAME "Material #1"
+		*MATERIAL_CLASS "Standard"
+		*MATERIAL_AMBIENT 1.0000	1.0000	1.0000
+		*MATERIAL_DIFFUSE 1.0000	1.0000	1.0000
+		*MATERIAL_SPECULAR 0.9000	0.9000	0.9000
+		*MATERIAL_SHINE 0.2500
+		*MATERIAL_SHINESTRENGTH 0.0500
+		*MATERIAL_TRANSPARENCY 0.0000
+		*MATERIAL_WIRESIZE 1.0000
+		*MATERIAL_SHADING Blinn
+		*MATERIAL_XP_FALLOFF 0.0000
+		*MATERIAL_SELFILLUM 0.0000
+		*MATERIAL_FALLOFF In
+		*MATERIAL_XP_TYPE Filter
+		*MAP_DIFFUSE {
+			*MAP_NAME "Map #1"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 1
+			*MAP_AMOUNT 1.0000
+			*BITMAP "C:\srcw32\highway35\sledhw35\common\maptestnck.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.1700
+			*UVW_V_OFFSET 0.0000
+			*UVW_U_TILING 3.4000
+			*UVW_V_TILING 6.8000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.8029
+			*UVW_ROW0 1.6407	3.3979	-0.7193
+			*UVW_ROW1 0.2485	5.4091	0.6016
+			*UVW_ROW2 2.9676	-2.3315	0.3473
+			*UVW_ROW3 -2.2073	-3.3154	0.5075
+			*UVW_BLUR 1.0000
+			*UVW_BLUR_OFFSET 0.0000
+			*UVW_NOUSE_AMT 1.0000
+			*UVW_NOISE_SIZE 1.0000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.0000
+			*BITMAP_FILTER Pyramidal
+		}
+	}
+	*MATERIAL 5 {
+		*MATERIAL_NAME "Material #9"
+		*MATERIAL_CLASS "Standard"
+		*MATERIAL_AMBIENT 1.0000	1.0000	1.0000
+		*MATERIAL_DIFFUSE 1.0000	1.0000	1.0000
+		*MATERIAL_SPECULAR 0.9000	0.9000	0.9000
+		*MATERIAL_SHINE 0.2500
+		*MATERIAL_SHINESTRENGTH 0.0500
+		*MATERIAL_TRANSPARENCY 0.0000
+		*MATERIAL_WIRESIZE 1.0000
+		*MATERIAL_SHADING Blinn
+		*MATERIAL_XP_FALLOFF 0.0000
+		*MATERIAL_SELFILLUM 0.0000
+		*MATERIAL_TWOSIDED
+		*MATERIAL_FALLOFF In
+		*MATERIAL_XP_TYPE Filter
+		*MAP_DIFFUSE {
+			*MAP_NAME "Map #1"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 1
+			*MAP_AMOUNT 1.0000
+			*BITMAP "C:\srcw32\highway35\sledhw35\common\maptestnck.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.0000
+			*UVW_V_OFFSET 0.0000
+			*UVW_U_TILING 7.4000
+			*UVW_V_TILING 10.2000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.0000
+			*UVW_ROW0 7.4000	0.0000	0.0000
+			*UVW_ROW1 0.0000	10.2000	0.0000
+			*UVW_ROW2 0.0000	0.0000	1.0000
+			*UVW_ROW3 -3.2000	-4.6000	0.0000
+			*UVW_BLUR 1.0000
+			*UVW_BLUR_OFFSET 0.0000
+			*UVW_NOUSE_AMT 1.0000
+			*UVW_NOISE_SIZE 1.0000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.0000
+			*BITMAP_FILTER Pyramidal
+		}
+	}
+}
+*GEOMOBJECT {
+	*NODE_ID "0a614cb0"
+	*NODE_NAME "table"
+	*NODE_TM {
+		*NODE_NAME "table"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 0.0000	0.0000	0.0000
+		*TM_POS 0.0000	0.0000	0.0000
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+0e§Â    €º­Â0e§B×¬ZA€º­B      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "0a6137c0"
+	*NODE_NAME "chk1"
+	*NODE_TM {
+		*NODE_NAME "chk1"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.7826	-0.6225	-0.0000
+		*TM_ROW1 0.6225	0.7826	0.0000
+		*TM_ROW2 -0.0000	-0.0000	1.0000
+		*TM_ROW3 -20.3523	-73.5893	16.4035
+		*TM_POS -20.3523	-73.5893	16.4035
+		*TM_ROTAXIS -0.0000	0.0000	1.0000
+		*TM_ROTANGLE 0.6720
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+òUßÁ8ðAAos¡ÂšLÁÎ““Aè„Â    ´’ü­    R  ÿÿÿÿ  Jm  þÿ´’ü­þÿ  RÿÿÿÿÿÿÿÿJm		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0a617540"
+	*NODE_NAME "chk2i"
+	*NODE_TM {
+		*NODE_NAME "chk2i"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -8.9611	-54.1359	12.1369
+		*TM_POS -8.9611	-54.1359	12.1369
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+Ö|xÁ´0BAŠhÂ†À´“AÎøHÂ      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0a61cbf0"
+	*NODE_NAME "chk3r"
+	*NODE_TM {
+		*NODE_NAME "chk3r"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -19.9560	-36.1873	11.6222
+		*TM_POS -19.9560	-36.1873	11.6222
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+à3ÔÁhô9A,R ÂÌ/VÁæ•Ap-Â      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0a61c8a0"
+	*NODE_NAME "chk4arm"
+	*NODE_TM {
+		*NODE_NAME "chk4arm"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 14.5047	-14.9034	11.1826
+		*TM_POS 14.5047	-14.9034	11.1826
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+Ÿîý@îë2Aû^–Á¢—¨A¨ŒA+0Á      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0d87d080"
+	*NODE_NAME "chk7irz"
+	*NODE_TM {
+		*NODE_NAME "chk7irz"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -0.6397	26.8927	11.1826
+		*TM_POS -0.6397	26.8927	11.1826
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+½°æÀîë2A{ÿ·A-¿½@¨ŒAóHöA      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0d878170"
+	*NODE_NAME "chk9arm"
+	*NODE_TM {
+		*NODE_NAME "chk9arm"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 7.0815	53.7352	11.1826
+		*TM_POS 7.0815	53.7352	11.1826
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+P?îë2A„^GBºiZA¨ŒA@ƒfB      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0d87b310"
+	*NODE_NAME "chk5y"
+	*NODE_TM {
+		*NODE_NAME "chk5y"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -2.7572	0.5846	11.6222
+		*TM_POS -2.7572	0.5846	11.6222
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+ž9Áhô9Af»SÀZùs@æ•A.H@      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0d87e410"
+	*NODE_NAME "chk8r"
+	*NODE_TM {
+		*NODE_NAME "chk8r"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -12.8598	41.5901	11.6222
+		*TM_POS -12.8598	41.5901	11.6222
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+În›Áhô9AèÉBOKÉÀæ•A¤î5B      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0d8792a0"
+	*NODE_NAME "chk8ar"
+	*NODE_TM {
+		*NODE_NAME "chk8ar"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 5.3294	41.1335	11.1826
+		*TM_POS 5.3294	41.1335	11.1826
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+üµž¿îë2AMöB6a>A¨ŒA	4B      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0d87acb0"
+	*NODE_NAME "chk9r"
+	*NODE_TM {
+		*NODE_NAME "chk9r"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -14.0094	52.5317	11.1826
+		*TM_POS -14.0094	52.5317	11.1826
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+(¡¤Áîë2AŽBB·îÀ¨ŒAØ²aB      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0d878cb0"
+	*NODE_NAME "chk12r"
+	*NODE_TM {
+		*NODE_NAME "chk12r"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -4.6855	66.1782	11.1826
+		*TM_POS -4.6855	66.1782	11.1826
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+¤4Áîë2A"$yBŒ"ñ?¨ŒAo$ŒB      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0d87fbe0"
+	*NODE_NAME "waterobj"
+	*NODE_TM {
+		*NODE_NAME "waterobj"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.9969	0.0000	0.0785
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 -0.0785	0.0000	0.9969
+		*TM_ROW3 26.0935	-55.8592	6.3439
+		*TM_POS 26.0935	-55.8592	6.3439
+		*TM_ROTAXIS -0.0000	1.0000	-0.0000
+		*TM_ROTANGLE 0.0785
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+öóÙ@-þ›@»Í„Âä
+3BƒzAD5Â&    ÿÿìE  &  ÿÿÿÿìEÿÿ  º  Øûÿÿ    ºÿÿØûÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d832640"
+	*NODE_NAME "lavaobj"
+	*NODE_TM {
+		*NODE_NAME "lavaobj"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.9962	0.0000	0.0872
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 -0.0872	0.0000	0.9962
+		*TM_ROW3 28.5756	-80.3380	7.2469
+		*TM_POS 28.5756	-80.3380	7.2469
+		*TM_ROTAXIS -0.0000	1.0000	-0.0000
+		*TM_ROTANGLE 0.0873
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+Gì¾@‰mª@„¨¹Â]"JBä„A ±‡Â½    ÿÿ'W  ½  ÿÿÿÿ'Wÿÿ  ×¨  Aüÿÿ    ×¨ÿÿAüÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 3
+}
+*GEOMOBJECT {
+	*NODE_ID "0d833860"
+	*NODE_NAME "hill1"
+	*NODE_TM {
+		*NODE_NAME "hill1"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -52.1619	-66.1129	3.3365
+		*TM_POS -52.1619	-66.1129	3.3365
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 482
+		*MESH_NUMFACES 960
+		*MESH_VERTEX_LIST {
+Â²…ÂÌœ5Á¦™¡ÂæÂ0AÙ³MÂÿÿÿÿÿ‰ýø˜ {‰ý}˜qv‰ý—r‰ýÂ”Wn‰ý§‘<k‰ýßíh‰ý‰g‰ýÞ„g‰ýÿg‰ý {íh‰ýqv<k‰ýrWn‰ýWnr‰ý<kqv‰ýíh {‰ýgÿ‰ýgÞ„‰ýg‰‰ýíhß‰ý<k§‘‰ýWnÂ”‰ýr—‰ýqv}˜‰ý {ø˜‰ýÿ}˜‰ýÞ„—‰ý‰Â”‰ýß§‘‰ý§‘ß‰ýÂ”‰‰ý—Þ„‰ý}˜ÿ@öû°qv@ö
+°@m@ö@­Èd@ö¹¨\]@ö¢¢EW@ö6›¾R@ö¾’ôO@ö‰O@öÿôO@öqv¾R@ö@mEW@öÈd\]@ö\]Èd@öEW@m@ö¾Rqv@öôOÿ@öO‰@öôO¾’@ö¾R6›@öEW¢¢@ö\]¹¨@öÈd@­@ö@m
+°@öqvû°@öÿ
+°@ö‰@­@ö¾’¹¨@ö6›¢¢@ö¢¢6›@ö¹¨¾’@ö@­‰@ö
+°ÿlêÇrlê¾ÅÈdlê²Á}Xlê »¶MlêH²ÞDlê§L>lê6›@:lêßâ8lêÿ@:lêrL>lêÈdÞDlê}X¶Mlê¶M}XlêÞDÈdlêL>rlê@:ÿlêâ8ßlê@:6›lêL>§lêÞDH²lê¶M »lê}X²ÁlêÈd¾ÅlêrÇlêÿ¾Ålêß²Álê6› »lê§H²lêH²§lê »6›lê²Áßlê¾ÅÿÚÚWnÚÄØ\]ÚÓ¶MÚ@Ëÿ?Úÿ¿¾4ÚH²a,Ú¢¢:'Ú§‘}%Úÿ:'ÚWna,Ú\]¾4Ú¶Mÿ?Úÿ?¶MÚ¾4\]Úa,WnÚ:'ÿÚ}%§‘Ú:'¢¢Úa,H²Ú¾4ÿ¿Úÿ?@ËÚ¶MÓÚ\]ÄØÚWnÚÚÿÄØÚ§‘ÓÚ¢¢@ËÚH²ÿ¿Úÿ¿H²Ú@Ë¢¢ÚÓ§‘ÚÄØÿÇlê<kÇaèEWÇRâÞDÇ}Ø¾4Ç@Ë'Ç »¬Ç¹¨ÇÂ”’ÇÿÇ<k¬ÇEW'ÇÞD¾4Ç¾4ÞDÇ'EWÇ¬<kÇÿÇ’Â”Ç¹¨Ç¬ »Ç'@ËÇ¾4}ØÇÞDRâÇEWaèÇ<klêÇÿaèÇÂ”RâÇ¹¨}ØÇ »@ËÇ@Ë »Ç}Ø¹¨ÇRâÂ”Çaèÿû°@öíhû°ûó¾Rû°@íL>û°Râa,û°Ó¬û°²Á¾û°@­û°—¾	û°ÿû°íh¾û°¾R¬û°L>a,û°a,L>û°¬¾Rû°¾íhû°ÿû°¾	—û°@­û°¾²Áû°¬Óû°a,Râû°L>@íû°¾Rûóû°íh@öû°ÿûóû°—@íû°@­Râû°²ÁÓû°Ó²Áû°Râ@­û°@í—û°ûóÿø˜‰ýgø˜ûôOø˜ûó@:ø˜aè:'ø˜ÄØø˜¾Åø˜
+°ßø˜}˜uø˜ÿßø˜gø˜ôOø˜@::'ø˜:'@:ø˜ôOø˜gø˜ßÿø˜u}˜ø˜ß
+°ø˜¾Åø˜ÄØø˜:'aèø˜@:ûóø˜ôOûø˜g‰ýø˜ÿûø˜}˜ûóø˜
+°aèø˜¾ÅÄØø˜ÄØ¾Åø˜aè
+°ø˜ûó}˜ø˜ûÿÿÿÿgÿ‰ýOÿ@öâ8ÿlê}%ÿÚ’ÿÇ¾	ÿû°uÿø˜  ÿÿuÿg¾	ÿO’ÿâ8}%ÿ}%â8ÿ’Oÿ¾	gÿuÿÿ  ø˜ÿuû°ÿ¾	Çÿ’Úÿ}%lêÿâ8@öÿO‰ýÿgÿÿÿÿ‰ýÿø˜@öÿû°lêÿÇÚÿÚÇÿlêû°ÿ@öø˜ÿ‰ýÿg‰ýggûôOgûó@:gaè:'gÄØg¾Åg
+°ßg}˜ugÿßgggôOg@::'g:'@:gôOgggßÿgu}˜gß
+°g¾ÅgÄØg:'aèg@:ûógôOûgg‰ýgÿûg}˜ûóg
+°aèg¾ÅÄØgÄØ¾Ågaè
+°gûó}˜gûÿO@öíhOûó¾RO@íL>ORâa,OÓ¬O²Á¾O@­O—¾	OÿOíh¾O¾R¬OL>a,Oa,L>O¬¾RO¾íhOÿO¾	—O@­O¾²ÁO¬ÓOa,RâOL>@íO¾RûóOíh@öOÿûóO—@íO@­RâO²ÁÓOÓ²ÁORâ@­O@í—Oûóÿâ8lê<kâ8aèEWâ8RâÞDâ8}Ø¾4â8@Ë'â8 »¬â8¹¨â8Â”’â8ÿâ8<k¬â8EW'â8ÞD¾4â8¾4ÞDâ8'EWâ8¬<kâ8ÿâ8’Â”â8¹¨â8¬ »â8'@Ëâ8¾4}Øâ8ÞDRââ8EWaèâ8<klêâ8ÿaèâ8Â”Rââ8¹¨}Øâ8 »@Ëâ8@Ë »â8}Ø¹¨â8RâÂ”â8aèÿ}%ÚWn}%ÄØ\]}%Ó¶M}%@Ëÿ?}%ÿ¿¾4}%H²a,}%¢¢:'}%§‘}%}%ÿ:'}%Wna,}%\]¾4}%¶Mÿ?}%ÿ?¶M}%¾4\]}%a,Wn}%:'ÿ}%}%§‘}%:'¢¢}%a,H²}%¾4ÿ¿}%ÿ?@Ë}%¶MÓ}%\]ÄØ}%WnÚ}%ÿÄØ}%§‘Ó}%¢¢@Ë}%H²ÿ¿}%ÿ¿H²}%@Ë¢¢}%Ó§‘}%ÄØÿ’Çr’¾ÅÈd’²Á}X’ »¶M’H²ÞD’§L>’6›@:’ßâ8’ÿ@:’rL>’ÈdÞD’}X¶M’¶M}X’ÞDÈd’L>r’@:ÿ’â8ß’@:6›’L>§’ÞDH²’¶M »’}X²Á’Èd¾Å’rÇ’ÿ¾Å’ß²Á’6› »’§H²’H²§’ »6›’²Áß’¾Åÿ¾	û°qv¾	
+°@m¾	@­Èd¾	¹¨\]¾	¢¢EW¾	6›¾R¾	¾’ôO¾	‰O¾	ÿôO¾	qv¾R¾	@mEW¾	Èd\]¾	\]Èd¾	EW@m¾	¾Rqv¾	ôOÿ¾	O‰¾	ôO¾’¾	¾R6›¾	EW¢¢¾	\]¹¨¾	Èd@­¾	@m
+°¾	qvû°¾	ÿ
+°¾	‰@­¾	¾’¹¨¾	6›¢¢¾	¢¢6›¾	¹¨¾’¾	@­‰¾	
+°ÿuø˜ {u}˜qvu—ruÂ”Wnu§‘<kußíhu‰guÞ„guÿgu {íhuqv<kurWnuWnru<kqvuíh {ugÿugÞ„ug‰uíhßu<k§‘uWnÂ”ur—uqv}˜u {ø˜uÿ}˜uÞ„—u‰Â”uß§‘u§‘ßuÂ”‰u—Þ„u}˜ÿ  ÿ		}
+		*MESH_FACE_LIST {
+                                      	    	 
+    
+                                                                                                                    ! "   "    " #   #    # $   $    $ %   %    % &   &    & '   '    ' (   (    ( )   ) 	  	 ) *  	 * 
+  
+ * +  
+ +    + ,   ,    , -   -    - .   .    . /   /    / 0   0    0 1   1    1 2   2    2 3   3    3 4   4    4 5   5    5 6   6    6 7   7    7 8   8    8 9   9    9 :   :    : ;   ;    ; <   <    < =   =    = >   >    > ?   ?    ? @   @      @ !    !   ! A B  ! B "  " B C  " C #  # C D  # D $  $ D E  $ E %  % E F  % F &  & F G  & G '  ' G H  ' H (  ( H I  ( I )  ) I J  ) J *  * J K  * K +  + K L  + L ,  , L M  , M -  - M N  - N .  . N O  . O /  / O P  / P 0  0 P Q  0 Q 1  1 Q R  1 R 2  2 R S  2 S 3  3 S T  3 T 4  4 T U  4 U 5  5 U V  5 V 6  6 V W  6 W 7  7 W X  7 X 8  8 X Y  8 Y 9  9 Y Z  9 Z :  : Z [  : [ ;  ; [ \  ; \ <  < \ ]  < ] =  = ] ^  = ^ >  > ^ _  > _ ?  ? _ `  ? ` @  @ ` A  @ A !  A a b  A b B  B b c  B c C  C c d  C d D  D d e  D e E  E e f  E f F  F f g  F g G  G g h  G h H  H h i  H i I  I i j  I j J  J j k  J k K  K k l  K l L  L l m  L m M  M m n  M n N  N n o  N o O  O o p  O p P  P p q  P q Q  Q q r  Q r R  R r s  R s S  S s t  S t T  T t u  T u U  U u v  U v V  V v w  V w W  W w x  W x X  X x y  X y Y  Y y z  Y z Z  Z z {  Z { [  [ { |  [ | \  \ | }  \ } ]  ] } ~  ] ~ ^  ^ ~   ^  _  _  €  _ € `  ` € a  ` a A  a  ‚  a ‚ b  b ‚ ƒ  b ƒ c  c ƒ „  c „ d  d „ …  d … e  e … †  e † f  f † ‡  f ‡ g  g ‡ ˆ  g ˆ h  h ˆ ‰  h ‰ i  i ‰ Š  i Š j  j Š ‹  j ‹ k  k ‹ Œ  k Œ l  l Œ   l  m  m  Ž  m Ž n  n Ž   n  o  o    o  p  p  ‘  p ‘ q  q ‘ ’  q ’ r  r ’ “  r “ s  s “ ”  s ” t  t ” •  t • u  u • –  u – v  v – —  v — w  w — ˜  w ˜ x  x ˜ ™  x ™ y  y ™ š  y š z  z š ›  z › {  { › œ  { œ |  | œ   |  }  }  ž  } ž ~  ~ ž Ÿ  ~ Ÿ    Ÿ       €  €     €  a   ¡ ¢   ¢ ‚  ‚ ¢ £  ‚ £ ƒ  ƒ £ ¤  ƒ ¤ „  „ ¤ ¥  „ ¥ …  … ¥ ¦  … ¦ †  † ¦ §  † § ‡  ‡ § ¨  ‡ ¨ ˆ  ˆ ¨ ©  ˆ © ‰  ‰ © ª  ‰ ª Š  Š ª «  Š « ‹  ‹ « ¬  ‹ ¬ Œ  Œ ¬ ­  Œ ­    ­ ®   ® Ž  Ž ® ¯  Ž ¯    ¯ °   °    ° ±   ± ‘  ‘ ± ²  ‘ ² ’  ’ ² ³  ’ ³ “  “ ³ ´  “ ´ ”  ” ´ µ  ” µ •  • µ ¶  • ¶ –  – ¶ ·  – · —  — · ¸  — ¸ ˜  ˜ ¸ ¹  ˜ ¹ ™  ™ ¹ º  ™ º š  š º »  š » ›  › » ¼  › ¼ œ  œ ¼ ½  œ ½    ½ ¾   ¾ ž  ž ¾ ¿  ž ¿ Ÿ  Ÿ ¿ À  Ÿ À      À ¡    ¡   ¡ Á Â  ¡ Â ¢  ¢ Â Ã  ¢ Ã £  £ Ã Ä  £ Ä ¤  ¤ Ä Å  ¤ Å ¥  ¥ Å Æ  ¥ Æ ¦  ¦ Æ Ç  ¦ Ç §  § Ç È  § È ¨  ¨ È É  ¨ É ©  © É Ê  © Ê ª  ª Ê Ë  ª Ë «  « Ë Ì  « Ì ¬  ¬ Ì Í  ¬ Í ­  ­ Í Î  ­ Î ®  ® Î Ï  ® Ï ¯  ¯ Ï Ð  ¯ Ð °  ° Ð Ñ  ° Ñ ±  ± Ñ Ò  ± Ò ²  ² Ò Ó  ² Ó ³  ³ Ó Ô  ³ Ô ´  ´ Ô Õ  ´ Õ µ  µ Õ Ö  µ Ö ¶  ¶ Ö ×  ¶ × ·  · × Ø  · Ø ¸  ¸ Ø Ù  ¸ Ù ¹  ¹ Ù Ú  ¹ Ú º  º Ú Û  º Û »  » Û Ü  » Ü ¼  ¼ Ü Ý  ¼ Ý ½  ½ Ý Þ  ½ Þ ¾  ¾ Þ ß  ¾ ß ¿  ¿ ß à  ¿ à À  À à Á  À Á ¡  Á á â  Á â Â  Â â ã  Â ã Ã  Ã ã ä  Ã ä Ä  Ä ä å  Ä å Å  Å å æ  Å æ Æ  Æ æ ç  Æ ç Ç  Ç ç è  Ç è È  È è é  È é É  É é ê  É ê Ê  Ê ê ë  Ê ë Ë  Ë ë ì  Ë ì Ì  Ì ì í  Ì í Í  Í í î  Í î Î  Î î ï  Î ï Ï  Ï ï ð  Ï ð Ð  Ð ð ñ  Ð ñ Ñ  Ñ ñ ò  Ñ ò Ò  Ò ò ó  Ò ó Ó  Ó ó ô  Ó ô Ô  Ô ô õ  Ô õ Õ  Õ õ ö  Õ ö Ö  Ö ö ÷  Ö ÷ ×  × ÷ ø  × ø Ø  Ø ø ù  Ø ù Ù  Ù ù ú  Ù ú Ú  Ú ú û  Ú û Û  Û û ü  Û ü Ü  Ü ü ý  Ü ý Ý  Ý ý þ  Ý þ Þ  Þ þ ÿ  Þ ÿ ß  ß ÿ   ß  à  à  á  à á Á  á  á â  â  â ã  ã  ã ä  ä  ä å  å  å æ  æ  æ ç  ç  ç è  è 	 è 	é  é 	
+ é 
+ê  ê 
+ ê ë  ë  ë ì  ì  ì í  í  í î  î  î ï  ï  ï ð  ð  ð ñ  ñ  ñ ò  ò  ò ó  ó  ó ô  ô  ô õ  õ  õ ö  ö  ö ÷  ÷  ÷ ø  ø  ø ù  ù  ù ú  ú  ú û  û  û ü  ü  ü ý  ý  ý þ  þ  þ ÿ  ÿ   ÿ        á  !" " "# # #$ $ $% % %& & &' ' '( ( () )	 	)* 	*
+ 
+*+ 
++ +, , ,- - -. . ./ / /0 0 01 1 12 2 23 3 34 4 45 5 56 6 67 7 78 8 89 9 9: : :; ; ;< < <= = => > >? ? ?@ @   @!  ! !AB !B" "BC "C# #CD #D$ $DE $E% %EF %F& &FG &G' 'GH 'H( (HI (I) )IJ )J* *JK *K+ +KL +L, ,LM ,M- -MN -N. .NO .O/ /OP /P0 0PQ 0Q1 1QR 1R2 2RS 2S3 3ST 3T4 4TU 4U5 5UV 5V6 6VW 6W7 7WX 7X8 8XY 8Y9 9YZ 9Z: :Z[ :[; ;[\ ;\< <\] <]= =]^ =^> >^_ >_? ?_` ?`@ @`A @A! Aab AbB Bbc BcC Ccd CdD Dde DeE Eef EfF Ffg FgG Ggh GhH Hhi HiI Iij IjJ Jjk JkK Kkl KlL Llm LmM Mmn MnN Nno NoO Oop OpP Ppq PqQ Qqr QrR Rrs RsS Sst StT Ttu TuU Uuv UvV Vvw VwW Wwx WxX Xxy XyY Yyz YzZ Zz{ Z{[ [{| [|\ \|} \}] ]}~ ]~^ ^~ ^_ _€ _€` `€a `aA a‚ a‚b b‚ƒ bƒc cƒ„ c„d d„… d…e e…† e†f f†‡ f‡g g‡ˆ gˆh hˆ‰ h‰i i‰Š iŠj jŠ‹ j‹k k‹Œ kŒl lŒ lm mŽ mŽn nŽ no o op p‘ p‘q q‘’ q’r r’“ r“s s“” s”t t”• t•u u•– u–v v–— v—w w—˜ w˜x x˜™ x™y y™š yšz zš› z›{ {›œ {œ| |œ |} }ž }ž~ ~žŸ ~Ÿ Ÿ   € €  €a ¡¢ ¢‚ ‚¢£ ‚£ƒ ƒ£¤ ƒ¤„ „¤¥ „¥… …¥¦ …¦† †¦§ †§‡ ‡§¨ ‡¨ˆ ˆ¨© ˆ©‰ ‰©ª ‰ªŠ Šª« Š«‹ ‹«¬ ‹¬Œ Œ¬­ Œ­ ­® ®Ž Ž®¯ Ž¯ ¯° ° °± ±‘ ‘±² ‘²’ ’²³ ’³“ “³´ “´” ”´µ ”µ• •µ¶ •¶– –¶· –·— —·¸ —¸˜ ˜¸¹ ˜¹™ ™¹º ™ºš šº» š»› ›»¼ ›¼œ œ¼½ œ½ ½¾ ¾ž ž¾¿ ž¿Ÿ Ÿ¿À ŸÀ   À¡  ¡ ¡ÁÂ ¡Â¢ ¢ÂÃ ¢Ã£ £ÃÄ £Ä¤ ¤ÄÅ ¤Å¥ ¥ÅÆ ¥Æ¦ ¦ÆÇ ¦Ç§ §ÇÈ §È¨ ¨ÈÉ ¨É© ©ÉÊ ©Êª ªÊË ªË« «ËÌ «Ì¬ ¬ÌÍ ¬Í­ ­ÍÎ ­Î® ®ÎÏ ®Ï¯ ¯ÏÐ ¯Ð° °ÐÑ °Ñ± ±ÑÒ ±Ò² ²ÒÓ ²Ó³ ³ÓÔ ³Ô´ ´ÔÕ ´Õµ µÕÖ µÖ¶ ¶Ö× ¶×· ·×Ø ·Ø¸ ¸ØÙ ¸Ù¹ ¹ÙÚ ¹Úº ºÚÛ ºÛ» »ÛÜ »Ü¼ ¼ÜÝ ¼Ý½ ½ÝÞ ½Þ¾ ¾Þß ¾ß¿ ¿ßà ¿àÀ ÀàÁ ÀÁ¡ áÂÁ áÃÂ áÄÃ áÅÄ áÆÅ áÇÆ áÈÇ áÉÈ áÊÉ áËÊ áÌË áÍÌ áÎÍ áÏÎ áÐÏ áÑÐ áÒÑ áÓÒ áÔÓ áÕÔ áÖÕ á×Ö áØ× áÙØ áÚÙ áÛÚ áÜÛ áÝÜ áÞÝ áßÞ áàß áÁà 		}
+		*MESH_NUMTVERTEX 559
+		*MESH_TVERTLIST {
+    xÿV2  €?  €?  ÿÿ  ÿïÿÿïÿÿÿÿÿïÿÿÿÿÿïÿÿÿÿÿïÿÿÿÿ'ÿïÿ'ÿÿÿ/ÿïÿ/ÿÿÿ7ÿïÿ7ÿÿÿ?ÿïÿ?ÿÿÿGÿïÿGÿÿÿOÿïÿOÿÿÿWÿïÿWÿÿÿ_ÿïÿ_ÿÿÿgÿïÿgÿÿÿoÿïÿoÿÿÿwÿïÿwÿÿÿÿïÿÿÿÿ‡ÿïÿ‡ÿÿÿÿïÿÿÿÿ—ÿïÿ—ÿÿÿŸÿïÿŸÿÿÿ§ÿïÿ§ÿÿÿ¯ÿïÿ¯ÿÿÿ·ÿïÿ·ÿÿÿ¿ÿïÿ¿ÿÿÿÇÿïÿÇÿÿÿÏÿïÿÏÿÿÿ×ÿïÿ×ÿÿÿßÿïÿßÿÿÿçÿïÿçÿÿÿïÿïÿïÿÿÿ÷ÿïÿ÷ÿÿÿÿÿï  ÿßÿÿßÿÿßÿÿßÿÿßÿ'ÿßÿ/ÿßÿ7ÿßÿ?ÿßÿGÿßÿOÿßÿWÿßÿ_ÿßÿgÿßÿoÿßÿwÿßÿÿßÿ‡ÿßÿÿßÿ—ÿßÿŸÿßÿ§ÿßÿ¯ÿßÿ·ÿßÿ¿ÿßÿÇÿßÿÏÿßÿ×ÿßÿßÿßÿçÿßÿïÿßÿ÷ÿßÿÿÿß  ÿÏÿÿÏÿÿÏÿÿÏÿÿÏÿ'ÿÏÿ/ÿÏÿ7ÿÏÿ?ÿÏÿGÿÏÿOÿÏÿWÿÏÿ_ÿÏÿgÿÏÿoÿÏÿwÿÏÿÿÏÿ‡ÿÏÿÿÏÿ—ÿÏÿŸÿÏÿ§ÿÏÿ¯ÿÏÿ·ÿÏÿ¿ÿÏÿÇÿÏÿÏÿÏÿ×ÿÏÿßÿÏÿçÿÏÿïÿÏÿ÷ÿÏÿÿÿÏ  ÿ¿ÿÿ¿ÿÿ¿ÿÿ¿ÿÿ¿ÿ'ÿ¿ÿ/ÿ¿ÿ7ÿ¿ÿ?ÿ¿ÿGÿ¿ÿOÿ¿ÿWÿ¿ÿ_ÿ¿ÿgÿ¿ÿoÿ¿ÿwÿ¿ÿÿ¿ÿ‡ÿ¿ÿÿ¿ÿ—ÿ¿ÿŸÿ¿ÿ§ÿ¿ÿ¯ÿ¿ÿ·ÿ¿ÿ¿ÿ¿ÿÇÿ¿ÿÏÿ¿ÿ×ÿ¿ÿßÿ¿ÿçÿ¿ÿïÿ¿ÿ÷ÿ¿ÿÿÿ¿  ÿ¯ÿÿ¯ÿÿ¯ÿÿ¯ÿÿ¯ÿ'ÿ¯ÿ/ÿ¯ÿ7ÿ¯ÿ?ÿ¯ÿGÿ¯ÿOÿ¯ÿWÿ¯ÿ_ÿ¯ÿgÿ¯ÿoÿ¯ÿwÿ¯ÿÿ¯ÿ‡ÿ¯ÿÿ¯ÿ—ÿ¯ÿŸÿ¯ÿ§ÿ¯ÿ¯ÿ¯ÿ·ÿ¯ÿ¿ÿ¯ÿÇÿ¯ÿÏÿ¯ÿ×ÿ¯ÿßÿ¯ÿçÿ¯ÿïÿ¯ÿ÷ÿ¯ÿÿÿ¯  ÿŸÿÿŸÿÿŸÿÿŸÿÿŸÿ'ÿŸÿ/ÿŸÿ7ÿŸÿ?ÿŸÿGÿŸÿOÿŸÿWÿŸÿ_ÿŸÿgÿŸÿoÿŸÿwÿŸÿÿŸÿ‡ÿŸÿÿŸÿ—ÿŸÿŸÿŸÿ§ÿŸÿ¯ÿŸÿ·ÿŸÿ¿ÿŸÿÇÿŸÿÏÿŸÿ×ÿŸÿßÿŸÿçÿŸÿïÿŸÿ÷ÿŸÿÿÿŸ  ÿÿÿÿÿÿÿÿÿÿ'ÿÿ/ÿÿ7ÿÿ?ÿÿGÿÿOÿÿWÿÿ_ÿÿgÿÿoÿÿwÿÿÿÿ‡ÿÿÿÿ—ÿÿŸÿÿ§ÿÿ¯ÿÿ·ÿÿ¿ÿÿÇÿÿÏÿÿ×ÿÿßÿÿçÿÿïÿÿ÷ÿÿÿÿ  ÿÿÿÿÿÿÿÿÿÿ'ÿÿ/ÿÿ7ÿÿ?ÿÿGÿÿOÿÿWÿÿ_ÿÿgÿÿoÿÿwÿÿÿÿ‡ÿÿÿÿ—ÿÿŸÿÿ§ÿÿ¯ÿÿ·ÿÿ¿ÿÿÇÿÿÏÿÿ×ÿÿßÿÿçÿÿïÿÿ÷ÿÿÿÿ  ÿoÿÿoÿÿoÿÿoÿÿoÿ'ÿoÿ/ÿoÿ7ÿoÿ?ÿoÿGÿoÿOÿoÿWÿoÿ_ÿoÿgÿoÿoÿoÿwÿoÿÿoÿ‡ÿoÿÿoÿ—ÿoÿŸÿoÿ§ÿoÿ¯ÿoÿ·ÿoÿ¿ÿoÿÇÿoÿÏÿoÿ×ÿoÿßÿoÿçÿoÿïÿoÿ÷ÿoÿÿÿo  ÿ_ÿÿ_ÿÿ_ÿÿ_ÿÿ_ÿ'ÿ_ÿ/ÿ_ÿ7ÿ_ÿ?ÿ_ÿGÿ_ÿOÿ_ÿWÿ_ÿ_ÿ_ÿgÿ_ÿoÿ_ÿwÿ_ÿÿ_ÿ‡ÿ_ÿÿ_ÿ—ÿ_ÿŸÿ_ÿ§ÿ_ÿ¯ÿ_ÿ·ÿ_ÿ¿ÿ_ÿÇÿ_ÿÏÿ_ÿ×ÿ_ÿßÿ_ÿçÿ_ÿïÿ_ÿ÷ÿ_ÿÿÿ_  ÿOÿÿOÿÿOÿÿOÿÿOÿ'ÿOÿ/ÿOÿ7ÿOÿ?ÿOÿGÿOÿOÿOÿWÿOÿ_ÿOÿgÿOÿoÿOÿwÿOÿÿOÿ‡ÿOÿÿOÿ—ÿOÿŸÿOÿ§ÿOÿ¯ÿOÿ·ÿOÿ¿ÿOÿÇÿOÿÏÿOÿ×ÿOÿßÿOÿçÿOÿïÿOÿ÷ÿOÿÿÿO  ÿ?ÿÿ?ÿÿ?ÿÿ?ÿÿ?ÿ'ÿ?ÿ/ÿ?ÿ7ÿ?ÿ?ÿ?ÿGÿ?ÿOÿ?ÿWÿ?ÿ_ÿ?ÿgÿ?ÿoÿ?ÿwÿ?ÿÿ?ÿ‡ÿ?ÿÿ?ÿ—ÿ?ÿŸÿ?ÿ§ÿ?ÿ¯ÿ?ÿ·ÿ?ÿ¿ÿ?ÿÇÿ?ÿÏÿ?ÿ×ÿ?ÿßÿ?ÿçÿ?ÿïÿ?ÿ÷ÿ?ÿÿÿ?  ÿ/ÿÿ/ÿÿ/ÿÿ/ÿÿ/ÿ'ÿ/ÿ/ÿ/ÿ7ÿ/ÿ?ÿ/ÿGÿ/ÿOÿ/ÿWÿ/ÿ_ÿ/ÿgÿ/ÿoÿ/ÿwÿ/ÿÿ/ÿ‡ÿ/ÿÿ/ÿ—ÿ/ÿŸÿ/ÿ§ÿ/ÿ¯ÿ/ÿ·ÿ/ÿ¿ÿ/ÿÇÿ/ÿÏÿ/ÿ×ÿ/ÿßÿ/ÿçÿ/ÿïÿ/ÿ÷ÿ/ÿÿÿ/  ÿÿÿÿÿÿÿÿÿÿ'ÿÿ/ÿÿ7ÿÿ?ÿÿGÿÿOÿÿWÿÿ_ÿÿgÿÿoÿÿwÿÿÿÿ‡ÿÿÿÿ—ÿÿŸÿÿ§ÿÿ¯ÿÿ·ÿÿ¿ÿÿÇÿÿÏÿÿ×ÿÿßÿÿçÿÿïÿÿ÷ÿÿÿÿ  ÿÿÿÿÿÿÿÿÿÿ'ÿÿ/ÿÿ7ÿÿ?ÿÿGÿÿOÿÿWÿÿ_ÿÿgÿÿoÿÿwÿÿÿÿ‡ÿÿÿÿ—ÿÿŸÿÿ§ÿÿ¯ÿÿ·ÿÿ¿ÿÿÇÿÿÏÿÿ×ÿÿßÿÿçÿÿïÿÿ÷ÿÿÿÿ    ÿ  ÿ  ÿ  ÿ  ÿ'  ÿ/  ÿ7  ÿ?  ÿG  ÿO  ÿW  ÿ_  ÿg  ÿo  ÿw  ÿ  ÿ‡  ÿ  ÿ—  ÿŸ  ÿ§  ÿ¯  ÿ·  ÿ¿  ÿÇ  ÿÏ  ÿ×  ÿß  ÿç  ÿï  ÿ÷  		}
+		*MESH_NUMTVFACES 960
+		*MESH_TFACELIST {
+             	  
+  
+                                 !   " # " $ % $ & ' & ( ) ( * + * , - , . / . 0 1 0 2 3 2 4 5 4 6 7 6 8 9 8 : ; : < = < > ? > @  A B  B   B C  C   C D  D   D E  E   E F  F 
+ 
+ F G 
+ G   G H  H   H I  I   I J  J   J K  K   K L  L   L M  M   M N  N   N O  O   O P  P   P Q  Q     Q R   R " " R S " S $ $ S T $ T & & T U & U ( ( U V ( V * * V W * W , , W X , X . . X Y . Y 0 0 Y Z 0 Z 2 2 Z [ 2 [ 4 4 [ \ 4 \ 6 6 \ ] 6 ] 8 8 ] ^ 8 ^ : : ^ _ : _ < < _ ` < ` > > ` a > a @ A b c A c B B c d B d C C d e C e D D e f D f E E f g E g F F g h F h G G h i G i H H i j H j I I j k I k J J k l J l K K l m K m L L m n L n M M n o M o N N o p N p O O p q O q P P q r P r Q Q r s Q s R R s t R t S S t u S u T T u v T v U U v w U w V V w x V x W W x y W y X X y z X z Y Y z { Y { Z Z { | Z | [ [ | } [ } \ \ } ~ \ ~ ] ] ~  ]  ^ ^  € ^ € _ _ €  _  ` `  ‚ ` ‚ a b ƒ „ b „ c c „ … c … d d … † d † e e † ‡ e ‡ f f ‡ ˆ f ˆ g g ˆ ‰ g ‰ h h ‰ Š h Š i i Š ‹ i ‹ j j ‹ Œ j Œ k k Œ  k  l l  Ž l Ž m m Ž  m  n n   n  o o  ‘ o ‘ p p ‘ ’ p ’ q q ’ “ q “ r r “ ” r ” s s ” • s • t t • – t – u u – — u — v v — ˜ v ˜ w w ˜ ™ w ™ x x ™ š x š y y š › y › z z › œ z œ { { œ  {  | |  ž | ž } } ž Ÿ } Ÿ ~ ~ Ÿ   ~       ¡  ¡ € € ¡ ¢ € ¢   ¢ £  £ ‚ ƒ ¤ ¥ ƒ ¥ „ „ ¥ ¦ „ ¦ … … ¦ § … § † † § ¨ † ¨ ‡ ‡ ¨ © ‡ © ˆ ˆ © ª ˆ ª ‰ ‰ ª « ‰ « Š Š « ¬ Š ¬ ‹ ‹ ¬ ­ ‹ ­ Œ Œ ­ ® Œ ®   ® ¯  ¯ Ž Ž ¯ ° Ž °   ° ±  ±   ± ²  ² ‘ ‘ ² ³ ‘ ³ ’ ’ ³ ´ ’ ´ “ “ ´ µ “ µ ” ” µ ¶ ” ¶ • • ¶ · • · – – · ¸ – ¸ — — ¸ ¹ — ¹ ˜ ˜ ¹ º ˜ º ™ ™ º » ™ » š š » ¼ š ¼ › › ¼ ½ › ½ œ œ ½ ¾ œ ¾   ¾ ¿  ¿ ž ž ¿ À ž À Ÿ Ÿ À Á Ÿ Á     Á Â   Â ¡ ¡ Â Ã ¡ Ã ¢ ¢ Ã Ä ¢ Ä £ ¤ Å Æ ¤ Æ ¥ ¥ Æ Ç ¥ Ç ¦ ¦ Ç È ¦ È § § È É § É ¨ ¨ É Ê ¨ Ê © © Ê Ë © Ë ª ª Ë Ì ª Ì « « Ì Í « Í ¬ ¬ Í Î ¬ Î ­ ­ Î Ï ­ Ï ® ® Ï Ð ® Ð ¯ ¯ Ð Ñ ¯ Ñ ° ° Ñ Ò ° Ò ± ± Ò Ó ± Ó ² ² Ó Ô ² Ô ³ ³ Ô Õ ³ Õ ´ ´ Õ Ö ´ Ö µ µ Ö × µ × ¶ ¶ × Ø ¶ Ø · · Ø Ù · Ù ¸ ¸ Ù Ú ¸ Ú ¹ ¹ Ú Û ¹ Û º º Û Ü º Ü » » Ü Ý » Ý ¼ ¼ Ý Þ ¼ Þ ½ ½ Þ ß ½ ß ¾ ¾ ß à ¾ à ¿ ¿ à á ¿ á À À á â À â Á Á â ã Á ã Â Â ã ä Â ä Ã Ã ä å Ã å Ä Å æ ç Å ç Æ Æ ç è Æ è Ç Ç è é Ç é È È é ê È ê É É ê ë É ë Ê Ê ë ì Ê ì Ë Ë ì í Ë í Ì Ì í î Ì î Í Í î ï Í ï Î Î ï ð Î ð Ï Ï ð ñ Ï ñ Ð Ð ñ ò Ð ò Ñ Ñ ò ó Ñ ó Ò Ò ó ô Ò ô Ó Ó ô õ Ó õ Ô Ô õ ö Ô ö Õ Õ ö ÷ Õ ÷ Ö Ö ÷ ø Ö ø × × ø ù × ù Ø Ø ù ú Ø ú Ù Ù ú û Ù û Ú Ú û ü Ú ü Û Û ü ý Û ý Ü Ü ý þ Ü þ Ý Ý þ ÿ Ý ÿ Þ Þ ÿ  Þ  ß ß  ß à à à á á á â â â ã ã ã ä ä ä å æ æ ç ç 	ç 	è è 	
+è 
+é é 
+é ê ê ê ë ë ë ì ì ì í í í î î î ï ï ï ð ð ð ñ ñ ñ ò ò ò ó ó ó ô ô ô õ õ õ ö ö ö ÷ ÷ ÷ ø ø ø ù ù ù ú ú ú û û û ü ü ü ý ý ý þ þ  þ  ÿ ÿ  !ÿ !  !" ""###$$$%%%&&&''()))**		*+	+
+
++,
+,,---...///000111222333444555666777888999:::;;;<<<===>>>???@@@AA  AB B!!BC!C""CD"D##DE#E$$EF$F%%FG%G&&GH&H'(IJ(J))JK)K**KL*L++LM+M,,MN,N--NO-O..OP.P//PQ/Q00QR0R11RS1S22ST2T33TU3U44UV4V55VW5W66WX6X77XY7Y88YZ8Z99Z[9[::[\:\;;\];]<<]^<^==^_=_>>_`>`??`a?a@@ab@bAAbcAcBBcdBdCCdeCeDDefDfEEfgEgFFghFhGGhiGiHIjkIkJJklJlKKlmKmLLmnLnMMnoMoNNopNpOOpqOqPPqrPrQQrsQsRRstRtSStuSuTTuvTvUUvwUwVVwxVxWWxyWyXXyzXzYYz{Y{ZZ{|Z|[[|}[}\\}~\~]]~]^^€^€__€_``‚`‚aa‚ƒaƒbbƒ„b„cc„…c…dd…†d†ee†‡e‡ff‡ˆfˆggˆ‰g‰hh‰ŠhŠij‹ŒjŒkkŒkllŽlŽmmŽmnnnoo‘o‘pp‘’p’qq’“q“rr“”r”ss”•s•tt•–t–uu–—u—vv—˜v˜ww˜™w™xx™šxšyyš›y›zz›œzœ{{œ{||ž|ž}}žŸ}Ÿ~~Ÿ ~  ¡¡€€¡¢€¢¢££‚‚£¤‚¤ƒƒ¤¥ƒ¥„„¥¦„¦……¦§…§††§¨†¨‡‡¨©‡©ˆˆ©ªˆª‰‰ª«‰«Š‹¬­‹­ŒŒ­®Œ®®¯¯ŽŽ¯°Ž°°±±±²²‘‘²³‘³’’³´’´““´µ“µ””µ¶”¶••¶·•·––·¸–¸——¸¹—¹˜˜¹º˜º™™º»™»šš»¼š¼››¼½›½œœ½¾œ¾¾¿¿žž¿ÀžÀŸŸÀÁŸÁ  ÁÂ Â¡¡ÂÃ¡Ã¢¢ÃÄ¢Ä££ÄÅ£Å¤¤ÅÆ¤Æ¥¥ÆÇ¥Ç¦¦ÇÈ¦È§§ÈÉ§É¨¨ÉÊ¨Ê©©ÊË©ËªªËÌªÌ«¬ÍÎ¬Î­­ÎÏ­Ï®®ÏÐ®Ð¯¯ÐÑ¯Ñ°°ÑÒ°Ò±±ÒÓ±Ó²²ÓÔ²Ô³³ÔÕ³Õ´´ÕÖ´ÖµµÖ×µ×¶¶×Ø¶Ø··ØÙ·Ù¸¸ÙÚ¸Ú¹¹ÚÛ¹ÛººÛÜºÜ»»ÜÝ»Ý¼¼ÝÞ¼Þ½½Þß½ß¾¾ßà¾à¿¿àá¿áÀÀáâÀâÁÁâãÁãÂÂãäÂäÃÃäåÃåÄÄåæÄæÅÅæçÅçÆÆçèÆèÇÇèéÇéÈÈéêÈêÉÉêëÉëÊÊëìÊìËËìíËíÌÍîïÍïÎÎïðÎðÏÏðñÏñÐÐñòÐòÑÑòóÑóÒÒóôÒôÓÓôõÓõÔÔõöÔöÕÕö÷Õ÷ÖÖ÷øÖø××øù×ùØØùúØúÙÙúûÙûÚÚûüÚüÛÛüýÛýÜÜýþÜþÝÝþÿÝÿÞÞÿ Þ ßß ßàààáááâââãããäääåååæææçç	ç	èè	
+è
+éé
+éêêêëëëìììíïîðïñðòñóòôóõôöõ÷öø÷ùøúùûúüûýüþýÿþ  ÿ! "#$%&'()	*
+	+
+,-.		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+ÿü™zü˜ÿzü˜uü—ÿuü—qü”ÿqü”mü‘ÿmü‘jüÿjügü‰ÿgü‰fü„ÿfü„eüÿeüfüzÿfüzgüuÿgüujüqÿjüqmümÿmümqüjÿqüjuügÿuügzüfÿzüfüeÿüe„üfÿ„üf‰ügÿ‰ügüjÿüj‘ümÿ‘üm”üqÿ”üq—üuÿ—üu˜üzÿ˜üz™üÿ™ü˜ü„ÿ˜ü„—ü‰ÿ—ü‰”üÿ”ü‘ü‘ÿ‘ü‘ü”ÿü”‰ü—ÿ‰ü—„ü˜ÿ„ü˜ü™ü™õ°uõ°ü™uõ°zü˜zü˜uõ°lõ­zü˜lõ­uü—uü—lõ­dõ¨uü—dõ¨qü”qü”dõ¨\õ¢qü”\õ¢mü‘mü‘\õ¢Võšmü‘VõšjüjüVõšQõ’jüQõ’gü‰gü‰Qõ’Nõ‰gü‰Nõ‰fü„fü„Nõ‰Nõfü„NõeüeüNõNõueüNõufüzfüzNõuQõlfüzQõlgüugüuQõlVõdgüuVõdjüqjüqVõd\õ\jüq\õ\mümmüm\õ\dõVmümdõVqüjqüjdõVlõQqüjlõQuüguüglõQuõNuüguõNzüfzüfuõNõNzüfõNüeüeõN‰õNüe‰õN„üf„üf‰õN’õQ„üf’õQ‰üg‰üg’õQšõV‰ügšõVüjüjšõV¢õ\üj¢õ\‘üm‘üm¢õ\¨õd‘üm¨õd”üq”üq¨õd­õl”üq­õl—üu—üu­õl°õu—üu°õu˜üz˜üz°õu°õ˜üz°õ™ü™ü°õ°õ‰™ü°õ‰˜ü„˜ü„°õ‰­õ’˜ü„­õ’—ü‰—ü‰­õ’¨õš—ü‰¨õš”ü”ü¨õš¢õ¢”ü¢õ¢‘ü‘‘ü‘¢õ¢šõ¨‘ü‘šõ¨ü”ü”šõ¨’õ­ü”’õ­‰ü—‰ü—’õ­‰õ°‰ü—‰õ°„ü˜„ü˜‰õ°õ°„ü˜õ°ü™õ°éÆqéÅõ°qéÅuõ°uõ°qéÅdéÁuõ°déÁlõ­lõ­déÁWéºlõ­Wéºdõ¨dõ¨WéºMé±dõ¨Mé±\õ¢\õ¢Mé±Dé§\õ¢Dé§VõšVõšDé§=éšVõš=éšQõ’Qõ’=éš9éQõ’9éNõ‰Nõ‰9é8éNõ‰8éNõNõ8é9éqNõ9éqNõuNõu9éq=édNõu=édQõlQõl=édDéWQõlDéWVõdVõdDéWMéMVõdMéM\õ\\õ\MéMWéD\õ\WéDdõVdõVWéDdé=dõVdé=lõQlõQdé=qé9lõQqé9uõNuõNqé9é8uõNé8õNõNé8é9õNé9‰õN‰õNé9šé=‰õNšé=’õQ’õQšé=§éD’õQ§éDšõVšõV§éD±éMšõV±éM¢õ\¢õ\±éMºéW¢õ\ºéW¨õd¨õdºéWÁéd¨õdÁéd­õl­õlÁédÅéq­õlÅéq°õu°õuÅéqÆé°õuÆé°õ°õÆéÅé°õÅé°õ‰°õ‰ÅéÁéš°õ‰Áéš­õ’­õ’Áéšºé§­õ’ºé§¨õš¨õšºé§±é±¨õš±é±¢õ¢¢õ¢±é±§éº¢õ¢§éºšõ¨šõ¨§éºšéÁšõ¨šéÁ’õ­’õ­šéÁéÅ’õ­éÅ‰õ°‰õ°éÅéÆ‰õ°éÆõ°éÆÙÚmÙØéÆmÙØqéÅqéÅmÙØ\ÙÓqéÅ\ÙÓdéÁdéÁ\ÙÓMÙÊdéÁMÙÊWéºWéºMÙÊ?Ù¿Wéº?Ù¿Mé±Mé±?Ù¿4Ù±Mé±4Ù±Dé§Dé§4Ù±+Ù¢Dé§+Ù¢=éš=éš+Ù¢&Ù‘=éš&Ù‘9é9é&Ù‘$Ù9é$Ù8é8é$Ù&Ùm8é&Ùm9éq9éq&Ùm+Ù\9éq+Ù\=éd=éd+Ù\4ÙM=éd4ÙMDéWDéW4ÙM?Ù?DéW?Ù?MéMMéM?Ù?MÙ4MéMMÙ4WéDWéDMÙ4\Ù+WéD\Ù+dé=dé=\Ù+mÙ&dé=mÙ&qé9qé9mÙ&Ù$qé9Ù$é8é8Ù$‘Ù&é8‘Ù&é9é9‘Ù&¢Ù+é9¢Ù+šé=šé=¢Ù+±Ù4šé=±Ù4§éD§éD±Ù4¿Ù?§éD¿Ù?±éM±éM¿Ù?ÊÙM±éMÊÙMºéWºéWÊÙMÓÙ\ºéWÓÙ\ÁédÁédÓÙ\ØÙmÁédØÙmÅéqÅéqØÙmÚÙÅéqÚÙÆéÆéÚÙØÙ‘ÆéØÙ‘ÅéÅéØÙ‘ÓÙ¢ÅéÓÙ¢ÁéšÁéšÓÙ¢ÊÙ±ÁéšÊÙ±ºé§ºé§ÊÙ±¿Ù¿ºé§¿Ù¿±é±±é±¿Ù¿±ÙÊ±é±±ÙÊ§éº§éº±ÙÊ¢ÙÓ§éº¢ÙÓšéÁšéÁ¢ÙÓ‘ÙØšéÁ‘ÙØéÅéÅ‘ÙØÙÚéÅÙÚéÆÙÚÅéjÅçÙÚjÅçmÙØmÙØjÅçVÅámÙØVÅá\ÙÓ\ÙÓVÅáDÅ×\ÙÓDÅ×MÙÊMÙÊDÅ×4ÅÊMÙÊ4ÅÊ?Ù¿?Ù¿4ÅÊ'Åº?Ù¿'Åº4Ù±4Ù±'ÅºÅ¨4Ù±Å¨+Ù¢+Ù¢Å¨Å”+Ù¢Å”&Ù‘&Ù‘Å”Å&Ù‘Å$Ù$ÙÅÅj$ÙÅj&Ùm&ÙmÅjÅV&ÙmÅV+Ù\+Ù\ÅV'ÅD+Ù\'ÅD4ÙM4ÙM'ÅD4Å44ÙM4Å4?Ù??Ù?4Å4DÅ'?Ù?DÅ'MÙ4MÙ4DÅ'VÅMÙ4VÅ\Ù+\Ù+VÅjÅ\Ù+jÅmÙ&mÙ&jÅÅmÙ&ÅÙ$Ù$Å”ÅÙ$”Å‘Ù&‘Ù&”Å¨Å‘Ù&¨Å¢Ù+¢Ù+¨ÅºÅ'¢Ù+ºÅ'±Ù4±Ù4ºÅ'ÊÅ4±Ù4ÊÅ4¿Ù?¿Ù?ÊÅ4×ÅD¿Ù?×ÅDÊÙMÊÙM×ÅDáÅVÊÙMáÅVÓÙ\ÓÙ\áÅVçÅjÓÙ\çÅjØÙmØÙmçÅjéÅØÙméÅÚÙÚÙéÅçÅ”ÚÙçÅ”ØÙ‘ØÙ‘çÅ”áÅ¨ØÙ‘áÅ¨ÓÙ¢ÓÙ¢áÅ¨×ÅºÓÙ¢×ÅºÊÙ±ÊÙ±×ÅºÊÅÊÊÙ±ÊÅÊ¿Ù¿¿Ù¿ÊÅÊºÅ×¿Ù¿ºÅ×±ÙÊ±ÙÊºÅ×¨Åá±ÙÊ¨Åá¢ÙÓ¢ÙÓ¨Åá”Åç¢ÙÓ”Åç‘ÙØ‘ÙØ”ÅçÅé‘ÙØÅéÙÚÅé°õh°óÅéh°ójÅçjÅçh°óR°ìjÅçR°ìVÅáVÅáR°ì=°áVÅá=°áDÅ×DÅ×=°á,°ÒDÅ×,°Ò4ÅÊ4ÅÊ,°Ò°Á4ÅÊ°Á'Åº'Åº°Á°¬'Åº°¬Å¨Å¨°¬°–Å¨°–Å”Å”°–	°Å”	°ÅÅ	°°hÅ°hÅjÅj°h°RÅj°RÅVÅV°R°=ÅV°='ÅD'ÅD°=,°,'ÅD,°,4Å44Å4,°,=°4Å4=°DÅ'DÅ'=°R°DÅ'R°VÅVÅR°h°VÅh°jÅjÅh°°	jÅ°	ÅÅ°	–°Å–°”Å”Å–°¬°”Å¬°¨Å¨Å¬°Á°¨ÅÁ°ºÅ'ºÅ'Á°Ò°,ºÅ'Ò°,ÊÅ4ÊÅ4Ò°,á°=ÊÅ4á°=×ÅD×ÅDá°=ì°R×ÅDì°RáÅVáÅVì°Ró°háÅVó°hçÅjçÅjó°hõ°çÅjõ°éÅéÅõ°ó°–éÅó°–çÅ”çÅ”ó°–ì°¬çÅ”ì°¬áÅ¨áÅ¨ì°¬á°ÁáÅ¨á°Á×Åº×Åºá°ÁÒ°Ò×ÅºÒ°ÒÊÅÊÊÅÊÒ°ÒÁ°áÊÅÊÁ°áºÅ×ºÅ×Á°á¬°ìºÅ×¬°ì¨Åá¨Åá¬°ì–°ó¨Åá–°ó”Åç”Åç–°ó°õ”Åç°õÅé°õ˜üg˜ú°õg˜úh°óh°óg˜úO˜óh°óO˜óR°ìR°ìO˜ó:˜çR°ì:˜ç=°á=°á:˜ç'˜×=°á'˜×,°Ò,°Ò'˜×˜Ä,°Ò˜Ä°Á°Á˜Ä˜¯°Á˜¯°¬°¬˜¯˜—°¬˜—°–°–˜—˜°–˜	°	°˜˜g	°˜g°h°h˜g˜O°h˜O°R°R˜O˜:°R˜:°=°=˜:'˜'°='˜',°,,°,'˜':˜,°,:˜=°=°:˜O˜=°O˜R°R°O˜g˜R°g˜h°h°g˜˜h°˜°	°	˜—˜°	—˜–°–°—˜¯˜–°¯˜¬°¬°¯˜Ä˜¬°Ä˜Á°Á°Ä˜×˜'Á°×˜'Ò°,Ò°,×˜'ç˜:Ò°,ç˜:á°=á°=ç˜:ó˜Oá°=ó˜Oì°Rì°Ró˜Oú˜gì°Rú˜gó°hó°hú˜gü˜ó°hü˜õ°õ°ü˜ú˜—õ°ú˜—ó°–ó°–ú˜—ó˜¯ó°–ó˜¯ì°¬ì°¬ó˜¯ç˜Äì°¬ç˜Äá°Áá°Áç˜Ä×˜×á°Á×˜×Ò°ÒÒ°Ò×˜×Ä˜çÒ°ÒÄ˜çÁ°áÁ°áÄ˜ç¯˜óÁ°á¯˜ó¬°ì¬°ì¯˜ó—˜ú¬°ì—˜ú–°ó–°ó—˜ú˜ü–°ó˜ü°õ˜üÿfü˜üfüg˜úg˜úfüNõg˜úNõO˜óO˜óNõ8éO˜ó8é:˜ç:˜ç8é%Ù:˜ç%Ù'˜×'˜×%ÙÆ'˜×Æ˜Ä˜ÄÆ	°˜Ä	°˜¯˜¯	°˜˜¯˜˜—˜—˜ ˜— ˜˜ f˜f˜g˜gf	N˜g	N˜O˜O	N8˜O8˜:˜:8%%˜:%%'˜''˜'%%8'˜'8:˜:˜8N	:˜N	O˜O˜N	fO˜fg˜g˜f g˜ ˜˜ ˜˜˜—˜—˜˜°	—˜°	¯˜¯˜°	Æ¯˜ÆÄ˜Ä˜ÆÙ%Ä˜Ù%×˜'×˜'Ù%é8×˜'é8ç˜:ç˜:é8õNç˜:õNó˜Oó˜OõNüfó˜Oüfú˜gú˜güfÿú˜gÿü˜ü˜ÿü˜ü˜ü˜ú˜—ú˜—ü˜õ°ú˜—õ°ó˜¯ó˜¯õ°éÆó˜¯éÆç˜Äç˜ÄéÆÙÙç˜ÄÙÙ×˜××˜×ÙÙÆé×˜×ÆéÄ˜çÄ˜çÆé°õÄ˜ç°õ¯˜ó¯˜ó°õ˜ü¯˜ó˜ü—˜ú—˜ú˜üÿ—˜úÿ˜üÿfügfúÿgfúfüfügfúOfófüOfóNõNõOfó:fçNõ:fç8é8é:fç'f×8é'f×%Ù%Ù'f×fÄ%ÙfÄÆÆfÄf¯Æf¯	°	°f¯f—	°f—˜˜f—f˜f  ffg fgfffgfOffO	N	NfOf:	Nf:88f:'f'8'f'%%%%'f':f%%:f88:fOf8OfN	N	OfgfN	gfffgffff  f—f —f˜˜—f¯f˜¯f°	°	¯fÄf°	ÄfÆÆÄf×f'Æ×f'Ù%Ù%×f'çf:Ù%çf:é8é8çf:ófOé8ófOõNõNófOúfgõNúfgüfüfúfgüfüfüfÿÿüfúf—ÿúf—ü˜ü˜úf—óf¯ü˜óf¯õ°õ°óf¯çfÄõ°çfÄéÆéÆçfÄ×f×éÆ×f×ÙÙÙÙ×f×ÄfçÙÙÄfçÆéÆéÄfç¯fóÆé¯fó°õ°õ¯fó—fú°õ—fú˜ü˜ü—fúfü˜üfüÿfüNõhNófühNógfúgfúhNóRNìgfúRNìOfóOfóRNì=NáOfó=Ná:fç:fç=Ná,NÒ:fç,NÒ'f×'f×,NÒNÁ'f×NÁfÄfÄNÁN¬fÄN¬f¯f¯N¬N–f¯N–f—f—N–	Nf—	Nff	NNhfNhfgfgNhNRfgNRfOfONRN=fON=f:f:N=,N,f:,N,'f''f',N,=N'f'=N:f:f=NRN:fRNOfOfRNhNOfhNgfgfhNN	gfN	ffN	–Nf–N—f—f–N¬N—f¬N¯f¯f¬NÁN¯fÁNÄfÄfÁNÒN,ÄfÒN,×f'×f'ÒN,áN=×f'áN=çf:çf:áN=ìNRçf:ìNRófOófOìNRóNhófOóNhúfgúfgóNhõNúfgõNüfüfõNóN–üfóN–úf—úf—óN–ìN¬úf—ìN¬óf¯óf¯ìN¬áNÁóf¯áNÁçfÄçfÄáNÁÒNÒçfÄÒNÒ×f××f×ÒNÒÁNá×f×ÁNáÄfçÄfçÁNá¬NìÄfç¬Nì¯fó¯fó¬Nì–Nó¯fó–Nó—fú—fú–NóNõ—fúNõfüNõ9éj9çNõj9çhNóhNój9çV9áhNóV9áRNìRNìV9áD9×RNìD9×=Ná=NáD9×49Ê=Ná49Ê,NÒ,NÒ49Ê'9º,NÒ'9ºNÁNÁ'9º9¨NÁ9¨N¬N¬9¨9”N¬9”N–N–9”9N–9	N	N99j	N9jNhNh9j9VNh9VNRNR9V'9DNR'9DN=N='9D494N=494,N,,N,494D9',N,D9'=N=ND9'V9=NV9RNRNV9j9RNj9hNhNj99hN9N	N	9”9N	”9–N–N”9¨9–N¨9¬N¬N¨9º9'¬Nº9'ÁNÁNº9'Ê94ÁNÊ94ÒN,ÒN,Ê94×9DÒN,×9DáN=áN=×9Dá9VáN=á9VìNRìNRá9Vç9jìNRç9jóNhóNhç9jé9óNhé9õNõNé9ç9”õNç9”óN–óN–ç9”á9¨óN–á9¨ìN¬ìN¬á9¨×9ºìN¬×9ºáNÁáNÁ×9ºÊ9ÊáNÁÊ9ÊÒNÒÒNÒÊ9Êº9×ÒNÒº9×ÁNáÁNáº9×¨9áÁNá¨9á¬Nì¬Nì¨9á”9ç¬Nì”9ç–Nó–Nó”9ç9é–Nó9éNõ9é%Úm%Ø9ém%Øj9çj9çm%Ø\%Ój9ç\%ÓV9áV9á\%ÓM%ÊV9áM%ÊD9×D9×M%Ê?%¿D9×?%¿49Ê49Ê?%¿4%±49Ê4%±'9º'9º4%±+%¢'9º+%¢9¨9¨+%¢&%‘9¨&%‘9”9”&%‘$%9”$%99$%&%m9&%m9j9j&%m+%\9j+%\9V9V+%\4%M9V4%M'9D'9D4%M?%?'9D?%?494494?%?M%4494M%4D9'D9'M%4\%+D9'\%+V9V9\%+m%&V9m%&j9j9m%&%$j9%$99%$‘%&9‘%&”9”9‘%&¢%+”9¢%+¨9¨9¢%+±%4¨9±%4º9'º9'±%4¿%?º9'¿%?Ê94Ê94¿%?Ê%MÊ94Ê%M×9D×9DÊ%MÓ%\×9DÓ%\á9Vá9VÓ%\Ø%má9VØ%mç9jç9jØ%mÚ%ç9jÚ%é9é9Ú%Ø%‘é9Ø%‘ç9”ç9”Ø%‘Ó%¢ç9”Ó%¢á9¨á9¨Ó%¢Ê%±á9¨Ê%±×9º×9ºÊ%±¿%¿×9º¿%¿Ê9ÊÊ9Ê¿%¿±%ÊÊ9Ê±%Êº9×º9×±%Ê¢%Óº9×¢%Ó¨9á¨9á¢%Ó‘%Ø¨9á‘%Ø”9ç”9ç‘%Ø%Ú”9ç%Ú9é%ÚÆqÅ%ÚqÅm%Øm%ØqÅdÁm%ØdÁ\%Ó\%ÓdÁWº\%ÓWºM%ÊM%ÊWºM±M%ÊM±?%¿?%¿M±D§?%¿D§4%±4%±D§=š4%±=š+%¢+%¢=š9+%¢9&%‘&%‘98&%‘8$%$%89q$%9q&%m&%m9q=d&%m=d+%\+%\=dDW+%\DW4%M4%MDWMM4%MMM?%??%?MMWD?%?WDM%4M%4WDd=M%4d=\%+\%+d=q9\%+q9m%&m%&q98m%&8%$%$89%$9‘%&‘%&9š=‘%&š=¢%+¢%+š=§D¢%+§D±%4±%4§D±M±%4±M¿%?¿%?±MºW¿%?ºWÊ%MÊ%MºWÁdÊ%MÁdÓ%\Ó%\ÁdÅqÓ%\ÅqØ%mØ%mÅqÆØ%mÆÚ%Ú%ÆÅÚ%ÅØ%‘Ø%‘ÅÁšØ%‘ÁšÓ%¢Ó%¢Ášº§Ó%¢º§Ê%±Ê%±º§±±Ê%±±±¿%¿¿%¿±±§º¿%¿§º±%Ê±%Ê§ºšÁ±%ÊšÁ¢%Ó¢%ÓšÁÅ¢%ÓÅ‘%Ø‘%ØÅÆ‘%ØÆ%ÚÆ	°u	°Æu	°qÅqÅu	°l	­qÅl	­dÁdÁl	­d	¨dÁd	¨WºWºd	¨\	¢Wº\	¢M±M±\	¢V	šM±V	šD§D§V	šQ	’D§Q	’=š=šQ	’N	‰=šN	‰99N	‰N	9N	88N	N	u8N	u9q9qN	uQ	l9qQ	l=d=dQ	lV	d=dV	dDWDWV	d\	\DW\	\MMMM\	\d	VMMd	VWDWDd	Vl	QWDl	Qd=d=l	Qu	Nd=u	Nq9q9u	N	Nq9	N88	N‰	N8‰	N99‰	N’	Q9’	Qš=š=’	Qš	Vš=š	V§D§Dš	V¢	\§D¢	\±M±M¢	\¨	d±M¨	dºWºW¨	d­	lºW­	lÁdÁd­	l°	uÁd°	uÅqÅq°	u°	Åq°	ÆÆ°	°	‰Æ°	‰ÅÅ°	‰­	’Å­	’ÁšÁš­	’¨	šÁš¨	šº§º§¨	š¢	¢º§¢	¢±±±±¢	¢š	¨±±š	¨§º§ºš	¨’	­§º’	­šÁšÁ’	­‰	°šÁ‰	°ÅÅ‰	°	°Å	°Æ	°™z˜	°z˜u	°u	°z˜u—u	°u—l	­l	­u—q”l	­q”d	¨d	¨q”m‘d	¨m‘\	¢\	¢m‘j\	¢jV	šV	šjg‰V	šg‰Q	’Q	’g‰f„Q	’f„N	‰N	‰f„eN	‰eN	N	efzN	fzN	uN	ufzguN	uguQ	lQ	lgujqQ	ljqV	dV	djqmmV	dmm\	\\	\mmqj\	\qjd	Vd	Vqjugd	Vugl	Ql	Qugzfl	Qzfu	Nu	Nzfeu	Ne	N	Ne„f	N„f‰	N‰	N„f‰g‰	N‰g’	Q’	Q‰gj’	Qjš	Vš	Vj‘mš	V‘m¢	\¢	\‘m”q¢	\”q¨	d¨	d”q—u¨	d—u­	l­	l—u˜z­	l˜z°	u°	u˜z™°	u™°	°	™˜„°	˜„°	‰°	‰˜„—‰°	‰—‰­	’­	’—‰”­	’”¨	š¨	š”‘‘¨	š‘‘¢	¢¢	¢‘‘”¢	¢”š	¨š	¨”‰—š	¨‰—’	­’	­‰—„˜’	­„˜‰	°‰	°„˜™‰	°™	° z˜™ u—z˜ q”u— m‘q” jm‘ g‰j f„g‰ ef„ fze gufz jqgu mmjq qjmm ugqj zfug ezf „fe ‰g„f j‰g ‘mj ”q‘m —u”q ˜z—u ™˜z ˜„™ —‰˜„ ”—‰ ‘‘” ”‘‘ ‰—” „˜‰— ™„˜		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "0d834610"
+	*NODE_NAME "ramp2"
+	*NODE_TM {
+		*NODE_NAME "ramp2"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.9397	0.0000	0.3420
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 -0.3420	0.0000	0.9397
+		*TM_ROW3 -41.9323	-39.2601	0.0000
+		*TM_POS -41.9323	-39.2601	0.0000
+		*TM_ROTAXIS -0.0000	1.0000	-0.0000
+		*TM_ROTANGLE 0.3491
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+½gVÂ”ŽÀe¿;ÂÙkÂŸ›ŒA’ªüÁ«P    ÿÿ:9  «P  ÿÿÿÿ:9ÿÿ  ÄÆ  S¯ÿÿ    ÄÆÿÿS¯ÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "0d830cb0"
+	*NODE_NAME "chk3ar"
+	*NODE_TM {
+		*NODE_NAME "chk3ar"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 11.6616	-36.6519	11.6222
+		*TM_POS 11.6616	-36.6519	11.6222
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+}ó¢@hô9AÞ-"ÂÚØ‘Aæ•A"	Â      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0d836b70"
+	*NODE_NAME "chk4r"
+	*NODE_TM {
+		*NODE_NAME "chk4r"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -13.7326	-15.4729	11.6222
+		*TM_POS -13.7326	-15.4729	11.6222
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+Zj¢Áhô9A,íšÁ}9åÀæ•AhG9Á      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0d837c00"
+	*NODE_NAME "chk13r"
+	*NODE_TM {
+		*NODE_NAME "chk13r"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -5.0192	77.0638	11.6222
+		*TM_POS -5.0192	77.0638	11.6222
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+¾j9Áhô9A€W’B´iÆ?æ•AÞé¡B      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0d835c60"
+	*NODE_NAME "chk6"
+	*NODE_TM {
+		*NODE_NAME "chk6"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -2.5070	12.5064	11.6222
+		*TM_POS -2.5070	12.5064	11.6222
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+”8Áhô9AÇÐ	AÁþ@æ•AÜ1ƒA      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "0d831cb0"
+	*NODE_NAME "ramp1"
+	*NODE_TM {
+		*NODE_NAME "ramp1"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	-0.0000
+		*TM_ROW1 0.0000	0.9563	0.2924
+		*TM_ROW2 0.0000	-0.2924	0.9563
+		*TM_ROW3 -10.0725	-57.8219	11.2025
+		*TM_POS -10.0725	-57.8219	11.2025
+		*TM_ROTAXIS -1.0000	-0.0000	-0.0000
+		*TM_ROTANGLE 0.2967
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+MÓ§Á†A«hÂ‘IU?‚Av}SÂ    3þÿ  3  vÿÿþÿvÿÿ  ì‰  ÿÿì‰    ÿÿËæÿÿÿÿËæ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 4
+}
+*GEOMOBJECT {
+	*NODE_ID "0d83f8c0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -13.8280	-64.9290	13.0893
+		*TM_POS -13.8280	-64.9290	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 14
+		*MESH_NUMFACES 24
+		*MESH_VERTEX_LIST {
+r?eÁ¯mQA[¹‚Âr?UÁ¯mqAóý€Âÿ  ÿÿÿ  ÿÿ¿  ÿÿÿ?  ÿÿ    ÿÿ?    ÿ¿    ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                       	     	   
+ 	    
+    
+                             	    	 
+    
+              		}
+		*MESH_NUMTVERTEX 16
+		*MESH_TVERTLIST {
+°ªª½    ªªj?  €?T•  ÿÿ  TÕ  ª*      UU  ÿ  ªª  T•ÿÿT•ÿÿT•ÿÿ    T•ÿÿT•ÿÿT•ÿÿT•ÿÿ		}
+		*MESH_NUMTVFACES 24
+		*MESH_TFACELIST {
+                          	     
+    
+   
+                 	    	  	    
+  
+          	 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+                  ûžëš½ëšAûž½žêëš½½žêšüëš½½žêAžêšüAžêš½šüAžêžš½žšAš½žAžšAAžššAAž½žš½žëšAš½žûžëšAÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d83ccb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -0.1971	-46.8726	13.0893
+		*TM_POS -0.1971	-46.8726	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d83ecb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -16.0790	-45.9785	13.0893
+		*TM_POS -16.0790	-45.9785	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d83dcb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -18.8776	-41.8096	13.0893
+		*TM_POS -18.8776	-41.8096	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d838cb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -18.5500	-30.9266	13.0893
+		*TM_POS -18.5500	-30.9266	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d839cb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -17.2794	-24.7661	13.0893
+		*TM_POS -17.2794	-24.7661	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d83acb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -16.2258	-19.0829	13.0893
+		*TM_POS -16.2258	-19.0829	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d83bcb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -13.4153	-14.2673	13.0893
+		*TM_POS -13.4153	-14.2673	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d843cb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -10.6561	-8.3667	13.0893
+		*TM_POS -10.6561	-8.3667	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d8431c0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -7.5554	-5.3323	13.0893
+		*TM_POS -7.5554	-5.3323	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d8472b0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -2.1315	19.1769	13.0893
+		*TM_POS -2.1315	19.1769	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d846390"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -1.3966	27.6540	13.0893
+		*TM_POS -1.3966	27.6540	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d840380"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -5.7492	31.9889	13.0893
+		*TM_POS -5.7492	31.9889	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d842bb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -10.6113	36.5752	13.0893
+		*TM_POS -10.6113	36.5752	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d8449a0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -11.1043	41.9260	13.0893
+		*TM_POS -11.1043	41.9260	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d845cb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -8.7726	47.5270	13.0893
+		*TM_POS -8.7726	47.5270	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d845050"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -5.4161	52.6076	13.0893
+		*TM_POS -5.4161	52.6076	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d84ecb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -4.3734	58.1954	13.0893
+		*TM_POS -4.3734	58.1954	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d84e960"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -3.3317	63.5196	13.0893
+		*TM_POS -3.3317	63.5196	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d848910"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -2.5317	71.8848	13.0893
+		*TM_POS -2.5317	71.8848	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d849a60"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -2.6142	74.8586	13.0893
+		*TM_POS -2.6142	74.8586	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d84abc0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 2.8269	32.3410	13.0893
+		*TM_POS 2.8269	32.3410	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d84b8f0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -2.9461	67.8055	13.0893
+		*TM_POS -2.9461	67.8055	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d84f7a0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 3.8620	36.1566	13.0893
+		*TM_POS 3.8620	36.1566	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d84d880"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 2.8423	41.2512	13.0893
+		*TM_POS 2.8423	41.2512	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d8423b0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 0.0262	46.5963	13.0893
+		*TM_POS 0.0262	46.5963	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d854cb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -2.2737	50.1376	13.0893
+		*TM_POS -2.2737	50.1376	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d8520c0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -19.8765	-37.1323	13.0893
+		*TM_POS -19.8765	-37.1323	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d850cb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 4.4352	-42.9593	13.0893
+		*TM_POS 4.4352	-42.9593	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d850100"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 9.3200	-37.7671	13.0893
+		*TM_POS 9.3200	-37.7671	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d853250"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 9.8358	-31.2976	13.0893
+		*TM_POS 9.8358	-31.2976	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d852cb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 11.1212	-24.8361	13.0893
+		*TM_POS 11.1212	-24.8361	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d857ad0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 13.1406	-16.2659	13.0893
+		*TM_POS 13.1406	-16.2659	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d856380"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 8.5472	-13.1986	13.0893
+		*TM_POS 8.5472	-13.1986	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d8593a0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 7.0862	-7.2510	13.0893
+		*TM_POS 7.0862	-7.2510	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d85d840"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -1.4751	0.6148	13.0893
+		*TM_POS -1.4751	0.6148	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d858930"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -1.8914	12.7314	13.0893
+		*TM_POS -1.8914	12.7314	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d85f8f0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -2.3673	7.2274	13.0893
+		*TM_POS -2.3673	7.2274	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d85e120"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -15.8585	-67.4121	13.0893
+		*TM_POS -15.8585	-67.4121	13.0893
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d85a220"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -13.2911	-60.7367	13.6320
+		*TM_POS -13.2911	-60.7367	13.6320
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d85b370"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -13.2681	-56.0361	14.8464
+		*TM_POS -13.2681	-56.0361	14.8464
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d859cb0"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -9.4399	-61.2502	13.5645
+		*TM_POS -9.4399	-61.2502	13.5645
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d85c380"
+	*NODE_NAME "cone01"
+	*NODE_TM {
+		*NODE_NAME "cone01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -6.3396	-56.2923	14.5765
+		*TM_POS -6.3396	-56.2923	14.5765
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 2
+}
+*GEOMOBJECT {
+	*NODE_ID "0d865cb0"
+	*NODE_NAME "skybox"
+	*NODE_TM {
+		*NODE_NAME "skybox"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 1.1706	-4.5169	-31.5102
+		*TM_POS 1.1706	-4.5169	-31.5102
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 8
+		*MESH_NUMFACES 12
+		*MESH_VERTEX_LIST {
+ sÈÂÌüÁ•:áÂÔ!ÍBÔ)<BC)ÏB      ÿÿ        ÿÿÿÿ  ÿÿ  ÿÿ  ÿÿÿÿ    ÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                                       		}
+		*MESH_NUMTVERTEX 12
+		*MESH_TVERTLIST {
+          €?  €?ÿÿ  ÿÿÿÿ  ÿÿ        ÿÿ  ÿÿÿÿ  ÿÿ    ÿÿ  ÿÿÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 12
+		*MESH_TFACELIST {
+                      	 
+ 
+          	 
+ 
+   		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      ÿÿÿÿÿÿ      ÿÿÿÿÿÿÿÿÿÿÿÿ      		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 5
+}
+*GEOMOBJECT {
+	*NODE_ID "0d860980"
+	*NODE_NAME "coin03"
+	*NODE_TM {
+		*NODE_NAME "coin03"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -52.1688	-66.1364	18.1603
+		*TM_POS -52.1688	-66.1364	18.1603
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 142
+		*MESH_NUMFACES 280
+		*MESH_VERTEX_LIST {
+EQÂTH‘A5Ž„Â PÂã€‘AuýƒÂÿ  ÿ™™  ÿµ”  Ñè‡  ™™x  ™™Ik  Ñef  ÿIk  -px  efè‡  efµ”  -p2³  ÿk©  £ŸÑ  2³-p  2³“V  £ŸÌL  ÿ“V  [`-p  ÌLÑ  ÌLk©  [`ÌÌ  ÿ!¾  w¯º—  ÌÌDh  ÌÌÝA  w¯23  ÿÝA  ‡PDh  23º—  23!¾  ‡Pfæ  ÿÖÒ  I¿£Ÿ  dæ[`  dæ(-  I¿˜  ÿ(-  µ@[`  š£Ÿ  šÖÒ  µ@ÿÿ  ÿç  Ï§  ÿÿqX  ÿÿq  Ï    ÿq  ã0qX    §    ç  ã0ÿÿ33ÿç33Ï§33ÿÿqX33ÿÿq33Ï  33ÿq33ã0qX33  §33  ç33ã0ÿÿgfÿçgfÏ§gfÿÿqXgfÿÿqgfÏ  gfÿqgfã0qXgf  §gf  çgfã0ÿÿ›™ÿç›™Ï§›™ÿÿqX›™ÿÿq›™Ï  ›™ÿq›™ã0qX›™  §›™  ç›™ã0ÿÿËÌÿçËÌÏ§ËÌÿÿqXËÌÿÿqËÌÏ  ËÌÿqËÌã0qXËÌ  §ËÌ  çËÌã0ÿÿÿÿÿçÿÿÏ§ÿÿÿÿqXÿÿÿÿqÿÿÏ  ÿÿÿqÿÿã0qXÿÿ  §ÿÿ  çÿÿã0fæÿÿÿÖÒÿÿI¿£Ÿÿÿdæ[`ÿÿdæ(-ÿÿI¿˜ÿÿÿ(-ÿÿµ@[`ÿÿš£ŸÿÿšÖÒÿÿµ@ÌÌÿÿÿ!¾ÿÿw¯º—ÿÿÌÌDhÿÿÌÌÝAÿÿw¯23ÿÿÿÝAÿÿ‡PDhÿÿ23º—ÿÿ23!¾ÿÿ‡P2³ÿÿÿk©ÿÿ£ŸÑÿÿ2³-pÿÿ2³“Vÿÿ£ŸÌLÿÿÿ“Vÿÿ[`-pÿÿÌLÑÿÿÌLk©ÿÿ[`™™ÿÿÿµ”ÿÿÑè‡ÿÿ™™xÿÿ™™IkÿÿÑefÿÿÿIkÿÿ-pxÿÿefè‡ÿÿefµ”ÿÿ-pÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                     	     
+ 	     
+                                                                              	    	     	 
+    
+     
+                                                                                                                      !       !    " !     "    # "     #    $ #     $    % $     %    & %     &    ' &     '    ( '     (     (         * )      *     + *     ! +   ! , +   ! " ,   " - ,   " # -   # . -   # $ .   $ / .   $ % /   % 0 /   % & 0   & 1 0   & ' 1   ' 2 1   ' ( 2   ( ) 2   (  )   ) 4 3  ) * 4  * 5 4  * + 5  + 6 5  + , 6  , 7 6  , - 7  - 8 7  - . 8  . 9 8  . / 9  / : 9  / 0 :  0 ; :  0 1 ;  1 < ;  1 2 <  2 3 <  2 ) 3  3 > =  3 4 >  4 ? >  4 5 ?  5 @ ?  5 6 @  6 A @  6 7 A  7 B A  7 8 B  8 C B  8 9 C  9 D C  9 : D  : E D  : ; E  ; F E  ; < F  < = F  < 3 =  = H G  = > H  > I H  > ? I  ? J I  ? @ J  @ K J  @ A K  A L K  A B L  B M L  B C M  C N M  C D N  D O N  D E O  E P O  E F P  F G P  F = G  G R Q  G H R  H S R  H I S  I T S  I J T  J U T  J K U  K V U  K L V  L W V  L M W  M X W  M N X  N Y X  N O Y  O Z Y  O P Z  P Q Z  P G Q  Q \ [  Q R \  R ] \  R S ]  S ^ ]  S T ^  T _ ^  T U _  U ` _  U V `  V a `  V W a  W b a  W X b  X c b  X Y c  Y d c  Y Z d  Z [ d  Z Q [  [ f e  [ \ f  \ g f  \ ] g  ] h g  ] ^ h  ^ i h  ^ _ i  _ j i  _ ` j  ` k j  ` a k  a l k  a b l  b m l  b c m  c n m  c d n  d e n  d [ e  e p o  e f p  f q p  f g q  g r q  g h r  h s r  h i s  i t s  i j t  j u t  j k u  k v u  k l v  l w v  l m w  m x w  m n x  n o x  n e o  o z y  o p z  p { z  p q {  q | {  q r |  r } |  r s }  s ~ }  s t ~  t  ~  t u   u €   u v €  v  €  v w   w ‚   w x ‚  x y ‚  x o y  y „ ƒ  y z „  z … „  z { …  { † …  { | †  | ‡ †  | } ‡  } ˆ ‡  } ~ ˆ  ~ ‰ ˆ  ~  ‰   Š ‰   € Š  € ‹ Š  €  ‹   Œ ‹   ‚ Œ  ‚ ƒ Œ  ‚ y ƒ   ƒ „    „ …    … †    † ‡    ‡ ˆ    ˆ ‰    ‰ Š    Š ‹    ‹ Œ    Œ ƒ   		}
+		*MESH_NUMTVERTEX 183
+		*MESH_TVERTLIST {
+ÐÌL½    33s?  €?ÌŒ  eæ  ÌÌ  ÿÿ  ™      33  ÌL  ff  ÿ  ™™  2³  eæ  ÌÌ  ÿÿ      ™          33  ÌL  ff  ÿ  ™™  2³  eæ  ÌÌ  ÿÿ      ™          33  ÌL  ff  ÿ  ™™  2³  eæ  ÌÌ  ÿÿ      ™          33  ÌL  ff  ÿ  ™™  2³  eæ  ÌÌ  ÿÿ      ™          33  ÌL  ff  ÿ  ™™  2³  eæ23ÌÌ23ÿÿ23    ™23  23    3323ÌL23ff23ÿ23™™232³23eæffÌÌffÿÿff  23™ff  ff  2333ffÌLffffffÿff™™ff2³ffeæ˜™ÌÌ˜™ÿÿ˜™  ff™˜™  ˜™  ff33˜™ÌL˜™ff˜™ÿ˜™™™˜™2³˜™eæÌÌÌÌÌÌÿÿÌÌ  ˜™™ÌÌ  ÌÌ  ˜™33ÌÌÌLÌÌffÌÌÿÌÌ™™ÌÌ2³ÌÌeæÿÿÌÌÿÿÿÿÿÿ  ÌÌ™ÿÿ  ÿÿ  ÌÌ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿeæÿÿÌÌÿÿÿÿÿÿ  ÿÿ™ÿÿ  ÿÿ  ÿÿ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿeæÿÿÌÌÿÿÿÿÿÿ  ÿÿ™ÿÿ  ÿÿ  ÿÿ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿeæÿÿÌÌÿÿÿÿÿÿ  ÿÿ™ÿÿ  ÿÿ  ÿÿ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿeæÿÿÌÌÿÿÿÿÿÿ  ÿÿ™ÿÿ  ÿÿ  ÿÿ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿÌŒÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 280
+		*MESH_TFACELIST {
+                          	    
+ 	    
+                                             	  	   	 
+  
+   
+                                    !     !  " !   "  # "   #  $ #   $  % $   %   %     & '   &  ( &   ( ) * + ,  *  - *    -   . -   ! . ! / . ! " / " 0 / " # 0 # 1 0 # $ 1 $ 2 1 $ % 2 % ' 2 %  ' ' 3 4 ' & 3 & 5 3 & ( 5 6 7 8 9 * 7 * : 7 * - : - ; : - . ; . < ; . / < / = < / 0 = 0 > = 0 1 > 1 ? > 1 2 ? 2 4 ? 2 ' 4 4 @ A 4 3 @ 3 B @ 3 5 B C D E F 7 D 7 G D 7 : G : H G : ; H ; I H ; < I < J I < = J = K J = > K > L K > ? L ? A L ? 4 A A M N A @ M @ O M @ B O P Q R S D Q D T Q D G T G U T G H U H V U H I V I W V I J W J X W J K X K Y X K L Y L N Y L A N N Z [ N M Z M \ Z M O \ ] ^ _ ` Q ^ Q a ^ Q T a T b a T U b U c b U V c V d c V W d W e d W X e X f e X Y f Y [ f Y N [ [ g h [ Z g Z i g Z \ i j k l m ^ k ^ n k ^ a n a o n a b o b p o b c p c q p c d q d r q d e r e s r e f s f h s f [ h h t u h g t g v t g i v w x y z k x k { x k n { n | { n o | o } | o p } p ~ } p q ~ q  ~ q r  r €  r s € s u € s h u u  ‚ u t  t ƒ  t v ƒ „ … † ‡ x … x ˆ … x { ˆ { ‰ ˆ { | ‰ | Š ‰ | } Š } ‹ Š } ~ ‹ ~ Œ ‹ ~  Œ   Œ  €  € ‚  € u ‚ ‚ Ž  ‚  Ž   Ž  ƒ  ‘ ’ “ ” … ’ … • ’ … ˆ • ˆ – • ˆ ‰ – ‰ — – ‰ Š — Š ˜ — Š ‹ ˜ ‹ ™ ˜ ‹ Œ ™ Œ š ™ Œ  š   š  ‚   › œ  Ž › Ž  › Ž   ž Ÿ   ¡ ’ Ÿ ’ ¢ Ÿ ’ • ¢ • £ ¢ • – £ – ¤ £ – — ¤ — ¥ ¤ — ˜ ¥ ˜ ¦ ¥ ˜ ™ ¦ ™ § ¦ ™ š § š œ § š  œ œ ¨ © œ › ¨ › ª ¨ ›  ª « ¬ ­ ® Ÿ ¬ Ÿ ¯ ¬ Ÿ ¢ ¯ ¢ ° ¯ ¢ £ ° £ ± ° £ ¤ ± ¤ ² ± ¤ ¥ ² ¥ ³ ² ¥ ¦ ³ ¦ ´ ³ ¦ § ´ § © ´ § œ © µ © ¨ µ ¨ ª µ ¶ ¬ µ ¬ ¯ µ ¯ ° µ ° ± µ ± ² µ ² ³ µ ³ ´ µ ´ © 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+                                                                                                                                                                                                                                                                              ÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 5
+}
+*GEOMOBJECT {
+	*NODE_ID "14762c90"
+	*NODE_NAME "coin01"
+	*NODE_TM {
+		*NODE_NAME "coin01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -50.6038	-67.9929	17.9702
+		*TM_POS -50.6038	-67.9929	17.9702
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 142
+		*MESH_NUMFACES 280
+		*MESH_VERTEX_LIST {
+KÂíÂA»DˆÂÒIÂ|ûAû³‡Âÿ  ÿ™™  ÿµ”  Ñè‡  ™™x  ™™Ik  Ñef  ÿIk  -px  efè‡  efµ”  -p2³  ÿk©  £ŸÑ  2³-p  2³“V  £ŸÌL  ÿ“V  [`-p  ÌLÑ  ÌLk©  [`ÌÌ  ÿ!¾  w¯º—  ÌÌDh  ÌÌÝA  w¯23  ÿÝA  ‡PDh  23º—  23!¾  ‡Pfæ  ÿÖÒ  I¿£Ÿ  dæ[`  dæ(-  I¿˜  ÿ(-  µ@[`  š£Ÿ  š×Ò  µ@ÿÿ  ÿç  Ï§  ÿÿqX  ÿÿq  Ï    ÿq  ã0qX    §    ç  ã0ÿÿ33ÿç33Ï§33ÿÿqX33ÿÿq33Ï  33ÿq33ã0qX33  §33  ç33ã0ÿÿgfÿçgfÏ§gfÿÿqXgfÿÿqgfÏ  gfÿqgfã0qXgf  §gf  çgfã0ÿÿ›™ÿç›™Ï§›™ÿÿqX›™ÿÿq›™Ï  ›™ÿq›™ã0qX›™  §›™  ç›™ã0ÿÿËÌÿçËÌÏ§ËÌÿÿqXËÌÿÿqËÌÏ  ËÌÿqËÌã0qXËÌ  §ËÌ  çËÌã0ÿÿÿÿÿçÿÿÏ§ÿÿÿÿqXÿÿÿÿqÿÿÏ  ÿÿÿqÿÿã0qXÿÿ  §ÿÿ  çÿÿã0fæÿÿÿÖÒÿÿI¿£Ÿÿÿdæ[`ÿÿdæ(-ÿÿI¿˜ÿÿÿ(-ÿÿµ@[`ÿÿš£Ÿÿÿš×Òÿÿµ@ÌÌÿÿÿ!¾ÿÿw¯º—ÿÿÌÌDhÿÿÌÌÝAÿÿw¯23ÿÿÿÝAÿÿ‡PDhÿÿ23º—ÿÿ23!¾ÿÿ‡P2³ÿÿÿk©ÿÿ£ŸÑÿÿ2³-pÿÿ2³“Vÿÿ£ŸÌLÿÿÿ“Vÿÿ[`-pÿÿÌLÑÿÿÌLk©ÿÿ[`™™ÿÿÿµ”ÿÿÑè‡ÿÿ™™xÿÿ™™IkÿÿÑefÿÿÿIkÿÿ-pxÿÿefè‡ÿÿefµ”ÿÿ-pÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                     	     
+ 	     
+                                                                              	    	     	 
+    
+     
+                                                                                                                      !       !    " !     "    # "     #    $ #     $    % $     %    & %     &    ' &     '    ( '     (     (         * )      *     + *     ! +   ! , +   ! " ,   " - ,   " # -   # . -   # $ .   $ / .   $ % /   % 0 /   % & 0   & 1 0   & ' 1   ' 2 1   ' ( 2   ( ) 2   (  )   ) 4 3  ) * 4  * 5 4  * + 5  + 6 5  + , 6  , 7 6  , - 7  - 8 7  - . 8  . 9 8  . / 9  / : 9  / 0 :  0 ; :  0 1 ;  1 < ;  1 2 <  2 3 <  2 ) 3  3 > =  3 4 >  4 ? >  4 5 ?  5 @ ?  5 6 @  6 A @  6 7 A  7 B A  7 8 B  8 C B  8 9 C  9 D C  9 : D  : E D  : ; E  ; F E  ; < F  < = F  < 3 =  = H G  = > H  > I H  > ? I  ? J I  ? @ J  @ K J  @ A K  A L K  A B L  B M L  B C M  C N M  C D N  D O N  D E O  E P O  E F P  F G P  F = G  G R Q  G H R  H S R  H I S  I T S  I J T  J U T  J K U  K V U  K L V  L W V  L M W  M X W  M N X  N Y X  N O Y  O Z Y  O P Z  P Q Z  P G Q  Q \ [  Q R \  R ] \  R S ]  S ^ ]  S T ^  T _ ^  T U _  U ` _  U V `  V a `  V W a  W b a  W X b  X c b  X Y c  Y d c  Y Z d  Z [ d  Z Q [  [ f e  [ \ f  \ g f  \ ] g  ] h g  ] ^ h  ^ i h  ^ _ i  _ j i  _ ` j  ` k j  ` a k  a l k  a b l  b m l  b c m  c n m  c d n  d e n  d [ e  e p o  e f p  f q p  f g q  g r q  g h r  h s r  h i s  i t s  i j t  j u t  j k u  k v u  k l v  l w v  l m w  m x w  m n x  n o x  n e o  o z y  o p z  p { z  p q {  q | {  q r |  r } |  r s }  s ~ }  s t ~  t  ~  t u   u €   u v €  v  €  v w   w ‚   w x ‚  x y ‚  x o y  y „ ƒ  y z „  z … „  z { …  { † …  { | †  | ‡ †  | } ‡  } ˆ ‡  } ~ ˆ  ~ ‰ ˆ  ~  ‰   Š ‰   € Š  € ‹ Š  €  ‹   Œ ‹   ‚ Œ  ‚ ƒ Œ  ‚ y ƒ   ƒ „    „ …    … †    † ‡    ‡ ˆ    ˆ ‰    ‰ Š    Š ‹    ‹ Œ    Œ ƒ   		}
+		*MESH_NUMTVERTEX 183
+		*MESH_TVERTLIST {
+ÐÌL½    33s?  €?ÌŒ  eæ  ÌÌ  ÿÿ  ™      33  ÌL  ff  ÿ  ™™  2³  eæ  ÌÌ  ÿÿ      ™          33  ÌL  ff  ÿ  ™™  2³  eæ  ÌÌ  ÿÿ      ™          33  ÌL  ff  ÿ  ™™  2³  eæ  ÌÌ  ÿÿ      ™          33  ÌL  ff  ÿ  ™™  2³  eæ  ÌÌ  ÿÿ      ™          33  ÌL  ff  ÿ  ™™  2³  eæ23ÌÌ23ÿÿ23    ™23  23    3323ÌL23ff23ÿ23™™232³23eæffÌÌffÿÿff  23™ff  ff  2333ffÌLffffffÿff™™ff2³ffeæ˜™ÌÌ˜™ÿÿ˜™  ff™˜™  ˜™  ff33˜™ÌL˜™ff˜™ÿ˜™™™˜™2³˜™eæÌÌÌÌÌÌÿÿÌÌ  ˜™™ÌÌ  ÌÌ  ˜™33ÌÌÌLÌÌffÌÌÿÌÌ™™ÌÌ2³ÌÌeæÿÿÌÌÿÿÿÿÿÿ  ÌÌ™ÿÿ  ÿÿ  ÌÌ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿeæÿÿÌÌÿÿÿÿÿÿ  ÿÿ™ÿÿ  ÿÿ  ÿÿ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿeæÿÿÌÌÿÿÿÿÿÿ  ÿÿ™ÿÿ  ÿÿ  ÿÿ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿeæÿÿÌÌÿÿÿÿÿÿ  ÿÿ™ÿÿ  ÿÿ  ÿÿ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿeæÿÿÌÌÿÿÿÿÿÿ  ÿÿ™ÿÿ  ÿÿ  ÿÿ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿÌŒÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 280
+		*MESH_TFACELIST {
+                          	    
+ 	    
+                                             	  	   	 
+  
+   
+                                    !     !  " !   "  # "   #  $ #   $  % $   %   %     & '   &  ( &   ( ) * + ,  *  - *    -   . -   ! . ! / . ! " / " 0 / " # 0 # 1 0 # $ 1 $ 2 1 $ % 2 % ' 2 %  ' ' 3 4 ' & 3 & 5 3 & ( 5 6 7 8 9 * 7 * : 7 * - : - ; : - . ; . < ; . / < / = < / 0 = 0 > = 0 1 > 1 ? > 1 2 ? 2 4 ? 2 ' 4 4 @ A 4 3 @ 3 B @ 3 5 B C D E F 7 D 7 G D 7 : G : H G : ; H ; I H ; < I < J I < = J = K J = > K > L K > ? L ? A L ? 4 A A M N A @ M @ O M @ B O P Q R S D Q D T Q D G T G U T G H U H V U H I V I W V I J W J X W J K X K Y X K L Y L N Y L A N N Z [ N M Z M \ Z M O \ ] ^ _ ` Q ^ Q a ^ Q T a T b a T U b U c b U V c V d c V W d W e d W X e X f e X Y f Y [ f Y N [ [ g h [ Z g Z i g Z \ i j k l m ^ k ^ n k ^ a n a o n a b o b p o b c p c q p c d q d r q d e r e s r e f s f h s f [ h h t u h g t g v t g i v w x y z k x k { x k n { n | { n o | o } | o p } p ~ } p q ~ q  ~ q r  r €  r s € s u € s h u u  ‚ u t  t ƒ  t v ƒ „ … † ‡ x … x ˆ … x { ˆ { ‰ ˆ { | ‰ | Š ‰ | } Š } ‹ Š } ~ ‹ ~ Œ ‹ ~  Œ   Œ  €  € ‚  € u ‚ ‚ Ž  ‚  Ž   Ž  ƒ  ‘ ’ “ ” … ’ … • ’ … ˆ • ˆ – • ˆ ‰ – ‰ — – ‰ Š — Š ˜ — Š ‹ ˜ ‹ ™ ˜ ‹ Œ ™ Œ š ™ Œ  š   š  ‚   › œ  Ž › Ž  › Ž   ž Ÿ   ¡ ’ Ÿ ’ ¢ Ÿ ’ • ¢ • £ ¢ • – £ – ¤ £ – — ¤ — ¥ ¤ — ˜ ¥ ˜ ¦ ¥ ˜ ™ ¦ ™ § ¦ ™ š § š œ § š  œ œ ¨ © œ › ¨ › ª ¨ ›  ª « ¬ ­ ® Ÿ ¬ Ÿ ¯ ¬ Ÿ ¢ ¯ ¢ ° ¯ ¢ £ ° £ ± ° £ ¤ ± ¤ ² ± ¤ ¥ ² ¥ ³ ² ¥ ¦ ³ ¦ ´ ³ ¦ § ´ § © ´ § œ © µ © ¨ µ ¨ ª µ ¶ ¬ µ ¬ ¯ µ ¯ ° µ ° ± µ ± ² µ ² ³ µ ³ ´ µ ´ © 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+                                                                                                                                                                                                                                                                              ÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 5
+}
+*GEOMOBJECT {
+	*NODE_ID "14762940"
+	*NODE_NAME "coin02"
+	*NODE_TM {
+		*NODE_NAME "coin02"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.0000	0.0000	0.0000
+		*TM_ROW1 0.0000	1.0000	0.0000
+		*TM_ROW2 0.0000	0.0000	1.0000
+		*TM_ROW3 -50.5485	-64.4610	17.9807
+		*TM_POS -50.5485	-64.4610	17.9807
+		*TM_ROTAXIS 0.0000	0.0000	0.0000
+		*TM_ROTANGLE 0.0000
+		*TM_SCALE 1.0000	1.0000	1.0000
+		*TM_SCALEAXIS 0.0000	0.0000	0.0000
+		*TM_SCALEAXISANG 0.0000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 142
+		*MESH_NUMFACES 280
+		*MESH_VERTEX_LIST {
+×ÉJÂŒØAl4Âq™IÂA¬£€Âÿ  ÿ™™  ÿµ”  Ñè‡  ™™x  ™™Ik  Ñef  ÿIk  -px  efè‡  efµ”  -p2³  ÿk©  £ŸÑ  2³-p  2³“V  £ŸÌL  ÿ“V  [`-p  ÌLÑ  ÌLk©  [`ÌÌ  ÿ!¾  w¯º—  ÌÌDh  ÌÌÝA  w¯23  ÿÝA  ‡PDh  23º—  23!¾  ‡Pfæ  ÿÖÒ  I¿£Ÿ  dæ[`  dæ(-  I¿˜  ÿ(-  µ@[`  š£Ÿ  š×Ò  µ@ÿÿ  ÿç  Ï§  ÿÿqX  ÿÿq  Ï    ÿq  ã0qX    §    ç  ã0ÿÿ33ÿç33Ï§33ÿÿqX33ÿÿq33Ï  33ÿq33ã0qX33  §33  ç33ã0ÿÿgfÿçgfÏ§gfÿÿqXgfÿÿqgfÏ  gfÿqgfã0qXgf  §gf  çgfã0ÿÿ›™ÿç›™Ï§›™ÿÿqX›™ÿÿq›™Ï  ›™ÿq›™ã0qX›™  §›™  ç›™ã0ÿÿËÌÿçËÌÏ§ËÌÿÿqXËÌÿÿqËÌÏ  ËÌÿqËÌã0qXËÌ  §ËÌ  çËÌã0ÿÿÿÿÿçÿÿÏ§ÿÿÿÿqXÿÿÿÿqÿÿÏ  ÿÿÿqÿÿã0qXÿÿ  §ÿÿ  çÿÿã0fæÿÿÿÖÒÿÿI¿£Ÿÿÿdæ[`ÿÿdæ(-ÿÿI¿˜ÿÿÿ(-ÿÿµ@[`ÿÿš£Ÿÿÿš×Òÿÿµ@ÌÌÿÿÿ!¾ÿÿw¯º—ÿÿÌÌDhÿÿÌÌÝAÿÿw¯23ÿÿÿÝAÿÿ‡PDhÿÿ23º—ÿÿ23!¾ÿÿ‡P2³ÿÿÿk©ÿÿ£ŸÑÿÿ2³-pÿÿ2³“Vÿÿ£ŸÌLÿÿÿ“Vÿÿ[`-pÿÿÌLÑÿÿÌLk©ÿÿ[`™™ÿÿÿµ”ÿÿÑè‡ÿÿ™™xÿÿ™™IkÿÿÑefÿÿÿIkÿÿ-pxÿÿefè‡ÿÿefµ”ÿÿ-pÿÿÿÿ		}
+		*MESH_FACE_LIST {
+                                     	     
+ 	     
+                                                                              	    	     	 
+    
+     
+                                                                                                                      !       !    " !     "    # "     #    $ #     $    % $     %    & %     &    ' &     '    ( '     (     (         * )      *     + *     ! +   ! , +   ! " ,   " - ,   " # -   # . -   # $ .   $ / .   $ % /   % 0 /   % & 0   & 1 0   & ' 1   ' 2 1   ' ( 2   ( ) 2   (  )   ) 4 3  ) * 4  * 5 4  * + 5  + 6 5  + , 6  , 7 6  , - 7  - 8 7  - . 8  . 9 8  . / 9  / : 9  / 0 :  0 ; :  0 1 ;  1 < ;  1 2 <  2 3 <  2 ) 3  3 > =  3 4 >  4 ? >  4 5 ?  5 @ ?  5 6 @  6 A @  6 7 A  7 B A  7 8 B  8 C B  8 9 C  9 D C  9 : D  : E D  : ; E  ; F E  ; < F  < = F  < 3 =  = H G  = > H  > I H  > ? I  ? J I  ? @ J  @ K J  @ A K  A L K  A B L  B M L  B C M  C N M  C D N  D O N  D E O  E P O  E F P  F G P  F = G  G R Q  G H R  H S R  H I S  I T S  I J T  J U T  J K U  K V U  K L V  L W V  L M W  M X W  M N X  N Y X  N O Y  O Z Y  O P Z  P Q Z  P G Q  Q \ [  Q R \  R ] \  R S ]  S ^ ]  S T ^  T _ ^  T U _  U ` _  U V `  V a `  V W a  W b a  W X b  X c b  X Y c  Y d c  Y Z d  Z [ d  Z Q [  [ f e  [ \ f  \ g f  \ ] g  ] h g  ] ^ h  ^ i h  ^ _ i  _ j i  _ ` j  ` k j  ` a k  a l k  a b l  b m l  b c m  c n m  c d n  d e n  d [ e  e p o  e f p  f q p  f g q  g r q  g h r  h s r  h i s  i t s  i j t  j u t  j k u  k v u  k l v  l w v  l m w  m x w  m n x  n o x  n e o  o z y  o p z  p { z  p q {  q | {  q r |  r } |  r s }  s ~ }  s t ~  t  ~  t u   u €   u v €  v  €  v w   w ‚   w x ‚  x y ‚  x o y  y „ ƒ  y z „  z … „  z { …  { † …  { | †  | ‡ †  | } ‡  } ˆ ‡  } ~ ˆ  ~ ‰ ˆ  ~  ‰   Š ‰   € Š  € ‹ Š  €  ‹   Œ ‹   ‚ Œ  ‚ ƒ Œ  ‚ y ƒ   ƒ „    „ …    … †    † ‡    ‡ ˆ    ˆ ‰    ‰ Š    Š ‹    ‹ Œ    Œ ƒ   		}
+		*MESH_NUMTVERTEX 183
+		*MESH_TVERTLIST {
+ÐÌL½    33s?  €?ÌŒ  eæ  ÌÌ  ÿÿ  ™      33  ÌL  ff  ÿ  ™™  2³  eæ  ÌÌ  ÿÿ      ™          33  ÌL  ff  ÿ  ™™  2³  eæ  ÌÌ  ÿÿ      ™          33  ÌL  ff  ÿ  ™™  2³  eæ  ÌÌ  ÿÿ      ™          33  ÌL  ff  ÿ  ™™  2³  eæ  ÌÌ  ÿÿ      ™          33  ÌL  ff  ÿ  ™™  2³  eæ23ÌÌ23ÿÿ23    ™23  23    3323ÌL23ff23ÿ23™™232³23eæffÌÌffÿÿff  23™ff  ff  2333ffÌLffffffÿff™™ff2³ffeæ˜™ÌÌ˜™ÿÿ˜™  ff™˜™  ˜™  ff33˜™ÌL˜™ff˜™ÿ˜™™™˜™2³˜™eæÌÌÌÌÌÌÿÿÌÌ  ˜™™ÌÌ  ÌÌ  ˜™33ÌÌÌLÌÌffÌÌÿÌÌ™™ÌÌ2³ÌÌeæÿÿÌÌÿÿÿÿÿÿ  ÌÌ™ÿÿ  ÿÿ  ÌÌ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿeæÿÿÌÌÿÿÿÿÿÿ  ÿÿ™ÿÿ  ÿÿ  ÿÿ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿeæÿÿÌÌÿÿÿÿÿÿ  ÿÿ™ÿÿ  ÿÿ  ÿÿ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿeæÿÿÌÌÿÿÿÿÿÿ  ÿÿ™ÿÿ  ÿÿ  ÿÿ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿeæÿÿÌÌÿÿÿÿÿÿ  ÿÿ™ÿÿ  ÿÿ  ÿÿ33ÿÿÌLÿÿffÿÿÿÿÿ™™ÿÿ2³ÿÿÌŒÿÿ  ÿÿ		}
+		*MESH_NUMTVFACES 280
+		*MESH_TFACELIST {
+                          	    
+ 	    
+                                             	  	   	 
+  
+   
+                                    !     !  " !   "  # "   #  $ #   $  % $   %   %     & '   &  ( &   ( ) * + ,  *  - *    -   . -   ! . ! / . ! " / " 0 / " # 0 # 1 0 # $ 1 $ 2 1 $ % 2 % ' 2 %  ' ' 3 4 ' & 3 & 5 3 & ( 5 6 7 8 9 * 7 * : 7 * - : - ; : - . ; . < ; . / < / = < / 0 = 0 > = 0 1 > 1 ? > 1 2 ? 2 4 ? 2 ' 4 4 @ A 4 3 @ 3 B @ 3 5 B C D E F 7 D 7 G D 7 : G : H G : ; H ; I H ; < I < J I < = J = K J = > K > L K > ? L ? A L ? 4 A A M N A @ M @ O M @ B O P Q R S D Q D T Q D G T G U T G H U H V U H I V I W V I J W J X W J K X K Y X K L Y L N Y L A N N Z [ N M Z M \ Z M O \ ] ^ _ ` Q ^ Q a ^ Q T a T b a T U b U c b U V c V d c V W d W e d W X e X f e X Y f Y [ f Y N [ [ g h [ Z g Z i g Z \ i j k l m ^ k ^ n k ^ a n a o n a b o b p o b c p c q p c d q d r q d e r e s r e f s f h s f [ h h t u h g t g v t g i v w x y z k x k { x k n { n | { n o | o } | o p } p ~ } p q ~ q  ~ q r  r €  r s € s u € s h u u  ‚ u t  t ƒ  t v ƒ „ … † ‡ x … x ˆ … x { ˆ { ‰ ˆ { | ‰ | Š ‰ | } Š } ‹ Š } ~ ‹ ~ Œ ‹ ~  Œ   Œ  €  € ‚  € u ‚ ‚ Ž  ‚  Ž   Ž  ƒ  ‘ ’ “ ” … ’ … • ’ … ˆ • ˆ – • ˆ ‰ – ‰ — – ‰ Š — Š ˜ — Š ‹ ˜ ‹ ™ ˜ ‹ Œ ™ Œ š ™ Œ  š   š  ‚   › œ  Ž › Ž  › Ž   ž Ÿ   ¡ ’ Ÿ ’ ¢ Ÿ ’ • ¢ • £ ¢ • – £ – ¤ £ – — ¤ — ¥ ¤ — ˜ ¥ ˜ ¦ ¥ ˜ ™ ¦ ™ § ¦ ™ š § š œ § š  œ œ ¨ © œ › ¨ › ª ¨ ›  ª « ¬ ­ ® Ÿ ¬ Ÿ ¯ ¬ Ÿ ¢ ¯ ¢ ° ¯ ¢ £ ° £ ± ° £ ¤ ± ¤ ² ± ¤ ¥ ² ¥ ³ ² ¥ ¦ ³ ¦ ´ ³ ¦ § ´ § © ´ § œ © µ © ¨ µ ¨ ª µ ¶ ¬ µ ¬ ¯ µ ¯ ° µ ° ± µ ± ² µ ² ³ µ ³ ´ µ ´ © 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+                                                                                                                                                                                                                                                                              ÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿæÊÿÿæÊæÊæÊ¦øæÊæÊ¦ø¦ø¦øXø¦ø¦øXøXøXøÊXøXøÊÊÊ ÊÊ   4  444X44XXX¦XX¦¦¦æ4¦¦æ4æ4æ4ÿæ4æ4ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 5
+}

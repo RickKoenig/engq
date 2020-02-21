@@ -1,0 +1,8 @@
+// dimension
+3 8
+// numpieces
+3
+// pieces
+X 0 3
+X 1 5
+X 2 7

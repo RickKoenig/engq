@@ -1,0 +1,19 @@
+// ui for searcher state
+
+shape searcherres 0 0 {
+
+	pbut QUIT
+	950 740
+	50 20
+	Quit
+
+	pbut RELOAD
+	750 740
+	150 20
+	"Reset"
+
+	pbut FILTER
+	450 740
+	280 20
+	"Change Filter Mode"
+}

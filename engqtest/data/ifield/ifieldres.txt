@@ -1,0 +1,360 @@
+shape quant3res 0 0 {
+	
+// reset board a
+	pbut BRESETA
+	25 650
+	160 20
+	RESETA
+	
+// backup boarda
+	pbut BBACKUPA
+	25 680
+	160 20
+	BACKUPA
+	
+// reset boardm
+	pbut BRESETM
+	325 650
+	160 20
+	RESETM
+	
+// backup boardm
+	pbut BBACKUPM
+	325 680
+	160 20
+	BACKUPM
+	
+// bigger board
+	pbut BBIGGER
+	854 660
+	160 20
+	BIGGER
+	
+// smaller board
+	pbut BSMALLER
+	854 690
+	160 20
+	SMALLER
+
+// polynomial
+	text TPOLY
+	624 505
+	360 20
+	"Polynomial"
+	
+	text TPOLYA
+	600 530
+	20 20
+	A
+
+	text TPOLYB
+	600 555
+	20 20
+	B
+
+	text TPOLYM
+	600 580
+	20 20
+	M
+
+	edit EPOLYA
+	624 530
+	360 20
+	"x31+1"
+
+	edit EPOLYB
+	624 555
+	360 20
+	"11"
+	
+	edit EPOLYM
+	624 580
+	360 20
+	"x2+x+1"
+	
+	pbut BPLUS
+	816 370
+	20 20
+	"+"
+	
+	pbut BMINUS
+	845 370
+	20 20
+	"-"
+	
+	pbut BMULT
+	874 370
+	20 20
+	"*"
+	
+	pbut BDIV
+	903 370
+	20 20
+	"/"
+	
+	pbut BMOD
+	932 370
+	20 20
+	"%"
+	
+	pbut BCOMPOSE
+	961 370
+	20 20
+	"o"
+	
+	pbut BGCD
+	990 370
+	30 20
+	"GCD"
+	
+	text TPOLYR
+	24 710
+	820 20
+	"result of A op B"
+
+	text TPOLYRM
+	24 740
+	820 20
+	"result of A op B mod M"
+
+	pbut BRING
+	824 460
+	160 20
+	"Quick Calc mod R"
+	
+	pbut BPOLY
+	824 430
+	160 20
+	"Calc Poly 'M' Ring"
+	
+	pbut BFACTOR
+	824 400
+	100 20
+	"Factor 'A'"
+	
+	pbut BDERIV
+	938 400
+	80 20
+	"Deriv 'A'"
+// mod
+	text TMOD
+	824 300
+	160 20
+	"Mod m"
+
+	hscroll HMOD
+	824 330
+	160 20
+
+	pbut BPP
+	960 610
+	20 20
+	"X"
+	
+	text TPP
+	850 610
+	100 20
+	"Pack Print"
+	
+	pbut BM4
+	610 610
+	12 12
+	"0"
+
+	pbut BM3
+	625 610
+	12 12
+	"0"
+
+	pbut BM2
+	640 610
+	12 12
+	"0"
+
+	pbut BM1
+	655 610
+	12 12
+	"0"
+
+	pbut BM0
+	670 610
+	12 12
+	"0"
+
+
+
+
+	pbut BC14
+	610 635
+	12 12
+	"0"
+
+	pbut BC13
+	625 635
+	12 12
+	"0"
+
+	pbut BC12
+	640 635
+	12 12
+	"0"
+
+	pbut BC11
+	655 635
+	12 12
+	"0"
+
+	pbut BC10
+	670 635
+	12 12
+	"0"
+
+	pbut BC9
+	690 635
+	12 12
+	"0"
+
+	pbut BC8
+	705 635
+	12 12
+	"0"
+
+	pbut BC7
+	720 635
+	12 12
+	"0"
+
+	pbut BC6
+	735 635
+	12 12
+	"0"
+
+	pbut BC5
+	750 635
+	12 12
+	"0"
+
+	pbut BC4
+	765 635
+	12 12
+	"0"
+
+	pbut BC3
+	780 635
+	12 12
+	"0"
+
+	pbut BC2
+	795 635
+	12 12
+	"0"
+
+	pbut BC1
+	810 635
+	12 12
+	"0"
+
+	pbut BC0
+	825 635
+	12 12
+	"0"
+
+	text T14
+	610 660
+	12 12
+	"0"
+
+	text T13
+	625 660
+	12 12
+	"0"
+
+	text T12
+	640 660
+	12 12
+	"0"
+
+	text T11
+	655 660
+	12 12
+	"0"
+
+	text T10
+	670 660
+	12 12
+	"0"
+
+	text T9
+	690 660
+	12 12
+	"0"
+
+	text T8
+	705 660
+	12 12
+	"0"
+
+	text T7
+	720 660
+	12 12
+	"0"
+
+	text T6
+	735 660
+	12 12
+	"0"
+
+	text T5
+	750 660
+	12 12
+	"0"
+
+	text T4
+	765 660
+	12 12
+	"0"
+
+	text T3
+	780 660
+	12 12
+	"0"
+
+	text T2
+	795 660
+	12 12
+	"0"
+
+	text T1
+	810 660
+	12 12
+	"0"
+
+	text T0
+	825 660
+	12 12
+	"0"
+
+	text TNBITS
+	725 680
+	100 12
+	"0 bit errs"
+	
+	text TINFOBCH
+	690 610
+	145 12
+	"(15,5) bch code"
+// quit
+	pbut BQUIT
+	854 740
+	160 20
+	QUIT
+// homomorphisms
+	listbox HOMO
+	730 60
+	220 160
+	
+	pbut BHOMO
+	760 20
+	160 20
+	"CALC HOMO"
+}

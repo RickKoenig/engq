@@ -1,0 +1,52 @@
+<html>
+	<head><title>Get method Ajax form JSON</title>
+		<link rel="stylesheet" type="text/css" href="ajaxGETstyle.css" />
+		<script type="text/javascript" src="ajaxCreateRequest.js">
+		</script>
+		<script type="text/javascript">
+			function goAjax(){
+				var ajaxRequest=createRequest();
+				if(ajaxRequest != false){
+					ajaxRequest.onreadystatechange = function(){
+						var textObj=document.getElementById("message");
+						if(ajaxRequest.readyState == 4){
+							//alert(ajaxRequest.status);
+							if(ajaxRequest.status==200){
+								//textObj.innerHTML=ajaxRequest.responseText;
+								var colors = eval('(' + ajaxRequest.responseText + ')') ;
+								alert(colors);
+							}else if(ajaxRequest.status == 404){
+								textObj.innerHTML="Resource unavailable";
+							}else{
+								textObj.innerHTML="Error!!";
+							}
+						}
+					}
+					var namevalue=
+					  encodeURIComponent(document.getElementById("username").value)
+					var phonevalue=
+					  encodeURIComponent(document.getElementById("userphone").value)
+					ajaxRequest.open("GET","colors.json", true);
+					ajaxRequest.setRequestHeader('If-Modified-Since',
+					  'Sat, 03 Jan 2010 00:00:00GMT');
+					ajaxRequest.send(null);
+				}else{
+					alert("Browser encountered a problem!");
+				}
+			} // End goAjax()function
+		</script>
+	</head>
+	<body>
+		<form action="">
+			Your name: <input type="text" size=50 id=username
+			  name='username' /> <br />
+			<p>
+				Your phone: <input type="text" size=50 id=userphone
+				  name="userphone" /><br />
+			<p>
+			<input type="button" value="submit using GET" onClick="goAjax()"; />
+		</form>
+		<div id="message" class="divStyle">
+		</div>
+	</body>
+</html>

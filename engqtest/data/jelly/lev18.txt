@@ -1,0 +1,12 @@
+# board x y then xy of . blank, Pn piece n, UDLR if stuck on adjacent piece, pieces start at 2
+14 10
+W W W W W W W W W W W W  W  W
+W . . . . . . . . . . .  .  W
+W 4 6 9 . . . . . . . .  .  W
+W 4 6 5 5 . . . . . 5 .  .  W
+W 4 6 7 8 . . . . . 5 10  4S  W
+W W W W W . 5 . . . W W  W  W
+W W W W W . 5 5 . . W W  W  W
+W W W W W . 5 5 5 . W W  W  W
+W W W W W . 5 5 5 5 W W  W  W
+W W W W W W W W W W W W  W  W

@@ -1,0 +1,42 @@
+﻿  lapi.c
+  lauxlib.c
+  lbaselib.c
+  lbitlib.c
+c:\srcw32\vs2017\engq\lua\lbitlib.c(39): warning C4244: 'function': conversion from 'Integer' to 'lua_Number', possible loss of data
+c:\srcw32\vs2017\engq\lua\lbitlib.c(40): warning C4244: 'function': conversion from 'Integer' to 'lua_Number', possible loss of data
+c:\srcw32\vs2017\engq\lua\lbitlib.c(41): warning C4244: 'function': conversion from 'Integer' to 'lua_Number', possible loss of data
+c:\srcw32\vs2017\engq\lua\lbitlib.c(42): warning C4244: 'function': conversion from 'Integer' to 'lua_Number', possible loss of data
+c:\srcw32\vs2017\engq\lua\lbitlib.c(43): warning C4244: 'function': conversion from 'Integer' to 'lua_Number', possible loss of data
+c:\srcw32\vs2017\engq\lua\lbitlib.c(44): warning C4244: 'function': conversion from 'UInteger' to 'lua_Number', possible loss of data
+c:\srcw32\vs2017\engq\lua\lbitlib.c(45): warning C4244: 'function': conversion from 'Integer' to 'lua_Number', possible loss of data
+c:\srcw32\vs2017\engq\lua\lbitlib.c(46): warning C4244: 'function': conversion from 'Integer' to 'lua_Number', possible loss of data
+  lcode.c
+  ldblib.c
+  ldebug.c
+  ldo.c
+  ldump.c
+  lfunc.c
+  lgc.c
+  linit.c
+  liolib.c
+  llex.c
+  lmathlib.c
+  lmem.c
+  loadlib.c
+  lobject.c
+  lopcodes.c
+  loslib.c
+  Generating Code...
+  Compiling...
+  lparser.c
+  lstate.c
+  lstring.c
+  lstrlib.c
+  ltable.c
+  ltablib.c
+  ltm.c
+  lundump.c
+  lvm.c
+  lzio.c
+  Generating Code...
+  lua.vcxproj -> C:\srcw32\vs2017\engq\lua\.\lua.lib

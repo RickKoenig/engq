@@ -1,0 +1,50 @@
+shape rootmenu 0 0 {
+
+	back BACK1
+		0 0
+		 800 600
+
+	text TEXT2
+		315 70
+		 250 15
+		 IPS
+
+	listbox LISTBOX2 // ips
+		315 110
+		 250 154
+
+	edit EDIT2 // ip
+		315 284
+		 250 30
+		 ""
+
+	pbut PBUT4
+		315 340
+		 160 20
+		 "DEL IP"
+		
+	text TEXT3
+		575 70
+		 190 15
+		 PORTS
+
+	listbox LISTBOX3 // ports
+		575 110
+		 190 154
+
+	edit EDIT3 /* port */
+		575 284
+		190 30
+		""
+		
+	pbut PBUT5
+		575 340
+		 160 20
+		 "DEL PORT"
+		
+	pbut PBUT6
+		625 500
+		 150 30
+		 "BACK"
+		
+}

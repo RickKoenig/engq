@@ -1,0 +1,32 @@
+HTTP/1.1 200 OK
+Date: Sun, 30 Oct 2011 08:20:21 GMT
+Server: Apache
+Last-Modified: Mon, 11 Jun 2007 23:19:12 GMT
+ETag: "1a78c5f-5d3-9bd2fc00"
+Accept-Ranges: bytes
+Content-Length: 1491
+Connection: close
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Semi Logic Entertainments, Inc.</title>
+</head>
+
+<body bgcolor="#4f4c4c">
+<div align="center">
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="756" height="745" tabindex="1" title="sle07">
+    <param name="movie" value="index.swf" />
+    <param name="quality" value="high" />
+    <embed src="index.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="756" height="745"></embed>
+  </object>
+</div>
+<div align="center"><font size="1" face="Arial, Helvetica, sans-serif">&copy;
+  Semi Logic Entertainments, Inc Comments/ Questions to <a href="../contact.php">Webmaster</a>.</font></div>
+<div align="center"><font color="black" face="Arial, Helvetica, sans-serif" size="1"> All rights reserved. Semi Logic Entertainments, Inc., and the Semi Logic logo<BR /> are trademarks and/or registered trademarks of Semi Logic Entertainments, Inc.<BR /> in the US and/or other countries. No portions of this site may be used, in part 
+  or in whole,<BR /> without written permission from Semi Logic Entertainments, Inc. </font></div>
+<p>&nbsp;</p>
+</body>
+</html>

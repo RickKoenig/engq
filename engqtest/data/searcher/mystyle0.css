@@ -1,0 +1,114 @@
+/*br {
+	clear:both;
+}*/
+img.normal {
+	margin:0;
+	padding:0;
+	float:left;
+}
+img.clear {
+	margin:0;
+	padding:0;
+	float:left;
+	clear:both;
+}
+img.absol {
+	clear:both;
+	margin:0;
+	padding:0;
+	position:absolute;
+/*	clip: rect(10px,70px,50px,10px); */
+/*	left:440px;
+	top:90px; */
+/*	filter:alpha(opacity=50);
+	opacity:0.5; */
+}
+
+h1 {
+	margin:0;
+	padding:8px;
+}
+	
+h2 {
+	margin:0;
+	padding:4px;
+}
+	
+h3 {
+	margin:0;
+	padding:4px;
+}
+	
+div {
+	text-align:center;
+	line-height:120%;
+}
+div.top {
+ 	margin:auto;
+	background-color: lightgreen;
+ 	width: 800px;
+	clear: both;
+}
+div.instructions {
+ 	margin:auto;
+	background-color: yellow;
+ 	width:800px; 
+	clear: both;
+}
+div.middle {
+ 	margin:auto;
+ 	width:800px; 
+}
+div.left {
+	background-color: lightblue;
+ 	width:100px;
+/*	height:200px; */
+ 	float:left;
+/*	text-align:center;  */
+/*	font-size: 8px; */
+/*	border-width: 2px; */
+}
+div.centerg {
+	background-color: lightgreen;
+ 	width:600px;
+ 	height:500px;
+ 	float:left;
+	position:relative;
+/*	cursor:move; */
+/*	clip: rect(0px,600px,500px,0px); */
+/* //		img.setAttribute("style","clip:rect(10,70,50,10));"); */
+}
+div.right {
+	background-color: brown;
+ 	width:100px;
+ 	float:left;
+/*	padding:12px; */
+/* 	margin: auto; */
+}
+div.bottom {
+	background-color: red;
+ 	width:800px;
+ 	margin: auto; 
+	clear: both;
+}
+
+.centerb {
+	text-align:center; 
+	border-width: 2px;
+	margin: 2px;
+	font-size: 12px;
+}
+.center {
+/*	text-align:center; */
+	font-size: 8px;
+	border-width: 2px;
+/*	margin: 2px; */
+	width: 28px;
+}
+.centerb {
+/*	text-align:center; */
+	font-size: 8px;
+	border-width: 2px;
+/*	margin: 2px; */
+	width: 68px;
+}

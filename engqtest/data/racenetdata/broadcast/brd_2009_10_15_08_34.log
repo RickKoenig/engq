@@ -1,0 +1,8 @@
+open minutelog at Thu Oct 15 08:34:07 2009
+BR   15625, BW   46875, S  10, BR/S    1562, BW/S    4687
+BR   15420, BW   46260, S  10, BR/S    1542, BW/S    4626
+BR   15740, BW   47220, S  10, BR/S    1574, BW/S    4722
+BR   16030, BW   48090, S  10, BR/S    1603, BW/S    4809
+BR   15950, BW   47850, S  10, BR/S    1595, BW/S    4785
+BR   15590, BW   46770, S  10, BR/S    1559, BW/S    4677
+close minutelog at Thu Oct 15 08:35:07 2009

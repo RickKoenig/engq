@@ -1,0 +1,28 @@
+beachhead.bwo
+horizon.bwo
+outerrelm.bwo
+wall.bwo
+trackA.bwo
+trackB.bwo
+trackC.bwo
+roadRocks.bwo
+waterRocks.bwo
+poles01.bwo
+poles02.bwo
+
+
+upperRiverk.bwo
+lava3k.bwo
+riverk.bwo
+
+/*
+1 RoughTrack slowdown
+1 DashpadCover speedup
+1 OceanLower hitground
+#1 OpaqueUpperOcean hitground
+1 InvisibleReset hitground
+1 OceanRock hitground
+*/
+// slowdown, speedup, water, lava, (NYI onice, quicksand)
+0 WATER water
+1 lava lava

@@ -1,0 +1,22 @@
+playername "Rickers2"
+body "muscletone"
+paint "Paint 11"
+decal "Decal 13"
+weap "energywall"
+weap "enleech"
+weap "ferrite"
+weap "gravitybomb"
+weap "particle"
+"fusion" 3
+"electrical" 1
+"magnetic" 5
+"plasma" 4
+"antimatter" 6
+"chemical" 2
+track "track1"
+rules 6
+humanplayers 6
+botplayers 2
+gamenet 3
+serverip "99.108.140.134"
+serverport 5426

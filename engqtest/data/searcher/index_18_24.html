@@ -1,0 +1,75 @@
+<html>
+	<head><title>Reading from an JSON file</title>
+		<script type="text/javascript" src="json2.js">
+		</script>
+		<script type="text/javascript">
+			function makeRequest() {
+				var httpRequest;
+				if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+					httpRequest = new XMLHttpRequest();
+					if (httpRequest.overrideMimeType) {
+						httpRequest.overrideMimeType('text/xml');
+					}
+				} else if (window.ActiveXObject) { // IE
+					try {
+						httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+					} catch (e) {
+						try {
+							httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+						} catch (e) {
+							
+						}
+					}
+				}
+				if (!httpRequest) {
+					alert('Giving up :( Cannot create an XMLHTTP instance');
+					return false;
+				}
+				httpRequest.onreadystatechange = function() {
+					getXMLContents(httpRequest);
+				};
+				httpRequest.open('GET', "ajaxCar.json",true);
+				/* Check that you use the correct URL for your browser. IE
+				wanted “http://localhost/ajaxCar.json”. Firefox complained
+				about the a not well-formed .json file */
+				httpRequest.setRequestHeader('If-Modified-Since','Sat, 03 Jan 2010 00:00:00GMT');
+				httpRequest.setRequestHeader("Content-type","application/json");
+				httpRequest.send('');
+				function getXMLContents(httpRequest) {
+					var httpRequest;
+					if (httpRequest.readyState == 4) {
+						if (httpRequest.status == 200) {
+							textObj=document.getElementById("data");
+							var carObject = JSON.parse(httpRequest.responseText);
+							// alert(carObject.make); Using the object’s property
+							var details="";
+							for(var property in carObject){
+								if (property == "owner"){ // Nested associative
+									// array
+									details += "owner name = " +
+									carObject[property].name + "<br />";
+									details += "owner cell phone = " +
+									carObject[property].cellphone + "<br />";
+								}else{
+									details += property + " = " +
+									  carObject[property] + "<br />";
+								}
+							}
+							textObj.innerHTML=details; // Put data in document
+						} else {
+							alert('There was a problem with the request.');
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<span style="cursor: pointer; text-decoration: underline"
+		  onclick="makeRequest()">
+			Get car details Using JSON parse library
+		</span>
+		<div id=data>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,6 @@
+HTTP/1.0 302 Found
+Location: https://HTTP/1.0
+Server: F5aaS
+Connection: close
+Content-Length: 0
+

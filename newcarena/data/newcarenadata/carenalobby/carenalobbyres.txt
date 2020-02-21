@@ -1,0 +1,477 @@
+shape rootmenu 0 0 {
+
+# background
+//	back BACK1
+//	0 0
+//	800 600
+
+# your name
+	edit EDITNAME
+	10 460
+	160 20
+	"Your E Name"
+
+	text TEXTNAME
+	10 460
+	160 20
+	"Your T Name"
+
+# weapons
+	text TEXTWEAPAVAIL
+	680 10
+	116 10
+	"Available"
+	listbox LISTWEAPAVAIL
+	680 20
+	116 380
+	text TEXTWEAPHAVE
+	560 10
+	116 10
+	"Your Weapons"
+	listbox LISTWEAPHAVE
+	560 20
+	116 380
+
+# track and rules
+	text TEXTTRACK
+	180 480
+	160 10
+	"Track"
+	text TEXTNLAPS
+	180 455
+	160 10
+	"Laps"
+	hscroll SLIDENLAPS
+	180 465
+	160 10
+	listbox LISTTRACK
+	180 490
+	148 94
+//	vscroll SCLTRACK
+//	328 490
+//	12 94
+	text TEXTRULES
+	10 490
+	160 10
+	"Rules"
+	listbox LISTRULES
+	10 500
+	160 88
+
+# server ip address, for clients to connect
+	text TEXTIP
+	500 450
+	160 10
+	"Server addresses"
+	listbox LISTIP
+	500 460
+	160 75
+	edit EDITIP
+	500 540
+	160 20
+	"0.0.0.0"
+	pbut PBUTIPDEL
+	500 570
+	160 20
+	"DELETE IP"
+
+	text TEXTHOST
+	540 430
+	80 15
+	"HOST"
+	text HOSTNAME
+	500 450
+	160 20
+	"Your H Name"
+
+# num players
+	text TEXTNUMP
+	10 430
+	160 10
+	"Human Players"
+	hscroll SLIDENUMP
+	10 440
+	160 10
+
+# network play options
+	pbut PBUTBOT
+	670 480
+	120 20
+	"BOTGAME <GO>"
+	pbut PBUTCLIENT
+	670 540
+	120 20
+	"<< CONNECT <GO>"
+	pbut PBUTSERVER
+	670 510
+	120 20
+	"HOST <GO>"
+	pbut PBUTCANCEL
+	670 570
+	120 20
+	"QUIT"
+	
+# cars paints decals
+	text TEXTCARBODY
+	10 10
+	120 10
+	"Car Body"
+	listbox LISTCARBODY
+	10 20
+	120 100
+	text TEXTPAINT
+	10 130
+	120 10
+	"Paint Job"
+	listbox LISTPAINT
+	10 140
+	120 100
+	text TEXTDECAL
+	10 250
+	120 10
+	"Decal"
+	listbox LISTDECAL
+	10 260
+	120 100
+//	vscroll SCLCARBODY
+//	131 20
+//	12 100
+//	vscroll SCLPAINT
+//	131 140
+//	12 100
+//	vscroll SCLDECAL
+//	131 260
+//	12 100
+
+# pushstate to main menu
+	pbut PBUTMAINMENU
+	670 420
+	120 20
+	"Options"
+
+# Extra Bot Players (host only)
+	text TEXTNUMPB
+	190 430
+	160 10
+	"Bot Players 16"
+	hscroll SLIDENUMPB
+	190 440
+	160 10
+
+# energy sliders	
+	text TEXTFUSION
+	170 400
+	160 10
+	"Fusion"
+	hscroll SLIDEFUSION
+	170 410
+	160 10
+	text TEXTELECTRICAL
+	170 350
+	160 10
+	"Electrical"
+	hscroll SLIDEELECTRICAL
+	170 360
+	160 10
+	text TEXTCYBER
+	370 375
+	160 10
+	"Cyber"
+	hscroll SLIDECYBER
+	370 385
+	160 10
+	text TEXTGEOTHERMAL
+	370 350
+	160 10
+	"Geothermal"
+	hscroll SLIDEGEOTHERMAL
+	370 360
+	160 10
+	text TEXTPARTICLE
+	370 400
+	160 10
+	"Particle"
+	hscroll SLIDEPARTICLE
+	370 410
+	160 10
+	text TEXTCHEMICAL
+	170 375
+	160 10
+	"Chemical"
+	hscroll SLIDECHEMICAL
+	170 385
+	160 10
+
+# energy usage
+	text TEXTUFUSION
+	180 30
+	160 10
+	"Fusion 20"
+	text TEXTUELECTRICAL
+	180 10
+	160 10
+	"Electrical 20"
+	text TEXTUCYBER
+	330 20
+	160 10
+	"Cyber 20"
+	text TEXTUGEOTHERMAL
+	330 10
+	160 10
+	"Geothermal 20"
+	text TEXTUPARTICLE
+	330 30
+	160 10
+	"Particle 20"
+	text TEXTUCHEMICAL
+	180 20
+	160 10
+	"Chemical 20"
+
+# constructor
+	pbut PBUTOLDCONSTRUCTOR
+	350 465
+	120 20
+	"Old Constructor"
+	pbut PBUTNEWCONSTRUCTOR
+	350 464
+	120 20
+	"New Constructor"
+
+# your ip address, give out to friends
+	text TEXTYOURIP
+	10 370
+	160 10
+	"Your IP's"
+	listbox LISTYOURIP
+	10 380
+	140 40
+}
+
+/*
+# background
+res back BACK1 0
+	loc 0 0
+	size 800 600
+
+# your name
+res edit EDITNAME 1
+	loc 10 460
+	size 160 20
+	name "Your Name"
+
+# weapons
+res text TEXTWEAPAVAIL 2
+	loc 680 10
+	size 116 10
+	name "Available"
+res listbox LISTWEAPAVAIL 3
+	loc 680 20
+	size 116 380
+res text TEXTWEAPHAVE 4
+	loc 560 10
+	size 116 10
+	name "Your Weapons"
+res listbox LISTWEAPHAVE 5
+	loc 560 20
+	size 116 380
+
+# track and rules
+res text TEXTTRACK 6
+	loc 180 480
+	size 160 10
+	name "Track"
+res listbox LISTTRACK 7
+	loc 180 490
+	size 148 94
+res vscroll SCLTRACK 53
+	loc 328 490
+	size 12 94
+res text TEXTRULES 8
+	loc 10 490
+	size 160 10
+	name "Rules"
+res listbox LISTRULES 9
+	loc 10 500
+	size 160 88
+
+# server ip address, for clients to connect
+res text TEXTIP 10
+	loc 500 450
+	size 160 10
+	name "Server IP's"
+res listbox LISTIP 11
+	loc 500 460
+	size 160 75
+res edit EDITIP 12
+	loc 500 540
+	size 160 20
+	name "0.0.0.0"
+res pbut PBUTIPDEL 13
+	loc 500 570
+	size 160 20
+	name "DELETE IP"
+
+# num players
+res text TEXTNUMP 14
+	loc 10 430
+	size 160 10
+	name "Human Players"
+res hscroll SLIDENUMP 15
+	loc 10 440
+	size 160 10
+
+# network play options
+res pbut PBUTBOT 16
+	loc 670 480
+	size 120 20
+	name "BOTGAME <GO>"
+res pbut PBUTCLIENT 17
+	loc 670 540
+	size 120 20
+	name "<< CONNECT <GO>"
+res pbut PBUTSERVER 18
+	loc 670 510
+	size 120 20
+	name "HOST <GO>"
+res pbut PBUTCANCEL 19
+	loc 670 570
+	size 120 20
+	name "QUIT"
+	
+# cars paints decals
+res text TEXTCARBODY 20
+	loc 10 10
+	size 120 10
+	name "Car Body"
+res listbox LISTCARBODY 21
+	loc 10 20
+	size 120 100
+res text TEXTPAINT 22
+	loc 10 130
+	size 120 10
+	name "Paint Job"
+res listbox LISTPAINT 23
+	loc 10 140
+	size 120 100
+res text TEXTDECAL 24
+	loc 10 250
+	size 120 10
+	name "Decal"
+res listbox LISTDECAL 25
+	loc 10 260
+	size 120 100
+res vscroll SCLCARBODY 26
+	loc 131 20
+	size 12 100
+res vscroll SCLPAINT 27
+	loc 131 140
+	size 12 100
+res vscroll SCLDECAL 28
+	loc 131 260
+	size 12 100
+
+# pushstate to main menu
+res pbut PBUTMAINMENU 29
+	loc 670 420
+	size 120 20
+	name "Options"
+
+# Extra Bot Players (host only)
+res text TEXTNUMPB 30
+	loc 190 430
+	size 160 10
+	name "Bot Players 16"
+res hscroll SLIDENUMPB 31
+	loc 190 440
+	size 160 10
+
+# energy sliders	
+res text TEXTFUSION 32
+	loc 170 400
+	size 160 10
+	name "Fusion"
+res hscroll SLIDEFUSION 33
+	loc 170 410
+	size 160 10
+res text TEXTELECTRICAL 34
+	loc 170 350
+	size 160 10
+	name "Electrical"
+res hscroll SLIDEELECTRICAL 35
+	loc 170 360
+	size 160 10
+res text TEXTCYBER 36
+	loc 370 375
+	size 160 10
+	name "Cyber"
+res hscroll SLIDECYBER 37
+	loc 370 385
+	size 160 10
+res text TEXTGEOTHERMAL 38
+	loc 370 350
+	size 160 10
+	name "Geothermal"
+res hscroll SLIDEGEOTHERMAL 39
+	loc 370 360
+	size 160 10
+res text TEXTPARTICLE 40
+	loc 370 400
+	size 160 10
+	name "Particle"
+res hscroll SLIDEPARTICLE 41
+	loc 370 410
+	size 160 10
+res text TEXTCHEMICAL 42
+	loc 170 375
+	size 160 10
+	name "Chemical"
+res hscroll SLIDECHEMICAL 43
+	loc 170 385
+	size 160 10
+
+# energy usage
+res text TEXTUFUSION 44
+	loc 150 30
+	size 160 10
+	name "Fusion 20"
+res text TEXTUELECTRICAL 45
+	loc 150 10
+	size 160 10
+	name "Electrical 20"
+res text TEXTUCYBER 46
+	loc 300 20
+	size 160 10
+	name "Cyber 20"
+res text TEXTUGEOTHERMAL 47
+	loc 300 10
+	size 160 10
+	name "Geothermal 20"
+res text TEXTUPARTICLE 48
+	loc 300 30
+	size 160 10
+	name "Particle 20"
+res text TEXTUCHEMICAL 49
+	loc 150 20
+	size 160 10
+	name "Chemical 20"
+
+# constructor
+res pbut PBUTOLDCONSTRUCTOR 50
+	loc 320 465
+	size 120 20
+	name "Old Constructor"
+res pbut PBUTNEWCONSTRUCTOR 54
+	loc 319 464
+	size 120 20
+	name "New Constructor"
+
+# your ip address, give out to friends
+res text TEXTYOURIP 51
+	loc 10 370
+	size 160 10
+	name "Your IP's"
+res listbox LISTYOURIP 52
+	loc 10 380
+	size 140 40
+*/

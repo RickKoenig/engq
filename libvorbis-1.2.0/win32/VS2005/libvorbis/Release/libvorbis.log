@@ -1,0 +1,63 @@
+﻿  analysis.c
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\analysis.c(75): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\analysis.c(76): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+  bitrate.c
+  block.c
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\block.c(252): warning C4456: declaration of 'i' hides previous local declaration
+  c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\block.c(182): note: see declaration of 'i'
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\block.c(974): warning C4456: declaration of 'i' hides previous local declaration
+  c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\block.c(917): note: see declaration of 'i'
+  codebook.c
+  envelope.c
+  floor0.c
+  floor1.c
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\floor1.c(430): warning C4456: declaration of 'quantized' hides previous local declaration
+  c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\floor1.c(420): note: see declaration of 'quantized'
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\floor1.c(511): warning C4457: declaration of 'a' hides function parameter
+  c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\floor1.c(472): note: see declaration of 'a'
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\floor1.c(725): warning C4456: declaration of 'y0' hides previous local declaration
+  c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\floor1.c(636): note: see declaration of 'y0'
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\floor1.c(726): warning C4456: declaration of 'y1' hides previous local declaration
+  c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\floor1.c(637): note: see declaration of 'y1'
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\floor1.c(776): warning C4459: declaration of 'seq' hides global declaration
+  c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\floor1.c(598): note: see declaration of 'seq'
+  info.c
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\info.c(69): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\info.c(76): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\info.c(77): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\info.c(78): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\info.c(100): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\info.c(101): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\info.c(119): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\info.c(120): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  lookup.c
+  lpc.c
+  lsp.c
+  mapping0.c
+  mdct.c
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\mdct.c(79): warning C4456: declaration of 'i' hides previous local declaration
+  c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\mdct.c(56): note: see declaration of 'i'
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\mdct.c(440): warning C4456: declaration of 'iX' hides previous local declaration
+  c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\mdct.c(404): note: see declaration of 'iX'
+  psy.c
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\psy.c(239): warning C4456: declaration of 'bin' hides previous local declaration
+  c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\psy.c(160): note: see declaration of 'bin'
+  registry.c
+  res0.c
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\res0.c(319): warning C4456: declaration of 'i' hides previous local declaration
+  c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\res0.c(291): note: see declaration of 'i'
+  sharedbook.c
+  smallft.c
+  synthesis.c
+  vorbisenc.c
+  Generating Code...
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\mapping0.c(685): warning C4701: potentially uninitialized local variable 'mag_memo' used
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\mapping0.c(685): warning C4703: potentially uninitialized local pointer variable 'mag_memo' used
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\mapping0.c(685): warning C4701: potentially uninitialized local variable 'mag_sort' used
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\lib\mapping0.c(685): warning C4703: potentially uninitialized local pointer variable 'mag_sort' used
+  Compiling...
+  window.c
+  Generating Code...
+  libvorbis.vcxproj -> C:\srcw32\vs2017\engq\libvorbis-1.2.0\win32\VS2005\libvorbis\.\libvorbis.lib

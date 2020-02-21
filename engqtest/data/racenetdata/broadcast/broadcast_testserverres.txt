@@ -1,0 +1,22 @@
+shape rootmenu 0 0 {
+
+	back BACK1
+		0 0
+		 800 600
+
+	text INFO
+		100 50
+		 200 30
+		 "Broadcast Server"
+		 
+		 
+	listbox CONSOLE
+		20 120
+		400 400
+		
+	pbut QUIT
+		625 575
+		160 20
+		 "Quit"
+
+}

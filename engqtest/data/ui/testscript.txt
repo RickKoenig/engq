@@ -1,0 +1,9 @@
+"hi \" ho \\ hi"
+ho \" hi "" \\ ho
+   script   0 is "hi \" ho \\ hi"
+   script   1 is "ho"
+   script   2 is "\""
+   script   3 is "hi"
+   script   4 is ""
+   script   5 is "\\"
+   script   6 is "ho"

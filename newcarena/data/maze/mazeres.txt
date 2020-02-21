@@ -1,0 +1,76 @@
+shape rootmenu 0 0 {
+
+	back BACK1
+		0 0
+		 800 600
+
+	text TEXTTITLE
+		190 10
+		360 30
+		"Marble maze level editor"
+		
+	text TEXTWIDTH
+		10 50
+		120 30
+		"Width 10"
+		
+	text TEXTHEIGHT
+		10 90
+		120 30
+		"Height 10"
+		
+	text TEXTLEVEL
+		10 130
+		120 30
+		"Level 10"
+		
+	pbut PBUTMINUSWIDTH
+		150 50
+		 40 30
+		 -
+		
+	pbut PBUTPLUSWIDTH
+		200 50
+		 40 30
+		 +
+		
+	pbut PBUTMINUSHEIGHT
+		150 90
+		 40 30
+		 -
+		
+	pbut PBUTPLUSHEIGHT
+		200 90
+		 40 30
+		 +
+		
+	pbut PBUTMINUSLEVEL
+		150 130
+		 40 30
+		 -
+		
+	pbut PBUTPLUSLEVEL
+		200 130
+		 40 30
+		 +
+		
+	pbut PBUTMINUSMINUSLEVEL
+		150 170
+		 40 30
+		 --
+		
+	pbut PBUTPLUSPLUSLEVEL
+		200 170
+		 40 30
+		 ++
+		
+/*	pbut PBUTPRINT
+		350 570
+		 160 30
+		 Print */
+		
+	pbut PBUTQUIT
+		750 570
+		 50 30
+		 Quit
+}

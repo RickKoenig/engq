@@ -1,0 +1,44 @@
+{
+	"avatar" : {
+		"avaj" : {
+			"carbodyname" : "muscletone",
+			"decal" : 19,
+			"energies" : [
+				3,
+				1,
+				5,
+				4,
+				6,
+				2
+			],
+			"paint" : 17,
+			"playername" : "Rickers2",
+			"weaps" : [
+				"energywall",
+				"enleech",
+				"ferrite",
+				"gravitybomb",
+				"particle"
+			]
+		}
+	},
+	"environment" : {
+		"envj" : {
+			"rules" : 6,
+			"track" : {
+				"trackj" : {
+					"trackname" : "4leaf"
+				}
+			}
+		}
+	},
+	"net" : {
+		"netj" : {
+			"gamenet" : 0,
+			"nbotplayers" : 8,
+			"nhumanplayers" : 5,
+			"serverip" : "99.108.140.134",
+			"serverport" : 5426
+		}
+	}
+}

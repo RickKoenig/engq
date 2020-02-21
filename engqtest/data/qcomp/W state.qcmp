@@ -1,0 +1,101 @@
+100  3
+"G1Over3"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"PX (NOT)"  0   "NONE"  1   "NONE"  2   -1
+"S"  0   "HADAMARD"  0   "NONE"  0   -1
+"NONE"  0   "St"  0   "NONE"  1   -1
+"CNOT TOP"  0   "CNOT BOTTOM"  0   "NONE"  0   -1
+"NONE"  0   "HADAMARD"  0   "NONE"  1   -1
+"NONE"  0   "T"  0   "NONE"  1   -1
+"CNOT TOP"  0   "CNOT BOTTOM"  0   "NONE"  0   -1
+"NONE"  1   "T"  0   "NONE"  0   -1
+"NONE"  0   "HADAMARD"  0   "NONE"  1   -1
+"NONE"  0   "S"  0   "NONE"  1   -1
+"NONE"  0   "PX (NOT)"  0   "NONE"  1   -1
+"PX (NOT)"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  2   "NONE"  1   "NONE"  0   -1
+"PX (NOT)"  0   "PX (NOT)"  1   "NONE"  2   -1
+"TOFFOLI TOP"  0   "TOFFOLI MIDDLE"  0   "TOFFOLI BOTTOM"  0   -1
+"PX (NOT)"  1   "PX (NOT)"  0   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1

@@ -1,0 +1,18 @@
+shape chatres 0 0 {
+	
+	text TEXTTYPE
+	20 400
+	160 20
+	"type in box below"
+	
+	edit EDITPHRASE
+	20 440
+	360 20
+	"hello there"
+
+	pbut PBUTQUIT
+	625 575
+	160 20
+	QUIT
+	
+}

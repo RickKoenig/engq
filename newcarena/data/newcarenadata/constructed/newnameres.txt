@@ -1,0 +1,21 @@
+shape rootmenu 0 0 {
+
+//	back BACK2 0
+//	loc 0 0
+//	size 800 600
+
+	edit EDITNAME
+	630 120
+	160 20
+	"New Name"
+	
+	pbut PBUTNAMEOK
+	630 160
+	160 20
+	"OK"
+	
+	pbut PBUTNAMECAN
+	630 200
+	160 20
+	"CANCEL"
+}

@@ -1,0 +1,3269 @@
+*3DSMAX_ENGINE1EXPORTB2	200
+*COMMENT "max2eng Version  2.00 - Fri May 30 10:33:43 2003"
+*userunit per sysunit 0.025400
+*SCENE {
+	*SCENE_FILENAME "bumper25.max"
+	*SCENE_FIRSTFRAME 0
+	*SCENE_LASTFRAME 213
+	*SCENE_FRAMESPEED 30
+	*SCENE_TICKSPERFRAME 160
+	*SCENE_BACKGROUND_STATIC 0.00000000	0.00000000	0.00000000
+	*SCENE_AMBIENT_STATIC 0.00000000	0.00000000	0.00000000
+}
+*MATERIAL_LIST {
+	*MATERIAL_COUNT 2
+	*MATERIAL 0 {
+		*MATERIAL_NAME "Material #17"
+		*MATERIAL_CLASS "Standard"
+		*MATERIAL_AMBIENT 0.70588237	0.70588237	0.70588237
+		*MATERIAL_DIFFUSE 0.70588237	0.70588237	0.70588237
+		*MATERIAL_SPECULAR 0.89999998	0.89999998	0.89999998
+		*MATERIAL_SHINE 0.25000000
+		*MATERIAL_SHINESTRENGTH 0.05000000
+		*MATERIAL_TRANSPARENCY 0.00000000
+		*MATERIAL_WIRESIZE 1.00000000
+		*MATERIAL_SHADING Blinn
+		*MATERIAL_XP_FALLOFF 0.00000000
+		*MATERIAL_SELFILLUM 0.00000000
+		*MATERIAL_FALLOFF In
+		*MATERIAL_XP_TYPE Filter
+		*MAP_DIFFUSE {
+			*MAP_NAME "Map #2"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 1
+			*MAP_AMOUNT 1.00000000
+			*BITMAP "E:\burn\phse3\bumper.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.00000000
+			*UVW_V_OFFSET 0.00000000
+			*UVW_U_TILING 1.00000000
+			*UVW_V_TILING 1.00000000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.00000000
+			*UVW_ROW0 1.00000000	0.00000000	0.00000000
+			*UVW_ROW1 0.00000000	1.00000000	0.00000000
+			*UVW_ROW2 0.00000000	0.00000000	1.00000000
+			*UVW_ROW3 0.00000000	0.00000000	0.00000000
+			*UVW_BLUR 1.00000000
+			*UVW_BLUR_OFFSET 0.00000000
+			*UVW_NOUSE_AMT 1.00000000
+			*UVW_NOISE_SIZE 1.00000000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.00000000
+			*BITMAP_FILTER Pyramidal
+		}
+	}
+	*MATERIAL 1 {
+		*MATERIAL_NAME "bumpphase"
+		*MATERIAL_CLASS "Standard"
+		*MATERIAL_AMBIENT 0.70588237	0.70588237	0.70588237
+		*MATERIAL_DIFFUSE 0.70588237	0.70588237	0.70588237
+		*MATERIAL_SPECULAR 0.89999998	0.89999998	0.89999998
+		*MATERIAL_SHINE 0.25000000
+		*MATERIAL_SHINESTRENGTH 0.05000000
+		*MATERIAL_TRANSPARENCY 0.00000000
+		*MATERIAL_WIRESIZE 1.00000000
+		*MATERIAL_SHADING Blinn
+		*MATERIAL_XP_FALLOFF 0.00000000
+		*MATERIAL_SELFILLUM 0.00000000
+		*MATERIAL_FALLOFF In
+		*MATERIAL_XP_TYPE Filter
+		*MAP_DIFFUSE {
+			*MAP_NAME "Map #3"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 1
+			*MAP_AMOUNT 1.00000000
+			*BITMAP "E:\burn\phse3\bumper\bumpbeam.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.00000000
+			*UVW_V_OFFSET 0.00000000
+			*UVW_U_TILING 1.00000000
+			*UVW_V_TILING 1.00000000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.00000000
+			*UVW_ROW0 1.00000000	0.00000000	0.00000000
+			*UVW_ROW1 0.00000000	1.00000000	0.00000000
+			*UVW_ROW2 0.00000000	0.00000000	1.00000000
+			*UVW_ROW3 0.00000000	0.00000000	0.00000000
+			*UVW_BLUR 1.00000000
+			*UVW_BLUR_OFFSET 0.00000000
+			*UVW_NOUSE_AMT 1.00000000
+			*UVW_NOISE_SIZE 1.00000000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.00000000
+			*BITMAP_FILTER Pyramidal
+		}
+		*MAP_OPACITY {
+			*MAP_NAME "Map #4"
+			*MAP_CLASS "Bitmap"
+			*MAP_SUBNO 6
+			*MAP_AMOUNT 1.00000000
+			*BITMAP "E:\burn\phse3\bumper\bumpbeam.tga"
+			*MAP_TYPE Screen
+			*UVW_U_OFFSET 0.00000000
+			*UVW_V_OFFSET 0.00000000
+			*UVW_U_TILING 1.00000000
+			*UVW_V_TILING 1.00000000
+			*UVW_UV_WRAPFLAGS 3
+			*UVW_ANGLE 0.00000000
+			*UVW_ROW0 1.00000000	0.00000000	0.00000000
+			*UVW_ROW1 0.00000000	1.00000000	0.00000000
+			*UVW_ROW2 0.00000000	0.00000000	1.00000000
+			*UVW_ROW3 0.00000000	0.00000000	0.00000000
+			*UVW_BLUR 1.00000000
+			*UVW_BLUR_OFFSET 0.00000000
+			*UVW_NOUSE_AMT 1.00000000
+			*UVW_NOISE_SIZE 1.00000000
+			*UVW_NOISE_LEVEL 1
+			*UVW_NOISE_PHASE 0.00000000
+			*BITMAP_FILTER Pyramidal
+		}
+	}
+}
+*HELPEROBJECT {
+	*NODE_ID "02c5f430"
+	*NODE_NAME "mdlPTecto_car"
+	*HELPER_CLASS "Editable Mesh"
+	*NODE_USERPROPERTIES {
+		partCarDepSelf=true;
+		partCarActSelf=true;
+		partCarResSelf=false;
+		name=mdlptecto_car;
+	}
+	*NODE_TM {
+		*NODE_NAME "mdlPTecto_car"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.99999982	0.00000005	-0.00000008
+		*TM_ROW1 -0.00000008	-0.00000008	0.99999976
+		*TM_ROW2 0.00000005	0.99999976	0.00000012
+		*TM_ROW3 0.00000000	0.00000000	0.00000000
+		*TM_POS 0.00000000	0.00000000	0.00000000
+		*TM_ROTAXIS 0.00000001	-0.70710677	-0.70710683
+		*TM_ROTANGLE 3.14159250
+		*TM_SCALE 0.99999982	0.99999976	0.99999976
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000006
+	}
+	*BOUNDINGBOX_MIN -0.26930124	-0.49053531	0.01081666
+	*BOUNDINGBOX_MAX 0.26930119	0.61127068	0.35394794
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "02c63218"
+	*NODE_PARENTID "02c5f430"
+	*NODE_NAME "mdlPTecto_car_bk"
+	*NODE_PARENT "mdlPTecto_car"
+	*HELPER_CLASS "Editable Mesh"
+	*NODE_USERPROPERTIES {
+		name=mdlptecto_car_bk;
+	}
+	*NODE_TM {
+		*NODE_NAME "mdlPTecto_car_bk"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.99999976	0.00000005	0.00000016
+		*TM_ROW1 -0.00000016	-0.00000017	0.99999976
+		*TM_ROW2 0.00000005	-0.99999976	-0.00000020
+		*TM_ROW3 -0.00000007	-0.47872523	0.18465262
+		*TM_POS -0.00000007	-0.47872523	0.18465262
+		*TM_ROTAXIS -1.00000000	0.00000005	-0.00000011
+		*TM_ROTANGLE 1.57079649
+		*TM_SCALE 0.99999976	0.99999976	0.99999976
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN -0.02540007	-0.47872523	0.15925262
+	*BOUNDINGBOX_MAX 0.02539993	-0.47872523	0.21005261
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "05f5a1d8"
+	*NODE_PARENTID "02c5f430"
+	*NODE_NAME "mdlPTecto_car_bm"
+	*NODE_PARENT "mdlPTecto_car"
+	*HELPER_CLASS "Editable Mesh"
+	*NODE_USERPROPERTIES {
+		name=mdlptecto_car_bm;
+	}
+	*NODE_TM {
+		*NODE_NAME "mdlPTecto_car_bm"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.99999982	0.00000011	-0.00000008
+		*TM_ROW1 0.00000011	0.99999970	0.00000024
+		*TM_ROW2 0.00000008	0.00000020	-0.99999970
+		*TM_ROW3 -0.00000000	0.03962509	0.02924949
+		*TM_POS -0.00000000	0.03962509	0.02924949
+		*TM_ROTAXIS -0.00000005	-1.00000000	-0.00000011
+		*TM_ROTANGLE 3.14159250
+		*TM_SCALE 0.99999982	0.99999970	0.99999970
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000007
+	}
+	*BOUNDINGBOX_MIN -0.02540000	0.01422509	0.02924948
+	*BOUNDINGBOX_MAX 0.02540000	0.06502508	0.02924950
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "02c63548"
+	*NODE_PARENTID "02c5f430"
+	*NODE_NAME "mdlPTecto_car_ft"
+	*NODE_PARENT "mdlPTecto_car"
+	*HELPER_CLASS "Editable Mesh"
+	*NODE_USERPROPERTIES {
+		name=mdlptecto_car_ft;
+	}
+	*NODE_TM {
+		*NODE_NAME "mdlPTecto_car_ft"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.99999982	0.00000011	-0.00000008
+		*TM_ROW1 -0.00000008	-0.00000020	0.99999970
+		*TM_ROW2 0.00000011	0.99999970	0.00000024
+		*TM_ROW3 0.00000001	0.59925116	0.18465264
+		*TM_POS 0.00000001	0.59925116	0.18465264
+		*TM_ROTAXIS -0.00000001	-0.70710671	-0.70710689
+		*TM_ROTANGLE 3.14159250
+		*TM_SCALE 0.99999982	0.99999970	0.99999970
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000007
+	}
+	*BOUNDINGBOX_MIN -0.02539998	0.59925116	0.15925264
+	*BOUNDINGBOX_MAX 0.02540001	0.59925116	0.21005263
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "03f15a58"
+	*NODE_PARENTID "02c5f430"
+	*NODE_NAME "mdlPTecto_car_hd"
+	*NODE_PARENT "mdlPTecto_car"
+	*HELPER_CLASS "Editable Mesh"
+	*NODE_USERPROPERTIES {
+		name=mdlptecto_car_hd;
+	}
+	*NODE_TM {
+		*NODE_NAME "mdlPTecto_car_hd"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.99999982	0.00000008	-0.00000017
+		*TM_ROW1 -0.00000008	-0.99999970	0.00000000
+		*TM_ROW2 -0.00000017	0.00000003	0.99999970
+		*TM_ROW3 -0.00000002	0.50332712	0.33746557
+		*TM_POS -0.00000002	0.50332712	0.33746557
+		*TM_ROTAXIS 0.00000008	-0.00000001	-1.00000000
+		*TM_ROTANGLE 3.14159250
+		*TM_SCALE 0.99999982	0.99999970	0.99999970
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000006
+	}
+	*BOUNDINGBOX_MIN -0.02540001	0.47792712	0.33746557
+	*BOUNDINGBOX_MAX 0.02539998	0.52872712	0.33746557
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "05f54188"
+	*NODE_PARENTID "02c5f430"
+	*NODE_NAME "mdlPTecto_car_lt"
+	*NODE_PARENT "mdlPTecto_car"
+	*HELPER_CLASS "Editable Mesh"
+	*NODE_USERPROPERTIES {
+		name=mdlptecto_car_lt;
+	}
+	*NODE_TM {
+		*NODE_NAME "mdlPTecto_car_lt"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.00000023	-0.99999970	-0.00000010
+		*TM_ROW1 -0.00000012	-0.00000007	0.99999976
+		*TM_ROW2 -0.99999976	0.00000023	-0.00000012
+		*TM_ROW3 -0.25460086	0.03962512	0.18493084
+		*TM_POS -0.25460086	0.03962512	0.18493084
+		*TM_ROTAXIS 0.57735020	-0.57735032	-0.57735032
+		*TM_ROTANGLE 4.18878984
+		*TM_SCALE 0.99999970	0.99999976	0.99999976
+		*TM_SCALEAXIS 0.00000001	-0.00000058	-1.00000000
+		*TM_SCALEAXISANG 0.26495135
+	}
+	*BOUNDINGBOX_MIN -0.25460086	0.01422512	0.15953084
+	*BOUNDINGBOX_MAX -0.25460086	0.06502511	0.21033084
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "02c6acd8"
+	*NODE_PARENTID "02c5f430"
+	*NODE_NAME "mdlPTecto_car_rf"
+	*NODE_PARENT "mdlPTecto_car"
+	*HELPER_CLASS "Editable Mesh"
+	*NODE_USERPROPERTIES {
+		name=mdlptecto_car_rf;
+	}
+	*NODE_TM {
+		*NODE_NAME "mdlPTecto_car_rf"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.99999982	0.00000008	-0.00000017
+		*TM_ROW1 -0.00000008	-0.99999970	0.00000000
+		*TM_ROW2 -0.00000017	0.00000003	0.99999970
+		*TM_ROW3 -0.00000005	0.04356581	0.33746554
+		*TM_POS -0.00000005	0.04356581	0.33746554
+		*TM_ROTAXIS 0.00000008	-0.00000001	-1.00000000
+		*TM_ROTANGLE 3.14159250
+		*TM_SCALE 0.99999982	0.99999970	0.99999970
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000006
+	}
+	*BOUNDINGBOX_MIN -0.02540005	0.01816581	0.33746554
+	*BOUNDINGBOX_MAX 0.02539995	0.06896580	0.33746554
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "02c63aa0"
+	*NODE_PARENTID "02c5f430"
+	*NODE_NAME "mdlPTecto_car_rt"
+	*NODE_PARENT "mdlPTecto_car"
+	*HELPER_CLASS "Editable Mesh"
+	*NODE_USERPROPERTIES {
+		name=mdlptecto_car_rt;
+	}
+	*NODE_TM {
+		*NODE_NAME "mdlPTecto_car_rt"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.00000007	0.99999970	0.00000030
+		*TM_ROW1 -0.00000005	-0.00000026	0.99999976
+		*TM_ROW2 0.99999976	0.00000007	0.00000005
+		*TM_ROW3 0.24615254	0.03962505	0.18493092
+		*TM_POS 0.24615254	0.03962505	0.18493092
+		*TM_ROTAXIS -0.57735032	-0.57735014	-0.57735038
+		*TM_ROTANGLE 2.09439540
+		*TM_SCALE 0.99999970	0.99999976	0.99999976
+		*TM_SCALEAXIS -0.00000014	0.00000045	1.00000000
+		*TM_SCALEAXISANG 0.26495129
+	}
+	*BOUNDINGBOX_MIN 0.24615254	0.01422505	0.15953092
+	*BOUNDINGBOX_MAX 0.24615254	0.06502505	0.21033093
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "05f62988"
+	*NODE_PARENTID "02c5f430"
+	*NODE_NAME "mdlPTecto_car_tk"
+	*NODE_PARENT "mdlPTecto_car"
+	*HELPER_CLASS "Editable Mesh"
+	*NODE_USERPROPERTIES {
+		name=mdlptecto_car_tk;
+	}
+	*NODE_TM {
+		*NODE_NAME "mdlPTecto_car_tk"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.99999982	0.00000008	-0.00000017
+		*TM_ROW1 -0.00000008	-0.99999970	0.00000000
+		*TM_ROW2 -0.00000017	0.00000003	0.99999970
+		*TM_ROW3 -0.00000008	-0.37723617	0.33674984
+		*TM_POS -0.00000008	-0.37723617	0.33674984
+		*TM_ROTAXIS 0.00000008	-0.00000001	-1.00000000
+		*TM_ROTANGLE 3.14159250
+		*TM_SCALE 0.99999982	0.99999970	0.99999970
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000006
+	}
+	*BOUNDINGBOX_MIN -0.02540008	-0.40263617	0.33674984
+	*BOUNDINGBOX_MAX 0.02539991	-0.35183618	0.33674984
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "02c5acb0"
+	*NODE_PARENTID "02c5f430"
+	*NODE_NAME "mdlPTecto_car_fl"
+	*NODE_PARENT "mdlPTecto_car"
+	*HELPER_CLASS "Editable Mesh"
+	*NODE_USERPROPERTIES {
+		name=mdlptecto_car_fl;
+	}
+	*NODE_TM {
+		*NODE_NAME "mdlPTecto_car_fl"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.00000023	-0.99999970	-0.00000010
+		*TM_ROW1 -0.00000012	-0.00000007	0.99999976
+		*TM_ROW2 -0.99999976	0.00000023	-0.00000012
+		*TM_ROW3 -0.25460081	0.42646025	0.04565375
+		*TM_POS -0.25460081	0.42646025	0.04565375
+		*TM_ROTAXIS 0.57735020	-0.57735032	-0.57735032
+		*TM_ROTANGLE 4.18878984
+		*TM_SCALE 0.99999970	0.99999976	0.99999976
+		*TM_SCALEAXIS 0.00000001	-0.00000058	-1.00000000
+		*TM_SCALEAXISANG 0.26495135
+	}
+	*BOUNDINGBOX_MIN -0.25460081	0.40106025	0.02025375
+	*BOUNDINGBOX_MAX -0.25460081	0.45186025	0.07105375
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "02c59a30"
+	*NODE_PARENTID "02c5f430"
+	*NODE_NAME "mdlPTecto_car_bl"
+	*NODE_PARENT "mdlPTecto_car"
+	*HELPER_CLASS "Editable Mesh"
+	*NODE_USERPROPERTIES {
+		name=mdlptecto_car_bl;
+	}
+	*NODE_TM {
+		*NODE_NAME "mdlPTecto_car_bl"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.00000023	-0.99999970	-0.00000010
+		*TM_ROW1 -0.00000012	-0.00000007	0.99999976
+		*TM_ROW2 -0.99999976	0.00000023	-0.00000012
+		*TM_ROW3 -0.25460086	-0.31810100	0.04565374
+		*TM_POS -0.25460086	-0.31810100	0.04565374
+		*TM_ROTAXIS 0.57735020	-0.57735032	-0.57735032
+		*TM_ROTANGLE 4.18878984
+		*TM_SCALE 0.99999970	0.99999976	0.99999976
+		*TM_SCALEAXIS 0.00000001	-0.00000058	-1.00000000
+		*TM_SCALEAXISANG 0.26495135
+	}
+	*BOUNDINGBOX_MIN -0.25460086	-0.34350100	0.02025374
+	*BOUNDINGBOX_MAX -0.25460086	-0.29270100	0.07105374
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "05f81230"
+	*NODE_PARENTID "02c5f430"
+	*NODE_NAME "mdlPTecto_car_br"
+	*NODE_PARENT "mdlPTecto_car"
+	*HELPER_CLASS "Editable Mesh"
+	*NODE_USERPROPERTIES {
+		name=mdlptecto_car_br;
+	}
+	*NODE_TM {
+		*NODE_NAME "mdlPTecto_car_br"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.00000007	0.99999970	0.00000030
+		*TM_ROW1 -0.00000005	-0.00000026	0.99999976
+		*TM_ROW2 0.99999976	0.00000007	0.00000005
+		*TM_ROW3 0.24615254	-0.31722816	0.04640173
+		*TM_POS 0.24615254	-0.31722816	0.04640173
+		*TM_ROTAXIS -0.57735032	-0.57735014	-0.57735038
+		*TM_ROTANGLE 2.09439540
+		*TM_SCALE 0.99999970	0.99999976	0.99999976
+		*TM_SCALEAXIS -0.00000014	0.00000045	1.00000000
+		*TM_SCALEAXISANG 0.26495129
+	}
+	*BOUNDINGBOX_MIN 0.24615254	-0.34262816	0.02100173
+	*BOUNDINGBOX_MAX 0.24615254	-0.29182816	0.07180173
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "060fd740"
+	*NODE_PARENTID "02c5f430"
+	*NODE_NAME "mdlPTecto_car_fr"
+	*NODE_PARENT "mdlPTecto_car"
+	*HELPER_CLASS "Editable Mesh"
+	*NODE_USERPROPERTIES {
+		name=mdlptecto_car_fr;
+	}
+	*NODE_TM {
+		*NODE_NAME "mdlPTecto_car_fr"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.00000007	0.99999970	0.00000030
+		*TM_ROW1 -0.00000005	-0.00000026	0.99999976
+		*TM_ROW2 0.99999976	0.00000007	0.00000005
+		*TM_ROW3 0.24615263	0.42673025	0.04640174
+		*TM_POS 0.24615263	0.42673025	0.04640174
+		*TM_ROTAXIS -0.57735032	-0.57735014	-0.57735038
+		*TM_ROTANGLE 2.09439540
+		*TM_SCALE 0.99999970	0.99999976	0.99999976
+		*TM_SCALEAXIS -0.00000014	0.00000045	1.00000000
+		*TM_SCALEAXISANG 0.26495129
+	}
+	*BOUNDINGBOX_MIN 0.24615263	0.40133025	0.02100174
+	*BOUNDINGBOX_MAX 0.24615263	0.45213025	0.07180174
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "05f52238"
+	*NODE_NAME "grpBumpercar"
+	*HELPER_CLASS "Dummy"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "grpBumpercar"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.00194320	0.00040206	-0.09282891
+		*TM_POS 0.00194320	0.00040206	-0.09282891
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN -0.45268375	-0.80566428	-0.02617012
+	*BOUNDINGBOX_MAX 0.45661243	0.80642611	0.06177695
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "03c958a8"
+	*NODE_PARENTID "05f52238"
+	*NODE_NAME "bumppart04"
+	*NODE_PARENT "grpBumpercar"
+	*HELPER_CLASS "Dummy"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumppart04"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.99996191	-0.00872659	0.00000000
+		*TM_ROW1 0.00872659	-0.99996191	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.00000000	0.63472060	0.01780344
+		*TM_POS 0.00000000	0.63472060	0.01780344
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 3.15031934
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN -0.09525559	0.60968720	-0.02617009
+	*BOUNDINGBOX_MAX 0.09397523	0.80646840	0.06177698
+	*HELPER_END
+}
+*GEOMOBJECT {
+	*NODE_ID "060fa9e0"
+	*NODE_PARENTID "03c958a8"
+	*NODE_NAME "bumper18"
+	*NODE_PARENT "bumppart04"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumper18"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00872676	-0.99996191	0.00000000
+		*TM_ROW1 0.99996191	0.00872676	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -0.00047799	0.68939546	0.01777274
+		*TM_POS -0.00047799	0.68939546	0.01777274
+		*TM_ROTAXIS 0.00000000	0.00000000	1.00000000
+		*TM_ROTANGLE 1.56206942
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 78
+		*MESH_NUMFACES 160
+		*MESH_VERTEX_LIST {
+9Ò˘<§+º~*<?>&Ωló+º~<?-˘<≠b÷ºù(<?≈&ΩZ\÷ºù<?ll=Ï'º^?‡dˇº⁄ﬂ'º:?„k=ÚÜ‘º"\?ÓeˇºêÄ‘º"8?£æΩ5k*º5˛1?n¿¸<€w*º5"2?+øΩM∆’ºS¸1?bø¸<†Ã’ºT 2?V¿=ehí<w+"?Î¸øΩH{í<Îø!?¿=fD ;è)"?/˝øΩÉ€ ;æ!?Ç∏¿Ω¨ﬁë<Å7,?æTø=»Àë<£,?«∏¿Ω,Ó˜:ò5,?yTø=˚æˆ:$°,?ïΩÑ<ëÖ,ºº√C?⁄^óºï~,ºÿØC?ΩÑ<7Iëºﬂ¬C?V_óº∏Eëº˚ÆC?ı˘<a–;==1<?X$Ωã”;==<?ˆ˘<ª|=3<?◊#Ω„|=<?Qn=eæ<=¡d?aˇºé¡<=¿@?◊n=Ø}=¢f?`ˇº◊	}=¢B?æºΩ®<=Û2?:ƒ¸<o<=Û(2?6ºΩÚf|=’2?I≈¸<»c|=’*2?ö¿=d
+=_-"?¶¸øΩâm
+=”¡!?>∏¿Ω:
+=h9,?Uø=»
+=Ù§,?`¡Ñ<ò;=| C?[óº¿ô;=ò∂C?‹¡Ñ<@Y=XÀC?îZóºˇY=u∑C?›#ΩD)ºpà&?˚ıˇ<Í )ºq¨&?§P¿Ω,]˝:"f&?_P¿Ωú5í<
+h&?ÔÙˇ<(!’ºê™&?d$Ω’’ºèÜ&?·ºø=∏"í<ñ”&?õºø=˚-¸:Æ—&?˜!Ωdt<=/è&?»˘ˇ<;q<=/≥&?P¿Ω≥J
+=Òi&?÷˙ˇ<Öπ|=µ&?o!ΩΩº|=ë&?%Ωø=@A
+=}’&?jï∫xGëºÌ∏C?Ö
+ï∫Ç,º πC?ö˜\9-Ê'ºL?çn\9»É‘º!J?°µe∫øù+º~<?ÂŒ∫áq*º52?Ã◊e∫í_÷ºù<?*Ò∫v…’ºT2?uπó)ºqö&?Ó˝πﬂ’ºêò&?!≈î∫ Y=f¡C?Õî∫·ò;=ä¿C?Û„^9˙ø<=¡R?Öl_9D}=£T?9:e∫ˆ—;==<?˘S∫<=Ù2?e∫P|=!<?ñ1∫]e|=÷2?óàπœr<=/°&?Üˇπ)ª|=£&?		}
+		*MESH_FACE_LIST {
+  ;   : ;     <    =  <     > 	   ? 	 >        
+      @ 
+   A 
+ @         	       , ?   B ? ,    .    /  .    0 A   C A 0    2    3  2                        
+          	          ,    /  ,   	 -    2  -   
+ 1    .  1    0    3  0                @    :  @              >    ;  >   ( E *   D * E     F   G F     ! H   I H !         "       " J   K J "    #    !  #     I 4   L 4 I   &  /   / 6 &    % /   # K 7   M 7 K    ' 2          %    $    $       & "   &      #  !    # '   / 4    2 5 !   " & 8   6 8 &    $ 7   9 7 $    *    *  (    * J   D J *    )    )  +    ) H   E H )   ,  B   < B    .  /    /    0  C   = C    2  3    3    ,      / ,   -      2 -   1      . 1   0      3 0   5  L   F L    6 / %   8  M   G M    9 2 '   4      4 /     /    5     5 2     2 !   6 % 8    8 %   9 ' 7   # 7 '   :  ;    ;    <  =    =    >  ?    ?    @  A    A    B - ?   	 ? -   C 1 A   
+ A 1   @      : @   >       ; >   E ) D   + D )   G  F    F    I   H    H     K # J    J #   I ! L   5 L !   K " M   8 M "   D + J    J +   E ( H    H (   <  B   - B    =  C   1 C    F  L   4 L    G  M   7 M    9 $    9  2   		}
+		*MESH_NUMTVERTEX 252
+		*MESH_TVERTLIST {
+8o/?∆M?À˛8?∆M?8o/?ƒ˛.? ˛8?ƒ˛.?$ú˜>BaJ?ﬁp˜>€(?öŸ‘>ß@?VÆ‘>C}(?‰Vñ>1E->fú8>1E->‰Vñ>Ûèò>fú8>Ûèò>ø@?#N?	1)?#N?Ω@?núp?	1)?núp?ËfØ>‹›'?xÁ>‹›'?ÍfØ>”W}?xÁ>”W}?ÍfØ>”W}?	1)?#N?ø@?#N?	1)?núp?Ω@?núp?É~ì>¨ú%?"·>¨ú%?É~ì>¥≠;?"·>¥≠;?É~ì>¥≠;?ÌŸ?¿˜?ÌŸ?√s?∞«Ë>ø˜?∞«Ë>√s?∑À=ëv$?Ç3)>ív$?¥À=sæ:?Ç3)>tæ:?¥À=sæ:?∞«Ë>¿˜?∞«Ë>√s?ÌŸ?¿˜?ÌŸ?√s?hß‘>9@?Úi˜>¥{J?3˜>Gnp?fÚ“>z˘o?jR”>‰∆o?ì˜>±;p?Ói˜>∂{J?dß‘>9@?fÚ“>z˘o?3˜>Gnp?öŸ‘>ß@?$ú˜>BaJ?ì˜>±;p?jR”>‰∆o?xJ
+=¨ú%?∫=`ÑÛ>0>`ÑÛ>∫=`ÑÛ>É~ì>ææQ?"·>ææQ?|0ì>:ô}?.>:ô}?|0ì>:ô}?±À=SQ?Å3)>TQ?åÿ=–M}?
+û0>–M}?åÿ=–M}?üΩè>ÁÕA?:w'>ÁÕA?∂rè>‰÷{?=w'>‰÷{?∆/?Ñ≠*?´I:?Ñ≠*?O?⁄›'?Xv?n!Ô>vÁ>n!Ô>Xv?n!Ô>´I:?Ñ≠*?∆/?Ñ≠*?â=1E->a¯=e˙ë=fú8>i˙ë=)9?∆M?(9?¬˛.?ñ~/?∆M?ñ~/?¡˛.?\Ïˆ>⁄J?Y‘>‚??¡ˆ>´á(?¨.‘>∞@(?‰Vñ>.E->‰Vñ>Òèò>oú8>.E->jú8>Òèò>Nr@?#N?Lr@?núp?òã)?#N?ñã)?múp?ËfØ>⁄›'?ÍfØ>—W}?}Á>⁄›'?~Á>—W}?ÍfØ>—W}?òã)?#N?ñã)?múp?Nr@?#N?Lr@?núp?Ö~ì>¨ú%?Ñ~ì>µ≠;?$·>¨ú%?$·>∂≠;?Ñ~ì>µ≠;?Ü€≈>¿˜?É€≈>√s?∞«Ë>i%?É€≈>i%?·=w#?·=å„8?¥(>w#?¥(>ã„8?·=å„8?Ü€≈>¿˜?∫'‘>à¸??*∫ˆ>M(J?^S‘>Ù†p?`≥‘>\np?*∫ˆ>P(J?`S‘>Ù†p?¬'‘>à¸??ÙY‘>‚??^Ïˆ>‹J?b≥‘>^np?=w'>™Ã{?:w'>´√A?úΩè>´√A?=w'>‰÷{?:w'>ÁÕA?»ç=ÁÕA?·=PN?Ó=å„x?¥(>PN?ﬂE/>ç„x?Ó=å„x?ùΩè>ÁÕA?∂rè>‰÷{?:w'>ÁÕA?=w'>‰÷{?û 0?Ñ≠*?:§:?Ñ≠*?O?Ÿ›'?Xv?j!Ô>|Á>j!Ô>Xv?j!Ô>:§:?Ñ≠*?û 0?Ñ≠*?â=.E->f¯=`˙ë=oú8>`˙ë=xJ
+=¨ú%?xJ
+=¥≠;?xJ
+=¨ú%?ÌŸ?i%?àë>ív$?àë>tæ:?àë>ív$?∞«Ë>i%?ÔŸ?i%?É~ì>¨ú%?~0ì>aÑÛ>~0ì>aÑÛ>0>`ÑÛ>xJ
+=ææQ?Ë∫=:ô}?Ë∫=:ô}?.>:ô}?àë>UQ?h∆ë>–M}?h∆ë>–M}?
+û0>–M}?–ç=ÁÕA?‡‰=‰÷{?#·>ææQ?àJ
+=ææQ?àJ
+=∂≠;?àJ
+=ææQ?µÇè>PN?¥Çè>å„8?µÇè>PN?É€≈>√s?–‰=©Ã{?»ç=¨√A?∂rè>©Ã{?∂rè>‰÷{?ùΩè>ÁÕA?–‰=‰÷{?ﬂE/>ç„x?¡è>ç„x?µÇè>PN?¡è>ç„x?–‰=‰÷{?∏ç=ÁÕA?À˛8?¿ØG?8o/?¿ØG?â=Ûèò>O?⁄›'?O?”W}?O?⁄›'?É~ì>¥≠;?É~ì>ææQ?É~ì>¥≠;?¥À=sæ:?±À=SQ?¥À=sæ:?ËfØ>‹›'?BØ>n!Ô>BØ>n!Ô>vÁ>n!Ô>§ºx>e˙ë=)9?¿ØG?ñ~/?øØG?â=Òèò>O?—W}?O?Ÿ›'?O?—W}?Ñ~ì>µ≠;?Ö~ì>ææQ?Ö~ì>ææQ?·=å„8?·=PN?·=PN?|Á>j!Ô>BØ>j!Ô>ËfØ>⁄›'?BØ>j!Ô>§ºx>`˙ë=xJ
+=¥≠;?xJ
+=ææQ?xJ
+=ææQ?àë>tæ:?àë>UQ?àë>UQ?àJ
+=∂≠;?àJ
+=¨ú%?àJ
+=¨ú%?¥Çè>å„8?µÇè>w#?µÇè>w#?Å€≈>i%?		}
+		*MESH_NUMTVFACES 160
+		*MESH_TFACELIST {
+              	 
+  
+ 	                             !    " # $ % & # ' ( ) * ) ( + , - - . +   / / 0  1 2 3 3 4 1 5 6 7 7 8 5 9  : ; <  = > ? @ A > B C D E F C G H I J I H   K K L  M  N O P    Q Q R  S 	 T U T 	 V W X Y X W Z [ \ ] \ [ ^ _ ` a ` _ b c d e d c f g h i h j k l m n m l o p q r q s t   ! ! u t v w ! x y z { z | ' } ( ~ -  - ~ Ä Z Å [ Å Z 0 Ç É Ñ É Ç 4 Ö 7 Ü 7 Ö á à â ä ã å ç é è ê ë ê í ì î ï ñ ï î m ó k ó m ò ô ö h õ h ú d ù b ù d û ü † ` ° ` †  ¢  £  §  • ! v ! • # ¶ % ß % ® ( © * ™ * ©  ´ ¨ ≠ Æ  > Ø ∞ ± ≤ > C ≥ ¥ µ ∂ C H ∑ ∏ ∏ J H π ∫ r ª r º u ! w ê Ω { æ { ø ¿ ( } â ¡ ¬ â à ¡ √ à ä å ƒ ≈ å ã ƒ ∆ ã ç « » ê … ê   ñ À ï Ã ï À  Õ  Œ  Õ  ,  +  , 	 S  œ  S  –  —  “  > ” ‘ ’ > % C ÷ ◊ ÿ C  Ÿ ⁄ € ‹  	  › › U 	 W ﬁ Y ﬂ Y ﬁ ] ~ \  \ ~ a ‡ ` ü ` ‡ i · h ‚ h „ ‰ Â r π r Ê Á Ë { ê { È Í Î h Ï h Ì ° Ó ` ^ ` Ó Ô   >  Ò Ú Û % C % Ù ı ˆ r q r ˜ ¯ ˘ { z { ˙ ¿ ˚ © ¿ © ( 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      Äø   Ä      Äø          Äø          Äø          Äø          Äø          Ä?          Ä?          Ä?          Ä?          Ä?          Ä?              Äø          Äø          Äø          Äø          Äø          Äø  Ä?          Ä?          Ä?          Ä?       Ä  Ä?          Ä?        úzu5õDµ  Ä?UU%+É¥  Ä?ß£4É¥  Ä?F¥áå4  Ä?ß£4É¥  Ä?UU%+É¥  Ä?  ÄøíÜ<*ëzu¥  ÄøíÜº)Çzu¥  ÄøíÜº)Çzu¥  Äø    szu¥  ÄøíÜº)Çzu¥  ÄøíÜº)Çzu¥          Äø          Äø          Äø          Äø          Äø          Äø  Ä?          Ä?8O‚3≠a°¥  Ä?Ob4ìa!¥  Ä?∑:¿≤n€6*  Ä?Ob4ìa!¥  Ä?8O‚3≠a°¥    õƒ¥  Ä?ˇ¶£5 |Â4  Ä?F¥áå4  Ä?»¶#4Âkò3  Ä?F¥áå4  Ä?ˇ¶£5 |Â4  Ä?  Äø          Äø          Äø          Äø          Äø          Äø        e∆™>Wq?   Äe∆™>Wq?   Äe∆™>Wq?   Äe∆™>Wq?    e∆™>Wq?    e∆™>Wq?    i∆™æWq?í¡£3i∆™æWq?í¡£3i∆™æWq?í¡£3h∆™æWq?    h∆™æWq?    h∆™æWq?    K∆™>Wqø    K∆™>Wqø    K∆™>Wqø    _∆™>Wqøª5d6_∆™>Wqøª5d6_∆™>Wqøª5d6L∆™æWqøw¡£≥L∆™æWqøw¡£≥L∆™æWqøw¡£≥O∆™æWqø   ÄO∆™æWqø   ÄO∆™æWqø   Ä©±“æ    ŒQiø©±“æ    ŒQiø©±“æ    ŒQiø´±“æ6M.4ÕQiø´±“æ6M.4ÕQiø´±“æ6M.4ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø∞Q—>    Ù†i?∞Q—>    Ù†i?∞Q—>    Ù†i?±Q—>   ÄÙ†i?±Q—>   ÄÙ†i?±Q—>   ÄÙ†i?©Q—æB{3ı†i?©Q—æB{3ı†i?©Q—æB{3ı†i?©Q—æ    ı†i?©Q—æ    ı†i?©Q—æ    ı†i?æígø∂C⁄æN^¥æígø∂C⁄æN^¥æígø∂C⁄æN^¥æígø¥C⁄æ†’q4æígø¥C⁄æ†’q4æígø¥C⁄æ†’q4#lµ™=åæ£5v?#lµ™=åæ£5v?#lµ™=åæ£5v?    π=åæ†5v?    π=åæ†5v?    π=åæ†5v?¬íg?§C⁄æ    ¬íg?§C⁄æ    ¬íg?§C⁄æ    ¡íg?®C⁄æ£’q4¡íg?®C⁄æ£’q4¡íg?®C⁄æ£’q4          Äø          Äø          Äø          Äø          Äø          Äø   Ä  ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      Ä?   Äîzu5  Ä?±zıµ  ¿*  Ä?Øzıµ  @+  Ä?Øzu∂  ¿*  Ä?Øzıµîzu5  Ä?±zıµ          Ä?òzu5\85  Ä?§zı4Ytì5  Ä?
+bD5ÚH5  Ä?§zı4Ytì5  Ä?òzu5\85  Ä?  Ä?–d,◊∏5  Ä?€¨4ml5  Ä?€¨4ml5  Ä?∏,5S{u¥  Ä?€¨4ml5  Ä?€¨4ml5       Ä  Äø    Ú,µ  Äø          Äøbƒ¥¬∞	µ  Äø          Äø    Ú,µ  Äø  Äø          Äø          Äø          Äø          Äø          Äø        ´™J¢É5  Ä?
+bD5ÚH5  Ä?    ,ˇ4  Ä?Få4rÚÖ5  Ä?    ,ˇ4  Ä?
+bD5ÚH5  Ä?  Ä?Qª)4¨r4  Ä?Ob4ìa!¥  Ä?∑:¿≤n€6*  Ä?∑:¿≤n€6*  Ä?    ÑÚ4  Ä?Qª)4¨r4  Ä?6»”¥      Ä?6»S¥Ör4  Ä?∑:¿≤n€6*          Äøbƒ¥¬∞	µ  Äøß£µ˘Srµ  Äø
+Fµà4Jµ  Äøß£µ˘Srµ  Äøbƒ¥¬∞	µ  Äø  Äø          Äø          Äø        e∆™>Wq?    e∆™>Wq?    e∆™>Wq?    f∆™>Wq?    f∆™>Wq?    f∆™>Wq?    j∆™æWq?∫¡#¥j∆™æWq?∫¡#¥j∆™æWq?∫¡#¥i∆™æWq?    i∆™æWq?    i∆™æWq?    8∆™>Wqø·/]68∆™>Wqø·/]68∆™>Wqø·/]6_∆™>Wqøª5d∂_∆™>Wqøª5d∂_∆™>Wqøª5d∂ ∆™æWqø∆kg6 ∆™æWqø∆kg6 ∆™æWqø∆kg6i∆™æWqø    i∆™æWqø    i∆™æWqø    ©±“ævlÆ5ŒQi?©±“ævlÆ5ŒQi?©±“ævlÆ5ŒQi?≠±“>e›ú5ÕQi?≠±“>e›ú5ÕQi?≠±“>e›ú5ÕQi?£Q—>êùµ˜†iø£Q—>êùµ˜†iø£Q—>êùµ˜†iø∞Q—>    Ù†iø∞Q—>    Ù†iø∞Q—>    Ù†iøßQ—æÔﬂ§µˆ†iøßQ—æÔﬂ§µˆ†iøßQ—æÔﬂ§µˆ†iøûQ—æ    ¯†iøûQ—æ    ¯†iøûQ—æ    ¯†iø¿ígø´C⁄æ*K—5¿ígø´C⁄æ*K—5¿ígø´C⁄æ*K—5»ígøäC⁄æ5Ôc∂»ígøäC⁄æ5Ôc∂»ígøäC⁄æ5Ôc∂    ú=åæ•5vø    ú=åæ•5vø    ú=åæ•5vø    ù=åæ•5vø    ù=åæ•5vø    ù=åæ•5vø«íg?èC⁄æÆä¶5«íg?èC⁄æÆä¶5«íg?èC⁄æÆä¶5∑íg?“C⁄æÅÔc∂∑íg?“C⁄æÅÔc∂∑íg?“C⁄æÅÔc∂       Ä  Ä?       Ä  Ä?       Ä  Ä?          Ä?          Ä?          Ä?          Äø          Äø          Äø          Äø          Äø          Äø  Ä?8O‚3≠a°¥  Ä?»S¥Ör¥  Ä?∑:¿≤n€6*  Ä?6»”¥      Ä?∑:¿≤n€6*  Ä?»S¥Ör¥ˇ¶£5 |Â4  Ä?zu5a?µ  Ä?»¶#4Âkò3  Ä?úzı4aøµ  Ä?»¶#4Âkò3  Ä?zu5a?µ  Ä?  Äø          Äø          Äø          Äø          Äø          Äø        ©±“æ    ŒQiø©±“æ    ŒQiø©±“æ    ŒQiø™±“æt±¥ŒQiø™±“æt±¥ŒQiø™±“æt±¥ŒQiø≠±“>kÇ3ÕQiø≠±“>kÇ3ÕQiø≠±“>kÇ3ÕQiø≠±“>    ÕQiø≠±“>    ÕQiø≠±“>    ÕQiø†Q—>§ß.5˜†i?†Q—>§ß.5˜†i?†Q—>§ß.5˜†i?±Q—>_F¡µÙ†i?±Q—>_F¡µÙ†i?±Q—>_F¡µÙ†i?©Q—æ    ı†i?©Q—æ    ı†i?©Q—æ    ı†i?©Q—æ    ˆ†i?©Q—æ    ˆ†i?©Q—æ    ˆ†i?    øµ5  Ä?    aø5  Ä?Få4rÚÖ5  Ä?    aø5  Ä?Få4rÚÖ5  Ä?    aø5  Ä?  Ä?    ÑÚ4  Ä?∑:¿≤n€6*  Ä?6»S¥Ör4    Ú,µ  Äø          Äø
+Fµà4Jµ  Äø          Äø
+Fµà4Jµ  Äø          Äø  Äø       Ä  Äø          Äø        ©±“æ    ŒQi?©±“æ    ŒQi?©±“æ    ŒQi?™±“æt±¥ŒQi?™±“æt±¥ŒQi?™±“æt±¥ŒQi?Ω±“æFM.4…Qi?Ω±“æFM.4…Qi?Ω±“æFM.4…Qi?∏±“>tlÆ5 Qi?∏±“>tlÆ5 Qi?∏±“>tlÆ5 Qi?Æ±“>   ÄÕQi?Æ±“>   ÄÕQi?Æ±“>   ÄÕQi?ñ±“>    “Qi?ñ±“>    “Qi?ñ±“>    “Qi?∞Q—>    Ù†iø∞Q—>    Ù†iø∞Q—>    Ù†iø∞Q—>G{≥Ù†iø∞Q—>G{≥Ù†iø∞Q—>G{≥Ù†iøùQ—æ    ¯†iøùQ—æ    ¯†iøùQ—æ    ¯†iøùQ—æ   Ä¯†iøùQ—æ   Ä¯†iøùQ—æ   Ä¯†iø      Äø          Äø          Äø          Äø          Äø          Äø          Ä?          Ä?          Ä?          Ä?          Ä?          Ä?              Äø          Äø          Äø          Äø          Äø          ÄøUU%+É¥  Ä?}zı¥õƒ¥  Ä?F¥áå4  Ä?    õƒ¥  Ä?F¥áå4  Ä?}zı¥õƒ¥  Ä?          Äø          Äø          Äø          Äø          Äø          Äø»¶#4Âkò3  Ä?ß£µâ25  Ä?F¥áå4  Ä?ß£4É¥  Ä?F¥áå4  Ä?ß£µâ25  Ä?@l5©=åæ£5v?@l5©=åæ£5v?@l5©=åæ£5v?    π=åæ†5v?    π=åæ†5v?    π=åæ†5v?          Äø          Äø          Äø          Äø          Äø          Äø      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑  @+  Ä?Øzu∂àzuµ  Ä?≠zıµ  ¿*  Ä?Øzıµ   Ä  Ä?      ¿*  Ä?Øzıµàzuµ  Ä?≠zıµ
+bD5ÚH5  Ä?´™J¢É5  Ä?§zı4Ytì5  Ä?zÜ<,õƒ5  Ä?§zı4Ytì5  Ä?´™J¢É5  Ä?bƒ¥¬∞	µ  Äø          Äø          Äø          Äø          Äø          Äø
+bD5ÚH5  Ä?òzu5\85  Ä?Få4rÚÖ5  Ä?    øµ5  Ä?Få4rÚÖ5  Ä?òzu5\85  Ä?bƒ¥¬∞	µ  Äø    Ú,µ  Äø
+Fµà4Jµ  Äø    Ú,µ  Äø
+Fµà4Jµ  Äø    Ú,µ  Äø   Äú=åæ•5vø   Äú=åæ•5vø   Äú=åæ•5vø    ù=åæ§5vø    ù=åæ§5vø    ù=åæ§5vø          Ä?          Ä?          Ä?          Ä?          Ä?          Ä?          Äø          Äø          Äø          Äø          Äø          Äøúzı4aøµ  Ä?òzı¥aø¥  Ä?»¶#4Âkò3  Ä?ß£µâ25  Ä?»¶#4Âkò3  Ä?òzı¥aø¥  Ä?    aø5  Ä?    aø5  Ä?Få4rÚÖ5  Ä?    ,ˇ4  Ä?Få4rÚÖ5  Ä?    aø5  Ä?          Äøízuµa?µ  Äø
+Fµà4Jµ  Äøß£µ˘Srµ  Äø
+Fµà4Jµ  Äøízuµa?µ  Äø  Äø          Äø          Äø          Äø   Ä      Äø   Ä      Äø   Ä    		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 0
+}
+*HELPEROBJECT {
+	*NODE_ID "03d88410"
+	*NODE_PARENTID "03c958a8"
+	*NODE_NAME "bumpfull06"
+	*NODE_PARENT "bumppart04"
+	*HELPER_CLASS "Dummy"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumpfull06"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.99996191	-0.00872659	0.00000000
+		*TM_ROW1 0.00872659	-0.99996191	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -0.00104092	0.75138344	0.01924662
+		*TM_POS -0.00104092	0.75138344	0.01924662
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 3.15031934
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN -0.09045430	0.69458574	-0.01186798
+	*BOUNDINGBOX_MAX 0.08838777	0.80642611	0.04608516
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "02c563c0"
+	*NODE_PARENTID "03d88410"
+	*NODE_NAME "bumprubber06"
+	*NODE_PARENT "bumpfull06"
+	*HELPER_CLASS "Dummy"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumprubber06"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.99996191	-0.00872659	0.00000000
+		*TM_ROW1 0.00872659	-0.99996191	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -0.00104088	0.75137937	0.01579516
+		*TM_POS -0.00104088	0.75137937	0.01579516
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 3.15031934
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN -0.09045430	0.69458574	-0.01186796
+	*BOUNDINGBOX_MAX 0.08838777	0.80642611	0.04608518
+	*HELPER_END
+}
+*GEOMOBJECT {
+	*NODE_ID "02c61c90"
+	*NODE_PARENTID "02c563c0"
+	*NODE_NAME "bump13"
+	*NODE_PARENT "bumprubber06"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bump13"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.99996191	-0.00872659	0.00000000
+		*TM_ROW1 0.00872659	-0.99996191	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -0.04921986	0.75104518	0.03979862
+		*TM_POS -0.04921986	0.75104518	0.03979862
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 3.15031934
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 12
+		*MESH_NUMFACES 16
+		*MESH_VERTEX_LIST {
+1{∑ΩæåÚª≈4??πΩïﬂ˜ª≥âK?¶≥∑Ωƒi =X¸7?7Ÿ∏Ω:Ô=ò]H? Á?ΩÒ˜ª®¢K?‰∂<ΩEûÚª
+ﬁ4?‹'=Ωìg =M8?Òr?Ω
+Ì=évH?8G∏Ω6ıªd'@?ÚN>ΩëGıªY@@?oF∏Ω, =¯,@?kM>ΩN* =ÌE@?		}
+		*MESH_FACE_LIST {
+      	       
+    
+                    
+                 	    	      
+    
+           
+    		}
+		*MESH_NUMTVERTEX 34
+		*MESH_TVERTLIST {
+7èÈ>î Ë=7èÈ>Èû>X•&?î Ë=W•&?Èû>‹Í>§€=h&?§€=‹Í>eOù>h&?eOù>[&?}ú>6‡Í>}ú>[&?°ÃÍ=9‡Í>ùÃÍ=øÑ>8SÅ=iú8>8SÅ=s>∆3c>iú8>∆3c>iú8>8SÅ=s¶Í>ŸÎ=ı%?ŸÎ=s¶Í>˜9ú>ı%?˜9ú>ı%?ŸÎ=7èÈ>Bˇ„=X•&?Aˇ„=7èÈ>Bˇ„=h&?§€=‹Í>§€=h&?§€=iú8>8SÅ=©ÆŒ=8SÅ=tI¸=∆3c>tI¸=∆3c>iú8>∆3c>iú8>8SÅ=		}
+		*MESH_NUMTVFACES 16
+		*MESH_TFACELIST {
+              	 
+  
+ 	                               ! 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+       Ä  Ä?w≈ü®9g4  Ä?          Ä?w≈ü®;Á4  Ä?          Ä?w≈ü®9g4  Ä?          Äø          Äø          Äø          Äø          Äø          Äø»´≥ÌHw?ËtÑæŒ´≥ÌHw?ËtÑæŒ´≥ÌHw?ËtÑæ’´≥ÌHw?ÈtÑæŒ´≥ÌHw?ËtÑæŒ´≥ÌHw?ËtÑæ  Ä?          Ä?≤’p3c%≥  Ä?          Ä?≤’3Ôÿ•®  Ä?          Ä?≤’p3c%≥   ÄÓHwø·tÑæ…+3ÓHwø‚tÑæ…+3ÓHwø‚tÑæ…´3ÓHwø„tÑæ…+3ÓHwø‚tÑæ…+3ÓHwø‚tÑæw≈ü®9g4  Ä?3®Ô®,C-5  Ä?w≈ü®;Á4  Ä?    ,C-5  Ä?w≈ü®;Á4  Ä?3®Ô®,C-5  Ä?          Äø          Äø          Äø       Ä  Äø          Äø          Äø  Ä?≤’p3c%≥  Ä?    
+c%¥  Ä?≤’3c•≥  Ä?≤’3c•≥  Ä?≤’3Ôÿ•®  Ä?≤’p3c%≥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*TM_ANIMATION {
+		*NODE_NAME "bump13"
+		*CONTROL_SCALE_TRACK {
+			*CONTROL_SCALE_SAMPLE 0	1.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8160	1.20000005	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8320	1.39999998	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8480	1.60000026	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8640	1.80000007	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8800	2.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8960	2.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9120	2.39999986	0.99999988	0.99999988 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9280	2.60000014	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9440	2.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9600	3.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9760	3.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9920	3.40000010	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10080	3.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10240	3.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10400	4.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10560	4.20000029	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10720	4.40000010	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10880	4.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11040	4.79999971	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11200	5.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+		}
+	}
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	0.00000000
+			*CONTROL_FLOAT_KEY 160	0.02000000
+			*CONTROL_FLOAT_KEY 320	0.04000000
+			*CONTROL_FLOAT_KEY 480	0.06000000
+			*CONTROL_FLOAT_KEY 640	0.08000001
+			*CONTROL_FLOAT_KEY 800	0.10000001
+			*CONTROL_FLOAT_KEY 960	0.12000000
+			*CONTROL_FLOAT_KEY 1120	0.14000003
+			*CONTROL_FLOAT_KEY 1280	0.16000001
+			*CONTROL_FLOAT_KEY 1440	0.18000002
+			*CONTROL_FLOAT_KEY 1600	0.20000002
+			*CONTROL_FLOAT_KEY 1760	0.21999998
+			*CONTROL_FLOAT_KEY 1920	0.24000001
+			*CONTROL_FLOAT_KEY 2080	0.26000002
+			*CONTROL_FLOAT_KEY 2240	0.28000003
+			*CONTROL_FLOAT_KEY 2400	0.30000001
+			*CONTROL_FLOAT_KEY 2560	0.32000002
+			*CONTROL_FLOAT_KEY 2720	0.33999997
+			*CONTROL_FLOAT_KEY 2880	0.36000001
+			*CONTROL_FLOAT_KEY 3040	0.38000003
+			*CONTROL_FLOAT_KEY 3200	0.40000004
+			*CONTROL_FLOAT_KEY 3360	0.42000002
+			*CONTROL_FLOAT_KEY 3520	0.44000000
+			*CONTROL_FLOAT_KEY 3680	0.45999998
+			*CONTROL_FLOAT_KEY 3840	0.47999999
+			*CONTROL_FLOAT_KEY 4000	0.50000000
+			*CONTROL_FLOAT_KEY 4160	0.51999998
+			*CONTROL_FLOAT_KEY 4320	0.54000002
+			*CONTROL_FLOAT_KEY 4480	0.56000000
+			*CONTROL_FLOAT_KEY 4640	0.57999992
+			*CONTROL_FLOAT_KEY 4800	0.59999996
+			*CONTROL_FLOAT_KEY 4960	0.62000000
+			*CONTROL_FLOAT_KEY 5120	0.63999999
+			*CONTROL_FLOAT_KEY 5280	0.66000003
+			*CONTROL_FLOAT_KEY 5440	0.68000001
+			*CONTROL_FLOAT_KEY 5600	0.69999999
+			*CONTROL_FLOAT_KEY 5760	0.71999997
+			*CONTROL_FLOAT_KEY 5920	0.74000001
+			*CONTROL_FLOAT_KEY 6080	0.75999999
+			*CONTROL_FLOAT_KEY 6240	0.77999991
+			*CONTROL_FLOAT_KEY 6400	0.80000001
+			*CONTROL_FLOAT_KEY 6560	0.81999999
+			*CONTROL_FLOAT_KEY 6720	0.83999997
+			*CONTROL_FLOAT_KEY 6880	0.85999995
+			*CONTROL_FLOAT_KEY 7040	0.88000000
+			*CONTROL_FLOAT_KEY 7200	0.89999998
+			*CONTROL_FLOAT_KEY 7360	0.92000002
+			*CONTROL_FLOAT_KEY 7520	0.94000000
+			*CONTROL_FLOAT_KEY 7680	0.95999998
+			*CONTROL_FLOAT_KEY 7840	0.98000002
+			*CONTROL_FLOAT_KEY 8000	1.00000000
+			*CONTROL_FLOAT_KEY 8001	1.00000000
+		}
+	}
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "05f85e38"
+	*NODE_PARENTID "02c563c0"
+	*NODE_NAME "bump14"
+	*NODE_PARENT "bumprubber06"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bump14"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.99996191	-0.00872659	0.00000000
+		*TM_ROW1 0.00872659	-0.99996191	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.04679521	0.75188312	0.03979862
+		*TM_POS 0.04679521	0.75188312	0.03979862
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 3.15031934
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 12
+		*MESH_NUMFACES 16
+		*MESH_VERTEX_LIST {
+…Œ¥=d‘Úª+5?∫6≥=:'¯ª∂ÔK?Rñ¥=œ` =[b8?√p≥=>Ê=õ√H?.4=¥¯ª¬÷K?^7=û¬Úª#5?=Ì6=c =gI8?¢4=oË=¶™H?¡¥=∞}ıªhç@?∆5=(lıªrt@?â¥=ä# =¸í@?≠«5=ª% =z@?		}
+		*MESH_FACE_LIST {
+      	      
+      
+                   
+               	          
+          
+           		}
+		*MESH_NUMTVERTEX 33
+		*MESH_TVERTLIST {
+5èÈ>î Ë=f'?î Ë=9èÈ>Èû>f'?Èû>∂â&?gñ‡=∂â&? åû>√Í>gñ‡=√Í> åû>œﬂÎ>}ú>œﬂÎ>òÃÍ=›⁄&?}ú>›⁄&?òÃÍ=øÑ>8SÅ=s>∆3c>iú8>8SÅ=iú8>∆3c>iú8>8SÅ=¥nÈ>2≤ú>¥nÈ>≠äÚ=TÌ%?2≤ú>TÌ%?≠äÚ=TÌ%?2≤ú>f'?Aˇ„=9èÈ>Bˇ„=∂â&?gñ‡=√Í>gñ‡=∂â&?gñ‡=iú8>∆3c>tI¸=∆3c>iú8>8SÅ=©ÆŒ=8SÅ=iú8>8SÅ=tI¸=∆3c>		}
+		*MESH_NUMTVFACES 16
+		*MESH_TFACELIST {
+              	 
+  
+ 	                                		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+÷15F®Ô)  Ä?÷±41C≠4  Ä?’14bÚ5  Ä?KÄ©-C-5  Ä?’14bÚ5  Ä?÷±41C≠4  Ä?„1µ      Äø,l¥yé µ  Äø‚±¥π’¥  Äø/^)µ’pµ  Äø‚±¥π’¥  Äø,l¥yé µ  Äø77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ  Äø©ﬁﬂ)c%4  Äø∫’3c•3  Äø%á2<ù92  Äø≥’3„ˇÈ®  Äø%á2<ù92  Äø∫’3c•3    ÌHwøÎtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæKÄ©-C-5  Ä?D®Ô®+C-5  Ä?’14bÚ5  Ä?    +C-5  Ä?’14bÚ5  Ä?D®Ô®+C-5  Ä?,l¥yé µ  Äø·è&)≤’pµ  Äø/^)µ’pµ  Äø    ≤’pµ  Äø/^)µ’pµ  Äø·è&)≤’pµ  Äø  Äø≥’3„ˇÈ®  Äø.C≠≥r˜m≥  Äø%á2<ù92  Äø.C-¥r˜Ì≥  Äø%á2<ù92  Äø.C≠≥r˜m≥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*TM_ANIMATION {
+		*NODE_NAME "bump14"
+		*CONTROL_SCALE_TRACK {
+			*CONTROL_SCALE_SAMPLE 0	1.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8160	1.20000005	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8320	1.39999998	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8480	1.60000026	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8640	1.80000007	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8800	2.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8960	2.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9120	2.39999986	0.99999988	0.99999988 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9280	2.60000014	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9440	2.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9600	3.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9760	3.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9920	3.40000010	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10080	3.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10240	3.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10400	4.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10560	4.20000029	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10720	4.40000010	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10880	4.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11040	4.79999971	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11200	5.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+		}
+	}
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	0.00000000
+			*CONTROL_FLOAT_KEY 160	0.02000000
+			*CONTROL_FLOAT_KEY 320	0.04000000
+			*CONTROL_FLOAT_KEY 480	0.06000000
+			*CONTROL_FLOAT_KEY 640	0.08000001
+			*CONTROL_FLOAT_KEY 800	0.10000001
+			*CONTROL_FLOAT_KEY 960	0.12000000
+			*CONTROL_FLOAT_KEY 1120	0.14000003
+			*CONTROL_FLOAT_KEY 1280	0.16000001
+			*CONTROL_FLOAT_KEY 1440	0.18000002
+			*CONTROL_FLOAT_KEY 1600	0.20000002
+			*CONTROL_FLOAT_KEY 1760	0.21999998
+			*CONTROL_FLOAT_KEY 1920	0.24000001
+			*CONTROL_FLOAT_KEY 2080	0.26000002
+			*CONTROL_FLOAT_KEY 2240	0.28000003
+			*CONTROL_FLOAT_KEY 2400	0.30000001
+			*CONTROL_FLOAT_KEY 2560	0.32000002
+			*CONTROL_FLOAT_KEY 2720	0.33999997
+			*CONTROL_FLOAT_KEY 2880	0.36000001
+			*CONTROL_FLOAT_KEY 3040	0.38000003
+			*CONTROL_FLOAT_KEY 3200	0.40000004
+			*CONTROL_FLOAT_KEY 3360	0.42000002
+			*CONTROL_FLOAT_KEY 3520	0.44000000
+			*CONTROL_FLOAT_KEY 3680	0.45999998
+			*CONTROL_FLOAT_KEY 3840	0.47999999
+			*CONTROL_FLOAT_KEY 4000	0.50000000
+			*CONTROL_FLOAT_KEY 4160	0.51999998
+			*CONTROL_FLOAT_KEY 4320	0.54000002
+			*CONTROL_FLOAT_KEY 4480	0.56000000
+			*CONTROL_FLOAT_KEY 4640	0.57999992
+			*CONTROL_FLOAT_KEY 4800	0.59999996
+			*CONTROL_FLOAT_KEY 4960	0.62000000
+			*CONTROL_FLOAT_KEY 5120	0.63999999
+			*CONTROL_FLOAT_KEY 5280	0.66000003
+			*CONTROL_FLOAT_KEY 5440	0.68000001
+			*CONTROL_FLOAT_KEY 5600	0.69999999
+			*CONTROL_FLOAT_KEY 5760	0.71999997
+			*CONTROL_FLOAT_KEY 5920	0.74000001
+			*CONTROL_FLOAT_KEY 6080	0.75999999
+			*CONTROL_FLOAT_KEY 6240	0.77999991
+			*CONTROL_FLOAT_KEY 6400	0.80000001
+			*CONTROL_FLOAT_KEY 6560	0.81999999
+			*CONTROL_FLOAT_KEY 6720	0.83999997
+			*CONTROL_FLOAT_KEY 6880	0.85999995
+			*CONTROL_FLOAT_KEY 7040	0.88000000
+			*CONTROL_FLOAT_KEY 7200	0.89999998
+			*CONTROL_FLOAT_KEY 7360	0.92000002
+			*CONTROL_FLOAT_KEY 7520	0.94000000
+			*CONTROL_FLOAT_KEY 7680	0.95999998
+			*CONTROL_FLOAT_KEY 7840	0.98000002
+			*CONTROL_FLOAT_KEY 8000	1.00000000
+			*CONTROL_FLOAT_KEY 8001	1.00000000
+		}
+	}
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "05f784e0"
+	*NODE_PARENTID "02c563c0"
+	*NODE_NAME "bumpbeam03"
+	*NODE_PARENT "bumprubber06"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+		nolight
+		texvel 0 0.1 0
+	}
+	*NODE_TM {
+		*NODE_NAME "bumpbeam03"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.99996191	-0.00872659	0.00000000
+		*TM_ROW1 0.01082097	-1.23995280	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.24000001
+		*TM_ROW3 -0.00103357	0.75055878	0.01712267
+		*TM_POS -0.00103357	0.75055878	0.01712267
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 3.15031934
+		*TM_SCALE 1.00000000	1.24000001	1.24000001
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 18
+		*MESH_NUMFACES 32
+		*MESH_VERTEX_LIST {
+]F∑Ωy¯>º`–1?@πΩjEBº›N?ùå∑Ω—√<=7Õ5?q¯∏Ω·+<=⁄J?ä{∆∫°[BºÁ>N?/´∫∞?ºj2?ñM4∫Dæ<=A 6? Á¥∫S&<=„OJ?9C∏Ωﬂû@ºÓ??êhá∫µ@º(!@?àB∏Ωÿw<=	ı??Jáá∫Kr<=(@?úµ=Ê$?ºs62?Â	≥=ÿqBºÒqN?[Ω¥=∂∏<=L36?àQ≥=º <=ÌÇJ?¿¥=LÀ@º2T@?p¥=Ωl<=[@?		}
+		*MESH_FACE_LIST {
+      	       
+    
+                    
+                 	    	      
+    
+           
+         	                                             	                              		}
+		*MESH_NUMTVERTEX 67
+		*MESH_TVERTLIST {
+7èÈ>î Ë=7èÈ>Èû>X•&?î Ë=W•&?Èû>‹Í>§€=h&?§€=‹Í>eOù>h&?eOù>[&?}ú>6‡Í>}ú>[&?°ÃÍ=9‡Í>ùÃÍ=øÑ>8SÅ=iú8>8SÅ=s>∆3c>iú8>∆3c>iú8>8SÅ=s¶Í>ŸÎ=ı%?ŸÎ=s¶Í>˜9ú>ı%?˜9ú>ı%?ŸÎ=7èÈ>Bˇ„=X•&?Aˇ„=7èÈ>Bˇ„=h&?§€=‹Í>§€=h&?§€=iú8>8SÅ=©ÆŒ=8SÅ=tI¸=∆3c>tI¸=∆3c>iú8>∆3c>iú8>8SÅ=5èÈ>î Ë=f'?î Ë=9èÈ>Èû>f'?Èû>∂â&?gñ‡=∂â&? åû>√Í>gñ‡=√Í> åû>œﬂÎ>}ú>œﬂÎ>òÃÍ=›⁄&?}ú>›⁄&?òÃÍ=øÑ>8SÅ=s>∆3c>iú8>8SÅ=iú8>∆3c>iú8>8SÅ=¥nÈ>2≤ú>¥nÈ>≠äÚ=TÌ%?2≤ú>TÌ%?≠äÚ=TÌ%?2≤ú>f'?Aˇ„=9èÈ>Bˇ„=∂â&?gñ‡=√Í>gñ‡=∂â&?gñ‡=iú8>∆3c>tI¸=∆3c>iú8>8SÅ=©ÆŒ=8SÅ=iú8>8SÅ=tI¸=∆3c>		}
+		*MESH_NUMTVFACES 32
+		*MESH_TFACELIST {
+              	 
+  
+ 	                               ! " # $ % $ # & ' ( ) ( ' * + , - , + . / 0 1 2 / 3 4 5 6 7 4 % 8 $ 9 $ 8 ' : ) ; ) < = > ? @ A B 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+       Ä  Ä?˚Yú(9g4  Ä?          Ä?mü;)3Íœ4  Ä?          Ä?˚Yú(9g4  Ä?          Äø          Äø          Äøúä≥à™@¥  Äø          Äø          Äø)]ß3ÌHw?ËtÑæZ{3ÏHw?ÔtÑæ:\ß2ÌHw?ÎtÑæ Äe´ÏHw?ÔtÑæ:\ß2ÌHw?ÎtÑæZ{3ÏHw?ÔtÑæ  Ä?          Ä?≤’p3c%≥  Ä?          Ä?≤’3Ôÿ•®  Ä?          Ä?≤’p3c%≥Ã˚≥ÓHwø„tÑæ˚≥ÓHwø„tÑæ$e¥ÓHwø‰tÑæ˚≥ÓHwø„tÑæ$e¥ÓHwø‰tÑæ˚≥ÓHwø„tÑæ˚Yú(9g4  Ä?îí)+C-5  Ä?mü;)3Íœ4  Ä?ÊØ),C-5  Ä?mü;)3Íœ4  Ä?îí)+C-5  Ä?úä≥à™@¥  ÄøÁ≥Ü6,  Äø          Äø       Ä  Äø          ÄøÁ≥Ü6,  Äø  Ä?≤’p3c%≥  Ä?    
+c%¥  Ä?≤’3c•≥  Ä?≤’3c•≥  Ä?≤’3Ôÿ•®  Ä?≤’p3c%≥          Ä?          Ä?™Ê/),C≠4  Ä?mü;)3Íœ4  Ä?™Ê/),C≠4  Ä?          Ä?          Äøˇ"©wé†¥  Äø          Äøúä≥à™@¥  Äø          Äøˇ"©wé†¥  Äø9]'4ÎHw?ˆtÑæL4—3ÏHw?ÚtÑæZ{3ÏHw?ÔtÑæ Äe´ÏHw?ÔtÑæZ{3ÏHw?ÔtÑæL4—3ÏHw?ÚtÑæ  Äø©ﬁﬂ)c%4  Äø∫’3c•3  Äø%á2<ù92  Äø≥’3M˜È®  Äø%á2<ù92  Äø∫’3c•3Ã˚≥ÓHwø„tÑæ$e¥ÓHwø‰tÑæπD?¥ÓHwøÊtÑæ_ÅÄ¥ÌHwøÍtÑæπD?¥ÓHwøÊtÑæ$e¥ÓHwø‰tÑæmü;)3Íœ4  Ä?ÊØ),C-5  Ä?™Ê/),C≠4  Ä?ÊØ),C-5  Ä?™Ê/),C≠4  Ä?ÊØ),C-5  Ä?ˇ"©wé†¥  ÄøC-¥*’¥  Äøúä≥à™@¥  ÄøÁ≥Ü6,  Äøúä≥à™@¥  ÄøC-¥*’¥  Äø  Äø≥’3M˜È®  Äø/C≠≥r˜m≥  Äø%á2<ù92  Äø/C-¥r˜Ì≥  Äø%á2<ù92  Äø/C≠≥r˜m≥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	1.00000000
+			*CONTROL_FLOAT_KEY 160	0.98000008
+			*CONTROL_FLOAT_KEY 320	0.95999992
+			*CONTROL_FLOAT_KEY 480	0.94000000
+			*CONTROL_FLOAT_KEY 640	0.92000002
+			*CONTROL_FLOAT_KEY 800	0.89999992
+			*CONTROL_FLOAT_KEY 960	0.88000000
+			*CONTROL_FLOAT_KEY 1120	0.86000001
+			*CONTROL_FLOAT_KEY 1280	0.84000009
+			*CONTROL_FLOAT_KEY 1440	0.81999999
+			*CONTROL_FLOAT_KEY 1600	0.80000001
+			*CONTROL_FLOAT_KEY 1760	0.77999991
+			*CONTROL_FLOAT_KEY 1920	0.75999993
+			*CONTROL_FLOAT_KEY 2080	0.74000001
+			*CONTROL_FLOAT_KEY 2240	0.72000009
+			*CONTROL_FLOAT_KEY 2400	0.69999999
+			*CONTROL_FLOAT_KEY 2560	0.68000001
+			*CONTROL_FLOAT_KEY 2720	0.65999991
+			*CONTROL_FLOAT_KEY 2880	0.63999999
+			*CONTROL_FLOAT_KEY 3040	0.62000000
+			*CONTROL_FLOAT_KEY 3200	0.60000008
+			*CONTROL_FLOAT_KEY 3360	0.58000010
+			*CONTROL_FLOAT_KEY 3520	0.56000000
+			*CONTROL_FLOAT_KEY 3680	0.53999990
+			*CONTROL_FLOAT_KEY 3840	0.51999998
+			*CONTROL_FLOAT_KEY 4000	0.50000000
+			*CONTROL_FLOAT_KEY 4160	0.48000002
+			*CONTROL_FLOAT_KEY 4320	0.45999998
+			*CONTROL_FLOAT_KEY 4480	0.44000000
+			*CONTROL_FLOAT_KEY 4640	0.42000002
+			*CONTROL_FLOAT_KEY 4800	0.39999998
+			*CONTROL_FLOAT_KEY 4960	0.38000000
+			*CONTROL_FLOAT_KEY 5120	0.36000001
+			*CONTROL_FLOAT_KEY 5280	0.33999997
+			*CONTROL_FLOAT_KEY 5440	0.31999999
+			*CONTROL_FLOAT_KEY 5600	0.30000001
+			*CONTROL_FLOAT_KEY 5760	0.27999997
+			*CONTROL_FLOAT_KEY 5920	0.26000002
+			*CONTROL_FLOAT_KEY 6080	0.24000002
+			*CONTROL_FLOAT_KEY 6240	0.22000004
+			*CONTROL_FLOAT_KEY 6400	0.20000000
+			*CONTROL_FLOAT_KEY 6560	0.18000002
+			*CONTROL_FLOAT_KEY 6720	0.16000004
+			*CONTROL_FLOAT_KEY 6880	0.14000000
+			*CONTROL_FLOAT_KEY 7040	0.12000001
+			*CONTROL_FLOAT_KEY 7200	0.10000003
+			*CONTROL_FLOAT_KEY 7360	0.07999999
+			*CONTROL_FLOAT_KEY 7520	0.06000001
+			*CONTROL_FLOAT_KEY 7680	0.04000003
+			*CONTROL_FLOAT_KEY 7840	0.01999998
+			*CONTROL_FLOAT_KEY 8000	0.00000000
+			*CONTROL_FLOAT_KEY 8001	0.00000000
+		}
+	}
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "02c66ba8"
+	*NODE_PARENTID "03d88410"
+	*NODE_NAME "bumper19"
+	*NODE_PARENT "bumpfull06"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumper19"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00872676	-0.99996191	0.00000000
+		*TM_ROW1 0.99996191	0.00872676	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -0.00104030	0.75146565	0.03979862
+		*TM_POS -0.00104030	0.75146565	0.03979862
+		*TM_ROTAXIS 0.00000000	0.00000000	1.00000000
+		*TM_ROTANGLE 1.56206942
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 30
+		*MESH_NUMFACES 48
+		*MESH_VERTEX_LIST {
+Á?Ω÷Ò˜ª®¢K?Í∂<ΩÛûÚª
+ﬁ4?·'=Ωzg =M8?˜r?ΩÏ=évH?êª∫"¯ªµºK?™≥∫‚<=6ÏI?∏+∫±Úª¯4?P";∫π≠<=d’6?.4=o¯ª¬÷K?^7=O√Úª$5?=Ì6=Ób =gI8?¢4=UË=ß™H?¸3@Ω}√Æª%…M?Ài<Ωo®ª∏2?˜<Ω∞<=Xª6?I£?Ω,!<=)“I?˙.≈∫÷Æª2„M?Q“∫eÅ®ª$“2?·3=SËÆª?˝M?:´7=ì®ª0Ï2?˚7=o´<=qÔ6?…q4=ô<=CJ?˜N>ΩFHıªZ@@?qM>Ω5* =ÌE@?{éà∫ìZıªfZ@?6M>Ωõh<=¿F@?ÏTà∫Qf<=Õ`@?∆5=ﬁlıªrt@?¨«5=¢% =z@?Ë«5=d<=⁄z@?		}
+		*MESH_FACE_LIST {
+                                                                                                                                      
+       
+   	 
+      	              	                                        	      	                                 		}
+		*MESH_NUMTVERTEX 68
+		*MESH_TVERTLIST {
+X•&?Aˇ„=Ñ-Í>Bˇ„=W•&?Èû>Ñ-Í>Èû>Z?‡√|?ôê6?ﬁ√|?Z?`ﬂG?ôê6?`ﬂG?êeà>ï>l]5>ï>íeà>XÅÊ=l]5>\ÅÊ='`_?˙D:?&`_?y~\?oES?˙D:?oES?y~\?f'?Aˇ„=f'?Èû>&|N?ﬁ√|?(|N?`ﬂG?lﬂ≥=ï>hﬂ≥=\ÅÊ='`_?{?oES?z?•A!?áæ?§A!?Ù¶7?∞î?Ù¶7?∞î?ï÷?£A!?aèO?
+ï!?Å∑w?áÖ?ı¶w?Æî?RwO?&§?±Öí>Nóı>µÖí>Nóı>pG>&§?jG>¬^Ó>T∫˙=&§?H∫˙=&§?¶Åò>¬^Ó>®Åò>ï!?“,Ô>âÖ?ÍMÔ>£A!?`èO?§A!?Ù¶7?Øî?Ù¶7?Øî?RwO?
+ï!?Ä∑w?áÖ?ı¶w?¶| ?±Öí>¶| ?jG>Ï$?H∫˙=Ï$?¶Åò>•A!?áæ?ï!?“,Ô>âÖ?ÍMÔ>∞î?ï÷?Ü-Í>î Ë=X•&?î Ë=\S?Ë~3?ô÷_?Ë~3?\S?g∏U?ô÷_?f∏U?ô÷_?Ë~3?f'?î Ë=\S?hE?ô÷_?hE?ô÷_?Ë~3?ô÷_?hE?		}
+		*MESH_NUMTVFACES 48
+		*MESH_TFACELIST {
+              	 
+  
+ 	                     	  	                      ! " " #   $ % & & ' $ (    ) ( * + , , - * . * - - / . 0   # # 1 0 % 2 3 3 & % 4 5 6 6 7 4  8  9  8 : ; < = < >  ?  8  ? @ A : B : C       + 4 , 7 , 4 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+=ûe©+C-5  Ä?˛îñ®*C-5  Ä?5¢)¥bÚ5  Ä?mÍ¸'.C-5  Ä?5¢)¥bÚ5  Ä?˛îñ®*C-5  Ä?          Äø          ÄømÔà(lßŒ¥  Äø    ¸˜¥  ÄømÔà(lßŒ¥  Äø          ÄøUK¢≥àÏt?'˘îæ∂mE≥àÏt?%˘îæUK"≥àÏt?&˘îæ    àÏt?&˘îæUK"≥àÏt?&˘îæ∂mE≥àÏt?%˘îæ
+êh≥äÏtø˘îæ
+êh≥äÏtø˘îæ™mE≥äÏtø˘îæ    âÏtø ˘îæ™mE≥äÏtø˘îæ
+êh≥äÏtø˘îæ    *C-5  Ä?    ,C-5  Ä?˛îñ®*C-5  Ä?mÍ¸'.C-5  Ä?˛îñ®*C-5  Ä?    ,C-5  Ä?          Äø    Ùƒâ¥  Äø          Äø    ¸˜¥  Äø          Äø    Ùƒâ¥  ÄøêË≥âÏt?"˘îæêh≥âÏt?$˘îæ∂mE≥àÏt?%˘îæ    àÏt?&˘îæ∂mE≥àÏt?%˘îæêh≥âÏt?$˘îæ
+êh≥äÏtø˘îæ™mE≥äÏtø˘îæKK"≥âÏtø˘îæKK¢≥âÏtø ˘îæKK"≥âÏtø˘îæ™mE≥äÏtø˘îæ  Ä?Ëí•µF≠5  Ä?Ëí•µF≠5  Ä?Ëí•µF≠5  Ä?ã˝öµ‡‚m5  Ä?ã˝öµ‡‚m5  Ä?ã˝öµ‡‚m5  Ä?˘)5^œJ5  Ä?˘)5^œJ5  Ä?˘)5^œJ5  Ä?"d5$/5  Ä?"d5$/5  Ä?"d5$/5UäØ2uÑæÍHw?UäØ2uÑæÍHw?UäØ2uÑæÍHw?'X)5õtÑæ¯Hw?'X)5õtÑæ¯Hw?'X)5õtÑæ¯Hw?–€#µuÑ>ÍHw?–€#µuÑ>ÍHw?–€#µuÑ>ÍHw?€äØ≤fuÑ>›Hw?€äØ≤fuÑ>›Hw?€äØ≤fuÑ>›Hw?  Ä?          Ä?          Ä?          Ä?   Ä      Ä?   Ä      Ä?   Ä      Äøg+G≠5  Äøg+G≠5  Äøg+G≠5  ÄøËß5`M±∂  ÄøËß5`M±∂  ÄøËß5`M±∂  Äø7VË6D∏yµ  Äø7VË6D∏yµ  Äø7VË6D∏yµ  Äø   Ä      Äø   Ä      Äø   Ä        õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?ÃâØ2õtÑ>¯Hw?ÃâØ2õtÑ>¯Hw?ÃâØ2õtÑ>¯Hw?"X)5uÑ>ÍHw?"X)5uÑ>ÍHw?"X)5uÑ>ÍHw?  ÄøBQ•≤fQö3  ÄøBQ•≤fQö3  ÄøBQ•≤fQö3  Äø¯Yµí¥  Äø¯Yµí¥  Äø¯Yµí¥mÍ¸'.C-5  Ä?ô-b¥@Á4  Ä?5¢)¥bÚ5  Ä?4¢)µ      Ä?5¢)¥bÚ5  Ä?ô-b¥@Á4  Ä?    ¸˜¥  Äø    lßNµ  ÄømÔà(lßŒ¥  Äø    kßNµ  ÄømÔà(lßŒ¥  Äø    lßNµ  Äø    ,C-5  Ä?CûÂ(0C-5  Ä?mÍ¸'.C-5  Ä?ô-b¥@Á4  Ä?mÍ¸'.C-5  Ä?CûÂ(0C-5  Ä?    Ùƒâ¥  ÄømÔ©mßNµ  Äø    ¸˜¥  Äø    lßNµ  Äø    ¸˜¥  ÄømÔ©mßNµ  Äø  Ä?≤’≥G≠5  Ä?≤’≥G≠5  Ä?≤’≥G≠5  Ä?          Ä?          Ä?          ÄøÙ’3G≠5  ÄøÙ’3G≠5  ÄøÙ’3G≠5  ÄøûßŒ≥Ω¥Ô¥  ÄøûßŒ≥Ω¥Ô¥  ÄøûßŒ≥Ω¥Ô¥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	0.00000000
+			*CONTROL_FLOAT_KEY 160	0.03333334
+			*CONTROL_FLOAT_KEY 320	0.06666667
+			*CONTROL_FLOAT_KEY 480	0.10000000
+			*CONTROL_FLOAT_KEY 640	0.13333336
+			*CONTROL_FLOAT_KEY 800	0.16666666
+			*CONTROL_FLOAT_KEY 960	0.20000002
+			*CONTROL_FLOAT_KEY 1120	0.23333332
+			*CONTROL_FLOAT_KEY 1280	0.26666671
+			*CONTROL_FLOAT_KEY 1440	0.30000001
+			*CONTROL_FLOAT_KEY 1600	0.33333331
+			*CONTROL_FLOAT_KEY 1760	0.36666664
+			*CONTROL_FLOAT_KEY 1920	0.40000004
+			*CONTROL_FLOAT_KEY 2080	0.43333334
+			*CONTROL_FLOAT_KEY 2240	0.46666661
+			*CONTROL_FLOAT_KEY 2400	0.50000000
+			*CONTROL_FLOAT_KEY 2560	0.53333336
+			*CONTROL_FLOAT_KEY 2720	0.56666666
+			*CONTROL_FLOAT_KEY 2880	0.59999996
+			*CONTROL_FLOAT_KEY 3040	0.63333333
+			*CONTROL_FLOAT_KEY 3200	0.66666669
+			*CONTROL_FLOAT_KEY 3360	0.69999999
+			*CONTROL_FLOAT_KEY 3520	0.73333329
+			*CONTROL_FLOAT_KEY 3680	0.76666659
+			*CONTROL_FLOAT_KEY 3840	0.80000001
+			*CONTROL_FLOAT_KEY 4000	0.83333331
+			*CONTROL_FLOAT_KEY 4160	0.86666667
+			*CONTROL_FLOAT_KEY 4320	0.89999998
+			*CONTROL_FLOAT_KEY 4480	0.93333328
+			*CONTROL_FLOAT_KEY 4640	0.96666664
+			*CONTROL_FLOAT_KEY 4800	1.00000000
+			*CONTROL_FLOAT_KEY 4801	1.00000000
+		}
+	}
+	*MATERIAL_REF 0
+}
+*HELPEROBJECT {
+	*NODE_ID "02c66d60"
+	*NODE_PARENTID "05f52238"
+	*NODE_NAME "bumppart02"
+	*NODE_PARENT "grpBumpercar"
+	*HELPER_CLASS "Dummy"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumppart02"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00000000	1.00000000	0.00000000
+		*TM_ROW1 -1.00000000	0.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.28567643	0.00000000	0.01780344
+		*TM_POS 0.28567643	0.00000000	0.01780344
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 1.57079637
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN 0.26146030	-0.09376749	-0.02617009
+	*BOUNDINGBOX_MAX 0.45661243	0.09376749	0.06177698
+	*HELPER_END
+}
+*GEOMOBJECT {
+	*NODE_ID "03c90930"
+	*NODE_PARENTID "02c66d60"
+	*NODE_NAME "bumper14"
+	*NODE_PARENT "bumppart02"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumper14"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -1.00000000	-0.00000017	0.00000000
+		*TM_ROW1 0.00000017	-1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.34035337	0.00000085	0.01777274
+		*TM_POS 0.34035337	0.00000085	0.01777274
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 3.14159274
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 78
+		*MESH_NUMFACES 160
+		*MESH_VERTEX_LIST {
+´{≈>§+º7ç Ωx{≈>ló+º)î =Èw≈>≠b÷ºmå Ω∂w≈>Z\÷ºÙî =‚Ö>Ï'º\ê Ω‡·Ö>⁄ﬂ'ºë =QﬁÖ>ÚÜ‘ºêè ΩﬁÖ>êÄ‘º–ë =≥j±>5k*º,ì =Êj±>€w*º4é ΩÒf±>M∆’ºˆì =$g±>†Ã’ºkç Ωæ5ë>ehí<ƒ¿Ω&5ë>H{í<@¿=Ô1ë>fD ;^¿ΩW1ë>É€ ;ß¿=à$¶>¨ﬁë<≈¿=%¶>»Àë<@¿Ω∑ ¶>,Ó˜:+	¿=O!¶>˚æˆ:Ÿ¿Ω]æ‘>ëÖ,º#éºAæ‘>ï~,ºé<§º‘>7Iëºiéºàº‘>∏EëºŒé<'â≈>a–;=ê Ωˆà≈>ã”;=Së =Îå≈>ª|=Ÿê Ω∏å≈>„|=èê =êÔÖ>eæ<=2ì Ω\ÔÖ>é¡<=/é =QÛÖ>Ø}=¸ì ΩÛÖ>◊	}=eç =/x±>®<=Vê =bx±>o<=ë ΩÛ{±>Úf|=äè =&|±>»c|=÷ë Ωé9ë>d
+=+	¿Ωˆ8ë>âm
+=⁄¿=V(¶>:
+=^¿=Ó(¶>»
+=ß¿Ω›À‘>ò;=–éº¡À‘>¿ô;=ié<ïÕ‘>@Y=äéºzÕ‘>ˇY=Øé<Ò~ö>D)º
+í =$ö>Í )ºVè Ω≠Åö>,]˝:‚¿=}Öö>ú5í<z¿=b{ö>(!’ºçé Ω/{ö>’’º’í =Üö>∏"í<ä¿ΩEÇö>˚-¸:#¿Ωmåö>dt<=4è =†åö>;q<=-í ΩLâö>≥J
+=¿=bêö>Öπ|=¯í Ω/êö>Ωº|=hé =‰âö>@A
+=¿Ωïº‘>xGëºØì6Pæ‘>Ç,ºá6˚·Ö>-Ê'ºgóµ48ﬁÖ>»É‘ºh~ì5í{≈>øù+ºVÿ_6Õj±>áq*º°E 6œw≈>í_÷ºOfâ6
+g±>v…’º‚RS6ö>ó)º„µØ5H{ö>ﬂ’º,ﬂ
+6áÕ‘> Y=R5Ç5–À‘>·ò;=y9±5vÔÖ>˙ø<=|¢ ∂:ÛÖ>D}=ôòS∂â≈>ˆ—;=,« 5Jx±><=Ÿr∑¥“å≈>P|=¨ù,¥|±>]e|=u5îµáåö>œr<=§˝æµHêö>)ª|=iå∂		}
+		*MESH_FACE_LIST {
+  ;   : ;     <    =  <     > 	   ? 	 >        
+      @ 
+   A 
+ @         	       , ?   B ? ,    .    /  .    0 A   C A 0    2    3  2                        
+          	          ,    /  ,   	 -    2  -   
+ 1    .  1    0    3  0                @    :  @              >    ;  >   ( E *   D * E     F   G F     ! H   I H !         "       " J   K J "    #    !  #     I 4   L 4 I   &  /   / 6 &    % /   # K 7   M 7 K    ' 2          %    $    $       & "   &      #  !    # '   / 4    2 5 !   " & 8   6 8 &    $ 7   9 7 $    *    *  (    * J   D J *    )    )  +    ) H   E H )   ,  B   < B    .  /    /    0  C   = C    2  3    3    ,      / ,   -      2 -   1      . 1   0      3 0   5  L   F L    6 / %   8  M   G M    9 2 '   4      4 /     /    5     5 2     2 !   6 % 8    8 %   9 ' 7   # 7 '   :  ;    ;    <  =    =    >  ?    ?    @  A    A    B - ?   	 ? -   C 1 A   
+ A 1   @      : @   >       ; >   E ) D   + D )   G  F    F    I   H    H     K # J    J #   I ! L   5 L !   K " M   8 M "   D + J    J +   E ( H    H (   <  B   - B    =  C   1 C    F  L   4 L    G  M   7 M    9 $    9  2   		}
+		*MESH_NUMTVERTEX 252
+		*MESH_TVERTLIST {
+8o/?∆M?À˛8?∆M?8o/?ƒ˛.? ˛8?ƒ˛.?$ú˜>BaJ?ﬁp˜>€(?öŸ‘>ß@?VÆ‘>C}(?‰Vñ>1E->fú8>1E->‰Vñ>Ûèò>fú8>Ûèò>ø@?#N?	1)?#N?Ω@?núp?	1)?núp?ËfØ>‹›'?xÁ>‹›'?ÍfØ>”W}?xÁ>”W}?ÍfØ>”W}?	1)?#N?ø@?#N?	1)?núp?Ω@?núp?É~ì>¨ú%?"·>¨ú%?É~ì>¥≠;?"·>¥≠;?É~ì>¥≠;?ÌŸ?¿˜?ÌŸ?√s?∞«Ë>ø˜?∞«Ë>√s?∑À=ëv$?Ç3)>ív$?¥À=sæ:?Ç3)>tæ:?¥À=sæ:?∞«Ë>¿˜?∞«Ë>√s?ÌŸ?¿˜?ÌŸ?√s?hß‘>9@?Úi˜>¥{J?3˜>Gnp?fÚ“>z˘o?jR”>‰∆o?ì˜>±;p?Ói˜>∂{J?dß‘>9@?fÚ“>z˘o?3˜>Gnp?öŸ‘>ß@?$ú˜>BaJ?ì˜>±;p?jR”>‰∆o?xJ
+=¨ú%?∫=`ÑÛ>0>`ÑÛ>∫=`ÑÛ>É~ì>ææQ?"·>ææQ?|0ì>:ô}?.>:ô}?|0ì>:ô}?±À=SQ?Å3)>TQ?åÿ=–M}?
+û0>–M}?åÿ=–M}?üΩè>ÁÕA?:w'>ÁÕA?∂rè>‰÷{?=w'>‰÷{?∆/?Ñ≠*?´I:?Ñ≠*?O?⁄›'?Xv?n!Ô>vÁ>n!Ô>Xv?n!Ô>´I:?Ñ≠*?∆/?Ñ≠*?â=1E->a¯=e˙ë=fú8>i˙ë=)9?∆M?(9?¬˛.?ñ~/?∆M?ñ~/?¡˛.?\Ïˆ>⁄J?Y‘>‚??¡ˆ>´á(?¨.‘>∞@(?‰Vñ>.E->‰Vñ>Òèò>oú8>.E->jú8>Òèò>Nr@?#N?Lr@?núp?òã)?#N?ñã)?múp?ËfØ>⁄›'?ÍfØ>—W}?}Á>⁄›'?~Á>—W}?ÍfØ>—W}?òã)?#N?ñã)?múp?Nr@?#N?Lr@?núp?Ö~ì>¨ú%?Ñ~ì>µ≠;?$·>¨ú%?$·>∂≠;?Ñ~ì>µ≠;?Ü€≈>¿˜?É€≈>√s?∞«Ë>i%?É€≈>i%?·=w#?·=å„8?¥(>w#?¥(>ã„8?·=å„8?Ü€≈>¿˜?∫'‘>à¸??*∫ˆ>M(J?^S‘>Ù†p?`≥‘>\np?*∫ˆ>P(J?`S‘>Ù†p?¬'‘>à¸??ÙY‘>‚??^Ïˆ>‹J?b≥‘>^np?=w'>™Ã{?:w'>´√A?úΩè>´√A?=w'>‰÷{?:w'>ÁÕA?»ç=ÁÕA?·=PN?Ó=å„x?¥(>PN?ﬂE/>ç„x?Ó=å„x?ùΩè>ÁÕA?∂rè>‰÷{?:w'>ÁÕA?=w'>‰÷{?û 0?Ñ≠*?:§:?Ñ≠*?O?Ÿ›'?Xv?j!Ô>|Á>j!Ô>Xv?j!Ô>:§:?Ñ≠*?û 0?Ñ≠*?â=.E->f¯=`˙ë=oú8>`˙ë=xJ
+=¨ú%?xJ
+=¥≠;?xJ
+=¨ú%?ÌŸ?i%?àë>ív$?àë>tæ:?àë>ív$?∞«Ë>i%?ÔŸ?i%?É~ì>¨ú%?~0ì>aÑÛ>~0ì>aÑÛ>0>`ÑÛ>xJ
+=ææQ?Ë∫=:ô}?Ë∫=:ô}?.>:ô}?àë>UQ?h∆ë>–M}?h∆ë>–M}?
+û0>–M}?–ç=ÁÕA?‡‰=‰÷{?#·>ææQ?àJ
+=ææQ?àJ
+=∂≠;?àJ
+=ææQ?µÇè>PN?¥Çè>å„8?µÇè>PN?É€≈>√s?–‰=©Ã{?»ç=¨√A?∂rè>©Ã{?∂rè>‰÷{?ùΩè>ÁÕA?–‰=‰÷{?ﬂE/>ç„x?¡è>ç„x?µÇè>PN?¡è>ç„x?–‰=‰÷{?∏ç=ÁÕA?À˛8?¿ØG?8o/?¿ØG?â=Ûèò>O?⁄›'?O?”W}?O?⁄›'?É~ì>¥≠;?É~ì>ææQ?É~ì>¥≠;?¥À=sæ:?±À=SQ?¥À=sæ:?ËfØ>‹›'?BØ>n!Ô>BØ>n!Ô>vÁ>n!Ô>§ºx>e˙ë=)9?¿ØG?ñ~/?øØG?â=Òèò>O?—W}?O?Ÿ›'?O?—W}?Ñ~ì>µ≠;?Ö~ì>ææQ?Ö~ì>ææQ?·=å„8?·=PN?·=PN?|Á>j!Ô>BØ>j!Ô>ËfØ>⁄›'?BØ>j!Ô>§ºx>`˙ë=xJ
+=¥≠;?xJ
+=ææQ?xJ
+=ææQ?àë>tæ:?àë>UQ?àë>UQ?àJ
+=∂≠;?àJ
+=¨ú%?àJ
+=¨ú%?¥Çè>å„8?µÇè>w#?µÇè>w#?Å€≈>i%?		}
+		*MESH_NUMTVFACES 160
+		*MESH_TFACELIST {
+              	 
+  
+ 	                             !    " # $ % & # ' ( ) * ) ( + , - - . +   / / 0  1 2 3 3 4 1 5 6 7 7 8 5 9  : ; <  = > ? @ A > B C D E F C G H I J I H   K K L  M  N O P    Q Q R  S 	 T U T 	 V W X Y X W Z [ \ ] \ [ ^ _ ` a ` _ b c d e d c f g h i h j k l m n m l o p q r q s t   ! ! u t v w ! x y z { z | ' } ( ~ -  - ~ Ä Z Å [ Å Z 0 Ç É Ñ É Ç 4 Ö 7 Ü 7 Ö á à â ä ã å ç é è ê ë ê í ì î ï ñ ï î m ó k ó m ò ô ö h õ h ú d ù b ù d û ü † ` ° ` †  ¢  £  §  • ! v ! • # ¶ % ß % ® ( © * ™ * ©  ´ ¨ ≠ Æ  > Ø ∞ ± ≤ > C ≥ ¥ µ ∂ C H ∑ ∏ ∏ J H π ∫ r ª r º u ! w ê Ω { æ { ø ¿ ( } â ¡ ¬ â à ¡ √ à ä å ƒ ≈ å ã ƒ ∆ ã ç « » ê … ê   ñ À ï Ã ï À  Õ  Œ  Õ  ,  +  , 	 S  œ  S  –  —  “  > ” ‘ ’ > % C ÷ ◊ ÿ C  Ÿ ⁄ € ‹  	  › › U 	 W ﬁ Y ﬂ Y ﬁ ] ~ \  \ ~ a ‡ ` ü ` ‡ i · h ‚ h „ ‰ Â r π r Ê Á Ë { ê { È Í Î h Ï h Ì ° Ó ` ^ ` Ó Ô   >  Ò Ú Û % C % Ù ı ˆ r q r ˜ ¯ ˘ { z { ˙ ¿ ˚ © ¿ © ( 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      Äø   Ä      Äø          Äø          Äø          Äø          Äø          Ä?          Ä?          Ä?          Ä?          Ä?          Ä?              Äø          Äø          Äø          Äø          Äø          Äø  Ä?          Ä?          Ä?          Ä?       Ä  Ä?          Ä?        úzu5õDµ  Ä?UU%+É¥  Ä?ß£4É¥  Ä?F¥áå4  Ä?ß£4É¥  Ä?UU%+É¥  Ä?  ÄøíÜ<*ëzu¥  ÄøíÜº)Çzu¥  ÄøíÜº)Çzu¥  Äø    szu¥  ÄøíÜº)Çzu¥  ÄøíÜº)Çzu¥          Äø          Äø          Äø          Äø          Äø          Äø  Ä?          Ä?8O‚3≠a°¥  Ä?Ob4ìa!¥  Ä?∑:¿≤n€6*  Ä?Ob4ìa!¥  Ä?8O‚3≠a°¥    õƒ¥  Ä?ˇ¶£5 |Â4  Ä?F¥áå4  Ä?»¶#4Âkò3  Ä?F¥áå4  Ä?ˇ¶£5 |Â4  Ä?  Äø          Äø          Äø          Äø          Äø          Äø        e∆™>Wq?   Äe∆™>Wq?   Äe∆™>Wq?   Äe∆™>Wq?    e∆™>Wq?    e∆™>Wq?    i∆™æWq?í¡£3i∆™æWq?í¡£3i∆™æWq?í¡£3h∆™æWq?    h∆™æWq?    h∆™æWq?    K∆™>Wqø    K∆™>Wqø    K∆™>Wqø    _∆™>Wqøª5d6_∆™>Wqøª5d6_∆™>Wqøª5d6L∆™æWqøw¡£≥L∆™æWqøw¡£≥L∆™æWqøw¡£≥O∆™æWqø   ÄO∆™æWqø   ÄO∆™æWqø   Ä©±“æ    ŒQiø©±“æ    ŒQiø©±“æ    ŒQiø´±“æ6M.4ÕQiø´±“æ6M.4ÕQiø´±“æ6M.4ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø∞Q—>    Ù†i?∞Q—>    Ù†i?∞Q—>    Ù†i?±Q—>   ÄÙ†i?±Q—>   ÄÙ†i?±Q—>   ÄÙ†i?©Q—æB{3ı†i?©Q—æB{3ı†i?©Q—æB{3ı†i?©Q—æ    ı†i?©Q—æ    ı†i?©Q—æ    ı†i?æígø∂C⁄æN^¥æígø∂C⁄æN^¥æígø∂C⁄æN^¥æígø¥C⁄æ†’q4æígø¥C⁄æ†’q4æígø¥C⁄æ†’q4#lµ™=åæ£5v?#lµ™=åæ£5v?#lµ™=åæ£5v?    π=åæ†5v?    π=åæ†5v?    π=åæ†5v?¬íg?§C⁄æ    ¬íg?§C⁄æ    ¬íg?§C⁄æ    ¡íg?®C⁄æ£’q4¡íg?®C⁄æ£’q4¡íg?®C⁄æ£’q4          Äø          Äø          Äø          Äø          Äø          Äø   Ä  ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      Ä?   Äîzu5  Ä?±zıµ  ¿*  Ä?Øzıµ  @+  Ä?Øzu∂  ¿*  Ä?Øzıµîzu5  Ä?±zıµ          Ä?òzu5\85  Ä?§zı4Ytì5  Ä?
+bD5ÚH5  Ä?§zı4Ytì5  Ä?òzu5\85  Ä?  Ä?–d,◊∏5  Ä?€¨4ml5  Ä?€¨4ml5  Ä?∏,5S{u¥  Ä?€¨4ml5  Ä?€¨4ml5       Ä  Äø    Ú,µ  Äø          Äøbƒ¥¬∞	µ  Äø          Äø    Ú,µ  Äø  Äø          Äø          Äø          Äø          Äø          Äø        ´™J¢É5  Ä?
+bD5ÚH5  Ä?    ,ˇ4  Ä?Få4rÚÖ5  Ä?    ,ˇ4  Ä?
+bD5ÚH5  Ä?  Ä?Qª)4¨r4  Ä?Ob4ìa!¥  Ä?∑:¿≤n€6*  Ä?∑:¿≤n€6*  Ä?    ÑÚ4  Ä?Qª)4¨r4  Ä?6»”¥      Ä?6»S¥Ör4  Ä?∑:¿≤n€6*          Äøbƒ¥¬∞	µ  Äøß£µ˘Srµ  Äø
+Fµà4Jµ  Äøß£µ˘Srµ  Äøbƒ¥¬∞	µ  Äø  Äø          Äø          Äø        e∆™>Wq?    e∆™>Wq?    e∆™>Wq?    f∆™>Wq?    f∆™>Wq?    f∆™>Wq?    j∆™æWq?∫¡#¥j∆™æWq?∫¡#¥j∆™æWq?∫¡#¥i∆™æWq?    i∆™æWq?    i∆™æWq?    8∆™>Wqø·/]68∆™>Wqø·/]68∆™>Wqø·/]6_∆™>Wqøª5d∂_∆™>Wqøª5d∂_∆™>Wqøª5d∂ ∆™æWqø∆kg6 ∆™æWqø∆kg6 ∆™æWqø∆kg6i∆™æWqø    i∆™æWqø    i∆™æWqø    ©±“ævlÆ5ŒQi?©±“ævlÆ5ŒQi?©±“ævlÆ5ŒQi?≠±“>e›ú5ÕQi?≠±“>e›ú5ÕQi?≠±“>e›ú5ÕQi?£Q—>êùµ˜†iø£Q—>êùµ˜†iø£Q—>êùµ˜†iø∞Q—>    Ù†iø∞Q—>    Ù†iø∞Q—>    Ù†iøßQ—æÔﬂ§µˆ†iøßQ—æÔﬂ§µˆ†iøßQ—æÔﬂ§µˆ†iøûQ—æ    ¯†iøûQ—æ    ¯†iøûQ—æ    ¯†iø¿ígø´C⁄æ*K—5¿ígø´C⁄æ*K—5¿ígø´C⁄æ*K—5»ígøäC⁄æ5Ôc∂»ígøäC⁄æ5Ôc∂»ígøäC⁄æ5Ôc∂    ú=åæ•5vø    ú=åæ•5vø    ú=åæ•5vø    ù=åæ•5vø    ù=åæ•5vø    ù=åæ•5vø«íg?èC⁄æÆä¶5«íg?èC⁄æÆä¶5«íg?èC⁄æÆä¶5∑íg?“C⁄æÅÔc∂∑íg?“C⁄æÅÔc∂∑íg?“C⁄æÅÔc∂       Ä  Ä?       Ä  Ä?       Ä  Ä?          Ä?          Ä?          Ä?          Äø          Äø          Äø          Äø          Äø          Äø  Ä?8O‚3≠a°¥  Ä?»S¥Ör¥  Ä?∑:¿≤n€6*  Ä?6»”¥      Ä?∑:¿≤n€6*  Ä?»S¥Ör¥ˇ¶£5 |Â4  Ä?zu5a?µ  Ä?»¶#4Âkò3  Ä?úzı4aøµ  Ä?»¶#4Âkò3  Ä?zu5a?µ  Ä?  Äø          Äø          Äø          Äø          Äø          Äø        ©±“æ    ŒQiø©±“æ    ŒQiø©±“æ    ŒQiø™±“æt±¥ŒQiø™±“æt±¥ŒQiø™±“æt±¥ŒQiø≠±“>kÇ3ÕQiø≠±“>kÇ3ÕQiø≠±“>kÇ3ÕQiø≠±“>    ÕQiø≠±“>    ÕQiø≠±“>    ÕQiø†Q—>§ß.5˜†i?†Q—>§ß.5˜†i?†Q—>§ß.5˜†i?±Q—>_F¡µÙ†i?±Q—>_F¡µÙ†i?±Q—>_F¡µÙ†i?©Q—æ    ı†i?©Q—æ    ı†i?©Q—æ    ı†i?©Q—æ    ˆ†i?©Q—æ    ˆ†i?©Q—æ    ˆ†i?    øµ5  Ä?    aø5  Ä?Få4rÚÖ5  Ä?    aø5  Ä?Få4rÚÖ5  Ä?    aø5  Ä?  Ä?    ÑÚ4  Ä?∑:¿≤n€6*  Ä?6»S¥Ör4    Ú,µ  Äø          Äø
+Fµà4Jµ  Äø          Äø
+Fµà4Jµ  Äø          Äø  Äø       Ä  Äø          Äø        ©±“æ    ŒQi?©±“æ    ŒQi?©±“æ    ŒQi?™±“æt±¥ŒQi?™±“æt±¥ŒQi?™±“æt±¥ŒQi?Ω±“æFM.4…Qi?Ω±“æFM.4…Qi?Ω±“æFM.4…Qi?∏±“>tlÆ5 Qi?∏±“>tlÆ5 Qi?∏±“>tlÆ5 Qi?Æ±“>   ÄÕQi?Æ±“>   ÄÕQi?Æ±“>   ÄÕQi?ñ±“>    “Qi?ñ±“>    “Qi?ñ±“>    “Qi?∞Q—>    Ù†iø∞Q—>    Ù†iø∞Q—>    Ù†iø∞Q—>G{≥Ù†iø∞Q—>G{≥Ù†iø∞Q—>G{≥Ù†iøùQ—æ    ¯†iøùQ—æ    ¯†iøùQ—æ    ¯†iøùQ—æ   Ä¯†iøùQ—æ   Ä¯†iøùQ—æ   Ä¯†iø      Äø          Äø          Äø          Äø          Äø          Äø          Ä?          Ä?          Ä?          Ä?          Ä?          Ä?              Äø          Äø          Äø          Äø          Äø          ÄøUU%+É¥  Ä?}zı¥õƒ¥  Ä?F¥áå4  Ä?    õƒ¥  Ä?F¥áå4  Ä?}zı¥õƒ¥  Ä?          Äø          Äø          Äø          Äø          Äø          Äø»¶#4Âkò3  Ä?ß£µâ25  Ä?F¥áå4  Ä?ß£4É¥  Ä?F¥áå4  Ä?ß£µâ25  Ä?@l5©=åæ£5v?@l5©=åæ£5v?@l5©=åæ£5v?    π=åæ†5v?    π=åæ†5v?    π=åæ†5v?          Äø          Äø          Äø          Äø          Äø          Äø      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑  @+  Ä?Øzu∂àzuµ  Ä?≠zıµ  ¿*  Ä?Øzıµ   Ä  Ä?      ¿*  Ä?Øzıµàzuµ  Ä?≠zıµ
+bD5ÚH5  Ä?´™J¢É5  Ä?§zı4Ytì5  Ä?zÜ<,õƒ5  Ä?§zı4Ytì5  Ä?´™J¢É5  Ä?bƒ¥¬∞	µ  Äø          Äø          Äø          Äø          Äø          Äø
+bD5ÚH5  Ä?òzu5\85  Ä?Få4rÚÖ5  Ä?    øµ5  Ä?Få4rÚÖ5  Ä?òzu5\85  Ä?bƒ¥¬∞	µ  Äø    Ú,µ  Äø
+Fµà4Jµ  Äø    Ú,µ  Äø
+Fµà4Jµ  Äø    Ú,µ  Äø   Äú=åæ•5vø   Äú=åæ•5vø   Äú=åæ•5vø    ù=åæ§5vø    ù=åæ§5vø    ù=åæ§5vø          Ä?          Ä?          Ä?          Ä?          Ä?          Ä?          Äø          Äø          Äø          Äø          Äø          Äøúzı4aøµ  Ä?òzı¥aø¥  Ä?»¶#4Âkò3  Ä?ß£µâ25  Ä?»¶#4Âkò3  Ä?òzı¥aø¥  Ä?    aø5  Ä?    aø5  Ä?Få4rÚÖ5  Ä?    ,ˇ4  Ä?Få4rÚÖ5  Ä?    aø5  Ä?          Äøízuµa?µ  Äø
+Fµà4Jµ  Äøß£µ˘Srµ  Äø
+Fµà4Jµ  Äøízuµa?µ  Äø  Äø          Äø          Äø          Äø   Ä      Äø   Ä      Äø   Ä    		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 0
+}
+*HELPEROBJECT {
+	*NODE_ID "02c6eef8"
+	*NODE_PARENTID "02c66d60"
+	*NODE_NAME "bumpfull04"
+	*NODE_PARENT "bumppart02"
+	*HELPER_CLASS "Dummy"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumpfull04"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00000000	1.00000000	0.00000000
+		*TM_ROW1 -1.00000000	0.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.40234392	0.00002281	0.01924662
+		*TM_POS 0.40234392	0.00002281	0.01924662
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 1.57079637
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN 0.34632026	-0.08892037	-0.01186798
+	*BOUNDINGBOX_MAX 0.45661248	0.08896600	0.04608516
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "02c6f0b0"
+	*NODE_PARENTID "02c6eef8"
+	*NODE_NAME "bumprubber04"
+	*NODE_PARENT "bumpfull04"
+	*HELPER_CLASS "Dummy"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumprubber04"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00000000	1.00000000	0.00000000
+		*TM_ROW1 -1.00000000	0.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.40233985	0.00002281	0.01579516
+		*TM_POS 0.40233985	0.00002281	0.01579516
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 1.57079637
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN 0.34632026	-0.08892037	-0.01186796
+	*BOUNDINGBOX_MAX 0.45661248	0.08896600	0.04608518
+	*HELPER_END
+}
+*GEOMOBJECT {
+	*NODE_ID "05f53290"
+	*NODE_PARENTID "02c6f0b0"
+	*NODE_NAME "bump09"
+	*NODE_PARENT "bumprubber04"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bump09"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00000000	1.00000000	0.00000000
+		*TM_ROW1 -1.00000000	0.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.40242613	0.04820287	0.03979862
+		*TM_POS 0.40242613	0.04820287	0.03979862
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 1.57079637
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 12
+		*MESH_NUMFACES 16
+		*MESH_VERTEX_LIST {
+^:∑>æåÚª≠2∂=ƒ‰>ïﬂ˜ªŒ3∂=Û®Ω>ƒi =®1∂=«kﬁ>:Ô=x2∂=0ƒ‰>Ò˜ª]&:=Ç:∑>EûÚª$:=©Ω>ìg = ":=Èkﬁ>
+Ì=¥#:=6ˇÕ>6ıª=3∂=YˇÕ>ëGıª=%:=]
+Œ>, =2∂=Ä
+Œ>N* =Ô":=		}
+		*MESH_FACE_LIST {
+      	       
+    
+                    
+                 	    	      
+    
+           
+    		}
+		*MESH_NUMTVERTEX 34
+		*MESH_TVERTLIST {
+7èÈ>î Ë=7èÈ>Èû>X•&?î Ë=W•&?Èû>‹Í>§€=h&?§€=‹Í>eOù>h&?eOù>[&?}ú>6‡Í>}ú>[&?°ÃÍ=9‡Í>ùÃÍ=øÑ>8SÅ=iú8>8SÅ=s>∆3c>iú8>∆3c>iú8>8SÅ=s¶Í>ŸÎ=ı%?ŸÎ=s¶Í>˜9ú>ı%?˜9ú>ı%?ŸÎ=7èÈ>Bˇ„=X•&?Aˇ„=7èÈ>Bˇ„=h&?§€=‹Í>§€=h&?§€=iú8>8SÅ=©ÆŒ=8SÅ=tI¸=∆3c>tI¸=∆3c>iú8>∆3c>iú8>8SÅ=		}
+		*MESH_NUMTVFACES 16
+		*MESH_TFACELIST {
+              	 
+  
+ 	                               ! 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+       Ä  Ä?w≈ü®9g4  Ä?          Ä?w≈ü®;Á4  Ä?          Ä?w≈ü®9g4  Ä?          Äø          Äø          Äø          Äø          Äø          Äø»´≥ÌHw?ËtÑæŒ´≥ÌHw?ËtÑæŒ´≥ÌHw?ËtÑæ’´≥ÌHw?ÈtÑæŒ´≥ÌHw?ËtÑæŒ´≥ÌHw?ËtÑæ  Ä?          Ä?≤’p3c%≥  Ä?          Ä?≤’3Ôÿ•®  Ä?          Ä?≤’p3c%≥   ÄÓHwø·tÑæ…+3ÓHwø‚tÑæ…+3ÓHwø‚tÑæ…´3ÓHwø„tÑæ…+3ÓHwø‚tÑæ…+3ÓHwø‚tÑæw≈ü®9g4  Ä?3®Ô®,C-5  Ä?w≈ü®;Á4  Ä?    ,C-5  Ä?w≈ü®;Á4  Ä?3®Ô®,C-5  Ä?          Äø          Äø          Äø       Ä  Äø          Äø          Äø  Ä?≤’p3c%≥  Ä?    
+c%¥  Ä?≤’3c•≥  Ä?≤’3c•≥  Ä?≤’3Ôÿ•®  Ä?≤’p3c%≥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*TM_ANIMATION {
+		*NODE_NAME "bump09"
+		*CONTROL_SCALE_TRACK {
+			*CONTROL_SCALE_SAMPLE 0	1.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8160	1.20000005	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8320	1.39999998	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8480	1.60000026	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8640	1.80000007	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8800	2.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8960	2.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9120	2.39999986	0.99999988	0.99999988 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9280	2.60000014	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9440	2.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9600	3.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9760	3.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9920	3.40000010	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10080	3.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10240	3.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10400	4.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10560	4.20000029	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10720	4.40000010	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10880	4.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11040	4.79999971	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11200	5.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+		}
+	}
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	0.00000000
+			*CONTROL_FLOAT_KEY 160	0.02000000
+			*CONTROL_FLOAT_KEY 320	0.04000000
+			*CONTROL_FLOAT_KEY 480	0.06000000
+			*CONTROL_FLOAT_KEY 640	0.08000001
+			*CONTROL_FLOAT_KEY 800	0.10000001
+			*CONTROL_FLOAT_KEY 960	0.12000000
+			*CONTROL_FLOAT_KEY 1120	0.14000003
+			*CONTROL_FLOAT_KEY 1280	0.16000001
+			*CONTROL_FLOAT_KEY 1440	0.18000002
+			*CONTROL_FLOAT_KEY 1600	0.20000002
+			*CONTROL_FLOAT_KEY 1760	0.21999998
+			*CONTROL_FLOAT_KEY 1920	0.24000001
+			*CONTROL_FLOAT_KEY 2080	0.26000002
+			*CONTROL_FLOAT_KEY 2240	0.28000003
+			*CONTROL_FLOAT_KEY 2400	0.30000001
+			*CONTROL_FLOAT_KEY 2560	0.32000002
+			*CONTROL_FLOAT_KEY 2720	0.33999997
+			*CONTROL_FLOAT_KEY 2880	0.36000001
+			*CONTROL_FLOAT_KEY 3040	0.38000003
+			*CONTROL_FLOAT_KEY 3200	0.40000004
+			*CONTROL_FLOAT_KEY 3360	0.42000002
+			*CONTROL_FLOAT_KEY 3520	0.44000000
+			*CONTROL_FLOAT_KEY 3680	0.45999998
+			*CONTROL_FLOAT_KEY 3840	0.47999999
+			*CONTROL_FLOAT_KEY 4000	0.50000000
+			*CONTROL_FLOAT_KEY 4160	0.51999998
+			*CONTROL_FLOAT_KEY 4320	0.54000002
+			*CONTROL_FLOAT_KEY 4480	0.56000000
+			*CONTROL_FLOAT_KEY 4640	0.57999992
+			*CONTROL_FLOAT_KEY 4800	0.59999996
+			*CONTROL_FLOAT_KEY 4960	0.62000000
+			*CONTROL_FLOAT_KEY 5120	0.63999999
+			*CONTROL_FLOAT_KEY 5280	0.66000003
+			*CONTROL_FLOAT_KEY 5440	0.68000001
+			*CONTROL_FLOAT_KEY 5600	0.69999999
+			*CONTROL_FLOAT_KEY 5760	0.71999997
+			*CONTROL_FLOAT_KEY 5920	0.74000001
+			*CONTROL_FLOAT_KEY 6080	0.75999999
+			*CONTROL_FLOAT_KEY 6240	0.77999991
+			*CONTROL_FLOAT_KEY 6400	0.80000001
+			*CONTROL_FLOAT_KEY 6560	0.81999999
+			*CONTROL_FLOAT_KEY 6720	0.83999997
+			*CONTROL_FLOAT_KEY 6880	0.85999995
+			*CONTROL_FLOAT_KEY 7040	0.88000000
+			*CONTROL_FLOAT_KEY 7200	0.89999998
+			*CONTROL_FLOAT_KEY 7360	0.92000002
+			*CONTROL_FLOAT_KEY 7520	0.94000000
+			*CONTROL_FLOAT_KEY 7680	0.95999998
+			*CONTROL_FLOAT_KEY 7840	0.98000002
+			*CONTROL_FLOAT_KEY 8000	1.00000000
+			*CONTROL_FLOAT_KEY 8001	1.00000000
+		}
+	}
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "02e32290"
+	*NODE_PARENTID "02c6f0b0"
+	*NODE_NAME "bump10"
+	*NODE_PARENT "bumprubber04"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bump10"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00000000	1.00000000	0.00000000
+		*TM_ROW1 -1.00000000	0.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.40242613	-0.04781585	0.03979862
+		*TM_POS 0.40242613	-0.04781585	0.03979862
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 1.57079637
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 12
+		*MESH_NUMFACES 16
+		*MESH_VERTEX_LIST {
+Ó:∑>d‘Úªﬂ∂Ωùƒ‰>:'¯ªæ∂ΩÑ©Ω>œ` =‚∂ΩVlﬁ>>Ê=∂Ωyƒ‰>¥¯ªVÚ9ΩÀ:∑>û¬ÚªãÙ9Ωa©Ω>c =üˆ9Ω2lﬁ>oË=ı9Ω≈ˇÕ>∞}ıªN∂Ω¢ˇÕ>(lıªkÛ9ΩÌ
+Œ>ä# ={∂Ω…
+Œ>ª% =œı9Ω		}
+		*MESH_FACE_LIST {
+      	      
+      
+                   
+               	          
+          
+           		}
+		*MESH_NUMTVERTEX 33
+		*MESH_TVERTLIST {
+5èÈ>î Ë=f'?î Ë=9èÈ>Èû>f'?Èû>∂â&?gñ‡=∂â&? åû>√Í>gñ‡=√Í> åû>œﬂÎ>}ú>œﬂÎ>òÃÍ=›⁄&?}ú>›⁄&?òÃÍ=øÑ>8SÅ=s>∆3c>iú8>8SÅ=iú8>∆3c>iú8>8SÅ=¥nÈ>2≤ú>¥nÈ>≠äÚ=TÌ%?2≤ú>TÌ%?≠äÚ=TÌ%?2≤ú>f'?Aˇ„=9èÈ>Bˇ„=∂â&?gñ‡=√Í>gñ‡=∂â&?gñ‡=iú8>∆3c>tI¸=∆3c>iú8>8SÅ=©ÆŒ=8SÅ=iú8>8SÅ=tI¸=∆3c>		}
+		*MESH_NUMTVFACES 16
+		*MESH_TFACELIST {
+              	 
+  
+ 	                                		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+÷15F®Ô)  Ä?÷±41C≠4  Ä?’14bÚ5  Ä?KÄ©-C-5  Ä?’14bÚ5  Ä?÷±41C≠4  Ä?„1µ      Äø,l¥yé µ  Äø‚±¥π’¥  Äø/^)µ’pµ  Äø‚±¥π’¥  Äø,l¥yé µ  Äø77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ  Äø©ﬁﬂ)c%4  Äø∫’3c•3  Äø%á2<ù92  Äø≥’3„ˇÈ®  Äø%á2<ù92  Äø∫’3c•3    ÌHwøÎtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæKÄ©-C-5  Ä?D®Ô®+C-5  Ä?’14bÚ5  Ä?    +C-5  Ä?’14bÚ5  Ä?D®Ô®+C-5  Ä?,l¥yé µ  Äø·è&)≤’pµ  Äø/^)µ’pµ  Äø    ≤’pµ  Äø/^)µ’pµ  Äø·è&)≤’pµ  Äø  Äø≥’3„ˇÈ®  Äø.C≠≥r˜m≥  Äø%á2<ù92  Äø.C-¥r˜Ì≥  Äø%á2<ù92  Äø.C≠≥r˜m≥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*TM_ANIMATION {
+		*NODE_NAME "bump10"
+		*CONTROL_SCALE_TRACK {
+			*CONTROL_SCALE_SAMPLE 0	1.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8160	1.20000005	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8320	1.39999998	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8480	1.60000026	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8640	1.80000007	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8800	2.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8960	2.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9120	2.39999986	0.99999988	0.99999988 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9280	2.60000014	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9440	2.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9600	3.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9760	3.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9920	3.40000010	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10080	3.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10240	3.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10400	4.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10560	4.20000029	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10720	4.40000010	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10880	4.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11040	4.79999971	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11200	5.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+		}
+	}
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	0.00000000
+			*CONTROL_FLOAT_KEY 160	0.02000000
+			*CONTROL_FLOAT_KEY 320	0.04000000
+			*CONTROL_FLOAT_KEY 480	0.06000000
+			*CONTROL_FLOAT_KEY 640	0.08000001
+			*CONTROL_FLOAT_KEY 800	0.10000001
+			*CONTROL_FLOAT_KEY 960	0.12000000
+			*CONTROL_FLOAT_KEY 1120	0.14000003
+			*CONTROL_FLOAT_KEY 1280	0.16000001
+			*CONTROL_FLOAT_KEY 1440	0.18000002
+			*CONTROL_FLOAT_KEY 1600	0.20000002
+			*CONTROL_FLOAT_KEY 1760	0.21999998
+			*CONTROL_FLOAT_KEY 1920	0.24000001
+			*CONTROL_FLOAT_KEY 2080	0.26000002
+			*CONTROL_FLOAT_KEY 2240	0.28000003
+			*CONTROL_FLOAT_KEY 2400	0.30000001
+			*CONTROL_FLOAT_KEY 2560	0.32000002
+			*CONTROL_FLOAT_KEY 2720	0.33999997
+			*CONTROL_FLOAT_KEY 2880	0.36000001
+			*CONTROL_FLOAT_KEY 3040	0.38000003
+			*CONTROL_FLOAT_KEY 3200	0.40000004
+			*CONTROL_FLOAT_KEY 3360	0.42000002
+			*CONTROL_FLOAT_KEY 3520	0.44000000
+			*CONTROL_FLOAT_KEY 3680	0.45999998
+			*CONTROL_FLOAT_KEY 3840	0.47999999
+			*CONTROL_FLOAT_KEY 4000	0.50000000
+			*CONTROL_FLOAT_KEY 4160	0.51999998
+			*CONTROL_FLOAT_KEY 4320	0.54000002
+			*CONTROL_FLOAT_KEY 4480	0.56000000
+			*CONTROL_FLOAT_KEY 4640	0.57999992
+			*CONTROL_FLOAT_KEY 4800	0.59999996
+			*CONTROL_FLOAT_KEY 4960	0.62000000
+			*CONTROL_FLOAT_KEY 5120	0.63999999
+			*CONTROL_FLOAT_KEY 5280	0.66000003
+			*CONTROL_FLOAT_KEY 5440	0.68000001
+			*CONTROL_FLOAT_KEY 5600	0.69999999
+			*CONTROL_FLOAT_KEY 5760	0.71999997
+			*CONTROL_FLOAT_KEY 5920	0.74000001
+			*CONTROL_FLOAT_KEY 6080	0.75999999
+			*CONTROL_FLOAT_KEY 6240	0.77999991
+			*CONTROL_FLOAT_KEY 6400	0.80000001
+			*CONTROL_FLOAT_KEY 6560	0.81999999
+			*CONTROL_FLOAT_KEY 6720	0.83999997
+			*CONTROL_FLOAT_KEY 6880	0.85999995
+			*CONTROL_FLOAT_KEY 7040	0.88000000
+			*CONTROL_FLOAT_KEY 7200	0.89999998
+			*CONTROL_FLOAT_KEY 7360	0.92000002
+			*CONTROL_FLOAT_KEY 7520	0.94000000
+			*CONTROL_FLOAT_KEY 7680	0.95999998
+			*CONTROL_FLOAT_KEY 7840	0.98000002
+			*CONTROL_FLOAT_KEY 8000	1.00000000
+			*CONTROL_FLOAT_KEY 8001	1.00000000
+		}
+	}
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "03c68008"
+	*NODE_PARENTID "02c6f0b0"
+	*NODE_NAME "bumpbeam01"
+	*NODE_PARENT "bumprubber04"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+		nolight
+		texvel 0 0.1 0
+	}
+	*NODE_TM {
+		*NODE_NAME "bumpbeam01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00000000	1.00000000	0.00000000
+		*TM_ROW1 -1.24000001	0.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.24000001
+		*TM_ROW3 0.40151921	0.00002266	0.01712267
+		*TM_POS 0.40151921	0.00002266	0.01712267
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 1.57079637
+		*TM_SCALE 1.00000000	1.24000001	1.24000001
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 18
+		*MESH_NUMFACES 32
+		*MESH_VERTEX_LIST {
+„P±>y¯>ºÆ2∂=j»È>jEBºŒ3∂=•Jπ>—√<=®1∂=PÍ·>·+<=y2∂=√»È>°[BºŸ‰Ω7;Q±>∞?º∂ÿΩ7ˇJπ>Dæ<=Ñ—Ω7®Í·>S&<=^÷Ω7¶åÕ>ﬂû@º>3∂=ˇåÕ>µ@º«ﬁΩ7{öÕ>ÿw<=2∂=”öÕ>Kr<=Ò”Ω7îQ±>Ê$?ºﬂ∂Ω…È>ÿqBºΩ∂ΩXKπ>∂∏<=‚∂ΩÎ·>º <=∂ΩWçÕ>LÀ@ºM∂Ω,õÕ>Ωl<=z∂Ω		}
+		*MESH_FACE_LIST {
+      	       
+    
+                    
+                 	    	      
+    
+           
+         	                                             	                              		}
+		*MESH_NUMTVERTEX 67
+		*MESH_TVERTLIST {
+7èÈ>î Ë=7èÈ>Èû>X•&?î Ë=W•&?Èû>‹Í>§€=h&?§€=‹Í>eOù>h&?eOù>[&?}ú>6‡Í>}ú>[&?°ÃÍ=9‡Í>ùÃÍ=øÑ>8SÅ=iú8>8SÅ=s>∆3c>iú8>∆3c>iú8>8SÅ=s¶Í>ŸÎ=ı%?ŸÎ=s¶Í>˜9ú>ı%?˜9ú>ı%?ŸÎ=7èÈ>Bˇ„=X•&?Aˇ„=7èÈ>Bˇ„=h&?§€=‹Í>§€=h&?§€=iú8>8SÅ=©ÆŒ=8SÅ=tI¸=∆3c>tI¸=∆3c>iú8>∆3c>iú8>8SÅ=5èÈ>î Ë=f'?î Ë=9èÈ>Èû>f'?Èû>∂â&?gñ‡=∂â&? åû>√Í>gñ‡=√Í> åû>œﬂÎ>}ú>œﬂÎ>òÃÍ=›⁄&?}ú>›⁄&?òÃÍ=øÑ>8SÅ=s>∆3c>iú8>8SÅ=iú8>∆3c>iú8>8SÅ=¥nÈ>2≤ú>¥nÈ>≠äÚ=TÌ%?2≤ú>TÌ%?≠äÚ=TÌ%?2≤ú>f'?Aˇ„=9èÈ>Bˇ„=∂â&?gñ‡=√Í>gñ‡=∂â&?gñ‡=iú8>∆3c>tI¸=∆3c>iú8>8SÅ=©ÆŒ=8SÅ=iú8>8SÅ=tI¸=∆3c>		}
+		*MESH_NUMTVFACES 32
+		*MESH_TFACELIST {
+              	 
+  
+ 	                               ! " # $ % $ # & ' ( ) ( ' * + , - , + . / 0 1 2 / 3 4 5 6 7 4 % 8 $ 9 $ 8 ' : ) ; ) < = > ? @ A B 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+       Ä  Ä?˚Yú(9g4  Ä?          Ä?mü;)3Íœ4  Ä?          Ä?˚Yú(9g4  Ä?          Äø          Äø          Äøúä≥à™@¥  Äø          Äø          Äø)]ß3ÌHw?ËtÑæZ{3ÏHw?ÔtÑæ:\ß2ÌHw?ÎtÑæ Äe´ÏHw?ÔtÑæ:\ß2ÌHw?ÎtÑæZ{3ÏHw?ÔtÑæ  Ä?          Ä?≤’p3c%≥  Ä?          Ä?≤’3Ôÿ•®  Ä?          Ä?≤’p3c%≥Ã˚≥ÓHwø„tÑæ˚≥ÓHwø„tÑæ$e¥ÓHwø‰tÑæ˚≥ÓHwø„tÑæ$e¥ÓHwø‰tÑæ˚≥ÓHwø„tÑæ˚Yú(9g4  Ä?îí)+C-5  Ä?mü;)3Íœ4  Ä?ÊØ),C-5  Ä?mü;)3Íœ4  Ä?îí)+C-5  Ä?úä≥à™@¥  ÄøÁ≥Ü6,  Äø          Äø       Ä  Äø          ÄøÁ≥Ü6,  Äø  Ä?≤’p3c%≥  Ä?    
+c%¥  Ä?≤’3c•≥  Ä?≤’3c•≥  Ä?≤’3Ôÿ•®  Ä?≤’p3c%≥          Ä?          Ä?™Ê/),C≠4  Ä?mü;)3Íœ4  Ä?™Ê/),C≠4  Ä?          Ä?          Äøˇ"©wé†¥  Äø          Äøúä≥à™@¥  Äø          Äøˇ"©wé†¥  Äø9]'4ÎHw?ˆtÑæL4—3ÏHw?ÚtÑæZ{3ÏHw?ÔtÑæ Äe´ÏHw?ÔtÑæZ{3ÏHw?ÔtÑæL4—3ÏHw?ÚtÑæ  Äø©ﬁﬂ)c%4  Äø∫’3c•3  Äø%á2<ù92  Äø≥’3M˜È®  Äø%á2<ù92  Äø∫’3c•3Ã˚≥ÓHwø„tÑæ$e¥ÓHwø‰tÑæπD?¥ÓHwøÊtÑæ_ÅÄ¥ÌHwøÍtÑæπD?¥ÓHwøÊtÑæ$e¥ÓHwø‰tÑæmü;)3Íœ4  Ä?ÊØ),C-5  Ä?™Ê/),C≠4  Ä?ÊØ),C-5  Ä?™Ê/),C≠4  Ä?ÊØ),C-5  Ä?ˇ"©wé†¥  ÄøC-¥*’¥  Äøúä≥à™@¥  ÄøÁ≥Ü6,  Äøúä≥à™@¥  ÄøC-¥*’¥  Äø  Äø≥’3M˜È®  Äø/C≠≥r˜m≥  Äø%á2<ù92  Äø/C-¥r˜Ì≥  Äø%á2<ù92  Äø/C≠≥r˜m≥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	1.00000000
+			*CONTROL_FLOAT_KEY 160	0.98000008
+			*CONTROL_FLOAT_KEY 320	0.95999992
+			*CONTROL_FLOAT_KEY 480	0.94000000
+			*CONTROL_FLOAT_KEY 640	0.92000002
+			*CONTROL_FLOAT_KEY 800	0.89999992
+			*CONTROL_FLOAT_KEY 960	0.88000000
+			*CONTROL_FLOAT_KEY 1120	0.86000001
+			*CONTROL_FLOAT_KEY 1280	0.84000009
+			*CONTROL_FLOAT_KEY 1440	0.81999999
+			*CONTROL_FLOAT_KEY 1600	0.80000001
+			*CONTROL_FLOAT_KEY 1760	0.77999991
+			*CONTROL_FLOAT_KEY 1920	0.75999993
+			*CONTROL_FLOAT_KEY 2080	0.74000001
+			*CONTROL_FLOAT_KEY 2240	0.72000009
+			*CONTROL_FLOAT_KEY 2400	0.69999999
+			*CONTROL_FLOAT_KEY 2560	0.68000001
+			*CONTROL_FLOAT_KEY 2720	0.65999991
+			*CONTROL_FLOAT_KEY 2880	0.63999999
+			*CONTROL_FLOAT_KEY 3040	0.62000000
+			*CONTROL_FLOAT_KEY 3200	0.60000008
+			*CONTROL_FLOAT_KEY 3360	0.58000010
+			*CONTROL_FLOAT_KEY 3520	0.56000000
+			*CONTROL_FLOAT_KEY 3680	0.53999990
+			*CONTROL_FLOAT_KEY 3840	0.51999998
+			*CONTROL_FLOAT_KEY 4000	0.50000000
+			*CONTROL_FLOAT_KEY 4160	0.48000002
+			*CONTROL_FLOAT_KEY 4320	0.45999998
+			*CONTROL_FLOAT_KEY 4480	0.44000000
+			*CONTROL_FLOAT_KEY 4640	0.42000002
+			*CONTROL_FLOAT_KEY 4800	0.39999998
+			*CONTROL_FLOAT_KEY 4960	0.38000000
+			*CONTROL_FLOAT_KEY 5120	0.36000001
+			*CONTROL_FLOAT_KEY 5280	0.33999997
+			*CONTROL_FLOAT_KEY 5440	0.31999999
+			*CONTROL_FLOAT_KEY 5600	0.30000001
+			*CONTROL_FLOAT_KEY 5760	0.27999997
+			*CONTROL_FLOAT_KEY 5920	0.26000002
+			*CONTROL_FLOAT_KEY 6080	0.24000002
+			*CONTROL_FLOAT_KEY 6240	0.22000004
+			*CONTROL_FLOAT_KEY 6400	0.20000000
+			*CONTROL_FLOAT_KEY 6560	0.18000002
+			*CONTROL_FLOAT_KEY 6720	0.16000004
+			*CONTROL_FLOAT_KEY 6880	0.14000000
+			*CONTROL_FLOAT_KEY 7040	0.12000001
+			*CONTROL_FLOAT_KEY 7200	0.10000003
+			*CONTROL_FLOAT_KEY 7360	0.07999999
+			*CONTROL_FLOAT_KEY 7520	0.06000001
+			*CONTROL_FLOAT_KEY 7680	0.04000003
+			*CONTROL_FLOAT_KEY 7840	0.01999998
+			*CONTROL_FLOAT_KEY 8000	0.00000000
+			*CONTROL_FLOAT_KEY 8001	0.00000000
+		}
+	}
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "03c689d0"
+	*NODE_PARENTID "02c6eef8"
+	*NODE_NAME "bumper15"
+	*NODE_PARENT "bumpfull04"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumper15"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -1.00000000	-0.00000017	0.00000000
+		*TM_ROW1 0.00000017	-1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.40242613	0.00002147	0.03979862
+		*TM_POS 0.40242613	0.00002147	0.03979862
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 3.14159274
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 30
+		*MESH_NUMFACES 48
+		*MESH_VERTEX_LIST {
+0ƒ‰>÷Ò˜ªa&:=Ç:∑>ÛûÚª $:=©Ω>zg =$":=Íkﬁ>Ï=∏#:=Vƒ‰>"¯ªåW–7L#·>‚<=!Vπ7ß:∑>±Úªì[æ7Kı∫>π≠<=¡A™7yƒ‰>o¯ªUÚ9ΩÃ:∑>O√ÚªäÙ9Ωa©Ω>Ób =ûˆ9Ω4lﬁ>UË= ı9Ω5È>}√Æª{&:=ëÓ≤>o®ªÃ#:=%ı∫>∞<=©!:=)#·>,!<=Ä#:=[È>÷Æªá"—7µÓ≤>eÅ®ªs¿ª7È>SËÆª<Ú9Ω⁄Ó≤>ì®ªﬁÙ9Ωoı∫>o´<=˜9Ωr#·>ô<=6ı9ΩYˇÕ>FHıªA%:=Å
+Œ>5* =Ú":=~ˇÕ>ìZıª2Y«7'Œ>õh<=ö":=LŒ>Qf<=ßÃ±7£ˇÕ>ﬁlıªjÛ9Ω 
+Œ>¢% =Œı9ΩqŒ>d<=(ˆ9Ω		}
+		*MESH_FACE_LIST {
+                                                                                                                                      
+       
+   	 
+      	              	                                        	      	                                 		}
+		*MESH_NUMTVERTEX 68
+		*MESH_TVERTLIST {
+X•&?Aˇ„=Ñ-Í>Bˇ„=W•&?Èû>Ñ-Í>Èû>Z?‡√|?ôê6?ﬁ√|?Z?`ﬂG?ôê6?`ﬂG?êeà>ï>l]5>ï>íeà>XÅÊ=l]5>\ÅÊ='`_?˙D:?&`_?y~\?oES?˙D:?oES?y~\?f'?Aˇ„=f'?Èû>&|N?ﬁ√|?(|N?`ﬂG?lﬂ≥=ï>hﬂ≥=\ÅÊ='`_?{?oES?z?•A!?áæ?§A!?Ù¶7?∞î?Ù¶7?∞î?ï÷?£A!?aèO?
+ï!?Å∑w?áÖ?ı¶w?Æî?RwO?&§?±Öí>Nóı>µÖí>Nóı>pG>&§?jG>¬^Ó>T∫˙=&§?H∫˙=&§?¶Åò>¬^Ó>®Åò>ï!?“,Ô>âÖ?ÍMÔ>£A!?`èO?§A!?Ù¶7?Øî?Ù¶7?Øî?RwO?
+ï!?Ä∑w?áÖ?ı¶w?¶| ?±Öí>¶| ?jG>Ï$?H∫˙=Ï$?¶Åò>•A!?áæ?ï!?“,Ô>âÖ?ÍMÔ>∞î?ï÷?Ü-Í>î Ë=X•&?î Ë=\S?Ë~3?ô÷_?Ë~3?\S?g∏U?ô÷_?f∏U?ô÷_?Ë~3?f'?î Ë=\S?hE?ô÷_?hE?ô÷_?Ë~3?ô÷_?hE?		}
+		*MESH_NUMTVFACES 48
+		*MESH_TFACELIST {
+              	 
+  
+ 	                     	  	                      ! " " #   $ % & & ' $ (    ) ( * + , , - * . * - - / . 0   # # 1 0 % 2 3 3 & % 4 5 6 6 7 4  8  9  8 : ; < = < >  ?  8  ? @ A : B : C       + 4 , 7 , 4 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+=ûe©+C-5  Ä?˛îñ®*C-5  Ä?5¢)¥bÚ5  Ä?mÍ¸'.C-5  Ä?5¢)¥bÚ5  Ä?˛îñ®*C-5  Ä?          Äø          ÄømÔà(lßŒ¥  Äø    ¸˜¥  ÄømÔà(lßŒ¥  Äø          ÄøUK¢≥àÏt?'˘îæ∂mE≥àÏt?%˘îæUK"≥àÏt?&˘îæ    àÏt?&˘îæUK"≥àÏt?&˘îæ∂mE≥àÏt?%˘îæ
+êh≥äÏtø˘îæ
+êh≥äÏtø˘îæ™mE≥äÏtø˘îæ    âÏtø ˘îæ™mE≥äÏtø˘îæ
+êh≥äÏtø˘îæ    *C-5  Ä?    ,C-5  Ä?˛îñ®*C-5  Ä?mÍ¸'.C-5  Ä?˛îñ®*C-5  Ä?    ,C-5  Ä?          Äø    Ùƒâ¥  Äø          Äø    ¸˜¥  Äø          Äø    Ùƒâ¥  ÄøêË≥âÏt?"˘îæêh≥âÏt?$˘îæ∂mE≥àÏt?%˘îæ    àÏt?&˘îæ∂mE≥àÏt?%˘îæêh≥âÏt?$˘îæ
+êh≥äÏtø˘îæ™mE≥äÏtø˘îæKK"≥âÏtø˘îæKK¢≥âÏtø ˘îæKK"≥âÏtø˘îæ™mE≥äÏtø˘îæ  Ä?Ëí•µF≠5  Ä?Ëí•µF≠5  Ä?Ëí•µF≠5  Ä?ã˝öµ‡‚m5  Ä?ã˝öµ‡‚m5  Ä?ã˝öµ‡‚m5  Ä?˘)5^œJ5  Ä?˘)5^œJ5  Ä?˘)5^œJ5  Ä?"d5$/5  Ä?"d5$/5  Ä?"d5$/5UäØ2uÑæÍHw?UäØ2uÑæÍHw?UäØ2uÑæÍHw?'X)5õtÑæ¯Hw?'X)5õtÑæ¯Hw?'X)5õtÑæ¯Hw?–€#µuÑ>ÍHw?–€#µuÑ>ÍHw?–€#µuÑ>ÍHw?€äØ≤fuÑ>›Hw?€äØ≤fuÑ>›Hw?€äØ≤fuÑ>›Hw?  Ä?          Ä?          Ä?          Ä?   Ä      Ä?   Ä      Ä?   Ä      Äøg+G≠5  Äøg+G≠5  Äøg+G≠5  ÄøËß5`M±∂  ÄøËß5`M±∂  ÄøËß5`M±∂  Äø7VË6D∏yµ  Äø7VË6D∏yµ  Äø7VË6D∏yµ  Äø   Ä      Äø   Ä      Äø   Ä        õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?ÃâØ2õtÑ>¯Hw?ÃâØ2õtÑ>¯Hw?ÃâØ2õtÑ>¯Hw?"X)5uÑ>ÍHw?"X)5uÑ>ÍHw?"X)5uÑ>ÍHw?  ÄøBQ•≤fQö3  ÄøBQ•≤fQö3  ÄøBQ•≤fQö3  Äø¯Yµí¥  Äø¯Yµí¥  Äø¯Yµí¥mÍ¸'.C-5  Ä?ô-b¥@Á4  Ä?5¢)¥bÚ5  Ä?4¢)µ      Ä?5¢)¥bÚ5  Ä?ô-b¥@Á4  Ä?    ¸˜¥  Äø    lßNµ  ÄømÔà(lßŒ¥  Äø    kßNµ  ÄømÔà(lßŒ¥  Äø    lßNµ  Äø    ,C-5  Ä?CûÂ(0C-5  Ä?mÍ¸'.C-5  Ä?ô-b¥@Á4  Ä?mÍ¸'.C-5  Ä?CûÂ(0C-5  Ä?    Ùƒâ¥  ÄømÔ©mßNµ  Äø    ¸˜¥  Äø    lßNµ  Äø    ¸˜¥  ÄømÔ©mßNµ  Äø  Ä?≤’≥G≠5  Ä?≤’≥G≠5  Ä?≤’≥G≠5  Ä?          Ä?          Ä?          ÄøÙ’3G≠5  ÄøÙ’3G≠5  ÄøÙ’3G≠5  ÄøûßŒ≥Ω¥Ô¥  ÄøûßŒ≥Ω¥Ô¥  ÄøûßŒ≥Ω¥Ô¥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	0.00000000
+			*CONTROL_FLOAT_KEY 160	0.03333334
+			*CONTROL_FLOAT_KEY 320	0.06666667
+			*CONTROL_FLOAT_KEY 480	0.10000000
+			*CONTROL_FLOAT_KEY 640	0.13333336
+			*CONTROL_FLOAT_KEY 800	0.16666666
+			*CONTROL_FLOAT_KEY 960	0.20000002
+			*CONTROL_FLOAT_KEY 1120	0.23333332
+			*CONTROL_FLOAT_KEY 1280	0.26666671
+			*CONTROL_FLOAT_KEY 1440	0.30000001
+			*CONTROL_FLOAT_KEY 1600	0.33333331
+			*CONTROL_FLOAT_KEY 1760	0.36666664
+			*CONTROL_FLOAT_KEY 1920	0.40000004
+			*CONTROL_FLOAT_KEY 2080	0.43333334
+			*CONTROL_FLOAT_KEY 2240	0.46666661
+			*CONTROL_FLOAT_KEY 2400	0.50000000
+			*CONTROL_FLOAT_KEY 2560	0.53333336
+			*CONTROL_FLOAT_KEY 2720	0.56666666
+			*CONTROL_FLOAT_KEY 2880	0.59999996
+			*CONTROL_FLOAT_KEY 3040	0.63333333
+			*CONTROL_FLOAT_KEY 3200	0.66666669
+			*CONTROL_FLOAT_KEY 3360	0.69999999
+			*CONTROL_FLOAT_KEY 3520	0.73333329
+			*CONTROL_FLOAT_KEY 3680	0.76666659
+			*CONTROL_FLOAT_KEY 3840	0.80000001
+			*CONTROL_FLOAT_KEY 4000	0.83333331
+			*CONTROL_FLOAT_KEY 4160	0.86666667
+			*CONTROL_FLOAT_KEY 4320	0.89999998
+			*CONTROL_FLOAT_KEY 4480	0.93333328
+			*CONTROL_FLOAT_KEY 4640	0.96666664
+			*CONTROL_FLOAT_KEY 4800	1.00000000
+			*CONTROL_FLOAT_KEY 4801	1.00000000
+		}
+	}
+	*MATERIAL_REF 0
+}
+*HELPEROBJECT {
+	*NODE_ID "05f51880"
+	*NODE_PARENTID "05f52238"
+	*NODE_NAME "bumppart03"
+	*NODE_PARENT "grpBumpercar"
+	*HELPER_CLASS "Dummy"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumppart03"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00872659	-0.99996191	0.00000000
+		*TM_ROW1 0.99996191	0.00872659	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -0.28097829	0.00000000	0.01780344
+		*TM_POS -0.28097829	0.00000000	0.01780344
+		*TM_ROTAXIS 0.00000000	0.00000000	1.00000000
+		*TM_ROTANGLE 1.56206965
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN -0.45272604	-0.09525559	-0.02617009
+	*BOUNDINGBOX_MAX -0.25594491	0.09397523	0.06177698
+	*HELPER_END
+}
+*GEOMOBJECT {
+	*NODE_ID "03cb0a48"
+	*NODE_PARENTID "05f51880"
+	*NODE_NAME "bumper16"
+	*NODE_PARENT "bumppart03"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumper16"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.99996191	0.00872676	0.00000000
+		*TM_ROW1 -0.00872676	0.99996191	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -0.33565315	-0.00047799	0.01777274
+		*TM_POS -0.33565315	-0.00047799	0.01777274
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 0.00872687
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 78
+		*MESH_NUMFACES 160
+		*MESH_VERTEX_LIST {
+H7√æ§+º:Ò˘<GÔ¬æló+º>&ΩÜ3√æ≠b÷º.˘<ÜÎ¬æZ\÷º≈&ΩQûÉæÏ'ºll=PVÉæ⁄ﬂ'º‡dˇºéöÉæÚÜ‘º„k=éRÉæêÄ‘ºÓeˇºµﬁÆæ5k*º£æΩµ&Øæ€w*ºn¿¸<Û⁄ÆæM∆’º*øΩÙ"Øæ†Ã’ºbø¸<89èæehí<V¿= béæH{í<Î¸øΩi5èæfD ;¿=Q^éæÉ€ ;/˝øΩMQ£æ¨ﬁë<Ç∏¿Ωc(§æ»Àë<æTø=|M£æ,Ó˜:∆∏¿Ωî$§æ˚æˆ:yTø=√i“æëÖ,ºñΩÑ<¸A“æï~,º⁄^óº
+h“æ7IëºΩÑ<B@“æ∏EëºU_óº≈D√æa–;=ı˘<∆¸¬æã”;=X$ΩâH√æª|=ˆ˘<à √æ„|=◊#ΩŒ´Éæeæ<=Qn=ÕcÉæé¡<=aˇºèØÉæØ}=◊n=égÉæ◊	}=`ˇº1ÏÆæ®<=æºΩ24Øæo<=<ƒ¸<ıÔÆæÚf|=6ºΩˆ7Øæ»c|=I≈¸<=èæd
+=ö¿=eéæâm
+=¶¸øΩU£æ:
+=>∏¿Ω4,§æ»
+=Uø=Dw“æò;=`¡Ñ<|O“æ¿ô;=[óº˚x“æ@Y=‹¡Ñ<4Q“æˇY=ìZóº,ÛóæD)º›#Ω-;òæÍ )º¸ıˇ<êÆóæ,]˝:§P¿Ω_≤óæú5í<_P¿Ωk7òæ(!’ºÔÙˇ<kÔóæ’’ºd$Ωwâòæ∏"í<·ºø=ßÖòæ˚-¸:õºø=© òædt<=˜!Ω™Hòæ;q<=»˘ˇ<.∂óæ≥J
+=P¿ΩlLòæÖπ|=÷˙ˇ<kòæΩº|=o!ΩGçòæ@A
+=%Ωø=%T“æxGëºcï∫ﬂU“æÇ,º
+ï∫PzÉæ-Ê'ºŒ˜\9évÉæ»É‘º¡n\9G√æøù+ºîµe∫µØæáq*ºÿŒ∫Ü√æí_÷ºø◊e∫Û˛Ææv…’ºÒ∫,òæó)ºŒtπkòæﬂ’º∫˝πe“æ Y=≈î∫_c“æ·ò;=Õî∫ÕáÉæ˙ø<='‰^9ëãÉæD}=πl_9ƒ √æˆ—;=,:e∫4Øæ<=ÏS∫à$√æP|=e∫ˆØæ]e|=â1∫©$òæœr<=càπl(òæ)ª|=Rˇπ		}
+		*MESH_FACE_LIST {
+  ;   : ;     <    =  <     > 	   ? 	 >        
+      @ 
+   A 
+ @         	       , ?   B ? ,    .    /  .    0 A   C A 0    2    3  2                        
+          	          ,    /  ,   	 -    2  -   
+ 1    .  1    0    3  0                @    :  @              >    ;  >   ( E *   D * E     F   G F     ! H   I H !         "       " J   K J "    #    !  #     I 4   L 4 I   &  /   / 6 &    % /   # K 7   M 7 K    ' 2          %    $    $       & "   &      #  !    # '   / 4    2 5 !   " & 8   6 8 &    $ 7   9 7 $    *    *  (    * J   D J *    )    )  +    ) H   E H )   ,  B   < B    .  /    /    0  C   = C    2  3    3    ,      / ,   -      2 -   1      . 1   0      3 0   5  L   F L    6 / %   8  M   G M    9 2 '   4      4 /     /    5     5 2     2 !   6 % 8    8 %   9 ' 7   # 7 '   :  ;    ;    <  =    =    >  ?    ?    @  A    A    B - ?   	 ? -   C 1 A   
+ A 1   @      : @   >       ; >   E ) D   + D )   G  F    F    I   H    H     K # J    J #   I ! L   5 L !   K " M   8 M "   D + J    J +   E ( H    H (   <  B   - B    =  C   1 C    F  L   4 L    G  M   7 M    9 $    9  2   		}
+		*MESH_NUMTVERTEX 252
+		*MESH_TVERTLIST {
+8o/?∆M?À˛8?∆M?8o/?ƒ˛.? ˛8?ƒ˛.?$ú˜>BaJ?ﬁp˜>€(?öŸ‘>ß@?VÆ‘>C}(?‰Vñ>1E->fú8>1E->‰Vñ>Ûèò>fú8>Ûèò>ø@?#N?	1)?#N?Ω@?núp?	1)?núp?ËfØ>‹›'?xÁ>‹›'?ÍfØ>”W}?xÁ>”W}?ÍfØ>”W}?	1)?#N?ø@?#N?	1)?núp?Ω@?núp?É~ì>¨ú%?"·>¨ú%?É~ì>¥≠;?"·>¥≠;?É~ì>¥≠;?ÌŸ?¿˜?ÌŸ?√s?∞«Ë>ø˜?∞«Ë>√s?∑À=ëv$?Ç3)>ív$?¥À=sæ:?Ç3)>tæ:?¥À=sæ:?∞«Ë>¿˜?∞«Ë>√s?ÌŸ?¿˜?ÌŸ?√s?hß‘>9@?Úi˜>¥{J?3˜>Gnp?fÚ“>z˘o?jR”>‰∆o?ì˜>±;p?Ói˜>∂{J?dß‘>9@?fÚ“>z˘o?3˜>Gnp?öŸ‘>ß@?$ú˜>BaJ?ì˜>±;p?jR”>‰∆o?xJ
+=¨ú%?∫=`ÑÛ>0>`ÑÛ>∫=`ÑÛ>É~ì>ææQ?"·>ææQ?|0ì>:ô}?.>:ô}?|0ì>:ô}?±À=SQ?Å3)>TQ?åÿ=–M}?
+û0>–M}?åÿ=–M}?üΩè>ÁÕA?:w'>ÁÕA?∂rè>‰÷{?=w'>‰÷{?∆/?Ñ≠*?´I:?Ñ≠*?O?⁄›'?Xv?n!Ô>vÁ>n!Ô>Xv?n!Ô>´I:?Ñ≠*?∆/?Ñ≠*?â=1E->a¯=e˙ë=fú8>i˙ë=)9?∆M?(9?¬˛.?ñ~/?∆M?ñ~/?¡˛.?\Ïˆ>⁄J?Y‘>‚??¡ˆ>´á(?¨.‘>∞@(?‰Vñ>.E->‰Vñ>Òèò>oú8>.E->jú8>Òèò>Nr@?#N?Lr@?núp?òã)?#N?ñã)?múp?ËfØ>⁄›'?ÍfØ>—W}?}Á>⁄›'?~Á>—W}?ÍfØ>—W}?òã)?#N?ñã)?múp?Nr@?#N?Lr@?núp?Ö~ì>¨ú%?Ñ~ì>µ≠;?$·>¨ú%?$·>∂≠;?Ñ~ì>µ≠;?Ü€≈>¿˜?É€≈>√s?∞«Ë>i%?É€≈>i%?·=w#?·=å„8?¥(>w#?¥(>ã„8?·=å„8?Ü€≈>¿˜?∫'‘>à¸??*∫ˆ>M(J?^S‘>Ù†p?`≥‘>\np?*∫ˆ>P(J?`S‘>Ù†p?¬'‘>à¸??ÙY‘>‚??^Ïˆ>‹J?b≥‘>^np?=w'>™Ã{?:w'>´√A?úΩè>´√A?=w'>‰÷{?:w'>ÁÕA?»ç=ÁÕA?·=PN?Ó=å„x?¥(>PN?ﬂE/>ç„x?Ó=å„x?ùΩè>ÁÕA?∂rè>‰÷{?:w'>ÁÕA?=w'>‰÷{?û 0?Ñ≠*?:§:?Ñ≠*?O?Ÿ›'?Xv?j!Ô>|Á>j!Ô>Xv?j!Ô>:§:?Ñ≠*?û 0?Ñ≠*?â=.E->f¯=`˙ë=oú8>`˙ë=xJ
+=¨ú%?xJ
+=¥≠;?xJ
+=¨ú%?ÌŸ?i%?àë>ív$?àë>tæ:?àë>ív$?∞«Ë>i%?ÔŸ?i%?É~ì>¨ú%?~0ì>aÑÛ>~0ì>aÑÛ>0>`ÑÛ>xJ
+=ææQ?Ë∫=:ô}?Ë∫=:ô}?.>:ô}?àë>UQ?h∆ë>–M}?h∆ë>–M}?
+û0>–M}?–ç=ÁÕA?‡‰=‰÷{?#·>ææQ?àJ
+=ææQ?àJ
+=∂≠;?àJ
+=ææQ?µÇè>PN?¥Çè>å„8?µÇè>PN?É€≈>√s?–‰=©Ã{?»ç=¨√A?∂rè>©Ã{?∂rè>‰÷{?ùΩè>ÁÕA?–‰=‰÷{?ﬂE/>ç„x?¡è>ç„x?µÇè>PN?¡è>ç„x?–‰=‰÷{?∏ç=ÁÕA?À˛8?¿ØG?8o/?¿ØG?â=Ûèò>O?⁄›'?O?”W}?O?⁄›'?É~ì>¥≠;?É~ì>ææQ?É~ì>¥≠;?¥À=sæ:?±À=SQ?¥À=sæ:?ËfØ>‹›'?BØ>n!Ô>BØ>n!Ô>vÁ>n!Ô>§ºx>e˙ë=)9?¿ØG?ñ~/?øØG?â=Òèò>O?—W}?O?Ÿ›'?O?—W}?Ñ~ì>µ≠;?Ö~ì>ææQ?Ö~ì>ææQ?·=å„8?·=PN?·=PN?|Á>j!Ô>BØ>j!Ô>ËfØ>⁄›'?BØ>j!Ô>§ºx>`˙ë=xJ
+=¥≠;?xJ
+=ææQ?xJ
+=ææQ?àë>tæ:?àë>UQ?àë>UQ?àJ
+=∂≠;?àJ
+=¨ú%?àJ
+=¨ú%?¥Çè>å„8?µÇè>w#?µÇè>w#?Å€≈>i%?		}
+		*MESH_NUMTVFACES 160
+		*MESH_TFACELIST {
+              	 
+  
+ 	                             !    " # $ % & # ' ( ) * ) ( + , - - . +   / / 0  1 2 3 3 4 1 5 6 7 7 8 5 9  : ; <  = > ? @ A > B C D E F C G H I J I H   K K L  M  N O P    Q Q R  S 	 T U T 	 V W X Y X W Z [ \ ] \ [ ^ _ ` a ` _ b c d e d c f g h i h j k l m n m l o p q r q s t   ! ! u t v w ! x y z { z | ' } ( ~ -  - ~ Ä Z Å [ Å Z 0 Ç É Ñ É Ç 4 Ö 7 Ü 7 Ö á à â ä ã å ç é è ê ë ê í ì î ï ñ ï î m ó k ó m ò ô ö h õ h ú d ù b ù d û ü † ` ° ` †  ¢  £  §  • ! v ! • # ¶ % ß % ® ( © * ™ * ©  ´ ¨ ≠ Æ  > Ø ∞ ± ≤ > C ≥ ¥ µ ∂ C H ∑ ∏ ∏ J H π ∫ r ª r º u ! w ê Ω { æ { ø ¿ ( } â ¡ ¬ â à ¡ √ à ä å ƒ ≈ å ã ƒ ∆ ã ç « » ê … ê   ñ À ï Ã ï À  Õ  Œ  Õ  ,  +  , 	 S  œ  S  –  —  “  > ” ‘ ’ > % C ÷ ◊ ÿ C  Ÿ ⁄ € ‹  	  › › U 	 W ﬁ Y ﬂ Y ﬁ ] ~ \  \ ~ a ‡ ` ü ` ‡ i · h ‚ h „ ‰ Â r π r Ê Á Ë { ê { È Í Î h Ï h Ì ° Ó ` ^ ` Ó Ô   >  Ò Ú Û % C % Ù ı ˆ r q r ˜ ¯ ˘ { z { ˙ ¿ ˚ © ¿ © ( 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      Äø   Ä      Äø          Äø          Äø          Äø          Äø          Ä?          Ä?          Ä?          Ä?          Ä?          Ä?              Äø          Äø          Äø          Äø          Äø          Äø  Ä?          Ä?          Ä?          Ä?       Ä  Ä?          Ä?        úzu5õDµ  Ä?UU%+É¥  Ä?ß£4É¥  Ä?F¥áå4  Ä?ß£4É¥  Ä?UU%+É¥  Ä?  ÄøíÜ<*ëzu¥  ÄøíÜº)Çzu¥  ÄøíÜº)Çzu¥  Äø    szu¥  ÄøíÜº)Çzu¥  ÄøíÜº)Çzu¥          Äø          Äø          Äø          Äø          Äø          Äø  Ä?          Ä?8O‚3≠a°¥  Ä?Ob4ìa!¥  Ä?∑:¿≤n€6*  Ä?Ob4ìa!¥  Ä?8O‚3≠a°¥    õƒ¥  Ä?ˇ¶£5 |Â4  Ä?F¥áå4  Ä?»¶#4Âkò3  Ä?F¥áå4  Ä?ˇ¶£5 |Â4  Ä?  Äø          Äø          Äø          Äø          Äø          Äø        e∆™>Wq?   Äe∆™>Wq?   Äe∆™>Wq?   Äe∆™>Wq?    e∆™>Wq?    e∆™>Wq?    i∆™æWq?í¡£3i∆™æWq?í¡£3i∆™æWq?í¡£3h∆™æWq?    h∆™æWq?    h∆™æWq?    K∆™>Wqø    K∆™>Wqø    K∆™>Wqø    _∆™>Wqøª5d6_∆™>Wqøª5d6_∆™>Wqøª5d6L∆™æWqøw¡£≥L∆™æWqøw¡£≥L∆™æWqøw¡£≥O∆™æWqø   ÄO∆™æWqø   ÄO∆™æWqø   Ä©±“æ    ŒQiø©±“æ    ŒQiø©±“æ    ŒQiø´±“æ6M.4ÕQiø´±“æ6M.4ÕQiø´±“æ6M.4ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø∞Q—>    Ù†i?∞Q—>    Ù†i?∞Q—>    Ù†i?±Q—>   ÄÙ†i?±Q—>   ÄÙ†i?±Q—>   ÄÙ†i?©Q—æB{3ı†i?©Q—æB{3ı†i?©Q—æB{3ı†i?©Q—æ    ı†i?©Q—æ    ı†i?©Q—æ    ı†i?æígø∂C⁄æN^¥æígø∂C⁄æN^¥æígø∂C⁄æN^¥æígø¥C⁄æ†’q4æígø¥C⁄æ†’q4æígø¥C⁄æ†’q4#lµ™=åæ£5v?#lµ™=åæ£5v?#lµ™=åæ£5v?    π=åæ†5v?    π=åæ†5v?    π=åæ†5v?¬íg?§C⁄æ    ¬íg?§C⁄æ    ¬íg?§C⁄æ    ¡íg?®C⁄æ£’q4¡íg?®C⁄æ£’q4¡íg?®C⁄æ£’q4          Äø          Äø          Äø          Äø          Äø          Äø   Ä  ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      Ä?   Äîzu5  Ä?±zıµ  ¿*  Ä?Øzıµ  @+  Ä?Øzu∂  ¿*  Ä?Øzıµîzu5  Ä?±zıµ          Ä?òzu5\85  Ä?§zı4Ytì5  Ä?
+bD5ÚH5  Ä?§zı4Ytì5  Ä?òzu5\85  Ä?  Ä?–d,◊∏5  Ä?€¨4ml5  Ä?€¨4ml5  Ä?∏,5S{u¥  Ä?€¨4ml5  Ä?€¨4ml5       Ä  Äø    Ú,µ  Äø          Äøbƒ¥¬∞	µ  Äø          Äø    Ú,µ  Äø  Äø          Äø          Äø          Äø          Äø          Äø        ´™J¢É5  Ä?
+bD5ÚH5  Ä?    ,ˇ4  Ä?Få4rÚÖ5  Ä?    ,ˇ4  Ä?
+bD5ÚH5  Ä?  Ä?Qª)4¨r4  Ä?Ob4ìa!¥  Ä?∑:¿≤n€6*  Ä?∑:¿≤n€6*  Ä?    ÑÚ4  Ä?Qª)4¨r4  Ä?6»”¥      Ä?6»S¥Ör4  Ä?∑:¿≤n€6*          Äøbƒ¥¬∞	µ  Äøß£µ˘Srµ  Äø
+Fµà4Jµ  Äøß£µ˘Srµ  Äøbƒ¥¬∞	µ  Äø  Äø          Äø          Äø        e∆™>Wq?    e∆™>Wq?    e∆™>Wq?    f∆™>Wq?    f∆™>Wq?    f∆™>Wq?    j∆™æWq?∫¡#¥j∆™æWq?∫¡#¥j∆™æWq?∫¡#¥i∆™æWq?    i∆™æWq?    i∆™æWq?    8∆™>Wqø·/]68∆™>Wqø·/]68∆™>Wqø·/]6_∆™>Wqøª5d∂_∆™>Wqøª5d∂_∆™>Wqøª5d∂ ∆™æWqø∆kg6 ∆™æWqø∆kg6 ∆™æWqø∆kg6i∆™æWqø    i∆™æWqø    i∆™æWqø    ©±“ævlÆ5ŒQi?©±“ævlÆ5ŒQi?©±“ævlÆ5ŒQi?≠±“>e›ú5ÕQi?≠±“>e›ú5ÕQi?≠±“>e›ú5ÕQi?£Q—>êùµ˜†iø£Q—>êùµ˜†iø£Q—>êùµ˜†iø∞Q—>    Ù†iø∞Q—>    Ù†iø∞Q—>    Ù†iøßQ—æÔﬂ§µˆ†iøßQ—æÔﬂ§µˆ†iøßQ—æÔﬂ§µˆ†iøûQ—æ    ¯†iøûQ—æ    ¯†iøûQ—æ    ¯†iø¿ígø´C⁄æ*K—5¿ígø´C⁄æ*K—5¿ígø´C⁄æ*K—5»ígøäC⁄æ5Ôc∂»ígøäC⁄æ5Ôc∂»ígøäC⁄æ5Ôc∂    ú=åæ•5vø    ú=åæ•5vø    ú=åæ•5vø    ù=åæ•5vø    ù=åæ•5vø    ù=åæ•5vø«íg?èC⁄æÆä¶5«íg?èC⁄æÆä¶5«íg?èC⁄æÆä¶5∑íg?“C⁄æÅÔc∂∑íg?“C⁄æÅÔc∂∑íg?“C⁄æÅÔc∂       Ä  Ä?       Ä  Ä?       Ä  Ä?          Ä?          Ä?          Ä?          Äø          Äø          Äø          Äø          Äø          Äø  Ä?8O‚3≠a°¥  Ä?»S¥Ör¥  Ä?∑:¿≤n€6*  Ä?6»”¥      Ä?∑:¿≤n€6*  Ä?»S¥Ör¥ˇ¶£5 |Â4  Ä?zu5a?µ  Ä?»¶#4Âkò3  Ä?úzı4aøµ  Ä?»¶#4Âkò3  Ä?zu5a?µ  Ä?  Äø          Äø          Äø          Äø          Äø          Äø        ©±“æ    ŒQiø©±“æ    ŒQiø©±“æ    ŒQiø™±“æt±¥ŒQiø™±“æt±¥ŒQiø™±“æt±¥ŒQiø≠±“>kÇ3ÕQiø≠±“>kÇ3ÕQiø≠±“>kÇ3ÕQiø≠±“>    ÕQiø≠±“>    ÕQiø≠±“>    ÕQiø†Q—>§ß.5˜†i?†Q—>§ß.5˜†i?†Q—>§ß.5˜†i?±Q—>_F¡µÙ†i?±Q—>_F¡µÙ†i?±Q—>_F¡µÙ†i?©Q—æ    ı†i?©Q—æ    ı†i?©Q—æ    ı†i?©Q—æ    ˆ†i?©Q—æ    ˆ†i?©Q—æ    ˆ†i?    øµ5  Ä?    aø5  Ä?Få4rÚÖ5  Ä?    aø5  Ä?Få4rÚÖ5  Ä?    aø5  Ä?  Ä?    ÑÚ4  Ä?∑:¿≤n€6*  Ä?6»S¥Ör4    Ú,µ  Äø          Äø
+Fµà4Jµ  Äø          Äø
+Fµà4Jµ  Äø          Äø  Äø       Ä  Äø          Äø        ©±“æ    ŒQi?©±“æ    ŒQi?©±“æ    ŒQi?™±“æt±¥ŒQi?™±“æt±¥ŒQi?™±“æt±¥ŒQi?Ω±“æFM.4…Qi?Ω±“æFM.4…Qi?Ω±“æFM.4…Qi?∏±“>tlÆ5 Qi?∏±“>tlÆ5 Qi?∏±“>tlÆ5 Qi?Æ±“>   ÄÕQi?Æ±“>   ÄÕQi?Æ±“>   ÄÕQi?ñ±“>    “Qi?ñ±“>    “Qi?ñ±“>    “Qi?∞Q—>    Ù†iø∞Q—>    Ù†iø∞Q—>    Ù†iø∞Q—>G{≥Ù†iø∞Q—>G{≥Ù†iø∞Q—>G{≥Ù†iøùQ—æ    ¯†iøùQ—æ    ¯†iøùQ—æ    ¯†iøùQ—æ   Ä¯†iøùQ—æ   Ä¯†iøùQ—æ   Ä¯†iø      Äø          Äø          Äø          Äø          Äø          Äø          Ä?          Ä?          Ä?          Ä?          Ä?          Ä?              Äø          Äø          Äø          Äø          Äø          ÄøUU%+É¥  Ä?}zı¥õƒ¥  Ä?F¥áå4  Ä?    õƒ¥  Ä?F¥áå4  Ä?}zı¥õƒ¥  Ä?          Äø          Äø          Äø          Äø          Äø          Äø»¶#4Âkò3  Ä?ß£µâ25  Ä?F¥áå4  Ä?ß£4É¥  Ä?F¥áå4  Ä?ß£µâ25  Ä?@l5©=åæ£5v?@l5©=åæ£5v?@l5©=åæ£5v?    π=åæ†5v?    π=åæ†5v?    π=åæ†5v?          Äø          Äø          Äø          Äø          Äø          Äø      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑  @+  Ä?Øzu∂àzuµ  Ä?≠zıµ  ¿*  Ä?Øzıµ   Ä  Ä?      ¿*  Ä?Øzıµàzuµ  Ä?≠zıµ
+bD5ÚH5  Ä?´™J¢É5  Ä?§zı4Ytì5  Ä?zÜ<,õƒ5  Ä?§zı4Ytì5  Ä?´™J¢É5  Ä?bƒ¥¬∞	µ  Äø          Äø          Äø          Äø          Äø          Äø
+bD5ÚH5  Ä?òzu5\85  Ä?Få4rÚÖ5  Ä?    øµ5  Ä?Få4rÚÖ5  Ä?òzu5\85  Ä?bƒ¥¬∞	µ  Äø    Ú,µ  Äø
+Fµà4Jµ  Äø    Ú,µ  Äø
+Fµà4Jµ  Äø    Ú,µ  Äø   Äú=åæ•5vø   Äú=åæ•5vø   Äú=åæ•5vø    ù=åæ§5vø    ù=åæ§5vø    ù=åæ§5vø          Ä?          Ä?          Ä?          Ä?          Ä?          Ä?          Äø          Äø          Äø          Äø          Äø          Äøúzı4aøµ  Ä?òzı¥aø¥  Ä?»¶#4Âkò3  Ä?ß£µâ25  Ä?»¶#4Âkò3  Ä?òzı¥aø¥  Ä?    aø5  Ä?    aø5  Ä?Få4rÚÖ5  Ä?    ,ˇ4  Ä?Få4rÚÖ5  Ä?    aø5  Ä?          Äøízuµa?µ  Äø
+Fµà4Jµ  Äøß£µ˘Srµ  Äø
+Fµà4Jµ  Äøízuµa?µ  Äø  Äø          Äø          Äø          Äø   Ä      Äø   Ä      Äø   Ä    		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 0
+}
+*HELPEROBJECT {
+	*NODE_ID "05f513c0"
+	*NODE_PARENTID "05f51880"
+	*NODE_NAME "bumpfull05"
+	*NODE_PARENT "bumppart03"
+	*HELPER_CLASS "Dummy"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumpfull05"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00872659	-0.99996191	0.00000000
+		*TM_ROW1 0.99996191	0.00872659	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -0.39764113	-0.00104092	0.01924662
+		*TM_POS -0.39764113	-0.00104092	0.01924662
+		*TM_ROTAXIS 0.00000000	0.00000000	1.00000000
+		*TM_ROTANGLE 1.56206965
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN -0.45268380	-0.09045430	-0.01186798
+	*BOUNDINGBOX_MAX -0.34084344	0.08838777	0.04608516
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "05f51578"
+	*NODE_PARENTID "05f513c0"
+	*NODE_NAME "bumprubber05"
+	*NODE_PARENT "bumpfull05"
+	*HELPER_CLASS "Dummy"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumprubber05"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00872659	-0.99996191	0.00000000
+		*TM_ROW1 0.99996191	0.00872659	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -0.39763706	-0.00104088	0.01579516
+		*TM_POS -0.39763706	-0.00104088	0.01579516
+		*TM_ROTAXIS 0.00000000	0.00000000	1.00000000
+		*TM_ROTANGLE 1.56206965
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN -0.45268380	-0.09045430	-0.01186796
+	*BOUNDINGBOX_MAX -0.34084344	0.08838777	0.04608518
+	*HELPER_END
+}
+*GEOMOBJECT {
+	*NODE_ID "05f744f8"
+	*NODE_PARENTID "05f51578"
+	*NODE_NAME "bump11"
+	*NODE_PARENT "bumprubber05"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bump11"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00872659	-0.99996191	0.00000000
+		*TM_ROW1 0.99996191	0.00872659	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -0.39730290	-0.04921986	0.03979862
+		*TM_POS -0.39730290	-0.04921986	0.03979862
+		*TM_ROTAXIS 0.00000000	0.00000000	1.00000000
+		*TM_ROTANGLE 1.56206965
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 12
+		*MESH_NUMFACES 16
+		*MESH_VERTEX_LIST {
+tl¥ææåÚª1{∑Ω∞ı·æïﬂ˜ª?πΩ˙⁄∫æƒi =¶≥∑Ωzù€æ:Ô=7Ÿ∏Ωõ'‚æÒ˜ª Á?Ω^û¥æEûÚª‰∂<Ω‰ªæìg =‹'=Ωeœ€æ
+Ì=Òr?Ω1Àæ6ıª8G∏Ω¸bÀæëGıªÚN>Ω:<Àæ, =oF∏Ω$nÀæN* =kM>Ω		}
+		*MESH_FACE_LIST {
+      	       
+    
+                    
+                 	    	      
+    
+           
+    		}
+		*MESH_NUMTVERTEX 34
+		*MESH_TVERTLIST {
+7èÈ>î Ë=7èÈ>Èû>X•&?î Ë=W•&?Èû>‹Í>§€=h&?§€=‹Í>eOù>h&?eOù>[&?}ú>6‡Í>}ú>[&?°ÃÍ=9‡Í>ùÃÍ=øÑ>8SÅ=iú8>8SÅ=s>∆3c>iú8>∆3c>iú8>8SÅ=s¶Í>ŸÎ=ı%?ŸÎ=s¶Í>˜9ú>ı%?˜9ú>ı%?ŸÎ=7èÈ>Bˇ„=X•&?Aˇ„=7èÈ>Bˇ„=h&?§€=‹Í>§€=h&?§€=iú8>8SÅ=©ÆŒ=8SÅ=tI¸=∆3c>tI¸=∆3c>iú8>∆3c>iú8>8SÅ=		}
+		*MESH_NUMTVFACES 16
+		*MESH_TFACELIST {
+              	 
+  
+ 	                               ! 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+       Ä  Ä?w≈ü®9g4  Ä?          Ä?w≈ü®;Á4  Ä?          Ä?w≈ü®9g4  Ä?          Äø          Äø          Äø          Äø          Äø          Äø»´≥ÌHw?ËtÑæŒ´≥ÌHw?ËtÑæŒ´≥ÌHw?ËtÑæ’´≥ÌHw?ÈtÑæŒ´≥ÌHw?ËtÑæŒ´≥ÌHw?ËtÑæ  Ä?          Ä?≤’p3c%≥  Ä?          Ä?≤’3Ôÿ•®  Ä?          Ä?≤’p3c%≥   ÄÓHwø·tÑæ…+3ÓHwø‚tÑæ…+3ÓHwø‚tÑæ…´3ÓHwø„tÑæ…+3ÓHwø‚tÑæ…+3ÓHwø‚tÑæw≈ü®9g4  Ä?3®Ô®,C-5  Ä?w≈ü®;Á4  Ä?    ,C-5  Ä?w≈ü®;Á4  Ä?3®Ô®,C-5  Ä?          Äø          Äø          Äø       Ä  Äø          Äø          Äø  Ä?≤’p3c%≥  Ä?    
+c%¥  Ä?≤’3c•≥  Ä?≤’3c•≥  Ä?≤’3Ôÿ•®  Ä?≤’p3c%≥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*TM_ANIMATION {
+		*NODE_NAME "bump11"
+		*CONTROL_SCALE_TRACK {
+			*CONTROL_SCALE_SAMPLE 0	1.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8160	1.20000005	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8320	1.39999998	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8480	1.60000026	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8640	1.80000007	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8800	2.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8960	2.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9120	2.39999986	0.99999988	0.99999988 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9280	2.60000014	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9440	2.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9600	3.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9760	3.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9920	3.40000010	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10080	3.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10240	3.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10400	4.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10560	4.20000029	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10720	4.40000010	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10880	4.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11040	4.79999971	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11200	5.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+		}
+	}
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	0.00000000
+			*CONTROL_FLOAT_KEY 160	0.02000000
+			*CONTROL_FLOAT_KEY 320	0.04000000
+			*CONTROL_FLOAT_KEY 480	0.06000000
+			*CONTROL_FLOAT_KEY 640	0.08000001
+			*CONTROL_FLOAT_KEY 800	0.10000001
+			*CONTROL_FLOAT_KEY 960	0.12000000
+			*CONTROL_FLOAT_KEY 1120	0.14000003
+			*CONTROL_FLOAT_KEY 1280	0.16000001
+			*CONTROL_FLOAT_KEY 1440	0.18000002
+			*CONTROL_FLOAT_KEY 1600	0.20000002
+			*CONTROL_FLOAT_KEY 1760	0.21999998
+			*CONTROL_FLOAT_KEY 1920	0.24000001
+			*CONTROL_FLOAT_KEY 2080	0.26000002
+			*CONTROL_FLOAT_KEY 2240	0.28000003
+			*CONTROL_FLOAT_KEY 2400	0.30000001
+			*CONTROL_FLOAT_KEY 2560	0.32000002
+			*CONTROL_FLOAT_KEY 2720	0.33999997
+			*CONTROL_FLOAT_KEY 2880	0.36000001
+			*CONTROL_FLOAT_KEY 3040	0.38000003
+			*CONTROL_FLOAT_KEY 3200	0.40000004
+			*CONTROL_FLOAT_KEY 3360	0.42000002
+			*CONTROL_FLOAT_KEY 3520	0.44000000
+			*CONTROL_FLOAT_KEY 3680	0.45999998
+			*CONTROL_FLOAT_KEY 3840	0.47999999
+			*CONTROL_FLOAT_KEY 4000	0.50000000
+			*CONTROL_FLOAT_KEY 4160	0.51999998
+			*CONTROL_FLOAT_KEY 4320	0.54000002
+			*CONTROL_FLOAT_KEY 4480	0.56000000
+			*CONTROL_FLOAT_KEY 4640	0.57999992
+			*CONTROL_FLOAT_KEY 4800	0.59999996
+			*CONTROL_FLOAT_KEY 4960	0.62000000
+			*CONTROL_FLOAT_KEY 5120	0.63999999
+			*CONTROL_FLOAT_KEY 5280	0.66000003
+			*CONTROL_FLOAT_KEY 5440	0.68000001
+			*CONTROL_FLOAT_KEY 5600	0.69999999
+			*CONTROL_FLOAT_KEY 5760	0.71999997
+			*CONTROL_FLOAT_KEY 5920	0.74000001
+			*CONTROL_FLOAT_KEY 6080	0.75999999
+			*CONTROL_FLOAT_KEY 6240	0.77999991
+			*CONTROL_FLOAT_KEY 6400	0.80000001
+			*CONTROL_FLOAT_KEY 6560	0.81999999
+			*CONTROL_FLOAT_KEY 6720	0.83999997
+			*CONTROL_FLOAT_KEY 6880	0.85999995
+			*CONTROL_FLOAT_KEY 7040	0.88000000
+			*CONTROL_FLOAT_KEY 7200	0.89999998
+			*CONTROL_FLOAT_KEY 7360	0.92000002
+			*CONTROL_FLOAT_KEY 7520	0.94000000
+			*CONTROL_FLOAT_KEY 7680	0.95999998
+			*CONTROL_FLOAT_KEY 7840	0.98000002
+			*CONTROL_FLOAT_KEY 8000	1.00000000
+			*CONTROL_FLOAT_KEY 8001	1.00000000
+		}
+	}
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "05f6f948"
+	*NODE_PARENTID "05f51578"
+	*NODE_NAME "bump12"
+	*NODE_PARENT "bumprubber05"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bump12"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00872659	-0.99996191	0.00000000
+		*TM_ROW1 0.99996191	0.00872659	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -0.39814081	0.04679521	0.03979862
+		*TM_POS -0.39814081	0.04679521	0.03979862
+		*TM_ROTAXIS 0.00000000	0.00000000	1.00000000
+		*TM_ROTANGLE 1.56206965
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 12
+		*MESH_NUMFACES 16
+		*MESH_VERTEX_LIST {
+z8µæd‘Úª…Œ¥=∂¡‚æ:'¯ª∫6≥=ßªæœ` =Rñ¥=Åi‹æ>Ê=√p≥=Õè‚æ¥¯ª.4=êµæû¬Úª^7=uªæc ==Ì6=ñ7‹æoË=¢4=˝Àæ∞}ıª¡¥=.ÀÀæ(lıª∆5=@Ãæä# =â¥=V÷Àæª% =≠«5=		}
+		*MESH_FACE_LIST {
+      	      
+      
+                   
+               	          
+          
+           		}
+		*MESH_NUMTVERTEX 33
+		*MESH_TVERTLIST {
+5èÈ>î Ë=f'?î Ë=9èÈ>Èû>f'?Èû>∂â&?gñ‡=∂â&? åû>√Í>gñ‡=√Í> åû>œﬂÎ>}ú>œﬂÎ>òÃÍ=›⁄&?}ú>›⁄&?òÃÍ=øÑ>8SÅ=s>∆3c>iú8>8SÅ=iú8>∆3c>iú8>8SÅ=¥nÈ>2≤ú>¥nÈ>≠äÚ=TÌ%?2≤ú>TÌ%?≠äÚ=TÌ%?2≤ú>f'?Aˇ„=9èÈ>Bˇ„=∂â&?gñ‡=√Í>gñ‡=∂â&?gñ‡=iú8>∆3c>tI¸=∆3c>iú8>8SÅ=©ÆŒ=8SÅ=iú8>8SÅ=tI¸=∆3c>		}
+		*MESH_NUMTVFACES 16
+		*MESH_TFACELIST {
+              	 
+  
+ 	                                		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+÷15F®Ô)  Ä?÷±41C≠4  Ä?’14bÚ5  Ä?KÄ©-C-5  Ä?’14bÚ5  Ä?÷±41C≠4  Ä?„1µ      Äø,l¥yé µ  Äø‚±¥π’¥  Äø/^)µ’pµ  Äø‚±¥π’¥  Äø,l¥yé µ  Äø77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ  Äø©ﬁﬂ)c%4  Äø∫’3c•3  Äø%á2<ù92  Äø≥’3„ˇÈ®  Äø%á2<ù92  Äø∫’3c•3    ÌHwøÎtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæKÄ©-C-5  Ä?D®Ô®+C-5  Ä?’14bÚ5  Ä?    +C-5  Ä?’14bÚ5  Ä?D®Ô®+C-5  Ä?,l¥yé µ  Äø·è&)≤’pµ  Äø/^)µ’pµ  Äø    ≤’pµ  Äø/^)µ’pµ  Äø·è&)≤’pµ  Äø  Äø≥’3„ˇÈ®  Äø.C≠≥r˜m≥  Äø%á2<ù92  Äø.C-¥r˜Ì≥  Äø%á2<ù92  Äø.C≠≥r˜m≥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*TM_ANIMATION {
+		*NODE_NAME "bump12"
+		*CONTROL_SCALE_TRACK {
+			*CONTROL_SCALE_SAMPLE 0	1.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8160	1.20000005	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8320	1.39999998	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8480	1.60000026	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8640	1.80000007	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8800	2.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8960	2.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9120	2.39999986	0.99999988	0.99999988 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9280	2.60000014	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9440	2.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9600	3.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9760	3.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9920	3.40000010	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10080	3.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10240	3.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10400	4.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10560	4.20000029	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10720	4.40000010	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10880	4.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11040	4.79999971	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11200	5.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+		}
+	}
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	0.00000000
+			*CONTROL_FLOAT_KEY 160	0.02000000
+			*CONTROL_FLOAT_KEY 320	0.04000000
+			*CONTROL_FLOAT_KEY 480	0.06000000
+			*CONTROL_FLOAT_KEY 640	0.08000001
+			*CONTROL_FLOAT_KEY 800	0.10000001
+			*CONTROL_FLOAT_KEY 960	0.12000000
+			*CONTROL_FLOAT_KEY 1120	0.14000003
+			*CONTROL_FLOAT_KEY 1280	0.16000001
+			*CONTROL_FLOAT_KEY 1440	0.18000002
+			*CONTROL_FLOAT_KEY 1600	0.20000002
+			*CONTROL_FLOAT_KEY 1760	0.21999998
+			*CONTROL_FLOAT_KEY 1920	0.24000001
+			*CONTROL_FLOAT_KEY 2080	0.26000002
+			*CONTROL_FLOAT_KEY 2240	0.28000003
+			*CONTROL_FLOAT_KEY 2400	0.30000001
+			*CONTROL_FLOAT_KEY 2560	0.32000002
+			*CONTROL_FLOAT_KEY 2720	0.33999997
+			*CONTROL_FLOAT_KEY 2880	0.36000001
+			*CONTROL_FLOAT_KEY 3040	0.38000003
+			*CONTROL_FLOAT_KEY 3200	0.40000004
+			*CONTROL_FLOAT_KEY 3360	0.42000002
+			*CONTROL_FLOAT_KEY 3520	0.44000000
+			*CONTROL_FLOAT_KEY 3680	0.45999998
+			*CONTROL_FLOAT_KEY 3840	0.47999999
+			*CONTROL_FLOAT_KEY 4000	0.50000000
+			*CONTROL_FLOAT_KEY 4160	0.51999998
+			*CONTROL_FLOAT_KEY 4320	0.54000002
+			*CONTROL_FLOAT_KEY 4480	0.56000000
+			*CONTROL_FLOAT_KEY 4640	0.57999992
+			*CONTROL_FLOAT_KEY 4800	0.59999996
+			*CONTROL_FLOAT_KEY 4960	0.62000000
+			*CONTROL_FLOAT_KEY 5120	0.63999999
+			*CONTROL_FLOAT_KEY 5280	0.66000003
+			*CONTROL_FLOAT_KEY 5440	0.68000001
+			*CONTROL_FLOAT_KEY 5600	0.69999999
+			*CONTROL_FLOAT_KEY 5760	0.71999997
+			*CONTROL_FLOAT_KEY 5920	0.74000001
+			*CONTROL_FLOAT_KEY 6080	0.75999999
+			*CONTROL_FLOAT_KEY 6240	0.77999991
+			*CONTROL_FLOAT_KEY 6400	0.80000001
+			*CONTROL_FLOAT_KEY 6560	0.81999999
+			*CONTROL_FLOAT_KEY 6720	0.83999997
+			*CONTROL_FLOAT_KEY 6880	0.85999995
+			*CONTROL_FLOAT_KEY 7040	0.88000000
+			*CONTROL_FLOAT_KEY 7200	0.89999998
+			*CONTROL_FLOAT_KEY 7360	0.92000002
+			*CONTROL_FLOAT_KEY 7520	0.94000000
+			*CONTROL_FLOAT_KEY 7680	0.95999998
+			*CONTROL_FLOAT_KEY 7840	0.98000002
+			*CONTROL_FLOAT_KEY 8000	1.00000000
+			*CONTROL_FLOAT_KEY 8001	1.00000000
+		}
+	}
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "02e330c8"
+	*NODE_PARENTID "05f51578"
+	*NODE_NAME "bumpbeam02"
+	*NODE_PARENT "bumprubber05"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+		nolight
+		texvel 0 0.1 0
+	}
+	*NODE_TM {
+		*NODE_NAME "bumpbeam02"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.00872659	-0.99996191	0.00000000
+		*TM_ROW1 1.23995280	0.01082097	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.24000001
+		*TM_ROW3 -0.39681645	-0.00103357	0.01712267
+		*TM_POS -0.39681645	-0.00103357	0.01712267
+		*TM_ROTAXIS 0.00000000	0.00000000	1.00000000
+		*TM_ROTANGLE 1.56206965
+		*TM_SCALE 1.00000000	1.24000001	1.24000001
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 18
+		*MESH_NUMFACES 32
+		*MESH_VERTEX_LIST {
+ÉÆæy¯>º]F∑Ω˙ÊæjEBº@πΩ∑|∂æ—√<=ùå∑Ω˚ﬂæ·+<=q¯∏Ω`Áæ°[Bºä{∆∫ÈÆæ∞?º/´∫À‚∂æDæ<=ñM4∫ÇﬂæS&<=…Á¥∫Ñæ æﬂû@º9C∏Ωò$Àæµ@ºêhá∫XÃ æÿw<=àB∏Ωm2ÀæKr<=Jáá∫/OØæÊ$?ºúµ=*∆ÁæÿqBºÂ	≥=‡H∑æ∂∏<=[Ω¥=#Ëﬂæº <=àQ≥=¨äÀæLÀ@º¿¥=ÅòÀæΩl<=p¥=		}
+		*MESH_FACE_LIST {
+      	       
+    
+                    
+                 	    	      
+    
+           
+         	                                             	                              		}
+		*MESH_NUMTVERTEX 67
+		*MESH_TVERTLIST {
+7èÈ>î Ë=7èÈ>Èû>X•&?î Ë=W•&?Èû>‹Í>§€=h&?§€=‹Í>eOù>h&?eOù>[&?}ú>6‡Í>}ú>[&?°ÃÍ=9‡Í>ùÃÍ=øÑ>8SÅ=iú8>8SÅ=s>∆3c>iú8>∆3c>iú8>8SÅ=s¶Í>ŸÎ=ı%?ŸÎ=s¶Í>˜9ú>ı%?˜9ú>ı%?ŸÎ=7èÈ>Bˇ„=X•&?Aˇ„=7èÈ>Bˇ„=h&?§€=‹Í>§€=h&?§€=iú8>8SÅ=©ÆŒ=8SÅ=tI¸=∆3c>tI¸=∆3c>iú8>∆3c>iú8>8SÅ=5èÈ>î Ë=f'?î Ë=9èÈ>Èû>f'?Èû>∂â&?gñ‡=∂â&? åû>√Í>gñ‡=√Í> åû>œﬂÎ>}ú>œﬂÎ>òÃÍ=›⁄&?}ú>›⁄&?òÃÍ=øÑ>8SÅ=s>∆3c>iú8>8SÅ=iú8>∆3c>iú8>8SÅ=¥nÈ>2≤ú>¥nÈ>≠äÚ=TÌ%?2≤ú>TÌ%?≠äÚ=TÌ%?2≤ú>f'?Aˇ„=9èÈ>Bˇ„=∂â&?gñ‡=√Í>gñ‡=∂â&?gñ‡=iú8>∆3c>tI¸=∆3c>iú8>8SÅ=©ÆŒ=8SÅ=iú8>8SÅ=tI¸=∆3c>		}
+		*MESH_NUMTVFACES 32
+		*MESH_TFACELIST {
+              	 
+  
+ 	                               ! " # $ % $ # & ' ( ) ( ' * + , - , + . / 0 1 2 / 3 4 5 6 7 4 % 8 $ 9 $ 8 ' : ) ; ) < = > ? @ A B 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+       Ä  Ä?˚Yú(9g4  Ä?          Ä?mü;)3Íœ4  Ä?          Ä?˚Yú(9g4  Ä?          Äø          Äø          Äøúä≥à™@¥  Äø          Äø          Äø)]ß3ÌHw?ËtÑæZ{3ÏHw?ÔtÑæ:\ß2ÌHw?ÎtÑæ Äe´ÏHw?ÔtÑæ:\ß2ÌHw?ÎtÑæZ{3ÏHw?ÔtÑæ  Ä?          Ä?≤’p3c%≥  Ä?          Ä?≤’3Ôÿ•®  Ä?          Ä?≤’p3c%≥Ã˚≥ÓHwø„tÑæ˚≥ÓHwø„tÑæ$e¥ÓHwø‰tÑæ˚≥ÓHwø„tÑæ$e¥ÓHwø‰tÑæ˚≥ÓHwø„tÑæ˚Yú(9g4  Ä?îí)+C-5  Ä?mü;)3Íœ4  Ä?ÊØ),C-5  Ä?mü;)3Íœ4  Ä?îí)+C-5  Ä?úä≥à™@¥  ÄøÁ≥Ü6,  Äø          Äø       Ä  Äø          ÄøÁ≥Ü6,  Äø  Ä?≤’p3c%≥  Ä?    
+c%¥  Ä?≤’3c•≥  Ä?≤’3c•≥  Ä?≤’3Ôÿ•®  Ä?≤’p3c%≥          Ä?          Ä?™Ê/),C≠4  Ä?mü;)3Íœ4  Ä?™Ê/),C≠4  Ä?          Ä?          Äøˇ"©wé†¥  Äø          Äøúä≥à™@¥  Äø          Äøˇ"©wé†¥  Äø9]'4ÎHw?ˆtÑæL4—3ÏHw?ÚtÑæZ{3ÏHw?ÔtÑæ Äe´ÏHw?ÔtÑæZ{3ÏHw?ÔtÑæL4—3ÏHw?ÚtÑæ  Äø©ﬁﬂ)c%4  Äø∫’3c•3  Äø%á2<ù92  Äø≥’3M˜È®  Äø%á2<ù92  Äø∫’3c•3Ã˚≥ÓHwø„tÑæ$e¥ÓHwø‰tÑæπD?¥ÓHwøÊtÑæ_ÅÄ¥ÌHwøÍtÑæπD?¥ÓHwøÊtÑæ$e¥ÓHwø‰tÑæmü;)3Íœ4  Ä?ÊØ),C-5  Ä?™Ê/),C≠4  Ä?ÊØ),C-5  Ä?™Ê/),C≠4  Ä?ÊØ),C-5  Ä?ˇ"©wé†¥  ÄøC-¥*’¥  Äøúä≥à™@¥  ÄøÁ≥Ü6,  Äøúä≥à™@¥  ÄøC-¥*’¥  Äø  Äø≥’3M˜È®  Äø/C≠≥r˜m≥  Äø%á2<ù92  Äø/C-¥r˜Ì≥  Äø%á2<ù92  Äø/C≠≥r˜m≥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	1.00000000
+			*CONTROL_FLOAT_KEY 160	0.98000008
+			*CONTROL_FLOAT_KEY 320	0.95999992
+			*CONTROL_FLOAT_KEY 480	0.94000000
+			*CONTROL_FLOAT_KEY 640	0.92000002
+			*CONTROL_FLOAT_KEY 800	0.89999992
+			*CONTROL_FLOAT_KEY 960	0.88000000
+			*CONTROL_FLOAT_KEY 1120	0.86000001
+			*CONTROL_FLOAT_KEY 1280	0.84000009
+			*CONTROL_FLOAT_KEY 1440	0.81999999
+			*CONTROL_FLOAT_KEY 1600	0.80000001
+			*CONTROL_FLOAT_KEY 1760	0.77999991
+			*CONTROL_FLOAT_KEY 1920	0.75999993
+			*CONTROL_FLOAT_KEY 2080	0.74000001
+			*CONTROL_FLOAT_KEY 2240	0.72000009
+			*CONTROL_FLOAT_KEY 2400	0.69999999
+			*CONTROL_FLOAT_KEY 2560	0.68000001
+			*CONTROL_FLOAT_KEY 2720	0.65999991
+			*CONTROL_FLOAT_KEY 2880	0.63999999
+			*CONTROL_FLOAT_KEY 3040	0.62000000
+			*CONTROL_FLOAT_KEY 3200	0.60000008
+			*CONTROL_FLOAT_KEY 3360	0.58000010
+			*CONTROL_FLOAT_KEY 3520	0.56000000
+			*CONTROL_FLOAT_KEY 3680	0.53999990
+			*CONTROL_FLOAT_KEY 3840	0.51999998
+			*CONTROL_FLOAT_KEY 4000	0.50000000
+			*CONTROL_FLOAT_KEY 4160	0.48000002
+			*CONTROL_FLOAT_KEY 4320	0.45999998
+			*CONTROL_FLOAT_KEY 4480	0.44000000
+			*CONTROL_FLOAT_KEY 4640	0.42000002
+			*CONTROL_FLOAT_KEY 4800	0.39999998
+			*CONTROL_FLOAT_KEY 4960	0.38000000
+			*CONTROL_FLOAT_KEY 5120	0.36000001
+			*CONTROL_FLOAT_KEY 5280	0.33999997
+			*CONTROL_FLOAT_KEY 5440	0.31999999
+			*CONTROL_FLOAT_KEY 5600	0.30000001
+			*CONTROL_FLOAT_KEY 5760	0.27999997
+			*CONTROL_FLOAT_KEY 5920	0.26000002
+			*CONTROL_FLOAT_KEY 6080	0.24000002
+			*CONTROL_FLOAT_KEY 6240	0.22000004
+			*CONTROL_FLOAT_KEY 6400	0.20000000
+			*CONTROL_FLOAT_KEY 6560	0.18000002
+			*CONTROL_FLOAT_KEY 6720	0.16000004
+			*CONTROL_FLOAT_KEY 6880	0.14000000
+			*CONTROL_FLOAT_KEY 7040	0.12000001
+			*CONTROL_FLOAT_KEY 7200	0.10000003
+			*CONTROL_FLOAT_KEY 7360	0.07999999
+			*CONTROL_FLOAT_KEY 7520	0.06000001
+			*CONTROL_FLOAT_KEY 7680	0.04000003
+			*CONTROL_FLOAT_KEY 7840	0.01999998
+			*CONTROL_FLOAT_KEY 8000	0.00000000
+			*CONTROL_FLOAT_KEY 8001	0.00000000
+		}
+	}
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "02de82d8"
+	*NODE_PARENTID "05f513c0"
+	*NODE_NAME "bumper17"
+	*NODE_PARENT "bumpfull05"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumper17"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 0.99996191	0.00872676	0.00000000
+		*TM_ROW1 -0.00872676	0.99996191	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -0.39772334	-0.00104030	0.03979862
+		*TM_POS -0.39772334	-0.00104030	0.03979862
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 0.00872687
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 30
+		*MESH_NUMFACES 48
+		*MESH_VERTEX_LIST {
+õ'‚æ÷Ò˜ªÁ?Ω_û¥æÛûÚªÍ∂<Ω‰ªæzg =·'=Ωeœ€æÏ=˜r?Ωµ[‚æ"¯ªêª∫µ∫ﬁæ‚<=©≥∫x“¥æ±Úªæ+∫ç∏æπ≠<=V";∫Õè‚æo¯ª.4=ëµæO√Úª^7=uªæÓb =<Ì6=ó7‹æUË=¢4=îtÊæ}√Æª¸3@ΩxR∞æo®ªÀi<Ω˙X∏æ∞<=˜<ΩúÜﬁæ,!<=I£?ΩÆ®Êæ÷Æª˜.≈∫ëÜ∞æeÅ®ªY“∫«‹ÊæSËÆª·3=™∫∞æì®ª:´7=,¡∏æo´<=˙7=œÓﬁæô<=…q4=¸bÀæFHıª˜N>Ω%nÀæ5* =qM>ΩóÀæìZıª|éà∫ÀoÀæõh<=6M>ΩÂ£ÀæQf<=ÌTà∫/ÀÀæﬁlıª∆5=V÷Àæ¢% =¨«5=˝◊Àæd<=Ë«5=		}
+		*MESH_FACE_LIST {
+                                                                                                                                      
+       
+   	 
+      	              	                                        	      	                                 		}
+		*MESH_NUMTVERTEX 68
+		*MESH_TVERTLIST {
+X•&?Aˇ„=Ñ-Í>Bˇ„=W•&?Èû>Ñ-Í>Èû>Z?‡√|?ôê6?ﬁ√|?Z?`ﬂG?ôê6?`ﬂG?êeà>ï>l]5>ï>íeà>XÅÊ=l]5>\ÅÊ='`_?˙D:?&`_?y~\?oES?˙D:?oES?y~\?f'?Aˇ„=f'?Èû>&|N?ﬁ√|?(|N?`ﬂG?lﬂ≥=ï>hﬂ≥=\ÅÊ='`_?{?oES?z?•A!?áæ?§A!?Ù¶7?∞î?Ù¶7?∞î?ï÷?£A!?aèO?
+ï!?Å∑w?áÖ?ı¶w?Æî?RwO?&§?±Öí>Nóı>µÖí>Nóı>pG>&§?jG>¬^Ó>T∫˙=&§?H∫˙=&§?¶Åò>¬^Ó>®Åò>ï!?“,Ô>âÖ?ÍMÔ>£A!?`èO?§A!?Ù¶7?Øî?Ù¶7?Øî?RwO?
+ï!?Ä∑w?áÖ?ı¶w?¶| ?±Öí>¶| ?jG>Ï$?H∫˙=Ï$?¶Åò>•A!?áæ?ï!?“,Ô>âÖ?ÍMÔ>∞î?ï÷?Ü-Í>î Ë=X•&?î Ë=\S?Ë~3?ô÷_?Ë~3?\S?g∏U?ô÷_?f∏U?ô÷_?Ë~3?f'?î Ë=\S?hE?ô÷_?hE?ô÷_?Ë~3?ô÷_?hE?		}
+		*MESH_NUMTVFACES 48
+		*MESH_TFACELIST {
+              	 
+  
+ 	                     	  	                      ! " " #   $ % & & ' $ (    ) ( * + , , - * . * - - / . 0   # # 1 0 % 2 3 3 & % 4 5 6 6 7 4  8  9  8 : ; < = < >  ?  8  ? @ A : B : C       + 4 , 7 , 4 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+=ûe©+C-5  Ä?˛îñ®*C-5  Ä?5¢)¥bÚ5  Ä?mÍ¸'.C-5  Ä?5¢)¥bÚ5  Ä?˛îñ®*C-5  Ä?          Äø          ÄømÔà(lßŒ¥  Äø    ¸˜¥  ÄømÔà(lßŒ¥  Äø          ÄøUK¢≥àÏt?'˘îæ∂mE≥àÏt?%˘îæUK"≥àÏt?&˘îæ    àÏt?&˘îæUK"≥àÏt?&˘îæ∂mE≥àÏt?%˘îæ
+êh≥äÏtø˘îæ
+êh≥äÏtø˘îæ™mE≥äÏtø˘îæ    âÏtø ˘îæ™mE≥äÏtø˘îæ
+êh≥äÏtø˘îæ    *C-5  Ä?    ,C-5  Ä?˛îñ®*C-5  Ä?mÍ¸'.C-5  Ä?˛îñ®*C-5  Ä?    ,C-5  Ä?          Äø    Ùƒâ¥  Äø          Äø    ¸˜¥  Äø          Äø    Ùƒâ¥  ÄøêË≥âÏt?"˘îæêh≥âÏt?$˘îæ∂mE≥àÏt?%˘îæ    àÏt?&˘îæ∂mE≥àÏt?%˘îæêh≥âÏt?$˘îæ
+êh≥äÏtø˘îæ™mE≥äÏtø˘îæKK"≥âÏtø˘îæKK¢≥âÏtø ˘îæKK"≥âÏtø˘îæ™mE≥äÏtø˘îæ  Ä?Ëí•µF≠5  Ä?Ëí•µF≠5  Ä?Ëí•µF≠5  Ä?ã˝öµ‡‚m5  Ä?ã˝öµ‡‚m5  Ä?ã˝öµ‡‚m5  Ä?˘)5^œJ5  Ä?˘)5^œJ5  Ä?˘)5^œJ5  Ä?"d5$/5  Ä?"d5$/5  Ä?"d5$/5UäØ2uÑæÍHw?UäØ2uÑæÍHw?UäØ2uÑæÍHw?'X)5õtÑæ¯Hw?'X)5õtÑæ¯Hw?'X)5õtÑæ¯Hw?–€#µuÑ>ÍHw?–€#µuÑ>ÍHw?–€#µuÑ>ÍHw?€äØ≤fuÑ>›Hw?€äØ≤fuÑ>›Hw?€äØ≤fuÑ>›Hw?  Ä?          Ä?          Ä?          Ä?   Ä      Ä?   Ä      Ä?   Ä      Äøg+G≠5  Äøg+G≠5  Äøg+G≠5  ÄøËß5`M±∂  ÄøËß5`M±∂  ÄøËß5`M±∂  Äø7VË6D∏yµ  Äø7VË6D∏yµ  Äø7VË6D∏yµ  Äø   Ä      Äø   Ä      Äø   Ä        õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?ÃâØ2õtÑ>¯Hw?ÃâØ2õtÑ>¯Hw?ÃâØ2õtÑ>¯Hw?"X)5uÑ>ÍHw?"X)5uÑ>ÍHw?"X)5uÑ>ÍHw?  ÄøBQ•≤fQö3  ÄøBQ•≤fQö3  ÄøBQ•≤fQö3  Äø¯Yµí¥  Äø¯Yµí¥  Äø¯Yµí¥mÍ¸'.C-5  Ä?ô-b¥@Á4  Ä?5¢)¥bÚ5  Ä?4¢)µ      Ä?5¢)¥bÚ5  Ä?ô-b¥@Á4  Ä?    ¸˜¥  Äø    lßNµ  ÄømÔà(lßŒ¥  Äø    kßNµ  ÄømÔà(lßŒ¥  Äø    lßNµ  Äø    ,C-5  Ä?CûÂ(0C-5  Ä?mÍ¸'.C-5  Ä?ô-b¥@Á4  Ä?mÍ¸'.C-5  Ä?CûÂ(0C-5  Ä?    Ùƒâ¥  ÄømÔ©mßNµ  Äø    ¸˜¥  Äø    lßNµ  Äø    ¸˜¥  ÄømÔ©mßNµ  Äø  Ä?≤’≥G≠5  Ä?≤’≥G≠5  Ä?≤’≥G≠5  Ä?          Ä?          Ä?          ÄøÙ’3G≠5  ÄøÙ’3G≠5  ÄøÙ’3G≠5  ÄøûßŒ≥Ω¥Ô¥  ÄøûßŒ≥Ω¥Ô¥  ÄøûßŒ≥Ω¥Ô¥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	0.00000000
+			*CONTROL_FLOAT_KEY 160	0.03333334
+			*CONTROL_FLOAT_KEY 320	0.06666667
+			*CONTROL_FLOAT_KEY 480	0.10000000
+			*CONTROL_FLOAT_KEY 640	0.13333336
+			*CONTROL_FLOAT_KEY 800	0.16666666
+			*CONTROL_FLOAT_KEY 960	0.20000002
+			*CONTROL_FLOAT_KEY 1120	0.23333332
+			*CONTROL_FLOAT_KEY 1280	0.26666671
+			*CONTROL_FLOAT_KEY 1440	0.30000001
+			*CONTROL_FLOAT_KEY 1600	0.33333331
+			*CONTROL_FLOAT_KEY 1760	0.36666664
+			*CONTROL_FLOAT_KEY 1920	0.40000004
+			*CONTROL_FLOAT_KEY 2080	0.43333334
+			*CONTROL_FLOAT_KEY 2240	0.46666661
+			*CONTROL_FLOAT_KEY 2400	0.50000000
+			*CONTROL_FLOAT_KEY 2560	0.53333336
+			*CONTROL_FLOAT_KEY 2720	0.56666666
+			*CONTROL_FLOAT_KEY 2880	0.59999996
+			*CONTROL_FLOAT_KEY 3040	0.63333333
+			*CONTROL_FLOAT_KEY 3200	0.66666669
+			*CONTROL_FLOAT_KEY 3360	0.69999999
+			*CONTROL_FLOAT_KEY 3520	0.73333329
+			*CONTROL_FLOAT_KEY 3680	0.76666659
+			*CONTROL_FLOAT_KEY 3840	0.80000001
+			*CONTROL_FLOAT_KEY 4000	0.83333331
+			*CONTROL_FLOAT_KEY 4160	0.86666667
+			*CONTROL_FLOAT_KEY 4320	0.89999998
+			*CONTROL_FLOAT_KEY 4480	0.93333328
+			*CONTROL_FLOAT_KEY 4640	0.96666664
+			*CONTROL_FLOAT_KEY 4800	1.00000000
+			*CONTROL_FLOAT_KEY 4801	1.00000000
+		}
+	}
+	*MATERIAL_REF 0
+}
+*HELPEROBJECT {
+	*NODE_ID "02cf0de8"
+	*NODE_PARENTID "05f52238"
+	*NODE_NAME "bumppart01"
+	*NODE_PARENT "grpBumpercar"
+	*HELPER_CLASS "Dummy"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumppart01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.00000000	-0.63472826	0.01780344
+		*TM_POS 0.00000000	-0.63472826	0.01780344
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN -0.09376749	-0.80566428	-0.02617009
+	*BOUNDINGBOX_MAX 0.09376749	-0.61051215	0.06177698
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "02de8ac0"
+	*NODE_PARENTID "02cf0de8"
+	*NODE_NAME "bumpfull"
+	*NODE_PARENT "bumppart01"
+	*HELPER_CLASS "Dummy"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumpfull"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.00002281	-0.75139574	0.01924662
+		*TM_POS 0.00002281	-0.75139574	0.01924662
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN -0.08892037	-0.80566428	-0.01186798
+	*BOUNDINGBOX_MAX 0.08896600	-0.69537208	0.04608516
+	*HELPER_END
+}
+*HELPEROBJECT {
+	*NODE_ID "05f4bd50"
+	*NODE_PARENTID "02de8ac0"
+	*NODE_NAME "bumprubber"
+	*NODE_PARENT "bumpfull"
+	*HELPER_CLASS "Dummy"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumprubber"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.00002281	-0.75139168	0.01579516
+		*TM_POS 0.00002281	-0.75139168	0.01579516
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*BOUNDINGBOX_MIN -0.08892037	-0.80566428	-0.01186796
+	*BOUNDINGBOX_MAX 0.08896600	-0.69537208	0.04608518
+	*HELPER_END
+}
+*GEOMOBJECT {
+	*NODE_ID "05f4b400"
+	*NODE_PARENTID "05f4bd50"
+	*NODE_NAME "bump02"
+	*NODE_PARENT "bumprubber"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bump02"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.04820287	-0.75147796	0.03979862
+		*TM_POS 0.04820287	-0.75147796	0.03979862
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 12
+		*MESH_NUMFACES 16
+		*MESH_VERTEX_LIST {
+≠2∂=æåÚª•¯4øŒ3∂=ïﬂ˜ª|ΩKø®1∂=ƒi =Ô/8øx2∂=:Ô=YëHø]&:=Ò˜ªéΩKø$:=EûÚª∂¯4ø ":=ìg =08ø¥#:=
+Ì=jëHø=3∂=6ıª[@ø=%:=ëGıª"[@ø2∂=, =§`@øÔ":=N* =µ`@ø		}
+		*MESH_FACE_LIST {
+      	       
+    
+                    
+                 	    	      
+    
+           
+    		}
+		*MESH_NUMTVERTEX 34
+		*MESH_TVERTLIST {
+7èÈ>î Ë=7èÈ>Èû>X•&?î Ë=W•&?Èû>‹Í>§€=h&?§€=‹Í>eOù>h&?eOù>[&?}ú>6‡Í>}ú>[&?°ÃÍ=9‡Í>ùÃÍ=øÑ>8SÅ=iú8>8SÅ=s>∆3c>iú8>∆3c>iú8>8SÅ=s¶Í>ŸÎ=ı%?ŸÎ=s¶Í>˜9ú>ı%?˜9ú>ı%?ŸÎ=7èÈ>Bˇ„=X•&?Aˇ„=7èÈ>Bˇ„=h&?§€=‹Í>§€=h&?§€=iú8>8SÅ=©ÆŒ=8SÅ=tI¸=∆3c>tI¸=∆3c>iú8>∆3c>iú8>8SÅ=		}
+		*MESH_NUMTVFACES 16
+		*MESH_TFACELIST {
+              	 
+  
+ 	                               ! 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+       Ä  Ä?w≈ü®9g4  Ä?          Ä?w≈ü®;Á4  Ä?          Ä?w≈ü®9g4  Ä?          Äø          Äø          Äø          Äø          Äø          Äø»´≥ÌHw?ËtÑæŒ´≥ÌHw?ËtÑæŒ´≥ÌHw?ËtÑæ’´≥ÌHw?ÈtÑæŒ´≥ÌHw?ËtÑæŒ´≥ÌHw?ËtÑæ  Ä?          Ä?≤’p3c%≥  Ä?          Ä?≤’3Ôÿ•®  Ä?          Ä?≤’p3c%≥   ÄÓHwø·tÑæ…+3ÓHwø‚tÑæ…+3ÓHwø‚tÑæ…´3ÓHwø„tÑæ…+3ÓHwø‚tÑæ…+3ÓHwø‚tÑæw≈ü®9g4  Ä?3®Ô®,C-5  Ä?w≈ü®;Á4  Ä?    ,C-5  Ä?w≈ü®;Á4  Ä?3®Ô®,C-5  Ä?          Äø          Äø          Äø       Ä  Äø          Äø          Äø  Ä?≤’p3c%≥  Ä?    
+c%¥  Ä?≤’3c•≥  Ä?≤’3c•≥  Ä?≤’3Ôÿ•®  Ä?≤’p3c%≥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*TM_ANIMATION {
+		*NODE_NAME "bump02"
+		*CONTROL_SCALE_TRACK {
+			*CONTROL_SCALE_SAMPLE 0	1.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8160	1.20000005	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8320	1.39999998	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8480	1.60000026	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8640	1.80000007	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8800	2.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8960	2.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9120	2.39999986	0.99999988	0.99999988 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9280	2.60000014	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9440	2.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9600	3.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9760	3.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9920	3.40000010	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10080	3.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10240	3.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10400	4.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10560	4.20000029	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10720	4.40000010	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10880	4.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11040	4.79999971	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11200	5.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+		}
+	}
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	0.00000000
+			*CONTROL_FLOAT_KEY 160	0.02000000
+			*CONTROL_FLOAT_KEY 320	0.04000000
+			*CONTROL_FLOAT_KEY 480	0.06000000
+			*CONTROL_FLOAT_KEY 640	0.08000001
+			*CONTROL_FLOAT_KEY 800	0.10000001
+			*CONTROL_FLOAT_KEY 960	0.12000000
+			*CONTROL_FLOAT_KEY 1120	0.14000003
+			*CONTROL_FLOAT_KEY 1280	0.16000001
+			*CONTROL_FLOAT_KEY 1440	0.18000002
+			*CONTROL_FLOAT_KEY 1600	0.20000002
+			*CONTROL_FLOAT_KEY 1760	0.21999998
+			*CONTROL_FLOAT_KEY 1920	0.24000001
+			*CONTROL_FLOAT_KEY 2080	0.26000002
+			*CONTROL_FLOAT_KEY 2240	0.28000003
+			*CONTROL_FLOAT_KEY 2400	0.30000001
+			*CONTROL_FLOAT_KEY 2560	0.32000002
+			*CONTROL_FLOAT_KEY 2720	0.33999997
+			*CONTROL_FLOAT_KEY 2880	0.36000001
+			*CONTROL_FLOAT_KEY 3040	0.38000003
+			*CONTROL_FLOAT_KEY 3200	0.40000004
+			*CONTROL_FLOAT_KEY 3360	0.42000002
+			*CONTROL_FLOAT_KEY 3520	0.44000000
+			*CONTROL_FLOAT_KEY 3680	0.45999998
+			*CONTROL_FLOAT_KEY 3840	0.47999999
+			*CONTROL_FLOAT_KEY 4000	0.50000000
+			*CONTROL_FLOAT_KEY 4160	0.51999998
+			*CONTROL_FLOAT_KEY 4320	0.54000002
+			*CONTROL_FLOAT_KEY 4480	0.56000000
+			*CONTROL_FLOAT_KEY 4640	0.57999992
+			*CONTROL_FLOAT_KEY 4800	0.59999996
+			*CONTROL_FLOAT_KEY 4960	0.62000000
+			*CONTROL_FLOAT_KEY 5120	0.63999999
+			*CONTROL_FLOAT_KEY 5280	0.66000003
+			*CONTROL_FLOAT_KEY 5440	0.68000001
+			*CONTROL_FLOAT_KEY 5600	0.69999999
+			*CONTROL_FLOAT_KEY 5760	0.71999997
+			*CONTROL_FLOAT_KEY 5920	0.74000001
+			*CONTROL_FLOAT_KEY 6080	0.75999999
+			*CONTROL_FLOAT_KEY 6240	0.77999991
+			*CONTROL_FLOAT_KEY 6400	0.80000001
+			*CONTROL_FLOAT_KEY 6560	0.81999999
+			*CONTROL_FLOAT_KEY 6720	0.83999997
+			*CONTROL_FLOAT_KEY 6880	0.85999995
+			*CONTROL_FLOAT_KEY 7040	0.88000000
+			*CONTROL_FLOAT_KEY 7200	0.89999998
+			*CONTROL_FLOAT_KEY 7360	0.92000002
+			*CONTROL_FLOAT_KEY 7520	0.94000000
+			*CONTROL_FLOAT_KEY 7680	0.95999998
+			*CONTROL_FLOAT_KEY 7840	0.98000002
+			*CONTROL_FLOAT_KEY 8000	1.00000000
+			*CONTROL_FLOAT_KEY 8001	1.00000000
+		}
+	}
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "05f63c50"
+	*NODE_PARENTID "05f4bd50"
+	*NODE_NAME "bump01"
+	*NODE_PARENT "bumprubber"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bump01"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.00000000	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 -0.04781585	-0.75147796	0.03979862
+		*TM_POS -0.04781585	-0.75147796	0.03979862
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 12
+		*MESH_NUMFACES 16
+		*MESH_VERTEX_LIST {
+ﬂ∂Ωd‘ÚªÏ¯4øæ∂Ω:'¯ªƒΩKø‚∂Ωœ` =708ø∂Ω>Ê=†ëHøVÚ9Ω¥¯ª≤ΩKøãÙ9Ωû¬Úª€¯4øüˆ9Ωc =&08øı9ΩoË=éëHøN∂Ω∞}ıªX[@økÛ9Ω(lıªF[@ø{∂Ωä# =Î`@øœı9Ωª% =⁄`@ø		}
+		*MESH_FACE_LIST {
+      	      
+      
+                   
+               	          
+          
+           		}
+		*MESH_NUMTVERTEX 33
+		*MESH_TVERTLIST {
+5èÈ>î Ë=f'?î Ë=9èÈ>Èû>f'?Èû>∂â&?gñ‡=∂â&? åû>√Í>gñ‡=√Í> åû>œﬂÎ>}ú>œﬂÎ>òÃÍ=›⁄&?}ú>›⁄&?òÃÍ=øÑ>8SÅ=s>∆3c>iú8>8SÅ=iú8>∆3c>iú8>8SÅ=¥nÈ>2≤ú>¥nÈ>≠äÚ=TÌ%?2≤ú>TÌ%?≠äÚ=TÌ%?2≤ú>f'?Aˇ„=9èÈ>Bˇ„=∂â&?gñ‡=√Í>gñ‡=∂â&?gñ‡=iú8>∆3c>tI¸=∆3c>iú8>8SÅ=©ÆŒ=8SÅ=iú8>8SÅ=tI¸=∆3c>		}
+		*MESH_NUMTVFACES 16
+		*MESH_TFACELIST {
+              	 
+  
+ 	                                		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+÷15F®Ô)  Ä?÷±41C≠4  Ä?’14bÚ5  Ä?KÄ©-C-5  Ä?’14bÚ5  Ä?÷±41C≠4  Ä?„1µ      Äø,l¥yé µ  Äø‚±¥π’¥  Äø/^)µ’pµ  Äø‚±¥π’¥  Äø,l¥yé µ  Äø77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ77¥ÏHw?ˆtÑæ  Äø©ﬁﬂ)c%4  Äø∫’3c•3  Äø%á2<ù92  Äø≥’3„ˇÈ®  Äø%á2<ù92  Äø∫’3c•3    ÌHwøÎtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæ    ÌHwøÍtÑæKÄ©-C-5  Ä?D®Ô®+C-5  Ä?’14bÚ5  Ä?    +C-5  Ä?’14bÚ5  Ä?D®Ô®+C-5  Ä?,l¥yé µ  Äø·è&)≤’pµ  Äø/^)µ’pµ  Äø    ≤’pµ  Äø/^)µ’pµ  Äø·è&)≤’pµ  Äø  Äø≥’3„ˇÈ®  Äø.C≠≥r˜m≥  Äø%á2<ù92  Äø.C-¥r˜Ì≥  Äø%á2<ù92  Äø.C≠≥r˜m≥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*TM_ANIMATION {
+		*NODE_NAME "bump01"
+		*CONTROL_SCALE_TRACK {
+			*CONTROL_SCALE_SAMPLE 0	1.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8160	1.20000005	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8320	1.39999998	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8480	1.60000026	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8640	1.80000007	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8800	2.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 8960	2.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9120	2.39999986	0.99999988	0.99999988 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9280	2.60000014	1.00000012	1.00000012 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9440	2.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9600	3.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9760	3.20000005	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 9920	3.40000010	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10080	3.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10240	3.79999995	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10400	4.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10560	4.20000029	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10720	4.40000010	0.99999994	0.99999994 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 10880	4.59999990	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11040	4.79999971	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+			*CONTROL_SCALE_SAMPLE 11200	5.00000000	1.00000000	1.00000000 0.00000000	0.00000000	0.00000000	0.00000000
+		}
+	}
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	0.00000000
+			*CONTROL_FLOAT_KEY 160	0.02000000
+			*CONTROL_FLOAT_KEY 320	0.04000000
+			*CONTROL_FLOAT_KEY 480	0.06000000
+			*CONTROL_FLOAT_KEY 640	0.08000001
+			*CONTROL_FLOAT_KEY 800	0.10000001
+			*CONTROL_FLOAT_KEY 960	0.12000000
+			*CONTROL_FLOAT_KEY 1120	0.14000003
+			*CONTROL_FLOAT_KEY 1280	0.16000001
+			*CONTROL_FLOAT_KEY 1440	0.18000002
+			*CONTROL_FLOAT_KEY 1600	0.20000002
+			*CONTROL_FLOAT_KEY 1760	0.21999998
+			*CONTROL_FLOAT_KEY 1920	0.24000001
+			*CONTROL_FLOAT_KEY 2080	0.26000002
+			*CONTROL_FLOAT_KEY 2240	0.28000003
+			*CONTROL_FLOAT_KEY 2400	0.30000001
+			*CONTROL_FLOAT_KEY 2560	0.32000002
+			*CONTROL_FLOAT_KEY 2720	0.33999997
+			*CONTROL_FLOAT_KEY 2880	0.36000001
+			*CONTROL_FLOAT_KEY 3040	0.38000003
+			*CONTROL_FLOAT_KEY 3200	0.40000004
+			*CONTROL_FLOAT_KEY 3360	0.42000002
+			*CONTROL_FLOAT_KEY 3520	0.44000000
+			*CONTROL_FLOAT_KEY 3680	0.45999998
+			*CONTROL_FLOAT_KEY 3840	0.47999999
+			*CONTROL_FLOAT_KEY 4000	0.50000000
+			*CONTROL_FLOAT_KEY 4160	0.51999998
+			*CONTROL_FLOAT_KEY 4320	0.54000002
+			*CONTROL_FLOAT_KEY 4480	0.56000000
+			*CONTROL_FLOAT_KEY 4640	0.57999992
+			*CONTROL_FLOAT_KEY 4800	0.59999996
+			*CONTROL_FLOAT_KEY 4960	0.62000000
+			*CONTROL_FLOAT_KEY 5120	0.63999999
+			*CONTROL_FLOAT_KEY 5280	0.66000003
+			*CONTROL_FLOAT_KEY 5440	0.68000001
+			*CONTROL_FLOAT_KEY 5600	0.69999999
+			*CONTROL_FLOAT_KEY 5760	0.71999997
+			*CONTROL_FLOAT_KEY 5920	0.74000001
+			*CONTROL_FLOAT_KEY 6080	0.75999999
+			*CONTROL_FLOAT_KEY 6240	0.77999991
+			*CONTROL_FLOAT_KEY 6400	0.80000001
+			*CONTROL_FLOAT_KEY 6560	0.81999999
+			*CONTROL_FLOAT_KEY 6720	0.83999997
+			*CONTROL_FLOAT_KEY 6880	0.85999995
+			*CONTROL_FLOAT_KEY 7040	0.88000000
+			*CONTROL_FLOAT_KEY 7200	0.89999998
+			*CONTROL_FLOAT_KEY 7360	0.92000002
+			*CONTROL_FLOAT_KEY 7520	0.94000000
+			*CONTROL_FLOAT_KEY 7680	0.95999998
+			*CONTROL_FLOAT_KEY 7840	0.98000002
+			*CONTROL_FLOAT_KEY 8000	1.00000000
+			*CONTROL_FLOAT_KEY 8001	1.00000000
+		}
+	}
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "05f610b0"
+	*NODE_PARENTID "05f4bd50"
+	*NODE_NAME "bumpbeam"
+	*NODE_PARENT "bumprubber"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+		nolight
+		texvel 0 0.1 0
+	}
+	*NODE_TM {
+		*NODE_NAME "bumpbeam"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 1.00000000	0.00000000	0.00000000
+		*TM_ROW1 0.00000000	1.24000001	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.24000001
+		*TM_ROW3 0.00002266	-0.75057104	0.01712267
+		*TM_POS 0.00002266	-0.75057104	0.01712267
+		*TM_ROTAXIS 0.00000000	0.00000000	0.00000000
+		*TM_ROTANGLE 0.00000000
+		*TM_SCALE 1.00000000	1.24000001	1.24000001
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 18
+		*MESH_NUMFACES 32
+		*MESH_VERTEX_LIST {
+Æ2∂=y¯>ºË2øŒ3∂=jEBº´?Nø®1∂=—√<=… 6øy2∂=·+<=ûPJøŸ‰Ω7°[Bºÿ?Nø∂ÿΩ7∞?º2øÑ—Ω7Dæ<=ˆ 6ø^÷Ω7S&<= PJø>3∂=ﬂû@º…!@ø«ﬁΩ7µ@ºˆ!@ø2∂=ÿw<=≥(@øÒ”Ω7Kr<=‡(@øﬂ∂ΩÊ$?º@2øΩ∂ΩÿqBº@Nø‚∂Ω∂∏<="6ø∂Ωº <=˜PJøM∂ΩLÀ@º""@øz∂ΩΩl<=)@ø		}
+		*MESH_FACE_LIST {
+      	       
+    
+                    
+                 	    	      
+    
+           
+         	                                             	                              		}
+		*MESH_NUMTVERTEX 67
+		*MESH_TVERTLIST {
+7èÈ>î Ë=7èÈ>Èû>X•&?î Ë=W•&?Èû>‹Í>§€=h&?§€=‹Í>eOù>h&?eOù>[&?}ú>6‡Í>}ú>[&?°ÃÍ=9‡Í>ùÃÍ=øÑ>8SÅ=iú8>8SÅ=s>∆3c>iú8>∆3c>iú8>8SÅ=s¶Í>ŸÎ=ı%?ŸÎ=s¶Í>˜9ú>ı%?˜9ú>ı%?ŸÎ=7èÈ>Bˇ„=X•&?Aˇ„=7èÈ>Bˇ„=h&?§€=‹Í>§€=h&?§€=iú8>8SÅ=©ÆŒ=8SÅ=tI¸=∆3c>tI¸=∆3c>iú8>∆3c>iú8>8SÅ=5èÈ>î Ë=f'?î Ë=9èÈ>Èû>f'?Èû>∂â&?gñ‡=∂â&? åû>√Í>gñ‡=√Í> åû>œﬂÎ>}ú>œﬂÎ>òÃÍ=›⁄&?}ú>›⁄&?òÃÍ=øÑ>8SÅ=s>∆3c>iú8>8SÅ=iú8>∆3c>iú8>8SÅ=¥nÈ>2≤ú>¥nÈ>≠äÚ=TÌ%?2≤ú>TÌ%?≠äÚ=TÌ%?2≤ú>f'?Aˇ„=9èÈ>Bˇ„=∂â&?gñ‡=√Í>gñ‡=∂â&?gñ‡=iú8>∆3c>tI¸=∆3c>iú8>8SÅ=©ÆŒ=8SÅ=iú8>8SÅ=tI¸=∆3c>		}
+		*MESH_NUMTVFACES 32
+		*MESH_TFACELIST {
+              	 
+  
+ 	                               ! " # $ % $ # & ' ( ) ( ' * + , - , + . / 0 1 2 / 3 4 5 6 7 4 % 8 $ 9 $ 8 ' : ) ; ) < = > ? @ A B 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+       Ä  Ä?˚Yú(9g4  Ä?          Ä?mü;)3Íœ4  Ä?          Ä?˚Yú(9g4  Ä?          Äø          Äø          Äøúä≥à™@¥  Äø          Äø          Äø)]ß3ÌHw?ËtÑæZ{3ÏHw?ÔtÑæ:\ß2ÌHw?ÎtÑæ Äe´ÏHw?ÔtÑæ:\ß2ÌHw?ÎtÑæZ{3ÏHw?ÔtÑæ  Ä?          Ä?≤’p3c%≥  Ä?          Ä?≤’3Ôÿ•®  Ä?          Ä?≤’p3c%≥Ã˚≥ÓHwø„tÑæ˚≥ÓHwø„tÑæ$e¥ÓHwø‰tÑæ˚≥ÓHwø„tÑæ$e¥ÓHwø‰tÑæ˚≥ÓHwø„tÑæ˚Yú(9g4  Ä?îí)+C-5  Ä?mü;)3Íœ4  Ä?ÊØ),C-5  Ä?mü;)3Íœ4  Ä?îí)+C-5  Ä?úä≥à™@¥  ÄøÁ≥Ü6,  Äø          Äø       Ä  Äø          ÄøÁ≥Ü6,  Äø  Ä?≤’p3c%≥  Ä?    
+c%¥  Ä?≤’3c•≥  Ä?≤’3c•≥  Ä?≤’3Ôÿ•®  Ä?≤’p3c%≥          Ä?          Ä?™Ê/),C≠4  Ä?mü;)3Íœ4  Ä?™Ê/),C≠4  Ä?          Ä?          Äøˇ"©wé†¥  Äø          Äøúä≥à™@¥  Äø          Äøˇ"©wé†¥  Äø9]'4ÎHw?ˆtÑæL4—3ÏHw?ÚtÑæZ{3ÏHw?ÔtÑæ Äe´ÏHw?ÔtÑæZ{3ÏHw?ÔtÑæL4—3ÏHw?ÚtÑæ  Äø©ﬁﬂ)c%4  Äø∫’3c•3  Äø%á2<ù92  Äø≥’3M˜È®  Äø%á2<ù92  Äø∫’3c•3Ã˚≥ÓHwø„tÑæ$e¥ÓHwø‰tÑæπD?¥ÓHwøÊtÑæ_ÅÄ¥ÌHwøÍtÑæπD?¥ÓHwøÊtÑæ$e¥ÓHwø‰tÑæmü;)3Íœ4  Ä?ÊØ),C-5  Ä?™Ê/),C≠4  Ä?ÊØ),C-5  Ä?™Ê/),C≠4  Ä?ÊØ),C-5  Ä?ˇ"©wé†¥  ÄøC-¥*’¥  Äøúä≥à™@¥  ÄøÁ≥Ü6,  Äøúä≥à™@¥  ÄøC-¥*’¥  Äø  Äø≥’3M˜È®  Äø/C≠≥r˜m≥  Äø%á2<ù92  Äø/C-¥r˜Ì≥  Äø%á2<ù92  Äø/C≠≥r˜m≥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	1.00000000
+			*CONTROL_FLOAT_KEY 160	0.98000008
+			*CONTROL_FLOAT_KEY 320	0.95999992
+			*CONTROL_FLOAT_KEY 480	0.94000000
+			*CONTROL_FLOAT_KEY 640	0.92000002
+			*CONTROL_FLOAT_KEY 800	0.89999992
+			*CONTROL_FLOAT_KEY 960	0.88000000
+			*CONTROL_FLOAT_KEY 1120	0.86000001
+			*CONTROL_FLOAT_KEY 1280	0.84000009
+			*CONTROL_FLOAT_KEY 1440	0.81999999
+			*CONTROL_FLOAT_KEY 1600	0.80000001
+			*CONTROL_FLOAT_KEY 1760	0.77999991
+			*CONTROL_FLOAT_KEY 1920	0.75999993
+			*CONTROL_FLOAT_KEY 2080	0.74000001
+			*CONTROL_FLOAT_KEY 2240	0.72000009
+			*CONTROL_FLOAT_KEY 2400	0.69999999
+			*CONTROL_FLOAT_KEY 2560	0.68000001
+			*CONTROL_FLOAT_KEY 2720	0.65999991
+			*CONTROL_FLOAT_KEY 2880	0.63999999
+			*CONTROL_FLOAT_KEY 3040	0.62000000
+			*CONTROL_FLOAT_KEY 3200	0.60000008
+			*CONTROL_FLOAT_KEY 3360	0.58000010
+			*CONTROL_FLOAT_KEY 3520	0.56000000
+			*CONTROL_FLOAT_KEY 3680	0.53999990
+			*CONTROL_FLOAT_KEY 3840	0.51999998
+			*CONTROL_FLOAT_KEY 4000	0.50000000
+			*CONTROL_FLOAT_KEY 4160	0.48000002
+			*CONTROL_FLOAT_KEY 4320	0.45999998
+			*CONTROL_FLOAT_KEY 4480	0.44000000
+			*CONTROL_FLOAT_KEY 4640	0.42000002
+			*CONTROL_FLOAT_KEY 4800	0.39999998
+			*CONTROL_FLOAT_KEY 4960	0.38000000
+			*CONTROL_FLOAT_KEY 5120	0.36000001
+			*CONTROL_FLOAT_KEY 5280	0.33999997
+			*CONTROL_FLOAT_KEY 5440	0.31999999
+			*CONTROL_FLOAT_KEY 5600	0.30000001
+			*CONTROL_FLOAT_KEY 5760	0.27999997
+			*CONTROL_FLOAT_KEY 5920	0.26000002
+			*CONTROL_FLOAT_KEY 6080	0.24000002
+			*CONTROL_FLOAT_KEY 6240	0.22000004
+			*CONTROL_FLOAT_KEY 6400	0.20000000
+			*CONTROL_FLOAT_KEY 6560	0.18000002
+			*CONTROL_FLOAT_KEY 6720	0.16000004
+			*CONTROL_FLOAT_KEY 6880	0.14000000
+			*CONTROL_FLOAT_KEY 7040	0.12000001
+			*CONTROL_FLOAT_KEY 7200	0.10000003
+			*CONTROL_FLOAT_KEY 7360	0.07999999
+			*CONTROL_FLOAT_KEY 7520	0.06000001
+			*CONTROL_FLOAT_KEY 7680	0.04000003
+			*CONTROL_FLOAT_KEY 7840	0.01999998
+			*CONTROL_FLOAT_KEY 8000	0.00000000
+			*CONTROL_FLOAT_KEY 8001	0.00000000
+		}
+	}
+	*MATERIAL_REF 1
+}
+*GEOMOBJECT {
+	*NODE_ID "05f79030"
+	*NODE_PARENTID "02de8ac0"
+	*NODE_NAME "bumper07"
+	*NODE_PARENT "bumpfull"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumper07"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.00000017	1.00000000	0.00000000
+		*TM_ROW1 -1.00000000	-0.00000017	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.00002147	-0.75147796	0.03979862
+		*TM_POS 0.00002147	-0.75147796	0.03979862
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 1.57079649
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 30
+		*MESH_NUMFACES 48
+		*MESH_VERTEX_LIST {
+a&:=÷Ò˜ªéΩKø $:=ÛûÚª∑¯4ø$":=zg =08ø∏#:=Ï=këHøåW–7"¯ª†ΩKø!Vπ7‚<=ÌIøì[æ7±Úª…¯4ø¡A™7π≠<=÷6øUÚ9Ωo¯ª≤ΩKøäÙ9ΩO√Úª€¯4øûˆ9ΩÓb =&08ø ı9ΩUË=èëHø{&:=}√Æª‰MøÃ#:=o®ªΩ“2ø©!:=∞<=	÷6øÄ#:=,!<=
+ÌIøá"—7÷Æª#‰Møs¿ª7eÅ®ª–“2ø<Ú9ΩSËÆª5‰MøﬁÙ9Ωì®ª„“2ø˜9Ωo´<=-÷6ø6ı9Ωô<=.ÌIøA%:=FHıª"[@øÚ":=5* =∂`@ø2Y«7ìZıª4[@øö":=õh<=âa@øßÃ±7Qf<=õa@øjÛ9ΩﬁlıªF[@øŒı9Ω¢% =⁄`@ø(ˆ9Ωd<=Æa@ø		}
+		*MESH_FACE_LIST {
+                                                                                                                                      
+       
+   	 
+      	              	                                        	      	                                 		}
+		*MESH_NUMTVERTEX 68
+		*MESH_TVERTLIST {
+X•&?Aˇ„=Ñ-Í>Bˇ„=W•&?Èû>Ñ-Í>Èû>Z?‡√|?ôê6?ﬁ√|?Z?`ﬂG?ôê6?`ﬂG?êeà>ï>l]5>ï>íeà>XÅÊ=l]5>\ÅÊ='`_?˙D:?&`_?y~\?oES?˙D:?oES?y~\?f'?Aˇ„=f'?Èû>&|N?ﬁ√|?(|N?`ﬂG?lﬂ≥=ï>hﬂ≥=\ÅÊ='`_?{?oES?z?•A!?áæ?§A!?Ù¶7?∞î?Ù¶7?∞î?ï÷?£A!?aèO?
+ï!?Å∑w?áÖ?ı¶w?Æî?RwO?&§?±Öí>Nóı>µÖí>Nóı>pG>&§?jG>¬^Ó>T∫˙=&§?H∫˙=&§?¶Åò>¬^Ó>®Åò>ï!?“,Ô>âÖ?ÍMÔ>£A!?`èO?§A!?Ù¶7?Øî?Ù¶7?Øî?RwO?
+ï!?Ä∑w?áÖ?ı¶w?¶| ?±Öí>¶| ?jG>Ï$?H∫˙=Ï$?¶Åò>•A!?áæ?ï!?“,Ô>âÖ?ÍMÔ>∞î?ï÷?Ü-Í>î Ë=X•&?î Ë=\S?Ë~3?ô÷_?Ë~3?\S?g∏U?ô÷_?f∏U?ô÷_?Ë~3?f'?î Ë=\S?hE?ô÷_?hE?ô÷_?Ë~3?ô÷_?hE?		}
+		*MESH_NUMTVFACES 48
+		*MESH_TFACELIST {
+              	 
+  
+ 	                     	  	                      ! " " #   $ % & & ' $ (    ) ( * + , , - * . * - - / . 0   # # 1 0 % 2 3 3 & % 4 5 6 6 7 4  8  9  8 : ; < = < >  ?  8  ? @ A : B : C       + 4 , 7 , 4 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+=ûe©+C-5  Ä?˛îñ®*C-5  Ä?5¢)¥bÚ5  Ä?mÍ¸'.C-5  Ä?5¢)¥bÚ5  Ä?˛îñ®*C-5  Ä?          Äø          ÄømÔà(lßŒ¥  Äø    ¸˜¥  ÄømÔà(lßŒ¥  Äø          ÄøUK¢≥àÏt?'˘îæ∂mE≥àÏt?%˘îæUK"≥àÏt?&˘îæ    àÏt?&˘îæUK"≥àÏt?&˘îæ∂mE≥àÏt?%˘îæ
+êh≥äÏtø˘îæ
+êh≥äÏtø˘îæ™mE≥äÏtø˘îæ    âÏtø ˘îæ™mE≥äÏtø˘îæ
+êh≥äÏtø˘îæ    *C-5  Ä?    ,C-5  Ä?˛îñ®*C-5  Ä?mÍ¸'.C-5  Ä?˛îñ®*C-5  Ä?    ,C-5  Ä?          Äø    Ùƒâ¥  Äø          Äø    ¸˜¥  Äø          Äø    Ùƒâ¥  ÄøêË≥âÏt?"˘îæêh≥âÏt?$˘îæ∂mE≥àÏt?%˘îæ    àÏt?&˘îæ∂mE≥àÏt?%˘îæêh≥âÏt?$˘îæ
+êh≥äÏtø˘îæ™mE≥äÏtø˘îæKK"≥âÏtø˘îæKK¢≥âÏtø ˘îæKK"≥âÏtø˘îæ™mE≥äÏtø˘îæ  Ä?Ëí•µF≠5  Ä?Ëí•µF≠5  Ä?Ëí•µF≠5  Ä?ã˝öµ‡‚m5  Ä?ã˝öµ‡‚m5  Ä?ã˝öµ‡‚m5  Ä?˘)5^œJ5  Ä?˘)5^œJ5  Ä?˘)5^œJ5  Ä?"d5$/5  Ä?"d5$/5  Ä?"d5$/5UäØ2uÑæÍHw?UäØ2uÑæÍHw?UäØ2uÑæÍHw?'X)5õtÑæ¯Hw?'X)5õtÑæ¯Hw?'X)5õtÑæ¯Hw?–€#µuÑ>ÍHw?–€#µuÑ>ÍHw?–€#µuÑ>ÍHw?€äØ≤fuÑ>›Hw?€äØ≤fuÑ>›Hw?€äØ≤fuÑ>›Hw?  Ä?          Ä?          Ä?          Ä?   Ä      Ä?   Ä      Ä?   Ä      Äøg+G≠5  Äøg+G≠5  Äøg+G≠5  ÄøËß5`M±∂  ÄøËß5`M±∂  ÄøËß5`M±∂  Äø7VË6D∏yµ  Äø7VË6D∏yµ  Äø7VË6D∏yµ  Äø   Ä      Äø   Ä      Äø   Ä        õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?    õtÑæ¯Hw?ÃâØ2õtÑ>¯Hw?ÃâØ2õtÑ>¯Hw?ÃâØ2õtÑ>¯Hw?"X)5uÑ>ÍHw?"X)5uÑ>ÍHw?"X)5uÑ>ÍHw?  ÄøBQ•≤fQö3  ÄøBQ•≤fQö3  ÄøBQ•≤fQö3  Äø¯Yµí¥  Äø¯Yµí¥  Äø¯Yµí¥mÍ¸'.C-5  Ä?ô-b¥@Á4  Ä?5¢)¥bÚ5  Ä?4¢)µ      Ä?5¢)¥bÚ5  Ä?ô-b¥@Á4  Ä?    ¸˜¥  Äø    lßNµ  ÄømÔà(lßŒ¥  Äø    kßNµ  ÄømÔà(lßŒ¥  Äø    lßNµ  Äø    ,C-5  Ä?CûÂ(0C-5  Ä?mÍ¸'.C-5  Ä?ô-b¥@Á4  Ä?mÍ¸'.C-5  Ä?CûÂ(0C-5  Ä?    Ùƒâ¥  ÄømÔ©mßNµ  Äø    ¸˜¥  Äø    lßNµ  Äø    ¸˜¥  ÄømÔ©mßNµ  Äø  Ä?≤’≥G≠5  Ä?≤’≥G≠5  Ä?≤’≥G≠5  Ä?          Ä?          Ä?          ÄøÙ’3G≠5  ÄøÙ’3G≠5  ÄøÙ’3G≠5  ÄøûßŒ≥Ω¥Ô¥  ÄøûßŒ≥Ω¥Ô¥  ÄøûßŒ≥Ω¥Ô¥		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*NODE_VISIBILITY_TRACK {
+		*CONTROL_FLOAT_SAMPLE "Bezier Float" {
+			*CONTROL_FLOAT_KEY 0	0.00000000
+			*CONTROL_FLOAT_KEY 160	0.03333334
+			*CONTROL_FLOAT_KEY 320	0.06666667
+			*CONTROL_FLOAT_KEY 480	0.10000000
+			*CONTROL_FLOAT_KEY 640	0.13333336
+			*CONTROL_FLOAT_KEY 800	0.16666666
+			*CONTROL_FLOAT_KEY 960	0.20000002
+			*CONTROL_FLOAT_KEY 1120	0.23333332
+			*CONTROL_FLOAT_KEY 1280	0.26666671
+			*CONTROL_FLOAT_KEY 1440	0.30000001
+			*CONTROL_FLOAT_KEY 1600	0.33333331
+			*CONTROL_FLOAT_KEY 1760	0.36666664
+			*CONTROL_FLOAT_KEY 1920	0.40000004
+			*CONTROL_FLOAT_KEY 2080	0.43333334
+			*CONTROL_FLOAT_KEY 2240	0.46666661
+			*CONTROL_FLOAT_KEY 2400	0.50000000
+			*CONTROL_FLOAT_KEY 2560	0.53333336
+			*CONTROL_FLOAT_KEY 2720	0.56666666
+			*CONTROL_FLOAT_KEY 2880	0.59999996
+			*CONTROL_FLOAT_KEY 3040	0.63333333
+			*CONTROL_FLOAT_KEY 3200	0.66666669
+			*CONTROL_FLOAT_KEY 3360	0.69999999
+			*CONTROL_FLOAT_KEY 3520	0.73333329
+			*CONTROL_FLOAT_KEY 3680	0.76666659
+			*CONTROL_FLOAT_KEY 3840	0.80000001
+			*CONTROL_FLOAT_KEY 4000	0.83333331
+			*CONTROL_FLOAT_KEY 4160	0.86666667
+			*CONTROL_FLOAT_KEY 4320	0.89999998
+			*CONTROL_FLOAT_KEY 4480	0.93333328
+			*CONTROL_FLOAT_KEY 4640	0.96666664
+			*CONTROL_FLOAT_KEY 4800	1.00000000
+			*CONTROL_FLOAT_KEY 4801	1.00000000
+		}
+	}
+	*MATERIAL_REF 0
+}
+*GEOMOBJECT {
+	*NODE_ID "05f7a988"
+	*NODE_PARENTID "02cf0de8"
+	*NODE_NAME "bumper06"
+	*NODE_PARENT "bumppart01"
+	*NODE_USERPROPERTIES {
+		partLinkInf=bottom,self,body;
+		partStayLinked=true;
+		name=grpBumpercar;
+	}
+	*NODE_TM {
+		*NODE_NAME "bumper06"
+		*INHERIT_POS 0 0 0
+		*INHERIT_ROT 0 0 0
+		*INHERIT_SCL 0 0 0
+		*TM_ROW0 -0.00000017	1.00000000	0.00000000
+		*TM_ROW1 -1.00000000	-0.00000017	0.00000000
+		*TM_ROW2 0.00000000	0.00000000	1.00000000
+		*TM_ROW3 0.00000085	-0.68940520	0.01777274
+		*TM_POS 0.00000085	-0.68940520	0.01777274
+		*TM_ROTAXIS 0.00000000	0.00000000	-1.00000000
+		*TM_ROTANGLE 1.57079649
+		*TM_SCALE 1.00000000	1.00000000	1.00000000
+		*TM_SCALEAXIS 0.00000000	0.00000000	0.00000000
+		*TM_SCALEAXISANG 0.00000000
+	}
+	*MESH {
+		*TIMEVALUE 0
+		*MESH_NUMVERTEX 78
+		*MESH_NUMFACES 160
+		*MESH_VERTEX_LIST {
+7ç Ω§+ºK<ø)î =ló+º2<ømå Ω≠b÷ºk<øÙî =Z\÷ºR<ø\ê ΩÏ'ºÄLøë =⁄ﬂ'ºgLøêè ΩÚÜ‘ºüJø–ë =êÄ‘ºÖJø,ì =5k*º–2ø4é Ω€w*ºÈ2øˆì =M∆’ºÓ2økç Ω†Ã’º2øƒ¿Ωehí<Vˆ!ø@¿=H{í<
+ˆ!ø^¿ΩfD ;nÙ!øß¿=É€ ;"Ù!ø≈¿=¨ﬁë<ªm,ø@¿Ω»Àë<n,ø+	¿=,Ó˜:—k,øŸ¿Ω˚æˆ:l,ø#éºëÖ,º•∫Cøé<ï~,ºó∫Cøiéº7Iëº»πCøŒé<∏Eëº∫πCøê Ωa–;=
+ <øSë =ã”;=Ò<øŸê Ωª|=Ï!<øèê =„|=“!<ø2ì Ωeæ<=>Sø/é =é¡<=%Sø¸ì ΩØ}=Uøeç =◊	}=UøVê =®<=é2øë Ωo<=ß2øäè =Úf|=p2ø÷ë Ω»c|=â2ø+	¿Ωd
+==¯!ø⁄¿=âm
+=Ú˜!ø^¿=:
+=°o,øß¿Ω»
+=Ìo,ø–éºò;=e¡Cøié<¿ô;=W¡Cøäéº@Y=A¬CøØé<ˇY=3¬Cø
+í =D)ºÔö&øVè ΩÍ )ºõ&ø‚¿=,]˝:Mú&øz¿=ú5í<5û&øçé Ω(!’º'ô&ø’í =’’ºô&øä¿Ω∏"í<Åû&ø#¿Ω˚-¸:ôú&ø4è =dt<=≠°&ø-í Ω;q<=«°&ø¿=≥J
+=†&ø¯í ΩÖπ|=ß£&øhé =Ωº|=é£&ø¿Ω@A
+=h†&øØì6xGëº¡πCøá6Ç,ºû∫Cøgóµ4-Ê'ºtLøh~ì5»É‘ºíJøVÿ_6øù+º?<ø°E 6áq*º›2øOfâ6í_÷º^<ø‚RS6v…’º˚2ø„µØ5ó)º˚ö&ø,ﬂ
+6ﬂ’ºô&øR5Ç5 Y=:¬Cøy9±5·ò;=^¡Cø|¢ ∂˙ø<=1SøôòS∂D}=Uø,« 5ˆ—;=˝<øŸr∑¥<=ú2ø¨ù,¥P|=ﬂ!<øu5îµ]e|=|2ø§˝æµœr<=∫°&øiå∂)ª|=õ£&ø		}
+		*MESH_FACE_LIST {
+  ;   : ;     <    =  <     > 	   ? 	 >        
+      @ 
+   A 
+ @         	       , ?   B ? ,    .    /  .    0 A   C A 0    2    3  2                        
+          	          ,    /  ,   	 -    2  -   
+ 1    .  1    0    3  0                @    :  @              >    ;  >   ( E *   D * E     F   G F     ! H   I H !         "       " J   K J "    #    !  #     I 4   L 4 I   &  /   / 6 &    % /   # K 7   M 7 K    ' 2          %    $    $       & "   &      #  !    # '   / 4    2 5 !   " & 8   6 8 &    $ 7   9 7 $    *    *  (    * J   D J *    )    )  +    ) H   E H )   ,  B   < B    .  /    /    0  C   = C    2  3    3    ,      / ,   -      2 -   1      . 1   0      3 0   5  L   F L    6 / %   8  M   G M    9 2 '   4      4 /     /    5     5 2     2 !   6 % 8    8 %   9 ' 7   # 7 '   :  ;    ;    <  =    =    >  ?    ?    @  A    A    B - ?   	 ? -   C 1 A   
+ A 1   @      : @   >       ; >   E ) D   + D )   G  F    F    I   H    H     K # J    J #   I ! L   5 L !   K " M   8 M "   D + J    J +   E ( H    H (   <  B   - B    =  C   1 C    F  L   4 L    G  M   7 M    9 $    9  2   		}
+		*MESH_NUMTVERTEX 252
+		*MESH_TVERTLIST {
+8o/?∆M?À˛8?∆M?8o/?ƒ˛.? ˛8?ƒ˛.?$ú˜>BaJ?ﬁp˜>€(?öŸ‘>ß@?VÆ‘>C}(?‰Vñ>1E->fú8>1E->‰Vñ>Ûèò>fú8>Ûèò>ø@?#N?	1)?#N?Ω@?núp?	1)?núp?ËfØ>‹›'?xÁ>‹›'?ÍfØ>”W}?xÁ>”W}?ÍfØ>”W}?	1)?#N?ø@?#N?	1)?núp?Ω@?núp?É~ì>¨ú%?"·>¨ú%?É~ì>¥≠;?"·>¥≠;?É~ì>¥≠;?ÌŸ?¿˜?ÌŸ?√s?∞«Ë>ø˜?∞«Ë>√s?∑À=ëv$?Ç3)>ív$?¥À=sæ:?Ç3)>tæ:?¥À=sæ:?∞«Ë>¿˜?∞«Ë>√s?ÌŸ?¿˜?ÌŸ?√s?hß‘>9@?Úi˜>¥{J?3˜>Gnp?fÚ“>z˘o?jR”>‰∆o?ì˜>±;p?Ói˜>∂{J?dß‘>9@?fÚ“>z˘o?3˜>Gnp?öŸ‘>ß@?$ú˜>BaJ?ì˜>±;p?jR”>‰∆o?xJ
+=¨ú%?∫=`ÑÛ>0>`ÑÛ>∫=`ÑÛ>É~ì>ææQ?"·>ææQ?|0ì>:ô}?.>:ô}?|0ì>:ô}?±À=SQ?Å3)>TQ?åÿ=–M}?
+û0>–M}?åÿ=–M}?üΩè>ÁÕA?:w'>ÁÕA?∂rè>‰÷{?=w'>‰÷{?∆/?Ñ≠*?´I:?Ñ≠*?O?⁄›'?Xv?n!Ô>vÁ>n!Ô>Xv?n!Ô>´I:?Ñ≠*?∆/?Ñ≠*?â=1E->a¯=e˙ë=fú8>i˙ë=)9?∆M?(9?¬˛.?ñ~/?∆M?ñ~/?¡˛.?\Ïˆ>⁄J?Y‘>‚??¡ˆ>´á(?¨.‘>∞@(?‰Vñ>.E->‰Vñ>Òèò>oú8>.E->jú8>Òèò>Nr@?#N?Lr@?núp?òã)?#N?ñã)?múp?ËfØ>⁄›'?ÍfØ>—W}?}Á>⁄›'?~Á>—W}?ÍfØ>—W}?òã)?#N?ñã)?múp?Nr@?#N?Lr@?núp?Ö~ì>¨ú%?Ñ~ì>µ≠;?$·>¨ú%?$·>∂≠;?Ñ~ì>µ≠;?Ü€≈>¿˜?É€≈>√s?∞«Ë>i%?É€≈>i%?·=w#?·=å„8?¥(>w#?¥(>ã„8?·=å„8?Ü€≈>¿˜?∫'‘>à¸??*∫ˆ>M(J?^S‘>Ù†p?`≥‘>\np?*∫ˆ>P(J?`S‘>Ù†p?¬'‘>à¸??ÙY‘>‚??^Ïˆ>‹J?b≥‘>^np?=w'>™Ã{?:w'>´√A?úΩè>´√A?=w'>‰÷{?:w'>ÁÕA?»ç=ÁÕA?·=PN?Ó=å„x?¥(>PN?ﬂE/>ç„x?Ó=å„x?ùΩè>ÁÕA?∂rè>‰÷{?:w'>ÁÕA?=w'>‰÷{?û 0?Ñ≠*?:§:?Ñ≠*?O?Ÿ›'?Xv?j!Ô>|Á>j!Ô>Xv?j!Ô>:§:?Ñ≠*?û 0?Ñ≠*?â=.E->f¯=`˙ë=oú8>`˙ë=xJ
+=¨ú%?xJ
+=¥≠;?xJ
+=¨ú%?ÌŸ?i%?àë>ív$?àë>tæ:?àë>ív$?∞«Ë>i%?ÔŸ?i%?É~ì>¨ú%?~0ì>aÑÛ>~0ì>aÑÛ>0>`ÑÛ>xJ
+=ææQ?Ë∫=:ô}?Ë∫=:ô}?.>:ô}?àë>UQ?h∆ë>–M}?h∆ë>–M}?
+û0>–M}?–ç=ÁÕA?‡‰=‰÷{?#·>ææQ?àJ
+=ææQ?àJ
+=∂≠;?àJ
+=ææQ?µÇè>PN?¥Çè>å„8?µÇè>PN?É€≈>√s?–‰=©Ã{?»ç=¨√A?∂rè>©Ã{?∂rè>‰÷{?ùΩè>ÁÕA?–‰=‰÷{?ﬂE/>ç„x?¡è>ç„x?µÇè>PN?¡è>ç„x?–‰=‰÷{?∏ç=ÁÕA?À˛8?¿ØG?8o/?¿ØG?â=Ûèò>O?⁄›'?O?”W}?O?⁄›'?É~ì>¥≠;?É~ì>ææQ?É~ì>¥≠;?¥À=sæ:?±À=SQ?¥À=sæ:?ËfØ>‹›'?BØ>n!Ô>BØ>n!Ô>vÁ>n!Ô>§ºx>e˙ë=)9?¿ØG?ñ~/?øØG?â=Òèò>O?—W}?O?Ÿ›'?O?—W}?Ñ~ì>µ≠;?Ö~ì>ææQ?Ö~ì>ææQ?·=å„8?·=PN?·=PN?|Á>j!Ô>BØ>j!Ô>ËfØ>⁄›'?BØ>j!Ô>§ºx>`˙ë=xJ
+=¥≠;?xJ
+=ææQ?xJ
+=ææQ?àë>tæ:?àë>UQ?àë>UQ?àJ
+=∂≠;?àJ
+=¨ú%?àJ
+=¨ú%?¥Çè>å„8?µÇè>w#?µÇè>w#?Å€≈>i%?		}
+		*MESH_NUMTVFACES 160
+		*MESH_TFACELIST {
+              	 
+  
+ 	                             !    " # $ % & # ' ( ) * ) ( + , - - . +   / / 0  1 2 3 3 4 1 5 6 7 7 8 5 9  : ; <  = > ? @ A > B C D E F C G H I J I H   K K L  M  N O P    Q Q R  S 	 T U T 	 V W X Y X W Z [ \ ] \ [ ^ _ ` a ` _ b c d e d c f g h i h j k l m n m l o p q r q s t   ! ! u t v w ! x y z { z | ' } ( ~ -  - ~ Ä Z Å [ Å Z 0 Ç É Ñ É Ç 4 Ö 7 Ü 7 Ö á à â ä ã å ç é è ê ë ê í ì î ï ñ ï î m ó k ó m ò ô ö h õ h ú d ù b ù d û ü † ` ° ` †  ¢  £  §  • ! v ! • # ¶ % ß % ® ( © * ™ * ©  ´ ¨ ≠ Æ  > Ø ∞ ± ≤ > C ≥ ¥ µ ∂ C H ∑ ∏ ∏ J H π ∫ r ª r º u ! w ê Ω { æ { ø ¿ ( } â ¡ ¬ â à ¡ √ à ä å ƒ ≈ å ã ƒ ∆ ã ç « » ê … ê   ñ À ï Ã ï À  Õ  Œ  Õ  ,  +  , 	 S  œ  S  –  —  “  > ” ‘ ’ > % C ÷ ◊ ÿ C  Ÿ ⁄ € ‹  	  › › U 	 W ﬁ Y ﬂ Y ﬁ ] ~ \  \ ~ a ‡ ` ü ` ‡ i · h ‚ h „ ‰ Â r π r Ê Á Ë { ê { È Í Î h Ï h Ì ° Ó ` ^ ` Ó Ô   >  Ò Ú Û % C % Ù ı ˆ r q r ˜ ¯ ˘ { z { ˙ ¿ ˚ © ¿ © ( 		}
+		*MESH_NUMCVERTEX 0
+		*MESH_NORMALS {
+      Äø   Ä      Äø          Äø          Äø          Äø          Äø          Ä?          Ä?          Ä?          Ä?          Ä?          Ä?              Äø          Äø          Äø          Äø          Äø          Äø  Ä?          Ä?          Ä?          Ä?       Ä  Ä?          Ä?        úzu5õDµ  Ä?UU%+É¥  Ä?ß£4É¥  Ä?F¥áå4  Ä?ß£4É¥  Ä?UU%+É¥  Ä?  ÄøíÜ<*ëzu¥  ÄøíÜº)Çzu¥  ÄøíÜº)Çzu¥  Äø    szu¥  ÄøíÜº)Çzu¥  ÄøíÜº)Çzu¥          Äø          Äø          Äø          Äø          Äø          Äø  Ä?          Ä?8O‚3≠a°¥  Ä?Ob4ìa!¥  Ä?∑:¿≤n€6*  Ä?Ob4ìa!¥  Ä?8O‚3≠a°¥    õƒ¥  Ä?ˇ¶£5 |Â4  Ä?F¥áå4  Ä?»¶#4Âkò3  Ä?F¥áå4  Ä?ˇ¶£5 |Â4  Ä?  Äø          Äø          Äø          Äø          Äø          Äø        e∆™>Wq?   Äe∆™>Wq?   Äe∆™>Wq?   Äe∆™>Wq?    e∆™>Wq?    e∆™>Wq?    i∆™æWq?í¡£3i∆™æWq?í¡£3i∆™æWq?í¡£3h∆™æWq?    h∆™æWq?    h∆™æWq?    K∆™>Wqø    K∆™>Wqø    K∆™>Wqø    _∆™>Wqøª5d6_∆™>Wqøª5d6_∆™>Wqøª5d6L∆™æWqøw¡£≥L∆™æWqøw¡£≥L∆™æWqøw¡£≥O∆™æWqø   ÄO∆™æWqø   ÄO∆™æWqø   Ä©±“æ    ŒQiø©±“æ    ŒQiø©±“æ    ŒQiø´±“æ6M.4ÕQiø´±“æ6M.4ÕQiø´±“æ6M.4ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø¨±“>    ÕQiø∞Q—>    Ù†i?∞Q—>    Ù†i?∞Q—>    Ù†i?±Q—>   ÄÙ†i?±Q—>   ÄÙ†i?±Q—>   ÄÙ†i?©Q—æB{3ı†i?©Q—æB{3ı†i?©Q—æB{3ı†i?©Q—æ    ı†i?©Q—æ    ı†i?©Q—æ    ı†i?æígø∂C⁄æN^¥æígø∂C⁄æN^¥æígø∂C⁄æN^¥æígø¥C⁄æ†’q4æígø¥C⁄æ†’q4æígø¥C⁄æ†’q4#lµ™=åæ£5v?#lµ™=åæ£5v?#lµ™=åæ£5v?    π=åæ†5v?    π=åæ†5v?    π=åæ†5v?¬íg?§C⁄æ    ¬íg?§C⁄æ    ¬íg?§C⁄æ    ¡íg?®C⁄æ£’q4¡íg?®C⁄æ£’q4¡íg?®C⁄æ£’q4          Äø          Äø          Äø          Äø          Äø          Äø   Ä  ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      Ä?   Äîzu5  Ä?±zıµ  ¿*  Ä?Øzıµ  @+  Ä?Øzu∂  ¿*  Ä?Øzıµîzu5  Ä?±zıµ          Ä?òzu5\85  Ä?§zı4Ytì5  Ä?
+bD5ÚH5  Ä?§zı4Ytì5  Ä?òzu5\85  Ä?  Ä?–d,◊∏5  Ä?€¨4ml5  Ä?€¨4ml5  Ä?∏,5S{u¥  Ä?€¨4ml5  Ä?€¨4ml5       Ä  Äø    Ú,µ  Äø          Äøbƒ¥¬∞	µ  Äø          Äø    Ú,µ  Äø  Äø          Äø          Äø          Äø          Äø          Äø        ´™J¢É5  Ä?
+bD5ÚH5  Ä?    ,ˇ4  Ä?Få4rÚÖ5  Ä?    ,ˇ4  Ä?
+bD5ÚH5  Ä?  Ä?Qª)4¨r4  Ä?Ob4ìa!¥  Ä?∑:¿≤n€6*  Ä?∑:¿≤n€6*  Ä?    ÑÚ4  Ä?Qª)4¨r4  Ä?6»”¥      Ä?6»S¥Ör4  Ä?∑:¿≤n€6*          Äøbƒ¥¬∞	µ  Äøß£µ˘Srµ  Äø
+Fµà4Jµ  Äøß£µ˘Srµ  Äøbƒ¥¬∞	µ  Äø  Äø          Äø          Äø        e∆™>Wq?    e∆™>Wq?    e∆™>Wq?    f∆™>Wq?    f∆™>Wq?    f∆™>Wq?    j∆™æWq?∫¡#¥j∆™æWq?∫¡#¥j∆™æWq?∫¡#¥i∆™æWq?    i∆™æWq?    i∆™æWq?    8∆™>Wqø·/]68∆™>Wqø·/]68∆™>Wqø·/]6_∆™>Wqøª5d∂_∆™>Wqøª5d∂_∆™>Wqøª5d∂ ∆™æWqø∆kg6 ∆™æWqø∆kg6 ∆™æWqø∆kg6i∆™æWqø    i∆™æWqø    i∆™æWqø    ©±“ævlÆ5ŒQi?©±“ævlÆ5ŒQi?©±“ævlÆ5ŒQi?≠±“>e›ú5ÕQi?≠±“>e›ú5ÕQi?≠±“>e›ú5ÕQi?£Q—>êùµ˜†iø£Q—>êùµ˜†iø£Q—>êùµ˜†iø∞Q—>    Ù†iø∞Q—>    Ù†iø∞Q—>    Ù†iøßQ—æÔﬂ§µˆ†iøßQ—æÔﬂ§µˆ†iøßQ—æÔﬂ§µˆ†iøûQ—æ    ¯†iøûQ—æ    ¯†iøûQ—æ    ¯†iø¿ígø´C⁄æ*K—5¿ígø´C⁄æ*K—5¿ígø´C⁄æ*K—5»ígøäC⁄æ5Ôc∂»ígøäC⁄æ5Ôc∂»ígøäC⁄æ5Ôc∂    ú=åæ•5vø    ú=åæ•5vø    ú=åæ•5vø    ù=åæ•5vø    ù=åæ•5vø    ù=åæ•5vø«íg?èC⁄æÆä¶5«íg?èC⁄æÆä¶5«íg?èC⁄æÆä¶5∑íg?“C⁄æÅÔc∂∑íg?“C⁄æÅÔc∂∑íg?“C⁄æÅÔc∂       Ä  Ä?       Ä  Ä?       Ä  Ä?          Ä?          Ä?          Ä?          Äø          Äø          Äø          Äø          Äø          Äø  Ä?8O‚3≠a°¥  Ä?»S¥Ör¥  Ä?∑:¿≤n€6*  Ä?6»”¥      Ä?∑:¿≤n€6*  Ä?»S¥Ör¥ˇ¶£5 |Â4  Ä?zu5a?µ  Ä?»¶#4Âkò3  Ä?úzı4aøµ  Ä?»¶#4Âkò3  Ä?zu5a?µ  Ä?  Äø          Äø          Äø          Äø          Äø          Äø        ©±“æ    ŒQiø©±“æ    ŒQiø©±“æ    ŒQiø™±“æt±¥ŒQiø™±“æt±¥ŒQiø™±“æt±¥ŒQiø≠±“>kÇ3ÕQiø≠±“>kÇ3ÕQiø≠±“>kÇ3ÕQiø≠±“>    ÕQiø≠±“>    ÕQiø≠±“>    ÕQiø†Q—>§ß.5˜†i?†Q—>§ß.5˜†i?†Q—>§ß.5˜†i?±Q—>_F¡µÙ†i?±Q—>_F¡µÙ†i?±Q—>_F¡µÙ†i?©Q—æ    ı†i?©Q—æ    ı†i?©Q—æ    ı†i?©Q—æ    ˆ†i?©Q—æ    ˆ†i?©Q—æ    ˆ†i?    øµ5  Ä?    aø5  Ä?Få4rÚÖ5  Ä?    aø5  Ä?Få4rÚÖ5  Ä?    aø5  Ä?  Ä?    ÑÚ4  Ä?∑:¿≤n€6*  Ä?6»S¥Ör4    Ú,µ  Äø          Äø
+Fµà4Jµ  Äø          Äø
+Fµà4Jµ  Äø          Äø  Äø       Ä  Äø          Äø        ©±“æ    ŒQi?©±“æ    ŒQi?©±“æ    ŒQi?™±“æt±¥ŒQi?™±“æt±¥ŒQi?™±“æt±¥ŒQi?Ω±“æFM.4…Qi?Ω±“æFM.4…Qi?Ω±“æFM.4…Qi?∏±“>tlÆ5 Qi?∏±“>tlÆ5 Qi?∏±“>tlÆ5 Qi?Æ±“>   ÄÕQi?Æ±“>   ÄÕQi?Æ±“>   ÄÕQi?ñ±“>    “Qi?ñ±“>    “Qi?ñ±“>    “Qi?∞Q—>    Ù†iø∞Q—>    Ù†iø∞Q—>    Ù†iø∞Q—>G{≥Ù†iø∞Q—>G{≥Ù†iø∞Q—>G{≥Ù†iøùQ—æ    ¯†iøùQ—æ    ¯†iøùQ—æ    ¯†iøùQ—æ   Ä¯†iøùQ—æ   Ä¯†iøùQ—æ   Ä¯†iø      Äø          Äø          Äø          Äø          Äø          Äø          Ä?          Ä?          Ä?          Ä?          Ä?          Ä?              Äø          Äø          Äø          Äø          Äø          ÄøUU%+É¥  Ä?}zı¥õƒ¥  Ä?F¥áå4  Ä?    õƒ¥  Ä?F¥áå4  Ä?}zı¥õƒ¥  Ä?          Äø          Äø          Äø          Äø          Äø          Äø»¶#4Âkò3  Ä?ß£µâ25  Ä?F¥áå4  Ä?ß£4É¥  Ä?F¥áå4  Ä?ß£µâ25  Ä?@l5©=åæ£5v?@l5©=åæ£5v?@l5©=åæ£5v?    π=åæ†5v?    π=åæ†5v?    π=åæ†5v?          Äø          Äø          Äø          Äø          Äø          Äø      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑      ÄøŸ´∑  @+  Ä?Øzu∂àzuµ  Ä?≠zıµ  ¿*  Ä?Øzıµ   Ä  Ä?      ¿*  Ä?Øzıµàzuµ  Ä?≠zıµ
+bD5ÚH5  Ä?´™J¢É5  Ä?§zı4Ytì5  Ä?zÜ<,õƒ5  Ä?§zı4Ytì5  Ä?´™J¢É5  Ä?bƒ¥¬∞	µ  Äø          Äø          Äø          Äø          Äø          Äø
+bD5ÚH5  Ä?òzu5\85  Ä?Få4rÚÖ5  Ä?    øµ5  Ä?Få4rÚÖ5  Ä?òzu5\85  Ä?bƒ¥¬∞	µ  Äø    Ú,µ  Äø
+Fµà4Jµ  Äø    Ú,µ  Äø
+Fµà4Jµ  Äø    Ú,µ  Äø   Äú=åæ•5vø   Äú=åæ•5vø   Äú=åæ•5vø    ù=åæ§5vø    ù=åæ§5vø    ù=åæ§5vø          Ä?          Ä?          Ä?          Ä?          Ä?          Ä?          Äø          Äø          Äø          Äø          Äø          Äøúzı4aøµ  Ä?òzı¥aø¥  Ä?»¶#4Âkò3  Ä?ß£µâ25  Ä?»¶#4Âkò3  Ä?òzı¥aø¥  Ä?    aø5  Ä?    aø5  Ä?Få4rÚÖ5  Ä?    ,ˇ4  Ä?Få4rÚÖ5  Ä?    aø5  Ä?          Äøízuµa?µ  Äø
+Fµà4Jµ  Äøß£µ˘Srµ  Äø
+Fµà4Jµ  Äøízuµa?µ  Äø  Äø          Äø          Äø          Äø   Ä      Äø   Ä      Äø   Ä    		}
+		*MESH_END
+	}
+	*PROP_MOTIONBLUR 0
+	*PROP_CASTSHADOW 1
+	*PROP_RECVSHADOW 1
+	*MATERIAL_REF 0
+}

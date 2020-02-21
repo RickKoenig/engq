@@ -1,0 +1,15 @@
+HTTP/1.1 301 Moved Permanently
+Date: Thu, 01 Nov 2018 06:34:48 GMT
+x-frame-options: DENY
+Location: https://www.att.com/wikipedia/commons/4/4b/Everest_kalapatthar_crop.jpg
+Content-Length: 279
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.att.com/wikipedia/commons/4/4b/Everest_kalapatthar_crop.jpg">here</a>.</p>
+</body></html>

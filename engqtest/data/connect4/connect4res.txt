@@ -1,0 +1,114 @@
+res pbut PBQUIT 1
+	loc 700 550
+	size 50 40
+	name QUIT
+	
+res text TEXTBOARDSIZE 2
+	loc	50 420
+	size 100 20
+	name "BOARD SIZE"
+
+res pbut PBSIZEX 3
+	loc 160 420
+	size 30 40
+	name 7
+
+res	pbut PBSIZEY 4
+	loc 200 420
+	size 30 40
+	name 6
+	
+res	text TEXTRED 5
+	loc 10 500
+	size 40 20
+	name RED
+
+res pbut PBREDTYPE 6
+	loc 60 500
+	size 70 40
+	name HUMAN
+
+res	text TEXTBLUE 7
+	loc 10 550
+	size 40 20
+	name BLUE
+
+res	pbut PBBLUETYPE 8
+	loc 60 550
+	size 70 40
+	name HUMAN
+
+res	pbut PBMOVE0 9
+	loc 125 25
+	size 50 40
+	name MOVE0
+
+res	pbut PBMOVE1 10
+	loc 200 25
+	size 50 40
+	name MOVE1
+
+res	pbut PBMOVE2 11
+	loc 275 25
+	size 50 40
+	name MOVE2
+
+res	pbut PBMOVE3 12
+	loc 350 25
+	size 50 40
+	name MOVE3
+
+res	pbut PBMOVE4 13
+	loc 425 25
+	size 50 40
+	name MOVE4
+
+res	pbut PBMOVE5 14
+	loc 500 25
+	size 50 40
+	name MOVE5
+
+res	pbut PBMOVE6 15
+	loc 575 25
+	size 50 40
+	name MOVE6
+
+res	text TEXTCONNECTNUM 16
+	loc 410 420
+	size 100 20
+	name CONNECTNUM
+
+res	pbut PBCONNECTNUM 17
+	loc 520 420
+	size 30 40
+	name 4
+
+res	pbut PBPLAY 18
+	loc 20 120
+	size 50 40
+	name PLAY
+
+res	text TEXTSTATUS 19
+	loc 200 570
+	size 400 20
+	name STATUS
+
+res text TEXTDEPTH 20
+	loc 270 420
+	size 60 20
+	name DEPTH
+
+res pbut PBDEPTH 21
+	loc 340 420
+	size 30 40
+	name 4
+
+res text TEXTFIRST 22
+	loc 300 500
+	size 50 20
+	name FIRST
+
+res pbut PBFIRST 23
+	loc 360 500
+	size 50 40
+	name RED

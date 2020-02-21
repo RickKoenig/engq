@@ -1,0 +1,90 @@
+shape gametheoryres 0 0 {
+	
+	text TEXTSERVERNAME
+	45 5
+	360 20
+	rickerspc    // my computer
+//	zhu_laptop   // local computer
+//	75.36.172.108  // my ip, changes
+//	74.40.164.97 // semilogic site
+
+	text TEXTSERVERIP
+	45 30
+	360 20
+	1.2.3.4
+
+	text TEXTGAME
+	45 55
+	100 20
+	"game (1-10)"
+
+	text TEXTPLAYER
+	155 55
+	100 20
+	"player (1-4)"
+
+	text TEXTPASSWORD
+	265 55
+	100 20
+	password
+
+	edit EDITGAME
+	45 80
+	100 20
+	1
+
+	edit EDITPLAYER
+	155 80
+	100 20
+	1
+
+	edit EDITPASSWORD
+	265 80
+	100 20
+	dummy
+
+	edit EDITCHAT
+	45 150
+	360 20
+	"chat"
+
+	text TEXTSTATUS
+	410 150
+	360 20
+	"fetching myip"
+
+	text TEXTMYNAMEI
+	590 5
+	60 20
+	myname
+
+	text TEXTMYNAME
+	490 30
+	260 20
+	host
+
+	text TEXTMYIPI
+	590 55
+	60 20
+	myip
+
+	text TEXTMYIP
+	540 80
+	160 20
+	0.0.0.0
+
+	pbut PBUTLOGON
+	135 115
+	60 20
+	"Logon"
+	
+	pbut PBUTLOGOFF
+	230 115
+	60 20
+	"Logoff"
+
+	pbut PBUTQUIT
+	625 575
+	160 20
+	QUIT
+}

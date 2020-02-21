@@ -1,0 +1,40 @@
+<html>
+	<head><title>Reading From a Text File with Ajax</title>
+		<link rel="stylesheet" type="text/css" href="ajaxTextFile.css" />
+		<script type="text/javascript" src="AjaxRequest.js">
+		</script>
+		<script type="text/javascript">
+			function getText(url){
+				var ajaxRequest=createRequest(); /* Cross-browser check;
+				Get a new XMLHttpRequest object */
+				if( ajaxRequest != false){ /* If we got back a request
+					object create callback function to check state of
+					the request*/
+					ajaxRequest.onreadystatechange = function() {
+						if (ajaxRequest.readyState == 4) {
+							if (ajaxRequest.status == 200 || ajaxRequest.status==0){
+								document.getElementById('data').innerHTML=ajaxRequest.responseText;
+							}else{
+								alert('There was a problem with the request.');
+							}
+						}
+					} // End callback function
+				}
+				ajaxRequest.open('GET', url, true); // Initialize the object
+				ajaxRequest.setRequestHeader('If-Modified-Since','Sat, 03 Jan 2010 00:00:00GMT');
+				// Deal with the cache
+				ajaxRequest.send(null); // Send the request	The Text File—“ajaxText.txt"
+			} //End getText() function
+		</script>
+	</head>
+	<body>
+		<span style="cursor: pointer; text-decoration: underline"
+		  onclick="getText('ajaxText.txt')">
+			Fetch text from a file
+		</span>
+		<p>
+			<div id=data class="divStyle">
+			</div>
+		</p>
+	</body>
+</html>

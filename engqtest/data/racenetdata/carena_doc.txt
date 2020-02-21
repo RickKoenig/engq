@@ -1,0 +1,120 @@
+PHW resurrection.
+
+This document explains some of the settings for carena.exe (full on rally / head2head).
+
+
+Prep...............................
+Find the files on your harddrive..
+Creating these shortcuts will make it easier to find the files at a different time.
+
+Onn some system's the file is in 'c:\windows\system32\macromed\shockwave 10\dswmedia'
+
+First find location of the carena.exe file. (Start, search, put carena.exe into 
+	'All or part of filename'
+Hit search.
+Right click on result and 'open containing folder'.
+Create a shortcut of the folder  on the desktop by dragging the folder icon in the top/left of the window
+onto the desktop.
+Make a shortcut of carena.exe and place on the desktop
+
+Go into a subfolder 'sledca'
+
+Look for and go into a subsubfolder 'onlineopt'
+
+right click on a file called 'online_seltrackcfg.txt' and create a shortcut.
+Drag the shortcut to the desktop.
+
+Go up a folder back to 'sledca'
+
+got to a subfolder 'config'
+
+right click on a file called 'config.txt' and create a shortcut and drag to desktop.
+
+go up a folder back to 'dswmedia'
+
+At this point there otta be 4 shortcuts on the desktop.
+right click on the desktop and make a folder called carena
+drag the 4 shortcuts into this folder.
+open folder
+
+a note about the .txt files
+most lines have a word followed by a number, this is how the many settings are set.
+anything after a # is a comment, the program ignores # and the rest of the line.
+
+config/config.txt .............................
+
+alter these to lines in the file to read
+	beforeloadtimeoutserver 90 # seconds for waiting around for initial connections
+	beforeloadtimeoutclient 150 # seconds for waiting around for initial connections
+this will give the connection more time to connect before resorting to bots..
+
+onlineopt/online_seltrack.cfg ............................
+
+altering this file will let you set the kind of game you want to play.
+
+	onlinetracknum anumber
+pick a number from 1 to 5
+# 1 kevin, 4 player track man made hitech (headon)
+# 2 jeff, 2 player track dirt canyons (thefalls)
+# 3 jeff revision, rick small track, torus (stayon)
+# 4 jeff track vs, cool track, using this until #6 gets fixed, LAI revision (crashsite)
+# 5 small track from kevin sphere, CHRIS revision (whaleon)
+
+	rules anumber
+# 1 no weapons
+#2 weapons
+
+There are 3 connection modes that can be set.
+Between the lines in the file,  'rules' and 'carname', the following can be set.
+Substitute the 16 example  (the max) for however many players will play. (2-16)
+For multiplayer net gamplay, there will be 1 server and 1-15 clients.
+Server handles all network traffic between all players and should have the fastest connection and the least firewalled.
+If the server quits, the rest of the players silently become botgames.
+If a client quits, that one player silently becomes a bot for all the other players
+
+BOTGAME:
+
+	numplayers 1
+	numcars 16
+play a 16 player bot game.
+
+SERVER: (fast 'waiting for other players to connect' coming together)
+	numplayers 16 # these 2 numbers must match, server decides how many players the game will have.
+	numcars 16
+	port 202020 # actually this is port 5412, (202020 mod 65536  equals 5412)
+if you have a firewall, unblock this port
+wait 90 seconds (see above 90), for 15 CLIENTS to connect. then play.
+if 15 CLIENTS don't connect the the remaining players will be bots.
+find out what your IPaddress is and jot it down, you might have a static (never changing) or 
+dynamic (changes whenever you disconnect from the net) ip address.
+if you don't know your ip, try 
+	www.yourip.us/
+	www.myip.dk/
+in your favorite browser. (ff)
+tell all your clients what your IP address is. (I.M.)
+
+CLIENT: (slow 'waiting for other players to connect' coming together)
+	numplayers -1
+	numcars 16
+	serverip 123.65.32.23 # actually the ip of the server you want to connect to
+	port 202020 # actually port 5412
+try to connect to SERVER, wait 150 seconds (see above 150) for SERVER to reply.
+if no reply then start a 16 player botgame.
+
+	carname yourname
+	carbody yourcarbody
+	carpaint yourpaint
+	cardecal whatdecal
+	altcarname abotname
+etc...
+
+HIGHWAY35...
+
+same as carena except..
+
+.exe is highway35.exe instead of carena.exe
+folder is sledhw35 instead of  sledca
+onlinetracknum is 7 thru 11 instead of 1 thru 5
+rules are 6 and 7 instead of 1 and 2
+carbodies are all highway35 carbodies
+

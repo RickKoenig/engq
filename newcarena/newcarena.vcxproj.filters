@@ -1,0 +1,978 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\newcarena">
+      <UniqueIdentifier>{4715bb5f-acd0-46d7-8b5c-235d7c239702}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\newcarena\game">
+      <UniqueIdentifier>{43cce6f8-ff11-4bfa-a7d3-d9d4516684ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\newcarena\lobby">
+      <UniqueIdentifier>{a9b5baca-a017-489d-8262-d5073f357205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\newcarena\track/constructor">
+      <UniqueIdentifier>{d8f11325-5777-4116-9bf3-1bf685d66715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\newcarena\network">
+      <UniqueIdentifier>{9a47e607-3148-4264-a7c4-03355559fa78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\newcarena\utils">
+      <UniqueIdentifier>{0a80089a-2cc8-47fe-b3f8-68db9bcdb09c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\newcarena\player">
+      <UniqueIdentifier>{7641ca87-ef5a-4b57-ab99-337c5df68249}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\newcarena\enums">
+      <UniqueIdentifier>{1445bff5-4800-4a7f-9f69-410ca0ffcc80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\newcarena\match">
+      <UniqueIdentifier>{f8b3ca79-3c68-4b69-a0e6-89d63873ae91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\usertest">
+      <UniqueIdentifier>{8fbc859c-5d0b-4f43-b3f3-753da38f3b69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{1dd60b08-e4de-402d-b2f2-e8fee44aeac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\system">
+      <UniqueIdentifier>{e4f30acb-9e24-4a0e-85b3-1c3d2b8ccb71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="text">
+      <UniqueIdentifier>{7f511b01-04c9-4aed-a997-50607307b2ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\mainmenu">
+      <UniqueIdentifier>{df6766dc-a3d0-42ce-b5f3-4dc514b073ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\config">
+      <UniqueIdentifier>{2623afbb-c9a2-4aa7-b3c9-2c20a9c27fec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\shaders">
+      <UniqueIdentifier>{b3983c42-43ae-4898-94aa-c079208f66cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\shaders\fx">
+      <UniqueIdentifier>{fcfd9f92-ff15-4128-9edc-f9b947789489}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\shaders\asm">
+      <UniqueIdentifier>{37e7fd52-091e-4231-8f02-9f05e8c296c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\browser">
+      <UniqueIdentifier>{a143ff93-6dc5-4121-8ded-037af31d27e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\jsontest">
+      <UniqueIdentifier>{d4c9476b-5580-4000-bd04-2bd845c9440c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\newcarena">
+      <UniqueIdentifier>{8ded133b-dcef-40ed-842c-4008c58d28db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\newcarena\tracks">
+      <UniqueIdentifier>{8c186e42-11c3-4049-a407-106701c3ea18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\newcarena\tracks\constructed">
+      <UniqueIdentifier>{8e08f576-6564-46c8-9c59-107d0504a5bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\newcarena\tracks\newconstructed">
+      <UniqueIdentifier>{044de8d8-eb07-4c94-b8cc-c8490ce9ffd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\newcarena\tracks\constructedj">
+      <UniqueIdentifier>{fbe6a7d1-b774-474a-a6df-ddddcff27f44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\newcarena\rematch">
+      <UniqueIdentifier>{b92077d0-9f32-4309-ac4a-bede033da0c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\newcarena\lobby">
+      <UniqueIdentifier>{7dff3962-92e3-458d-be9c-22b7f4f7c94f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\newcarena\connect">
+      <UniqueIdentifier>{cd851472-7673-4e4d-a62a-3e447f17f883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\newcarena\physics">
+      <UniqueIdentifier>{2e1bed5f-7c60-481a-bc4f-9e4380755230}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\newcarena\physics_b">
+      <UniqueIdentifier>{73cbab57-7d2c-4439-b98f-a8d4eebbb896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\newcarena\soundfx">
+      <UniqueIdentifier>{b4f38ea8-f584-46d3-bedf-fc2f9c2807fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\map">
+      <UniqueIdentifier>{69ee8614-16b4-495d-8506-162e9872c998}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\maze">
+      <UniqueIdentifier>{efe885a9-3aaa-4369-97bd-655fbf7e36e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\mattest">
+      <UniqueIdentifier>{b58d6298-16d0-4dad-ae9c-615fe652c3f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\lightup">
+      <UniqueIdentifier>{232990d1-4a31-45d6-8c82-fcd4eb26cf4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\riemann">
+      <UniqueIdentifier>{7abd5677-3846-4f3f-bf0b-05245dccb854}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="newcarena\ai.cpp">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\box2box.cpp">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\camera.cpp">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\carenagame.cpp">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\gamerunj.cpp">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\gamestatecheck.cpp">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\helper.cpp">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\physics.cpp">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\rabbits.cpp">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\rematch.cpp">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\scrline.cpp">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\soundemit.cpp">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\timewarp.cpp">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\carenalobby.cpp">
+      <Filter>Source Files\newcarena\lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\envj.cpp">
+      <Filter>Source Files\newcarena\lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\gamedescj.cpp">
+      <Filter>Source Files\newcarena\lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\netdescj.cpp">
+      <Filter>Source Files\newcarena\lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\constructor.cpp">
+      <Filter>Source Files\newcarena\track/constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\hash.cpp">
+      <Filter>Source Files\newcarena\track/constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\md5.cpp">
+      <Filter>Source Files\newcarena\track/constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\newconstructor.cpp">
+      <Filter>Source Files\newcarena\track/constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\studyforks.cpp">
+      <Filter>Source Files\newcarena\track/constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\tracklist.cpp">
+      <Filter>Source Files\newcarena\track/constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\trk_line2road - Copy.cpp">
+      <Filter>Source Files\newcarena\track/constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\trk_line2road.cpp">
+      <Filter>Source Files\newcarena\track/constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\connectpackets.cpp">
+      <Filter>Source Files\newcarena\network</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\connectstate.cpp">
+      <Filter>Source Files\newcarena\network</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\netobj.cpp">
+      <Filter>Source Files\newcarena\network</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\netobjbot.cpp">
+      <Filter>Source Files\newcarena\network</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\netobjclient.cpp">
+      <Filter>Source Files\newcarena\network</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\netobjserver.cpp">
+      <Filter>Source Files\newcarena\network</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\line2road.cpp">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\n_faceverts.cpp">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\n_marching.cpp">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\n_marchingdata.cpp">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\n_marchingtest.cpp">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\n_meshtest.cpp">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\n_polylist.cpp">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\soundfx.cpp">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\avaj.cpp">
+      <Filter>Source Files\newcarena\player</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\carclass.cpp">
+      <Filter>Source Files\newcarena\player</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\jrmcars.cpp">
+      <Filter>Source Files\newcarena\player</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\enums.cpp">
+      <Filter>Source Files\newcarena\enums</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\match_game1.cpp">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\match_hiscores.cpp">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\match_lobby.cpp">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\match_logon.cpp">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\match_options.cpp">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\match_pickgame.cpp">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\match_pickserver.cpp">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\match_quickgame.cpp">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\match_register.cpp">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\match_results.cpp">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\match_server.cpp">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClCompile>
+    <ClCompile Include="newcarena\match_title.cpp">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\lightupboard.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\lightuppatterndata.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\lightuppatterns.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_groups.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_braid.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_browser.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_lightup.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_mainmenu.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_many.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_mattest.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_mattest2.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_maze.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_newtons.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_playamovie.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_plotter.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_riemann.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_toon.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="usertest\u_s_tritest1.cpp">
+      <Filter>Source Files\usertest</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\json.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\json_packet.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\jsonx.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\modelutil.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="system\u_states.cpp">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="system\u_sysdebvars.cpp">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="newcarena\ai.h">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\box2box.h">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\camera.h">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\carenagame.h">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\gamerunj.h">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\gamestatecheck.h">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\helper.h">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\physics.h">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\rabbits.h">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\rematch.h">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\scrline.h">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\soundemit.h">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\timewarp.h">
+      <Filter>Source Files\newcarena\game</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\carenalobby.h">
+      <Filter>Source Files\newcarena\lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\envj.h">
+      <Filter>Source Files\newcarena\lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\gamedescj.h">
+      <Filter>Source Files\newcarena\lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\netdescj.h">
+      <Filter>Source Files\newcarena\lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\constructor.h">
+      <Filter>Source Files\newcarena\track/constructor</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\hash.h">
+      <Filter>Source Files\newcarena\track/constructor</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\md5.h">
+      <Filter>Source Files\newcarena\track/constructor</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\newconstructor.h">
+      <Filter>Source Files\newcarena\track/constructor</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\tracklist.h">
+      <Filter>Source Files\newcarena\track/constructor</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\connectpackets.h">
+      <Filter>Source Files\newcarena\network</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\connectstate.h">
+      <Filter>Source Files\newcarena\network</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\netobj.h">
+      <Filter>Source Files\newcarena\network</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\netobjbot.h">
+      <Filter>Source Files\newcarena\network</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\netobjclient.h">
+      <Filter>Source Files\newcarena\network</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\netobjserver.h">
+      <Filter>Source Files\newcarena\network</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\line2road.h">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\n_faceverts.h">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\n_marching.h">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\n_marchingdata.h">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\n_marchingtest.h">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\n_meshtest.h">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\n_polylist.h">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\soundfx.h">
+      <Filter>Source Files\newcarena\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\avaj.h">
+      <Filter>Source Files\newcarena\player</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\carclass.h">
+      <Filter>Source Files\newcarena\player</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\jrmcars.h">
+      <Filter>Source Files\newcarena\player</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\enums.h">
+      <Filter>Source Files\newcarena\enums</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\match_game1.h">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\match_hiscores.h">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\match_lobby.h">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\match_logon.h">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\match_options.h">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\match_pickgame.h">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\match_pickserver.h">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\match_quickgame.h">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\match_register.h">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\match_results.h">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\match_server.h">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClInclude>
+    <ClInclude Include="newcarena\match_title.h">
+      <Filter>Source Files\newcarena\match</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\lightupboard.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\lightuppatterndata.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\lightuppatterns.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_groups.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_braid.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_browser.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_lightup.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_mainmenu.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_many.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_mattest.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_mattest2.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_maze.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_newtons.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_playamovie.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_plotter.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_riemann.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_toon.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="usertest\u_s_tritest1.h">
+      <Filter>Source Files\usertest</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\json.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\json_packet.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\jsonx.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\modelutil.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="system\u_states.h">
+      <Filter>Source Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="newcarena.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\logfile.txt">
+      <Filter>text</Filter>
+    </Text>
+    <Text Include="data\logfile_8x_8y_6p_0w_3c.txt">
+      <Filter>text</Filter>
+    </Text>
+    <Text Include="data\logfile_8x_8y_6p_1w_3c_1meg.txt">
+      <Filter>text</Filter>
+    </Text>
+    <Text Include="data\logfile_fullrun_oct2_2011.txt">
+      <Filter>text</Filter>
+    </Text>
+    <Text Include="data\logfile_fullrun_oct2b_2001.txt">
+      <Filter>text</Filter>
+    </Text>
+    <Text Include="data\logfileb.txt">
+      <Filter>text</Filter>
+    </Text>
+    <Text Include="data\mainmenu\maincfg.txt">
+      <Filter>text\mainmenu</Filter>
+    </Text>
+    <Text Include="data\mainmenu\mainmenu.txt">
+      <Filter>text\mainmenu</Filter>
+    </Text>
+    <Text Include="data\mainmenu\mainres.txt">
+      <Filter>text\mainmenu</Filter>
+    </Text>
+    <Text Include="data\config\config.txt">
+      <Filter>text\config</Filter>
+    </Text>
+    <Text Include="data\config\device.txt">
+      <Filter>text\config</Filter>
+    </Text>
+    <Text Include="data\config\gamexy.txt">
+      <Filter>text\config</Filter>
+    </Text>
+    <Text Include="data\shaders\carmat2shader.txt">
+      <Filter>text\shaders</Filter>
+    </Text>
+    <Text Include="data\shaders\globalmat2shader.txt">
+      <Filter>text\shaders</Filter>
+    </Text>
+    <Text Include="data\shaders\mat2shader.txt">
+      <Filter>text\shaders</Filter>
+    </Text>
+    <Text Include="data\shaders\shadelistasm.txt">
+      <Filter>text\shaders</Filter>
+    </Text>
+    <Text Include="data\shaders\shadelistfx.txt">
+      <Filter>text\shaders</Filter>
+    </Text>
+    <Text Include="data\shaders\toon2_carmat2shader.txt">
+      <Filter>text\shaders</Filter>
+    </Text>
+    <Text Include="data\shaders\toon_carmat2shader.txt">
+      <Filter>text\shaders</Filter>
+    </Text>
+    <Text Include="data\browser\browserres.txt">
+      <Filter>text\browser</Filter>
+    </Text>
+    <Text Include="data\jsontest\test1.txt">
+      <Filter>text\jsontest</Filter>
+    </Text>
+    <Text Include="data\jsontest\test2.txt">
+      <Filter>text\jsontest</Filter>
+    </Text>
+    <Text Include="data\jsontest\test3.txt">
+      <Filter>text\jsontest</Filter>
+    </Text>
+    <Text Include="data\jsontest\testres1.txt">
+      <Filter>text\jsontest</Filter>
+    </Text>
+    <Text Include="data\jsontest\testres3.txt">
+      <Filter>text\jsontest</Filter>
+    </Text>
+    <Text Include="data\jsontest\testrjsave.txt">
+      <Filter>text\jsontest</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\constructed\constructorres.txt">
+      <Filter>text\newcarena\tracks</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\rematchres\online_rematchres.txt">
+      <Filter>text\newcarena\rematch</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\carenalobby\carenalobbyres.txt">
+      <Filter>text\newcarena\lobby</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\carenalobby\gamedesc.txt">
+      <Filter>text\newcarena\lobby</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\carenalobby\gamedescb.txt">
+      <Filter>text\newcarena\lobby</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\carenalobby\ips.txt">
+      <Filter>text\newcarena\lobby</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\cl_test_read_go.txt">
+      <Filter>text\newcarena\connect</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\cl_test_read_track.txt">
+      <Filter>text\newcarena\connect</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\cl_test_read_welcome.txt">
+      <Filter>text\newcarena\connect</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\sv_test_read_hi.txt">
+      <Filter>text\newcarena\connect</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\physics\physics - Copy.txt">
+      <Filter>text\newcarena\physics</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\physics\physics.txt">
+      <Filter>text\newcarena\physics</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\physics_b\physics.txt">
+      <Filter>text\newcarena\physics_b</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\soundfx\soundfx.txt">
+      <Filter>text\newcarena\soundfx</Filter>
+    </Text>
+    <Text Include="data\newcarenadata\soundmotor\soundmotor.txt">
+      <Filter>text\newcarena\soundfx</Filter>
+    </Text>
+    <Text Include="data\maze\mazeres.txt">
+      <Filter>text\maze</Filter>
+    </Text>
+    <Text Include="data\mattest\mattest.txt">
+      <Filter>text\mattest</Filter>
+    </Text>
+    <Text Include="data\lightup\lightup.txt">
+      <Filter>text\lightup</Filter>
+    </Text>
+    <Text Include="data\riemann\riemann.txt">
+      <Filter>text\riemann</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="data\shaders\cvert.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\cvertvel.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\edge.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\edge2.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\env.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\envv2.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\envv2texvel.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\laserbeam.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\lightmap.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\makeshadowmap.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\pdiff.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\pdiffspec.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\pnormalmap.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\shadowmapviewer.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\stan.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\tex.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\tex2.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\tex2c.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\texadd.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\texvel.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\toon.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\toon2.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\useshadowmap.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\vdiff.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\vdiffspec.fx">
+      <Filter>text\shaders\fx</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\shaders\cvert.ps">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\cvert.vs">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\env.ps">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\env.vs">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\makeshadowmap.ps">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\makeshadowmap.vs">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\pdiff.ps">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\pdiff.vs">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\pdiffspec.ps">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\pdiffspec.vs">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\pnormalmap.ps">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\pnormalmap.vs">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\shadowmapviewer.ps">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\shadowmapviewer.vs">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\tex.ps">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\tex.vs">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\tex2c.ps">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\tex2c.vs">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\texadd.ps">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\useshadowmap.ps">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\useshadowmap.vs">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\vdiff.ps">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\vdiff.vs">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\vdiffspec.ps">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\shaders\vdiffspec.vs">
+      <Filter>text\shaders\asm</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\4leaf.trk">
+      <Filter>text\newcarena\tracks\constructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\4leaf_f.trkoc">
+      <Filter>text\newcarena\tracks\constructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\bigtrack.trk">
+      <Filter>text\newcarena\tracks\constructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\default.trk">
+      <Filter>text\newcarena\tracks\constructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\forks.trk">
+      <Filter>text\newcarena\tracks\constructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\forksx.trk">
+      <Filter>text\newcarena\tracks\constructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\forksx.trkoc">
+      <Filter>text\newcarena\tracks\constructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\jackiep.trk">
+      <Filter>text\newcarena\tracks\constructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\oval.trkoc">
+      <Filter>text\newcarena\tracks\constructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\oval2.trkoc">
+      <Filter>text\newcarena\tracks\constructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\square.trkoc">
+      <Filter>text\newcarena\tracks\constructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\timewarptest.trkoc">
+      <Filter>text\newcarena\tracks\constructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\track1.trkoc">
+      <Filter>text\newcarena\tracks\constructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\loop1.trk">
+      <Filter>text\newcarena\tracks\newconstructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\loop1_a.trk">
+      <Filter>text\newcarena\tracks\newconstructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\newdefault.trk">
+      <Filter>text\newcarena\tracks\newconstructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\temp.trk">
+      <Filter>text\newcarena\tracks\newconstructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\testnew1.trk">
+      <Filter>text\newcarena\tracks\newconstructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\testnew1x.trk">
+      <Filter>text\newcarena\tracks\newconstructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\testnew2.trk">
+      <Filter>text\newcarena\tracks\newconstructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\testnew3.trk">
+      <Filter>text\newcarena\tracks\newconstructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\tiny.trk">
+      <Filter>text\newcarena\tracks\newconstructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\track1.trk">
+      <Filter>text\newcarena\tracks\newconstructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\widetrack.trk">
+      <Filter>text\newcarena\tracks\newconstructed</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\4leaf.trkoc">
+      <Filter>text\newcarena\tracks\constructedj</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\forks.trkoc">
+      <Filter>text\newcarena\tracks\constructedj</Filter>
+    </None>
+    <None Include="data\newcarenadata\constructed\testtracktoroad.trkoc">
+      <Filter>text\newcarena\tracks\constructedj</Filter>
+    </None>
+    <None Include="newcarena.map">
+      <Filter>text\map</Filter>
+    </None>
+    <None Include="newcarenad.map">
+      <Filter>text\map</Filter>
+    </None>
+  </ItemGroup>
+</Project>

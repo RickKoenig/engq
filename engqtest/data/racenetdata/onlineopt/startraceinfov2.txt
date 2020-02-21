@@ -1,0 +1,53 @@
+# Battle Race Starting Plan #1.  
+# Disclaimer - This is the first pass, there will be some changes, but the 
+# basic system should stay true.
+# version #2...
+# We'll need to firm up the list of weapons, and naming conventions for # vehicles to be totally functional
+
+
+# A race is started by sending a message to the exe via the message commmand in osakit.
+# The message is basically a long ascii string with space and commas as delimiters.
+# if spaces are in the data, then ~ is used as quotes.
+# Command chunks are defined by a letter, and a certain # of parameters.
+
+#OVERVIEW OF DATA DEFINITIONS
+p  # unique racer   This MUST be first now
+u  # user name,best time for this race (personal best)
+r  # race info
+v  # vehicle info, car, color, rims.
+w  # weapon list
+e  # energy / Batteries/ Fuel cell
+x  # player experience and relative skill
+
+i  # ip info for broadcast server- important for scaling.
+
+c  # if challenge race, name, unique # of challenger and time, otherwise enter 0,0,0
+
+g  # game start
+
+
+
+# Here is a detailed list of each data item
+p 12345		        # unique player id   	
+u ~Battling Bob~,12020  # user name,record for this track in centiseconds
+
+# track #,rules (always 7),rules2(always 2),#Players,#ofbots, unique game id
+r ~Dino~,7,2,8,0,T123456789  
+
+#vehicle# ,color RGB0, RGB, RGB , rim #
+v ~Deoria II~,208,255,255,26,255,255,255,255,255,12  
+
+w 39,12,23,14,15,17,-1,-1,-1 # 9 weapons equipped on car, -1 = no weapon in that slot.
+e 5,5,5,5,5,5 	         # energy  - # of batteries.
+x 500000,2.2   		 #exp, av position last 5 games,
+i 192.168.0.167,5421 	 #ip - important for scaling, port,
+
+c ~Mean Pete~,98765,12300  # Challenger name, id, time in centiseconds (1/100)
+
+g			 #game start
+
+
+
+# The practical use would look something like this...
+"OSAKit.CallOSAKit ('MESSAGE|p 12345 u ~Battling Bob~ r dino,7,2,8,0,T123456789  v twinmill,208,255,255,26,255,255,359,255,255 w 12,13,14,15,17,18,19,0 e 5,5,5,5,5 x 500000,2.2 i 192.168.0.167,5450 g)"
+

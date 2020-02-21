@@ -1,0 +1,10 @@
+#scenes that have objects in them, .mxs added see enum
+box1 # -.5 -.5 -.5 to .5 .5 .5 first 3 predefined
+cyl1 # ditto
+sph1 # ditto
+#custom types: convex, closed, and aligned on principal axis
+football
+ellipse
+#rock # non principal axis (don't use)
+#box45 # non principal axis (don't use)
+tetra

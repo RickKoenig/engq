@@ -1,0 +1,8 @@
+7 7
+W      W      W      W      W      W      W      
+W        P0RD G0P0RL G0P0RL G0P0DL G0     W      
+W        P0UX G0     .        P0DU G0     W      
+W      .      G0P0DR G0P0LR G0P0LU .      W      
+W      G0       P0DU .      G0       P0XD W      
+W      G0     G0P0RU G0P0RL G0P0RL   P0UL W      
+W      W      W      W      W      W      W      

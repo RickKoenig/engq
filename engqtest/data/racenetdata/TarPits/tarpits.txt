@@ -1,0 +1,21 @@
+road.bwo
+TreeTunnel.bwo
+Icetunnel.bwo
+geiserhole.bwo
+boulder01.bwo
+ColWall.bwo
+
+
+
+# new stuff
+#terrain04.bwo
+#"old terrain.bwo"
+#terrain02.bwo
+
+#1 rock01 hitground
+#1 cliff1m hitground
+#1 cliffmag hitground
+#1 magma3 hitground
+#1 magma2 hitground
+#1 centerlava hitground
+#1 magma hitground

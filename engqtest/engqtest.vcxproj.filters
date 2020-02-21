@@ -1,0 +1,4165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="text">
+      <UniqueIdentifier>{31d1fd97-3d05-40e6-a511-f3eda7d46101}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\shaders">
+      <UniqueIdentifier>{f1d7b06d-39e8-4858-8948-9aece941e5ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\shaders\asmshaders">
+      <UniqueIdentifier>{b4144f87-76e6-47b7-91dd-7062ae8be648}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\shaders\fxshaders">
+      <UniqueIdentifier>{9652ed58-82da-4df5-ae1e-6a2c427bd4dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\occ">
+      <UniqueIdentifier>{09a467e0-7f19-40ea-9c8c-6f2a5191b67a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\config">
+      <UniqueIdentifier>{b6d89211-7ecb-4a0f-8f86-15cd4499a730}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user">
+      <UniqueIdentifier>{fd58f18a-f00d-40f5-8d8e-5fc073f5600c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\gametheory">
+      <UniqueIdentifier>{410b986d-41d6-48d8-9e5e-99112a963634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\ui system">
+      <UniqueIdentifier>{b41abb11-31a5-4783-9362-103bf65a7ab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\halfpipeui">
+      <UniqueIdentifier>{d88c10f1-409b-477d-8af2-1fe3abdc4d38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\searcher">
+      <UniqueIdentifier>{582d1a8c-c9db-4df8-8fb7-2e945d541dfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\wat_physics">
+      <UniqueIdentifier>{afcaea9b-46e6-4798-b3c8-00a3f7e6e2b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\wat_physics\quant3">
+      <UniqueIdentifier>{55dea059-037b-459c-be2a-93789c16207f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\wat_physics\quant4">
+      <UniqueIdentifier>{a338eedf-be1f-435f-adfe-1de9b0b03b24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\igroup">
+      <UniqueIdentifier>{1e20e415-eb27-40df-bbec-d8ced9c065c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\scratch">
+      <UniqueIdentifier>{5fef46a2-168c-40e9-a5a2-4b158cd4a993}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\ifield">
+      <UniqueIdentifier>{b1624e16-2a72-49dc-9f70-ee5d4b0e3355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\jsontest">
+      <UniqueIdentifier>{bea35293-b320-46cf-b15a-173c7958bd5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\endgame">
+      <UniqueIdentifier>{f6318515-3645-4fbc-8e66-178bf211751d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\slider">
+      <UniqueIdentifier>{afae6ffd-68bf-4fb8-a374-25cb1e160466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\user\jelly">
+      <UniqueIdentifier>{d32b011f-72a6-4d2c-98b6-5d3012f10a86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\mainmenu">
+      <UniqueIdentifier>{44efb52e-dda1-4b93-b349-ead992b95872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\lua">
+      <UniqueIdentifier>{638d910c-1765-4e68-8952-14cb7800c257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\engine7testdata">
+      <UniqueIdentifier>{baaf7137-bcb9-4e2d-a291-b88f544f6e3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\engine7testdata\carenalobby">
+      <UniqueIdentifier>{93ce186d-1b4b-4dfd-9d5b-ef466f39b8f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\engine7testdata\constructor">
+      <UniqueIdentifier>{73d66d72-bf2c-40cc-92dd-03c58825a455}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\engine7testdata\rematchres">
+      <UniqueIdentifier>{2ca503ea-1dd0-446c-99b5-3fec135b2937}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata">
+      <UniqueIdentifier>{bad73a31-e6a0-4f67-a108-350230b6a252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\onlineopt">
+      <UniqueIdentifier>{b890b2c1-2b4d-415c-bdd9-bf181b3e69be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\tracks">
+      <UniqueIdentifier>{04c3e392-c51a-4d26-bcd1-fe1b7b8ebbd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\tracks\headon">
+      <UniqueIdentifier>{d06fff67-3d1f-455c-939f-f51daa117a57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\tracks\thefalls">
+      <UniqueIdentifier>{7c42739f-5ddc-42e1-9577-0f0a72cdebdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\tracks\2009_track5">
+      <UniqueIdentifier>{98217da7-da57-4144-83bb-e4ee06311ade}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\tracks\2009_testcheck">
+      <UniqueIdentifier>{6b369d7a-f8cd-4f2e-9056-5417beb20d6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\tracks\ghostcity">
+      <UniqueIdentifier>{91abd324-f4ba-4d0c-9df1-a64971ad31d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\tracks\tarpits">
+      <UniqueIdentifier>{624af38e-a240-42c0-80f9-06fd84b3ff02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\tracks\prehistoric">
+      <UniqueIdentifier>{e68452ca-ce9e-4b66-9eca-b513e958ac4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\tracks\space">
+      <UniqueIdentifier>{06472082-4f8d-468f-a03c-f9845c7b443f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\tracks\coliseum">
+      <UniqueIdentifier>{d1c55ea0-444d-4c81-bcbd-f031d570a3e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\config">
+      <UniqueIdentifier>{86e54ee4-3911-4fca-8184-f29ded5a3829}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\updater">
+      <UniqueIdentifier>{e3c23d42-b352-4f82-9492-592aa945b2ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\racenetdata\broadcast">
+      <UniqueIdentifier>{25fa582b-aba9-4c8c-97ed-2cf768d661ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\lobbysystem_match">
+      <UniqueIdentifier>{dc10490c-e0ee-4fcd-99c4-9a109fa8d463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\st2_game">
+      <UniqueIdentifier>{8ffc6a71-df8e-4e68-9c32-ba6d1f7cfa08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\gfxtest">
+      <UniqueIdentifier>{20510439-c5bb-44e5-a8ab-d95c28b433db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\toon">
+      <UniqueIdentifier>{0befd219-9767-4b59-b363-1f36e93b6d3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\browser">
+      <UniqueIdentifier>{9437049a-e58b-430d-912f-20e3feb1594c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\particles">
+      <UniqueIdentifier>{6d14f4cd-dda2-4658-b19e-8f52d7531b39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\connect4">
+      <UniqueIdentifier>{97d33ef0-c60d-4acd-92f9-9bef29cbf262}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\HONEYCOM">
+      <UniqueIdentifier>{108e96ae-ece0-4b95-9158-1b9e3655d1e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\simplex">
+      <UniqueIdentifier>{12911530-9fa4-483b-a68d-62b543434f65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\polysym">
+      <UniqueIdentifier>{bf0b1e9d-987f-4e19-8f80-eff81e53041c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\game2">
+      <UniqueIdentifier>{ad02f54a-2909-4636-ab79-b8a95326a8a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\game2\game2 endgame">
+      <UniqueIdentifier>{e1c066d7-e229-482a-bce4-b350fd82180c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\game2\game2_nim">
+      <UniqueIdentifier>{aa2d3df8-a8e4-415d-981b-7104620fadfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\game2\game2_opposition">
+      <UniqueIdentifier>{cb3e7255-04cf-42d7-b135-3a2db62d21bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\game2\game2_ttt">
+      <UniqueIdentifier>{37568c1d-96a8-4001-9eb2-54aec80139bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\game2\foxgoose">
+      <UniqueIdentifier>{127fe5ed-9322-4469-b062-8213d5c79b5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\nfs_shell">
+      <UniqueIdentifier>{a2e0299f-bc14-485a-8ba7-a28140bb5dd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\AR">
+      <UniqueIdentifier>{3dc48386-71f7-4feb-aef0-e6bfe46170ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\physics3d">
+      <UniqueIdentifier>{7a86c1fd-d518-4094-93ed-b5ff785fb795}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\plotter">
+      <UniqueIdentifier>{4c53feb5-1cac-4943-947e-2f6b7dda74b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\qcomp">
+      <UniqueIdentifier>{3835260f-3c80-4fa5-b2ae-94c580ac5912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\testres3d">
+      <UniqueIdentifier>{440360aa-cc0c-4519-a8b7-d542f271e42e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\turing">
+      <UniqueIdentifier>{ad52db66-8853-490d-94b3-7e52966a539c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\chatter">
+      <UniqueIdentifier>{6cf4e547-0141-4c63-a972-ed6dea65f94a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\user">
+      <UniqueIdentifier>{c3e6a8b7-c9d6-4830-99e1-c3bc63082742}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\user_3d">
+      <UniqueIdentifier>{3031fd2e-bb97-48a1-a7c7-1e5f4e6686bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\user_ui">
+      <UniqueIdentifier>{5ba6969f-548e-44c4-822d-53918a4f3271}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\user_net">
+      <UniqueIdentifier>{690053aa-f0a7-4c11-b6a7-af28b2c215b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\user_math">
+      <UniqueIdentifier>{9d964396-7f55-4ea0-978f-8d93fab24389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\user_math\bch rs">
+      <UniqueIdentifier>{6d528961-c9dd-4fc9-9e3d-1292f7305ee1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\user_math\abstract_algebra">
+      <UniqueIdentifier>{1d6dd819-1ce7-4a97-a093-50b6f28c7f2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\user_math\plotter_code">
+      <UniqueIdentifier>{afc8bb7c-c0cc-4901-9bfb-1512afeef00f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\user_math\AR">
+      <UniqueIdentifier>{096ddeac-36c9-45d5-a7c1-6f1eb212f945}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\user_2d">
+      <UniqueIdentifier>{71d64e92-1d25-4de3-9d53-13e287710a26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\user_misc">
+      <UniqueIdentifier>{858347db-d0e2-4c75-8b96-c1ef6144368e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\user_quantum_physics">
+      <UniqueIdentifier>{99ad0eed-18ee-4adf-8daa-80fa81d65bd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\game theory">
+      <UniqueIdentifier>{03bcea70-8a97-412c-811e-bb642fdea8b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\strategy games puzzles">
+      <UniqueIdentifier>{fbfc676b-fb76-4b7c-84de-86c7056fea7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\strategy games puzzles\game2">
+      <UniqueIdentifier>{0fb819dd-fea8-4c7b-a470-e612ef0afd23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\nfs_shell">
+      <UniqueIdentifier>{30a209de-9cb3-4b5e-aec7-e0e85bdf33e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\racenet">
+      <UniqueIdentifier>{3e3f1747-2c39-4d94-9f02-ccd3bb281b2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\racenet\not yet used">
+      <UniqueIdentifier>{c46a3a40-b6a7-4159-a310-ad547a94d957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\racenet\broadcast_server">
+      <UniqueIdentifier>{0ae77ff2-1dfb-4415-9b1a-b31b0db1f5b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\racenet\not used">
+      <UniqueIdentifier>{3634f4fe-4821-4b9c-9a61-034cb8cf47a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\racenet\newlobby">
+      <UniqueIdentifier>{089620b0-8b50-4034-a335-9192ac2c9dea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine7test">
+      <UniqueIdentifier>{ad02aae0-ef4e-463f-a379-ec85a501739a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine7test\not yet used">
+      <UniqueIdentifier>{b6d5c596-7db6-4871-a6d9-e11bb3497134}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source Files\flate">
+      <UniqueIdentifier>{94ca2433-a69d-45f6-92ec-afcca46de1e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine1test_lobby_ref">
+      <UniqueIdentifier>{c0820109-3b2a-4003-ad0e-edb272b69418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\matchsystem">
+      <UniqueIdentifier>{c774179f-cf94-4503-aa7c-00287140aa65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game_physics">
+      <UniqueIdentifier>{446460c2-f00a-49a3-bbab-8fa7d7fe3b25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game_physics\physics3d">
+      <UniqueIdentifier>{7dc241f5-9981-40ea-ac5a-2cc4ecdcb256}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\modernCppTests">
+      <UniqueIdentifier>{e56028cc-b41c-4241-816a-48c18dcc2465}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\holoview2dbrush">
+      <UniqueIdentifier>{ffd63244-8a27-4d68-9387-ccef4d8ceae6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\user\holoview">
+      <UniqueIdentifier>{8f74fe2e-37fc-4567-9a68-e36301b5e725}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="engqtest.map">
+      <Filter>text</Filter>
+    </None>
+    <None Include="engqtestd.map">
+      <Filter>text</Filter>
+    </None>
+    <None Include="data\shaders\cvert.asm">
+      <Filter>text\shaders</Filter>
+    </None>
+    <None Include="data\shaders\cvert.ps">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\cvert.vs">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\env.ps">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\env.vs">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\makeshadowmap.ps">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\makeshadowmap.vs">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\pdiff.ps">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\pdiff.vs">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\pdiffspec.ps">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\pdiffspec.vs">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\pnormalmap.ps">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\pnormalmap.vs">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\shadowmapviewer.ps">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\shadowmapviewer.vs">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\tex.ps">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\tex.vs">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\tex2c.ps">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\tex2c.vs">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\texadd.ps">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\useshadowmap.ps">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\useshadowmap.vs">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\vdiff.ps">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\vdiff.vs">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\vdiffspec.ps">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\shaders\vdiffspec.vs">
+      <Filter>text\shaders\asmshaders</Filter>
+    </None>
+    <None Include="data\ui\changename.uis">
+      <Filter>text\user\ui system</Filter>
+    </None>
+    <None Include="data\ui\default.uis">
+      <Filter>text\user\ui system</Filter>
+    </None>
+    <None Include="data\ui\default2.uis">
+      <Filter>text\user\ui system</Filter>
+    </None>
+    <None Include="data\ui\load.uis">
+      <Filter>text\user\ui system</Filter>
+    </None>
+    <None Include="data\ui\overlap.uis">
+      <Filter>text\user\ui system</Filter>
+    </None>
+    <None Include="data\ui\save.uis">
+      <Filter>text\user\ui system</Filter>
+    </None>
+    <None Include="data\ui\testhier.uis">
+      <Filter>text\user\ui system</Filter>
+    </None>
+    <None Include="data\ui\testloadscript.uis">
+      <Filter>text\user\ui system</Filter>
+    </None>
+    <None Include="data\ui\testnewsave.uis">
+      <Filter>text\user\ui system</Filter>
+    </None>
+    <None Include="data\ui\who.uis">
+      <Filter>text\user\ui system</Filter>
+    </None>
+    <None Include="data\searcher\back.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\built.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\exclude.lst">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\front.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\got_A.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\got_G.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\got_Y.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\got_Y_back.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\head.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\include.lst">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\index.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\indexo.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\indexo2o.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\indexoo.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\middle.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\middle2.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\page0.htm">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\page0.js">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\redir.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\redir_foot.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\redir_head.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\searcher_res.ui">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\searcher\tail.html">
+      <Filter>text\user\searcher</Filter>
+    </None>
+    <None Include="data\luascripts\default.lua">
+      <Filter>text\lua</Filter>
+    </None>
+    <None Include="data\luascripts\inside1.lua">
+      <Filter>text\lua</Filter>
+    </None>
+    <None Include="data\luascripts\inside2.lua">
+      <Filter>text\lua</Filter>
+    </None>
+    <None Include="data\luascripts\lualib.lua">
+      <Filter>text\lua</Filter>
+    </None>
+    <None Include="data\luascripts\npc1.lua">
+      <Filter>text\lua</Filter>
+    </None>
+    <None Include="data\luascripts\npc2.lua">
+      <Filter>text\lua</Filter>
+    </None>
+    <None Include="data\luascripts\npc3.lua">
+      <Filter>text\lua</Filter>
+    </None>
+    <None Include="data\luascripts\npc4.lua">
+      <Filter>text\lua</Filter>
+    </None>
+    <None Include="data\luascripts\outside.lua">
+      <Filter>text\lua</Filter>
+    </None>
+    <None Include="data\luascripts\player1.lua">
+      <Filter>text\lua</Filter>
+    </None>
+    <None Include="data\luascripts\scratch.lua">
+      <Filter>text\lua</Filter>
+    </None>
+    <None Include="data\luascripts\test1.lua">
+      <Filter>text\lua</Filter>
+    </None>
+    <None Include="data\luascripts\test2.lua">
+      <Filter>text\lua</Filter>
+    </None>
+    <None Include="data\engine7testdata\constructed\bigtrack.trk">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </None>
+    <None Include="data\engine7testdata\constructed\default.trk">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </None>
+    <None Include="data\engine7testdata\constructed\forks.trk">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </None>
+    <None Include="data\engine7testdata\constructed\jackiep.trk">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </None>
+    <None Include="data\engine7testdata\constructed\loop1.trk">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </None>
+    <None Include="data\engine7testdata\constructed\loop1_a.trk">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </None>
+    <None Include="data\engine7testdata\constructed\newdefault.trk">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </None>
+    <None Include="data\engine7testdata\constructed\testnew1.trk">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </None>
+    <None Include="data\engine7testdata\constructed\testnew1x.trk">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </None>
+    <None Include="data\engine7testdata\constructed\testnew2.trk">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </None>
+    <None Include="data\engine7testdata\constructed\testnew3.trk">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </None>
+    <None Include="data\engine7testdata\constructed\track1.trk">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </None>
+    <None Include="data\racenetdata\onlineopt\game.cfg">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </None>
+    <None Include="data\racenetdata\onlineopt\newlobby.cfg">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </None>
+    <None Include="data\racenetdata\headon\headon.cfg">
+      <Filter>text\racenetdata\tracks\headon</Filter>
+    </None>
+    <None Include="data\racenetdata\thefalls\thefalls.cfg">
+      <Filter>text\racenetdata\tracks\thefalls</Filter>
+    </None>
+    <None Include="data\racenetdata\2009_track_5b\track_5.cfg">
+      <Filter>text\racenetdata\tracks\2009_track5</Filter>
+    </None>
+    <None Include="data\racenetdata\2009_testcheck\newcheck.cfg">
+      <Filter>text\racenetdata\tracks\2009_testcheck</Filter>
+    </None>
+    <None Include="data\racenetdata\2009_testcheck\newcheck2.cfg">
+      <Filter>text\racenetdata\tracks\2009_testcheck</Filter>
+    </None>
+    <None Include="data\racenetdata\GhostCity\ghostcity.cfg">
+      <Filter>text\racenetdata\tracks\ghostcity</Filter>
+    </None>
+    <None Include="data\racenetdata\TarPits\tarpits.cfg">
+      <Filter>text\racenetdata\tracks\tarpits</Filter>
+    </None>
+    <None Include="data\racenetdata\Prehistoric\prehistoric.cfg">
+      <Filter>text\racenetdata\tracks\prehistoric</Filter>
+    </None>
+    <None Include="data\racenetdata\Space\space.cfg">
+      <Filter>text\racenetdata\tracks\space</Filter>
+    </None>
+    <None Include="data\racenetdata\Coliseum\Coliseum.cfg">
+      <Filter>text\racenetdata\tracks\coliseum</Filter>
+    </None>
+    <None Include="data\racenetdata\config\tdefault.cfg">
+      <Filter>text\racenetdata\config</Filter>
+    </None>
+    <None Include="data\gfxtest\seq0.ifl">
+      <Filter>text\gfxtest</Filter>
+    </None>
+    <None Include="data\gfxtest\seqnew.ifl">
+      <Filter>text\gfxtest</Filter>
+    </None>
+    <None Include="data\qcomp\1qubit gates.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\2qubit gates.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\3qubit gates.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\4qubit gates.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\5qubit gates.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\6qubit gates.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\90 degrees Y.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\bell state 00.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\bell state 01.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\bell state 10.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\bell state 11.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\bell state measure.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\BellState measure CP 30.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\blank.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\bloch test.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\Cat 4.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\Cat 5.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\cat state.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\cnot hadamard test.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\control gates.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\Controlled H test 0.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\Controlled H test 1.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\Controlled Hadamard.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\Controlled X.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\Controlled Y.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\Controlled Z.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\Controlled Z2.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\cz gate.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\detect phase 0.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\detect phase 1.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\detect phase 2.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\detect phase 3.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\detect phase.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\Deutsch-Jozsa.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\entangle 1.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\factor.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\G gate.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\game bot left.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\game bot mid.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\game bot right.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\game mid left.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\game mid mid.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\game mid right.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\game top left.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\game top mid.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\game top right.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\GHZ XXX.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\GHZ XYY.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\GHZ YXY.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\GHZ YYX.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\GHZ.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\grover2link.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\grover3link.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\grover4link.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\grover5link.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\grover6link.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\hadnot.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\hads.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\mermin square.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\nothad.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\phase test 0.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\Quantum Fourier Transform.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\qubit 2.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\s and t gates.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\splitter mirror detect.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\splitter mirror.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\teleport.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\teleport2.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\test bloch.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\testsave.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\W state.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\you dont know 0FY.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\you dont know 1FY.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\you dont know AFY.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\qcomp\you dont know NFY.qcmp">
+      <Filter>text\qcomp</Filter>
+    </None>
+    <None Include="data\turing\BINARY.TUR">
+      <Filter>text\turing</Filter>
+    </None>
+    <None Include="data\turing\COPY.TUR">
+      <Filter>text\turing</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\fifteen.txt">
+      <Filter>text</Filter>
+    </Text>
+    <Text Include="hsv_doc.txt">
+      <Filter>text</Filter>
+    </Text>
+    <Text Include="data\logfile.txt">
+      <Filter>text</Filter>
+    </Text>
+    <Text Include="data\logfileb.txt">
+      <Filter>text</Filter>
+    </Text>
+    <Text Include="data\prims.txt">
+      <Filter>text</Filter>
+    </Text>
+    <Text Include="data\vidcap\vcres.txt">
+      <Filter>text</Filter>
+    </Text>
+    <Text Include="data\shaders\mat2shader.txt">
+      <Filter>text\shaders</Filter>
+    </Text>
+    <Text Include="data\shaders\shadelistasm.txt">
+      <Filter>text\shaders</Filter>
+    </Text>
+    <Text Include="data\shaders\shadelistfx.txt">
+      <Filter>text\shaders</Filter>
+    </Text>
+    <Text Include="data\occ\occclientres.txt">
+      <Filter>text\occ</Filter>
+    </Text>
+    <Text Include="data\occ\svlogfile.txt">
+      <Filter>text\occ</Filter>
+    </Text>
+    <Text Include="data\config\config.txt">
+      <Filter>text\config</Filter>
+    </Text>
+    <Text Include="data\config\device.txt">
+      <Filter>text\config</Filter>
+    </Text>
+    <Text Include="data\config\gamexy.txt">
+      <Filter>text\config</Filter>
+    </Text>
+    <Text Include="data\config\test.txt">
+      <Filter>text\config</Filter>
+    </Text>
+    <Text Include="data\gametheory\gametheoryres.txt">
+      <Filter>text\user\gametheory</Filter>
+    </Text>
+    <Text Include="data\grouptheory2\perm1.txt">
+      <Filter>text\user\gametheory</Filter>
+    </Text>
+    <Text Include="data\grouptheory\rcube.txt">
+      <Filter>text\user\gametheory</Filter>
+    </Text>
+    <Text Include="data\halfpipe\halfpipeui.txt">
+      <Filter>text\user\halfpipeui</Filter>
+    </Text>
+    <Text Include="data\searcher\filtermode.txt">
+      <Filter>text\user\searcher</Filter>
+    </Text>
+    <Text Include="data\searcher\redirstrs.txt">
+      <Filter>text\user\searcher</Filter>
+    </Text>
+    <Text Include="data\wat_physics\quant3\quant3res.txt">
+      <Filter>text\user\wat_physics\quant3</Filter>
+    </Text>
+    <Text Include="data\wat_physics\quant4\quant4res.txt">
+      <Filter>text\user\wat_physics\quant4</Filter>
+    </Text>
+    <Text Include="data\igroup\igroupres.txt">
+      <Filter>text\user\igroup</Filter>
+    </Text>
+    <Text Include="data\scratch\polyres.txt">
+      <Filter>text\user\scratch</Filter>
+    </Text>
+    <Text Include="data\scratch\polysymres.txt">
+      <Filter>text\user\scratch</Filter>
+    </Text>
+    <Text Include="data\scratch\textxmlout.txt">
+      <Filter>text\user\scratch</Filter>
+    </Text>
+    <Text Include="data\ifield\ifieldres.txt">
+      <Filter>text\user\ifield</Filter>
+    </Text>
+    <Text Include="data\ifield\qrcode2res.txt">
+      <Filter>text\user\ifield</Filter>
+    </Text>
+    <Text Include="data\ifield\qrcoderes.txt">
+      <Filter>text\user\ifield</Filter>
+    </Text>
+    <Text Include="data\jsontest\test1.txt">
+      <Filter>text\user\jsontest</Filter>
+    </Text>
+    <Text Include="data\jsontest\test2.txt">
+      <Filter>text\user\jsontest</Filter>
+    </Text>
+    <Text Include="data\jsontest\test3.txt">
+      <Filter>text\user\jsontest</Filter>
+    </Text>
+    <Text Include="data\jsontest\testres1.txt">
+      <Filter>text\user\jsontest</Filter>
+    </Text>
+    <Text Include="data\jsontest\testres3.txt">
+      <Filter>text\user\jsontest</Filter>
+    </Text>
+    <Text Include="data\jsontest\testrjsave.txt">
+      <Filter>text\user\jsontest</Filter>
+    </Text>
+    <Text Include="data\endgame\level1.txt">
+      <Filter>text\user\endgame</Filter>
+    </Text>
+    <Text Include="data\endgame\level2.txt">
+      <Filter>text\user\endgame</Filter>
+    </Text>
+    <Text Include="data\slider\aband.txt">
+      <Filter>text\user\slider</Filter>
+    </Text>
+    <Text Include="data\slider\eight.txt">
+      <Filter>text\user\slider</Filter>
+    </Text>
+    <Text Include="data\slider\level01.txt">
+      <Filter>text\user\slider</Filter>
+    </Text>
+    <Text Include="data\slider\level02.txt">
+      <Filter>text\user\slider</Filter>
+    </Text>
+    <Text Include="data\slider\level03.txt">
+      <Filter>text\user\slider</Filter>
+    </Text>
+    <Text Include="data\slider\level04.txt">
+      <Filter>text\user\slider</Filter>
+    </Text>
+    <Text Include="data\slider\level05.txt">
+      <Filter>text\user\slider</Filter>
+    </Text>
+    <Text Include="data\slider\level06.txt">
+      <Filter>text\user\slider</Filter>
+    </Text>
+    <Text Include="data\slider\level07.txt">
+      <Filter>text\user\slider</Filter>
+    </Text>
+    <Text Include="data\slider\level08.txt">
+      <Filter>text\user\slider</Filter>
+    </Text>
+    <Text Include="data\slider\levele.txt">
+      <Filter>text\user\slider</Filter>
+    </Text>
+    <Text Include="data\slider\levelm.txt">
+      <Filter>text\user\slider</Filter>
+    </Text>
+    <Text Include="data\jelly\lev01.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev02.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev03.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev04.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev05.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev06.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev07.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev08.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev09.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev10.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev11.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev12.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev13.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev14.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev15.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev16.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev17.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev18.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev19.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev20.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev32.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\lev35.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\level01.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\level02.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\level03.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\level04.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\level05.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\level06.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\level07.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\jelly\level08.txt">
+      <Filter>text\user\jelly</Filter>
+    </Text>
+    <Text Include="data\mainmenu\maincfg.txt">
+      <Filter>text\mainmenu</Filter>
+    </Text>
+    <Text Include="data\mainmenu\mainmenu.txt">
+      <Filter>text\mainmenu</Filter>
+    </Text>
+    <Text Include="data\mainmenu\mainres.txt">
+      <Filter>text\mainmenu</Filter>
+    </Text>
+    <Text Include="data\engine7testdata\carenalobby\carenalobbyres.txt">
+      <Filter>text\engine7testdata\carenalobby</Filter>
+    </Text>
+    <Text Include="data\engine7testdata\carenalobby\energymatrix.txt">
+      <Filter>text\engine7testdata\carenalobby</Filter>
+    </Text>
+    <Text Include="data\engine7testdata\carenalobby\gamedomain.txt">
+      <Filter>text\engine7testdata\carenalobby</Filter>
+    </Text>
+    <Text Include="data\engine7testdata\carenalobby\gamepicked.txt">
+      <Filter>text\engine7testdata\carenalobby</Filter>
+    </Text>
+    <Text Include="data\engine7testdata\carenalobby\ips.txt">
+      <Filter>text\engine7testdata\carenalobby</Filter>
+    </Text>
+    <Text Include="data\engine7testdata\constructed\collist.txt">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </Text>
+    <Text Include="data\engine7testdata\constructed\constructorres.txt">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </Text>
+    <Text Include="data\engine7testdata\constructed\newconstructorres.txt">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </Text>
+    <Text Include="data\engine7testdata\constructed\newnameres.txt">
+      <Filter>text\engine7testdata\constructor</Filter>
+    </Text>
+    <Text Include="data\engine7testdata\rematchres\online_rematchres.txt">
+      <Filter>text\engine7testdata\rematchres</Filter>
+    </Text>
+    <Text Include="data\racenetdata\altcaenergy.txt">
+      <Filter>text\racenetdata</Filter>
+    </Text>
+    <Text Include="data\racenetdata\altcaweapons.txt">
+      <Filter>text\racenetdata</Filter>
+    </Text>
+    <Text Include="data\racenetdata\caenergy.txt">
+      <Filter>text\racenetdata</Filter>
+    </Text>
+    <Text Include="data\racenetdata\carmat2shader.txt">
+      <Filter>text\racenetdata</Filter>
+    </Text>
+    <Text Include="data\racenetdata\caweapons.txt">
+      <Filter>text\racenetdata</Filter>
+    </Text>
+    <Text Include="data\racenetdata\globalmat2shader.txt">
+      <Filter>text\racenetdata</Filter>
+    </Text>
+    <Text Include="data\racenetdata\toon2_carmat2shader.txt">
+      <Filter>text\racenetdata</Filter>
+    </Text>
+    <Text Include="data\racenetdata\toon_carmat2shader.txt">
+      <Filter>text\racenetdata</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\altonline_seltrackcfg.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\config.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\detachweaps.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\energymatrix.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\freeweaps.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\gameinfo.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\newdetachweaps.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\newlobbyres.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\online_rematchres.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\online_seltrack.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\online_seltrackcfg.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\startraceinfov2.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\thecars.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\weapenable.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\weapmaster.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\onlineopt\weapxlate.txt">
+      <Filter>text\racenetdata\onlineopt</Filter>
+    </Text>
+    <Text Include="data\racenetdata\headon\headon.txt">
+      <Filter>text\racenetdata\tracks\headon</Filter>
+    </Text>
+    <Text Include="data\racenetdata\headon\mat2shader.txt">
+      <Filter>text\racenetdata\tracks\headon</Filter>
+    </Text>
+    <Text Include="data\racenetdata\thefalls\mat2shader.txt">
+      <Filter>text\racenetdata\tracks\thefalls</Filter>
+    </Text>
+    <Text Include="data\racenetdata\thefalls\thefalls.txt">
+      <Filter>text\racenetdata\tracks\thefalls</Filter>
+    </Text>
+    <Text Include="data\racenetdata\2009_track_5b\mat2shader.txt">
+      <Filter>text\racenetdata\tracks\2009_track5</Filter>
+    </Text>
+    <Text Include="data\racenetdata\2009_track_5b\track_5.txt">
+      <Filter>text\racenetdata\tracks\2009_track5</Filter>
+    </Text>
+    <Text Include="data\racenetdata\2009_testcheck\mat2shader.txt">
+      <Filter>text\racenetdata\tracks\2009_testcheck</Filter>
+    </Text>
+    <Text Include="data\racenetdata\2009_testcheck\newcheck.txt">
+      <Filter>text\racenetdata\tracks\2009_testcheck</Filter>
+    </Text>
+    <Text Include="data\racenetdata\2009_testcheck\newcheck2.txt">
+      <Filter>text\racenetdata\tracks\2009_testcheck</Filter>
+    </Text>
+    <Text Include="data\racenetdata\GhostCity\ghostcity.txt">
+      <Filter>text\racenetdata\tracks\ghostcity</Filter>
+    </Text>
+    <Text Include="data\racenetdata\GhostCity\mat2shader.txt">
+      <Filter>text\racenetdata\tracks\ghostcity</Filter>
+    </Text>
+    <Text Include="data\racenetdata\TarPits\mat2shader.txt">
+      <Filter>text\racenetdata\tracks\tarpits</Filter>
+    </Text>
+    <Text Include="data\racenetdata\TarPits\tarpits.txt">
+      <Filter>text\racenetdata\tracks\tarpits</Filter>
+    </Text>
+    <Text Include="data\racenetdata\Prehistoric\mat2shader.txt">
+      <Filter>text\racenetdata\tracks\prehistoric</Filter>
+    </Text>
+    <Text Include="data\racenetdata\Prehistoric\prehistoric.txt">
+      <Filter>text\racenetdata\tracks\prehistoric</Filter>
+    </Text>
+    <Text Include="data\racenetdata\Space\mat2shader.txt">
+      <Filter>text\racenetdata\tracks\space</Filter>
+    </Text>
+    <Text Include="data\racenetdata\Space\space.txt">
+      <Filter>text\racenetdata\tracks\space</Filter>
+    </Text>
+    <Text Include="data\racenetdata\Coliseum\Coliseum.txt">
+      <Filter>text\racenetdata\tracks\coliseum</Filter>
+    </Text>
+    <Text Include="data\racenetdata\Coliseum\mat2shader.txt">
+      <Filter>text\racenetdata\tracks\coliseum</Filter>
+    </Text>
+    <Text Include="data\racenetdata\updater\updaterres.txt">
+      <Filter>text\racenetdata\updater</Filter>
+    </Text>
+    <Text Include="data\racenetdata\updater\updatestatus.txt">
+      <Filter>text\racenetdata\updater</Filter>
+    </Text>
+    <Text Include="data\racenetdata\broadcast\broadcast_servercfg.txt">
+      <Filter>text\racenetdata\broadcast</Filter>
+    </Text>
+    <Text Include="data\racenetdata\broadcast\broadcast_serverres.txt">
+      <Filter>text\racenetdata\broadcast</Filter>
+    </Text>
+    <Text Include="data\racenetdata\broadcast\broadcast_testclientres.txt">
+      <Filter>text\racenetdata\broadcast</Filter>
+    </Text>
+    <Text Include="data\racenetdata\broadcast\broadcast_testserverres.txt">
+      <Filter>text\racenetdata\broadcast</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\chatres.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\hiscoresres.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\lobbyres.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\logoncfg.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\logonres.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\optionsres.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\pickgameres.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\pickservercfg.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\pickserverres.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\quickgamecfg.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\quickgameres.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\registerres.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\resultsres.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\servercfg.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\serverres.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\serverusers.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\lobbysystem\titleres.txt">
+      <Filter>text\lobbysystem_match</Filter>
+    </Text>
+    <Text Include="data\racenetdata\st2_game\gardentag.txt">
+      <Filter>text\st2_game</Filter>
+    </Text>
+    <Text Include="data\toon\toon_mat2shader.txt">
+      <Filter>text\toon</Filter>
+    </Text>
+    <Text Include="data\browser\browserres.txt">
+      <Filter>text\browser</Filter>
+    </Text>
+    <Text Include="data\browser\postres.txt">
+      <Filter>text\browser</Filter>
+    </Text>
+    <Text Include="data\particles\particle_list.txt">
+      <Filter>text\particles</Filter>
+    </Text>
+    <Text Include="data\connect4\connect4res.txt">
+      <Filter>text\connect4</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\3BY3.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\4SQUARE.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\BOARD0.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\BOARD1.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\BOARD2.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\BOARD3.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\BOARD4.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\FUN.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\FUN4.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\FUNS.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\HONEYCOM.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\NIM.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\ten.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\ten2.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\TEST1.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\TEST2.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\TEST3.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\tritri.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\HONEYCOM\ZIGZAG.txt">
+      <Filter>text\HONEYCOM</Filter>
+    </Text>
+    <Text Include="data\simplex\simplexres.txt">
+      <Filter>text\simplex</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\30krrvsk.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\31krvskr.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\32krpvskr.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\40kpvsk.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\41kpvsk.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\42kpvsk.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\43kpvsk.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\44kpvsk.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\50kqvsk.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\51knnvsk.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\52krvsk.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\53kbnvsk.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\55test.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\56kvsk.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\57kbbvsk.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_nim\nim1.txt">
+      <Filter>text\game2\game2_nim</Filter>
+    </Text>
+    <Text Include="data\game2_nim\nim3.txt">
+      <Filter>text\game2\game2_nim</Filter>
+    </Text>
+    <Text Include="data\game2_opposition\opp3.txt">
+      <Filter>text\game2\game2_opposition</Filter>
+    </Text>
+    <Text Include="data\game2_opposition\opp4.txt">
+      <Filter>text\game2\game2_opposition</Filter>
+    </Text>
+    <Text Include="data\game2_opposition\opp5.txt">
+      <Filter>text\game2\game2_opposition</Filter>
+    </Text>
+    <Text Include="data\game2_opposition\opp6.txt">
+      <Filter>text\game2\game2_opposition</Filter>
+    </Text>
+    <Text Include="data\game2_opposition\opp7.txt">
+      <Filter>text\game2\game2_opposition</Filter>
+    </Text>
+    <Text Include="data\game2_opposition\opp8.txt">
+      <Filter>text\game2\game2_opposition</Filter>
+    </Text>
+    <Text Include="data\game2_ttt\ttt2x2.txt">
+      <Filter>text\game2\game2_ttt</Filter>
+    </Text>
+    <Text Include="data\game2_ttt\ttt3x3.txt">
+      <Filter>text\game2\game2_ttt</Filter>
+    </Text>
+    <Text Include="data\game2_ttt\ttt4x4.txt">
+      <Filter>text\game2\game2_ttt</Filter>
+    </Text>
+    <Text Include="data\game2_foxgoose\foxgoose4.txt">
+      <Filter>text\game2\foxgoose</Filter>
+    </Text>
+    <Text Include="data\game2_foxgoose\foxgoose8.txt">
+      <Filter>text\game2\foxgoose</Filter>
+    </Text>
+    <Text Include="data\nfs_shell\nfs_shellres.txt">
+      <Filter>text\nfs_shell</Filter>
+    </Text>
+    <Text Include="data\AR\ar_res.txt">
+      <Filter>text\AR</Filter>
+    </Text>
+    <Text Include="data\physics3d\building.txt">
+      <Filter>text\physics3d</Filter>
+    </Text>
+    <Text Include="data\physics3d\dominos.txt">
+      <Filter>text\physics3d</Filter>
+    </Text>
+    <Text Include="data\physics3d\objects.txt">
+      <Filter>text\physics3d</Filter>
+    </Text>
+    <Text Include="data\physics3d\phyobjs.txt">
+      <Filter>text\physics3d</Filter>
+    </Text>
+    <Text Include="data\physics3d\pickscene.txt">
+      <Filter>text\physics3d</Filter>
+    </Text>
+    <Text Include="data\physics3d\simple.txt">
+      <Filter>text\physics3d</Filter>
+    </Text>
+    <Text Include="data\physics3d\testang.txt">
+      <Filter>text\physics3d</Filter>
+    </Text>
+    <Text Include="data\physics3d\testcoll.txt">
+      <Filter>text\physics3d</Filter>
+    </Text>
+    <Text Include="data\physics3d\testtime.txt">
+      <Filter>text\physics3d</Filter>
+    </Text>
+    <Text Include="data\physics3d\tops.txt">
+      <Filter>text\physics3d</Filter>
+    </Text>
+    <Text Include="data\plotter\depthLUT_module66_500lux_100cm.txt">
+      <Filter>text\plotter</Filter>
+    </Text>
+    <Text Include="data\qcomp\lastfile.txt">
+      <Filter>text\qcomp</Filter>
+    </Text>
+    <Text Include="data\qcomp\qcompres.txt">
+      <Filter>text\qcomp</Filter>
+    </Text>
+    <Text Include="data\testres3d\testres3dres.txt">
+      <Filter>text\testres3d</Filter>
+    </Text>
+    <Text Include="data\turing\turingres.txt">
+      <Filter>text\turing</Filter>
+    </Text>
+    <Text Include="data\chatter\chatterres.txt">
+      <Filter>text\chatter</Filter>
+    </Text>
+    <Text Include="data\cout.txt">
+      <Filter>text</Filter>
+    </Text>
+    <Text Include="data\holoview2dbrush\settings.txt">
+      <Filter>text\holoview2dbrush</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="data\shaders\cubemaptest.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\cvert.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\cvertvel.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\edge.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\edge2.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\env.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\envv2.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\envv2texvel.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\laserbeam.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\lightmap.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\makeshadowmap.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\omni.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\pdiff.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\pdiffspec.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\pnormalmap.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\shadowmapviewer.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\spotlight.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\stan.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\tex.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\tex2c.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\texadd.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\texvel.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\toon.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\toon2.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\useshadowmap.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\vdiff.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\vdiffspec.fx">
+      <Filter>text\shaders\fxshaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="helperobj.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_modelutil.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_platonic.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_pointcloudfile.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_pointcloudkdtree.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_3dtest.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_arena1.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_arena2.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_basic3d.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_braid.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_castle.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_conduit.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_cubemaptest.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_cubemaptest2.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_lighttest.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_many.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_particles.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_pointcloud.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_rcastle.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_testres3d.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_toon.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_tritest1.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_tritest2.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_tritest3.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_tritest4.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_tritest5.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_vidtest.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_trackpath.h">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_factory.h">
+      <Filter>Source Files\user\user_ui</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_ui.h">
+      <Filter>Source Files\user\user_ui</Filter>
+    </ClInclude>
+    <ClInclude Include="u_uiclass.h">
+      <Filter>Source Files\user\user_ui</Filter>
+    </ClInclude>
+    <ClInclude Include="u_uiclass2.h">
+      <Filter>Source Files\user\user_ui</Filter>
+    </ClInclude>
+    <ClInclude Include="u_uipopup_info.h">
+      <Filter>Source Files\user\user_ui</Filter>
+    </ClInclude>
+    <ClInclude Include="timelogger.h">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_browser.h">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_chattertest.h">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_joetest.h">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_joetest2.h">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_occclient.h">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_occclient2.h">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_occserver.h">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_post.h">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_searcher.h">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClInclude>
+    <ClInclude Include="u_searcher_mandle_thread.h">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClInclude>
+    <ClInclude Include="rungekutta.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_goldbach.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_mandl.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_median.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_plotter2.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_digital.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_jigpuzz.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_lightsout.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_mandl.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_mattest.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_penrose.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plotter.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_poly_sym.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_polynomial.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_riemann.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_turing.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_volley.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
+    <ClInclude Include="u_bch.h">
+      <Filter>Source Files\user\user_math\bch rs</Filter>
+    </ClInclude>
+    <ClInclude Include="u_qr_code2parse.h">
+      <Filter>Source Files\user\user_math\bch rs</Filter>
+    </ClInclude>
+    <ClInclude Include="u_qr_code2scan.h">
+      <Filter>Source Files\user\user_math\bch rs</Filter>
+    </ClInclude>
+    <ClInclude Include="u_qr_code_layout_v2.h">
+      <Filter>Source Files\user\user_math\bch rs</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_qr_code.h">
+      <Filter>Source Files\user\user_math\bch rs</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_qr_code2.h">
+      <Filter>Source Files\user\user_math\bch rs</Filter>
+    </ClInclude>
+    <ClInclude Include="u_cayley.h">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClInclude>
+    <ClInclude Include="u_group_field.h">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClInclude>
+    <ClInclude Include="u_groupanalyze.h">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClInclude>
+    <ClInclude Include="u_ply.h">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_grouptheory.h">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_ifield.h">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_igroup.h">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_rubikscube.h">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClInclude>
+    <ClInclude Include="u_smallgroups.h">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClInclude>
+    <ClInclude Include="u_z2p.h">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2bezier.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2eigen.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2fourducks.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2lens.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2pointcloud.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2poles.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2power.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2quant.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2quantsho.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2simple.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2zeta.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_ar_parse.h">
+      <Filter>Source Files\user\user_math\AR</Filter>
+    </ClInclude>
+    <ClInclude Include="u_ar_scan.h">
+      <Filter>Source Files\user\user_math\AR</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_ar.h">
+      <Filter>Source Files\user\user_math\AR</Filter>
+    </ClInclude>
+    <ClInclude Include="u_fplot.h">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_packer.h">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_gfxtest.h">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_gfxview.h">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_onebit.h">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_spritetest2.h">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_spritetest3.h">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="testclassfactory.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_circularA.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_circularB.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_file_nh.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_json.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_list.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_halfpipe.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_joytest.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_laplace_heat.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_luatest.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_mainmenu.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_playamovie.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_renamer.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_scratch.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_spawner.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_syncro.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_user0.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_user1.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_user2.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_vidcap.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_states.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_testasmmacros.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="wat_physics\QUANT3\quant3.h">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="wat_physics\quant4\quant4.h">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="wat_physics\QUANT3\quant_sho.h">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="u_qcolumn.h">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="u_qfieldui.h">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="u_qgatebase.h">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="u_qgatederived.h">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="u_qmat.h">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="u_qstate.h">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_qcomp.h">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="u_gametheory.h">
+      <Filter>Source Files\user\game theory</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_gametheory.h">
+      <Filter>Source Files\user\game theory</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_simplex.h">
+      <Filter>Source Files\user\game theory</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_connect4.h">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_honeycomb.h">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_jelly.h">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_slider.h">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_sokoban.h">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_sokoban2.h">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_ttt.h">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_wriggler.h">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClInclude>
+    <ClInclude Include="u_game2.h">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_game2_endgame.h">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_game2_foxgoose.h">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_game2_nim.h">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_game2_opposition.h">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_game2_ttt.h">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_game2_ttt2.h">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClInclude>
+    <ClInclude Include="nfs_choose.h">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClInclude>
+    <ClInclude Include="nfs_entername.h">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClInclude>
+    <ClInclude Include="nfs_game.h">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClInclude>
+    <ClInclude Include="nfs_readyrace.h">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClInclude>
+    <ClInclude Include="nfs_result.h">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClInclude>
+    <ClInclude Include="nfs_shell.h">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClInclude>
+    <ClInclude Include="nfs_smile.h">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClInclude>
+    <ClInclude Include="nfs_utils.h">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\box2box.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\camera.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\carclass.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\coins.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\crasheditor.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\gameinfo.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\gamestate.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\hr_boxai.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="hw35_line2road.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\online_seltrack.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\online_uphysics.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\online_uplay.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\packet.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\scenetest.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\scrline.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\soundlst.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\stubhelper.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\tsp.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\updater.h">
+      <Filter>Source Files\racenet</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\bluered.h">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\onlinecars.h">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\soundtest.h">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\broadcast_server.h">
+      <Filter>Source Files\racenet\broadcast_server</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\broadcast_testclient.h">
+      <Filter>Source Files\racenet\broadcast_server</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\broadcast_testserver.h">
+      <Filter>Source Files\racenet\broadcast_server</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\boxai.h">
+      <Filter>Source Files\racenet\not used</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\newlobby.h">
+      <Filter>Source Files\racenet\newlobby</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_aicpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_carclass.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_carenaconnectcpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_carenagamecpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_carenalobbycpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_constructorcpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_facevertscpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_jrmcarscpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_line2roadcpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_loadweapcpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_marching.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_marchingdata.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_marchingtest.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_meshtestcpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_newconstructorcpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_packetcpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_physicscpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_polylistcpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_rematchcpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_scrlinecpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_trackhashcpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_tracklistcpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_twobjcpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\n_usefulcpp.h">
+      <Filter>Source Files\engine7test</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\alcatrazcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\appcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\aviplayer.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\bobject.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\bpatchcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\buttons.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\carenalobbyres.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\carobjectcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\chores.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\choresderived.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\chunk.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\chunktestcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\cinccpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\cincres.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\cir.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\circleobjectcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\circlewcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\coloredit.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\constructorres.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\cubrious.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\Curve.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\cyclescpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\da.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\domino.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\dominopusher.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\editor.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\factory.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\fbuilder.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\fdump.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\FMat.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\fonter.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\fractcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\fracttut2cpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\fracttut2rescpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\fracttutcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\fracttutrescpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\gallonscpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\gallonsres.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\geomcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\hail2.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\hailcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\jigpuzz.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\kenocpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\kenorescpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\listutils.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\mainmenucpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\mainmenures.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\mandljulia.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\marchcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\MATRIX.H">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\menageriecpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\menus.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\meshtest2cpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\meshtest3cpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\meshtest4cpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\messagepusher.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\minimathcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\minimodelcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\minitexcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\minitreecpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\minitypes.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\mockscenecpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\monkey.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\mystery.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\nettestcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\newconstructorres.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\newnameres.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\newscripter.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\objcollisionscpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\objectmakercpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\objintsectcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\objlinelinecpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\objmaker2cpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\objmaker3cpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\objmaker4cpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\objmaker5.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\objphysicscpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\om.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\orbox.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\oshirocpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\pbn.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\pbnsolver.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\phyobjectcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\plottercpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\pnt2dcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\polylineobjectcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\qalloc.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\qalloca.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\rec.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\rectobjectcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\rematchrescpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\render.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\rendercpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\resource.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\rktestcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\roulettecpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\scanboard.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\scene.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\scripter.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\scrollill.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\shape1.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\shape1family.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\shape1family2.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\shape2.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\sjoy.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\slider.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\sobject.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\sokoban.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\spawner.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\spgfile.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\spgplayer.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\spgscript.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\spgtools.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\spgtoolsres.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\sprite2.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\spritemod.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\spritemodres.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\sprites.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\ss.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\sudoku.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\sudokures.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\switches.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\terraincpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\test9cpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\testphysicscpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\testresize.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\textedit.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\textshow.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\tomb3dtestcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\tree1family.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\tree1family2.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\treecir.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\treelogger.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\treerec.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\treeshape1.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\treess.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\twobj.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\types.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\vector.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\viewport2dcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\wallobjectcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\whereiscpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\windowscanner.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\woodpuzzcpp.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="engine7test\xfont.h">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Source Files\Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\match_game1.h">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\match_hiscores.h">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\match_lobby.h">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\match_logon.h">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\match_options.h">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\match_pickgame.h">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\match_pickserver.h">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\match_quickgame.h">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\match_register.h">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\match_results.h">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\match_server.h">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="racenet\match_title.h">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_heathouse.h">
+      <Filter>Source Files\game_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_physics2d.h">
+      <Filter>Source Files\game_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="collutil.h">
+      <Filter>Source Files\game_physics\physics3d</Filter>
+    </ClInclude>
+    <ClInclude Include="primcoll.h">
+      <Filter>Source Files\game_physics\physics3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_physics3d.h">
+      <Filter>Source Files\game_physics\physics3d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_stoid.h">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_stoid_data.h">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2octmirror.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_holoview2d.h">
+      <Filter>Source Files\user\holoview</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_holoview3d.h">
+      <Filter>Source Files\user\holoview</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_holoview2db.h">
+      <Filter>Source Files\user\holoview</Filter>
+    </ClInclude>
+    <ClInclude Include="u_permiter.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2linear.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_spinners.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_oddOneOut.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2soccergoal.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="u_listtest.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="helperobj.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_modelutil.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_platonic.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_pointcloudfile.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_pointcloudkdtree.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_3dtest.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_arena1.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_arena2.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_basic3d.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_braid.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_castle.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_castle_bfp.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_conduit.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_cubemaptest.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_cubemaptest2.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_lighttest.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_many.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_particles.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_pointcloud.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_rcastle.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_testres3d.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_toon.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_tritest1.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_tritest2.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_tritest3.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_tritest4.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_tritest5.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_vidtest.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_trackpath.cpp">
+      <Filter>Source Files\user\user_3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_ui.cpp">
+      <Filter>Source Files\user\user_ui</Filter>
+    </ClCompile>
+    <ClCompile Include="u_uiclass.cpp">
+      <Filter>Source Files\user\user_ui</Filter>
+    </ClCompile>
+    <ClCompile Include="u_uiclass2.cpp">
+      <Filter>Source Files\user\user_ui</Filter>
+    </ClCompile>
+    <ClCompile Include="u_uipopup_info.cpp">
+      <Filter>Source Files\user\user_ui</Filter>
+    </ClCompile>
+    <ClCompile Include="timelogger.cpp">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_browser.cpp">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_chattertest.cpp">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_joetest.cpp">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_joetest2.cpp">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_occclient.cpp">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_occclient2.cpp">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_occserver.cpp">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_post.cpp">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_searcher.cpp">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClCompile>
+    <ClCompile Include="u_searcher_mandle_thread.cpp">
+      <Filter>Source Files\user\user_net</Filter>
+    </ClCompile>
+    <ClCompile Include="rungekutta.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_goldbach.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_mandl.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_plotter2.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_digital.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_jigpuzz.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_lightsout.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_mandl.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_mattest.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_penrose.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plotter.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_poly_sym.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_polynomial.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_riemann.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_turing.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_volley.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_bch.cpp">
+      <Filter>Source Files\user\user_math\bch rs</Filter>
+    </ClCompile>
+    <ClCompile Include="u_qr_code2parse.cpp">
+      <Filter>Source Files\user\user_math\bch rs</Filter>
+    </ClCompile>
+    <ClCompile Include="u_qr_code2scan.cpp">
+      <Filter>Source Files\user\user_math\bch rs</Filter>
+    </ClCompile>
+    <ClCompile Include="u_qr_code_layout_v2.cpp">
+      <Filter>Source Files\user\user_math\bch rs</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_qr_code.cpp">
+      <Filter>Source Files\user\user_math\bch rs</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_qr_code2.cpp">
+      <Filter>Source Files\user\user_math\bch rs</Filter>
+    </ClCompile>
+    <ClCompile Include="u_cayley.cpp">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClCompile>
+    <ClCompile Include="u_group_field.cpp">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClCompile>
+    <ClCompile Include="u_groupanalyze.cpp">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClCompile>
+    <ClCompile Include="u_ply.cpp">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_grouptheory.cpp">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_ifield.cpp">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_igroup.cpp">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_rubikscube.cpp">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClCompile>
+    <ClCompile Include="u_smallgroups.cpp">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClCompile>
+    <ClCompile Include="u_z2p.cpp">
+      <Filter>Source Files\user\user_math\abstract_algebra</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\alphatest.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\ar_plot.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\bell_small_angle.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\centroid.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\coll2d.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\containertest.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\cousin.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\cpptest.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\cubic.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\cubic2.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\dds2png.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\decimal_rat.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\depthLUT.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\fib.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\glyph.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\hough_test.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\interp.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\interstellar.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\lens.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\lindiff.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\line2sphere.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\linreg.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\macrotest.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\make_penrose.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\makeamaptest.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\makeasmallfont.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\makesquid.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\millibel.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\needle.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\passport.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\pers.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\poles.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\power.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\provider.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\quant.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\quantsho.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\regex.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\rotatepic.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\rotrect.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\slerptest.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\sort2test.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\strtoktest.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\sumtest.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\tang.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\testline2btri.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2bezier.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2eigen.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2fourducks.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2lens.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2pointcloud.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2poles.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2power.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2quant.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2quantsho.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2simple.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2zeta.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\writebin.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_code\zeta.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_ar_parse.cpp">
+      <Filter>Source Files\user\user_math\AR</Filter>
+    </ClCompile>
+    <ClCompile Include="u_ar_scan.cpp">
+      <Filter>Source Files\user\user_math\AR</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_ar.cpp">
+      <Filter>Source Files\user\user_math\AR</Filter>
+    </ClCompile>
+    <ClCompile Include="u_font.cpp">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_fplot.cpp">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_packer.cpp">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_gfxtest.cpp">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_gfxview.cpp">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_onebit.cpp">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_spritetest2.cpp">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_spritetest3.cpp">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="testclassfactory.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_circularA.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_circularB.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_file_nh.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_json.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_list.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_halfpipe.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_joytest.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_laplace_heat.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_luatest.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_mainmenu.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_playamovie.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_renamer.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_scratch.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_spawner.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_syncro.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_user0.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_user1.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_user2.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_vidcap.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_states.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_sysdebvars.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_testasmmacros.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="wat_physics\QUANT3\quant3.cpp">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="wat_physics\quant4\quant4.cpp">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="wat_physics\QUANT3\quant_sho.cpp">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="u_qcolumn.cpp">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="u_qfieldui.cpp">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="u_qgatebase.cpp">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="u_qgatederived.cpp">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="u_qmat.cpp">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="u_qstate.cpp">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_qcomp.cpp">
+      <Filter>Source Files\user\user_quantum_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="u_gametheory.cpp">
+      <Filter>Source Files\user\game theory</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_gametheory.cpp">
+      <Filter>Source Files\user\game theory</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_simplex.cpp">
+      <Filter>Source Files\user\game theory</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_connect4.cpp">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_endgame_old.cpp">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_honeycomb.cpp">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_jelly.cpp">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_slider.cpp">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_sokoban.cpp">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_sokoban2.cpp">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_ttt.cpp">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_wriggler.cpp">
+      <Filter>Source Files\user\strategy games puzzles</Filter>
+    </ClCompile>
+    <ClCompile Include="u_game2.cpp">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_game2_endgame.cpp">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_game2_foxgoose.cpp">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_game2_nim.cpp">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_game2_opposition.cpp">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_game2_ttt.cpp">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_game2_ttt2.cpp">
+      <Filter>Source Files\user\strategy games puzzles\game2</Filter>
+    </ClCompile>
+    <ClCompile Include="nfs_choose.cpp">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClCompile>
+    <ClCompile Include="nfs_entername.cpp">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClCompile>
+    <ClCompile Include="nfs_game.cpp">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClCompile>
+    <ClCompile Include="nfs_readyrace.cpp">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClCompile>
+    <ClCompile Include="nfs_result.cpp">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClCompile>
+    <ClCompile Include="nfs_shell.cpp">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClCompile>
+    <ClCompile Include="nfs_smile.cpp">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClCompile>
+    <ClCompile Include="nfs_utils.cpp">
+      <Filter>Source Files\user\nfs_shell</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\box2box.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\camera.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\carclass.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\coins.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\crasheditor.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\gameinfo.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\gamestate.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\hr_boxai.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="hw35_line2road.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\online_seltrack.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\online_uphysics.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\online_uplay.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\packet.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\scrline.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\tsp.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\updater.cpp">
+      <Filter>Source Files\racenet</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\bluered.cpp">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\ddstest.cpp">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\debvars.cpp">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\deflate.cpp">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\deflateo.cpp">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\globalres.cpp">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\line2road.cpp">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\mainmenu.cpp">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\onlinecars.cpp">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\scenetest.cpp">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\soundtest.cpp">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\states.cpp">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\stubhelper.cpp">
+      <Filter>Source Files\racenet\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\broadcast_server.cpp">
+      <Filter>Source Files\racenet\broadcast_server</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\broadcast_testclient.cpp">
+      <Filter>Source Files\racenet\broadcast_server</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\broadcast_testserver.cpp">
+      <Filter>Source Files\racenet\broadcast_server</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\boxai.cpp">
+      <Filter>Source Files\racenet\not used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\hw35_boxai.cpp">
+      <Filter>Source Files\racenet\not used</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\newlobby.cpp">
+      <Filter>Source Files\racenet\newlobby</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_ai.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_carclass.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_carenaconnect.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_carenagame.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_carenalobby.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_constructor.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_faceverts.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_jrmcars.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_line2road.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_loadweap.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_marching.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_marchingdata.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_marchingtest.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_meshtest.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_newconstructor.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_packet.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_physics.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_polylist.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_rematch.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_scrline.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_trackhash.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_tracklist.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_twobj.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\n_useful.cpp">
+      <Filter>Source Files\engine7test</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\alcatraz.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\app.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\aviplayer.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\bobject.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\bpatch.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\buttons.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\carobject.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\chores.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\choresderived.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\chunk.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\chunktest.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\cinc.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\circleobject.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\circlew.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\Copy of meshtest3.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\cubrious.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\cycles.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\da.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\debvars.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\domino.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\dominopusher.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\fdump.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\fonter.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\fract.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\fracttut.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\fracttut2.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\gallons.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\geom.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\hail.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\hail2.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\jigpuzz.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\keno.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\mainmenu.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\mandljulia.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\march.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\menagerie.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\meshtest2.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\meshtest3.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\meshtest4.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\messagepusher.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\messagepushero.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\minimath.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\minimodel.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\minitex.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\minitree.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\mockscene.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\monkey.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\mystery.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\nettest.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\newscripter.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\objcollisions.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\objectmaker.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\objintsect.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\objlineline.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\objmaker2.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\objmaker3.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\objmaker3old.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\objmaker4.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\objmaker5.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\objphysics.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\om.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\orbox.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\oshiro.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\pbn.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\pbno.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\pbnsolver.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\phyobject.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\plotter.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\pnt2d.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\polylineobject.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\qalloc.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\qalloca.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\rectobject.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\render.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\render_asm.CPP">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\rktest.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\roulette.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\scanboard.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\scene.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\scripter.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\scrollill.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\shape1.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\shape2.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\sjoy.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\sobject.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\sokoban.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\spawner.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\spgfile.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\spgplayer.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\spgscript.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\spgtools.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\spgtoolso.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\sprite2.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\spritemod.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\sprites.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\sudoku.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\switches.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\terrain.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\test9.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\testphysics.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\testresize.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\textshow.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\tomb3dtest.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\treelogger.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\treeshape1.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\viewport2d.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\wallobject.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\whereis.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\windowscanner.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\windowscannero.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\woodpuzz.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="engine7test\xfont.cpp">
+      <Filter>Source Files\engine7test\not yet used</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\adler32.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\compress.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\crc32.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\deflate.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\example.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\gzio.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\infback.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\inffast.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\inflate.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\inftrees.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\minigzip.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\trees.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\uncompr.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="flate\zutil.c">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_chat.c">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_game1.c">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_hiscores.c">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_lobby.c">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_logon.c">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_options.c">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_pickgame.c">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_quickgame.c">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_results.c">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </ClCompile>
+    <ClCompile Include="engine1test_lobby_ref\st_server.c">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\match_game1.cpp">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\match_hiscores.cpp">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\match_lobby.cpp">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\match_logon.cpp">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\match_options.cpp">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\match_pickgame.cpp">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\match_pickserver.cpp">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\match_quickgame.cpp">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\match_register.cpp">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\match_results.cpp">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\match_server.cpp">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="racenet\match_title.cpp">
+      <Filter>Source Files\matchsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_heathouse.cpp">
+      <Filter>Source Files\game_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_physics2d.cpp">
+      <Filter>Source Files\game_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="colutil.cpp">
+      <Filter>Source Files\game_physics\physics3d</Filter>
+    </ClCompile>
+    <ClCompile Include="objcollisions.cpp">
+      <Filter>Source Files\game_physics\physics3d</Filter>
+    </ClCompile>
+    <ClCompile Include="primcoll.cpp">
+      <Filter>Source Files\game_physics\physics3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_physics3d.cpp">
+      <Filter>Source Files\game_physics\physics3d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_stoid.cpp">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="u_stoid_data.cpp">
+      <Filter>Source Files\user\user_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="modernCppTests\modernCppTests.cpp">
+      <Filter>Source Files\modernCppTests</Filter>
+    </ClCompile>
+    <ClCompile Include="modernCppTests\cpl4e1.cpp">
+      <Filter>Source Files\modernCppTests</Filter>
+    </ClCompile>
+    <ClCompile Include="modernCppTests\cpl4e2.cpp">
+      <Filter>Source Files\modernCppTests</Filter>
+    </ClCompile>
+    <ClCompile Include="modernCppTests\cpl4e3.cpp">
+      <Filter>Source Files\modernCppTests</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2octmirror.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_holoview2d.cpp">
+      <Filter>Source Files\user\holoview</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_holoview3d.cpp">
+      <Filter>Source Files\user\holoview</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_holoview2db.cpp">
+      <Filter>Source Files\user\holoview</Filter>
+    </ClCompile>
+    <ClCompile Include="u_permiter.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2linear.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_spinners.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_oddOneOut.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2soccergoal.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_listtest.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="data\scratch\test.xml">
+      <Filter>text\user\scratch</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="engqtest.rc">
+      <Filter>Source Files\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico">
+      <Filter>Source Files\Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="racenet\hw35_boxai.h">
+      <Filter>Source Files\racenet\not used</Filter>
+    </CustomBuild>
+    <CustomBuild Include="flate\crc32.h">
+      <Filter>Source Files\flate</Filter>
+    </CustomBuild>
+    <CustomBuild Include="flate\deflate.h">
+      <Filter>Source Files\flate</Filter>
+    </CustomBuild>
+    <CustomBuild Include="flate\inffast.h">
+      <Filter>Source Files\flate</Filter>
+    </CustomBuild>
+    <CustomBuild Include="flate\inffixed.h">
+      <Filter>Source Files\flate</Filter>
+    </CustomBuild>
+    <CustomBuild Include="flate\inflate.h">
+      <Filter>Source Files\flate</Filter>
+    </CustomBuild>
+    <CustomBuild Include="flate\inftrees.h">
+      <Filter>Source Files\flate</Filter>
+    </CustomBuild>
+    <CustomBuild Include="flate\trees.h">
+      <Filter>Source Files\flate</Filter>
+    </CustomBuild>
+    <CustomBuild Include="flate\zconf.h">
+      <Filter>Source Files\flate</Filter>
+    </CustomBuild>
+    <CustomBuild Include="flate\zconf.in.h">
+      <Filter>Source Files\flate</Filter>
+    </CustomBuild>
+    <CustomBuild Include="flate\zlib.h">
+      <Filter>Source Files\flate</Filter>
+    </CustomBuild>
+    <CustomBuild Include="flate\zutil.h">
+      <Filter>Source Files\flate</Filter>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_chat.h">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_game1.h">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_hiscores.h">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_lobby.h">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_logon.h">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_options.h">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_pickgame.h">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_quickgame.h">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_results.h">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </CustomBuild>
+    <CustomBuild Include="engine1test_lobby_ref\st_server.h">
+      <Filter>Source Files\engine1test_lobby_ref</Filter>
+    </CustomBuild>
+    <CustomBuild Include="objcollisions.h">
+      <Filter>Source Files\game_physics\physics3d</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

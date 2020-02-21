@@ -1,0 +1,21 @@
+shape rootmenu 0 0 {
+back BACK1
+	0 0
+	800 600
+
+pbut PBUT1
+	50 400
+	60 20
+	BACK
+	
+text TEXT1
+	375 30
+	190 15
+	"RESULTS"
+
+listbox LISTBOX1
+	175 50
+	500 304
+
+}
+

@@ -1,0 +1,2 @@
+void groupanalyze();
+void groupanalyzedraw();

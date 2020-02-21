@@ -1,0 +1,187 @@
+HTTP/1.1 200 OK
+Date: Thu, 01 Nov 2018 06:37:43 GMT
+Last-Modified: Wed, 19 Sep 2018 21:12:49 GMT
+Content-Type: text/html
+Vary: Accept-Encoding
+X-Varnish: 262129423
+Age: 0
+X-Cache: MISS
+Accept-Ranges: bytes
+Connection: close
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		<!-- <meta http-equiv="refresh" content="30"> -->
+		<title>The Main Page</title>
+		<link rel=stylesheet type="text/css" href='main.css'>
+		<script src= "engw/common/ajax/ajaxCreateRequest.js"></script>
+		<script src= "engw/common/ajax/ajaxManager.js"></script>
+		<script type="text/javascript">
+		
+			function pageCounterResult(ret) {
+				//localStorage.setItem("pageCounter",true);
+				;//alert(ret);
+	        	var ele = document.getElementById('pagecounterid');
+				ele.innerHTML = ret;
+			}
+			
+	        var testimg;
+			var ajaxid = 100;
+			var mandlHost = "76.218.105.191:8080";
+			var mandlServerUri = "http://" + mandlHost + "/_mandl_9_0_0.png";
+			
+	        function checkEngqServerUp() {
+	        	// do mandl up or down
+				testimg = new Image(100,100);
+	        	testimg.onload = setlink;
+				testimg.onerror = resetlink;
+	        	testimg.src = mandlServerUri + "?t=" + new Date().getTime();
+				// do pagecounter
+			}
+
+			function doPageCounter() {
+//	        	var ele = document.getElementById('pagecounterid');
+//				ele.innerHTML = pageRCounter;
+				//if (true) {
+				var obj = {
+					t:new Date().getTime(),
+					what:null,
+					hi:"ho"
+				};
+				var pc = localStorage.getItem("pageCounter");
+				if ( pc === null) {
+					localStorage.setItem("pageCounter",true);
+					obj.doCount = true;
+				}
+				goAjax3("pagecounter.php",ajaxid++,pageCounterResult,obj,false,1,true);
+					//localStorage.setItem("pageCounter",true);
+				//} else {
+				//	pageCounterResult(pc);
+				//}
+				//alert("pagecounterid!");
+			}
+
+			function resetlink() {
+				linkup(false);
+			}
+			
+	        function setlink() {
+				linkup(true);
+			}
+			
+			function linkup(isup) {
+	        	//var a = 3;
+	        	var ele = document.getElementById('customserver');
+	        	var ele2 = document.getElementById('customserver2');
+	        	while (true) {
+	        		var node = ele.firstChild;
+	        		if (!node)
+		        		break;
+	        		ele.removeChild(node);
+	        	}
+	        	while (true) {
+	        		var node = ele2.firstChild;
+	        		if (!node)
+		        		break;
+	        		ele2.removeChild(node);
+	        	}
+				if (isup) { // update page with links to engq server
+					var text1 = document.createTextNode("is ");
+					//var host = location.hostname;
+					var anchor = document.createElement("a");
+						anchor.setAttribute("href","http://" + mandlHost + "/page0.htm"); // get main mandl page not from searcher
+						var anctext = document.createTextNode("UP!");
+						anchor.appendChild(anctext);
+					ele.appendChild(text1);
+					ele.appendChild(anchor);
+					var text2 = document.createTextNode("is ");
+					var anchor2 = document.createElement("a");
+						anchor2.setAttribute("href","http://" + mandlHost); // searcher main page
+						var anctext2 = document.createTextNode("UP!");
+						anchor2.appendChild(anctext2);
+					ele2.appendChild(text2);
+					ele2.appendChild(anchor2);
+				} else { // remove links to engq server
+					var text1 = document.createTextNode("is DOWN");
+					ele.appendChild(text1);
+					var text2 = document.createTextNode("is DOWN");
+					ele2.appendChild(text2);
+				}
+	        }
+			
+			window.onload = function() {
+				doPageCounter();
+				checkEngqServerUp();
+				setInterval(checkEngqServerUp,30000); // periodically check if engq server is up or down (searcher,mandl)
+			};
+         </script>
+    </head>
+    <body>
+        <div>
+            <h2>The Main Page</h2>
+            <br/><br/>
+        </div>
+        <hr>
+		<ul>
+			<li><p><a href="engw/engw3dtest/index.html?qcomp"> Eng3dtest 6 QBit Quantum Computer Simulator</a></p></li>
+			<li><p><a href="engw/engw3dtest/index.html?solarTest"> Eng3dtest Solar Test</a></p></li>
+			<li><p><a href="engw/engw3dtest/index.html?state19"> Eng3dtest Lorenz attractor</a></p></li>
+			<li><p><a href="engw/engw3dtest/index.html?state7p"> Eng3dtest Prehistoric</a></p></li>
+			<li><p><a href="engw/engw3dtest/index.html"> Eng3dtest Default</a></p></li>
+			<li><p><a href="engw/engw3dtest/index.html?state21"> Eng3dtest Shadowmap merge</a></p></li>
+			<li><p><a href="engw/engw3dtest/index.html?caveexplorer"> Eng3dtest Cave Explorer</a></p></li>
+			<li><p><a href="engw/engw3dtest/index.html?camblur"> Eng3dtest Image Blur</a></p></li>
+			<li><p><a href="engw/engw3dtest/index.html?scratch"> Eng3dtest Scratch</a></p></li>
+			<li><p><a href="engw/engw3dtest/index.html?onerps"> Eng3dtest One revolution per second</a></p></li>
+			
+			<li><hr><p><a href="engw/engw2dtest/index.html"> Eng2dtest</a></p></li>
+			
+			<li><hr><p><a href="prime/index.html">Some prime numbers</a></p></li>
+			<li><p><a href="mathtables/index.html">Math tables</a></p></li>
+			
+			<li><hr><p><a href="depth_player/index.html"> Pelican depth blender demo</a></p></li>
+			<li><p><a href="engthree/first.html"> First THREE.js demo</a></p></li>
+			
+			<li><hr><p><a href="jsbe/"> javascript by example</a></p></li>
+			<li><p><a href="/loadsave.html"> Load Save test</a></p></li>
+						
+			<li><hr><p><a href="tracks2/title.html">Track manager2 current</a>(php/mysql/ajax etc.)</p></li>
+			
+			<li><hr><p>
+				Mandelbrot zoomer <span id="customserver"> is </span>
+			</p></li>
+			<li><p>
+				'Seeker' search engine <span id="customserver2"> is </span>
+			</p></li>
+			
+			
+			<li><hr><hr><p><a href="http://gamewarp.x10.mx/index.html"> fuzzy mirror Remote page, stable</a></p></li>
+			<li><p><a href="bio/bio.html"> Rick's bio not finished</a></p></li>
+<!--           		<li><p><a href="testarea/test1.html"> Rick's test area 1 zooming sprites</a></p></li>
+			<li><p><a href="testarea/test2.html"> Rick's test area 2 stripped down regular sprites</a></p></li>
+-->
+			<li><p><a href="testarea/scratch.html"> Scratch intro to html</a></p></li>
+			<li><p><a href="testarea/scratch2.html"> Scratch2 mainly images and links</a></p></li>
+			<li><p><a href="testarea/scratch3.html"> Scratch3 mainly forms</a></p></li>
+			<li><p><a href="testarea/scratch4.html"> Scratch4 special tags</a></p></li>
+			<li><p><a href="testarea/scratch5.html"> Scratch5 formating</a></p></li>
+			<li><p><a href="testarea/csstests/csstests.html"> CSS tests</a></p></li>
+			<li><p><a href="raya/raya.html"> 'RAYA' ray tracer pictures</a></p></li>
+<!--         		<li><p><a href="java/java.html"> Java</a></p></li>
+			<li><p><a href="php/testphp.php"> PHP</a></p></li>
+			<li><p><a href="mysql/sqltest.html"> mySQL</a></p></li> -->
+			<li><p><a href="javascript_playground/index.html"> Javascript playground cookie</a></p></li> 
+          		<li><p><a href="javascript_playground/indexf.php"> Javascript playground file</a></p></li>  
+<!--          		<li><p><a href="http://76.218.105.191:8080/index.html"> The Searcher</a></p></li> 
+			<li><p><a href="sprites/main.html"> Sprite and engine tests.</a></p></li>
+			<li><p><a href="tracks/title.php">Track manager old</a>(php/mysql/ajax etc.)</p></li> -->
+		</ul>
+		<hr>
+		<a href="mailto:rkoenig@ix.netcom.com"> Comments? Suggestions? </a>
+		<p> Visits <span id="pagecounterid">xxxx </span> so far. </p>
+		<br>
+	</body>
+</html>
+            

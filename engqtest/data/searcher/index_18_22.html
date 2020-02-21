@@ -1,0 +1,11 @@
+<html>
+	<head><title>Testing JSON parse</title>
+		<script type="text/javascript">
+			// Testing native JSON support Firefox
+			var jsonString = '{"name":"Joe Shmoe","phone":"415-111-1111"}';
+			var employee=JSON.parse(jsonString);
+			alert("Name: " + employee.name + "\nPhone: " + employee.phone);
+		</script>
+	<body>
+		JSON parse function
+	</body>

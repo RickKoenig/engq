@@ -1,0 +1,238 @@
+statedesc 1 "user0, test res"
+statedesc 2 "user1, test mt rand and small finite groups"
+statedesc 3 "user2, test shapes and barcode scanner"
+statedesc 4 lightsout
+
+statedesc 5 "matrix tests"
+statedesc 6 vidcap
+statedesc 7 "scratch, simple shapes"
+statedesc 8 jigpuzz
+statedesc 9 3dtest
+
+statedesc 10 gfxtest
+statedesc 11 "file, code renamer"
+statedesc 12 "lighting tests"
+statedesc 13 "3d vidtests, drag and drop .bwo and .bws here"
+statedesc 14 "lua tests"
+
+statedesc 15 "game theory"
+statedesc 16 "one bit pixel compression"
+statedesc 17 "braid"
+statedesc 18 "simple browser"
+statedesc 19 "Joe test"
+
+statedesc 20 occserver
+statedesc 21 occclient
+statedesc 22 sokoban
+statedesc 23 slider
+statedesc 24 "occclient, server stress test"
+
+statedesc 25 "Joe test2"
+statedesc 26 "sokoban 2"
+statedesc 27 wriggler
+statedesc 28 ui
+statedesc 29 "\"tritest1 test shadows\""
+
+statedesc 30 "\"tritest2 test pixels\""
+statedesc 31 "\"tritest3 test viewports\""
+statedesc 32 "\"tritest4 test sprites\""
+statedesc 33 "\"tritest5 test bbox\""
+statedesc 34 "2d plotter and misc tools"
+
+statedesc 35 "many"
+statedesc 36 arena1
+statedesc 37 arena2
+statedesc 38 "plotter2 simple"
+statedesc 39 "plotter2 quant"
+
+statedesc 40 "plotter2 quant SHO"
+statedesc 41 "plotter2 lens"
+statedesc 42 "plotter2 poles"
+statedesc 43 "plotter2 zeta"
+statedesc 44 "plotter2 power complex"
+
+statedesc 45 "plotter2 Eigen tests"
+statedesc 46 "plotter2 four ducks pond brilliant"
+statedesc 47 "plotter2 bezier"
+statedesc 48 "plotter2 oct mirror"
+statedesc 49 "plotter2 linear regression"
+
+statedesc 50 "plotter2 soccer goal angle"
+
+
+// skip some states
+
+statedesc 67 "Stoid Command!"
+statedesc 68 "Test 3D res"
+statedesc 69 "Basic 3D"
+
+
+statedesc 70 "new carena lobby"
+statedesc 71 "new carena connect"
+statedesc 72 "new old constructor"
+statedesc 73 "new new constructor"
+statedesc 74 "mesh test"
+
+# 75 new status, don't go here first
+# 76 new game, don't go here first
+statedesc 77 "old carena lobby"
+statedesc 78 "old carena to game (with updater state)"
+statedesc 79 "old carena to game (no updater state)"
+
+# 80 old carena extract
+statedesc 81 "Rubik's cube"
+statedesc 82 "Snowboard Half-pipe builder"
+statedesc 83 "syncro mutex/semaphore tester"
+statedesc 84 "spawner"
+
+statedesc 85 "search engine / simple web server"
+statedesc 86 "toon effect"
+statedesc 87 "play theora movies"
+statedesc 88 "collage viewer 't' 'c'"
+statedesc 89 "sprite test 2d"
+
+statedesc 90 "sprite test 3d"
+statedesc 91 "joystick test dinput"
+statedesc 92 "joystick test multimedia"
+statedesc 93 "match server" // match should start here
+statedesc 94 "match logon"  // or here
+
+# 95 match lobby, don't go here
+//statedesc 96 "match results (test only)"
+//statedesc 97 "match hiscores (test only)"
+//statedesc 98 "match pickgame (test only)"
+//statedesc 99 "match options (test only)"
+
+statedesc 100 "match quickgame, skip using matching server"
+//statedesc 101 "match game1 (test only)"
+statedesc 102 "match register // or here"
+statedesc 103 "match pickserver (test only)"
+statedesc 104 "match title" // or here
+# end match lobby
+
+# 105 online race main, don't go here first
+statedesc 106 "broadcast testserver"
+statedesc 107 "broadcast testclient" 
+statedesc 108 "broadcast server"
+statedesc 109 "POST tester"
+
+statedesc 110 "quantum mechanics simulator"
+statedesc 111 "QM varying potentials (see debprint menu)"
+statedesc 112 "Interactive Groups"
+statedesc 113 "polynomials"
+statedesc 114 "Interactive Finite Fields"
+
+statedesc 115 "Marching Cubes Test"
+statedesc 116 "jelly no puzzle"
+statedesc 117 "Tic Tac Toe"
+statedesc 118 "Game2 Tic Tac Toe 2 turns 4 by 4 Brilliant"
+statedesc 119 "Honeycomb Strategy Game"
+
+statedesc 120 "'Simplex method' for linear programming"
+statedesc 121 "fast mandl"
+statedesc 122 "symmetric polynomials"
+statedesc 123 "QR code math"
+statedesc 124 "QR code cam"
+
+statedesc 125 "Penrose tiles"
+statedesc 126 "physics 3D"
+statedesc 127 "physics 2d"
+statedesc 128 "heat in a house"
+statedesc 129 "Game2 Endgame (Chess)"
+
+statedesc 130 "Game2 TTT"
+statedesc 131 "Game2 Nim"
+statedesc 132 "Game2 Opposition (Chess like)"
+statedesc 133 "Game2 Foxes vs Goose"
+statedesc 134 "Quantum SHO"
+
+statedesc 135 "NFS Shell"
+
+statedesc 142 "Particles and Point Cloud"
+statedesc 143 "Riemann Hypothesis"
+statedesc 144 "AR, Agumented Reality"
+
+statedesc 145 "conduit"
+statedesc 146 "cube map test"
+statedesc 147 "cube map test II"
+statedesc 148 "Q Comp"
+statedesc 149 "Laplace heat study"
+
+statedesc 150 "Glenn's castle"
+statedesc 151 "Rick's castle"
+statedesc 152 "Turing Machine"
+statedesc 153 "Digital Electonics Simulator"
+statedesc 154 "Mesh and Point Cloud"
+
+statedesc 155 "plotter2 point cloud mesh tests"
+statedesc 156 "chatter socket tests"
+statedesc 157 "four view tests 2d"
+statedesc 158 "four view tests 3d"
+statedesc 159 "four view tests 2d brush"
+
+// for reference
+/*
+from engine7test
+statedesc  1 "test 3d from engine1test/user24"
+statedesc  2 "carena lobby"
+statedesc  3 "carena game"
+statedesc  4 "net test"
+statedesc  5 "constructor"
+statedesc  6 "mesh test"
+statedesc  7 "menagerie test"
+statedesc  8 "bezier patch test"
+statedesc  9 "circle waves / press 't' for dead pixel test"
+statedesc 10 "terrain"
+statedesc 11 "keno"
+statedesc 12 "roulette"
+statedesc 13 "march"
+statedesc 14 "meshtest2"
+statedesc 15 "meshtest3"
+statedesc 16 "new constructor"
+statedesc 17 cinc
+statedesc 18 "runge kutta tests"
+statedesc 19 "obj physics tests"
+statedesc 20 "test physics simple"
+statedesc 21 "fraction demo add"
+statedesc 22 "fraction demo multiply"
+statedesc 23 "tomb 3d test"
+statedesc 24 "gallons puzzle"
+statedesc 25 "slider puzzle"
+statedesc 26 "hail"
+statedesc 27 "color cycle hurricanes"
+statedesc 28 "object maker"
+statedesc 29 "oshiro game"
+statedesc 30 "chunk test"
+statedesc 31 "object maker 2"
+statedesc 32 "alcatraz"
+statedesc 33 "object maker 3, broken, is now object maker 5"
+statedesc 34 "plotter"
+statedesc 35 "object maker 4"
+statedesc 36 "scripter"
+statedesc 37 "switches"
+statedesc 38 "XMEN, avatar intro"
+statedesc 39 "avatar select card"
+statedesc 40 "XMEN, old avatar fight, old script player"
+statedesc 41 "avisequcener"
+statedesc 42 "avistats"
+statedesc 43 pbn
+statedesc 44 domino
+statedesc 45 mandl/julia
+statedesc 46 "bitmap resize"
+statedesc 47 "object maker 5"
+statedesc 48 "pbn mystery"
+statedesc 49 "sudoku"
+statedesc 50 "hail2, UDLRITn"
+statedesc 51 "textshow"
+statedesc 52 "sokoban"
+statedesc 53 "XMEN, SPG tools, build .spx .bck"
+statedesc 54 "XMEN, SPG simple player .spx .bck"
+#statedesc 55 "new SPG script player (XMEN fight) .txt (NYI)"
+statedesc 56 "exploratorium lines illision"
+statedesc 57 "orbox"
+statedesc 58 "XMEN font ripper"
+statedesc 59 "cubrious"
+# statedesc 60 "XMEN, sprite .spx modifier"
+statedesc 60 "monkey"
+statedesc 61 "jigpuzz"
+*/

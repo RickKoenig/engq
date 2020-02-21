@@ -1,0 +1,20 @@
+shape rematchres 0 0 {
+	text TEXTREMATCH
+	10 10
+	100 20
+	"REMATCH"
+
+	pbut PBUTYES
+	10 40
+	45 20
+	"YES"
+
+	pbut PBUTNO
+	65 40
+	45 20
+	"NO"
+	
+	listbox LISTGAMENEWS
+	10 70
+	200 200
+}

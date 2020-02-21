@@ -1,0 +1,182 @@
+shape rootmenu 0 0 {
+
+# background
+//	back BACK1
+//	0 0
+//	800 600
+
+# current track
+	text TEXTTRACK
+	630 10
+	160 20
+	"Track Name"
+
+# exit
+	pbut PBUTBACKDELETE
+	631 111
+	160 20
+	"Delete and Back"
+	pbut PBUTBACKSAVE
+	631 141
+	160 20
+	"Save and Back"
+	pbut PBUTBACKNOSAVE
+	631 171
+	160 20
+	"No Save and Back"
+
+# copy
+	pbut PBUTCOPY
+	630 40
+	160 20
+	"Copy and Name"
+
+# clear
+	pbut PBUTCLEAR
+	630 70
+	160 20
+	"Clear Track"
+
+#outline toggle
+	pbut PBUTOUTLINE
+	530 218
+	120 10
+	"Outline Toggle"
+
+# track, list of picked and ordered sections
+	listbox LISTTRACKSECT
+	10 420
+	90 120
+	vscroll VSCROLLTRACKSECT
+	105	420
+	20 120
+	pbut PBUTTRACKTSECTADDAFTER
+	10 564
+	80 15
+	"ADD AFTER"
+	pbut PBUTTRACKSECTADDBEFORE
+	10 544
+	88 15
+	"ADD BEFORE"
+	pbut PBUTDELSECT
+	10 583
+	56 15
+	"DELETE"
+	text TEXTTRACKSECT
+	10 410
+	120 8
+	"TRACK SECTIONS"
+#
+## section, list of primitives
+	listbox LISTSECTPRIM
+	154 420
+	320 120
+	vscroll VSCROLLSECTPRIM
+	479 420
+	20 120
+	pbut PBUTCOPYPRIM
+	625 532
+	120 20
+	"Copy Prim"
+#	pbut PBUTADDPRIMBEFORE
+#	485 470
+#	120 20
+#	"Add prim before"
+	pbut PBUTDELPRIM
+	625 560
+	120 20
+	"delete prim"
+	text TEXTSECT
+	254 410
+	160 8
+	"SECTION PRIMITIVES"
+
+# primitive builder
+	vscroll VSLIDERLEN
+	508 430
+	20 80
+	vscroll VSLIDERHEADING
+	548 430
+	20 80
+	vscroll VSLIDERPITCH
+	596 430
+	20 80
+	vscroll VSLIDERBANK
+	646 430
+	20 80
+	vscroll VSLIDERINWID
+	696 430
+	20 80
+	vscroll VSLIDEROUTWID
+	750 430
+	20 80
+	text TEXTPRIM
+	480 410
+	300 8
+	"  len  head pitch  bank inwid outwid"
+	text TEXTPRIM2
+	480 422
+	300 8
+	"____________30_______0_____0____0"
+	text TEXTPRIMNAME
+	254 547
+	160 8
+	"prim name"
+	edit EDITPRIMNAME
+	254 560
+	160 8
+	"prim name"
+#	pbut PBUTPRIMUPDATE
+#	580 562
+#	160  15
+#	"prim update"
+
+#
+
+# section list, list of built sections, any order (alphabetical)
+	listbox LISTSECTLIST
+	140 420
+	10 120
+	vscroll VSCROLLSECTLIST
+	155	420
+	20 120
+	pbut PBUTDELSECTLIST
+	140 562
+	56 20
+	"DELETE"
+	text TEXTSECTLIST
+	140 410
+	104 8
+	"SECTION LIST"
+
+	pbut PBUTSWAPVIEWPORT
+	530 200
+	120 10
+	"Swap Viewports"
+
+	vscroll VSLIDERDIRHEADING
+	537 32
+	20 80
+	vscroll VSLIDERDIRPITCH
+	567 32
+	20 80
+	text TEXTLIGHTS
+	530 15
+	80 10
+	"Lights"
+	pbut PBUTMM
+	770 570
+	20 20
+	"MM"
+	vscroll VSLIDERSMOOTHANG
+	597 38
+	20 80
+
+#camera
+	vscroll VSLIDERCAM
+	540 240
+	20 160
+/*	back BACKCAM
+	580 240
+	150 160 */
+}

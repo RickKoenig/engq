@@ -1,0 +1,71 @@
+// translate from material name to shader name
+// matname shadername
+// keyword * matches any matname left over
+
+// system
+	tex				tex
+	lightmap		lightmap // tex or lightmap
+	texadd			texadd	// like tex but adds instead of mul, but alpha still muls
+	cvert			cvert
+	vdiff			vdiff
+	pdiff			pdiff
+	vdiffspec		vdiffspec
+	pdiffspec		pdiffspec
+	
+	pnormalmap		pnormalmap
+	
+	makeshadowmap	makeshadowmap
+	useshadowmap	useshadowmap
+	shadowmapviewer shadowmapviewer
+	
+	env			env		 // environment shader, reflections of the skybox
+	envv2 			envv2		 // env mapper, uses global env tex (v2)
+
+	
+	tex2c			tex2c
+	
+
+	stan			stan
+	toon			toon
+	edge			edge
+	
+// user
+
+//	lava			pnormalmap
+
+        grassclp                tex
+        icetunnel               cvert
+
+// Car Shaders >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	body			envv2
+	chrome			envv2
+	windshield		envv2
+	rims			envv2
+	solarpanel		pdiffspec
+	solarpanel2		envv2
+	plastic			pdiff
+	interior		pdiff
+	rubber			pdiff
+	reg			tex
+
+// Weapons >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	rocket			pdiffspec
+	launcher		pdiff
+	mine			pdiff
+	CannonMetal		pdiff
+	CannonChrome		envv2
+	CannonGlass		envv2
+	CannonPlastic		pdiff
+	Laser			tex
+	FusionBall		tex
+	
+/*	track01 stan
+	rock stan
+	cliffside stan
+	rockshore stan
+	water stan
+	underwater stan */
+// anything else not known ? make it a tex/cvert shader
+	*				pdiff // pdiff //tex // cvert
+
+	

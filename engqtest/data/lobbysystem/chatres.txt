@@ -1,0 +1,29 @@
+res back BACK1 0
+	loc 0 0
+	size 800 600
+
+res pbut PBUT1 1
+	loc 50 400
+	size 60 20
+	name BACK
+	
+res text TEXT1 2
+	loc 375 30
+	size 190 15
+	name "CHAT"
+
+res listbox LISTBOX1 3
+	loc 175 50
+	name test
+	size 500 304
+
+res vscroll SCL1 4
+	loc 700 50
+	size 35 300
+	range 0 0
+
+res edit EDIT1 5
+	loc 175 400
+	size 500 20
+
+

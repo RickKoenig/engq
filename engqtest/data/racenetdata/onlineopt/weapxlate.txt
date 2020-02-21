@@ -1,0 +1,123 @@
+# new to old
+
+# 0 fusion booster to intake
+10
+# 1 laser to laser 
+0
+# 2 missiles to missiles
+2
+# 3 buzz saw to buzz
+21
+# 4 pneumatic mines to mines
+26
+# 5 fusion energy cannon to fusion energy cannon
+23
+# 6 particle beam gun to particle
+42
+# 7 electo magnetic burst to emb
+4
+# 8 sonic blast to sonic
+29
+# 9 multi barrel gun to minigun
+41
+# 10 klondyke kicker
+1
+# 11 gravity bomb
+37
+# 12 dielectric shield
+6
+# 13 plasma shield
+8
+# 14 spiked tires
+11
+# 15 oil spill
+3
+# 16 bainite rims
+12
+# 17 charger 39
+39
+# 18 ectoplasm
+5
+# 19 ramjet
+9
+# 20 aerodyne
+13
+# 21 ferrite
+14
+# 22 big tires
+20
+# 23 stasis field
+32
+# 24 bumper car
+35
+# 25 repulse
+25
+# 26 grappling hook
+24
+# 27 nano
+17
+# 28 energy leech
+22
+# 29 rpd
+16
+# 30 icrms
+19
+# 31 transducer
+7
+# 32 intake
+10 # ??? see # 0
+# 33 new energy converter
+0 # ???
+# 34 randomizer
+18
+# 35 energy pool booster
+0 # ???
+# 36 prism shield
+28
+# 37 sledge
+30
+# 38 energy wall
+31
+# 39 supajump
+33
+# 40 fork lift
+34
+# 41 the hammer
+30
+# 42 flasher
+38
+# 43 switcharoo
+40
+# 44 50 caliber
+41
+
+# 45 sidewinders
+0
+# 46 plasma torpedos
+0
+# 47 mad bomber
+0
+# 48 pirtate cannon
+0
+# 49 gamma ray gun
+0
+# 50 death ray
+0
+# 51 anti-matter detonator
+0
+# 52 white light
+0
+# 53 chemical grenades
+0
+# 54 geo thermal shield
+0
+# 55 nitro particle chemical
+0
+# 56 pneumo lift
+0
+# 57 energy plasma booster
+0
+# 58 fusion vacuum
+0
+# 59 energy reuptake
+0

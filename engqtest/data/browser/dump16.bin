@@ -1,0 +1,8 @@
+HTTP/1.1 301 Moved Permanently
+Location: https://outlook.live.com/owa
+Server: Microsoft-IIS/10.0
+X-MSEdge-Ref: Ref A: F162B6B575224C9FB2A38DBD630992FE Ref B: SJCEDGE0416 Ref C: 2018-11-01T06:38:30Z
+Date: Thu, 01 Nov 2018 06:38:29 GMT
+Connection: close
+Content-Length: 0
+

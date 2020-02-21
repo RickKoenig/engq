@@ -1,0 +1,35 @@
+///////////// broadcast server
+// listen port number for game clients
+5421			# listen port number for broadcast server
+
+///////////// post client
+// url of post server
+// port of post server
+// command(test) or hardcode(game)
+// data(test) or hardcode(game)
+
+
+/*
+///////// workatplay server
+api.test.hwp.workatplay.com		# host
+80								# port of the post server
+hardcode						# sets command to /race/gamid
+hardcode						# set data to race result docs.
+*/
+
+
+
+///////// local web server
+rickerspc		# host
+80				# port of the post server
+hardcode //		# sets command to /race/gamid
+hardcode //		# set data to race result docs.
+
+/*
+///////// snee test server
+www.snee.com			# host
+80						# port of the post server
+/xml/crud/posttest.cgi	# test cmd for post www.snee.com
+fname=Cat&lname=Dog		# test data for post www.snee.com
+*/
+

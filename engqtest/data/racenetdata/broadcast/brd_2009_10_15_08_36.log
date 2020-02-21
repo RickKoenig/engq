@@ -1,0 +1,8 @@
+open minutelog at Thu Oct 15 08:36:07 2009
+BR   11240, BW   22480, S  10, BR/S    1124, BW/S    2248
+BR   10865, BW   21730, S  10, BR/S    1086, BW/S    2173
+BR   11195, BW   22390, S  10, BR/S    1119, BW/S    2239
+BR   11290, BW   22580, S  10, BR/S    1129, BW/S    2258
+BR   11290, BW   22580, S  10, BR/S    1129, BW/S    2258
+BR   11364, BW   22380, S  10, BR/S    1136, BW/S    2238
+close minutelog at Thu Oct 15 08:37:07 2009

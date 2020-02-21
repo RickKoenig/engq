@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+	<head><title>Tracks Title Page</title>
+		<link rel="stylesheet" type="text/css" href="tracks.css" />
+		<script type="text/javascript" src="../common/ajax/ajaxCreateRequest.js"></script>
+		<script type="text/javascript" src="../common/ajax/ajaxManager.js"></script>
+		<script type="text/javascript" src="../common/json/serialize.js"></script>
+		<script type="text/javascript" src="../common/json/json2.js"></script>
+		<script type="text/javascript" src="../common/file/file.js"></script>
+		<script type="text/javascript" src="../common/file/chunker.js"></script>
+		<script type="text/javascript" src="../common/engq/bwo.js"></script>
+		<script type="text/javascript" src="../common/dom/dom.js"></script>
+		<script type="text/javascript" src="gettracks.js"></script>
+	</head>
+	<body>
+		<h3>Tracks Title Page</h3>
+		<p id="hostipaddr">
+			Server hostname goes here..
+		</p>
+		<p><a href="../index.html"> Main page.</a></p>
+		
+		<div id = "span1">This is where the page goes</div>
+
+		<hr/>
+		<h4>Ajax php response.</h4> 
+		<div class="divStyle">
+			<button id="responseclear">Clear</button>
+			<button id="responsedisable">Disable</button>
+			<button id="testbin">testbin</button>
+			<br/>
+			<!-- This is where debug info will be displayed -->
+			<span id="responsephp">Php response</span>
+		</div>
+	</body>
+</html>

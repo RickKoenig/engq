@@ -1,0 +1,145 @@
+shape vidcap 0 0 {
+	
+pbut QUIT
+	740 560
+	50 30
+	Quit
+
+pbut VCSTART
+	80 560
+	90 30
+	"Init Driver"
+
+pbut SEE
+	180 560
+	50 30
+	"See!"
+
+pbut LOADM
+	260 560
+	45 30
+	"Load-"
+
+pbut LOADP
+	310 560
+	45 30
+	"Load+"
+
+pbut SAVE
+	360 560
+	45 30
+	"Save"
+
+pbut SCAN
+	410 560
+	45 30
+	"Scan"
+
+pbut DEL
+	470 560
+	30 30
+	"Del"
+
+pbut URL
+	470 560
+	30 30
+	"URL:"
+
+pbut VCSTOP
+	520 560
+	50 30
+	Stop
+
+pbut VCQUIT
+	580 560
+	120 30
+	"Close Driver"
+
+pbut PVIDCOMP
+	10 160
+	50 20
+	VCOMP
+
+/* pbut PVIDDISPLAY
+	10 160
+	50 20
+	VDISP
+*/
+pbut PVIDFORMAT 
+	10 200
+	50 20
+	VFORM
+
+pbut PVIDSOURCE
+	10 240
+	50 20
+	VSRC
+
+text TSTATUS
+	300 0
+	200 20
+	status
+/*
+pbut P3D
+	10 560
+	40 30
+	3D!
+*/	
+}
+	
+/*
+res	pbut QUIT 1
+	loc 740 560
+	size 50 30
+	name quit
+
+res	pbut VCSTART 2
+	loc 280 560
+	size 90 30
+	name "init driver"
+
+res	pbut GRABF 4
+	loc 400 560
+	size 50 30
+	name "see!"
+
+res	pbut VCSTOP 3
+	loc 485 560
+	size 50 30
+	name stop
+
+res	pbut VCQUIT 11
+	loc 600 560
+	size 120 30
+	name "close driver"
+
+res pbut PVIDCOMP 5
+	loc 10 120
+	size 50 20
+	name VCOMP
+
+res pbut PVIDDISPLAY 6
+	loc 10 160
+	size 50 20
+	name VDISP
+
+res pbut PVIDFORMAT 7
+	loc 10 200
+	size 50 20
+	name VFORM
+
+res pbut PVIDSOURCE 8
+	loc 10 240
+	size 50 20
+	name VSRC
+
+res text TSTATUS 9
+	loc	0 20
+	size 800 20
+	name status
+
+res pbut P3D 10
+	loc 10 560
+	size 40 30
+	name 3D!
+*/

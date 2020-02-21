@@ -1,0 +1,59 @@
+shape gametheoryres 0 0 {
+
+	hscroll HSLIDE1
+	170 60
+	512 20
+
+	hscroll HSLIDE2
+	170 90
+	512 20
+
+	vscroll VSLIDE1
+	100 80
+	20 512 
+
+	vscroll VSLIDE2 
+	130 80
+	20 512 
+
+	vscroll VSLIDEITER
+	20 40
+	20 512
+
+	text TEXTITER
+	10 570
+	40 20
+	1
+
+	text TEXTZOOM
+	670 290
+	120 20
+	1
+		
+	
+	text TEXT1
+	100 20
+	300 20
+	"0 + 0i"
+
+	text TEXT2
+	450 20
+	300 20
+	text2
+
+	pbut PBUTZOOMIN
+	730 240
+	60 30
+	zoomin
+
+	pbut PBUTZOOMOUT
+	730 340
+	60 30
+	zoomout
+
+	pbut PBUTQUIT
+	740 570
+	50 20
+	Quit
+
+}

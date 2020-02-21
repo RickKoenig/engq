@@ -1,0 +1,31 @@
+open hourlylog at Tue Jan 23 05:35:52 2018
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR    2352, BW    7240, S  10, BR/S     235, BW/S     724
+BR   13140, BW   39420, S  10, BR/S    1314, BW/S    3942
+BR   12780, BW   38340, S  10, BR/S    1278, BW/S    3834
+BR   12965, BW   38895, S  10, BR/S    1296, BW/S    3889
+BR   12925, BW   38775, S  10, BR/S    1292, BW/S    3877
+BR   12875, BW   38625, S  10, BR/S    1287, BW/S    3862
+BR   13040, BW   39120, S  10, BR/S    1304, BW/S    3912
+BR   12865, BW   38595, S  10, BR/S    1286, BW/S    3859
+BR   12930, BW   38790, S  10, BR/S    1293, BW/S    3879
+BR   12956, BW   38520, S  10, BR/S    1295, BW/S    3852
+BR   12968, BW   38730, S  10, BR/S    1296, BW/S    3873
+BR   12950, BW   38850, S  10, BR/S    1295, BW/S    3885
+BR   13875, BW   41625, S  10, BR/S    1387, BW/S    4162
+BR   11535, BW   32543, S  10, BR/S    1153, BW/S    3254
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR    4250, BW   12932, S  10, BR/S     425, BW/S    1293
+BR   13840, BW   41520, S  10, BR/S    1384, BW/S    4152
+BR   13410, BW   40230, S  10, BR/S    1341, BW/S    4023
+BR   13210, BW   39630, S  10, BR/S    1321, BW/S    3963
+BR   13050, BW   39150, S  10, BR/S    1305, BW/S    3915
+BR   13015, BW   39045, S  10, BR/S    1301, BW/S    3904
+BR   13335, BW   40005, S  10, BR/S    1333, BW/S    4000
+BR   13005, BW   39015, S  10, BR/S    1300, BW/S    3901
+BR   13040, BW   39120, S  10, BR/S    1304, BW/S    3912
+BR   13220, BW   39660, S  10, BR/S    1322, BW/S    3966
+BR   13065, BW   39195, S  10, BR/S    1306, BW/S    3919
+close hourlylog at Tue Jan 23 05:44:54 2018

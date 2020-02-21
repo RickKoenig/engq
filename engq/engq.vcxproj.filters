@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\2d">
+      <UniqueIdentifier>{a6e4e238-fc2e-4416-81d0-bcceee9c0db9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\2d\software">
+      <UniqueIdentifier>{25d117cd-9366-49ce-bb92-a577b6dcb8ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\2d\dx9">
+      <UniqueIdentifier>{aa700529-39f5-4905-be8e-de8454e7573d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\2d\LodePNG">
+      <UniqueIdentifier>{ec157734-f62e-4159-a760-4c41e9a583e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3d">
+      <UniqueIdentifier>{a796f3f5-8363-4207-b04f-6cac80478b81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3d\dx9">
+      <UniqueIdentifier>{6bc46229-3fe1-4091-a6c6-e14c148bf659}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3d\software">
+      <UniqueIdentifier>{73833085-2fc4-403f-a386-eedba124ee62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio">
+      <UniqueIdentifier>{dc3342e3-abd5-423c-b0ad-266ba658e1a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\file">
+      <UniqueIdentifier>{1ace7b56-e12e-4b0a-8d3a-0a5396433537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\font">
+      <UniqueIdentifier>{448853a8-dce6-446a-ac09-8a2a7a91dc28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\font\dx9">
+      <UniqueIdentifier>{36457334-c06f-464c-a738-3e2d453ce26f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\font\software">
+      <UniqueIdentifier>{4708a75a-ece1-4329-b312-8769894f9815}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\input">
+      <UniqueIdentifier>{417efc1e-7909-42df-9326-1c28e98ce247}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mem">
+      <UniqueIdentifier>{604ecbe2-2a3b-43c5-86c4-f2e845dad224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\misc">
+      <UniqueIdentifier>{42dd5446-bfe9-4497-928b-4ed312d24694}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\math">
+      <UniqueIdentifier>{6428f397-0cf0-4231-ad14-8e6399298a04}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="m_bitmap16.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_bitmap24.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_bitmap32.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_bitmap8.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_gfx.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_gfx_dds.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_gfx_jpg.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_gfx_lbm.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_gfx_pcx.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_gfx_png.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_gfx_tga.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_stdcolors.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_txt32.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_vid.h">
+      <Filter>Source Files\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="m_vid_ddraw.h">
+      <Filter>Source Files\2d\software</Filter>
+    </ClInclude>
+    <ClInclude Include="m_vid_gdi.h">
+      <Filter>Source Files\2d\software</Filter>
+    </ClInclude>
+    <ClInclude Include="m_vid_dx9.h">
+      <Filter>Source Files\2d\dx9</Filter>
+    </ClInclude>
+    <ClInclude Include="LodePNG\lodepng.h">
+      <Filter>Source Files\2d\LodePNG</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_bwo.h">
+      <Filter>Source Files\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_bws.h">
+      <Filter>Source Files\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_keyf.h">
+      <Filter>Source Files\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_light.h">
+      <Filter>Source Files\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_model.h">
+      <Filter>Source Files\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_sprite.h">
+      <Filter>Source Files\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_texman.h">
+      <Filter>Source Files\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_tree.h">
+      <Filter>Source Files\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_vid3d.h">
+      <Filter>Source Files\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_viewport.h">
+      <Filter>Source Files\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_dx9.h">
+      <Filter>Source Files\3d\dx9</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_dx9shaderswitch.h">
+      <Filter>Source Files\3d\dx9</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_software.h">
+      <Filter>Source Files\3d\software</Filter>
+    </ClInclude>
+    <ClInclude Include="d_floattri.h">
+      <Filter>Source Files\3d\software</Filter>
+    </ClInclude>
+    <ClInclude Include="m_audio.h">
+      <Filter>Source Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="m_midi.h">
+      <Filter>Source Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="m_sagger.h">
+      <Filter>Source Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="m_chunk.h">
+      <Filter>Source Files\file</Filter>
+    </ClInclude>
+    <ClInclude Include="m_dir.h">
+      <Filter>Source Files\file</Filter>
+    </ClInclude>
+    <ClInclude Include="m_file.h">
+      <Filter>Source Files\file</Filter>
+    </ClInclude>
+    <ClInclude Include="m_script.h">
+      <Filter>Source Files\file</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_font.h">
+      <Filter>Source Files\font</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_fontq.h">
+      <Filter>Source Files\font</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_dx9_font.h">
+      <Filter>Source Files\font\dx9</Filter>
+    </ClInclude>
+    <ClInclude Include="d2_software_font.h">
+      <Filter>Source Files\font\software</Filter>
+    </ClInclude>
+    <ClInclude Include="m_input.h">
+      <Filter>Source Files\input</Filter>
+    </ClInclude>
+    <ClInclude Include="m_keyboard.h">
+      <Filter>Source Files\input</Filter>
+    </ClInclude>
+    <ClInclude Include="m_mem.h">
+      <Filter>Source Files\mem</Filter>
+    </ClInclude>
+    <ClInclude Include="m_asmmacros.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="m_debp.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="m_device.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="m_eng.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="m_err.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="m_movie.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="m_perf.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="m_refcount.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="m_state.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="m_sysdebvars.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="m_tm.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="m_type.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="m_wh.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="m_win.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="n_deflatecpp.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="augmatn.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="augmatn_back.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="augmatn_float.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="augmatn_ui.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="augmatz.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="m_floatconv.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="m_matrix.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="m_matrixn.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="m_mt_rand.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="m_numath.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="m_quat.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math_abstract.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="ring.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="ring2.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="m_utils.h">
+      <Filter>Source Files\misc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="m_bitmap32.cpp">
+      <Filter>Source Files\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="m_bitmap8.cpp">
+      <Filter>Source Files\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="m_gfx.cpp">
+      <Filter>Source Files\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="m_gfx_dds.cpp">
+      <Filter>Source Files\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="m_gfx_jpg.cpp">
+      <Filter>Source Files\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="m_gfx_lbm.cpp">
+      <Filter>Source Files\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="m_gfx_pcx.cpp">
+      <Filter>Source Files\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="m_gfx_png.cpp">
+      <Filter>Source Files\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="m_gfx_tga.cpp">
+      <Filter>Source Files\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="m_stdcolors.cpp">
+      <Filter>Source Files\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="m_txt32.cpp">
+      <Filter>Source Files\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="m_vid.cpp">
+      <Filter>Source Files\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="m_vid_ddraw.cpp">
+      <Filter>Source Files\2d\software</Filter>
+    </ClCompile>
+    <ClCompile Include="m_vid_gdi.cpp">
+      <Filter>Source Files\2d\software</Filter>
+    </ClCompile>
+    <ClCompile Include="m_vid_dx9.cpp">
+      <Filter>Source Files\2d\dx9</Filter>
+    </ClCompile>
+    <ClCompile Include="LodePNG\lodepng.cpp">
+      <Filter>Source Files\2d\LodePNG</Filter>
+    </ClCompile>
+    <ClCompile Include="LodePNG\lodepng_examples.c">
+      <Filter>Source Files\2d\LodePNG</Filter>
+    </ClCompile>
+    <ClCompile Include="LodePNG\lodepng_examples.cpp">
+      <Filter>Source Files\2d\LodePNG</Filter>
+    </ClCompile>
+    <ClCompile Include="LodePNG\testsuite.cpp">
+      <Filter>Source Files\2d\LodePNG</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_bwo.cpp">
+      <Filter>Source Files\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_bws.cpp">
+      <Filter>Source Files\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_keyf.cpp">
+      <Filter>Source Files\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_light.cpp">
+      <Filter>Source Files\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_model.cpp">
+      <Filter>Source Files\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_sprite.cpp">
+      <Filter>Source Files\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_texman.cpp">
+      <Filter>Source Files\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_tree.cpp">
+      <Filter>Source Files\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_vid3d.cpp">
+      <Filter>Source Files\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_viewport.cpp">
+      <Filter>Source Files\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_dx9asmshaders.cpp">
+      <Filter>Source Files\3d\dx9</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_dx9effectshaders.cpp">
+      <Filter>Source Files\3d\dx9</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_software.cpp">
+      <Filter>Source Files\3d\software</Filter>
+    </ClCompile>
+    <ClCompile Include="d_floattri.cpp">
+      <Filter>Source Files\3d\software</Filter>
+    </ClCompile>
+    <ClCompile Include="m_audio.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="m_midi.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="m_sagger.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="m_chunk.cpp">
+      <Filter>Source Files\file</Filter>
+    </ClCompile>
+    <ClCompile Include="m_dir.cpp">
+      <Filter>Source Files\file</Filter>
+    </ClCompile>
+    <ClCompile Include="m_file.cpp">
+      <Filter>Source Files\file</Filter>
+    </ClCompile>
+    <ClCompile Include="m_script.cpp">
+      <Filter>Source Files\file</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_font.cpp">
+      <Filter>Source Files\font</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_fontq.cpp">
+      <Filter>Source Files\font</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_dx9_font.cpp">
+      <Filter>Source Files\font\dx9</Filter>
+    </ClCompile>
+    <ClCompile Include="d2_software_font.cpp">
+      <Filter>Source Files\font\software</Filter>
+    </ClCompile>
+    <ClCompile Include="m_input.cpp">
+      <Filter>Source Files\input</Filter>
+    </ClCompile>
+    <ClCompile Include="m_mem.cpp">
+      <Filter>Source Files\mem</Filter>
+    </ClCompile>
+    <ClCompile Include="m_debp.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="m_device.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="m_err.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="m_movie.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="m_perf.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="m_state.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="m_tm.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="m_wh.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="m_win.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="n_deflate.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="augmatz.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="augmatz2.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="m_floatconv.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="m_matrix.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="m_matrixn.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="m_mt_rand.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="m_numath.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="m_quat.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="math_abstract.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="ring2.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="m_utils.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

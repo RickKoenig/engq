@@ -1,0 +1,6 @@
+7 5
+W      W      W      W      W      W      W      
+W      G1P0DR G1P0LR G1P0LX G0P1RX G0P1DL W      
+W      G1P0DU .      .      .      G0P1DU W      
+W      G1P0RU G1P0XL G0P1XR G0P1LR G0P1LU W      
+W      W      W      W      W      W      W      

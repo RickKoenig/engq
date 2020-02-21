@@ -1,0 +1,51 @@
+// translate from material name to shader name
+// matname shadername
+// keyword * matches any matname left over
+
+// system
+	tex				tex
+	lightmap		lightmap // tex or lightmap
+	texadd			texadd	// like tex but adds instead of mul, but alpha still muls
+	cvert			cvert
+	vdiff			vdiff
+	pdiff			pdiff
+	vdiffspec		vdiffspec
+	pdiffspec		pdiffspec
+	
+	pnormalmap		pnormalmap
+	
+	makeshadowmap	makeshadowmap
+	useshadowmap	useshadowmap
+	shadowmapviewer shadowmapviewer
+	
+	env				env
+	
+	tex2c			tex2c
+	
+
+	stan			stan
+	toon			toon
+	edge			edge
+	
+// user
+
+//	lava			pnormalmap
+
+/*	body			toon
+	windshield		toon
+	blkplastic		toon
+	white			toon
+	rims			toon
+*/	
+/*	track01 stan
+	rock stan
+	cliffside stan
+	rockshore stan
+	water stan
+	underwater stan */
+// anything else not known ? make it a tex/cvert shader
+	include ../carmat2shader.txt
+	WATER cvertvel
+	lava cvertvel
+	*				pdiff // pdiff //tex // cvert
+	

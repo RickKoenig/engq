@@ -1,0 +1,231 @@
+shape rootmenu 0 0 {
+
+back BACK1
+	0 0
+	800 600
+	
+pbut PLAYBOT
+	365 420
+	80 20
+	"BOTGAME"
+	
+pbut PLAYSERVER
+	2375 420
+	80 20
+	"SERVER"
+	
+pbut PLAYBCLIENT
+	465 420
+	80 20
+	"Broad CLIENT"
+	
+pbut PLAYCLIENT
+	2555 420
+	80 20
+	"CLIENT"
+	
+pbut PBUTCANCEL
+	595 450
+	40 20
+	"QUIT"
+	
+text TEXTTRACK
+	20 75
+	160 10
+	"Select Track"
+
+listbox LISTSELTRACKNAME
+	0 90
+	200 76
+
+text TEXTWEAPS
+	250 10
+	160 10
+	"weapons >>>>"
+
+/* text TEXTALTWEAPS
+	470 10
+	160 10
+	"bot weapons >>>>" */
+
+listbox LISTWEAPHAVE
+	310 25
+	100 190
+
+listbox LISTWEAP
+	200 25
+	100 190
+
+/* listbox LISTALTWEAPHAVE
+	530 25
+	100 190
+
+listbox LISTALTWEAP
+	420 25
+	100 190
+*/
+text TEXTNUMP
+	20 5
+	160 10
+	"num players"
+
+hscroll SLIDENUMP
+	20 20
+	160 10
+
+text TEXTNUMBOTS
+	20 40
+	160 10
+	"num bots"
+
+hscroll SLIDENUMBOTS
+	20 55
+	160 10
+
+text TEXT2009CARFIRST
+	200 225
+	160 10
+	"hiho"
+	
+hscroll SLIDE2009CARFIRST
+	200 240
+	160 10
+
+hscroll SLIDERIMS
+	370 240
+	60 10
+	
+text TEXTRIMS
+	370 225
+	60 10
+	"rims"
+	
+pbut PIPDEL
+	190 400
+	80 20
+	"DELETE IP"
+	
+edit EDITIP
+	20 450
+	250 15
+	"0.0.0.0"
+
+text TEXTIP
+	20 368
+	160 10
+	"Server IPs"
+
+listbox LISTIP
+	20 380
+	160 60
+
+edit EDITNAME
+	460 180
+	160 15
+	"Your Name"
+
+
+text TEXTRULES
+	40 280
+	80 10
+	"Rules"
+
+listbox RULES
+	20 292
+	160 64
+
+text HUETEXT1
+	190 274
+	80 10
+	"HUE1"
+hscroll HUE1
+	190 284
+	80 10
+text SATTEXT1
+	273 274
+	80 10
+	"SAT1"
+hscroll SAT1
+	273 284
+	80 10
+text VALTEXT1
+	356 274
+	80 10
+	"VAL1"
+hscroll VAL1
+	356 284
+	80 10
+	
+text HUETEXT2
+	190 314
+	80 10
+	"HUE2"
+hscroll HUE2
+	190 324
+	80 10
+text SATTEXT2
+	273 314
+	80 10
+	"SAT2"
+hscroll SAT2
+	273 324
+	80 10
+text VALTEXT2
+	356 314
+	80 10
+	"VAL2"
+hscroll VAL2
+	356 324
+	80 10
+
+text HUETEXT3
+	190 354
+	80 10
+	"HUE3"
+hscroll HUE3
+	190 364
+	80 10
+text SATTEXT3
+	273 354
+	80 10
+	"SAT3"
+hscroll SAT3
+	273 364
+	80 10
+text VALTEXT3
+	356 354
+	80 10
+	"VAL3"
+hscroll VAL3
+	356 364
+	80 10
+
+text TEXTGAMEID
+	460 40
+	160 10
+	"GID"
+	
+hscroll SLIDERGAMEID
+	460 55
+	160 10
+	
+text TEXTGAMETYPE
+	460 80
+	160 10
+	"A"
+	
+hscroll SLIDERGAMETYPE
+	460 95
+	160 10
+	
+text TEXTPLAYERID
+	460 120
+	160 10
+	"PID"
+	
+hscroll SLIDERPLAYERID
+	460 135
+	160 10
+	
+}
+

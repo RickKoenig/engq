@@ -1,0 +1,17 @@
+open hourlylog at Mon Nov 26 20:13:29 2018
+getbuffer '76.218.105.191:54433': 'GET /_mandl_9_0_0.png'
+getbuffer '192.168.1.138:51884': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:54436': 'GET /_mandl_9_0_0.png'
+close hourlylog at Mon Nov 26 20:14:15 2018
+append hourlylog at Mon Nov 26 20:16:30 2018
+getbuffer '192.168.1.138:51922': 'GET /_mandl_9_0_0.png'
+getbuffer '192.168.1.138:51917': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:54449': 'GET /_mandl_9_0_0.png'
+close hourlylog at Mon Nov 26 20:16:40 2018
+append hourlylog at Mon Nov 26 20:29:51 2018
+getbuffer '76.218.105.191:55555': 'GET /_mandl_9_0_0.png'
+getbuffer '76.218.105.191:55574': 'GET /_mandl_9_0_0.png'
+close hourlylog at Mon Nov 26 20:30:28 2018
+append hourlylog at Mon Nov 26 20:30:38 2018
+getbuffer '76.218.105.191:55634': 'GET /_mandl_9_0_0.png'
+close hourlylog at Mon Nov 26 20:30:53 2018

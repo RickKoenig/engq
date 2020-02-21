@@ -1,0 +1,1 @@
+[#gamesplayed: 1, #gameswon: 1, #experience: 5425, #credits: 1085, #highestscore: 1085, #place: 1, #gotbots: 1, #connections: 0]

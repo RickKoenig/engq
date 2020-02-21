@@ -1,0 +1,11 @@
+HTTP/1.0 301 Moved Permanently
+Server: AkamaiGHost
+Content-Length: 0
+Location: https://www.att.com/wikipedia/commons/4/4b/Everest_kalapatthar_crop.jpg
+Cache-Control: private, max-age=0
+Expires: Thu, 01 Nov 2018 06:34:58 GMT
+Date: Thu, 01 Nov 2018 06:34:58 GMT
+Connection: close
+Set-Cookie: TLTSID=1F98BF6AA5DB3E5BF8BACF56063CDAEB; secure; expires=Fri, 02-Nov-2018 06:34:58 GMT; path=/; domain=.att.com
+Edge-Control: cache-maxage=15m
+

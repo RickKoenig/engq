@@ -1,0 +1,39 @@
+shape rootmenu 0 0 {
+
+	back BACK1
+		0 0
+		 800 600
+
+	text TEXT1
+		175 244
+		 190 20
+		 NAME
+
+	text TEXTPW
+		375 244
+		 190 20
+		 PASSWORD
+
+	edit EDIT1
+		175 284
+		 190 30
+		 ""
+	edit EDITPW
+		375 284
+		 190 30
+		 ""
+	pbut PBUT1
+		300 400
+		 160 20
+		 REGISTER
+		
+	pbut PBUTPICKSERVER
+		625 500
+		 150 30
+		 "PICK SERVER"
+		
+	pbut PBUT6
+		725 550
+		 50 30
+		 "BACK"
+}

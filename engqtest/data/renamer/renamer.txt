@@ -1,0 +1,4486 @@
+open logfile
+lpszCmdParam ''
+GetCommandLine() '"C:\srcw32\xmen\xmen.exe"'
+argv[0] 'C:\srcw32\xmen\xmen.exe'
+fpu control was at 0000027f
+initial fpu control is at 0000007f
+input init 1.............................................
+    maindriver  0 'message based'
+  * maindriver  1 'directinput'
+audio init 1 0.............................................
+    maindriver  0 'waveplayer'
+  * maindriver  1 'directsound'
+ directsound init:
+  * subdriver  0 'Primary Sound Driver'
+    subdriver  1 'C-Media Wave Device'
+video init 0 0.............................................
+^^^^^^^^^    begin main init    ^^^^^^^^^
+  * maindriver  0 'gdi'
+    maindriver  1 'directdraw'
+    maindriver  2 'direct3d'
+video_setupwindow x=640, y=480, bpp=565
+pal 0, bp 32, pl 1
+gdi setwindow pos 317 243 646 512
+reading 'aaa_loading.spx', size 103456
+'aaa_loading.spx' alloc spal 18
+reading 'aab_stdchar.chr', size 8192
+reading 'aac_scan.spx', size 13180
+'aac_scan.spx' alloc spal 15
+reading 'aad_card.lst', size 5500
+reading 'aae_menusounds.txt', size 214
+reading 'aaf_scan.wav', size 11912
+reading 'aag_menu1.wav', size 224
+reading 'aah_menu2.wav', size 236
+reading 'aai_menu3.wav', size 268
+reading 'aaj_scan_incorrect.wav', size 3168
+changestate 3
+VVVVVVVVV    end main init    VVVVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'tmenu.spx', size 2510304
+'tmenu.spx' alloc spal 128
+reading 'toptions.spx', size 7612
+'toptions.spx' alloc spal 83
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+vagload '       X_MANSION.BVG' mono datalen 132300, samprate 11025
+reading 'X_MANSION.BVG', size 132314
+reading 'mainmenu.bck', size 308248
+loading: filecount 14, sectorcount 3131059
+VVVVVVVVV    end state next init    VVVVVVVVV
+reaquiring 8007000c
+reading 'wolv_c.cad', size 1342
+reading 's_c.cad', size 1281
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'w1m.spx', size 2328692
+'w1m.spx' alloc spal 47
+reading 's1m.spx', size 2228172
+'s1m.spx' alloc spal 66
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_wol.spx', size 44064
+'head_wol.spx' alloc spal 32
+reading 'head_storm.spx', size 51124
+'head_storm.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb0.cad', size 88
+reading 'jungle.bck', size 326175
+reading 'WOLVERINE_ENTRY01.wav', size 17304
+reading 'WOLVERINE_ENTRY02.wav', size 17974
+reading 'WOLVERINE_WINCE01.wav', size 5096
+reading 'WOLVERINE_WINCE02.wav', size 4598
+reading 'WOLVERINE_WINCE03.wav', size 5532
+reading 'WOLVERINE_ATTACK01.wav', size 4568
+reading 'WOLVERINE_ATTACK02.wav', size 6086
+reading 'WOLVERINE_ATTACK03.wav', size 6778
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'SWING_MED_METALIC01.wav', size 3950
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'W_A101.wav', size 7948
+reading 'W_A201.wav', size 8360
+reading 'WOLVERINE_SPECIALVO.wav', size 15266
+reading 'WOLVERINE_FINISHVO02.wav', size 16516
+reading 'W_A301.wav', size 12604
+reading 'WOLVERINE_WIN01.wav', size 16684
+reading 'WOLVERINE_WIN02.wav', size 26006
+reading 'X_WolverineAdvice01.wav', size 46004
+reading 'X_WolverineAdvice02.wav', size 92958
+reading 'X_WolverineAdvice03.wav', size 50488
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'STORM_ENTRY01.wav', size 34576
+reading 'STORM_ENTRY02.wav', size 22718
+reading 'STORM_WINCE01.wav', size 13740
+reading 'STORM_WINCE02.wav', size 11262
+reading 'STORM_WINCE03.wav', size 12164
+reading 'STORM_ATTACK01.wav', size 12180
+reading 'STORM_ATTACK02.wav', size 12924
+reading 'STORM_ATTACK03.wav', size 11678
+reading 'PRO_IMPACT01.wav', size 10836
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'S_A101.wav', size 10648
+reading 'S_A201.wav', size 26116
+reading 'STORM_SPECIALVO.wav', size 29490
+reading 'STORM_FINISHVO01.wav', size 26020
+reading 'S_A301.wav', size 28320
+reading 'STORM_WIN01.wav', size 29368
+reading 'STORM_WIN02.wav', size 27546
+reading 'X_StormAdvice01.wav', size 71208
+reading 'X_StormAdvice02.wav', size 59864
+reading 'X_StormAdvice03.wav', size 76268
+vagload '          jungle.bvg' mono datalen 189000, samprate 11025
+reading 'jungle.bvg', size 189014
+loading: filecount 65, sectorcount 5655850
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 65, sectorcount 5655850
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'u_wolv_c.cad', size 1748
+reading 's_c.cad', size 1281
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'uw1m.spx', size 2162464
+'uw1m.spx' alloc spal 44
+reading 'fountain.spx', size 13768
+'fountain.spx' alloc spal 30
+reading 's1m.spx', size 2228172
+'s1m.spx' alloc spal 66
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_wol.spx', size 44064
+'head_wol.spx' alloc spal 32
+reading 'head_storm.spx', size 51124
+'head_storm.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb0.cad', size 88
+reading 'jungle.bck', size 326175
+reading 'WOLVERINE_ENTRY01.wav', size 17304
+reading 'WOLVERINE_ENTRY02.wav', size 17974
+reading 'WOLVERINE_WINCE01.wav', size 5096
+reading 'WOLVERINE_WINCE02.wav', size 4598
+reading 'WOLVERINE_WINCE03.wav', size 5532
+reading 'WOLVERINE_ATTACK01.wav', size 4568
+reading 'WOLVERINE_ATTACK02.wav', size 6086
+reading 'WOLVERINE_ATTACK03.wav', size 6778
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'SWING_MED_METALIC01.wav', size 3950
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'W_A101.wav', size 7948
+reading 'W_A201.wav', size 8360
+reading 'WOLVERINE_SPECIALVO.wav', size 15266
+reading 'WOLVERINE_FINISHVO02.wav', size 16516
+reading 'W_A301.wav', size 12604
+reading 'WOLVERINE_WIN01.wav', size 16684
+reading 'WOLVERINE_WIN02.wav', size 26006
+reading 'X_WolverineAdvice01.wav', size 46004
+reading 'X_WolverineAdvice02.wav', size 92958
+reading 'X_WolverineAdvice03.wav', size 50488
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'STORM_ENTRY01.wav', size 34576
+reading 'STORM_ENTRY02.wav', size 22718
+reading 'STORM_WINCE01.wav', size 13740
+reading 'STORM_WINCE02.wav', size 11262
+reading 'STORM_WINCE03.wav', size 12164
+reading 'STORM_ATTACK01.wav', size 12180
+reading 'STORM_ATTACK02.wav', size 12924
+reading 'STORM_ATTACK03.wav', size 11678
+reading 'PRO_IMPACT01.wav', size 10836
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'S_A101.wav', size 10648
+reading 'S_A201.wav', size 26116
+reading 'STORM_SPECIALVO.wav', size 29490
+reading 'STORM_FINISHVO01.wav', size 26020
+reading 'S_A301.wav', size 28320
+reading 'STORM_WIN01.wav', size 29368
+reading 'STORM_WIN02.wav', size 27546
+reading 'X_StormAdvice01.wav', size 71208
+reading 'X_StormAdvice02.wav', size 59864
+reading 'X_StormAdvice03.wav', size 76268
+vagload '          jungle.bvg' mono datalen 189000, samprate 11025
+reading 'jungle.bvg', size 189014
+loading: filecount 66, sectorcount 5782754
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'fountain.spx'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 66, sectorcount 5782754
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 's_c.cad', size 1281
+reading 'cy_c.cad', size 1307
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 's1m.spx', size 2228172
+'s1m.spx' alloc spal 66
+reading 'cy1m.spx', size 2028888
+'cy1m.spx' alloc spal 57
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_storm.spx', size 51124
+'head_storm.spx' alloc spal 33
+reading 'head_cyc.spx', size 44984
+'head_cyc.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb1.cad', size 96
+reading 'x_mansion.bck', size 264152
+reading 'STORM_ENTRY01.wav', size 34576
+reading 'STORM_ENTRY02.wav', size 22718
+reading 'STORM_WINCE01.wav', size 13740
+reading 'STORM_WINCE02.wav', size 11262
+reading 'STORM_WINCE03.wav', size 12164
+reading 'STORM_ATTACK01.wav', size 12180
+reading 'STORM_ATTACK02.wav', size 12924
+reading 'STORM_ATTACK03.wav', size 11678
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT01.wav', size 10836
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'S_A101.wav', size 10648
+reading 'S_A201.wav', size 26116
+reading 'STORM_SPECIALVO.wav', size 29490
+reading 'STORM_FINISHVO01.wav', size 26020
+reading 'S_A301.wav', size 28320
+reading 'STORM_WIN01.wav', size 29368
+reading 'STORM_WIN02.wav', size 27546
+reading 'X_StormAdvice01.wav', size 71208
+reading 'X_StormAdvice02.wav', size 59864
+reading 'X_StormAdvice03.wav', size 76268
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'CYCLOPS_ENTRY01.wav', size 19706
+reading 'CYCLOPS_ENTRY02.wav', size 17954
+reading 'CYCLOPS_WINCE01.wav', size 5964
+reading 'CYCLOPS_WINCE02.wav', size 6058
+reading 'CYCLOPS_WINCE03.wav', size 6880
+reading 'CYCLOPS_ATTACK01.wav', size 6452
+reading 'CYCLOPS_ATTACK02.wav', size 5326
+reading 'CYCLOPS_ATTACK03.wav', size 7990
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'CY_A101.wav', size 8738
+reading 'CY_A201.wav', size 10908
+reading 'CYCLOPS_SPECIALVO.wav', size 13550
+reading 'CYCLOPS_FINISHVO01.wav', size 17470
+reading 'CY_A301.wav', size 18098
+reading 'CYCLOPS_WIN01.wav', size 18652
+reading 'CYCLOPS_WIN02.wav', size 32128
+reading 'X_CyclopsAdvice01.wav', size 58512
+reading 'X_CyclopsAdvice02.wav', size 74154
+reading 'X_CyclopsAdvice03.wav', size 70048
+vagload '       x_mansion.bvg' mono datalen 132300, samprate 11025
+reading 'x_mansion.bvg', size 132314
+loading: filecount 64, sectorcount 5583492
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 64, sectorcount 5583492
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 's_c.cad', size 1281
+reading 'u_cy_c.cad', size 1708
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 's1m.spx', size 2228172
+'s1m.spx' alloc spal 66
+reading 'ucy1m.spx', size 1688240
+'ucy1m.spx' alloc spal 46
+reading 'fountain.spx', size 13768
+'fountain.spx' alloc spal 30
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_storm.spx', size 51124
+'head_storm.spx' alloc spal 33
+reading 'head_cyc.spx', size 44984
+'head_cyc.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb1.cad', size 96
+reading 'x_mansion.bck', size 264152
+reading 'STORM_ENTRY01.wav', size 34576
+reading 'STORM_ENTRY02.wav', size 22718
+reading 'STORM_WINCE01.wav', size 13740
+reading 'STORM_WINCE02.wav', size 11262
+reading 'STORM_WINCE03.wav', size 12164
+reading 'STORM_ATTACK01.wav', size 12180
+reading 'STORM_ATTACK02.wav', size 12924
+reading 'STORM_ATTACK03.wav', size 11678
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT01.wav', size 10836
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'S_A101.wav', size 10648
+reading 'S_A201.wav', size 26116
+reading 'STORM_SPECIALVO.wav', size 29490
+reading 'STORM_FINISHVO01.wav', size 26020
+reading 'S_A301.wav', size 28320
+reading 'STORM_WIN01.wav', size 29368
+reading 'STORM_WIN02.wav', size 27546
+reading 'X_StormAdvice01.wav', size 71208
+reading 'X_StormAdvice02.wav', size 59864
+reading 'X_StormAdvice03.wav', size 76268
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'CYCLOPS_ENTRY01.wav', size 19706
+reading 'CYCLOPS_ENTRY02.wav', size 17954
+reading 'CYCLOPS_WINCE01.wav', size 5964
+reading 'CYCLOPS_WINCE02.wav', size 6058
+reading 'CYCLOPS_WINCE03.wav', size 6880
+reading 'CYCLOPS_ATTACK01.wav', size 6452
+reading 'CYCLOPS_ATTACK02.wav', size 5326
+reading 'CYCLOPS_ATTACK03.wav', size 7990
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'CY_A101.wav', size 8738
+reading 'CY_A201.wav', size 10908
+reading 'CYCLOPS_SPECIALVO.wav', size 13550
+reading 'CYCLOPS_FINISHVO01.wav', size 17470
+reading 'CY_A301.wav', size 18098
+reading 'CYCLOPS_WIN01.wav', size 18652
+reading 'CYCLOPS_WIN02.wav', size 32128
+reading 'X_CyclopsAdvice01.wav', size 58512
+reading 'X_CyclopsAdvice02.wav', size 74154
+reading 'X_CyclopsAdvice03.wav', size 70048
+vagload '       x_mansion.bvg' mono datalen 132300, samprate 11025
+reading 'x_mansion.bvg', size 132314
+loading: filecount 65, sectorcount 5710097
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'fountain.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 65, sectorcount 5710097
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'cy_c.cad', size 1307
+reading 'g_c.cad', size 1283
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'cy1m.spx', size 2028888
+'cy1m.spx' alloc spal 57
+reading 'g1m.spx', size 2402944
+'g1m.spx' alloc spal 55
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_cyc.spx', size 44984
+'head_cyc.spx' alloc spal 33
+reading 'head_gam.spx', size 45004
+'head_gam.spx' alloc spal 32
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb4.cad', size 104
+reading 'bourbon_street.bck', size 345701
+reading 'CYCLOPS_ENTRY01.wav', size 19706
+reading 'CYCLOPS_ENTRY02.wav', size 17954
+reading 'CYCLOPS_WINCE01.wav', size 5964
+reading 'CYCLOPS_WINCE02.wav', size 6058
+reading 'CYCLOPS_WINCE03.wav', size 6880
+reading 'CYCLOPS_ATTACK01.wav', size 6452
+reading 'CYCLOPS_ATTACK02.wav', size 5326
+reading 'CYCLOPS_ATTACK03.wav', size 7990
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'SWING_MED01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'CY_A101.wav', size 8738
+reading 'CY_A201.wav', size 10908
+reading 'CYCLOPS_SPECIALVO.wav', size 13550
+reading 'CYCLOPS_FINISHVO01.wav', size 17470
+reading 'CY_A301.wav', size 18098
+reading 'CYCLOPS_WIN01.wav', size 18652
+reading 'CYCLOPS_WIN02.wav', size 32128
+reading 'X_CyclopsAdvice01.wav', size 58512
+reading 'X_CyclopsAdvice02.wav', size 74154
+reading 'X_CyclopsAdvice03.wav', size 70048
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'GAMBIT_ENTRY01.wav', size 33910
+reading 'GAMBIT_ENTRY02.wav', size 30496
+reading 'GAMBIT_WINCE01.wav', size 10836
+reading 'GAMBIT_WINCE02.wav', size 9726
+reading 'GAMBIT_WINCE03.wav', size 11798
+reading 'GAMBIT_ATTACK01.wav', size 6414
+reading 'GAMBIT_ATTACK02.wav', size 12158
+reading 'GAMBIT_ATTACK03.wav', size 9156
+reading 'G_A101.wav', size 7012
+reading 'G_A201.wav', size 12768
+reading 'GAMBIT_SPECIALVO.wav', size 18806
+reading 'GAMBIT_FINISHVO01.wav', size 13940
+reading 'G_A301.wav', size 19760
+reading 'GAMBIT_WIN01.wav', size 38172
+reading 'GAMBIT_WIN02.wav', size 32024
+reading 'X_GambitAdvice01.wav', size 35640
+reading 'X_GambitAdvice02.wav', size 52140
+reading 'X_GambitAdvice03.wav', size 92684
+vagload '  bourbon_street.bvg' mono datalen 170100, samprate 11025
+reading 'bourbon_street.bvg', size 170114
+loading: filecount 62, sectorcount 5526324
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 62, sectorcount 5526324
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'u_cy_c.cad', size 1708
+reading 'g_c.cad', size 1283
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'ucy1m.spx', size 1688240
+'ucy1m.spx' alloc spal 46
+reading 'fountain.spx', size 13768
+'fountain.spx' alloc spal 30
+reading 'g1m.spx', size 2402944
+'g1m.spx' alloc spal 55
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_cyc.spx', size 44984
+'head_cyc.spx' alloc spal 33
+reading 'head_gam.spx', size 45004
+'head_gam.spx' alloc spal 32
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb4.cad', size 104
+reading 'bourbon_street.bck', size 345701
+reading 'CYCLOPS_ENTRY01.wav', size 19706
+reading 'CYCLOPS_ENTRY02.wav', size 17954
+reading 'CYCLOPS_WINCE01.wav', size 5964
+reading 'CYCLOPS_WINCE02.wav', size 6058
+reading 'CYCLOPS_WINCE03.wav', size 6880
+reading 'CYCLOPS_ATTACK01.wav', size 6452
+reading 'CYCLOPS_ATTACK02.wav', size 5326
+reading 'CYCLOPS_ATTACK03.wav', size 7990
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'SWING_MED01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'CY_A101.wav', size 8738
+reading 'CY_A201.wav', size 10908
+reading 'CYCLOPS_SPECIALVO.wav', size 13550
+reading 'CYCLOPS_FINISHVO01.wav', size 17470
+reading 'CY_A301.wav', size 18098
+reading 'CYCLOPS_WIN01.wav', size 18652
+reading 'CYCLOPS_WIN02.wav', size 32128
+reading 'X_CyclopsAdvice01.wav', size 58512
+reading 'X_CyclopsAdvice02.wav', size 74154
+reading 'X_CyclopsAdvice03.wav', size 70048
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'GAMBIT_ENTRY01.wav', size 33910
+reading 'GAMBIT_ENTRY02.wav', size 30496
+reading 'GAMBIT_WINCE01.wav', size 10836
+reading 'GAMBIT_WINCE02.wav', size 9726
+reading 'GAMBIT_WINCE03.wav', size 11798
+reading 'GAMBIT_ATTACK01.wav', size 6414
+reading 'GAMBIT_ATTACK02.wav', size 12158
+reading 'GAMBIT_ATTACK03.wav', size 9156
+reading 'G_A101.wav', size 7012
+reading 'G_A201.wav', size 12768
+reading 'GAMBIT_SPECIALVO.wav', size 18806
+reading 'GAMBIT_FINISHVO01.wav', size 13940
+reading 'G_A301.wav', size 19760
+reading 'GAMBIT_WIN01.wav', size 38172
+reading 'GAMBIT_WIN02.wav', size 32024
+reading 'X_GambitAdvice01.wav', size 35640
+reading 'X_GambitAdvice02.wav', size 52140
+reading 'X_GambitAdvice03.wav', size 92684
+vagload '  bourbon_street.bvg' mono datalen 170100, samprate 11025
+reading 'bourbon_street.bvg', size 170114
+loading: filecount 63, sectorcount 5652929
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'fountain.spx'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 63, sectorcount 5652929
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'g_c.cad', size 1283
+reading 'c_c.cad', size 1265
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'g1m.spx', size 2402944
+'g1m.spx' alloc spal 55
+reading 'c1m.spx', size 3078672
+'c1m.spx' alloc spal 46
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_gam.spx', size 45004
+'head_gam.spx' alloc spal 32
+reading 'head_col.spx', size 48544
+'head_col.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb8.cad', size 88
+reading 'moscow.bck', size 268554
+reading 'GAMBIT_ENTRY01.wav', size 33910
+reading 'GAMBIT_ENTRY02.wav', size 30496
+reading 'GAMBIT_WINCE01.wav', size 10836
+reading 'GAMBIT_WINCE02.wav', size 9726
+reading 'GAMBIT_WINCE03.wav', size 11798
+reading 'GAMBIT_ATTACK01.wav', size 6414
+reading 'GAMBIT_ATTACK02.wav', size 12158
+reading 'GAMBIT_ATTACK03.wav', size 9156
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'SWING_MED01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'G_A101.wav', size 7012
+reading 'G_A201.wav', size 12768
+reading 'GAMBIT_SPECIALVO.wav', size 18806
+reading 'GAMBIT_FINISHVO01.wav', size 13940
+reading 'G_A301.wav', size 19760
+reading 'GAMBIT_WIN01.wav', size 38172
+reading 'GAMBIT_WIN02.wav', size 32024
+reading 'X_GambitAdvice01.wav', size 35640
+reading 'X_GambitAdvice02.wav', size 52140
+reading 'X_GambitAdvice03.wav', size 92684
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'COLOS_ENTRY01.wav', size 25622
+reading 'COLOS_WINCE01.wav', size 11028
+reading 'COLOS_WINCE02.wav', size 10372
+reading 'COLOS_WINCE03.wav', size 8056
+reading 'COLOS_ATTACK01.wav', size 8400
+reading 'COLOS_ATTACK02.wav', size 10242
+reading 'COLOS_ATTACK03.wav', size 11292
+reading 'SMASH_METAL02.wav', size 6156
+reading 'SWING_XHARD01.wav', size 5222
+reading 'C_A101.wav', size 6046
+reading 'C_A201.wav', size 8484
+reading 'COLOS_SPECIALVO.wav', size 12644
+reading 'COLOS_FINISHVO01.wav', size 19634
+reading 'COLOS_FINISHVO02.wav', size 24256
+reading 'C_A301.wav', size 15162
+reading 'COLOS_WIN01.wav', size 40672
+reading 'X_ColossusAdvice01.wav', size 39818
+reading 'X_ColossusAdvice02.wav', size 76884
+reading 'X_ColossusAdvice03.wav', size 87636
+vagload '          moscow.bvg' mono datalen 180153, samprate 11025
+reading 'moscow.bvg', size 180167
+loading: filecount 63, sectorcount 5620735
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 63, sectorcount 5620735
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'g_c.cad', size 1283
+reading 'c_c.cad', size 1265
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'g1m.spx', size 2402944
+'g1m.spx' alloc spal 55
+reading 'c1m.spx', size 3078672
+'c1m.spx' alloc spal 46
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_gam.spx', size 45004
+'head_gam.spx' alloc spal 32
+reading 'head_col.spx', size 48544
+'head_col.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb8.cad', size 88
+reading 'moscow.bck', size 268554
+reading 'GAMBIT_ENTRY01.wav', size 33910
+reading 'GAMBIT_ENTRY02.wav', size 30496
+reading 'GAMBIT_WINCE01.wav', size 10836
+reading 'GAMBIT_WINCE02.wav', size 9726
+reading 'GAMBIT_WINCE03.wav', size 11798
+reading 'GAMBIT_ATTACK01.wav', size 6414
+reading 'GAMBIT_ATTACK02.wav', size 12158
+reading 'GAMBIT_ATTACK03.wav', size 9156
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'SWING_MED01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'G_A101.wav', size 7012
+reading 'G_A201.wav', size 12768
+reading 'GAMBIT_SPECIALVO.wav', size 18806
+reading 'GAMBIT_FINISHVO01.wav', size 13940
+reading 'G_A301.wav', size 19760
+reading 'GAMBIT_WIN01.wav', size 38172
+reading 'GAMBIT_WIN02.wav', size 32024
+reading 'X_GambitAdvice01.wav', size 35640
+reading 'X_GambitAdvice02.wav', size 52140
+reading 'X_GambitAdvice03.wav', size 92684
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'COLOS_ENTRY01.wav', size 25622
+reading 'COLOS_WINCE01.wav', size 11028
+reading 'COLOS_WINCE02.wav', size 10372
+reading 'COLOS_WINCE03.wav', size 8056
+reading 'COLOS_ATTACK01.wav', size 8400
+reading 'COLOS_ATTACK02.wav', size 10242
+reading 'COLOS_ATTACK03.wav', size 11292
+reading 'SMASH_METAL02.wav', size 6156
+reading 'SWING_XHARD01.wav', size 5222
+reading 'C_A101.wav', size 6046
+reading 'C_A201.wav', size 8484
+reading 'COLOS_SPECIALVO.wav', size 12644
+reading 'COLOS_FINISHVO01.wav', size 19634
+reading 'COLOS_FINISHVO02.wav', size 24256
+reading 'C_A301.wav', size 15162
+reading 'COLOS_WIN01.wav', size 40672
+reading 'X_ColossusAdvice01.wav', size 39818
+reading 'X_ColossusAdvice02.wav', size 76884
+reading 'X_ColossusAdvice03.wav', size 87636
+vagload '          moscow.bvg' mono datalen 180153, samprate 11025
+reading 'moscow.bvg', size 180167
+loading: filecount 63, sectorcount 5620735
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 63, sectorcount 5620735
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'c_c.cad', size 1265
+reading 'n_c.cad', size 1308
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'c1m.spx', size 3078672
+'c1m.spx' alloc spal 46
+reading 'n1m.spx', size 1651928
+'n1m.spx' alloc spal 42
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_col.spx', size 48544
+'head_col.spx' alloc spal 33
+reading 'head_nc.spx', size 40240
+'head_nc.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb6.cad', size 94
+reading 'cathedral.bck', size 316161
+reading 'COLOS_ENTRY01.wav', size 25622
+reading 'COLOS_WINCE01.wav', size 11028
+reading 'COLOS_WINCE02.wav', size 10372
+reading 'COLOS_WINCE03.wav', size 8056
+reading 'COLOS_ATTACK01.wav', size 8400
+reading 'COLOS_ATTACK02.wav', size 10242
+reading 'COLOS_ATTACK03.wav', size 11292
+reading 'SMASH_METAL02.wav', size 6156
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'C_A101.wav', size 6046
+reading 'C_A201.wav', size 8484
+reading 'COLOS_SPECIALVO.wav', size 12644
+reading 'COLOS_FINISHVO01.wav', size 19634
+reading 'COLOS_FINISHVO02.wav', size 24256
+reading 'C_A301.wav', size 15162
+reading 'COLOS_WIN01.wav', size 40672
+reading 'X_ColossusAdvice01.wav', size 39818
+reading 'X_ColossusAdvice02.wav', size 76884
+reading 'X_ColossusAdvice03.wav', size 87636
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'NIGHT_ENTRY01.wav', size 21112
+reading 'NIGHT_ENTRY02.wav', size 29084
+reading 'NIGHT_WINCE01.wav', size 8284
+reading 'NIGHT_WINCE02.wav', size 8878
+reading 'NIGHT_WINCE03.wav', size 7338
+reading 'NIGHT_ATTACK01.wav', size 7632
+reading 'NIGHT_ATTACK02.wav', size 5626
+reading 'NIGHT_ATTACK03.wav', size 8744
+reading 'SMASH_01.wav', size 8562
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'N_A101.wav', size 12172
+reading 'N_A201.wav', size 11226
+reading 'NIGHT_SPECIALVO.wav', size 10328
+reading 'NIGHT_FINISHVO01.wav', size 16264
+reading 'N_A301.wav', size 12604
+reading 'NIGHT_WIN01.wav', size 12276
+reading 'NIGHT_WIN02.wav', size 27442
+reading 'X_NightcrawlerAdvice01.wav', size 89398
+reading 'X_NightcrawlerAdvice02.wav', size 56164
+reading 'X_NightcrawlerAdvice03.wav', size 65630
+vagload '       cathedral.bvg' mono datalen 170100, samprate 11025
+reading 'cathedral.bvg', size 170114
+loading: filecount 64, sectorcount 5511017
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 64, sectorcount 5511017
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'c_c.cad', size 1265
+reading 'n_c.cad', size 1308
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'c1m.spx', size 3078672
+'c1m.spx' alloc spal 46
+reading 'n1m.spx', size 1651928
+'n1m.spx' alloc spal 42
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_col.spx', size 48544
+'head_col.spx' alloc spal 33
+reading 'head_nc.spx', size 40240
+'head_nc.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb6.cad', size 94
+reading 'cathedral.bck', size 316161
+reading 'COLOS_ENTRY01.wav', size 25622
+reading 'COLOS_WINCE01.wav', size 11028
+reading 'COLOS_WINCE02.wav', size 10372
+reading 'COLOS_WINCE03.wav', size 8056
+reading 'COLOS_ATTACK01.wav', size 8400
+reading 'COLOS_ATTACK02.wav', size 10242
+reading 'COLOS_ATTACK03.wav', size 11292
+reading 'SMASH_METAL02.wav', size 6156
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'C_A101.wav', size 6046
+reading 'C_A201.wav', size 8484
+reading 'COLOS_SPECIALVO.wav', size 12644
+reading 'COLOS_FINISHVO01.wav', size 19634
+reading 'COLOS_FINISHVO02.wav', size 24256
+reading 'C_A301.wav', size 15162
+reading 'COLOS_WIN01.wav', size 40672
+reading 'X_ColossusAdvice01.wav', size 39818
+reading 'X_ColossusAdvice02.wav', size 76884
+reading 'X_ColossusAdvice03.wav', size 87636
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'NIGHT_ENTRY01.wav', size 21112
+reading 'NIGHT_ENTRY02.wav', size 29084
+reading 'NIGHT_WINCE01.wav', size 8284
+reading 'NIGHT_WINCE02.wav', size 8878
+reading 'NIGHT_WINCE03.wav', size 7338
+reading 'NIGHT_ATTACK01.wav', size 7632
+reading 'NIGHT_ATTACK02.wav', size 5626
+reading 'NIGHT_ATTACK03.wav', size 8744
+reading 'SMASH_01.wav', size 8562
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'N_A101.wav', size 12172
+reading 'N_A201.wav', size 11226
+reading 'NIGHT_SPECIALVO.wav', size 10328
+reading 'NIGHT_FINISHVO01.wav', size 16264
+reading 'N_A301.wav', size 12604
+reading 'NIGHT_WIN01.wav', size 12276
+reading 'NIGHT_WIN02.wav', size 27442
+reading 'X_NightcrawlerAdvice01.wav', size 89398
+reading 'X_NightcrawlerAdvice02.wav', size 56164
+reading 'X_NightcrawlerAdvice03.wav', size 65630
+vagload '       cathedral.bvg' mono datalen 170100, samprate 11025
+reading 'cathedral.bvg', size 170114
+loading: filecount 64, sectorcount 5511017
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 64, sectorcount 5511017
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'n_c.cad', size 1308
+reading 'ic_c.cad', size 1288
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'n1m.spx', size 1651928
+'n1m.spx' alloc spal 42
+reading 'ic1m.spx', size 2105888
+'ic1m.spx' alloc spal 33
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_nc.spx', size 40240
+'head_nc.spx' alloc spal 33
+reading 'head_ice.spx', size 43528
+'head_ice.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb5.cad', size 102
+reading 'Arctic_Tundra.bck', size 183873
+reading 'NIGHT_ENTRY01.wav', size 21112
+reading 'NIGHT_ENTRY02.wav', size 29084
+reading 'NIGHT_WINCE01.wav', size 8284
+reading 'NIGHT_WINCE02.wav', size 8878
+reading 'NIGHT_WINCE03.wav', size 7338
+reading 'NIGHT_ATTACK01.wav', size 7632
+reading 'NIGHT_ATTACK02.wav', size 5626
+reading 'NIGHT_ATTACK03.wav', size 8744
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'N_A101.wav', size 12172
+reading 'N_A201.wav', size 11226
+reading 'NIGHT_SPECIALVO.wav', size 10328
+reading 'NIGHT_FINISHVO01.wav', size 16264
+reading 'N_A301.wav', size 12604
+reading 'NIGHT_WIN01.wav', size 12276
+reading 'NIGHT_WIN02.wav', size 27442
+reading 'X_NightcrawlerAdvice01.wav', size 89398
+reading 'X_NightcrawlerAdvice02.wav', size 56164
+reading 'X_NightcrawlerAdvice03.wav', size 65630
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'ICEMAN_ENTRY01.wav', size 18476
+reading 'ICEMAN_ENTRY02.wav', size 15576
+reading 'ICEMAN_WINCE01.wav', size 7924
+reading 'ICEMAN_WINCE02.wav', size 8230
+reading 'ICEMAN_WINCE03.wav', size 8102
+reading 'ICEMAN_ATTACK01.wav', size 4516
+reading 'ICEMAN_ATTACK02.wav', size 8176
+reading 'ICEMAN_ATTACK03.wav', size 13676
+reading 'SWING_HARD01.wav', size 5222
+reading 'IC_A101.wav', size 5574
+reading 'IC_A201.wav', size 6224
+reading 'ICEMAN_SPECIALVO.wav', size 12964
+reading 'ICEMAN_FINISHVO01.wav', size 14818
+reading 'IC_A301.wav', size 10432
+reading 'X_IcemanAdvice01.wav', size 55168
+reading 'X_IcemanAdvice02.wav', size 43144
+reading 'X_IcemanAdvice03.wav', size 71138
+vagload '   Arctic_Tundra.bvg' mono datalen 148837, samprate 11025
+reading 'Arctic_Tundra.bvg', size 148851
+loading: filecount 61, sectorcount 5346838
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 61, sectorcount 5346838
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'n_c.cad', size 1308
+reading 'ic_c.cad', size 1288
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'n1m.spx', size 1651928
+'n1m.spx' alloc spal 42
+reading 'ic1m.spx', size 2105888
+'ic1m.spx' alloc spal 33
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_nc.spx', size 40240
+'head_nc.spx' alloc spal 33
+reading 'head_ice.spx', size 43528
+'head_ice.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb5.cad', size 102
+reading 'Arctic_Tundra.bck', size 183873
+reading 'NIGHT_ENTRY01.wav', size 21112
+reading 'NIGHT_ENTRY02.wav', size 29084
+reading 'NIGHT_WINCE01.wav', size 8284
+reading 'NIGHT_WINCE02.wav', size 8878
+reading 'NIGHT_WINCE03.wav', size 7338
+reading 'NIGHT_ATTACK01.wav', size 7632
+reading 'NIGHT_ATTACK02.wav', size 5626
+reading 'NIGHT_ATTACK03.wav', size 8744
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'N_A101.wav', size 12172
+reading 'N_A201.wav', size 11226
+reading 'NIGHT_SPECIALVO.wav', size 10328
+reading 'NIGHT_FINISHVO01.wav', size 16264
+reading 'N_A301.wav', size 12604
+reading 'NIGHT_WIN01.wav', size 12276
+reading 'NIGHT_WIN02.wav', size 27442
+reading 'X_NightcrawlerAdvice01.wav', size 89398
+reading 'X_NightcrawlerAdvice02.wav', size 56164
+reading 'X_NightcrawlerAdvice03.wav', size 65630
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'ICEMAN_ENTRY01.wav', size 18476
+reading 'ICEMAN_ENTRY02.wav', size 15576
+reading 'ICEMAN_WINCE01.wav', size 7924
+reading 'ICEMAN_WINCE02.wav', size 8230
+reading 'ICEMAN_WINCE03.wav', size 8102
+reading 'ICEMAN_ATTACK01.wav', size 4516
+reading 'ICEMAN_ATTACK02.wav', size 8176
+reading 'ICEMAN_ATTACK03.wav', size 13676
+reading 'SWING_HARD01.wav', size 5222
+reading 'IC_A101.wav', size 5574
+reading 'IC_A201.wav', size 6224
+reading 'ICEMAN_SPECIALVO.wav', size 12964
+reading 'ICEMAN_FINISHVO01.wav', size 14818
+reading 'IC_A301.wav', size 10432
+reading 'X_IcemanAdvice01.wav', size 55168
+reading 'X_IcemanAdvice02.wav', size 43144
+reading 'X_IcemanAdvice03.wav', size 71138
+vagload '   Arctic_Tundra.bvg' mono datalen 148837, samprate 11025
+reading 'Arctic_Tundra.bvg', size 148851
+loading: filecount 61, sectorcount 5346838
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 61, sectorcount 5346838
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'ic_c.cad', size 1288
+reading 'r_c.cad', size 1265
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'ic1m.spx', size 2105888
+'ic1m.spx' alloc spal 33
+reading 'r1m.spx', size 1597168
+'r1m.spx' alloc spal 48
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_ice.spx', size 43528
+'head_ice.spx' alloc spal 33
+reading 'head_rog.spx', size 47736
+'head_rog.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb2.cad', size 106
+reading 'Siege_Perilous.bck', size 456961
+reading 'ICEMAN_ENTRY01.wav', size 18476
+reading 'ICEMAN_ENTRY02.wav', size 15576
+reading 'ICEMAN_WINCE01.wav', size 7924
+reading 'ICEMAN_WINCE02.wav', size 8230
+reading 'ICEMAN_WINCE03.wav', size 8102
+reading 'ICEMAN_ATTACK01.wav', size 4516
+reading 'ICEMAN_ATTACK02.wav', size 8176
+reading 'ICEMAN_ATTACK03.wav', size 13676
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'SWING_MED01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'IC_A101.wav', size 5574
+reading 'IC_A201.wav', size 6224
+reading 'ICEMAN_SPECIALVO.wav', size 12964
+reading 'ICEMAN_FINISHVO01.wav', size 14818
+reading 'IC_A301.wav', size 10432
+reading 'X_IcemanAdvice01.wav', size 55168
+reading 'X_IcemanAdvice02.wav', size 43144
+reading 'X_IcemanAdvice03.wav', size 71138
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'ROGUE_ENTRY01.wav', size 29212
+reading 'ROGUE_ENTRY02.wav', size 20140
+reading 'ROGUE_WINCE01.wav', size 5858
+reading 'ROGUE_WINCE02.wav', size 6230
+reading 'ROGUE_WINCE03.wav', size 6082
+reading 'ROGUE_ATTACK01.wav', size 5864
+reading 'ROGUE_ATTACK02.wav', size 6462
+reading 'ROGUE_ATTACK03.wav', size 5412
+reading 'R_A101.wav', size 11836
+reading 'R_A201.wav', size 16842
+reading 'ROGUE_SPECIALVO.wav', size 12936
+reading 'ROGUE_FINISHVO01.wav', size 21252
+reading 'R_A301.wav', size 6336
+reading 'ROGUE_WIN01.wav', size 17414
+reading 'ROGUE_WIN02.wav', size 13802
+reading 'X_RogueAdvice01.wav', size 59434
+reading 'X_RogueAdvice02.wav', size 59816
+reading 'X_RogueAdvice03.wav', size 77950
+vagload '  Siege_Perilous.bvg' mono datalen 151200, samprate 11025
+reading 'Siege_Perilous.bvg', size 151214
+loading: filecount 60, sectorcount 5457119
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 60, sectorcount 5457119
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'ic_c.cad', size 1288
+reading 'r_c.cad', size 1265
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'ic1m.spx', size 2105888
+'ic1m.spx' alloc spal 33
+reading 'r1m.spx', size 1597168
+'r1m.spx' alloc spal 48
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_ice.spx', size 43528
+'head_ice.spx' alloc spal 33
+reading 'head_rog.spx', size 47736
+'head_rog.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb2.cad', size 106
+reading 'Siege_Perilous.bck', size 456961
+reading 'ICEMAN_ENTRY01.wav', size 18476
+reading 'ICEMAN_ENTRY02.wav', size 15576
+reading 'ICEMAN_WINCE01.wav', size 7924
+reading 'ICEMAN_WINCE02.wav', size 8230
+reading 'ICEMAN_WINCE03.wav', size 8102
+reading 'ICEMAN_ATTACK01.wav', size 4516
+reading 'ICEMAN_ATTACK02.wav', size 8176
+reading 'ICEMAN_ATTACK03.wav', size 13676
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'SWING_MED01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'IC_A101.wav', size 5574
+reading 'IC_A201.wav', size 6224
+reading 'ICEMAN_SPECIALVO.wav', size 12964
+reading 'ICEMAN_FINISHVO01.wav', size 14818
+reading 'IC_A301.wav', size 10432
+reading 'X_IcemanAdvice01.wav', size 55168
+reading 'X_IcemanAdvice02.wav', size 43144
+reading 'X_IcemanAdvice03.wav', size 71138
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'ROGUE_ENTRY01.wav', size 29212
+reading 'ROGUE_ENTRY02.wav', size 20140
+reading 'ROGUE_WINCE01.wav', size 5858
+reading 'ROGUE_WINCE02.wav', size 6230
+reading 'ROGUE_WINCE03.wav', size 6082
+reading 'ROGUE_ATTACK01.wav', size 5864
+reading 'ROGUE_ATTACK02.wav', size 6462
+reading 'ROGUE_ATTACK03.wav', size 5412
+reading 'R_A101.wav', size 11836
+reading 'R_A201.wav', size 16842
+reading 'ROGUE_SPECIALVO.wav', size 12936
+reading 'ROGUE_FINISHVO01.wav', size 21252
+reading 'R_A301.wav', size 6336
+reading 'ROGUE_WIN01.wav', size 17414
+reading 'ROGUE_WIN02.wav', size 13802
+reading 'X_RogueAdvice01.wav', size 59434
+reading 'X_RogueAdvice02.wav', size 59816
+reading 'X_RogueAdvice03.wav', size 77950
+vagload '  Siege_Perilous.bvg' mono datalen 151200, samprate 11025
+reading 'Siege_Perilous.bvg', size 151214
+loading: filecount 60, sectorcount 5457119
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 60, sectorcount 5457119
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'r_c.cad', size 1265
+reading 'jean_c.cad', size 1266
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'r1m.spx', size 1597168
+'r1m.spx' alloc spal 48
+reading 'j1m.spx', size 2072104
+'j1m.spx' alloc spal 82
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_rog.spx', size 47736
+'head_rog.spx' alloc spal 33
+reading 'head_jean.spx', size 52664
+'head_jean.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb3.cad', size 86
+reading 'dojo.bck', size 286005
+reading 'ROGUE_ENTRY01.wav', size 29212
+reading 'ROGUE_ENTRY02.wav', size 20140
+reading 'ROGUE_WINCE01.wav', size 5858
+reading 'ROGUE_WINCE02.wav', size 6230
+reading 'ROGUE_WINCE03.wav', size 6082
+reading 'ROGUE_ATTACK01.wav', size 5864
+reading 'ROGUE_ATTACK02.wav', size 6462
+reading 'ROGUE_ATTACK03.wav', size 5412
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'SWING_MED01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'R_A101.wav', size 11836
+reading 'R_A201.wav', size 16842
+reading 'ROGUE_SPECIALVO.wav', size 12936
+reading 'ROGUE_FINISHVO01.wav', size 21252
+reading 'R_A301.wav', size 6336
+reading 'ROGUE_WIN01.wav', size 17414
+reading 'ROGUE_WIN02.wav', size 13802
+reading 'X_RogueAdvice01.wav', size 59434
+reading 'X_RogueAdvice02.wav', size 59816
+reading 'X_RogueAdvice03.wav', size 77950
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'JEAN_ENTRY01.wav', size 23236
+reading 'JEAN_ENTRY02.wav', size 17254
+reading 'JEAN_WINCE01.wav', size 5568
+reading 'JEAN_WINCE02.wav', size 4594
+reading 'JEAN_WINCE03.wav', size 9076
+reading 'JEAN_ATTACK01.wav', size 7686
+reading 'JEAN_ATTACK02.wav', size 6384
+reading 'JEAN_ATTACK03.wav', size 5410
+reading 'PRO_IMPACT01.wav', size 10836
+reading 'SWING_LITE01.wav', size 4320
+reading 'J_A101.wav', size 10108
+reading 'J_A201.wav', size 6016
+reading 'JEAN_SPECIALVO.wav', size 16058
+reading 'JEAN_FINISHVO01.wav', size 14976
+reading 'J_A301.wav', size 10554
+reading 'JEAN_WIN01.wav', size 16900
+reading 'JEAN_WIN02.wav', size 18422
+reading 'X_JeanGrayAdvice01.wav', size 67392
+reading 'X_JeanGrayAdvice02.wav', size 48104
+reading 'X_JeanGrayAdvice03.wav', size 68662
+vagload '            dojo.bvg' mono datalen 170100, samprate 11025
+reading 'dojo.bvg', size 170114
+loading: filecount 64, sectorcount 5584499
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 64, sectorcount 5584499
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'r_c.cad', size 1265
+reading 'u_jean_c.cad', size 1667
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'r1m.spx', size 1597168
+'r1m.spx' alloc spal 48
+reading 'uj1m.spx', size 2110744
+'uj1m.spx' alloc spal 52
+reading 'fountain.spx', size 13768
+'fountain.spx' alloc spal 30
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_rog.spx', size 47736
+'head_rog.spx' alloc spal 33
+reading 'head_jean.spx', size 52664
+'head_jean.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb3.cad', size 86
+reading 'dojo.bck', size 286005
+reading 'ROGUE_ENTRY01.wav', size 29212
+reading 'ROGUE_ENTRY02.wav', size 20140
+reading 'ROGUE_WINCE01.wav', size 5858
+reading 'ROGUE_WINCE02.wav', size 6230
+reading 'ROGUE_WINCE03.wav', size 6082
+reading 'ROGUE_ATTACK01.wav', size 5864
+reading 'ROGUE_ATTACK02.wav', size 6462
+reading 'ROGUE_ATTACK03.wav', size 5412
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'SWING_MED01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'R_A101.wav', size 11836
+reading 'R_A201.wav', size 16842
+reading 'ROGUE_SPECIALVO.wav', size 12936
+reading 'ROGUE_FINISHVO01.wav', size 21252
+reading 'R_A301.wav', size 6336
+reading 'ROGUE_WIN01.wav', size 17414
+reading 'ROGUE_WIN02.wav', size 13802
+reading 'X_RogueAdvice01.wav', size 59434
+reading 'X_RogueAdvice02.wav', size 59816
+reading 'X_RogueAdvice03.wav', size 77950
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'JEAN_ENTRY01.wav', size 23236
+reading 'JEAN_ENTRY02.wav', size 17254
+reading 'JEAN_WINCE01.wav', size 5568
+reading 'JEAN_WINCE02.wav', size 4594
+reading 'JEAN_WINCE03.wav', size 9076
+reading 'JEAN_ATTACK01.wav', size 7686
+reading 'JEAN_ATTACK02.wav', size 6384
+reading 'JEAN_ATTACK03.wav', size 5410
+reading 'PRO_IMPACT01.wav', size 10836
+reading 'SWING_LITE01.wav', size 4320
+reading 'J_A101.wav', size 10108
+reading 'J_A201.wav', size 6016
+reading 'JEAN_SPECIALVO.wav', size 16058
+reading 'JEAN_FINISHVO01.wav', size 14976
+reading 'J_A301.wav', size 10554
+reading 'JEAN_WIN01.wav', size 16900
+reading 'JEAN_WIN02.wav', size 18422
+reading 'X_JeanGrayAdvice01.wav', size 67392
+reading 'X_JeanGrayAdvice02.wav', size 48104
+reading 'X_JeanGrayAdvice03.wav', size 68662
+vagload '            dojo.bvg' mono datalen 170100, samprate 11025
+reading 'dojo.bvg', size 170114
+loading: filecount 65, sectorcount 5693935
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'fountain.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 65, sectorcount 5693935
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'jean_c.cad', size 1266
+reading 'b_c.cad', size 1237
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'j1m.spx', size 2072104
+'j1m.spx' alloc spal 82
+reading 'b1m.spx', size 2768036
+'b1m.spx' alloc spal 37
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_jean.spx', size 52664
+'head_jean.spx' alloc spal 33
+reading 'head_bst.spx', size 50128
+'head_bst.spx' alloc spal 32
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb7.cad', size 96
+reading 'asteroid_m.bck', size 321249
+reading 'JEAN_ENTRY01.wav', size 23236
+reading 'JEAN_ENTRY02.wav', size 17254
+reading 'JEAN_WINCE01.wav', size 5568
+reading 'JEAN_WINCE02.wav', size 4594
+reading 'JEAN_WINCE03.wav', size 9076
+reading 'JEAN_ATTACK01.wav', size 7686
+reading 'JEAN_ATTACK02.wav', size 6384
+reading 'JEAN_ATTACK03.wav', size 5410
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT01.wav', size 10836
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'J_A101.wav', size 10108
+reading 'J_A201.wav', size 6016
+reading 'JEAN_SPECIALVO.wav', size 16058
+reading 'JEAN_FINISHVO01.wav', size 14976
+reading 'J_A301.wav', size 10554
+reading 'JEAN_WIN01.wav', size 16900
+reading 'JEAN_WIN02.wav', size 18422
+reading 'X_JeanGrayAdvice01.wav', size 67392
+reading 'X_JeanGrayAdvice02.wav', size 48104
+reading 'X_JeanGrayAdvice03.wav', size 68662
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'BEAST_ENTRY01.wav', size 21714
+reading 'BEAST_WINCE01.wav', size 4952
+reading 'BEAST_WINCE02.wav', size 10048
+reading 'BEAST_WINCE03.wav', size 6914
+reading 'BEAST_ATTACK01.wav', size 4160
+reading 'BEAST_ATTACK02.wav', size 4854
+reading 'BEAST_ATTACK03.wav', size 7924
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'B_A101.wav', size 8530
+reading 'B_A201.wav', size 12522
+reading 'BEAST_SPECIALVO.wav', size 8114
+reading 'BEAST_FINISHVO01.wav', size 12030
+reading 'B_A301.wav', size 8940
+reading 'BEAST_WIN01.wav', size 20626
+reading 'X_BeastAdvice01.wav', size 51006
+reading 'X_BeastAdvice02.wav', size 56338
+reading 'X_BeastAdvice03.wav', size 71340
+vagload '      asteroid_m.bvg' mono datalen 145986, samprate 11025
+reading 'asteroid_m.bvg', size 146000
+loading: filecount 63, sectorcount 5605723
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 63, sectorcount 5605723
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'u_jean_c.cad', size 1667
+reading 'b_c.cad', size 1237
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'uj1m.spx', size 2110744
+'uj1m.spx' alloc spal 52
+reading 'fountain.spx', size 13768
+'fountain.spx' alloc spal 30
+reading 'b1m.spx', size 2768036
+'b1m.spx' alloc spal 37
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_jean.spx', size 52664
+'head_jean.spx' alloc spal 33
+reading 'head_bst.spx', size 50128
+'head_bst.spx' alloc spal 32
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb7.cad', size 96
+reading 'asteroid_m.bck', size 321249
+reading 'JEAN_ENTRY01.wav', size 23236
+reading 'JEAN_ENTRY02.wav', size 17254
+reading 'JEAN_WINCE01.wav', size 5568
+reading 'JEAN_WINCE02.wav', size 4594
+reading 'JEAN_WINCE03.wav', size 9076
+reading 'JEAN_ATTACK01.wav', size 7686
+reading 'JEAN_ATTACK02.wav', size 6384
+reading 'JEAN_ATTACK03.wav', size 5410
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT01.wav', size 10836
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'J_A101.wav', size 10108
+reading 'J_A201.wav', size 6016
+reading 'JEAN_SPECIALVO.wav', size 16058
+reading 'JEAN_FINISHVO01.wav', size 14976
+reading 'J_A301.wav', size 10554
+reading 'JEAN_WIN01.wav', size 16900
+reading 'JEAN_WIN02.wav', size 18422
+reading 'X_JeanGrayAdvice01.wav', size 67392
+reading 'X_JeanGrayAdvice02.wav', size 48104
+reading 'X_JeanGrayAdvice03.wav', size 68662
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'BEAST_ENTRY01.wav', size 21714
+reading 'BEAST_WINCE01.wav', size 4952
+reading 'BEAST_WINCE02.wav', size 10048
+reading 'BEAST_WINCE03.wav', size 6914
+reading 'BEAST_ATTACK01.wav', size 4160
+reading 'BEAST_ATTACK02.wav', size 4854
+reading 'BEAST_ATTACK03.wav', size 7924
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'B_A101.wav', size 8530
+reading 'B_A201.wav', size 12522
+reading 'BEAST_SPECIALVO.wav', size 8114
+reading 'BEAST_FINISHVO01.wav', size 12030
+reading 'B_A301.wav', size 8940
+reading 'BEAST_WIN01.wav', size 20626
+reading 'X_BeastAdvice01.wav', size 51006
+reading 'X_BeastAdvice02.wav', size 56338
+reading 'X_BeastAdvice03.wav', size 71340
+vagload '      asteroid_m.bvg' mono datalen 145986, samprate 11025
+reading 'asteroid_m.bvg', size 146000
+loading: filecount 64, sectorcount 5715159
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'fountain.spx'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 64, sectorcount 5715159
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'b_c.cad', size 1237
+reading 'm_c.cad', size 1289
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'b1m.spx', size 2768036
+'b1m.spx' alloc spal 37
+reading 'm1m.spx', size 2988368
+'m1m.spx' alloc spal 63
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_bst.spx', size 50128
+'head_bst.spx' alloc spal 32
+reading 'head_mag.spx', size 46928
+'head_mag.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb7.cad', size 96
+reading 'asteroid_m.bck', size 321249
+reading 'BEAST_ENTRY01.wav', size 21714
+reading 'BEAST_WINCE01.wav', size 4952
+reading 'BEAST_WINCE02.wav', size 10048
+reading 'BEAST_WINCE03.wav', size 6914
+reading 'BEAST_ATTACK01.wav', size 4160
+reading 'BEAST_ATTACK02.wav', size 4854
+reading 'BEAST_ATTACK03.wav', size 7924
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'B_A101.wav', size 8530
+reading 'B_A201.wav', size 12522
+reading 'BEAST_SPECIALVO.wav', size 8114
+reading 'BEAST_FINISHVO01.wav', size 12030
+reading 'B_A301.wav', size 8940
+reading 'BEAST_WIN01.wav', size 20626
+reading 'X_BeastAdvice01.wav', size 51006
+reading 'X_BeastAdvice02.wav', size 56338
+reading 'X_BeastAdvice03.wav', size 71340
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'MAGNETO_ENTRY01.wav', size 49654
+reading 'MAGNETO_ENTRY02.wav', size 27574
+reading 'MAGNETO_WINCE01.wav', size 13036
+reading 'MAGNETO_WINCE02.wav', size 14780
+reading 'MAGNETO_WINCE03.wav', size 16842
+reading 'MAGNETO_ATTACK01.wav', size 15962
+reading 'MAGNETO_ATTACK02.wav', size 22506
+reading 'MAGNETO_ATTACK03.wav', size 20586
+reading 'SWING_MED01.wav', size 4320
+reading 'M_A101.wav', size 7306
+reading 'M_A201.wav', size 8046
+reading 'MAGNETO_SPECIALVO.wav', size 34866
+reading 'MAGNETO_FINISHVO01.wav', size 25710
+reading 'M_A301.wav', size 19790
+reading 'MAGNETO_WIN01.wav', size 27014
+reading 'X_MagnetoAdvice01.wav', size 84242
+reading 'X_MagnetoAdvice02.wav', size 71534
+reading 'X_MagnetoAdvice03.wav', size 66514
+vagload '      asteroid_m.bvg' mono datalen 145986, samprate 11025
+reading 'asteroid_m.bvg', size 146000
+loading: filecount 60, sectorcount 5659614
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 60, sectorcount 5659614
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'b_c.cad', size 1237
+reading 'u_m_c.cad', size 1696
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'b1m.spx', size 2768036
+'b1m.spx' alloc spal 37
+reading 'um1m.spx', size 2139716
+'um1m.spx' alloc spal 50
+reading 'fountain.spx', size 13768
+'fountain.spx' alloc spal 30
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_bst.spx', size 50128
+'head_bst.spx' alloc spal 32
+reading 'head_mag.spx', size 46928
+'head_mag.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb7.cad', size 96
+reading 'asteroid_m.bck', size 321249
+reading 'BEAST_ENTRY01.wav', size 21714
+reading 'BEAST_WINCE01.wav', size 4952
+reading 'BEAST_WINCE02.wav', size 10048
+reading 'BEAST_WINCE03.wav', size 6914
+reading 'BEAST_ATTACK01.wav', size 4160
+reading 'BEAST_ATTACK02.wav', size 4854
+reading 'BEAST_ATTACK03.wav', size 7924
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'B_A101.wav', size 8530
+reading 'B_A201.wav', size 12522
+reading 'BEAST_SPECIALVO.wav', size 8114
+reading 'BEAST_FINISHVO01.wav', size 12030
+reading 'B_A301.wav', size 8940
+reading 'BEAST_WIN01.wav', size 20626
+reading 'X_BeastAdvice01.wav', size 51006
+reading 'X_BeastAdvice02.wav', size 56338
+reading 'X_BeastAdvice03.wav', size 71340
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'MAGNETO_ENTRY01.wav', size 49654
+reading 'MAGNETO_ENTRY02.wav', size 27574
+reading 'MAGNETO_WINCE01.wav', size 13036
+reading 'MAGNETO_WINCE02.wav', size 14780
+reading 'MAGNETO_WINCE03.wav', size 16842
+reading 'MAGNETO_ATTACK01.wav', size 15962
+reading 'MAGNETO_ATTACK02.wav', size 22506
+reading 'MAGNETO_ATTACK03.wav', size 20586
+reading 'SWING_MED01.wav', size 4320
+reading 'M_A101.wav', size 7306
+reading 'M_A201.wav', size 8046
+reading 'MAGNETO_SPECIALVO.wav', size 34866
+reading 'MAGNETO_FINISHVO01.wav', size 25710
+reading 'M_A301.wav', size 19790
+reading 'MAGNETO_WIN01.wav', size 27014
+reading 'X_MagnetoAdvice01.wav', size 84242
+reading 'X_MagnetoAdvice02.wav', size 71534
+reading 'X_MagnetoAdvice03.wav', size 66514
+vagload '      asteroid_m.bvg' mono datalen 145986, samprate 11025
+reading 'asteroid_m.bvg', size 146000
+loading: filecount 61, sectorcount 5781628
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'fountain.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 61, sectorcount 5781628
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'm_c.cad', size 1289
+reading 'jug_c.cad', size 1238
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'm1m.spx', size 2988368
+'m1m.spx' alloc spal 63
+reading 'ju1m.spx', size 3024760
+'ju1m.spx' alloc spal 26
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_mag.spx', size 46928
+'head_mag.spx' alloc spal 33
+reading 'head_jug.spx', size 44644
+'head_jug.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb1.cad', size 96
+reading 'x_mansion.bck', size 264152
+reading 'MAGNETO_ENTRY01.wav', size 49654
+reading 'MAGNETO_ENTRY02.wav', size 27574
+reading 'MAGNETO_WINCE01.wav', size 13036
+reading 'MAGNETO_WINCE02.wav', size 14780
+reading 'MAGNETO_WINCE03.wav', size 16842
+reading 'MAGNETO_ATTACK01.wav', size 15962
+reading 'MAGNETO_ATTACK02.wav', size 22506
+reading 'MAGNETO_ATTACK03.wav', size 20586
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'SWING_MED01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'M_A101.wav', size 7306
+reading 'M_A201.wav', size 8046
+reading 'MAGNETO_SPECIALVO.wav', size 34866
+reading 'MAGNETO_FINISHVO01.wav', size 25710
+reading 'M_A301.wav', size 19790
+reading 'MAGNETO_WIN01.wav', size 27014
+reading 'X_MagnetoAdvice01.wav', size 84242
+reading 'X_MagnetoAdvice02.wav', size 71534
+reading 'X_MagnetoAdvice03.wav', size 66514
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'JUG_ENTRY01.wav', size 23066
+reading 'JUG_WINCE01.wav', size 5606
+reading 'JUG_WINCE02.wav', size 9538
+reading 'JUG_WINCE03.wav', size 10454
+reading 'JUG_ATTACK01.wav', size 6916
+reading 'JUG_ATTACK02.wav', size 8072
+reading 'JUG_ATTACK03.wav', size 11552
+reading 'SWING_XHARD01.wav', size 5222
+reading 'JU_A101.wav', size 11070
+reading 'JU_A201.wav', size 14352
+reading 'JUG_SPECIALVO.wav', size 16184
+reading 'JUG_FINISHVO01.wav', size 15192
+reading 'JU_A301.wav', size 12224
+reading 'JUG_WIN01.wav', size 31898
+reading 'X_JuggernautAdvice01.wav', size 69808
+reading 'X_JuggernautAdvice02.wav', size 54034
+reading 'X_JuggernautAdvice03.wav', size 89492
+vagload '       x_mansion.bvg' mono datalen 132300, samprate 11025
+reading 'x_mansion.bvg', size 132314
+loading: filecount 60, sectorcount 5667118
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 60, sectorcount 5667118
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'u_m_c.cad', size 1696
+reading 'jug_c.cad', size 1238
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'um1m.spx', size 2139716
+'um1m.spx' alloc spal 50
+reading 'fountain.spx', size 13768
+'fountain.spx' alloc spal 30
+reading 'ju1m.spx', size 3024760
+'ju1m.spx' alloc spal 26
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_mag.spx', size 46928
+'head_mag.spx' alloc spal 33
+reading 'head_jug.spx', size 44644
+'head_jug.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb1.cad', size 96
+reading 'x_mansion.bck', size 264152
+reading 'MAGNETO_ENTRY01.wav', size 49654
+reading 'MAGNETO_ENTRY02.wav', size 27574
+reading 'MAGNETO_WINCE01.wav', size 13036
+reading 'MAGNETO_WINCE02.wav', size 14780
+reading 'MAGNETO_WINCE03.wav', size 16842
+reading 'MAGNETO_ATTACK01.wav', size 15962
+reading 'MAGNETO_ATTACK02.wav', size 22506
+reading 'MAGNETO_ATTACK03.wav', size 20586
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_HARD01.wav', size 5222
+reading 'SWING_MED01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'M_A101.wav', size 7306
+reading 'M_A201.wav', size 8046
+reading 'MAGNETO_SPECIALVO.wav', size 34866
+reading 'MAGNETO_FINISHVO01.wav', size 25710
+reading 'M_A301.wav', size 19790
+reading 'MAGNETO_WIN01.wav', size 27014
+reading 'X_MagnetoAdvice01.wav', size 84242
+reading 'X_MagnetoAdvice02.wav', size 71534
+reading 'X_MagnetoAdvice03.wav', size 66514
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'JUG_ENTRY01.wav', size 23066
+reading 'JUG_WINCE01.wav', size 5606
+reading 'JUG_WINCE02.wav', size 9538
+reading 'JUG_WINCE03.wav', size 10454
+reading 'JUG_ATTACK01.wav', size 6916
+reading 'JUG_ATTACK02.wav', size 8072
+reading 'JUG_ATTACK03.wav', size 11552
+reading 'SWING_XHARD01.wav', size 5222
+reading 'JU_A101.wav', size 11070
+reading 'JU_A201.wav', size 14352
+reading 'JUG_SPECIALVO.wav', size 16184
+reading 'JUG_FINISHVO01.wav', size 15192
+reading 'JU_A301.wav', size 12224
+reading 'JUG_WIN01.wav', size 31898
+reading 'X_JuggernautAdvice01.wav', size 69808
+reading 'X_JuggernautAdvice02.wav', size 54034
+reading 'X_JuggernautAdvice03.wav', size 89492
+vagload '       x_mansion.bvg' mono datalen 132300, samprate 11025
+reading 'x_mansion.bvg', size 132314
+loading: filecount 61, sectorcount 5789132
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'fountain.spx'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 61, sectorcount 5789132
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'jug_c.cad', size 1238
+reading 't_c.cad', size 1222
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'ju1m.spx', size 3024760
+'ju1m.spx' alloc spal 26
+reading 't1m.spx', size 1687284
+'t1m.spx' alloc spal 42
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_jug.spx', size 44644
+'head_jug.spx' alloc spal 33
+reading 'head_toad.spx', size 43228
+'head_toad.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb9.cad', size 92
+reading 'weapon_x.bck', size 254585
+reading 'JUG_ENTRY01.wav', size 23066
+reading 'JUG_WINCE01.wav', size 5606
+reading 'JUG_WINCE02.wav', size 9538
+reading 'JUG_WINCE03.wav', size 10454
+reading 'JUG_ATTACK01.wav', size 6916
+reading 'JUG_ATTACK02.wav', size 8072
+reading 'JUG_ATTACK03.wav', size 11552
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'JU_A101.wav', size 11070
+reading 'JU_A201.wav', size 14352
+reading 'JUG_SPECIALVO.wav', size 16184
+reading 'JUG_FINISHVO01.wav', size 15192
+reading 'JU_A301.wav', size 12224
+reading 'JUG_WIN01.wav', size 31898
+reading 'X_JuggernautAdvice01.wav', size 69808
+reading 'X_JuggernautAdvice02.wav', size 54034
+reading 'X_JuggernautAdvice03.wav', size 89492
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'TOAD_ENTRY01.wav', size 24350
+reading 'TOAD_WINCE01.wav', size 8604
+reading 'TOAD_WINCE02.wav', size 5952
+reading 'TOAD_WINCE03.wav', size 9474
+reading 'TOAD_ATTACK01.wav', size 5528
+reading 'TOAD_ATTACK02.wav', size 10810
+reading 'TOAD_ATTACK03.wav', size 9220
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'T_A101.wav', size 12060
+reading 'T_A201.wav', size 17994
+reading 'TOAD_SPECIALVO.wav', size 11270
+reading 'TOAD_FINISHVO01.wav', size 19922
+reading 'T_A301.wav', size 16224
+reading 'TOAD_WIN01.wav', size 39006
+reading 'X_ToadAdvice01.wav', size 65972
+reading 'X_ToadAdvice02.wav', size 60016
+reading 'X_ToadAdvice03.wav', size 83268
+vagload '        weapon_x.bvg' mono datalen 71038, samprate 11025
+reading 'weapon_x.bvg', size 71052
+loading: filecount 60, sectorcount 5648087
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 60, sectorcount 5648087
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'jug_c.cad', size 1238
+reading 't_c.cad', size 1222
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'ju1m.spx', size 3024760
+'ju1m.spx' alloc spal 26
+reading 't1m.spx', size 1687284
+'t1m.spx' alloc spal 42
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_jug.spx', size 44644
+'head_jug.spx' alloc spal 33
+reading 'head_toad.spx', size 43228
+'head_toad.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb9.cad', size 92
+reading 'weapon_x.bck', size 254585
+reading 'JUG_ENTRY01.wav', size 23066
+reading 'JUG_WINCE01.wav', size 5606
+reading 'JUG_WINCE02.wav', size 9538
+reading 'JUG_WINCE03.wav', size 10454
+reading 'JUG_ATTACK01.wav', size 6916
+reading 'JUG_ATTACK02.wav', size 8072
+reading 'JUG_ATTACK03.wav', size 11552
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'JU_A101.wav', size 11070
+reading 'JU_A201.wav', size 14352
+reading 'JUG_SPECIALVO.wav', size 16184
+reading 'JUG_FINISHVO01.wav', size 15192
+reading 'JU_A301.wav', size 12224
+reading 'JUG_WIN01.wav', size 31898
+reading 'X_JuggernautAdvice01.wav', size 69808
+reading 'X_JuggernautAdvice02.wav', size 54034
+reading 'X_JuggernautAdvice03.wav', size 89492
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'TOAD_ENTRY01.wav', size 24350
+reading 'TOAD_WINCE01.wav', size 8604
+reading 'TOAD_WINCE02.wav', size 5952
+reading 'TOAD_WINCE03.wav', size 9474
+reading 'TOAD_ATTACK01.wav', size 5528
+reading 'TOAD_ATTACK02.wav', size 10810
+reading 'TOAD_ATTACK03.wav', size 9220
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'T_A101.wav', size 12060
+reading 'T_A201.wav', size 17994
+reading 'TOAD_SPECIALVO.wav', size 11270
+reading 'TOAD_FINISHVO01.wav', size 19922
+reading 'T_A301.wav', size 16224
+reading 'TOAD_WIN01.wav', size 39006
+reading 'X_ToadAdvice01.wav', size 65972
+reading 'X_ToadAdvice02.wav', size 60016
+reading 'X_ToadAdvice03.wav', size 83268
+vagload '        weapon_x.bvg' mono datalen 71038, samprate 11025
+reading 'weapon_x.bvg', size 71052
+loading: filecount 60, sectorcount 5648087
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 60, sectorcount 5648087
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 't_c.cad', size 1222
+reading 'ms_c.cad', size 1254
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 't1m.spx', size 1687284
+'t1m.spx' alloc spal 42
+reading 'ms1m.spx', size 1312368
+'ms1m.spx' alloc spal 47
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_toad.spx', size 43228
+'head_toad.spx' alloc spal 33
+reading 'head_mys.spx', size 47440
+'head_mys.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb5.cad', size 102
+reading 'Arctic_Tundra.bck', size 183873
+reading 'TOAD_ENTRY01.wav', size 24350
+reading 'TOAD_WINCE01.wav', size 8604
+reading 'TOAD_WINCE02.wav', size 5952
+reading 'TOAD_WINCE03.wav', size 9474
+reading 'TOAD_ATTACK01.wav', size 5528
+reading 'TOAD_ATTACK02.wav', size 10810
+reading 'TOAD_ATTACK03.wav', size 9220
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'T_A101.wav', size 12060
+reading 'T_A201.wav', size 17994
+reading 'TOAD_SPECIALVO.wav', size 11270
+reading 'TOAD_FINISHVO01.wav', size 19922
+reading 'T_A301.wav', size 16224
+reading 'TOAD_WIN01.wav', size 39006
+reading 'X_ToadAdvice01.wav', size 65972
+reading 'X_ToadAdvice02.wav', size 60016
+reading 'X_ToadAdvice03.wav', size 83268
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'MYST_ENTRY01.wav', size 26256
+reading 'MYST_ENTRY02.wav', size 25104
+reading 'MYST_WINCE01.wav', size 7450
+reading 'MYST_wINCE02.wav', size 9046
+reading 'MYST_WINCE03.wav', size 8338
+reading 'MYST_ATTACK01.wav', size 4716
+reading 'MYST_ATTACK02.wav', size 3774
+reading 'MYST_ATTACK03.wav', size 6524
+reading 'MS_A101.wav', size 17988
+reading 'MS_A201.wav', size 19280
+reading 'MYST_SPECIALVO.wav', size 19514
+reading 'MYST_FINISHVO01.wav', size 16030
+reading 'MS_A301.wav', size 10900
+reading 'MYST_WIN01.wav', size 17506
+reading 'X_MystiqueAdvice01.wav', size 60408
+reading 'X_MystiqueAdvice02.wav', size 59146
+reading 'X_MystiqueAdvice03.wav', size 83082
+vagload '   Arctic_Tundra.bvg' mono datalen 148837, samprate 11025
+reading 'Arctic_Tundra.bvg', size 148851
+loading: filecount 59, sectorcount 5624320
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 59, sectorcount 5624320
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 't_c.cad', size 1222
+reading 'ms_c.cad', size 1254
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 't1m.spx', size 1687284
+'t1m.spx' alloc spal 42
+reading 'ms1m.spx', size 1312368
+'ms1m.spx' alloc spal 47
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_toad.spx', size 43228
+'head_toad.spx' alloc spal 33
+reading 'head_mys.spx', size 47440
+'head_mys.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb5.cad', size 102
+reading 'Arctic_Tundra.bck', size 183873
+reading 'TOAD_ENTRY01.wav', size 24350
+reading 'TOAD_WINCE01.wav', size 8604
+reading 'TOAD_WINCE02.wav', size 5952
+reading 'TOAD_WINCE03.wav', size 9474
+reading 'TOAD_ATTACK01.wav', size 5528
+reading 'TOAD_ATTACK02.wav', size 10810
+reading 'TOAD_ATTACK03.wav', size 9220
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'T_A101.wav', size 12060
+reading 'T_A201.wav', size 17994
+reading 'TOAD_SPECIALVO.wav', size 11270
+reading 'TOAD_FINISHVO01.wav', size 19922
+reading 'T_A301.wav', size 16224
+reading 'TOAD_WIN01.wav', size 39006
+reading 'X_ToadAdvice01.wav', size 65972
+reading 'X_ToadAdvice02.wav', size 60016
+reading 'X_ToadAdvice03.wav', size 83268
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'MYST_ENTRY01.wav', size 26256
+reading 'MYST_ENTRY02.wav', size 25104
+reading 'MYST_WINCE01.wav', size 7450
+reading 'MYST_wINCE02.wav', size 9046
+reading 'MYST_WINCE03.wav', size 8338
+reading 'MYST_ATTACK01.wav', size 4716
+reading 'MYST_ATTACK02.wav', size 3774
+reading 'MYST_ATTACK03.wav', size 6524
+reading 'MS_A101.wav', size 17988
+reading 'MS_A201.wav', size 19280
+reading 'MYST_SPECIALVO.wav', size 19514
+reading 'MYST_FINISHVO01.wav', size 16030
+reading 'MS_A301.wav', size 10900
+reading 'MYST_WIN01.wav', size 17506
+reading 'X_MystiqueAdvice01.wav', size 60408
+reading 'X_MystiqueAdvice02.wav', size 59146
+reading 'X_MystiqueAdvice03.wav', size 83082
+vagload '   Arctic_Tundra.bvg' mono datalen 148837, samprate 11025
+reading 'Arctic_Tundra.bvg', size 148851
+loading: filecount 59, sectorcount 5624320
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 59, sectorcount 5624320
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'ms_c.cad', size 1254
+reading 'sb_c.cad', size 1279
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'ms1m.spx', size 1312368
+'ms1m.spx' alloc spal 47
+reading 'sb1m.spx', size 2421696
+'sb1m.spx' alloc spal 50
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_mys.spx', size 47440
+'head_mys.spx' alloc spal 33
+reading 'head_sbt.spx', size 49492
+'head_sbt.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb0.cad', size 88
+reading 'jungle.bck', size 326175
+reading 'MYST_ENTRY01.wav', size 26256
+reading 'MYST_ENTRY02.wav', size 25104
+reading 'MYST_WINCE01.wav', size 7450
+reading 'MYST_wINCE02.wav', size 9046
+reading 'MYST_WINCE03.wav', size 8338
+reading 'MYST_ATTACK01.wav', size 4716
+reading 'MYST_ATTACK02.wav', size 3774
+reading 'MYST_ATTACK03.wav', size 6524
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'MS_A101.wav', size 17988
+reading 'MS_A201.wav', size 19280
+reading 'MYST_SPECIALVO.wav', size 19514
+reading 'MYST_FINISHVO01.wav', size 16030
+reading 'MS_A301.wav', size 10900
+reading 'MYST_WIN01.wav', size 17506
+reading 'X_MystiqueAdvice01.wav', size 60408
+reading 'X_MystiqueAdvice02.wav', size 59146
+reading 'X_MystiqueAdvice03.wav', size 83082
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'SABRE_ENTRY01.wav', size 37296
+reading 'SABRE_ENTRY02.wav', size 28934
+reading 'SABRE_WINCE01.wav', size 7414
+reading 'SABRE_WINCE02.wav', size 8046
+reading 'SABRE_WINCE03.wav', size 12224
+reading 'SABRE_ATTACK01.wav', size 6828
+reading 'SABRE_ATTACK02.wav', size 11806
+reading 'SABRE_ATTACK03.wav', size 9204
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'SB_A101.wav', size 11836
+reading 'SB_A201.wav', size 16060
+reading 'SABRE_SPECIALVO.wav', size 19686
+reading 'SABRE_FINISHVO01.wav', size 25134
+reading 'SB_A301.wav', size 27046
+reading 'SABRE_WIN01.wav', size 28848
+reading 'X_SabretoothAdvice01.wav', size 60708
+reading 'X_SabretoothAdvice02.wav', size 56648
+reading 'X_SabretoothAdvice03.wav', size 75884
+vagload '          jungle.bvg' mono datalen 189000, samprate 11025
+reading 'jungle.bvg', size 189014
+loading: filecount 62, sectorcount 5584736
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 62, sectorcount 5584736
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'ms_c.cad', size 1254
+reading 'u_sb_c.cad', size 1679
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'ms1m.spx', size 1312368
+'ms1m.spx' alloc spal 47
+reading 'usb1m.spx', size 2500188
+'usb1m.spx' alloc spal 64
+reading 'fountain.spx', size 13768
+'fountain.spx' alloc spal 30
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_mys.spx', size 47440
+'head_mys.spx' alloc spal 33
+reading 'head_sbt.spx', size 49492
+'head_sbt.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb0.cad', size 88
+reading 'jungle.bck', size 326175
+reading 'MYST_ENTRY01.wav', size 26256
+reading 'MYST_ENTRY02.wav', size 25104
+reading 'MYST_WINCE01.wav', size 7450
+reading 'MYST_wINCE02.wav', size 9046
+reading 'MYST_WINCE03.wav', size 8338
+reading 'MYST_ATTACK01.wav', size 4716
+reading 'MYST_ATTACK02.wav', size 3774
+reading 'MYST_ATTACK03.wav', size 6524
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'MS_A101.wav', size 17988
+reading 'MS_A201.wav', size 19280
+reading 'MYST_SPECIALVO.wav', size 19514
+reading 'MYST_FINISHVO01.wav', size 16030
+reading 'MS_A301.wav', size 10900
+reading 'MYST_WIN01.wav', size 17506
+reading 'X_MystiqueAdvice01.wav', size 60408
+reading 'X_MystiqueAdvice02.wav', size 59146
+reading 'X_MystiqueAdvice03.wav', size 83082
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'SABRE_ENTRY01.wav', size 37296
+reading 'SABRE_ENTRY02.wav', size 28934
+reading 'SABRE_WINCE01.wav', size 7414
+reading 'SABRE_WINCE02.wav', size 8046
+reading 'SABRE_WINCE03.wav', size 12224
+reading 'SABRE_ATTACK01.wav', size 6828
+reading 'SABRE_ATTACK02.wav', size 11806
+reading 'SABRE_ATTACK03.wav', size 9204
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'SB_A101.wav', size 11836
+reading 'SB_A201.wav', size 16060
+reading 'SABRE_SPECIALVO.wav', size 19686
+reading 'SABRE_FINISHVO01.wav', size 25134
+reading 'SB_A301.wav', size 27046
+reading 'SABRE_WIN01.wav', size 28848
+reading 'X_SabretoothAdvice01.wav', size 60708
+reading 'X_SabretoothAdvice02.wav', size 56648
+reading 'X_SabretoothAdvice03.wav', size 75884
+vagload '          jungle.bvg' mono datalen 189000, samprate 11025
+reading 'jungle.bvg', size 189014
+loading: filecount 63, sectorcount 5694238
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'fountain.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 63, sectorcount 5694238
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'sb_c.cad', size 1279
+reading 'ds_c.cad', size 1346
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'sb1m.spx', size 2421696
+'sb1m.spx' alloc spal 50
+reading 'ds1m.spx', size 1990804
+'ds1m.spx' alloc spal 77
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_sbt.spx', size 49492
+'head_sbt.spx' alloc spal 33
+reading 'head_ds.spx', size 47948
+'head_ds.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb3.cad', size 86
+reading 'dojo.bck', size 286005
+reading 'SABRE_ENTRY01.wav', size 37296
+reading 'SABRE_ENTRY02.wav', size 28934
+reading 'SABRE_WINCE01.wav', size 7414
+reading 'SABRE_WINCE02.wav', size 8046
+reading 'SABRE_WINCE03.wav', size 12224
+reading 'SABRE_ATTACK01.wav', size 6828
+reading 'SABRE_ATTACK02.wav', size 11806
+reading 'SABRE_ATTACK03.wav', size 9204
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'SB_A101.wav', size 11836
+reading 'SB_A201.wav', size 16060
+reading 'SABRE_SPECIALVO.wav', size 19686
+reading 'SABRE_FINISHVO01.wav', size 25134
+reading 'SB_A301.wav', size 27046
+reading 'SABRE_WIN01.wav', size 28848
+reading 'X_SabretoothAdvice01.wav', size 60708
+reading 'X_SabretoothAdvice02.wav', size 56648
+reading 'X_SabretoothAdvice03.wav', size 75884
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'DEATHST_ENTRY01.wav', size 38962
+reading 'DEATHST_ENTRY02.wav', size 25702
+reading 'DEATHST_WINCE01.wav', size 6088
+reading 'DEATHST_WINCE02.wav', size 6178
+reading 'DEATHST_WINCE03.wav', size 6246
+reading 'DEATHST_ATTACK01.wav', size 5378
+reading 'DEATHST_ATTACK02.wav', size 9692
+reading 'DEATHST_ATTACK03.wav', size 7818
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE_METALIC01.wav', size 3952
+reading 'DS_A101.wav', size 7856
+reading 'DEATHST_SPECIALVO.wav', size 27546
+reading 'DEATHST_FINISHVO01.wav', size 19130
+reading 'DS_A301.wav', size 9150
+reading 'DEATHST_WIN01.wav', size 26622
+reading 'DEATHST_WIN02.wav', size 27096
+reading 'X_LadyDeathstrkeAdvice01.wav', size 103638
+reading 'X_LadyDeathstrkeAdvice02.wav', size 82048
+reading 'X_LadyDeathstrkeAdvice03.wav', size 96694
+vagload '            dojo.bvg' mono datalen 170100, samprate 11025
+reading 'dojo.bvg', size 170114
+loading: filecount 62, sectorcount 5592088
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 62, sectorcount 5592088
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'u_sb_c.cad', size 1679
+reading 'u_ds_c.cad', size 1746
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'usb1m.spx', size 2500188
+'usb1m.spx' alloc spal 64
+reading 'fountain.spx', size 13768
+'fountain.spx' alloc spal 30
+reading 'uds1m.spx', size 1988468
+'uds1m.spx' alloc spal 49
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_sbt.spx', size 49492
+'head_sbt.spx' alloc spal 33
+reading 'head_ds.spx', size 47948
+'head_ds.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb3.cad', size 86
+reading 'dojo.bck', size 286005
+reading 'SABRE_ENTRY01.wav', size 37296
+reading 'SABRE_ENTRY02.wav', size 28934
+reading 'SABRE_WINCE01.wav', size 7414
+reading 'SABRE_WINCE02.wav', size 8046
+reading 'SABRE_WINCE03.wav', size 12224
+reading 'SABRE_ATTACK01.wav', size 6828
+reading 'SABRE_ATTACK02.wav', size 11806
+reading 'SABRE_ATTACK03.wav', size 9204
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'SB_A101.wav', size 11836
+reading 'SB_A201.wav', size 16060
+reading 'SABRE_SPECIALVO.wav', size 19686
+reading 'SABRE_FINISHVO01.wav', size 25134
+reading 'SB_A301.wav', size 27046
+reading 'SABRE_WIN01.wav', size 28848
+reading 'X_SabretoothAdvice01.wav', size 60708
+reading 'X_SabretoothAdvice02.wav', size 56648
+reading 'X_SabretoothAdvice03.wav', size 75884
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'DEATHST_ENTRY01.wav', size 38962
+reading 'DEATHST_ENTRY02.wav', size 25702
+reading 'DEATHST_WINCE01.wav', size 6088
+reading 'DEATHST_WINCE02.wav', size 6178
+reading 'DEATHST_WINCE03.wav', size 6246
+reading 'DEATHST_ATTACK01.wav', size 5378
+reading 'DEATHST_ATTACK02.wav', size 9692
+reading 'DEATHST_ATTACK03.wav', size 7818
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE_METALIC01.wav', size 3952
+reading 'DS_A101.wav', size 7856
+reading 'DEATHST_SPECIALVO.wav', size 27546
+reading 'DEATHST_FINISHVO01.wav', size 19130
+reading 'DS_A301.wav', size 9150
+reading 'DEATHST_WIN01.wav', size 26622
+reading 'DEATHST_WIN02.wav', size 27096
+reading 'X_LadyDeathstrkeAdvice01.wav', size 103638
+reading 'X_LadyDeathstrkeAdvice02.wav', size 82048
+reading 'X_LadyDeathstrkeAdvice03.wav', size 96694
+vagload '            dojo.bvg' mono datalen 170100, samprate 11025
+reading 'dojo.bvg', size 170114
+loading: filecount 63, sectorcount 5694428
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'fountain.spx'
+keeper_flush 'player1'
+keeper_flush 'fountain.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 63, sectorcount 5694428
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'ds_c.cad', size 1346
+reading 'sc_c.cad', size 1316
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'ds1m.spx', size 1990804
+'ds1m.spx' alloc spal 77
+reading 'sc1m.spx', size 2339904
+'sc1m.spx' alloc spal 51
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_ds.spx', size 47948
+'head_ds.spx' alloc spal 33
+reading 'head_switch.spx', size 47720
+'head_switch.spx' alloc spal 30
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb6.cad', size 94
+reading 'cathedral.bck', size 316161
+reading 'DEATHST_ENTRY01.wav', size 38962
+reading 'DEATHST_ENTRY02.wav', size 25702
+reading 'DEATHST_WINCE01.wav', size 6088
+reading 'DEATHST_WINCE02.wav', size 6178
+reading 'DEATHST_WINCE03.wav', size 6246
+reading 'DEATHST_ATTACK01.wav', size 5378
+reading 'DEATHST_ATTACK02.wav', size 9692
+reading 'DEATHST_ATTACK03.wav', size 7818
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE_METALIC01.wav', size 3952
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'DS_A101.wav', size 7856
+reading 'DEATHST_SPECIALVO.wav', size 27546
+reading 'DEATHST_FINISHVO01.wav', size 19130
+reading 'DS_A301.wav', size 9150
+reading 'DEATHST_WIN01.wav', size 26622
+reading 'DEATHST_WIN02.wav', size 27096
+reading 'X_LadyDeathstrkeAdvice01.wav', size 103638
+reading 'X_LadyDeathstrkeAdvice02.wav', size 82048
+reading 'X_LadyDeathstrkeAdvice03.wav', size 96694
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'SCARLET_ENTRY01.wav', size 28264
+reading 'SCARLET_WINCE01.wav', size 7488
+reading 'SCARLET_WINCE02.wav', size 8104
+reading 'SCARLET_WINCE03.wav', size 6416
+reading 'SCARLET_ATTACK01.wav', size 5600
+reading 'SCARLET_ATTACK02.wav', size 6740
+reading 'SCARLET_ATTACK03.wav', size 5546
+reading 'PRO_IMPACT01.wav', size 10836
+reading 'SWING_LITE01.wav', size 4320
+reading 'SC_A101.wav', size 13880
+reading 'SC_A201.wav', size 15356
+reading 'SCARLET_SPECIALVO.wav', size 23166
+reading 'SCARLET_FINISHVO01.wav', size 16994
+reading 'SC_A301.wav', size 19942
+reading 'SCARLET_WIN01.wav', size 11130
+reading 'SCARLET_WIN02.wav', size 23712
+reading 'X_ScarletWitchAdvice01.wav', size 52058
+reading 'X_ScarletWitchAdvice02.wav', size 106114
+reading 'X_ScarletWitchAdvice03.wav', size 58300
+vagload '       cathedral.bvg' mono datalen 170100, samprate 11025
+reading 'cathedral.bvg', size 170114
+loading: filecount 62, sectorcount 5660457
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 62, sectorcount 5660457
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'u_ds_c.cad', size 1746
+reading 'sc_c.cad', size 1316
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'uds1m.spx', size 1988468
+'uds1m.spx' alloc spal 49
+reading 'fountain.spx', size 13768
+'fountain.spx' alloc spal 30
+reading 'sc1m.spx', size 2339904
+'sc1m.spx' alloc spal 51
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_ds.spx', size 47948
+'head_ds.spx' alloc spal 33
+reading 'head_switch.spx', size 47720
+'head_switch.spx' alloc spal 30
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb6.cad', size 94
+reading 'cathedral.bck', size 316161
+reading 'DEATHST_ENTRY01.wav', size 38962
+reading 'DEATHST_ENTRY02.wav', size 25702
+reading 'DEATHST_WINCE01.wav', size 6088
+reading 'DEATHST_WINCE02.wav', size 6178
+reading 'DEATHST_WINCE03.wav', size 6246
+reading 'DEATHST_ATTACK01.wav', size 5378
+reading 'DEATHST_ATTACK02.wav', size 9692
+reading 'DEATHST_ATTACK03.wav', size 7818
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE_METALIC01.wav', size 3952
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'DS_A101.wav', size 7856
+reading 'DEATHST_SPECIALVO.wav', size 27546
+reading 'DEATHST_FINISHVO01.wav', size 19130
+reading 'DS_A301.wav', size 9150
+reading 'DEATHST_WIN01.wav', size 26622
+reading 'DEATHST_WIN02.wav', size 27096
+reading 'X_LadyDeathstrkeAdvice01.wav', size 103638
+reading 'X_LadyDeathstrkeAdvice02.wav', size 82048
+reading 'X_LadyDeathstrkeAdvice03.wav', size 96694
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'SCARLET_ENTRY01.wav', size 28264
+reading 'SCARLET_WINCE01.wav', size 7488
+reading 'SCARLET_WINCE02.wav', size 8104
+reading 'SCARLET_WINCE03.wav', size 6416
+reading 'SCARLET_ATTACK01.wav', size 5600
+reading 'SCARLET_ATTACK02.wav', size 6740
+reading 'SCARLET_ATTACK03.wav', size 5546
+reading 'PRO_IMPACT01.wav', size 10836
+reading 'SWING_LITE01.wav', size 4320
+reading 'SC_A101.wav', size 13880
+reading 'SC_A201.wav', size 15356
+reading 'SCARLET_SPECIALVO.wav', size 23166
+reading 'SCARLET_FINISHVO01.wav', size 16994
+reading 'SC_A301.wav', size 19942
+reading 'SCARLET_WIN01.wav', size 11130
+reading 'SCARLET_WIN02.wav', size 23712
+reading 'X_ScarletWitchAdvice01.wav', size 52058
+reading 'X_ScarletWitchAdvice02.wav', size 106114
+reading 'X_ScarletWitchAdvice03.wav', size 58300
+vagload '       cathedral.bvg' mono datalen 170100, samprate 11025
+reading 'cathedral.bvg', size 170114
+loading: filecount 63, sectorcount 5776960
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'fountain.spx'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 63, sectorcount 5776960
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'sc_c.cad', size 1316
+reading 'om_c.cad', size 1275
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'sc1m.spx', size 2339904
+'sc1m.spx' alloc spal 51
+reading 'om1m.spx', size 2372412
+'om1m.spx' alloc spal 35
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_switch.spx', size 47720
+'head_switch.spx' alloc spal 30
+reading 'head_omg.spx', size 53124
+'head_omg.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb8.cad', size 88
+reading 'moscow.bck', size 268554
+reading 'SCARLET_ENTRY01.wav', size 28264
+reading 'SCARLET_WINCE01.wav', size 7488
+reading 'SCARLET_WINCE02.wav', size 8104
+reading 'SCARLET_WINCE03.wav', size 6416
+reading 'SCARLET_ATTACK01.wav', size 5600
+reading 'SCARLET_ATTACK02.wav', size 6740
+reading 'SCARLET_ATTACK03.wav', size 5546
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT01.wav', size 10836
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'SC_A101.wav', size 13880
+reading 'SC_A201.wav', size 15356
+reading 'SCARLET_SPECIALVO.wav', size 23166
+reading 'SCARLET_FINISHVO01.wav', size 16994
+reading 'SC_A301.wav', size 19942
+reading 'SCARLET_WIN01.wav', size 11130
+reading 'SCARLET_WIN02.wav', size 23712
+reading 'X_ScarletWitchAdvice01.wav', size 52058
+reading 'X_ScarletWitchAdvice02.wav', size 106114
+reading 'X_ScarletWitchAdvice03.wav', size 58300
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'OMEGA_ENTRY01.wav', size 28164
+reading 'OMEGA_ENTRY02.wav', size 34508
+reading 'OMEGA_WINCE01.wav', size 16684
+reading 'OMEGA_WINCE02.wav', size 15076
+reading 'OMEGA_WINCE03.wav', size 14164
+reading 'OMEGA_ATTACK01.wav', size 17018
+reading 'OMEGA_ATTACK02.wav', size 21086
+reading 'OMEGA_ATTACK03.wav', size 19660
+reading 'SMASH_METAL02.wav', size 6156
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'OM_A101.wav', size 8904
+reading 'OM_A201.wav', size 13276
+reading 'OMEGA_SPECIALVO.wav', size 23054
+reading 'OMEGA_FINISHVO01.wav', size 19830
+reading 'OM_A301.wav', size 16296
+reading 'OMEGA_WIN01.wav', size 34232
+reading 'X_OmegaRedAdvice01.wav', size 57908
+reading 'X_OmegaRedAdvice02.wav', size 70784
+reading 'X_OmegaRedAdvice03.wav', size 50950
+vagload '          moscow.bvg' mono datalen 180153, samprate 11025
+reading 'moscow.bvg', size 180167
+loading: filecount 64, sectorcount 5612603
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 64, sectorcount 5612603
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'sc_c.cad', size 1316
+reading 'om_c.cad', size 1275
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'sc1m.spx', size 2339904
+'sc1m.spx' alloc spal 51
+reading 'om1m.spx', size 2372412
+'om1m.spx' alloc spal 35
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_switch.spx', size 47720
+'head_switch.spx' alloc spal 30
+reading 'head_omg.spx', size 53124
+'head_omg.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb8.cad', size 88
+reading 'moscow.bck', size 268554
+reading 'SCARLET_ENTRY01.wav', size 28264
+reading 'SCARLET_WINCE01.wav', size 7488
+reading 'SCARLET_WINCE02.wav', size 8104
+reading 'SCARLET_WINCE03.wav', size 6416
+reading 'SCARLET_ATTACK01.wav', size 5600
+reading 'SCARLET_ATTACK02.wav', size 6740
+reading 'SCARLET_ATTACK03.wav', size 5546
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT01.wav', size 10836
+reading 'SWING_MED01.wav', size 4320
+reading 'SWING_LITE01.wav', size 4320
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'SC_A101.wav', size 13880
+reading 'SC_A201.wav', size 15356
+reading 'SCARLET_SPECIALVO.wav', size 23166
+reading 'SCARLET_FINISHVO01.wav', size 16994
+reading 'SC_A301.wav', size 19942
+reading 'SCARLET_WIN01.wav', size 11130
+reading 'SCARLET_WIN02.wav', size 23712
+reading 'X_ScarletWitchAdvice01.wav', size 52058
+reading 'X_ScarletWitchAdvice02.wav', size 106114
+reading 'X_ScarletWitchAdvice03.wav', size 58300
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'OMEGA_ENTRY01.wav', size 28164
+reading 'OMEGA_ENTRY02.wav', size 34508
+reading 'OMEGA_WINCE01.wav', size 16684
+reading 'OMEGA_WINCE02.wav', size 15076
+reading 'OMEGA_WINCE03.wav', size 14164
+reading 'OMEGA_ATTACK01.wav', size 17018
+reading 'OMEGA_ATTACK02.wav', size 21086
+reading 'OMEGA_ATTACK03.wav', size 19660
+reading 'SMASH_METAL02.wav', size 6156
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'OM_A101.wav', size 8904
+reading 'OM_A201.wav', size 13276
+reading 'OMEGA_SPECIALVO.wav', size 23054
+reading 'OMEGA_FINISHVO01.wav', size 19830
+reading 'OM_A301.wav', size 16296
+reading 'OMEGA_WIN01.wav', size 34232
+reading 'X_OmegaRedAdvice01.wav', size 57908
+reading 'X_OmegaRedAdvice02.wav', size 70784
+reading 'X_OmegaRedAdvice03.wav', size 50950
+vagload '          moscow.bvg' mono datalen 180153, samprate 11025
+reading 'moscow.bvg', size 180167
+loading: filecount 64, sectorcount 5612603
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 64, sectorcount 5612603
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'om_c.cad', size 1275
+reading 'bl_c.cad', size 1286
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'om1m.spx', size 2372412
+'om1m.spx' alloc spal 35
+reading 'bl1m.spx', size 2586352
+'bl1m.spx' alloc spal 32
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_omg.spx', size 53124
+'head_omg.spx' alloc spal 33
+reading 'head_blob.spx', size 49528
+'head_blob.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb4.cad', size 104
+reading 'bourbon_street.bck', size 345701
+reading 'OMEGA_ENTRY01.wav', size 28164
+reading 'OMEGA_ENTRY02.wav', size 34508
+reading 'OMEGA_WINCE01.wav', size 16684
+reading 'OMEGA_WINCE02.wav', size 15076
+reading 'OMEGA_WINCE03.wav', size 14164
+reading 'OMEGA_ATTACK01.wav', size 17018
+reading 'OMEGA_ATTACK02.wav', size 21086
+reading 'OMEGA_ATTACK03.wav', size 19660
+reading 'SMASH_METAL02.wav', size 6156
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'OM_A101.wav', size 8904
+reading 'OM_A201.wav', size 13276
+reading 'OMEGA_SPECIALVO.wav', size 23054
+reading 'OMEGA_FINISHVO01.wav', size 19830
+reading 'OM_A301.wav', size 16296
+reading 'OMEGA_WIN01.wav', size 34232
+reading 'X_OmegaRedAdvice01.wav', size 57908
+reading 'X_OmegaRedAdvice02.wav', size 70784
+reading 'X_OmegaRedAdvice03.wav', size 50950
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'BLOB_ENTRY01.wav', size 14800
+reading 'BLOB_ENTRY02.wav', size 38168
+reading 'BLOB_WINCE01.wav', size 5206
+reading 'BLOB_WINCE02.wav', size 5258
+reading 'BLOB_WINCE03.wav', size 6378
+reading 'BLOB_ATTACK01.wav', size 8870
+reading 'BLOB_ATTACK02.wav', size 8510
+reading 'BLOB_ATTACK03.wav', size 18648
+reading 'SMASH_01.wav', size 8562
+reading 'BL_A101.wav', size 10236
+reading 'BL_A201.wav', size 16850
+reading 'BLOB_SPECIALVO.wav', size 28296
+reading 'BLOB_FINISHVO01.wav', size 24592
+reading 'BLOB_FINISHVO02.wav', size 31450
+reading 'BLOB_FINISHVO03.wav', size 18226
+reading 'BL_A301.wav', size 16350
+reading 'BLOB_WIN01.wav', size 29490
+reading 'X_BlobAdvice01.wav', size 68522
+reading 'X_BlobAdvice02.wav', size 59358
+reading 'X_BlobAdvice03.wav', size 111466
+vagload '  bourbon_street.bvg' mono datalen 170100, samprate 11025
+reading 'bourbon_street.bvg', size 170114
+loading: filecount 63, sectorcount 5581530
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 63, sectorcount 5581530
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'om_c.cad', size 1275
+reading 'bl_c.cad', size 1286
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'om1m.spx', size 2372412
+'om1m.spx' alloc spal 35
+reading 'bl1m.spx', size 2586352
+'bl1m.spx' alloc spal 32
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_omg.spx', size 53124
+'head_omg.spx' alloc spal 33
+reading 'head_blob.spx', size 49528
+'head_blob.spx' alloc spal 33
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb4.cad', size 104
+reading 'bourbon_street.bck', size 345701
+reading 'OMEGA_ENTRY01.wav', size 28164
+reading 'OMEGA_ENTRY02.wav', size 34508
+reading 'OMEGA_WINCE01.wav', size 16684
+reading 'OMEGA_WINCE02.wav', size 15076
+reading 'OMEGA_WINCE03.wav', size 14164
+reading 'OMEGA_ATTACK01.wav', size 17018
+reading 'OMEGA_ATTACK02.wav', size 21086
+reading 'OMEGA_ATTACK03.wav', size 19660
+reading 'SMASH_METAL02.wav', size 6156
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'OM_A101.wav', size 8904
+reading 'OM_A201.wav', size 13276
+reading 'OMEGA_SPECIALVO.wav', size 23054
+reading 'OMEGA_FINISHVO01.wav', size 19830
+reading 'OM_A301.wav', size 16296
+reading 'OMEGA_WIN01.wav', size 34232
+reading 'X_OmegaRedAdvice01.wav', size 57908
+reading 'X_OmegaRedAdvice02.wav', size 70784
+reading 'X_OmegaRedAdvice03.wav', size 50950
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'BLOB_ENTRY01.wav', size 14800
+reading 'BLOB_ENTRY02.wav', size 38168
+reading 'BLOB_WINCE01.wav', size 5206
+reading 'BLOB_WINCE02.wav', size 5258
+reading 'BLOB_WINCE03.wav', size 6378
+reading 'BLOB_ATTACK01.wav', size 8870
+reading 'BLOB_ATTACK02.wav', size 8510
+reading 'BLOB_ATTACK03.wav', size 18648
+reading 'SMASH_01.wav', size 8562
+reading 'BL_A101.wav', size 10236
+reading 'BL_A201.wav', size 16850
+reading 'BLOB_SPECIALVO.wav', size 28296
+reading 'BLOB_FINISHVO01.wav', size 24592
+reading 'BLOB_FINISHVO02.wav', size 31450
+reading 'BLOB_FINISHVO03.wav', size 18226
+reading 'BL_A301.wav', size 16350
+reading 'BLOB_WIN01.wav', size 29490
+reading 'X_BlobAdvice01.wav', size 68522
+reading 'X_BlobAdvice02.wav', size 59358
+reading 'X_BlobAdvice03.wav', size 111466
+vagload '  bourbon_street.bvg' mono datalen 170100, samprate 11025
+reading 'bourbon_street.bvg', size 170114
+loading: filecount 63, sectorcount 5581530
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 63, sectorcount 5581530
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'bl_c.cad', size 1286
+reading 'sn_c.cad', size 1279
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'bl1m.spx', size 2586352
+'bl1m.spx' alloc spal 32
+reading 'sn1m.spx', size 3683496
+'sn1m.spx' alloc spal 64
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_blob.spx', size 49528
+'head_blob.spx' alloc spal 33
+reading 'head_sent.spx', size 46576
+'head_sent.spx' alloc spal 31
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb2.cad', size 106
+reading 'Siege_Perilous.bck', size 456961
+reading 'BLOB_ENTRY01.wav', size 14800
+reading 'BLOB_ENTRY02.wav', size 38168
+reading 'BLOB_WINCE01.wav', size 5206
+reading 'BLOB_WINCE02.wav', size 5258
+reading 'BLOB_WINCE03.wav', size 6378
+reading 'BLOB_ATTACK01.wav', size 8870
+reading 'BLOB_ATTACK02.wav', size 8510
+reading 'BLOB_ATTACK03.wav', size 18648
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'BL_A101.wav', size 10236
+reading 'BL_A201.wav', size 16850
+reading 'BLOB_SPECIALVO.wav', size 28296
+reading 'BLOB_FINISHVO01.wav', size 24592
+reading 'BLOB_FINISHVO02.wav', size 31450
+reading 'BLOB_FINISHVO03.wav', size 18226
+reading 'BL_A301.wav', size 16350
+reading 'BLOB_WIN01.wav', size 29490
+reading 'X_BlobAdvice01.wav', size 68522
+reading 'X_BlobAdvice02.wav', size 59358
+reading 'X_BlobAdvice03.wav', size 111466
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'SENT_ENTRY01.wav', size 21360
+reading 'SENT_ENTRY02.wav', size 16404
+reading 'SENT_WINCE01.wav', size 5500
+reading 'SENT_WINCE02.wav', size 6440
+reading 'SENT_WINCE03.wav', size 9942
+reading 'SENT_ATTACK01.wav', size 6174
+reading 'SENT_ATTACK02.wav', size 5734
+reading 'SENT_ATTACK03.wav', size 8340
+reading 'SMASH_METAL01.wav', size 9164
+reading 'SMASH_METAL02.wav', size 6156
+reading 'SN_A101.wav', size 9084
+reading 'SN_A201.wav', size 9974
+reading 'SENT_SPECIALVO.wav', size 13498
+reading 'SENT_FINISHVO01.wav', size 11744
+reading 'SN_A301.wav', size 13826
+reading 'SENT_WIN01.wav', size 15326
+reading 'X_SentinelAdvice01.wav', size 72070
+reading 'X_SentinelAdvice02.wav', size 75206
+reading 'X_SentinelAdvice03.wav', size 123198
+vagload '  Siege_Perilous.bvg' mono datalen 151200, samprate 11025
+reading 'Siege_Perilous.bvg', size 151214
+loading: filecount 64, sectorcount 5675198
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 64, sectorcount 5675198
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'bl_c.cad', size 1286
+reading 'sn_c.cad', size 1279
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'bl1m.spx', size 2586352
+'bl1m.spx' alloc spal 32
+reading 'sn1m.spx', size 3683496
+'sn1m.spx' alloc spal 64
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_blob.spx', size 49528
+'head_blob.spx' alloc spal 33
+reading 'head_sent.spx', size 46576
+'head_sent.spx' alloc spal 31
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb2.cad', size 106
+reading 'Siege_Perilous.bck', size 456961
+reading 'BLOB_ENTRY01.wav', size 14800
+reading 'BLOB_ENTRY02.wav', size 38168
+reading 'BLOB_WINCE01.wav', size 5206
+reading 'BLOB_WINCE02.wav', size 5258
+reading 'BLOB_WINCE03.wav', size 6378
+reading 'BLOB_ATTACK01.wav', size 8870
+reading 'BLOB_ATTACK02.wav', size 8510
+reading 'BLOB_ATTACK03.wav', size 18648
+reading 'SMASH_01.wav', size 8562
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'BL_A101.wav', size 10236
+reading 'BL_A201.wav', size 16850
+reading 'BLOB_SPECIALVO.wav', size 28296
+reading 'BLOB_FINISHVO01.wav', size 24592
+reading 'BLOB_FINISHVO02.wav', size 31450
+reading 'BLOB_FINISHVO03.wav', size 18226
+reading 'BL_A301.wav', size 16350
+reading 'BLOB_WIN01.wav', size 29490
+reading 'X_BlobAdvice01.wav', size 68522
+reading 'X_BlobAdvice02.wav', size 59358
+reading 'X_BlobAdvice03.wav', size 111466
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'SENT_ENTRY01.wav', size 21360
+reading 'SENT_ENTRY02.wav', size 16404
+reading 'SENT_WINCE01.wav', size 5500
+reading 'SENT_WINCE02.wav', size 6440
+reading 'SENT_WINCE03.wav', size 9942
+reading 'SENT_ATTACK01.wav', size 6174
+reading 'SENT_ATTACK02.wav', size 5734
+reading 'SENT_ATTACK03.wav', size 8340
+reading 'SMASH_METAL01.wav', size 9164
+reading 'SMASH_METAL02.wav', size 6156
+reading 'SN_A101.wav', size 9084
+reading 'SN_A201.wav', size 9974
+reading 'SENT_SPECIALVO.wav', size 13498
+reading 'SENT_FINISHVO01.wav', size 11744
+reading 'SN_A301.wav', size 13826
+reading 'SENT_WIN01.wav', size 15326
+reading 'X_SentinelAdvice01.wav', size 72070
+reading 'X_SentinelAdvice02.wav', size 75206
+reading 'X_SentinelAdvice03.wav', size 123198
+vagload '  Siege_Perilous.bvg' mono datalen 151200, samprate 11025
+reading 'Siege_Perilous.bvg', size 151214
+loading: filecount 64, sectorcount 5675198
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 64, sectorcount 5675198
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'sn_c.cad', size 1279
+reading 'wolv_c.cad', size 1342
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'sn1m.spx', size 3683496
+'sn1m.spx' alloc spal 64
+reading 'w1m.spx', size 2328692
+'w1m.spx' alloc spal 47
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_sent.spx', size 46576
+'head_sent.spx' alloc spal 31
+reading 'head_wol.spx', size 44064
+'head_wol.spx' alloc spal 32
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb9.cad', size 92
+reading 'weapon_x.bck', size 254585
+reading 'SENT_ENTRY01.wav', size 21360
+reading 'SENT_ENTRY02.wav', size 16404
+reading 'SENT_WINCE01.wav', size 5500
+reading 'SENT_WINCE02.wav', size 6440
+reading 'SENT_WINCE03.wav', size 9942
+reading 'SENT_ATTACK01.wav', size 6174
+reading 'SENT_ATTACK02.wav', size 5734
+reading 'SENT_ATTACK03.wav', size 8340
+reading 'SMASH_METAL01.wav', size 9164
+reading 'SMASH_METAL02.wav', size 6156
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'SN_A101.wav', size 9084
+reading 'SN_A201.wav', size 9974
+reading 'SENT_SPECIALVO.wav', size 13498
+reading 'SENT_FINISHVO01.wav', size 11744
+reading 'SN_A301.wav', size 13826
+reading 'SENT_WIN01.wav', size 15326
+reading 'X_SentinelAdvice01.wav', size 72070
+reading 'X_SentinelAdvice02.wav', size 75206
+reading 'X_SentinelAdvice03.wav', size 123198
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'WOLVERINE_ENTRY01.wav', size 17304
+reading 'WOLVERINE_ENTRY02.wav', size 17974
+reading 'WOLVERINE_WINCE01.wav', size 5096
+reading 'WOLVERINE_WINCE02.wav', size 4598
+reading 'WOLVERINE_WINCE03.wav', size 5532
+reading 'WOLVERINE_ATTACK01.wav', size 4568
+reading 'WOLVERINE_ATTACK02.wav', size 6086
+reading 'WOLVERINE_ATTACK03.wav', size 6778
+reading 'SMASH_01.wav', size 8562
+reading 'SWING_MED_METALIC01.wav', size 3950
+reading 'W_A101.wav', size 7948
+reading 'W_A201.wav', size 8360
+reading 'WOLVERINE_SPECIALVO.wav', size 15266
+reading 'WOLVERINE_FINISHVO02.wav', size 16516
+reading 'W_A301.wav', size 12604
+reading 'WOLVERINE_WIN01.wav', size 16684
+reading 'WOLVERINE_WIN02.wav', size 26006
+reading 'X_WolverineAdvice01.wav', size 46004
+reading 'X_WolverineAdvice02.wav', size 92958
+reading 'X_WolverineAdvice03.wav', size 50488
+vagload '        weapon_x.bvg' mono datalen 71038, samprate 11025
+reading 'weapon_x.bvg', size 71052
+loading: filecount 64, sectorcount 5641960
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 64, sectorcount 5641960
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+reading 'sn_c.cad', size 1279
+reading 'u_wolv_c.cad', size 1748
+changestate 10
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'ai.joy', size 4884
+reading 'dascene1.txt', size 4031
+reading 'sn1m.spx', size 3683496
+'sn1m.spx' alloc spal 64
+reading 'uw1m.spx', size 2162464
+'uw1m.spx' alloc spal 44
+reading 'fountain.spx', size 13768
+'fountain.spx' alloc spal 30
+reading 'hud.spx', size 77536
+'hud.spx' alloc spal 111
+reading 'rounds.spx', size 818744
+'rounds.spx' alloc spal 30
+reading 'head_sent.spx', size 46576
+'head_sent.spx' alloc spal 31
+reading 'head_wol.spx', size 44064
+'head_wol.spx' alloc spal 32
+reading 'spark.spx', size 19172
+'spark.spx' alloc spal 15
+reading 'smlicons.spx', size 13812
+'smlicons.spx' alloc spal 13
+reading 'font16.spx', size 71596
+'font16.spx' alloc spal 16
+reading 'dangerroomb9.cad', size 92
+reading 'weapon_x.bck', size 254585
+reading 'SENT_ENTRY01.wav', size 21360
+reading 'SENT_ENTRY02.wav', size 16404
+reading 'SENT_WINCE01.wav', size 5500
+reading 'SENT_WINCE02.wav', size 6440
+reading 'SENT_WINCE03.wav', size 9942
+reading 'SENT_ATTACK01.wav', size 6174
+reading 'SENT_ATTACK02.wav', size 5734
+reading 'SENT_ATTACK03.wav', size 8340
+reading 'SMASH_METAL01.wav', size 9164
+reading 'SMASH_METAL02.wav', size 6156
+reading 'PRO_IMPACT02.wav', size 9328
+reading 'SWING_XHARD01.wav', size 5222
+reading 'SWING_HARD01.wav', size 5222
+reading 'BLOCK01.wav', size 3834
+reading 'BLOCK02.wav', size 3868
+reading 'SN_A101.wav', size 9084
+reading 'SN_A201.wav', size 9974
+reading 'SENT_SPECIALVO.wav', size 13498
+reading 'SENT_FINISHVO01.wav', size 11744
+reading 'SN_A301.wav', size 13826
+reading 'SENT_WIN01.wav', size 15326
+reading 'X_SentinelAdvice01.wav', size 72070
+reading 'X_SentinelAdvice02.wav', size 75206
+reading 'X_SentinelAdvice03.wav', size 123198
+reading 'END_IT.wav', size 16490
+reading 'MOD_PRO_SHIELD.wav', size 5326
+reading 'MOD_MELEE_SHIELD.wav', size 4316
+reading 'MOD_RESURRECT.wav', size 7602
+reading 'MOD_AUTO_DUCK.wav', size 3824
+reading 'MOD_TRIPLE_STRIKE.wav', size 6378
+reading 'WOLVERINE_ENTRY01.wav', size 17304
+reading 'WOLVERINE_ENTRY02.wav', size 17974
+reading 'WOLVERINE_WINCE01.wav', size 5096
+reading 'WOLVERINE_WINCE02.wav', size 4598
+reading 'WOLVERINE_WINCE03.wav', size 5532
+reading 'WOLVERINE_ATTACK01.wav', size 4568
+reading 'WOLVERINE_ATTACK02.wav', size 6086
+reading 'WOLVERINE_ATTACK03.wav', size 6778
+reading 'SMASH_01.wav', size 8562
+reading 'SWING_MED_METALIC01.wav', size 3950
+reading 'W_A101.wav', size 7948
+reading 'W_A201.wav', size 8360
+reading 'WOLVERINE_SPECIALVO.wav', size 15266
+reading 'WOLVERINE_FINISHVO02.wav', size 16516
+reading 'W_A301.wav', size 12604
+reading 'WOLVERINE_WIN01.wav', size 16684
+reading 'WOLVERINE_WIN02.wav', size 26006
+reading 'X_WolverineAdvice01.wav', size 46004
+reading 'X_WolverineAdvice02.wav', size 92958
+reading 'X_WolverineAdvice03.wav', size 50488
+vagload '        weapon_x.bvg' mono datalen 71038, samprate 11025
+reading 'weapon_x.bvg', size 71052
+loading: filecount 65, sectorcount 5768864
+VVVVVVVVV    end state next init    VVVVVVVVV
+changestate 4
+^^^^^^^^^    begin state next exit    ^^^^^^^^^
+keeper_flush 'player0'
+keeper_flush 'player1'
+keeper_flush 'fountain.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'rounds.spx'
+keeper_flush 'p0spt'
+keeper_flush 'p1spt'
+keeper_flush 'hud.spx'
+keeper_flush 'hud.spx'
+keeper_flush 'spark.spx'
+keeper_flush 'smlicons.spx'
+keeper_flush 'font16.spx'
+loading: filecount 65, sectorcount 5768864
+VVVVVVVVV    end state next exit    VVVVVVVVV
+^^^^^^^^^    begin state next init    ^^^^^^^^^
+reading 'aap_cursor.spx', size 1248
+'aap_cursor.spx' alloc spal 28
+reading 'aaq_PMoptions.spx', size 40684
+'aaq_PMoptions.spx' alloc spal 106
+reading 'aar_playmenu.spx', size 1346792
+'aar_playmenu.spx' alloc spal 110
+reading 'aas_smallfont.spx', size 59188
+'aas_smallfont.spx' alloc spal 16
+vagload '   aat_main_menu.bvg' mono datalen 132300, samprate 11025
+reading 'aat_main_menu.bvg', size 132314
+reading 'aau_playmenu.bck', size 128631
+loading: filecount 6, sectorcount 469296
+VVVVVVVVV    end state next init    VVVVVVVVV
+^^^^^^^^^    begin state popall exit    ^^^^^^^^^
+VVVVVVVVV    end state popall exit    VVVVVVVVV
+^^^^^^^^^    begin main exit    ^^^^^^^^^
+keeper_flush 'aac_scan.spx'
+loading: filecount 6, sectorcount 469296
+maxrefwavesused 50
+spalmaxused0 256/256, spalmaxused1 173/256, spal maxchunks 12
+bpalmaxused0 130/256, bpalmaxused1 256/256, bpal maxchunks 2
+qmaxused  8420232/11534336, qmaxchunks     1744
+smaxused  2798204/ 3014656, smaxchunks       82
+
+spalcurused0   0/256, spalcurused1   0/256, spal curchunks 0
+bpalcurused0   0/256, bpalcurused1   0/256, bpal curchunks 0
+qcurused        0/11534336, qcurchunks        0
+scurused        0/ 3014656, scurchunks        0
+
+VVVVVVVVV    end main exit    VVVVVVVVVVV
+audio_uninit
+video_uninit
+input uninit
+unacquire keyboard 00000000
+dikeydev8 keyboard release 00000000
+unacquire joy success!
+dikeydev8 joy release success!
+dinput release 00000000
+memalloc'ed now at 0
+mem stats(MAXHASH ALLOWED=2000): maxmemsize 16686688, maxmemchunks 120
+hash table, maxhash 3
+final fpu control is at 0000007f
+close logfile

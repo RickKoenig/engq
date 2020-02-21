@@ -1,0 +1,27 @@
+//  0 blank
+
+//  1 white king
+//  2 white queen
+//  3 white rook
+//  4 white bishop
+//  5 white night
+//  6 white pawn
+
+//  9 black king
+// 10 black queen
+// 11 black rook
+// 12 black bishop
+// 13 black night
+// 14 black pawn
+
+// 8 by 8 board // simple nim game, set to '7'
+  0  0  0  0   0  0  0  0
+  0  0  0  0   0  0  0  0
+  0  0  0  0   0  0  0  0
+  0  0  0  0   0  0  0  0
+
+  0  0  0  0   0  0  0  0
+  0  0  0  0   0  0  0  0
+  0  0  0  0   0  0  0  0
+  1  0  0  0   0  0  0  0
+  

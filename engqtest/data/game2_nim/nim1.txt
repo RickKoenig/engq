@@ -1,0 +1,6 @@
+// dimension
+1 10
+// numpieces
+1
+// pieces
+X 0 9

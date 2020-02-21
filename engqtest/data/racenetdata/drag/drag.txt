@@ -1,0 +1,7 @@
+cylinder01.mxo
+cylinder02.mxo
+box01.mxo
+box02.mxo
+box03.mxo
+
+slecs 20009

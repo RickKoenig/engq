@@ -1,0 +1,4 @@
+# 0 skip osakit messages, just go
+# 1 wait for proper osakit message, then go
+
+0

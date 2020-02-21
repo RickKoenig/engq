@@ -1,0 +1,40 @@
+{
+	"avatar" : {
+		"avaj" : {
+			"carbodyname" : "muscletone",
+			"decal" : 35,
+			"energies" : [
+				3,
+				1,
+				5,
+				4,
+				6,
+				2
+			],
+			"paint" : 22,
+			"playername" : "Rickers2",
+			"weaps" : [
+				"energywall",
+				"enleech",
+				"ferrite",
+				"gravitybomb",
+				"particle"
+			]
+		}
+	},
+	"environment" : {
+		"envj" : {
+			"nbotplayers" : 7,
+			"nhumanplayers" : 1,
+			"rules" : 6,
+			"trackname" : "oval2"
+		}
+	},
+	"net" : {
+		"netj" : {
+			"gamenet" : 3,
+			"serverip" : "99.108.140.134",
+			"serverport" : 5426
+		}
+	}
+}

@@ -1,0 +1,101 @@
+100  3
+"HADAMARD"  1   "HADAMARD"  2   "HADAMARD"  0   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  2   "NOT (PX)"  0   "NOT (PX)"  1   -1
+"NONE"  1   "NONE"  2   "HADAMARD"  0   -1
+"TOFFOLI TOP"  0   "TOFFOLI MIDDLE"  0   "TOFFOLI BOTTOM"  0   -1
+"NONE"  0   "NONE"  2   "HADAMARD"  0   -1
+"NONE"  2   "NOT (PX)"  0   "NOT (PX)"  1   2
+"NONE"  1   "NONE"  0   "NONE"  2   -1
+"HADAMARD"  1   "HADAMARD"  0   "HADAMARD"  2   -1
+"NOT (PX)"  1   "NOT (PX)"  0   "NOT (PX)"  2   -1
+"NONE"  1   "NONE"  2   "HADAMARD"  0   -1
+"TOFFOLI TOP"  0   "TOFFOLI MIDDLE"  0   "TOFFOLI BOTTOM"  0   -1
+"NONE"  0   "NONE"  2   "HADAMARD"  0   -1
+"NOT (PX)"  0   "NOT (PX)"  1   "NOT (PX)"  2   -1
+"HADAMARD"  0   "HADAMARD"  1   "HADAMARD"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  2   "NOT (PX)"  0   "NOT (PX)"  1   2
+"NONE"  1   "NONE"  2   "HADAMARD"  0   3
+"TOFFOLI TOP"  0   "TOFFOLI MIDDLE"  0   "TOFFOLI BOTTOM"  0   4
+"NONE"  0   "NONE"  2   "HADAMARD"  0   5
+"NONE"  2   "NOT (PX)"  0   "NOT (PX)"  1   6
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"HADAMARD"  1   "HADAMARD"  0   "HADAMARD"  2   8
+"NOT (PX)"  1   "NOT (PX)"  0   "NOT (PX)"  2   9
+"NONE"  1   "NONE"  2   "HADAMARD"  0   10
+"TOFFOLI TOP"  0   "TOFFOLI MIDDLE"  0   "TOFFOLI BOTTOM"  0   11
+"NONE"  0   "NONE"  2   "HADAMARD"  0   12
+"NOT (PX)"  0   "NOT (PX)"  1   "NOT (PX)"  2   13
+"HADAMARD"  0   "HADAMARD"  1   "HADAMARD"  2   14
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  2   "NOT (PX)"  0   "NOT (PX)"  1   16
+"NONE"  1   "NONE"  2   "HADAMARD"  0   17
+"TOFFOLI TOP"  0   "TOFFOLI MIDDLE"  0   "TOFFOLI BOTTOM"  0   18
+"NONE"  0   "NONE"  2   "HADAMARD"  0   19
+"NONE"  2   "NOT (PX)"  0   "NOT (PX)"  1   20
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"HADAMARD"  1   "HADAMARD"  0   "HADAMARD"  2   22
+"NOT (PX)"  1   "NOT (PX)"  0   "NOT (PX)"  2   23
+"NONE"  1   "NONE"  2   "HADAMARD"  0   24
+"TOFFOLI TOP"  0   "TOFFOLI MIDDLE"  0   "TOFFOLI BOTTOM"  0   25
+"NONE"  0   "NONE"  2   "HADAMARD"  0   26
+"NOT (PX)"  0   "NOT (PX)"  1   "NOT (PX)"  2   27
+"HADAMARD"  0   "HADAMARD"  1   "HADAMARD"  2   28
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  2   "NOT (PX)"  0   "NOT (PX)"  1   30
+"NONE"  1   "NONE"  2   "HADAMARD"  0   31
+"TOFFOLI TOP"  0   "TOFFOLI MIDDLE"  0   "TOFFOLI BOTTOM"  0   32
+"NONE"  0   "NONE"  2   "HADAMARD"  0   33
+"NONE"  2   "NOT (PX)"  0   "NOT (PX)"  1   34
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"HADAMARD"  1   "HADAMARD"  0   "HADAMARD"  2   36
+"NOT (PX)"  1   "NOT (PX)"  0   "NOT (PX)"  2   37
+"NONE"  1   "NONE"  2   "HADAMARD"  0   38
+"TOFFOLI TOP"  0   "TOFFOLI MIDDLE"  0   "TOFFOLI BOTTOM"  0   39
+"NONE"  0   "NONE"  2   "HADAMARD"  0   40
+"NOT (PX)"  0   "NOT (PX)"  1   "NOT (PX)"  2   41
+"HADAMARD"  0   "HADAMARD"  1   "HADAMARD"  2   42
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  2   "NOT (PX)"  0   "NOT (PX)"  1   44
+"NONE"  1   "NONE"  2   "HADAMARD"  0   45
+"TOFFOLI TOP"  0   "TOFFOLI MIDDLE"  0   "TOFFOLI BOTTOM"  0   46
+"NONE"  0   "NONE"  2   "HADAMARD"  0   47
+"NONE"  2   "NOT (PX)"  0   "NOT (PX)"  1   48
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"HADAMARD"  1   "HADAMARD"  0   "HADAMARD"  2   50
+"NOT (PX)"  1   "NOT (PX)"  0   "NOT (PX)"  2   51
+"NONE"  1   "NONE"  2   "HADAMARD"  0   52
+"TOFFOLI TOP"  0   "TOFFOLI MIDDLE"  0   "TOFFOLI BOTTOM"  0   53
+"NONE"  0   "NONE"  2   "HADAMARD"  0   54
+"NOT (PX)"  0   "NOT (PX)"  1   "NOT (PX)"  2   55
+"HADAMARD"  0   "HADAMARD"  1   "HADAMARD"  2   56
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  2   "NOT (PX)"  0   "NOT (PX)"  1   58
+"NONE"  1   "NONE"  2   "HADAMARD"  0   59
+"TOFFOLI TOP"  0   "TOFFOLI MIDDLE"  0   "TOFFOLI BOTTOM"  0   60
+"NONE"  0   "NONE"  2   "HADAMARD"  0   61
+"NONE"  2   "NOT (PX)"  0   "NOT (PX)"  1   62
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"HADAMARD"  1   "HADAMARD"  0   "HADAMARD"  2   64
+"NOT (PX)"  1   "NOT (PX)"  0   "NOT (PX)"  2   65
+"NONE"  1   "NONE"  2   "HADAMARD"  0   66
+"TOFFOLI TOP"  0   "TOFFOLI MIDDLE"  0   "TOFFOLI BOTTOM"  0   67
+"NONE"  0   "NONE"  2   "HADAMARD"  0   68
+"NOT (PX)"  0   "NOT (PX)"  1   "NOT (PX)"  2   69
+"HADAMARD"  0   "HADAMARD"  1   "HADAMARD"  2   70
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1
+"NONE"  0   "NONE"  1   "NONE"  2   -1

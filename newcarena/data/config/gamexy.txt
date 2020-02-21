@@ -1,0 +1,31 @@
+# quotes removed
+
+
+
+
+
+
+
+
+gamexy 40 30
+gamexy 64 48
+gamexy 80 60
+gamexy 128 96
+gamexy 144 108
+gamexy 160 120
+gamexy 200 150
+gamexy 256 192
+gamexy 320 200
+gamexy 320 240
+gamexy 400 300
+gamexy 512 384
+gamexy 640 200
+gamexy 640 480
+gamexy 800 600
+gamexy 1024 768
+gamexy 1152 864
+gamexy 1280 960
+gamexy 1280 1024
+gamexy 1680 1050
+gamexy 1600 1200
+# defaultgamexy 12 # no more default gamexy

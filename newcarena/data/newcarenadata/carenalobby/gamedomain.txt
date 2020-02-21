@@ -1,0 +1,85 @@
+# static config data (read only)
+
+# available tracks
+#track 2pl_tcanyn
+#track 4pl_thitech
+#track testtrack1
+
+//# implicit port
+//serverport 5426
+
+# range of paint and decals
+paintlo 1
+painthi 22
+decallo 0
+decalhi 35
+
+# bot don't use weapons
+botnoweap ferrite
+
+# botnames, must have 1 name for every player (32 now)
+botname bill
+botname darci
+botname jr
+botname landslide
+botname power
+botname quantum
+botname shifter
+botname tim
+botname bill2
+botname darci2
+botname jr2
+botname landslide2
+botname power2
+botname quantum2
+botname shifter2
+botname tim2
+botname bill3
+botname darci3
+botname jr3
+botname landslide3
+botname power3
+botname quantum3
+botname shifter3
+botname tim3
+botname bill4
+botname darci4
+botname jr4
+botname landslide4
+botname power4
+botname quantum4
+botname shifter4
+botname tim4
+botname bill5
+botname darci5
+botname jr5
+botname landslide5
+botname power5
+botname quantum5
+botname shifter5
+botname tim5
+botname bill6
+botname darci6
+botname jr6
+botname landslide6
+botname power6
+botname quantum6
+botname shifter6
+botname tim6
+botname bill7
+botname darci7
+botname jr7
+botname landslide7
+botname power7
+botname quantum7
+botname shifter7
+botname tim7
+botname bill8
+botname darci8
+botname jr8
+botname landslide8
+botname power8
+botname quantum8
+botname shifter8
+botname tim8
+

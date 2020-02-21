@@ -1,0 +1,257 @@
+shape quant3res 0 0 {
+	
+// back
+	back BACK
+	0 0
+	1024 768
+	
+// quit
+	pbut BQUIT
+	849 743
+	160 20
+	QUIT
+
+// button +-
+// plus p0
+	pbut P03N
+	70 50
+	20 20
+	+
+
+	pbut P03D
+	105 50
+	20 20
+	+
+
+	pbut P02N
+	180 50
+	20 20
+	+
+
+	pbut P02D
+	215 50
+	20 20
+	+
+
+	pbut P01N
+	290 50
+	20 20
+	+
+
+	pbut P01D
+	325 50
+	20 20
+	+
+
+	pbut P00N
+	385 50
+	20 20
+	+
+
+	pbut P00D
+	420 50
+	20 20
+	+
+
+// plus p1
+	pbut P13N
+	70 120
+	20 20
+	+
+
+	pbut P13D
+	105 120
+	20 20
+	+
+
+	pbut P12N
+	180 120
+	20 20
+	+
+
+	pbut P12D
+	215 120
+	20 20
+	+
+
+	pbut P11N
+	290 120
+	20 20
+	+
+
+	pbut P11D
+	325 120
+	20 20
+	+
+
+	pbut P10N
+	385 120
+	20 20
+	+
+
+	pbut P10D
+	420 120
+	20 20
+	+
+
+// minus p0
+	pbut P03NM
+	70 82
+	20 20
+	-
+
+	pbut P03DM
+	105 82
+	20 20
+	-
+
+	pbut P02NM
+	180 82
+	20 20
+	-
+
+	pbut P02DM
+	215 82
+	20 20
+	-
+
+	pbut P01NM
+	290 82
+	20 20
+	-
+
+	pbut P01DM
+	325 82
+	20 20
+	-
+
+	pbut P00NM
+	385 82
+	20 20
+	-
+
+	pbut P00DM
+	420 82
+	20 20
+	-
+
+// minus p1
+	pbut P13NM
+	70 152
+	20 20
+	-
+
+	pbut P13DM
+	105 152
+	20 20
+	-
+
+	pbut P12NM
+	180 152
+	20 20
+	-
+
+	pbut P12DM
+	215 152
+	20 20
+	-
+
+	pbut P11NM
+	290 152
+	20 20
+	-
+
+	pbut P11DM
+	325 152
+	20 20
+	-
+
+	pbut P10NM
+	385 152
+	20 20
+	-
+
+	pbut P10DM
+	420 152
+	20 20
+	-
+
+// text poly orig
+	text POA
+	13 70
+	460 12
+	POA
+	
+	text POB
+	13 140
+	460 12
+	POB
+	
+// text polys
+	text PA
+	500 70
+	500 12
+	PA
+	
+	text PB
+	500 140
+	500 12
+	PB
+	
+	text PADD
+	500 210
+	500 12
+	PADD
+	
+	text PSUB
+	500 260
+	500 12
+	PSUB
+	
+	text PTIMES
+	500 310
+	500 12
+	PTIMES
+	
+	text PDIV
+	500 360
+	500 12
+	PDIV
+	
+	text PMOD
+	500 410
+	500 12
+	PMOD
+	
+	text PE
+	500 460
+	500 12
+	PE
+	
+	text PNE
+	500 510
+	500 12
+	PNE
+	
+	text PG
+	500 560
+	500 12
+	PG
+	
+	text PGE
+	500 610
+	500 12
+	PGE
+	
+	text PL
+	500 660
+	500 12
+	PL
+	
+	text PLE
+	500 710
+	500 12
+	PLE
+	
+// text booleans
+}

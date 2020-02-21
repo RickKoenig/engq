@@ -1,0 +1,25 @@
+# new art for detached weapons
+ecto ecto
+laser Laserbeam
+oil oil
+emb emb
+mine mine
+missiles MissileOBJ
+stasis stasisField
+fusioncan FECblast
+sonic fsncan
+gbomb gbomb
+
+
+# placeholder
+ghook fsncan
+thermocan fsncan
+ramp fsncan
+wall fsncan
+
+#|------------|#
+#| NOT IN USE |#
+#|------------|#
+/*
+plasma plasmaball
+*/

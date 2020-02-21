@@ -1,0 +1,1 @@
+["Blank","aerodyne","bainite","bigtires","bumpercar","buzz","dielectric","emb","ferrite","icrms","klondyke","laser","magnet","mines","nano","oil","plasma","ramjet","rpd","sonic","spikes"]

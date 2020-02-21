@@ -1,0 +1,80 @@
+﻿  augmatz.cpp
+  augmatz2.cpp
+  d2_bwo.cpp
+  d2_bws.cpp
+  d2_dx9asmshaders.cpp
+  d2_dx9effectshaders.cpp
+c:\srcw32\vs2017\engq\engq\d2_dx9effectshaders.cpp(1495): warning C4102: 'qu1': unreferenced label
+c:\srcw32\vs2017\engq\engq\d2_dx9effectshaders.cpp(1657): warning C4102: 'qu2': unreferenced label
+  d2_dx9_font.cpp
+  d2_font.cpp
+  d2_fontq.cpp
+  d2_keyf.cpp
+  d2_light.cpp
+  d2_model.cpp
+  d2_software.cpp
+  d2_software_font.cpp
+  d2_sprite.cpp
+  d2_texman.cpp
+  d2_tree.cpp
+  d2_vid3d.cpp
+  d2_viewport.cpp
+  d_floattri.cpp
+  Generating Code...
+  Compiling...
+  lodepng.cpp
+c:\srcw32\vs2017\engq\engq\lodepng\lodepng.cpp(3381): warning C4267: '=': conversion from 'size_t' to 'unsigned char', possible loss of data
+c:\srcw32\vs2017\engq\engq\lodepng\lodepng.cpp(3413): warning C4267: '=': conversion from 'size_t' to 'unsigned char', possible loss of data
+  math_abstract.cpp
+  m_audio.cpp
+c:\srcw32\vs2017\engq\libvorbis-1.2.0\include\vorbis\vorbisfile.h(53): warning C4244: 'argument': conversion from 'ogg_int64_t' to 'long', possible loss of data
+  m_bitmap32.cpp
+  m_bitmap8.cpp
+  m_chunk.cpp
+  m_debp.cpp
+  m_device.cpp
+  m_dir.cpp
+  m_err.cpp
+  m_file.cpp
+  m_floatconv.cpp
+  m_gfx.cpp
+  m_gfx_dds.cpp
+  m_gfx_jpg.cpp
+  m_gfx_lbm.cpp
+  m_gfx_pcx.cpp
+  m_gfx_png.cpp
+  m_gfx_tga.cpp
+  m_input.cpp
+  Generating Code...
+  Compiling...
+  m_matrix.cpp
+  m_matrixn.cpp
+  m_mem.cpp
+  m_midi.cpp
+c:\program files (x86)\microsoft directx sdk (april 2007)\include\dmerror.h(12): warning C4005: 'FACILITY_DIRECTMUSIC': macro redefinition
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(162): note: see previous definition of 'FACILITY_DIRECTMUSIC'
+  m_movie.cpp
+  m_mt_rand.cpp
+  m_numath.cpp
+  m_perf.cpp
+  m_quat.cpp
+  m_sagger.cpp
+  m_script.cpp
+  m_state.cpp
+  m_stdcolors.cpp
+  m_tm.cpp
+  m_txt32.cpp
+  m_utils.cpp
+  m_vid.cpp
+c:\srcw32\vs2017\engq\engq\m_vid.cpp(107): warning C4390: ';': empty controlled statement found; is this the intent?
+  m_vid_ddraw.cpp
+  m_vid_dx9.cpp
+  m_vid_gdi.cpp
+  Generating Code...
+  Compiling...
+  m_wh.cpp
+  m_win.cpp
+  n_deflate.cpp
+  ring2.cpp
+  Generating Code...
+  engq.vcxproj -> C:\srcw32\vs2017\engq\engq\.\engq.lib

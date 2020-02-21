@@ -1,0 +1,78 @@
+<html>
+	<head><title>Reading from an XML file</title>
+		<script type="text/javascript" src="AjaxRequest.js">
+		</script>
+		<script type="text/javascript">
+			function makeRequest(url){
+				var httpRequest=createRequest(); /* Cross-browser check;
+				Get a new XMLHttpRequest object */
+				if( httpRequest != false){ // If we got back a request
+					// object
+					httpRequest.open('GET', url, true);
+					//httpRequest.overrideMimeType('text/xml');
+					httpRequest.setRequestHeader('If-Modified-Since','Sat, 03 Jan 2010 00:00:00GMT');
+					httpRequest.send(null);
+					httpRequest.onreadystatechange = function() {
+						getXMLContents(httpRequest);
+					};
+				}else{
+					alert("There was a problem with your request.");
+				}
+			} // End createRequest function
+			function getXMLContents(httpRequest) {
+				if (httpRequest.readyState == 4) {
+					if (httpRequest.status == 200) {
+						var xml = httpRequest.responseXML;
+						var booklist = xml.getElementsByTagName("book");
+						for( j=0; j < booklist.length; j++){
+							var book=booklist[j];
+							var category=book.getAttribute("category");
+							for(i=0;i<book.childNodes.length; i++){
+								switch(book.childNodes[i].nodeName){
+								case "title":
+									title=book.childNodes[i].firstChild.nodeValue;
+									break;
+								case "author":
+									author=book.childNodes[i].firstChild.nodeValue;
+									break;
+								case "price":
+									price=book.childNodes[i].firstChild.nodeValue;
+									break;
+								case "published":
+									published=book.childNodes[i].firstChild.nodeValue;
+									break;
+								}
+							} //End inner for loop
+							var para=document.createElement("p");
+							var brtag1=document.createElement("br");
+							var brtag2=document.createElement("br")
+							var brtag3=document.createElement("br")
+							var categoryTxt=document.createTextNode("Category: "+category);
+							var titleTxt=document.createTextNode("Title: "+title);
+							var authorTxt=document.createTextNode("Author: "+author);
+							var priceTxt=document.createTextNode("Price: "+price);
+							para.appendChild(categoryTxt);
+							para.appendChild(brtag1);
+							para.appendChild(titleTxt);
+							para.appendChild(brtag2);
+							para.appendChild(authorTxt);
+							para.appendChild(brtag3);
+							para.appendChild(priceTxt);
+							document.getElementById('data').appendChild(para);
+						}
+					}else { 
+						alert('There was a problem with the request.');
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<span style="cursor: pointer; text-decoration: underline"
+		  onclick="makeRequest('bookstore.xml')">
+			Get book details
+		</span>
+		<div id=data>
+		</div>
+	</body>
+</html>

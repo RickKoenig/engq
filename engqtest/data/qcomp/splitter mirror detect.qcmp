@@ -1,0 +1,13 @@
+12  2
+"NONE"  0   "NONE"  1   
+"SPLITTER"  0   "NONE"  0   
+"NONE"  0   "NONE"  1   
+"MIRROR"  0   "NONE"  0   
+"CNOT TOP"  0   "CNOT BOTTOM"  0   
+"SPLITTER"  0   "NONE"  0   
+"NONE"  0   "NONE"  1   
+"NONE"  0   "NONE"  1   
+"NONE"  0   "NONE"  1   
+"NONE"  0   "NONE"  1   
+"NONE"  0   "NONE"  1   
+"NONE"  0   "NONE"  1   

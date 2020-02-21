@@ -1,0 +1,59 @@
+shape rootmenu 0 0 {
+
+	back BACK1
+		0 0
+		 800 600
+
+	text INFO
+		100 50
+		 200 30
+		 "broadcast testclient"
+
+	pbut BLOGON
+		625 340
+		 160 20
+		 "logon"
+		 
+	pbut BSEND
+		625 380
+		 160 20
+		 "send"
+		 
+	pbut BNOSEND
+		625 420
+		 160 20
+		 "nosend"
+		 
+	pbut BLOGOFF
+		625 460
+		 160 20
+		 "logoff"
+		 
+	pbut BQUIT
+		625 575
+		160 20
+		 "Quit"
+
+	listbox CONSOLE
+		20 120
+		400 400
+		
+hscroll SLIDERATE
+	600 80
+	160 10
+
+text TEXTRATE
+	600 30
+	160 10
+	"rate"
+	
+hscroll SLIDEPACKSIZE
+	600 180
+	160 10
+
+text TEXTPACKSIZE
+	600 130
+	160 10
+	"hiho"
+	
+}

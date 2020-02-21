@@ -1,0 +1,77 @@
+shape gametheoryres 0 0 {
+	
+	text TEXTNAME
+	45 35
+	360 20
+	mst.evt.slig.com
+
+	edit EDITUSERNAME
+	80 120
+	160 20
+	tester01
+
+	edit EDITPASSWORD
+	270 120
+	160 20
+	tester01
+
+	edit EDITLOADSAVE
+	45 95
+	360 20
+	"load save data"
+
+	text TEXTSTATUS
+	350 10
+	160 20
+	"fetching myip"
+
+	text TEXTMYNAMEI
+	590 10
+	60 20
+	myname
+
+	text TEXTMYNAME
+	490 40
+	260 20
+	host
+
+	text TEXTMYIPI
+	590 90
+	60 20
+	myip
+
+	text TEXTMYIP
+	540 120
+	160 20
+	0.0.0.0
+
+	pbut PBUTLOGON
+	50 160
+	140 20
+	"Logon"
+
+	pbut PBUTLOAD
+	250 160
+	140 20
+	"Load"
+
+	pbut PBUTSAVE
+	450 160
+	140 20
+	"Save"
+
+	pbut PBUTQUIT
+	625 575
+	160 20
+	QUIT
+	
+	pbut PBUTCURUSERP
+	40 121
+	20 20
+	"+"
+	
+	pbut PBUTCURUSERM
+	18 121
+	20 20
+	"-"
+}

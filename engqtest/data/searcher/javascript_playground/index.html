@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head><title>Javascript Playground</title>
+		<link rel="stylesheet" type="text/css" href="ajaxStyle.css" />
+		<link rel="stylesheet" type="text/css" href="mystyle.css" />
+		<script type="text/javascript" src="ajaxCreateRequest.js">
+		</script>
+		<script type="text/javascript" src="playground.js">
+		</script>
+		<script type="text/javascript" src="json2.js">
+		</script>
+	</head>
+	<body onLoad="init();" >
+		<div class="middle1">
+			<h2> Javascript playground. Uses cookies</h2>
+			<p>
+			<a href="playground_instructions.html" target="_blank">Instructions</a> 
+			</p>
+			<form id="form1">
+				<p>What is your name?
+				<input type="text" id="name" />
+				What is your favorite color?
+				<input type="text" id="color" />
+				<br />
+				<input type="button" value="Load cookie"
+				  onClick="cookie2form()" />
+				<input type="button" value="Save cookie"
+				  onClick="form2cookie()" />
+				</p>
+				<p>
+					<input type="button" value="Load program"
+					  onClick="loadprogram()" />
+					<input type="button" value="Run function app.main"
+					  onClick="runmain()" />
+					<input type="button" value="Save program"
+					  onClick="saveprogram()" />
+					<input type="button" value="Reset to default"
+					  onClick="resetprogram()" />
+				<br />
+<!--					
+					<input type="button" value="Read variable app."
+					  onClick="readvar()" />
+-->
+					Read variable app.
+					<select name="location" id="appreadvarname2" onchange="selectname()">
+						<option value="var1">var1</option>
+						<option value="var2">var2</option>
+						<option selected value="var3">var3</option>
+						<option value="funy">funy</option>
+					</select>
+<!--
+					<input type="text" id="appreadvarname" value="var1" onkeypress="readvarenter(event)"
+					/>
+-->
+					<br />
+					<input type="button" value="Write variable app."
+					  onClick="writevar();" />
+					<input type="text" id="appwritevarname" value="var1" onkeypress="writevarenter(event)"
+					/>
+<!--
+					<input type="text" id="appwritevarvalue" value="function (a) {return 2*a;}" onkeypress="writevarenter(event)"
+					/>
+-->
+					<textarea id = "appwritevarvalue" rows="10" cols="80"
+					  onkeydown="proccondown(event)"
+					  onkeyup="procconup(event)"
+					>
+function (a) {
+	return 2*a;
+}
+</textarea>
+					<br />
+					<input type="button" value="List app. variables"
+					  onClick="listvars()" />
+					<input type="button" value="List app. variables verbosely"
+					  onClick="listvarsverbose()" />
+				</p>
+			</form>
+			<div class="middle2">
+<!--
+				<form id="form2">
+					Console<br />
+					<textarea id = "console" rows="10" cols="80"
+					  onkeydown="proccondown(event)"
+					  onkeyup="procconup(event)"
+					>
+function main() {
+	print("hello world\n");
+}</textarea>
+ 					<br />
+				</form> 
+-->
+				<form id="form3">
+					Output<br />
+					<input type="button" value="Console to output"
+					  onClick="con2out()" />
+					<input type="button" value="Clear output"
+					  onClick="clearout()" />
+					<textarea id = "output" rows="20" cols="80" readonly="readonly">
+Output:
+
+</textarea>	
+				</form>
+ 				<br />
+			</div>
+		</div>
+	</body>
+</html>

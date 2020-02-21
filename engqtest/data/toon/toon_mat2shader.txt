@@ -1,0 +1,14 @@
+
+// for the toon state
+// translate from material name to shader name, default mat2shader.txt file
+// matname shadername
+// keyword * matches any matname left over
+// 'include' is the only keyword, merge filename with current script, matches occur on first match (duplicates)
+
+	include ../racenetdata/globalmat2shader.txt		// main shader library
+	include ../racenetdata/toon_carmat2shader.txt		// carmat extensions, skip for now
+
+//--------------------------------------------------------
+// Anything else not known ? make it a toon shader ||
+//--------------------------------------------------------
+	*		toon

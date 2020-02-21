@@ -1,0 +1,21 @@
+shape rootmenu 0 0 {
+
+	back BACK1
+		0 0
+		 800 600
+
+	text INFO
+		300 50
+		 200 30
+		 "Wait for Osakit Message"
+		 
+/*	pbut YES
+		320 400
+		 160 20
+		 "Do Update"
+*/		
+	pbut NO
+		320 460
+		 160 20
+		 "Skip Message"
+}

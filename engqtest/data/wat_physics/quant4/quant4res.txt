@@ -1,0 +1,162 @@
+shape quant3res 0 0 {
+	
+// quit
+	pbut BQUIT
+	849 743
+	160 20
+	QUIT
+	
+// energies list
+	text TENERGIES
+	778 123
+	246 10
+	Energies
+	
+	listbox LENERGIES
+	762 143
+	262 130
+
+// compute percent
+	text TCOMP
+	778 103
+	246 10
+	"Computing 100%"
+
+// individual energy input
+	text TENERGY
+	869 293
+	146 10
+	".Energy 1"
+	
+	hscroll HENERGY
+	869 303
+	146 20
+	
+	text TAMP
+	869 333
+	146 10
+	".Amplitude 0"
+	
+	hscroll HAMP
+	869 343
+	146 20
+	
+	text TPH
+	869 373
+	146 10
+	".Phase 0"
+	
+	hscroll HPH
+	869 383
+	146 20
+	
+// bell curve energy input
+	text TMEAN
+	869 463
+	146 10
+	".Mean Energy 0"
+	
+	hscroll HMEAN
+	869 473
+	146 20
+	
+	text TMAMP
+	869 503
+	146 10
+	".Mean Amplitude 0"
+	
+	hscroll HMAMP
+	869 513
+	146 20
+	
+	text TPC
+	869 543
+	146 10
+	".Phase Change 0"
+	
+	hscroll HPC
+	869 553
+	146 20
+
+	text TWIDTH
+	869 583
+	146 10
+	".Width 0"
+	
+	hscroll HWIDTH
+	869 593
+	146 20
+	
+	
+// add single energy	
+	pbut BADD
+	869 413
+	146 20
+	"Add Energy"
+
+// add bell energies	
+	pbut BADDBELL
+	869 623
+	146 20
+	"Add Bell Curve"
+	
+// calculate	
+	pbut BCALC
+	869 703
+	146 20
+	"Calculate"
+	
+// reset all energies	
+	pbut BRESET
+	869 663
+	146 20
+	"Reset Energies"
+	
+	
+	
+// animation sliders
+	hscroll HCNTVEL
+	830 20
+	180 10
+	
+	text TCNTINFO
+	778 40
+	232 10
+	"T = 0"
+	
+	hscroll HCNTVAL
+	778 60
+	232 10
+
+// what to view
+	pbut BPREV
+	778 80
+	80 10
+	"Prev"
+	
+	pbut BNEXT
+	930 80
+	80 10
+	"Next"
+	
+	text TINFO3D
+	170 2
+	480 10
+	"Drag mouse in graph"
+	
+	pbut BSTOP
+	778 20
+	40 10
+	"Stop"
+	
+	text TDEBP
+	170 758
+	480 10
+	"debp for more options"
+	
+	text TUNITS
+	0 748
+	820 10
+	"units"
+	
+}

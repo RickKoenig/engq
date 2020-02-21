@@ -1,0 +1,16 @@
+// do in world space since envmap is in world space
+uniform samplerCube uSampler;
+uniform mediump float alphacutoff;      
+     
+varying highp vec3 woutvec;
+
+void main(void) {
+	highp vec3 wov = woutvec;
+	//if (wov.z < 0.0)
+	//	wov.z = 0.0;
+	gl_FragColor = textureCube(uSampler,wov);
+	//gl_FragColor.xyz *= .75;
+	//gl_FragColor.r = 1.0;
+	if (gl_FragColor.a < alphacutoff)
+		discard;
+}

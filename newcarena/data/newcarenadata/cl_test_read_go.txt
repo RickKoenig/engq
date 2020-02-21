@@ -1,0 +1,54 @@
+{
+	"carojs" : {
+		"caroj" : [
+			{
+				"carbodyname" : "hyperliner",
+				"decal" : 22,
+				"energies" : [
+					5,
+					1,
+					4,
+					2,
+					6,
+					3
+				],
+				"ownerid" : 0,
+				"paint" : 19,
+				"playername" : "rickers",
+				"weaps" : [
+					"buzz",
+					"charger",
+					"emb",
+					"ferrite",
+					"forklift",
+					"grapple",
+					"intake",
+					"laser",
+					"minigun"
+				]
+			},
+			{
+				"carbodyname" : "dodgecharger",
+				"decal" : 7,
+				"energies" : [
+					3,
+					1,
+					5,
+					4,
+					6,
+					2
+				],
+				"ownerid" : 1,
+				"paint" : 6,
+				"playername" : "altplayer3",
+				"weaps" : [
+					"dielectric",
+					"klondyke",
+					"laser",
+					"sonic",
+					"transducer"
+				]
+			}
+		]
+	}
+}

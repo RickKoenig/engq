@@ -1,0 +1,64 @@
+{
+	"avatar" : {
+		"avaj" : {
+			"carbodyname" : "dodgecharger",
+			"decal" : 7,
+			"energies" : [
+				3,
+				1,
+				5,
+				4,
+				6,
+				2
+			],
+			"ownerid" : -1,
+			"paint" : 6,
+			"playername" : "altplayer3",
+			"weaps" : [
+				"dielectric",
+				"klondyke",
+				"laser",
+				"sonic",
+				"transducer"
+			]
+		}
+	},
+	"environment" : {
+		"envj" : {
+			"nlaps" : 4,
+			"rules" : 6,
+			"trackhash" : {
+				"hash" : {
+					"data" : [
+						137,
+						250,
+						151,
+						28,
+						156,
+						125,
+						253,
+						178,
+						53,
+						139,
+						0,
+						113,
+						148,
+						49,
+						87,
+						73
+					]
+				}
+			},
+			"trackname" : "track1"
+		}
+	},
+	"nbotplayers" : 0,
+	"net" : {
+		"netdescj" : {
+			"gamenet" : 2,
+			"serverip" : "127.0.0.1",
+			"serverport" : 5426
+		}
+	},
+	"nhumanplayers" : 2
+}

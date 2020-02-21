@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5AE1FE21-0705-49EC-A3CD-E094095DF7F5}</ProjectGuid>
+    <RootNamespace>engq</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28127.55</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files %28x86%29\Microsoft DirectX SDK %28April 2007%29\Include</IncludePath>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files %28x86%29\Microsoft DirectX SDK %28April 2007%29\Include</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\libogg-1.1.3\include;..\libvorbis-1.2.0\include;..\libtheora-1.0beta3\include;..\pnglib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ShowIncludes>false</ShowIncludes>
+      <LanguageStandard>
+      </LanguageStandard>
+    </ClCompile>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>engqd.lib</OutputFile>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>.;..\libogg-1.1.3\include;..\libvorbis-1.2.0\include;..\libtheora-1.0beta3\include;..\pnglib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ShowIncludes>false</ShowIncludes>
+      <LanguageStandard>
+      </LanguageStandard>
+    </ClCompile>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>engq.lib</OutputFile>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="augmatn.h" />
+    <ClInclude Include="augmatn_back.h" />
+    <ClInclude Include="augmatn_float.h" />
+    <ClInclude Include="augmatn_ui.h" />
+    <ClInclude Include="augmatz.h" />
+    <ClInclude Include="d2_bwo.h" />
+    <ClInclude Include="d2_bws.h" />
+    <ClInclude Include="d2_dx9.h" />
+    <ClInclude Include="d2_dx9shaderswitch.h" />
+    <ClInclude Include="d2_dx9_font.h" />
+    <ClInclude Include="d2_font.h" />
+    <ClInclude Include="d2_fontq.h" />
+    <ClInclude Include="d2_keyf.h" />
+    <ClInclude Include="d2_light.h" />
+    <ClInclude Include="d2_model.h" />
+    <ClInclude Include="d2_software.h" />
+    <ClInclude Include="d2_software_font.h" />
+    <ClInclude Include="d2_sprite.h" />
+    <ClInclude Include="d2_texman.h" />
+    <ClInclude Include="d2_tree.h" />
+    <ClInclude Include="d2_vid3d.h" />
+    <ClInclude Include="d2_viewport.h" />
+    <ClInclude Include="d_floattri.h" />
+    <ClInclude Include="LodePNG\lodepng.h" />
+    <ClInclude Include="math_abstract.h" />
+    <ClInclude Include="m_asmmacros.h" />
+    <ClInclude Include="m_audio.h" />
+    <ClInclude Include="m_bitmap16.h" />
+    <ClInclude Include="m_bitmap24.h" />
+    <ClInclude Include="m_bitmap32.h" />
+    <ClInclude Include="m_bitmap8.h" />
+    <ClInclude Include="m_chunk.h" />
+    <ClInclude Include="m_debp.h" />
+    <ClInclude Include="m_device.h" />
+    <ClInclude Include="m_dir.h" />
+    <ClInclude Include="m_eng.h" />
+    <ClInclude Include="m_err.h" />
+    <ClInclude Include="m_file.h" />
+    <ClInclude Include="m_floatconv.h" />
+    <ClInclude Include="m_gfx.h" />
+    <ClInclude Include="m_gfx_dds.h" />
+    <ClInclude Include="m_gfx_jpg.h" />
+    <ClInclude Include="m_gfx_lbm.h" />
+    <ClInclude Include="m_gfx_pcx.h" />
+    <ClInclude Include="m_gfx_png.h" />
+    <ClInclude Include="m_gfx_tga.h" />
+    <ClInclude Include="m_input.h" />
+    <ClInclude Include="m_keyboard.h" />
+    <ClInclude Include="m_utils.h" />
+    <ClInclude Include="m_matrix.h" />
+    <ClInclude Include="m_matrixn.h" />
+    <ClInclude Include="m_mem.h" />
+    <ClInclude Include="m_midi.h" />
+    <ClInclude Include="m_movie.h" />
+    <ClInclude Include="m_mt_rand.h" />
+    <ClInclude Include="m_numath.h" />
+    <ClInclude Include="m_perf.h" />
+    <ClInclude Include="m_quat.h" />
+    <ClInclude Include="m_refcount.h" />
+    <ClInclude Include="m_sagger.h" />
+    <ClInclude Include="m_script.h" />
+    <ClInclude Include="m_state.h" />
+    <ClInclude Include="m_stdcolors.h" />
+    <ClInclude Include="m_sysdebvars.h" />
+    <ClInclude Include="m_tm.h" />
+    <ClInclude Include="m_txt32.h" />
+    <ClInclude Include="m_type.h" />
+    <ClInclude Include="m_vid.h" />
+    <ClInclude Include="m_vid_ddraw.h" />
+    <ClInclude Include="m_vid_dx9.h" />
+    <ClInclude Include="m_vid_gdi.h" />
+    <ClInclude Include="m_wh.h" />
+    <ClInclude Include="m_win.h" />
+    <ClInclude Include="n_deflatecpp.h" />
+    <ClInclude Include="ring.h" />
+    <ClInclude Include="ring2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="augmatz.cpp" />
+    <ClCompile Include="augmatz2.cpp" />
+    <ClCompile Include="d2_bwo.cpp" />
+    <ClCompile Include="d2_bws.cpp" />
+    <ClCompile Include="d2_dx9asmshaders.cpp" />
+    <ClCompile Include="d2_dx9effectshaders.cpp" />
+    <ClCompile Include="d2_dx9_font.cpp" />
+    <ClCompile Include="d2_font.cpp" />
+    <ClCompile Include="d2_fontq.cpp" />
+    <ClCompile Include="d2_keyf.cpp" />
+    <ClCompile Include="d2_light.cpp" />
+    <ClCompile Include="d2_model.cpp" />
+    <ClCompile Include="d2_software.cpp" />
+    <ClCompile Include="d2_software_font.cpp" />
+    <ClCompile Include="d2_sprite.cpp" />
+    <ClCompile Include="d2_texman.cpp" />
+    <ClCompile Include="d2_tree.cpp" />
+    <ClCompile Include="d2_vid3d.cpp" />
+    <ClCompile Include="d2_viewport.cpp" />
+    <ClCompile Include="d_floattri.cpp" />
+    <ClCompile Include="LodePNG\lodepng.cpp" />
+    <ClCompile Include="LodePNG\lodepng_examples.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="LodePNG\lodepng_examples.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="LodePNG\testsuite.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="math_abstract.cpp" />
+    <ClCompile Include="m_audio.cpp" />
+    <ClCompile Include="m_bitmap32.cpp" />
+    <ClCompile Include="m_bitmap8.cpp" />
+    <ClCompile Include="m_chunk.cpp" />
+    <ClCompile Include="m_debp.cpp" />
+    <ClCompile Include="m_device.cpp" />
+    <ClCompile Include="m_dir.cpp" />
+    <ClCompile Include="m_err.cpp" />
+    <ClCompile Include="m_file.cpp" />
+    <ClCompile Include="m_floatconv.cpp" />
+    <ClCompile Include="m_gfx.cpp" />
+    <ClCompile Include="m_gfx_dds.cpp" />
+    <ClCompile Include="m_gfx_jpg.cpp" />
+    <ClCompile Include="m_gfx_lbm.cpp" />
+    <ClCompile Include="m_gfx_pcx.cpp" />
+    <ClCompile Include="m_gfx_png.cpp" />
+    <ClCompile Include="m_gfx_tga.cpp" />
+    <ClCompile Include="m_input.cpp" />
+    <ClCompile Include="m_matrix.cpp" />
+    <ClCompile Include="m_matrixn.cpp" />
+    <ClCompile Include="m_mem.cpp" />
+    <ClCompile Include="m_midi.cpp" />
+    <ClCompile Include="m_movie.cpp" />
+    <ClCompile Include="m_mt_rand.cpp" />
+    <ClCompile Include="m_numath.cpp" />
+    <ClCompile Include="m_perf.cpp" />
+    <ClCompile Include="m_quat.cpp" />
+    <ClCompile Include="m_sagger.cpp" />
+    <ClCompile Include="m_script.cpp" />
+    <ClCompile Include="m_state.cpp" />
+    <ClCompile Include="m_stdcolors.cpp" />
+    <ClCompile Include="m_tm.cpp" />
+    <ClCompile Include="m_txt32.cpp" />
+    <ClCompile Include="m_utils.cpp" />
+    <ClCompile Include="m_vid.cpp" />
+    <ClCompile Include="m_vid_ddraw.cpp" />
+    <ClCompile Include="m_vid_dx9.cpp" />
+    <ClCompile Include="m_vid_gdi.cpp" />
+    <ClCompile Include="m_wh.cpp" />
+    <ClCompile Include="m_win.cpp" />
+    <ClCompile Include="n_deflate.cpp" />
+    <ClCompile Include="ring2.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

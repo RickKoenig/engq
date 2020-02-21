@@ -1,0 +1,23 @@
+// The pixel shader, colored verts
+ps_2_0
+
+// interpolated inputs from vertex shader
+dcl t0.xy		// texture uv
+dcl_2d s0	// color sample from texture uv
+dcl v0		// vertex color
+
+// constant inputs
+//def c6 mat color
+// none
+
+// code
+// get texture color into r0
+	texld r0, t0,s0 // Stage 0 has the texture color
+// modulate texture with cvert to r0
+	mul r0,v0,r0
+// output final color
+	mul r0,r0,c6
+	mov oC0,r0
+
+// outputs
+// oC0 final pixel color

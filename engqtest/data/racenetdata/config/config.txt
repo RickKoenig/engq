@@ -1,0 +1,185 @@
+########### stub info (mainly for JR)
+# put this in your command line to test out stub interface to shockwave
+# "racemp_stub_out.txt" "racemp_stub_in.txt" "racemp_status.txt"
+
+#some new stub keywords, to be used in '*out.txt'
+#xres: 800,	if 0 then default
+#yres: 600,
+#zoomin: 0,	# if a 1 then make pixels twice as big (blocky) same as hitting 'l'
+#vidmode: 0, # if a 0 then default, 1 gdi, 2 d3d
+#rules: 2, # 0 norules, 1 normal 2pvs, 2 combat, 3 CTF noweap, 4 CTF weap, 5 stunt
+#############
+
+#maxtexlog 4 # for some really low texture resolution, uncomment
+
+#audio
+startaudiomaindriver 1 # -1 none, 0 waveplayer, 1 directsound
+startaudiosubdriver 0 # 0 subdevice 0 RipTide Playback, 1 subdevice 1 Game Compatible Device etc.
+disablewpsetvol 0 # turn on to disable waveplayer volume settings, annoying green volume bars on my screen
+mididisabled 0
+
+#video
+startvideomaindriver 0 #0 gdi, 1 directdraw, 2 direct3d
+startvideosubdriver 1 # 0 subdevice 0 ati rage pro, 1 subdevice 1 voodoo 2 etc.
+d3denhancedwanted 0
+
+#input
+startusedirectinput 0 # 0 message based, 1 directinput
+mousemode 0 # 0 clipped, 1 infinite
+joyenable 0
+
+releasemode 47
+dofilelogger 0
+
+####### resolution used 
+#globalxres 160 globalyres 120
+#globalxres 320 globalyres 240
+#globalxres 640 globalyres 480
+globalxres 800 globalyres 600
+#globalxres 1024 globalyres 768
+#globalxres 1280 globalyres 1024
+
+####### software override
+#softwarexres 160 softwareyres 120
+softwarexres 320 softwareyres 240
+#softwarexres 512 softwareyres 384
+#softwarexres 640 softwareyres 480
+#softwarexres 800 softwareyres 600
+#softwarexres 1024 softwareyres 768
+zoomin 0
+
+defaultalphacutoff 50
+#aliasmode 3
+
+flycamrevy 1 # rick likes 1, everyone else likes 0
+flycamspeed .00625
+
+disabledissolve 0
+forcealphamodulate 1
+
+#misc engine variables
+dopaintmessages 1
+uselights 1
+fastnorms 0
+speedupdeformobjects 0 # for the airplane piece.. set this to 1 if lots of say bipeds or airplanes
+#												to 0 if you don't like the model poping in 1 frame late
+runinbackground 1
+fpswanted 30
+#vsync 1
+runexclusive 0
+enabledebprint 1
+enablenumkeychangestate 1
+repdelay 6
+repperiod 2
+updaterenderstates 0
+perscorrect 1
+favorshading 0
+dodefaultlights 1
+zenable 2 # 0 no, 1 yes, 2 from model
+#clipping 0
+texwrap 2 # 0 no, 1 yes, 2 from model
+smoverride 2 #0 facet, 1 smooth, 2 from model
+filter 1
+clipmap 3 # 0 none, 1 colorkey, 2 1bit alpha, 3 4bit alpha
+#if you aren't sure then comment out this next line and read it in deprint and write it here
+#or if you want to measure clock cycles set it to 0
+compmhz 501
+
+#startstate 0 # editor of stunt2
+startstate 1 # track select for online game (lobby)
+
+#startstate 2 # race online game
+#startstate 3 # mainmenu (configuration)
+#startstate 4 # read online cars (test), emulator tests, collision tests
+#startstate 5 # scenetest, OR onlinecars test
+#startstate 6 # sound test for weapons
+#startstate 7 # state 10 of stunt2
+
+helperscale 0 # .1
+/*
+beforeloadtimeoutserver 90 # seconds for waiting around for initial connections
+beforeloadtimeoutclient 150 # seconds for waiting around for initial connections
+carextracttimeout 30 # 3 # seconds to wait for a 'DoneExtracting'
+afterloadtimeout 90 # seconds to wait at the start line for other players to finish loading
+gameplaytimeout 20 # 20 # maximum seconds a packet can come from the past (delayed packet)
+loadinggoal1 1574 # number of 'fopen2's called during load, read from logfile under loadingcount
+stubtracknum 1 # selects the track from online_seltrack.cfg
+#scorelinekind 1 # 0 vs, 1 ca
+
+udpserversize 80 # 240 max number of keystrokes to send in a packet (for overlap)
+udpclientsize 80 # 240 
+disabletcp 0 # turn off tcp KEY packets if a 1 (let udp take care of this)
+enableudp 0 # turn on udp KEY packets if a 1
+
+tweakolwheels 0 # tweak uvs
+tweakolwheelsu -5 # tweak uvs
+tweakolwheelsv .001 # tweak uvs
+crashresety .95
+*/
+useattachcam 1
+
+#direction finder
+gothiswayscalex 17.66
+gothiswayscaley 2.77
+gothiswayscalez 2.54
+gothiswaypos.x 3.48
+gothiswaypos.y -13.03
+gothiswaypos.z 14.54
+#gothiswayscalex 72.6
+#gothiswayscaley 9.57
+#gothiswayscalez 7.7
+#gothiswaypos.x 53.6
+#gothiswaypos.y 9.305
+#gothiswaypos.z -7.43
+
+
+extractsleep 1000
+
+# moved to trackname.cfg
+#backcolor.x .31
+#backcolor.y .16
+#backcolor.z .10
+
+newcamvars.usenewcam 1
+#newcamvars.usesteeryaw 0
+#newcamvars.steeryawlimit .75
+#newcamvars.steeryawrate .88
+newcamvars.usecoll 1
+newcamvars.normalpitch .25
+newcamvars.steeryaw .88
+newcamvars.collpitchrate .025
+newcamvars.collyawrate .025
+newcamvars.yawsafe .1
+newcamvars.pitchsafe .1625
+newcamvars.pitchlimit 1.3
+newcamvars.yawlimit 1.3
+newcamvars.dist 2.0
+newcamvars.startcentery -.325
+newcamvars.normalcentery -.2
+newcamvars.centerratey .01
+newcamvars.zoom 2
+newcamvars.colltries 11
+newcamvars.cheadrate .2
+#newcamvars.leftcount 30
+#newcamvars.rightcount 30
+#newcamvars.usesteeryaw2 1
+#newcamvars.steeryawrate2 .005
+newcamvars.pitchdrift .25
+newcamvars.yawdrift .25
+newcamvars.centerxdrift .09375
+
+#comments
+#comments are for people that don't know what to say...
+jrmcarscale .014
+jrmcartrans.y -.07
+jrmcarrot.x -90
+
+noweapsum 1
+bluered3d 0 # .066, #blue red 3d glasses, crashes with direct3d
+
+#remove when jrms for these names are no longer corrupt
+#excludelist0 corvettestingray	# missing faces
+#excludelist1 247				# missing regpoints and tires
+#excludelist2 powerrocket		# missing regpoints and tires
+
+slecs 27182869

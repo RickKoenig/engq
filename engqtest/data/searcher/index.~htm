@@ -1,0 +1,73 @@
+﻿HTTP/1.1 200 OK
+Date: Wed, 30 May 2001 19:05:19 GMT
+Server: Apache/1.3.9 (Unix)
+Last-Modified: Sun, 04 May 1997 03:45:32 GMT
+ETag: "24475c-cc9-336c065c"
+Accept-Ranges: bytes
+Connection: close
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>The Seeker</title>
+    </head>
+    <body bgcolor="#406080" text="yellow" link="white" alink="green" vlink="yellow"
+      onload="document.getElementById('command').focus()" >
+        <center>
+            <a href="take0018.jpg" > <img src="sake0018.jpg" width='160' height='120' alt="big image"/></a>
+            <h2>The Seeker</h2>
+            <h3>
+                Find what you're looking for.
+            </h3>
+            <br/><br/>
+<hr/>
+          	<ul>
+            	<li><p><a href="engw/engw3dtest/index.html"> eng3dtest</a></p></li>
+            	<li><p><a href="engw/engw3dtest/fullscreen.html"> eng3dtest fullscreen</a></p></li>
+            	<li><p><a href="engw/engw2dtest/index.html"> eng2dtest</a></p></li>
+		</ul>
+<hr/>
+           <form id="myform" action="/search" method="get">
+                Search: <input type="text" name="q" id="command" size='40'/>
+                <p>
+                    <input type="submit" value="Search"/>
+                    <input type="reset"  value="Clear"/>
+                </p>
+            </form>
+            <form id="myform2" action="/search" method="get">
+                Redirect code number from camera color bar code. <input type="text" name="r" id="command2" size='20'/>
+                <p>
+                    <input type="submit" value="Redirect"/>
+                    <input type="reset"  value="Clear"/>
+                </p>
+            </form>
+            <p>Today is
+                <script type='text/javascript'>
+                <!-- hide from old browsers
+                var today = new Date()
+                document.write(today)
+                 //-->
+                </script>
+            </p>
+            <br/>
+	<hr/>
+<!--
+<p>
+          <a href="page0.htm"> Mandelbrot set 2 million X zoomer map</a>
+<p/>
+<p>
+          <a href="javascript_playground/index.html"> Javascript playground</a>
+<p/>
+-->
+<hr/>
+       </center>
+        <a href="mailto:rkoenig@ix.netcom.com"> Comments? Suggestions? </a>
+        <p>
+            <a href="http://validator.w3.org/check?uri=referer"><img
+            src="http://www.w3.org/Icons/valid-xhtml10"
+            alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+        </p>
+    </body>
+</html>

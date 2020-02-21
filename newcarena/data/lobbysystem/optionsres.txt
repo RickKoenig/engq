@@ -1,0 +1,26 @@
+shape rootmenu 0 0 {
+
+back BACK1
+	0 0
+	800 600
+
+pbut PBUT1
+	50 400
+	160 20
+	"PLAY GAME!"
+	
+pbut PBUT2
+	50 500
+	160 20
+	"BACK TO ..."
+	
+text TEXT1
+	375 30
+	190 15
+	"GAME OPTIONS"
+
+listbox LISTBOX1
+	175 50
+	500 304
+
+}

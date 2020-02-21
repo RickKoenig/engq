@@ -1,0 +1,2 @@
+del srch_*.log
+

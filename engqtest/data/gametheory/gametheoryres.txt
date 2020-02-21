@@ -1,0 +1,1135 @@
+shape gametheoryres 0 0 {
+	
+	text TEXTPA
+	45 100
+	60 10
+	textpa
+
+	text TEXTPB
+	45 5
+	60 10
+	textpb
+
+	pbut PBUTQUIT
+	625 575
+	160 20
+	QUIT
+	
+	hscroll SCLHD
+	130 540
+	100 15
+
+	text TEXTD
+	130 560
+	60 16
+	"dim 8"
+	
+	vscroll SCLV0
+	175 25
+	15 100
+
+	vscroll SCLV1
+	255 25
+	15 100
+
+	vscroll SCLV2
+	335 25
+	15 100
+
+	vscroll SCLV3
+	415 25
+	15 100
+
+	vscroll SCLV4
+	495 25
+	15 100
+
+	vscroll SCLV5
+	575 25
+	15 100
+
+	vscroll SCLV6
+	655 25
+	15 100
+
+	vscroll SCLV7
+	735 25
+	15 100
+
+	hscroll SCLH0
+	25 140
+	100 15
+
+	hscroll SCLH1
+	25 190
+	100 15
+	
+	hscroll SCLH2
+	25 240
+	100 15
+
+	hscroll SCLH3
+	25 290
+	100 15
+
+	hscroll SCLH4
+	25 340
+	100 15
+
+	hscroll SCLH5
+	25 390
+	100 15
+	
+	hscroll SCLH6
+	25 440
+	100 15
+
+	hscroll SCLH7
+	25 490
+	100 15
+
+	text TEXTV0
+	150 5
+	60 10
+	"scroll pos"
+
+	text TEXTV1
+	230 5
+	60 10
+	"scroll pos"
+	
+	text TEXTV2
+	310 5
+	60 10
+	"scroll pos"
+
+	text TEXTV3
+	390 5
+	60 10
+	"scroll pos"
+	
+	text TEXTV4
+	470 5
+	60 10
+	"scroll pos"
+
+	text TEXTV5
+	550 5
+	60 10
+	"scroll pos"
+	
+	text TEXTV6
+	630 5
+	60 10
+	"scroll pos"
+
+	text TEXTV7
+	710 5
+	60 10
+	"scroll pos"
+	
+	text TEXTH0
+	45 160
+	60 10
+	"scroll pos"
+	
+	text TEXTH1
+	45 210
+	60 10
+	"scroll pos"
+	
+	text TEXTH2
+	45 260
+	60 10
+	"scroll pos"
+	
+	text TEXTH3
+	44 310
+	60 10
+	"scroll pos"
+	
+	text TEXTH4
+	45 360
+	60 10
+	"scroll pos"
+	
+	text TEXTH5
+	45 410
+	60 10
+	"scroll pos"
+	
+	text TEXTH6
+	45 460
+	60 10
+	"scroll pos"
+	
+	text TEXTH7
+	44 510
+	60 10
+	"scroll pos"
+	
+	text TEXT00
+	165 140
+	40 16
+	p00
+	
+	text TEXT01
+	245 140
+	40 16
+	p01
+	
+	text TEXT02
+	325 140
+	40 16
+	p00
+	
+	text TEXT03
+	405 140
+	40 16
+	p01
+	
+	text TEXT04
+	485 140
+	40 16
+	p00
+	
+	text TEXT05
+	565 140
+	40 16
+	p01
+	
+	text TEXT06
+	645 140
+	40 16
+	p00
+	
+	text TEXT07
+	725 140
+	40 16
+	p01
+	
+	text TEXT10
+	165 140
+	40 16
+	p00
+	
+	text TEXT11
+	245 140
+	40 16
+	p01
+	
+	text TEXT12
+	325 140
+	40 16
+	p00
+	
+	text TEXT13
+	405 140
+	40 16
+	p01
+	
+	text TEXT14
+	485 140
+	40 16
+	p00
+	
+	text TEXT15
+	565 140
+	40 16
+	p01
+	
+	text TEXT16
+	645 140
+	40 16
+	p00
+	
+	text TEXT17
+	725 140
+	40 16
+	p01
+	
+	text TEXT20
+	165 140
+	40 16
+	p00
+	
+	text TEXT21
+	245 140
+	40 16
+	p01
+	
+	text TEXT22
+	325 140
+	40 16
+	p00
+	
+	text TEXT23
+	405 140
+	40 16
+	p01
+	
+	text TEXT24
+	485 140
+	40 16
+	p00
+	
+	text TEXT25
+	565 140
+	40 16
+	p01
+	
+	text TEXT26
+	645 140
+	40 16
+	p00
+	
+	text TEXT27
+	725 140
+	40 16
+	p01
+	
+	text TEXT30
+	165 140
+	40 16
+	p00
+	
+	text TEXT31
+	245 140
+	40 16
+	p01
+	
+	text TEXT32
+	325 140
+	40 16
+	p00
+	
+	text TEXT33
+	405 140
+	40 16
+	p01
+	
+	text TEXT34
+	485 140
+	40 16
+	p00
+	
+	text TEXT35
+	565 140
+	40 16
+	p01
+	
+	text TEXT36
+	645 140
+	40 16
+	p00
+	
+	text TEXT37
+	725 140
+	40 16
+	p01
+	
+	text TEXT40
+	165 140
+	40 16
+	p00
+	
+	text TEXT41
+	245 140
+	40 16
+	p01
+	
+	text TEXT42
+	325 140
+	40 16
+	p00
+	
+	text TEXT43
+	405 140
+	40 16
+	p01
+	
+	text TEXT44
+	485 140
+	40 16
+	p00
+	
+	text TEXT45
+	565 140
+	40 16
+	p01
+	
+	text TEXT46
+	645 140
+	40 16
+	p00
+	
+	text TEXT47
+	725 140
+	40 16
+	p01
+	
+	text TEXT50
+	165 140
+	40 16
+	p00
+	
+	text TEXT51
+	245 140
+	40 16
+	p01
+	
+	text TEXT52
+	325 140
+	40 16
+	p00
+	
+	text TEXT53
+	405 140
+	40 16
+	p01
+	
+	text TEXT54
+	485 140
+	40 16
+	p00
+	
+	text TEXT55
+	565 140
+	40 16
+	p01
+	
+	text TEXT56
+	645 140
+	40 16
+	p00
+	
+	text TEXT57
+	725 140
+	40 16
+	p01
+	
+	text TEXT60
+	165 140
+	40 16
+	p00
+	
+	text TEXT61
+	245 140
+	40 16
+	p01
+	
+	text TEXT62
+	325 140
+	40 16
+	p00
+	
+	text TEXT63
+	405 140
+	40 16
+	p01
+	
+	text TEXT64
+	485 140
+	40 16
+	p00
+	
+	text TEXT65
+	565 140
+	40 16
+	p01
+	
+	text TEXT66
+	645 140
+	40 16
+	p00
+	
+	text TEXT67
+	725 140
+	40 16
+	p01
+	
+	text TEXT70
+	165 140
+	40 16
+	p00
+	
+	text TEXT71
+	245 140
+	40 16
+	p01
+	
+	text TEXT72
+	325 140
+	40 16
+	p00
+	
+	text TEXT73
+	405 140
+	40 16
+	p01
+	
+	text TEXT74
+	485 140
+	40 16
+	p00
+	
+	text TEXT75
+	565 140
+	40 16
+	p01
+	
+	text TEXT76
+	645 140
+	40 16
+	p00
+	
+	text TEXT77
+	725 140
+	40 16
+	p01
+	
+	pbut PBUT00p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT01p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT02p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT03p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT04p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT05p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT06p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT07p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT10p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT11p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT12p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT13p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT14p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT15p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT16p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT17p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT20p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT21p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT22p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT23p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT24p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT25p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT26p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT27p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT30p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT31p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT32p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT33p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT34p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT35p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT36p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT37p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT40p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT41p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT42p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT43p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT44p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT45p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT46p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT47p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT50p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT51p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT52p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT53p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT54p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT55p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT56p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT57p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT60p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT61p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT62p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT63p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT64p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT65p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT66p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT67p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT70p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT71p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT72p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT73p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT74p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT75p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT76p
+	205 140
+	16 16
+	+
+	
+	pbut PBUT77p
+	285 140
+	16 16
+	+
+	
+	pbut PBUT00m
+	149 140
+	16 16
+	-
+	
+	pbut PBUT01m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT02m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT03m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT04m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT05m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT06m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT07m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT10m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT11m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT12m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT13m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT14m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT15m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT16m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT17m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT20m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT21m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT22m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT23m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT24m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT25m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT26m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT27m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT30m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT31m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT32m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT33m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT34m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT35m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT36m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT37m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT40m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT41m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT42m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT43m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT44m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT45m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT46m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT47m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT50m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT51m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT52m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT53m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT54m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT55m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT56m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT57m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT60m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT61m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT62m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT63m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT64m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT65m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT66m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT67m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT70m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT71m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT72m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT73m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT74m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT75m
+	285 140
+	16 16
+	-
+	
+	pbut PBUT76m
+	205 140
+	16 16
+	-
+	
+	pbut PBUT77m
+	285 140
+	16 16
+	-
+	
+	text TEXTPO
+	265 560
+	144 16
+	payoff
+}

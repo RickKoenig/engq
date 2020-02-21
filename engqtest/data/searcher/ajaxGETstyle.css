@@ -1,0 +1,9 @@
+body{background-color:blue;color:white;font-size:120%}
+.divStyle {
+	background-color:lightblue;
+	margin-left:50px;
+	margin-right:100px;
+	border-style:solid;
+	color:darkblue;
+	font-size:120%
+}

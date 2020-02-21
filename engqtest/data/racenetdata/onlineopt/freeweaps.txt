@@ -1,0 +1,12 @@
+# objects to free from scene
+mdlPTmissiles_B.mxo
+mdlPTmissiles_C.mxo
+mdlPTmissiles_D.mxo
+grpPTmissiles_act.mxo
+grpPTmissiles_res.mxo
+mdlPTmissiles_car.mxo
+
+grpPTicrms_res.mxo
+mdlPTicrms_car.mxo
+
+slecs 34696

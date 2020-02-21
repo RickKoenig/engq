@@ -1,0 +1,24 @@
+body {
+	margin:2px;
+}
+div {
+	text-align:center;
+	line-height:120%;
+}
+
+div.centerg {
+	margin:auto;
+	background-color:#d0d0d0;
+}
+
+#mycanvas2 {
+	margin:auto;
+	margin-top:20px;
+	//border:20px;
+	//border-style:solid;
+	//border-color:#ff0000 #0000ff;
+	background-color: white;
+ 	width:1024px;
+ 	height:768px;
+ 	display:block;
+}

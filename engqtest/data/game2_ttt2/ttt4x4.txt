@@ -1,0 +1,5 @@
+// dimension
+4 4
+// numpieces
+0
+// pieces

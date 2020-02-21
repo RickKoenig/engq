@@ -1,0 +1,92 @@
+﻿  cpu.c
+  apiwrapper.c
+  bitwise.c
+  decapiwrapper.c
+  decinfo.c
+  dequant.c
+  fragment.c
+  huffdec.c
+  info.c
+  internal.c
+  state.c
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\dec\state.c(868): warning C4456: declaration of 'ci' hides previous local declaration
+  c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\dec\state.c(804): note: see declaration of 'ci'
+  mmxfrag.c
+  mmxidct.c
+  mmxloopfilter.c
+  mmxstate.c
+  x86state.c
+  encapiwrapper.c
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\encapiwrapper.c(209): warning C4018: '<': signed/unsigned mismatch
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\encapiwrapper.c(220): warning C4018: '<': signed/unsigned mismatch
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\encapiwrapper.c(221): warning C4018: '<': signed/unsigned mismatch
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\encapiwrapper.c(227): warning C4018: '<': signed/unsigned mismatch
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\encapiwrapper.c(228): warning C4018: '<': signed/unsigned mismatch
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\encapiwrapper.c(230): warning C4018: '<': signed/unsigned mismatch
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\encapiwrapper.c(260): warning C4389: '!=': signed/unsigned mismatch
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\encapiwrapper.c(261): warning C4389: '!=': signed/unsigned mismatch
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\encapiwrapper.c(273): warning C4389: '==': signed/unsigned mismatch
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\encapiwrapper.c(284): warning C4018: '>': signed/unsigned mismatch
+  encoder_huffman.c
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\encoder_huffman.c(233): warning C4456: declaration of 'ret' hides previous local declaration
+  c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\encoder_huffman.c(229): note: see declaration of 'ret'
+  encoder_idct.c
+  encoder_quant.c
+  Generating Code...
+  decode.c
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\dec\decode.c(844): warning C4456: declaration of 'frag' hides previous local declaration
+  c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\dec\decode.c(782): note: see declaration of 'frag'
+  idct.c
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\dec\idct.c(238): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\dec\idct.c(269): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
+  quant.c
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\dec\quant.c(125): warning C4701: potentially uninitialized local variable 'j' used
+  blockmap.c
+  dct.c
+  dct_decode.c
+  dct_encode.c
+  dsp.c
+  encode.c
+  encoder_toplevel.c
+  frarray.c
+  frinit.c
+  mcomp.c
+  misc_common.c
+  pb.c
+  pp.c
+  reconstruct.c
+  scan.c
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2117): warning C4701: potentially uninitialized local variable 'FragIndex' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2117): warning C4701: potentially uninitialized local variable 'YUVDiffsPtr' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2117): warning C4703: potentially uninitialized local pointer variable 'YUVDiffsPtr' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2111): warning C4701: potentially uninitialized local variable 'PixelsChangedPtr0' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2111): warning C4703: potentially uninitialized local pointer variable 'PixelsChangedPtr0' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2078): warning C4701: potentially uninitialized local variable 'DispFragPtr0' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2078): warning C4703: potentially uninitialized local pointer variable 'DispFragPtr0' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2117): warning C4701: potentially uninitialized local variable 'ChLocalsPtr0' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2117): warning C4703: potentially uninitialized local pointer variable 'ChLocalsPtr0' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2096): warning C4701: potentially uninitialized local variable 'ScoreFragIndex1' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2139): warning C4701: potentially uninitialized local variable 'ChLocalsPtr1' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2139): warning C4703: potentially uninitialized local pointer variable 'ChLocalsPtr1' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2150): warning C4701: potentially uninitialized local variable 'PixelsChangedPtr1' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2150): warning C4703: potentially uninitialized local pointer variable 'PixelsChangedPtr1' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2143): warning C4701: potentially uninitialized local variable 'PixelScoresPtr1' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2143): warning C4703: potentially uninitialized local pointer variable 'PixelScoresPtr1' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2160): warning C4701: potentially uninitialized local variable 'YUVDiffsPtr1' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2160): warning C4703: potentially uninitialized local pointer variable 'YUVDiffsPtr1' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2160): warning C4701: potentially uninitialized local variable 'FragScoresPtr1' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2160): warning C4703: potentially uninitialized local pointer variable 'FragScoresPtr1' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2092): warning C4701: potentially uninitialized local variable 'DispFragPtr1' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2092): warning C4703: potentially uninitialized local pointer variable 'DispFragPtr1' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2179): warning C4701: potentially uninitialized local variable 'YUVDiffsPtr2' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2179): warning C4703: potentially uninitialized local pointer variable 'YUVDiffsPtr2' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2179): warning C4701: potentially uninitialized local variable 'PixelScoresPtr2' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2179): warning C4703: potentially uninitialized local pointer variable 'PixelScoresPtr2' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2179): warning C4701: potentially uninitialized local variable 'FragScoresPtr2' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2179): warning C4703: potentially uninitialized local pointer variable 'FragScoresPtr2' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2179): warning C4701: potentially uninitialized local variable 'DispFragPtr2' used
+c:\srcw32\vs2017\engq\libtheora-1.0beta3\lib\enc\scan.c(2179): warning C4703: potentially uninitialized local pointer variable 'DispFragPtr2' used
+  dsp_mmx.c
+  fdct_mmx.c
+  recon_mmx.c
+  libtheora.vcxproj -> C:\srcw32\vs2017\engq\libtheora-1.0beta3\win32\VS2005\libtheora\.\libtheora.lib

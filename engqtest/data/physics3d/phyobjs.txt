@@ -1,0 +1,225 @@
+##new physics state 52
+littlegee 10
+
+object box1 
+	pos -40 12.5 0
+	scale 15 5 15
+#	cm 0 0 0
+	vel 40 0 40
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 9
+	elast .9
+
+object box1 
+	pos 0 12.5 20
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 0 12.5 0
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 0 12.5 -20
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 20 12.5 20
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 20 12.5 0
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 40 12.5 -20
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 40 12.5 20
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 40 12.5 0
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 20 2.5 -20
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+	pos -40 2.5 0
+	scale 15 5 15
+#	cm 0 0 0
+	vel 40 0 40
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 9
+	elast .9
+
+object box1 
+	pos 0 2.5 20
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 0 2.5 0
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 0 2.5 -20
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 20 2.5 20
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 20 2.5 0
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 40 2.5 -20
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 40 2.5 20
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 40 2.5 0
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+object box1 
+	pos 20 2.5 -20
+	scale 5 5 5
+#	cm 0 0 0
+	vel 0 0 0
+	rot 0 0 0
+	rotvel 0 0 0
+	mass 1
+	elast .9
+
+#object cyl1 
+#	pos 40 15 0
+#	scale 10 10 10
+##	vel 0 0 -1
+##	cm 2 4 -3
+##	rot 0 15 0
+##	rotvel 0 45 0
+#	mass 10
+
+#object sph1 
+#	pos -40 15 0
+#	scale 10 10 10
+##	vel -10 0 0
+##	rot 0 0 15
+##	rotvel 0 0 45
+#	mass 100
+
+#elast
+#friction
+#mass, 0 means infinite
+#vel
+#rotvel
+# no cm

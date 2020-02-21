@@ -1,0 +1,252 @@
+shape gametheory  0 0 {
+
+  pbut 0 
+	  30 500
+	  40 20
+	  "U"
+	
+  pbut 1 
+	  30 560
+	  40 20
+	  "U -1"
+	
+  pbut 2 
+	  130 500
+	  40 20
+	  "D"
+	
+  pbut 3 
+	  130 560
+	  40 20
+	  "D -1"
+	
+  pbut 4 
+	  230 500
+	  40 20
+	  "F"
+	
+  pbut 5 
+	  230 560
+	  40 20
+	  "F -1"
+	
+  pbut 6 
+	  330 500
+	  40 20
+	  "B"
+	
+  pbut 7 
+	  330 560
+	  40 20
+	  "B -1"
+	
+  pbut 8 
+	  430 500
+	  40 20
+	  "R"
+	
+  pbut 9 
+	  430 560
+	  40 20
+	  "R -1"
+	
+  pbut 10 
+	  530 500
+	  40 20
+	  "L"
+	
+  pbut 11 
+	  530 560
+	  40 20
+	  "L -1"
+	
+  pbut QUIT1 
+	  625 420
+	  160 20
+	  "QUIT"
+	
+  pbut LOAD1 
+	  625 20
+	  60 20
+	  "LOAD1"
+	
+  pbut LOAD2 
+	  625 45
+	  60 20
+	  "LOAD2"
+	
+  pbut LOAD3 
+	  625 70
+	  60 20
+	  "LOAD3"
+	
+  pbut LOAD4 
+	  625 95
+	  60 20
+	  "LOAD4"
+	
+  pbut LOAD5 
+	  625 120
+	  60 20
+	  "LOAD5"
+	
+  pbut LOAD6 
+	  625 145
+	  60 20
+	  "LOAD6"
+	
+  pbut SAVE1 
+	  700 20
+	  60 20
+	  "SAVE1"
+	
+  pbut SAVE2 
+	  700 45
+	  60 20
+	  "SAVE2"
+	
+  pbut SAVE3 
+	  700 70
+	  60 20
+	  "SAVE3"
+	
+  pbut SAVE4 
+	  700 95
+	  60 20
+	  "SAVE4"
+	
+  pbut SAVE5 
+	  700 120
+	  60 20
+	  "SAVE5"
+	
+  pbut SAVE6 
+	  700 145
+	  60 20
+	  "SAVE6"
+	
+  pbut RESET 
+	  625 200
+	  80 20
+	  "RESET"
+	
+  pbut SCRAMBLE 
+	  625 235
+	  80 20
+	  "SCRAMBLE"
+	
+  pbut ROTCW 
+	  625 325
+	  80 20
+	  "ROTCW"
+	
+  pbut ROTCCW 
+	  625 360
+	  80 20
+	  "ROTCCW"
+
+  pbut P1 
+	  625 360
+	  80 20
+	  "P1"
+
+  pbut P2 
+	  625 360
+	  80 20
+	  "P2"
+
+  pbut P3 
+	  625 360
+	  80 20
+	  "P3"
+
+  pbut P4 
+	  625 360
+	  80 20
+	  "P4"
+
+  pbut P5 
+	  625 360
+	  80 20
+	  "P5"
+
+  pbut P6 
+	  625 360
+	  80 20
+	  "P6"
+
+  pbut P7 
+	  625 360
+	  80 20
+	  "P7"
+
+  pbut P8 
+	  625 360
+	  80 20
+	  "P8"
+
+  pbut P9 
+	  625 360
+	  80 20
+	  "P9"
+
+  pbut P10 
+	  625 360
+	  80 20
+	  "P10"
+
+  pbut P1 
+	  625 360
+	  80 20
+	  "P1"
+
+  pbut P2 
+	  625 360
+	  80 20
+	  "P2"
+
+  pbut P3 
+	  625 360
+	  80 20
+	  "P3"
+
+  pbut P4 
+	  625 360
+	  80 20
+	  "P4"
+
+  pbut P5 
+	  625 360
+	  80 20
+	  "P5"
+
+  pbut P6 
+	  625 360
+	  80 20
+	  "P6"
+
+  pbut P7 
+	  625 360
+	  80 20
+	  "P7"
+
+  pbut P8 
+	  625 360
+	  80 20
+	  "P8"
+
+  pbut P9 
+	  625 360
+	  80 20
+	  "P9"
+
+  pbut P10 
+	  625 360
+	  80 20
+	  "P10"
+
+pbut RECDONE 
+	  625 360
+	  80 20
+	"RECDONE"
+}

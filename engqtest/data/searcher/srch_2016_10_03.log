@@ -1,0 +1,11 @@
+open daylog at Mon Oct 03 04:08:12 2016
+getbuffer '76.218.105.191:55225': 'GET /'
+getbuffer '76.218.105.191:55226': 'GET /sake0018.jpg'
+getbuffer '76.218.105.191:55228': 'GET /favicon.ico'
+getbuffer '76.218.105.191:55229': 'GET /search?q=lepton'
+ip '76.218.105.191' searching for 'search?q=lepton' at Mon Oct 03 04:08:49 2016
+getbuffer '76.218.105.191:55349': 'GET /search?q=lepton+wiki'
+ip '76.218.105.191' searching for 'search?q=lepton+wiki' at Mon Oct 03 04:09:41 2016
+getbuffer '76.218.105.191:55357': 'GET /search?q=lepton+wikipedia'
+ip '76.218.105.191' searching for 'search?q=lepton+wikipedia' at Mon Oct 03 04:10:15 2016
+close daylog at Mon Oct 03 04:10:45 2016

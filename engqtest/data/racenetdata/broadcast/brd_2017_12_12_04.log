@@ -1,0 +1,31 @@
+open hourlylog at Tue Dec 12 04:45:47 2017
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+BR     100, BW      20, S  10, BR/S      10, BW/S       2
+BR    3359, BW    3603, S  10, BR/S     335, BW/S     360
+BR    6805, BW    6805, S  10, BR/S     680, BW/S     680
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6010, BW    6010, S  10, BR/S     601, BW/S     601
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    7590, BW    7590, S  10, BR/S     759, BW/S     759
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6136, BW    6020, S  10, BR/S     613, BW/S     602
+BR    6010, BW    6010, S  10, BR/S     601, BW/S     601
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6010, BW    6010, S  10, BR/S     601, BW/S     601
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6030, BW    6030, S  10, BR/S     603, BW/S     603
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6068, BW    6010, S  10, BR/S     606, BW/S     601
+BR    6020, BW    6020, S  10, BR/S     602, BW/S     602
+BR    6078, BW    6020, S  10, BR/S     607, BW/S     602
+BR    4645, BW    3738, S  10, BR/S     464, BW/S     373
+BR       0, BW       0, S  10, BR/S       0, BW/S       0
+close hourlylog at Tue Dec 12 04:51:01 2017

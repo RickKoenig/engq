@@ -1,0 +1,17 @@
+# board x y then xy of . blank, Pn piece n, Gn goal n, W wall
+9 7
+ W  W  W  W  W  W  W  W  W
+ W P0  .  .  .  .  .  G0  W
+ W P0  W  W  W  W  W  .  W
+ W P0  W  .  .  .  W  .  W
+ W P0 W  .  W  W  W  .  W
+ W P0  W  .  .  .  .  .  W
+ W  W  W  W  W  W  W  W  W
+ 
+# number of shapes
+1
+
+# shape 0 x y then xy of . blank, 1 solid
+1 1
+1
+

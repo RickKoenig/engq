@@ -1,0 +1,367 @@
+------------------------ trees with user properties -------------------------------------------
+   grpPToil_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=back,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptoil_act;'
+   grpPToil.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=back,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptoil;'
+   dumPToil_res.mxo', mod 'dumPToil_res.mxo', drawpri 1, proc 00421f60 flags ( ) o2p 'O2P_QUAT' scale (0.413223,0.413223,0.413223)
+      userprop  0: 'partLinkInf=trunk,other,baseNode;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=dumptoil_res;'
+   grpPToil_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=bottom,other,baseNode;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptoil_res;'
+   grpPTecto.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=roof,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptecto;'
+   grpPTecto_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=front,other,baseNode;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptecto_res;'
+   grpPTecto_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=roof,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptecto_dep;'
+   grpPTecto_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=roof,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptecto_act;'
+   dumPTecto_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=roof,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=dumptecto_act;'
+   grpPTlaser.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=left,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptlaser;'
+   grpPTlaser_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=left,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptlaser_act;'
+   grpPTklondyke_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (-1,-1,-1)
+      userprop  0: 'partLinkInf=front,other,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptklondyke_res;'
+   grpPTklondyke.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=left,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptklondyke;'
+   grpPTklondyke01.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (-1,-1,-1)
+      userprop  0: 'partLinkInf=left,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptklondyke;'
+   grpPTmissiles.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=roof,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptmissiles;'
+     grpPTmissiles_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (14.329,14.329,14.329)
+        userprop  0: 'partLinkInf=roof,self,body;'
+        userprop  1: 'partStayLinked=true;'
+        userprop  2: 'name=grpptmissiles_dep;'
+   grpPTmissiles_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=roof,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptmissiles_act;'
+   dumPTmissiles_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'sw3d_visibility=none;'
+      userprop  1: 'partLinkInf=roof,self,baseNode;'
+      userprop  2: 'partStayLinked=true;'
+      userprop  3: 'name=dumptmissiles_dep;'
+   dumPTmissiles_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'sw3d_visibility=none;'
+      userprop  1: 'partLinkInf=roof,self,baseNode;'
+      userprop  2: 'partStayLinked=true;'
+      userprop  3: 'name=dumptmissiles_act;'
+   grpPTmissiles_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=back,other,baseNode;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptmissiles_res;'
+   dumPTmissiles_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=back,other,baseNode;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=dumptmissiles_res;'
+   grpPTemb_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptemb_dep;'
+   grpPTemb.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptemb;'
+    mdlPTemb.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+       userprop  0: 'partLinkInf=trunk,self;'
+       userprop  1: 'partStayLinked=true;'
+       userprop  2: 'name=mdlptemb;'
+   grpPTemb_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=roof,other,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptemb_res;'
+   grpPTemb_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=roof,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptemb_act;'
+   dumPTemb_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'sw3d_visibility=none;'
+      userprop  3: 'name=dumptemb_dep;'
+   grpPTplasma.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partCarDepSelf=true;'
+      userprop  1: 'partCarActSelf=true;'
+      userprop  2: 'partCarResSelf=true;'
+      userprop  3: 'partLinkInf=back,self,body;'
+      userprop  4: 'partStayLinked=true;'
+      userprop  5: 'name=grpptplasma;'
+   grpPTtransducer.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=left,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grppttransducer;'
+   grpPTtransducer_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=front,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grppttransducer_res;'
+   grpPTtransducer_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=front,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grppttransducer_dep;'
+   grpPTdielectric.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=bottom,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptdielectric;'
+   grpPTdielectric_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptdielectric_res;'
+   dumPTdielectric_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=roof,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'sw3d_visibility=none;'
+      userprop  3: 'name=dumptdielectric_res;'
+   dumPTdielectric_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=back,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'sw3d_visibility=none;'
+      userprop  3: 'name=dumptdielectric_dep;'
+   grpPTaerodyne.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptaerodyne;'
+   grpPTaerodyne_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=back,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptaerodyne_act;'
+   dumPTaerodyne_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'sw3d_visibility=none;'
+      userprop  1: 'partLinkInf=back,self,baseNode;'
+      userprop  2: 'partStayLinked=true;'
+      userprop  3: 'name=dumptaerodyne_res;'
+   dumPTaerodyne_dep.mxo', mod 'dumPTaerodyne_dep.mxo', drawpri 1, proc 00421f60 flags ( ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'sw3d_visibility=none;'
+      userprop  3: 'name=dumptaerodyne_dep;'
+   grpPTferrite.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=bottom,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptferrite;'
+   grpPTFerrite_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=bottom,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptferrite_act;'
+   grpPTferrite_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=bottom,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptferrite_dep;'
+   grpPTferrite_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=bottom,self,baseNode;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptferrite_res;'
+   grpPTspikes.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=tireBL,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptspikes;'
+   grpPTspikes_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=tireBL,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptspikes_act;'
+   grpPTspikes01.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (-1,-1,-1)
+      userprop  0: 'partLinkInf=tireBL,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptspikes;'
+   grpPTbainite_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=left,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptbainite_dep;'
+   tPTbainite_rim.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=left,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=tptbainite_rim;'
+   tPTbainite_parks.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=left,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=tptbainite_parks;'
+   grpPTbainite.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=tireBL,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptbainite;'
+    mdlPTbainite.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+       userprop  0: 'partLinkInf=left,self;'
+       userprop  1: 'partStayLinked=true;'
+       userprop  2: 'name=mdlptbainite;'
+   dumPTbainite_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=tireBL,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'sw3d_visibility=none;'
+      userprop  3: 'name=dumptbainite_dep;'
+   grpPTbainite_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=tireBL,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptbainite_res;'
+   dumPTbainite_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=back,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'sw3d_visibility=none;'
+      userprop  3: 'name=dumptbainite_res;'
+   dumPTbainite_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'sw3d_visibility=none;'
+      userprop  1: 'partLinkInf=tireBL,self;'
+      userprop  2: 'partStayLinked=true;'
+      userprop  3: 'name=dumptbainite_act;'
+   grpPTbainite01.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (-1,-1,-1)
+      userprop  0: 'partLinkInf=tireBL,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptbainite;'
+    mdlPTbainite02.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+       userprop  0: 'partLinkInf=left,self;'
+       userprop  1: 'partStayLinked=true;'
+       userprop  2: 'name=mdlptbainite;'
+       userprop  3: 'nolight'
+   grpPTramjet.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partCarDepSelf=true;'
+      userprop  1: 'partCarActSelf=true;'
+      userprop  2: 'partCarResSelf=true;'
+      userprop  3: 'partLinkInf=roof,self,body;'
+      userprop  4: 'partStayLinked=true;'
+      userprop  5: 'name=grpptramjet;'
+   dumPTramjet_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=back,self,baseNode;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'sw3d_visibility=none;'
+      userprop  3: 'name=dumptramjet_res;'
+   dumPTramjet_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=hood,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'sw3d_visibility=none;'
+      userprop  3: 'name=dumptramjet_dep;'
+   grpPTintake.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=hood,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptintake;'
+   grpPTintake_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=hood,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptintake_act;'
+   grpPTintake_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=back,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptintake_res;'
+   dumPTintake_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=back,self,baseNode;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=dumptintake_res;'
+   dumPTintake_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'sw3d_visibility=none;'
+      userprop  1: 'partLinkInf=hood,self,body;'
+      userprop  2: 'partStayLinked=true;'
+      userprop  3: 'name=dumptintake_dep;'
+   grpPTnano.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (0.0160109,0.0160109,0.0160109)
+      userprop  0: 'partLinkInf=back,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptnano;'
+   dumPTnano_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=hood,self,baseNode;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=dumptnano_act;'
+   dumPTnano_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (0.00762835,0.00762835,0.00762835)
+      userprop  0: 'sw3d_visibility=none;'
+      userprop  1: 'partLinkInf=back,self,baseNode;'
+      userprop  2: 'partStayLinked=true;'
+      userprop  3: 'name=dumptnano_dep;'
+   grpPTrpd.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptrpd;'
+   grpPTrpd_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=left,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptrpd_act;'
+    mdlPTrpd_webbox.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (9.125,12.3173,35.3636)
+       userprop  0: 'partLinkInf=left,self;'
+       userprop  1: 'partStayLinked=true;'
+       userprop  2: 'sw3d_visibility=front;'
+       userprop  3: 'name=mdlptrpd_webbox;'
+   grpPTrpd_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptrpd_dep;'
+   dumPTrpd_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'sw3d_visibility=none;'
+      userprop  3: 'name=dumptrpd_dep;'
+   grpPTWeapBoost.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (0.396781,0.396781,0.396781)
+      userprop  0: 'partLinkInf=trunk,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptweapboost;'
+   grpPTWeapBoost_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (0.7259,0.7259,0.7259)
+      userprop  0: 'partLinkInf=trunk,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptweapboost_act;'
+   dumPTWeapBoost_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=back,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'sw3d_visibility=none;'
+      userprop  3: 'name=dumptweapboost_dep;'
+   dumPTWeapBoost_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self,baseNode;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'sw3d_visibility=none;'
+      userprop  3: 'name=dumptweapboost_act;'
+   grpPTrandomizer.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partStayLinked=true;'
+      userprop  1: 'partLinkInf=trunk,self;'
+      userprop  2: 'name=grpptrandomizer;'
+   grpPTrandomizer_act.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptrandomizer_act;'
+   grpPTrandomizer_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptrandomizer_dep;'
+   grpPTrandomizer_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grpptrandomizer_res;'
+   dumPTrandomizer_dep.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=trunk,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'sw3d_visibility=none;'
+      userprop  3: 'name=dumptrandomizer_dep;'
+   grpPTicrms.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=roof,self,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grppticrms;'
+   grpPTicrms_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=back,other,body;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=grppticrms_res;'
+   dumPTicrms_res.mxo', proc 00421f60 flags ( isnull ) o2p 'O2P_QUAT' scale (1,1,1)
+      userprop  0: 'partLinkInf=roof,other,baseNode;'
+      userprop  1: 'partStayLinked=true;'
+      userprop  2: 'name=dumpticrms_res;'

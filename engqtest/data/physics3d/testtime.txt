@@ -1,0 +1,32 @@
+
+littlegee 10
+object sph1 
+	scale 10 10 10
+	pos -40 30 0
+	mass 1
+	elast .5
+
+object box1 
+	scale 10 10 10
+	pos -20 30 0
+	mass 1
+	elast .5
+
+object ellipse 
+	scale 10 10 10
+	pos 20 30 0
+	mass 1
+	elast .5
+
+object cyl1 
+	scale 10 10 10
+	pos 40 30 0
+	mass 1
+	elast .5
+
+object football 
+	scale 10 10 10
+	pos 0 30 -20
+	mass 1
+	elast .5
+

@@ -1,0 +1,169 @@
+shape gametheoryres 0 0 {
+	
+	edit EDITNAME
+	45 35
+	360 20
+//	cgi.www.emccsoft.com
+//	www.magpiemobile.com
+	www.snee.com
+
+	edit EDITFILE
+	45 65
+	340 20
+//	/cgi-bin/www.emccsoft.com/post.pl
+//	/cgi-bin/book_post.cgi
+	/xml/crud/posttest.cgi
+	
+
+	edit EDITPOST
+	390 65
+	340 20
+//	home=Cosby&favorite+flavor=flies
+	fname=Dog&lname=Bark
+
+	edit EDITIP
+	45 150
+	360 20
+	0.0.0.0
+
+	text TEXTNAME
+	190 10
+	60 20
+	name
+	
+	text TEXTSTATUS
+	350 10
+	160 20
+	"fetching myip"
+
+	text TEXTIP
+	190 120
+	60 20
+	ip
+
+	text TEXTMYNAMEI
+	590 10
+	60 20
+	myname
+
+	text TEXTMYNAME
+	490 40
+	260 20
+	host
+
+	text TEXTMYIPI
+	590 90
+	60 20
+	myip
+
+	text TEXTMYIP
+	540 120
+	160 20
+	0.0.0.0
+
+	pbut PBUTNAME2IP
+	10 90
+	160 20
+	"vvv name to ip vvv"
+	
+	pbut PBUTIP2NAME
+	285 90
+	160 20
+	"^^^ ip to name ^^^"
+
+	pbut PBUTM28
+	13 122
+	16 16
+	-
+
+	pbut PBUTP28
+	30 122
+	16 16
+	+
+
+	pbut PBUTM24
+	53 122
+	16 16
+	-
+
+	pbut PBUTP24
+	70 122
+	16 16
+	+
+
+	pbut PBUTM20
+	93 122
+	16 16
+	-
+
+	pbut PBUTP20
+	110 122
+	16 16
+	+
+
+	pbut PBUTM16
+	133 122
+	16 16
+	-
+
+	pbut PBUTP16
+	150 122
+	16 16
+	+
+
+	pbut PBUTM12
+	263 122
+	16 16
+	-
+
+	pbut PBUTP12
+	280 122
+	16 16
+	+
+
+	pbut PBUTM8
+	303 122
+	16 16
+	-
+
+	pbut PBUTP8
+	320 122
+	16 16
+	+
+
+	pbut PBUTM4
+	343 122
+	16 16
+	-
+
+	pbut PBUTP4
+	360 122
+	16 16
+	+
+
+	pbut PBUTM0
+	383 122
+	16 16
+	-
+
+	pbut PBUTP0
+	400 122
+	16 16
+	+
+
+	pbut PBUTPOST
+	450 150
+	160 20
+	"Post!"
+
+	pbut PBUTABORT
+	620 150
+	160 20
+	"Cancel"
+
+	pbut PBUTQUIT
+	625 575
+	160 20
+	QUIT
+	
+}

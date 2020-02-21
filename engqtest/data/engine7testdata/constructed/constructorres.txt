@@ -1,0 +1,142 @@
+shape rootmenu 0 0 {
+
+# background
+//  back BACK1
+// 	0 0
+//	800 600
+
+# current track
+	text TEXTTRACK
+	630 10
+	160 20
+	"Track Name"
+
+# exit
+	pbut PBUTBACKDELETE
+	630 510
+	160 20
+	"Delete and Back"
+	pbut PBUTBACKSAVE
+	630 540
+	160 20
+	"Save and Back"
+	pbut PBUTBACKNOSAVE
+	630 570
+	160 20
+	"No Save and Back"
+
+# copy
+	pbut PBUTCOPY
+	630 40
+	160 20
+	"Copy and Name"
+
+# clear
+	pbut PBUTCLEAR
+	630 70
+	160 20
+	"Clear Track"
+
+# base tex
+	text TEXTBASETEX
+	530 60
+	100 20
+	"Base Texture"
+	vscroll VSLIDERBASETEX
+	570 90
+	20 160
+
+# piece types
+	listbox LISTPIECETYPES
+	630 140
+	160 100
+	text TEXTPIECETYPES
+	680 120
+	100 15
+	"Piece types"
+
+# rotate track piece
+	text TEXTROTATE
+	600 250
+	60 15
+	"Rotate"
+	pbut PBUTROTATELEFT
+	660 250
+	50 15
+	"Left"
+	pbut PBUTROTATERIGHT
+	720 250
+	50 15
+	"Right"
+}
+
+/*
+# background
+res back BACK1 0
+	loc 0 0
+	size 800 600
+
+# current track
+res text TEXTTRACK 1
+	loc 630 10
+	size 160 20
+	name "Track Name"
+
+# exit
+res pbut PBUTBACKSAVE 2
+	loc 630 510
+	size 160 20
+	name "Save and Back"
+res pbut PBUTBACKNOSAVE 3
+	loc 630 540
+	size 160 20
+	name "No Save and Back"
+res pbut PBUTBACKDELETE 4
+	loc 630 570
+	size 160 20
+	name "Delete and Back"
+
+# copy
+res pbut PBUTCOPY 5
+	loc 630 40
+	size 160 20
+	name "Copy and Name"
+
+# clear
+res pbut PBUTCLEAR 6
+	loc 630 70
+	size 160 20
+	name "Clear Track"
+
+# base tex
+res	text TEXTBASETEX 7
+	loc 530 60
+	size 100 20
+	name "Base Texture"
+res vslider VSLIDERBASETEX 8
+	loc 570 90
+	size 20 160
+
+# piece types
+res	listbox LISTPIECETYPES 9
+	loc 630 140
+	size 160 100
+res text TEXTPIECETYPES 10
+	loc 680 120
+	size 100 15
+	name "Piece types"
+
+# rotate track piece
+res	text TEXTROTATE 11
+	loc 600 250
+	size 60 15
+	name "Rotate"
+res pbut PBUTROTATELEFT 12
+	loc 660 250
+	size 50 15
+	name "Left"
+res pbut PBUTROTATERIGHT 13
+	loc 720 250
+	size 50 15
+	name "Right"
+*/

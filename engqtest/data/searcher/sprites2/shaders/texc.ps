@@ -1,0 +1,11 @@
+uniform sampler2D uSampler;
+uniform highp vec4 color;      
+uniform mediump float alphacutoff;      
+     
+varying highp vec2 vTextureCoord;
+
+void main(void) {
+	gl_FragColor = texture2D(uSampler,vTextureCoord) * color;
+	if (gl_FragColor.a < alphacutoff)
+		discard;
+}

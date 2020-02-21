@@ -1,0 +1,25 @@
+track.bwo
+geo.bwo
+bridge.bwo
+bridgebase.bwo
+roof.bwo
+colwall.bwo
+colwall2 bwo
+masoleum.bwo
+tombstone.bwo
+cemetaryFence.bwo
+
+
+
+# new stuff
+#terrain04.bwo
+#"old terrain.bwo"
+#terrain02.bwo
+
+#1 rock01 hitground
+#1 cliff1m hitground
+#1 cliffmag hitground
+#1 magma3 hitground
+#1 magma2 hitground
+#1 centerlava hitground
+#1 magma hitground

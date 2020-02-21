@@ -1,0 +1,101 @@
+100  2
+"SWAP TOP"  0   "SWAP BOTTOM"  0   -1
+"CNOT TOP"  0   "CNOT BOTTOM"  0   -1
+"CZ TOP"  0   "CZ BOTTOM"  0   -1
+"CY TOP"  0   "CY BOTTOM"  0   -1
+"CH TOP"  0   "CH BOTTOM"  0   -1
+"CP 45 TOP"  0   "CP 45 BOTTOM"  0   -1
+"CP -45 TOP"  0   "CP -45 BOTTOM"  0   -1
+"CP 30 TOP"  0   "CP 30 BOTTOM"  0   -1
+"CP -30 TOP"  0   "CP -30 BOTTOM"  0   -1
+"DEC TOP"  0   "DEC BOTTOM"  0   -1
+"NONE"  1   "NONE"  0   -1
+"CS TOP"  0   "CS BOTTOM"  0   -1
+"CSt TOP"  0   "CSt BOTTOM"  0   -1
+"CT TOP"  0   "CT BOTTOM"  0   -1
+"CTt TOP"  0   "CTt BOTTOM"  0   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1
+"NONE"  0   "NONE"  1   -1

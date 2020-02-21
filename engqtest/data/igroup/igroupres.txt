@@ -1,0 +1,33 @@
+shape quant3res 0 0 {
+	
+// reset board
+	pbut BRESET
+	630 450
+	160 20
+	RESET
+	
+// backup board
+	pbut BBACKUP
+	630 480
+	160 20
+	BACKUP
+	
+// bigger board
+	pbut BBIGGER
+	630 510
+	160 20
+	BIGGER
+	
+// smaller board
+	pbut BSMALLER
+	630 540
+	160 20
+	SMALLER
+	
+// quit
+	pbut BQUIT
+	630 570
+	160 20
+	QUIT
+	
+}

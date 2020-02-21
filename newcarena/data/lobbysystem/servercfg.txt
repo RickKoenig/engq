@@ -1,0 +1,9 @@
+ip "0.0.0.0"
+ip "76.218.105.191"
+ip "127.0.0.1"
+port "5410"
+port "5412"
+port "5413"
+ipidx 0
+portidx 0
+servername "MATCHING_SERVER"

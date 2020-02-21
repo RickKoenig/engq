@@ -1,0 +1,33 @@
+// SYSTEM very global /////////////////////////////////////////
+	tex				tex
+	lightmap		lightmap // tex or lightmap
+	texadd			texadd	// like tex but adds instead of mul, but alpha still muls
+	cvert			cvert
+	vdiff			vdiff
+	pdiff			pdiff
+	vdiffspec		vdiffspec
+	pdiffspec		pdiffspec
+	
+	pnormalmap		pnormalmap
+	
+	makeshadowmap	makeshadowmap
+	useshadowmap	useshadowmap
+	shadowmapviewer shadowmapviewer
+	
+	env				env
+	
+	tex2c			tex2c
+	
+
+	stan			stan
+	
+//	edge			edge // now handled by the various carmat2shader.txt 's
+//	toon			toon
+	toon2			toon2
+	
+	envv2			envv2		// new environment map shader
+	texvel			texvel		// tex with texvel
+	envv2texvel		envv2texvel // envv2 with texvel
+	
+	Laser			laserbeam
+	cvertvel		cvertvel

@@ -1,0 +1,13 @@
+0 www.pbs.org/wgbh/nova/elegant/program.html
+1 www.janko.at/Raetsel/index.htm
+2 kpix.com
+3 www.yahoo.com
+4 www.google.com
+
+5 en.wikipedia.org/wiki/White_Mountain_Peak
+6 www.bureau42.com/view/6841/summer-school-2010-1-quantum-physics
+7 dwclogic.com
+8 www.dadgum.com/giantlist
+
+255 dwclogic.com
+65535 www.dadgum.com/giantlist
