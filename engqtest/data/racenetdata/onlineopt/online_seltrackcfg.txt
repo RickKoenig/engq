@@ -7,7 +7,7 @@ nettype 0
 serverip 127.0.0.1
 port 5421
 carname "abe"
-carbody "RollCage"
+carbody "SurfinSchoolBus"
 rims 4
 gameid 95
 gametype A
@@ -34,11 +34,11 @@ altcarbody4 "megaduty"
 altrims4 1
 altcarpaint4 "paint09"
 altcardecal4 "decal10"
-hue0_0 255
-sat0_0 0
+hue0_0 0
+sat0_0 255
 val0_0 0
-hue0_1 0
-sat0_1 255
+hue0_1 255
+sat0_1 0
 val0_1 0
 hue0_2 0
 sat0_2 0

@@ -1,2 +1,290 @@
-﻿  u_listtest.cpp
+﻿  colutil.cpp
+  n_ai.cpp
+  n_carclass.cpp
+  n_carenaconnect.cpp
+  n_carenagame.cpp
+  n_carenalobby.cpp
+  n_constructor.cpp
+  n_faceverts.cpp
+  n_jrmcars.cpp
+  n_line2road.cpp
+  n_loadweap.cpp
+  n_marching.cpp
+  n_marchingdata.cpp
+  n_marchingtest.cpp
+  n_meshtest.cpp
+  n_newconstructor.cpp
+  n_packet.cpp
+  n_physics.cpp
+  n_polylist.cpp
+  n_rematch.cpp
+  Generating Code...
+  Compiling...
+  n_scrline.cpp
+  n_trackhash.cpp
+  n_tracklist.cpp
+  n_twobj.cpp
+  n_useful.cpp
+  helperobj.cpp
+  hw35_line2road.cpp
+  nfs_choose.cpp
+  nfs_entername.cpp
+  nfs_game.cpp
+  nfs_readyrace.cpp
+  nfs_result.cpp
+  nfs_shell.cpp
+  nfs_smile.cpp
+  nfs_utils.cpp
+  u_listtest.cpp
+  u_oddOneOut.cpp
+  u_permiter.cpp
+  primcoll.cpp
+  box2box.cpp
+  Generating Code...
+  Compiling...
+  broadcast_server.cpp
+  broadcast_testclient.cpp
+  broadcast_testserver.cpp
+  camera.cpp
+  carclass.cpp
+  coins.cpp
+  crasheditor.cpp
+  gameinfo.cpp
+  gamestate.cpp
+  hr_boxai.cpp
+  match_game1.cpp
+  match_hiscores.cpp
+  match_lobby.cpp
+  match_logon.cpp
+  match_options.cpp
+  match_pickgame.cpp
+  match_pickserver.cpp
+  match_quickgame.cpp
+  match_register.cpp
+  match_results.cpp
+  Generating Code...
+  Compiling...
+  match_server.cpp
+  match_title.cpp
+  newlobby.cpp
+  online_seltrack.cpp
+  online_uphysics.cpp
+  online_uplay.cpp
+  packet.cpp
+  scrline.cpp
+  tsp.cpp
+  updater.cpp
+  rungekutta.cpp
+  test.cpp
+  testclassfactory.cpp
+  timelogger.cpp
+  u_ar_parse.cpp
+  u_ar_scan.cpp
+  u_bch.cpp
+  u_cayley.cpp
+  u_circularA.cpp
+  u_circularB.cpp
+  Generating Code...
+  Compiling...
+  u_file_nh.cpp
+  u_font.cpp
+  u_fplot.cpp
+  u_game2.cpp
+  u_gametheory.cpp
+  u_goldbach.cpp
+  u_groupanalyze.cpp
+  u_group_field.cpp
+  u_json.cpp
+  u_list.cpp
+  u_mandl.cpp
+  u_modelutil.cpp
+  u_packer.cpp
+  u_platonic.cpp
+  u_plotter2.cpp
+  u_ply.cpp
+  u_pointcloudfile.cpp
+  u_pointcloudkdtree.cpp
+  u_qcolumn.cpp
+  u_qfieldui.cpp
+  Generating Code...
+  Compiling...
+  u_qgatebase.cpp
+  u_qgatederived.cpp
+  u_qmat.cpp
+  u_qr_code2parse.cpp
+  u_qr_code2scan.cpp
+  u_qr_code_layout_v2.cpp
+  u_qstate.cpp
+  u_searcher_mandle_thread.cpp
+  u_smallgroups.cpp
+  u_spinners.cpp
+  u_states.cpp
+  u_sysdebvars.cpp
+  u_s_3dtest.cpp
+  u_s_ar.cpp
+  u_s_arena1.cpp
+  u_s_arena2.cpp
+  u_s_basic3d.cpp
+  u_s_braid.cpp
+  u_s_browser.cpp
+  u_s_castle.cpp
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(915): warning C4244: 'initializing': conversion from 'S32' to 'float', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(977): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(978): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(984): warning C4244: 'argument': conversion from 'float' to 'S32', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(992): warning C4244: 'argument': conversion from 'float' to 'S32', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(1002): warning C4244: 'argument': conversion from 'float' to 'S32', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(1058): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(1083): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(1099): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(1100): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3001): warning C4305: '=': truncation from 'double' to 'float'
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3008): warning C4305: '=': truncation from 'double' to 'float'
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3015): warning C4305: '=': truncation from 'double' to 'float'
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3022): warning C4305: '=': truncation from 'double' to 'float'
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3029): warning C4305: '=': truncation from 'double' to 'float'
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3036): warning C4305: '=': truncation from 'double' to 'float'
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3043): warning C4305: '=': truncation from 'double' to 'float'
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3131): warning C4244: 'argument': conversion from 'float' to 'U32', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3195): warning C4244: 'argument': conversion from 'float' to 'U32', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3266): warning C4305: '=': truncation from 'double' to 'float'
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3426): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3438): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3448): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3456): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3466): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3603): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3604): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3605): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3614): warning C4244: 'argument': conversion from 'float' to 'S32', possible loss of data
+c:\srcw32\vs2017\engq\engqtest\u_s_castle.cpp(3621): warning C4244: 'argument': conversion from 'float' to 'S32', possible loss of data
+  Generating Code...
+  Compiling...
+  u_s_chattertest.cpp
+  u_s_conduit.cpp
+  u_s_connect4.cpp
+  u_s_cubemaptest.cpp
+  u_s_cubemaptest2.cpp
+  u_s_digital.cpp
+  u_s_game2_endgame.cpp
+  u_s_game2_foxgoose.cpp
+  u_s_game2_nim.cpp
+  u_s_game2_opposition.cpp
+  u_s_game2_ttt.cpp
+  u_s_game2_ttt2.cpp
+  u_s_gametheory.cpp
+  u_s_gfxtest.cpp
+  u_s_gfxview.cpp
+  u_s_halfpipe.cpp
+  u_s_heathouse.cpp
+  u_s_holoview2d.cpp
+  u_s_holoview2db.cpp
+  u_s_holoview3d.cpp
+  Generating Code...
+  Compiling...
+  u_s_honeycomb.cpp
+  u_s_ifield.cpp
+  u_s_igroup.cpp
+  u_s_jelly.cpp
+c:\srcw32\vs2017\engq\engqtest\u_s_jelly.cpp(629): warning C4838: conversion from 'int' to 'S8' requires a narrowing conversion
+c:\srcw32\vs2017\engq\engqtest\u_s_jelly.cpp(821): warning C4838: conversion from 'int' to 'S8' requires a narrowing conversion
+c:\srcw32\vs2017\engq\engqtest\u_s_jelly.cpp(1084): warning C4838: conversion from 'S32' to 'S8' requires a narrowing conversion
+  u_s_jigpuzz.cpp
+  u_s_joetest.cpp
+  u_s_joetest2.cpp
+  u_s_joytest.cpp
+  u_s_laplace_heat.cpp
+  u_s_lightsout.cpp
+  u_s_lighttest.cpp
+  u_s_plot2linear.cpp
+  u_s_luatest.cpp
+  u_s_mainmenu.cpp
+  u_s_mandl.cpp
+  u_s_many.cpp
+  u_s_mattest.cpp
+  u_s_occclient.cpp
+  u_s_occclient2.cpp
+  u_s_occserver.cpp
+  Generating Code...
+  Compiling...
+  u_s_onebit.cpp
+  u_s_particles.cpp
+  u_s_penrose.cpp
+  u_s_physics2d.cpp
+  u_s_physics3d.cpp
+  u_s_playamovie.cpp
+  u_s_plot2bezier.cpp
+  u_s_plot2eigen.cpp
+  u_s_plot2fourducks.cpp
+  u_s_plot2lens.cpp
+  u_s_plot2octmirror.cpp
+  u_s_plot2pointcloud.cpp
+  u_s_plot2poles.cpp
+  u_s_plot2power.cpp
+  u_s_plot2quant.cpp
+  u_s_plot2quantsho.cpp
+  u_s_plot2simple.cpp
+  u_s_plot2zeta.cpp
+  u_s_plotter.cpp
+  u_s_pointcloud.cpp
+  Generating Code...
+  Compiling...
+  u_s_polynomial.cpp
+  u_s_poly_sym.cpp
+  u_s_post.cpp
+  u_s_qcomp.cpp
+  u_s_qr_code.cpp
+  u_s_qr_code2.cpp
+  u_s_rcastle.cpp
+  u_s_renamer.cpp
+  u_s_riemann.cpp
+  u_s_rubikscube.cpp
+  u_s_scratch.cpp
+  u_s_searcher.cpp
+  u_s_simplex.cpp
+  u_s_slider.cpp
+  u_s_plot2soccergoal.cpp
+  u_s_sokoban.cpp
+  u_s_sokoban2.cpp
+  u_s_spawner.cpp
+  u_s_spritetest2.cpp
+  u_s_spritetest3.cpp
+  Generating Code...
+  Compiling...
+  u_s_stoid.cpp
+  u_stoid_data.cpp
+  u_s_syncro.cpp
+  u_s_testres3d.cpp
+  u_s_toon.cpp
+  u_s_tritest1.cpp
+  u_s_tritest2.cpp
+  u_s_tritest3.cpp
+  u_s_tritest4.cpp
+  u_s_tritest5.cpp
+  u_s_ttt.cpp
+  u_s_turing.cpp
+  u_s_ui.cpp
+  u_s_user0.cpp
+  u_s_user1.cpp
+  u_s_user2.cpp
+  u_s_vidcap.cpp
+  u_s_vidtest.cpp
+  u_s_wriggler.cpp
+  u_testasmmacros.cpp
+  Generating Code...
+c:\srcw32\vs2017\engq\engqtest\u_testasmmacros.cpp(40): warning C4731: 'testasmmacros': frame pointer register 'ebx' modified by inline assembly code
+c:\srcw32\vs2017\engq\engqtest\u_testasmmacros.cpp(45): warning C4731: 'testasmmacros': frame pointer register 'ebx' modified by inline assembly code
+c:\srcw32\vs2017\engq\engqtest\u_testasmmacros.cpp(49): warning C4731: 'testasmmacros': frame pointer register 'ebx' modified by inline assembly code
+  Compiling...
+  u_trackpath.cpp
+  u_uiclass.cpp
+  u_uiclass2.cpp
+  u_uipopup_info.cpp
+  u_volley.cpp
+  u_z2p.cpp
+  quant3.cpp
+  quant_sho.cpp
+  quant4.cpp
+  Generating Code...
+  objcollisions.cpp
   engqtest.vcxproj -> C:\srcw32\vs2017\engq\engqtest\.\engqtest.exe
