@@ -1,5 +1,0 @@
-open hourlylog at Tue Feb 05 03:58:29 2019
-getbuffer '76.218.105.191:53697': 'GET /_mandl_9_0_0.png'
-getbuffer '76.218.105.191:53740': 'GET /_mandl_9_0_0.png'
-getbuffer '76.218.105.191:53782': 'GET /_mandl_9_0_0.png'
-close hourlylog at Tue Feb 05 04:00:06 2019

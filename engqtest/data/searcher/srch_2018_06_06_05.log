@@ -1,3 +1,0 @@
-open hourlylog at Wed Jun 06 05:30:24 2018
-getbuffer '192.168.1.138:57467': 'GET /_mandl_9_0_0.png'
-close hourlylog at Wed Jun 06 05:30:45 2018

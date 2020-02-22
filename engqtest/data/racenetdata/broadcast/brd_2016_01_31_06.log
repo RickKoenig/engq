@@ -1,9 +1,0 @@
-open hourlylog at Sun Jan 31 06:01:33 2016
-BR       0, BW       0, S  10, BR/S       0, BW/S       0
-BR    4595, BW    4768, S  10, BR/S     459, BW/S     476
-BR    6050, BW    6050, S  10, BR/S     605, BW/S     605
-BR    6060, BW    6060, S  10, BR/S     606, BW/S     606
-BR    6060, BW    6060, S  10, BR/S     606, BW/S     606
-BR    6030, BW    6030, S  10, BR/S     603, BW/S     603
-BR    6025, BW    6025, S  10, BR/S     602, BW/S     602
-close hourlylog at Sun Jan 31 06:03:05 2016

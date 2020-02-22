@@ -1,5 +1,0 @@
-open minutelog at Thu Oct 15 07:22:00 2009
-BR       0, BW       0, S  10, BR/S       0, BW/S       0
-close minuteslog at Thu Oct 15 07:22:00 2009
-append minutelog at Thu Oct 15 07:22:06 2009
-close minuteslog at Thu Oct 15 07:22:07 2009
