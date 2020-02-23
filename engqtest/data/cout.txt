@@ -1,2 +1,2 @@
-open cout.txt at LOCAL 2020_02_22_21_26_08
+open cout.txt at LOCAL 2020_02_22_21_46_35
 close coutfile
