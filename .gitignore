@@ -10,7 +10,7 @@
 *.userosscache
 *.sln.docstates
 *.lib
-*.txt
+# *.txt, TODO: will just ignore logfile.txt and cout.txt
 *.bsc
 *.exe
 
