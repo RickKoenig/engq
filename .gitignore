@@ -13,6 +13,15 @@
 # *.txt, TODO: will just ignore logfile.txt and cout.txt
 *.bsc
 *.exe
+*.map
+
+# 3rd party libraries
+
+# libogg
+libogg-1.1.3/
+
+# tinyxml
+tinyxml/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
