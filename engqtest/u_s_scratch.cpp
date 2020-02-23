@@ -2929,6 +2929,12 @@ bitmap32* threatbm;
 
 void scratchinit()
 {
+	// test git ignore
+#include "u_module_test.h"
+	testModuleTest();
+
+
+
 #ifdef PERSORTHO
 	using namespace pers;
 	adddebvars("pers", persdv, npersdv);

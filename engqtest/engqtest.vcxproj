@@ -1002,6 +1002,7 @@
     <ClInclude Include="u_mandl.h" />
     <ClInclude Include="u_median.h" />
     <ClInclude Include="u_modelutil.h" />
+    <ClInclude Include="u_module_test.h" />
     <ClInclude Include="u_oddOneOut.h" />
     <ClInclude Include="u_packer.h" />
     <ClInclude Include="u_permiter.h" />
@@ -1749,6 +1750,7 @@
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
     </ClCompile>
     <ClCompile Include="u_listtest.cpp" />
+    <ClCompile Include="u_module_test.cpp" />
     <ClCompile Include="u_oddOneOut.cpp" />
     <ClCompile Include="u_permiter.cpp" />
     <ClCompile Include="plotter_code\alphatest.cpp">

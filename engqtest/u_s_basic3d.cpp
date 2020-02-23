@@ -33,7 +33,7 @@ void basic3dinit()
 	mainvp.yres = WY;
 	mainvp.xstart = 0;
 	mainvp.ystart = 0;
-	mainvp.backcolor = C32DARKGRAY;
+	mainvp.backcolor = C32BROWN;
 	mainvp.zfront = .125f;
 	mainvp.zback = 20000;
 	mainvp.camzoom = 1;//3.2f; // it'll getit from tree camattach if you have one

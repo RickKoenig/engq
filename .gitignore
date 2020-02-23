@@ -15,6 +15,9 @@
 *.exe
 *.map
 
+engqtest/data/cout.txt
+engqtest/data/logfile.txt
+
 # 3rd party libraries
 
 # libogg
