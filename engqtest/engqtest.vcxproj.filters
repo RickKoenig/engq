@@ -4075,10 +4075,10 @@
     <ClCompile Include="u_s_plot2soccergoal.cpp">
       <Filter>Source Files\user\user_math\plotter_code</Filter>
     </ClCompile>
-    <ClCompile Include="u_listtest.cpp">
+    <ClCompile Include="u_module_test.cpp">
       <Filter>Source Files\user\user_misc</Filter>
     </ClCompile>
-    <ClCompile Include="u_module_test.cpp">
+    <ClCompile Include="u_listtest.cpp">
       <Filter>Source Files\user\user_misc</Filter>
     </ClCompile>
   </ItemGroup>
