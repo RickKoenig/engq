@@ -10,7 +10,7 @@
 *.userosscache
 *.sln.docstates
 *.lib
-# *.txt, TODO: will just ignore logfile.txt and cout.txt
+
 *.bsc
 *.exe
 *.map
@@ -18,6 +18,8 @@
 engqtest/data/cout.txt
 engqtest/data/logfile.txt
 engqtest/data/mainmenu/maincfg.txt
+engqtest/data/racenetdata/caweapons.txt
+engqtest/data/racenetdata/onlineopt/online_seltrackcfg.txt
 
 # 3rd party libraries
 

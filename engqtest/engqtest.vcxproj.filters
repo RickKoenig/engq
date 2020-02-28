@@ -2771,6 +2771,9 @@
     <ClInclude Include="u_module_test.h">
       <Filter>Source Files\user\user_misc</Filter>
     </ClInclude>
+    <ClInclude Include="u_s_plot2bresenham.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="helperobj.cpp">
@@ -4080,6 +4083,9 @@
     </ClCompile>
     <ClCompile Include="u_listtest.cpp">
       <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2bresenham.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

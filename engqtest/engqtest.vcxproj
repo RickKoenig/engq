@@ -1064,6 +1064,7 @@
     <ClInclude Include="u_s_laplace_heat.h" />
     <ClInclude Include="u_s_lightsout.h" />
     <ClInclude Include="u_s_lighttest.h" />
+    <ClInclude Include="u_s_plot2bresenham.h" />
     <ClInclude Include="u_s_plot2linear.h" />
     <ClInclude Include="u_s_luatest.h" />
     <ClInclude Include="u_s_mainmenu.h" />
@@ -2137,6 +2138,7 @@
     <ClCompile Include="u_s_laplace_heat.cpp" />
     <ClCompile Include="u_s_lightsout.cpp" />
     <ClCompile Include="u_s_lighttest.cpp" />
+    <ClCompile Include="u_s_plot2bresenham.cpp" />
     <ClCompile Include="u_s_plot2linear.cpp" />
     <ClCompile Include="u_s_luatest.cpp" />
     <ClCompile Include="u_s_mainmenu.cpp" />

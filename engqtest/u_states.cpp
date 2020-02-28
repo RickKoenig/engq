@@ -58,6 +58,7 @@
 #include "u_s_plot2octmirror.h"
 #include "u_s_plot2linear.h"
 #include "u_s_plot2soccergoal.h"
+#include "u_s_plot2bresenham.h"
 
 #include "u_s_many.h"
 #include "u_s_arena1.h"
@@ -258,7 +259,7 @@ struct state states[STATE_NUM]={
 		
 	// 50
 	{plot2soccergoalinit,plot2soccergoalproc,0					,plot2soccergoaldraw2d,plot2soccergoalexit},
-	{0					,0					,0					,0					,0},
+	{plot2bresenhaminit,plot2bresenhamproc,0					,plot2bresenhamdraw2d,plot2bresenhamexit},
 	{0					,0					,0					,0					,0},
 	{0					,0					,0					,0					,0},
 	{0					,0					,0					,0					,0},

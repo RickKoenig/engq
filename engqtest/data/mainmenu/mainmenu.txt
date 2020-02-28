@@ -58,6 +58,7 @@ statedesc 48 "plotter2 oct mirror"
 statedesc 49 "plotter2 linear regression"
 
 statedesc 50 "plotter2 soccer goal angle"
+statedesc 51 "plotter2 test bresenham algorithms"
 
 
 // skip some states

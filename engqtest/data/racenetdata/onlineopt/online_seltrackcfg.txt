@@ -1,5 +1,5 @@
 trackname "thefalls"
-rules 1
+rules 2
 numplayers 1
 numcars 1
 numbots 0
