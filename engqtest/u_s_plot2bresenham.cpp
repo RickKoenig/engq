@@ -7,20 +7,32 @@
 // do bresenham line and circle algorithms
 using namespace u_plotter2;
 //#define FLOAT_LINE
-#define INT_LINE
-//#define FLOAT_CIRCLE
-//#define INT_CIRCLE
+//#define INT_LINE
+#define INT_CIRCLE
 
 namespace bresenham {
 
-	pointf2 pntItoF(const pointi2& pntI)
-	{
-		return pointf2x(float(pntI.x), float(pntI.y));
-	}
+pointf2 pntItoF(const pointi2& pntI)
+{
+	return pointf2x(float(pntI.x), float(pntI.y));
+}
+
+void drawOct(const pointi2& pnt)
+{
+	pointf2 pntF = pntItoF(pnt);
+	drawfpoint(pntF, C32RED, 4.0f);
+	drawfpoint(pointf2x(pntF.x, -pntF.y), C32RED, 4.0f);
+	drawfpoint(pointf2x(-pntF.x, pntF.y), C32RED, 4.0f);
+	drawfpoint(pointf2x(-pntF.x, -pntF.y), C32RED, 4.0f);
+	drawfpoint(pointf2x(pntF.y, pntF.x), C32RED, 4.0f);
+	drawfpoint(pointf2x(pntF.y, -pntF.x), C32RED, 4.0f);
+	drawfpoint(pointf2x(-pntF.y, pntF.x), C32RED, 4.0f);
+	drawfpoint(pointf2x(-pntF.y, -pntF.x), C32RED, 4.0f);
+}
+
 #ifdef FLOAT_LINE
 	pointi2 endPoint{ 33,-12 }; // startPoint is at the origin
 	float slope; // from 0 to -1
-	float err;
 
 	// for debvars
 	struct menuvar bresenhamdv[] = {
@@ -35,7 +47,6 @@ namespace bresenham {
 	pointi2 endPoint{ 33,-12 }; // startPoint is at the origin
 	S32 slopey;
 	S32 slopex;
-	S32 err;
 
 	// for debvars
 	struct menuvar bresenhamdv[] = {
@@ -44,6 +55,16 @@ namespace bresenham {
 		{"endPointY",&endPoint.y,D_INT},
 		{"slopey",&slopey,D_INT | D_RDONLY},
 		{"slopex",&slopex,D_INT | D_RDONLY},
+	};
+	const int nbresenhamdv = NUMELEMENTS(bresenhamdv);
+#endif
+#ifdef INT_CIRCLE
+	int rad = 10; // startPoint is at the origin
+
+	// for debvars
+	struct menuvar bresenhamdv[] = {
+		{"@cyan@--- PLOTTER2 USER VARS for bresenham ---",NULL,D_VOID,0},
+		{"radius",&rad,D_INT},
 	};
 	const int nbresenhamdv = NUMELEMENTS(bresenhamdv);
 #endif
@@ -77,7 +98,7 @@ void plot2bresenhamdraw2d()
 	else
 		slope = 0;
 	pointf2 pnt = pointf2x();
-	err = 0;
+	float err = 0;
 	drawfpoint(pnt, C32RED, 4.0f);
 	for (auto i = 0; i < endPoint.x; ++i) {
 		++pnt.x;
@@ -95,7 +116,7 @@ void plot2bresenhamdraw2d()
 	endPoint.y = range(-endPoint.x, endPoint.y, 0);
 	slopex = endPoint.x;
 	slopey = endPoint.y;
-	err = 0;
+	S32 err = 0;
 	pointi2 pnt = { 0,0 };
 	// err will be multiple of slopex*2
 	drawfpoint(pntItoF(pnt), C32RED, 4.0f);
@@ -109,7 +130,25 @@ void plot2bresenhamdraw2d()
 		}
 		drawfpoint(pntItoF(pnt), C32RED, 4.0f);
 	}
-
+#endif
+#ifdef INT_CIRCLE
+	rad = range(0, rad, 100);
+	pointi2 pnt = pointi2x(0, rad);
+	S32 err = 0;
+	drawOct(pnt);
+	for (auto i = 0; i < 200; ++i) {
+		if (2 * err + 4 * pnt.x - 2 * pnt.y + 3 < 0) {
+			err += 2 * pnt.x + 1;
+		} else {
+			// get a better error if we decrement y
+			err += 2 * pnt.x - 2 * pnt.y - 2;
+			--pnt.y;
+		}
+		++pnt.x;
+		if (pnt.x > pnt.y)
+			break;
+		drawOct(pnt);
+	}
 #endif
 }
 
