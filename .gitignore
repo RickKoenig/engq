@@ -371,3 +371,13 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+#Rick's other files that should be ignored
+config.txt
+device.txt
+cout.txt
+logfile.txt
+coutb.txt
+logfileb.txt
+altonline_seltrackcfg.txt
+_mandl*.png

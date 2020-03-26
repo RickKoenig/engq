@@ -2,9 +2,6 @@
 #include "m_perf.h"
 #include "d2_font.h"
 
-#define NEW_DEBP // upgrade
-//#define OLD_DEBP
-
 //#define USESMALL // small font
 #define USELARGE // large font
 
@@ -80,8 +77,6 @@ static const C8* getskipfromline(const C8* name)
 	}
 	return name;
 }
-
-#ifdef NEW_DEBP
 
 struct debinfo {
 	string name;
@@ -332,6 +327,18 @@ void drawdebline(const menuvar* dv,S32 curmenupos,S32 y,pointf3& pcolor)
 		break; */
 	} 
 	n=getskipfromline(dv->name);
+	S32 spd = dv->speed;
+	if (!spd) {
+		switch (dv->bytesize) {
+		case D_FLOAT:
+		case D_FLOATEXP:
+		case D_DOUBLE:
+			spd = FLOATUP;
+			break;
+		default:
+			spd = 1;
+		}
+	}
 	switch(dv->bytesize) {
 /*		case D_STR:
 	case D_STR|D_RDONLY:
@@ -340,7 +347,7 @@ void drawdebline(const menuvar* dv,S32 curmenupos,S32 y,pointf3& pcolor)
 	case D_CHAR:
 	case D_SHORT:
 	case D_INT:
-		sprintf(str,"%s %5d [%d]",n,v,dv->speed);
+		sprintf(str,"%s %5d [%d]",n,v,spd);
 		break;
 	case D_CHAR|D_RDONLY:
 	case D_SHORT|D_RDONLY:
@@ -348,7 +355,7 @@ void drawdebline(const menuvar* dv,S32 curmenupos,S32 y,pointf3& pcolor)
 		sprintf(str,"%s %5d",n,v);
 		break;
 	case D_HEX:
-		sprintf(str,"%s $%08x [%08x]",n,v,dv->speed);
+		sprintf(str,"%s $%08x [%08x]",n,v,spd);
 		break;
 	case D_HEX|D_RDONLY:
 		sprintf(str,"%s $%08x",n,v);
@@ -362,13 +369,13 @@ void drawdebline(const menuvar* dv,S32 curmenupos,S32 y,pointf3& pcolor)
 		break; */
 	case D_FLOAT:
 //		case D_DOUBLE:
-		sprintf(str,"%s %f [%f]",n,fv,dv->speed/(float)FLOATUP);
+		sprintf(str,"%s %f [%f]",n,fv,spd/(float)FLOATUP);
 		break;
 	case D_DOUBLE:
-		sprintf(str,"%s %f [%f]",n,dbv,dv->speed/(float)FLOATUP);
+		sprintf(str,"%s %f [%f]",n,dbv,spd/(float)FLOATUP);
 		break;
 	case D_FLOATEXP:
-		sprintf(str,"%s %e [%e]",n,fv,dv->speed/(float)FLOATUP);
+		sprintf(str,"%s %e [%e]",n,fv,spd/(float)FLOATUP);
 		break;
 	case D_FLOAT|D_RDONLY:
 //		case D_DOUBLE|D_RDONLY:
@@ -537,413 +544,3 @@ void loadconfigfile(const C8* scriptfile,menuvar* dv,S32 ndv)
 	loadconfigscript(s,dv,ndv);
 	gscriptfile = "---";
 }
-
-#endif // NEW_DEBP
-
-#ifdef OLD_DEBP
-
-static struct menuvar *edv;
-static S32 nedv;
-
-//map<string,menuvar*> deblist;
-
-void extradebvars(struct menuvar *dv,S32 ndv)
-{
-	edv=dv;
-	nedv=ndv;
-	menupos=nwininfovars; // move to new extra debvars, comment out to not move to extra debvars
-	if (menupos>=ndv+nwininfovars)
-		menupos=ndv+nwininfovars-1;
-	if (menupos<0)
-		menupos=0;
-}
-
-void adddebvars(string name,struct menuvar *dv,S32 ndv)
-{
-	logger("debp, adding '%s' size %d\n",name.c_str(),ndv);
-}
-
-void removedebvars(string name)
-{
-	logger("debp, removing '%s'\n",name.c_str());
-}
-
-void debp_init()
-{
-	logger("init debp\n");
-}
-
-void debp_exit()
-{
-	logger("exit debp\n");
-}
-
-void drawdebprint()
-{
-	if (!wininfo.indebprint)
-		return;
-	perf_start(DRAWDEBPRINT);
-	S32 start;			// start of debug display
-	U32 v=0;		// value of variable
-	S32 i,j;
-	void *p;		// generic variable pointer
-	float fv=0.0f;
-	const C8* sp; // string cstr pointer
-	pointf3 pcolor=F32WHITE;
-	C8 str[100];
-	struct menuvar *dv=wininfovars;
-	S32 ndv=nwininfovars+nedv;
-//	video_lock();
-	menupos=range(0,menupos,ndv-1);
-	start=range(0,menupos-(DEBUGNUMLINES/2),max(0,ndv-DEBUGNUMLINES));
-	for (i=0;i<start;i++) {
-		if (i>=nwininfovars)
-			dv=edv-nwininfovars;
-		if (dv[i].name[0]=='@')
-			getcolorfromline(dv[i].name,&pcolor);
-	}
-	dv=wininfovars;
-	for (i=start,j=DEBUGSTARTY;i<start+DEBUGNUMLINES && i<ndv;i++,j+=DEBFONT->gy) {
-		const C8* n;
-		if (i>=nwininfovars)
-			dv=edv-nwininfovars;
-		p=dv[i].ptr;
-		if (dv[i].name[0]=='@')
-			getcolorfromline(dv[i].name,&pcolor);
-		if (i==menupos)
-			drawtextque_string_foreback(DEBFONT,DEBUGSTARTX,j,pcolor,F32BLACK,">");
-//			outtextxyb32(B32,DEBUGSTARTX,j,pcolor,C32BLACK,">");
-		else
-			drawtextque_string_foreback(DEBFONT,DEBUGSTARTX,j,pcolor,F32BLACK," ");
-//			outtextxyb32(B32,DEBUGSTARTX,j,pcolor,C32BLACK," ");
-		switch(dv[i].bytesize&~D_RDONLY) {
-		case D_CHAR:
-			v=*(U8*)p;
-			break;
-		case D_SHORT:
-			v=*(S16*)p;
-			break;
-		case D_INT:
-		case D_HEX:
-//		case D_ENUM:
-			v=*(S32*)p;
-			break;
-		case D_FLOAT:
-		case D_FLOATEXP:
-			fv=*(float *)p;
-			break;
-		case D_STRING:
-			sp = (*(string*)p).c_str();
-/*		case D_DOUBLE:
-			fv=(float)(*(double *)p);
-			break; */
-		} 
-		n=getskipfromline(dv[i].name);
-		switch(dv[i].bytesize) {
-/*		case D_STR:
-		case D_STR|D_RDONLY:
-			sprintf(str,"%s %s",n,(U8*)dv[i].ptr);
-			break; */
-		case D_CHAR:
-		case D_SHORT:
-		case D_INT:
-			sprintf(str,"%s %5d [%d]",n,v,dv[i].speed);
-			break;
-		case D_CHAR|D_RDONLY:
-		case D_SHORT|D_RDONLY:
-		case D_INT|D_RDONLY:
-			sprintf(str,"%s %5d",n,v);
-			break;
-		case D_HEX:
-			sprintf(str,"%s $%08x [%08x]",n,v,dv[i].speed);
-			break;
-		case D_HEX|D_RDONLY:
-			sprintf(str,"%s $%08x",n,v);
-			break;
-/*		case D_ENUM:
-		case D_ENUM|D_RDONLY:
-			if (dv[i].enumstr[v])
-				sprintf(str,"%s %s",n,dv[i].enumstr[v]);
-			else
-				sprintf(str,"%s ----",n);
-			break; */
-		case D_FLOAT:
-//		case D_DOUBLE:
-			sprintf(str,"%s %f [%f]",n,fv,dv[i].speed/(float)FLOATUP);
-			break;
-		case D_FLOATEXP:
-			sprintf(str,"%s %e [%e]",n,fv,dv[i].speed/(float)FLOATUP);
-			break;
-		case D_FLOAT|D_RDONLY:
-//		case D_DOUBLE|D_RDONLY:
-			sprintf(str,"%s %f",n,fv);
-			break;
-		case D_FLOATEXP|D_RDONLY:
-			sprintf(str,"%s %e",n,fv);
-			break;
-		case D_VOID:
-		case D_VOID|D_RDONLY:
-			sprintf(str,"%s",n);
-			break;
-		case D_STRING:
-			sprintf(str,"%s '%s'",n,sp);
-			//logger("string debprint draw = '%s %s'\n",n,sp);
-			break;
-		} 
-		drawtextque_string_foreback(DEBFONT,DEBUGSTARTX+DEBFONT->gx,j,pcolor,F32BLACK,str);
-//		outtextxyb32(B32,DEBUGSTARTX+8,j,pcolor,C32BLACK,str);
-	}
-//	video_unlock();
-	perf_end(DRAWDEBPRINT);
-}
-
-void debprocesskey()
-{
-	S32 d=0,z=0;		// delta for changing a variable
-	S32 v;		// value of variable
-	float fv;
-	void *p;
-	struct menuvar *dv=wininfovars;
-	S32 ndv=nwininfovars+nedv;
-	if (!wininfo.enabledebprint)
-		return;
-	if (KEY=='`')
-		wininfo.indebprint^=1;
-	if (!wininfo.indebprint)
-		return;
-	menupos=range(0,menupos,ndv-1);
-	if (wininfo.usedirectinput) {
-		if (KEY==K_NUM5)
-			z=1;
-		if (KEY==K_NUMLEFT)
-			d=-1;
-		if (KEY==K_NUMRIGHT)
-			d=1;
-		if (KEY==K_NUMUP)
-			menupos--;
-		if (KEY==K_NUMDOWN)
-			menupos++;
-		if (KEY==K_NUMPAGEUP)
-			menupos-=9;
-		if (KEY==K_NUMPAGEDOWN)
-			menupos+=9;
-	} else {
-		if (KEY==K_NUM5)
-			z=1;
-		if (KEY==K_LEFT)
-			d=-1;
-		if (KEY==K_RIGHT)
-			d=1;
-		if (KEY==K_UP)
-			menupos--;
-		if (KEY==K_DOWN)
-			menupos++;
-		if (KEY==K_PAGEUP)
-			menupos-=9;
-		if (KEY==K_PAGEDOWN)
-			menupos+=9;
-	}
-	menupos=range(0,menupos,ndv-1);
-	if (menupos>=nwininfovars)
-		dv=edv-nwininfovars;
-	p=dv[menupos].ptr;
-#if 1
-	if (dv[menupos].speed == 0)
-		dv[menupos].speed = 1;
-	if (KEY=='+') {
-		if (dv[menupos].speed < (1<<30))
-			dv[menupos].speed*=2;
-	}
-	if (KEY==K_NUMMINUS) {
-		if (dv[menupos].speed > 1)
-			dv[menupos].speed/=2;
-	}
-#else
-	if (KEY=='+')
-//		if (dv[menupos].bytesize!=D_ENUM)
-			dv[menupos].speed++;
-	if (KEY==K_NUMMINUS)
-//		if (dv[menupos].bytesize!=D_ENUM)
-			dv[menupos].speed--;
-	if (dv[menupos].speed>0x40000000)
-		dv[menupos].speed=0x40000000;
-	else if (dv[menupos].speed<=1)
-		dv[menupos].speed=1;
-	else if (dv[menupos].speed==2)
-		dv[menupos].speed=4;
-	else if ((dv[menupos].speed&3)==3)
-		dv[menupos].speed=(dv[menupos].speed+1)>>2;
-	else if ((dv[menupos].speed&3)==1)
-		dv[menupos].speed=(dv[menupos].speed-1)<<2;
-#endif
-	//if (p!=&dv[menupos].speed)
-		d*=dv[menupos].speed;
-	//else
-	//	logger("ptr == speed\n");
-	if (!wininfo.indebprint)
-		d=0;
-	switch(dv[menupos].bytesize) {
-	case D_CHAR:
-		v=*(U8*)p;
-		v+=d;
-		if (z)
-			v=0;
-		*(U8*)p=(U8)v;
-		break;
-	case D_SHORT:
-		v=*(S16*)p;
-		v+=d;
-		if (z)
-			v=0;
-		*(S16*)p=(S16)v;
-		break;
-	case D_INT:
-	case D_HEX:	
-		v=*(S32*)p;
-		v+=d;
-		if (z)
-			v=0;
-		*(S32*)p=v;
-		break;
-	case D_FLOAT:	
-	case D_FLOATEXP:	
-		fv=*(float *)p;
-		fv+=(float)(d/(float)FLOATUP);
-		if (z)
-			fv=0;
-		*(float *)p=fv;
-		break;
-/*	case D_DOUBLE:	
-		fv=(float)(*(double *)p);
-		fv+=(float)(d/(float)FLOATUP);
-		if (z)
-			fv=0;
-		*(double *)p=fv;
-		break; */
-/*	case D_ENUM:
-		v=*(S32*)p;
-		v+=d;
-		if (v<0)
-			v=0;
-		if (dv[menupos].enumstr[v]==0)
-			v--;
-		if (z)
-			v=0;
-		*(S32*)p=v;
-		break; */
-	}
-	return;
-}
-
-string gscriptfile;
-
-void loadconfigscript(const script& s,menuvar* dv,S32 ndv)
-{
-	adddebvars("__loadconfigscript",dv,ndv);
-	S32 nscript=s.num();
-	if (nscript&1)
-		errorexit("%s not right try lines like: state 7",gscriptfile.c_str());
-	nscript>>=1;
-//	C8 **script;
-	float *fptr;
-	S32 *iptr;
-	C8 *cptr;
-	string* sptr;
-	S32 i,j;
-	for (i=0;i<nscript;i++) {
-		for (j=0;j<ndv;j++) {
-			string ss = s.idx(i*2);
-			if (ss.length() && ss[0] == '-') {
-				ss = ss.substr(1,ss.length()-1);
-			}
-			if (!strcmp(ss.c_str(),dv[j].name)) {
-				switch(dv[j].bytesize&~D_RDONLY) {
-				case D_HEX:
-					iptr=(S32*)dv[j].ptr;
-					*iptr=atox(s.idx(i*2+1).c_str());
-					break;
-				case D_INT:
-//				case D_ENUM:
-					iptr=(S32*)dv[j].ptr;
-					*iptr=atoi(s.idx(i*2+1).c_str());
-					break;
-				case D_CHAR:
-					cptr=(C8*)dv[j].ptr;
-					*cptr=atoi(s.idx(i*2+1).c_str());
-					break;
-/*				case D_STR:
-				case D_STR|D_RDONLY:
-					strcpy((U8*)dv[j].ptr,script[i*2+1]);
-					break; */
-				case D_FLOAT:
-				case D_FLOATEXP:
-					fptr=(float*)dv[j].ptr;
-					*fptr=(float)atof(s.idx(i*2+1).c_str());
-					break;
-				case D_STRING:
-					sptr = (string*)dv[j].ptr;
-					*sptr = s.idx(i*2+1).c_str();
-				break;
-				}
-			}
-		}
-//		if (j!=ndv) {
-//			logger("entry '%s' in file '%s' IS in the main list\n",script[i*2],scriptfile);
-//		}
-		if (j==ndv) {
-			for (j=0;j<nedv;j++) {
-				string ss = s.idx(i*2);
-				if (!strcmp(ss.c_str(),edv[j].name)) {
-					switch(edv[j].bytesize&~D_RDONLY) {
-					case D_HEX:
-						iptr=(S32*)edv[j].ptr;
-						*iptr=atox(s.idx(i*2+1).c_str());
-						break;
-					case D_INT:
-//					case D_ENUM:
-						iptr=(S32*)edv[j].ptr;
-						*iptr=atoi(s.idx(i*2+1).c_str());
-						break;
-					case D_CHAR:
-						cptr=(C8*)edv[j].ptr;
-						*cptr=atoi(s.idx(i*2+1).c_str());
-						break;
-/*					case D_STR:
-					case D_STR|D_RDONLY:
-						strcpy((U8*)edv[j].ptr,script[i*2+1]);
-						break; */
-					case D_FLOAT:
-					case D_FLOATEXP:
-						fptr=(float*)edv[j].ptr;
-						*fptr=(float)atof(s.idx(i*2+1).c_str());
-						break;
-					case D_STRING:
-						sptr = (string*)edv[j].ptr;
-						*sptr = s.idx(i*2+1).c_str();
-						break;
-					}
-				}
-	//			if (j!=nedv) {
-	//				logger("WARNING: entry \"%s\" in file '%s' IS in the extra list\n",s.printidx(i*2).c_str(),scriptfile);
-	//			}
-				if (j==nedv) {
-					logger("WARNING: entry \"%s\" in file '%s' IS NOT in the extra list\n",s.printidx(i*2).c_str(),gscriptfile.c_str());
-				}
-			}
-		}
-	}
-	removedebvars("__loadconfigscript");
-//	freescript(script,nscript<<1);
-}
-
-void loadconfigfile(const C8* scriptfile,menuvar* dv,S32 ndv)
-{	
-	gscriptfile = scriptfile;
-//	script=loadscript(scriptfile,&nscript);
-	script s(scriptfile);
-	logger("loadconfigfile '%s', input chars %d, num tokens %d, num chars %d\n",scriptfile,s.inchars(),s.num(),s.numchars());
-	loadconfigscript(s,dv,ndv);
-	gscriptfile = "---";
-}
-
-#endif // OLD_DEBP

@@ -129,6 +129,13 @@ node* merge(node* left, node* right)
 	}
 
 	// just some left ones to copy over
+#if 1
+	if (left) {
+		walk->next = left;
+	} else if (right) {
+		walk->next = right;
+	}
+#else
 	while (left) {
 		walk->next = left;
 		walk = left;
@@ -141,6 +148,7 @@ node* merge(node* left, node* right)
 		walk = right;
 		right = right->next;
 	}
+#endif
 	return ret;
 }
 

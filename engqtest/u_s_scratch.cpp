@@ -9,13 +9,14 @@
 
 //#define RENAMESHADERS // never call this code again !!!
 //#define PERSORTHO // perspective test with y,z to ys,zp and w
+#define WINE_ENTANGLE
 //#define DEBUGTEST
 //#define CUBIC_R6_TEST
 //#define TESTBIRDS
 //#define TESTAUTOMORPH
 //#define SUMCUBES
 //#define UITEST // square ui test 0 - 1024 to 0 - 1024
-#define LISTTEST
+//#define LISTTEST
 //#define HEAPTEST
 //#define MEDIANTEST
 //#define GROVERTEST
@@ -1371,6 +1372,146 @@ namespace pers {
 		YSOW = YS / WS;
 		ZSOW = ZS / WS;
 	}
+}
+#endif
+
+#ifdef WINE_ENTANGLE
+namespace wine {
+
+	// for debvars
+
+#define QUANTUM
+//#define CLASSICAL
+
+#ifdef CLASSICAL
+	// 4 boolean choices
+	S32 AliceGlass;
+	S32 AliceBottle;
+	S32 BobGlass;
+	S32 BobBottle;
+	float win; // probability of picking different wines unless 2 bottles then the same
+	int GG;
+	int GB;
+	int BG;
+	int BB;
+#endif
+#ifdef QUANTUM
+	// game
+	// 4 boolean choices
+	float AliceGlass = 0;
+	float AliceBottle = 90;
+	float BobGlass = 45;
+	float BobBottle = 315;
+	float win; // probability of picking different wines unless 2 bottles then the same
+	float GG;
+	float GB;
+	float BG;
+	float BB;
+	// test
+	// inputs, angle between measurement of 1/2 spin anti-correlated entangled pair
+	float ang = 135;
+	// outputs
+	float intensity;
+	float prob;
+#endif
+	struct menuvar winedv[] = {
+#ifdef CLASSICAL
+		{"@green@--- WINE ENTANGLE USER VARS, CLASSICAL ---",NULL,D_VOID,0},
+		// inputs
+		{"AliceGlass", &AliceGlass, D_INT},
+		{"AliceBottle", &AliceBottle, D_INT},
+		{"BobGlass", &BobGlass, D_INT},
+		{"BobBottle", &BobBottle, D_INT},
+		// output
+		{"win",&win, D_FLOAT | D_RDONLY},
+		{"GG",&GG, D_INT | D_RDONLY},
+		{"GB",&GB, D_INT | D_RDONLY},
+		{"BG",&BG, D_INT | D_RDONLY},
+		{"BB",&BB, D_INT | D_RDONLY},
+#endif
+#ifdef QUANTUM
+		{"@green@--- WINE ENTANGLE USER VARS, QUANTUM ---",NULL,D_VOID,0},
+		// inputs
+		{"AliceGlass", &AliceGlass, D_FLOAT},
+		{"AliceBottle", &AliceBottle, D_FLOAT},
+		{"BobGlass", &BobGlass, D_FLOAT},
+		{"BobBottle", &BobBottle, D_FLOAT},
+		// output
+		{"win",&win, D_FLOAT | D_RDONLY},
+		{"GG",&GG, D_FLOAT | D_RDONLY},
+		{"GB",&GB, D_FLOAT | D_RDONLY},
+		{"BG",&BG, D_FLOAT | D_RDONLY},
+		{"BB",&BB, D_FLOAT | D_RDONLY},
+		{"@lightgreen@--- TEST ANGLES ---",NULL,D_VOID,0},
+		// inputs
+		{"angle", &ang, D_FLOAT,FLOATUP*1},
+		// outputs
+		{"Intensity", &intensity, D_FLOAT | D_RDONLY},
+		{"Probability", &prob, D_FLOAT | D_RDONLY},
+#endif
+	};
+	const int nwinedv = NUMELEMENTS(winedv);
+
+#ifdef QUANTUM
+// assume spin 1/2 anti-correlated
+float getIntensity(float diffAng) {
+	float intensity = sin((diffAng*PIOVER180) / 2.0f);
+	return intensity;
+}
+
+float getProb(float diffAng) {
+	float intensity = getIntensity(diffAng);
+	return intensity*intensity;
+}
+#endif
+
+void doWine()
+{
+#ifdef CLASSICAL
+		// these are all booleans, restrict to 0 or 1
+		AliceGlass &= 1;
+		AliceBottle &= 1;
+		BobGlass &= 1;
+		BobBottle &= 1;
+		// 4 different cases for the waiters, 16 in all given Alice and Bob's choices
+		// GG
+		GG = AliceGlass != BobGlass;
+		// GB
+		GB = AliceGlass != BobBottle;
+		// BG
+		BG = AliceBottle != BobGlass;
+		// BB
+		BB = AliceBottle == BobBottle;
+		S32 wini = GG + GB + BG + BB;
+		win = wini / 4.0f; // average
+
+#endif
+#ifdef QUANTUM
+		// game
+		AliceGlass = normalangdeg(AliceGlass);
+		AliceBottle = normalangdeg(AliceBottle);
+		BobGlass = normalangdeg(BobGlass);
+		BobBottle = normalangdeg(BobBottle);
+		// 4 different cases for the waiters, 16 in all given Alice and Bob's choices
+		// GG
+		GG = 1 - getProb(AliceGlass - BobGlass);
+		// GB
+		GB = 1 - getProb(AliceGlass - BobBottle);
+		// BG
+		BG = 1 - getProb(AliceBottle - BobGlass);
+		// BB
+		BB = getProb(AliceBottle - BobBottle);
+
+		win = GG + GB + BG + BB;
+		win /= 4.0f; // average
+
+
+		// test
+		intensity = getIntensity(ang);
+		prob = getProb(ang); // intensity * intensity;
+#endif
+	}
+
 }
 #endif
 
@@ -2939,6 +3080,10 @@ void scratchinit()
 	using namespace pers;
 	adddebvars("pers", persdv, npersdv);
 #endif
+#ifdef WINE_ENTANGLE
+	using namespace wine;
+	adddebvars("wine", winedv, nwinedv);
+#endif
 #ifdef SPINNERS
 #include "u_spinners.h"
 	spinnersInit();
@@ -3080,6 +3225,10 @@ void scratchproc()
 	using namespace pers;
 	doPersOrtho();
 #endif
+#ifdef WINE_ENTANGLE
+	using namespace wine;
+	doWine();
+#endif
 #ifdef SPINNERS
 	spinnersProc();
 #endif
@@ -3130,6 +3279,9 @@ void scratchexit()
 //	delete rl;
 #ifdef PERSORTHO
 	removedebvars("pers");
+#endif
+#ifdef WINE_ENTANGLE
+	removedebvars("wine");
 #endif
 #ifdef SPINNERS
 	spinnersExit();

@@ -14,7 +14,7 @@ runinbackground 0
 
 # startstate 5 # matrix tests
 # startstate 6 # vidcap
-# startstate 7 # scratch, simple shapes
+startstate 7 # scratch, simple shapes
 # startstate 8 # jigpuzz
 # startstate 9 # 3dtest
 
@@ -67,7 +67,7 @@ runinbackground 0
 # startstate 49 # plotter2 linear regression
 
 # startstate 50 # plotter2 soccer goal angle
-startstate 51 # test bresenham algorithms
+# startstate 51 # test bresenham algorithms
 
 // skip some states
 
