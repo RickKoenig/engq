@@ -1,2 +1,0 @@
-open cout.txt at LOCAL 2019_08_12_21_02_41
-close coutfile
