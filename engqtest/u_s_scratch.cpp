@@ -9,7 +9,8 @@
 
 //#define RENAMESHADERS // never call this code again !!!
 //#define PERSORTHO // perspective test with y,z to ys,zp and w
-#define WINE_ENTANGLE
+#define HAIL1
+//#define WINE_ENTANGLE
 //#define DEBUGTEST
 //#define CUBIC_R6_TEST
 //#define TESTBIRDS
@@ -1380,74 +1381,74 @@ namespace wine {
 
 	// for debvars
 
+#define CLASSICAL
 #define QUANTUM
-//#define CLASSICAL
 
 #ifdef CLASSICAL
 	// 4 boolean choices
-	S32 AliceGlass;
-	S32 AliceBottle;
-	S32 BobGlass;
-	S32 BobBottle;
-	float win; // probability of picking different wines unless 2 bottles then the same
-	int GG;
-	int GB;
-	int BG;
-	int BB;
+	S32 cAliceGlass;
+	S32 cAliceBottle;
+	S32 cBobGlass;
+	S32 cBobBottle;
+	float cwin; // probability of picking different wines unless 2 bottles then the same
+	int cGG;
+	int cGB;
+	int cBG;
+	int cBB;
 #endif
 #ifdef QUANTUM
 	// game
 	// 4 boolean choices
-	float AliceGlass = 0;
-	float AliceBottle = 90;
-	float BobGlass = 45;
-	float BobBottle = 315;
-	float win; // probability of picking different wines unless 2 bottles then the same
-	float GG;
-	float GB;
-	float BG;
-	float BB;
+	float qAliceGlass = 0;
+	float qAliceBottle = 90;
+	float qBobGlass = 45;
+	float qBobBottle = 315;
+	float qwin; // probability of picking different wines unless 2 bottles then the same
+	float qGG;
+	float qGB;
+	float qBG;
+	float qBB;
 	// test
 	// inputs, angle between measurement of 1/2 spin anti-correlated entangled pair
-	float ang = 135;
+	float qang = 135;
 	// outputs
-	float intensity;
-	float prob;
+	float qintensity;
+	float qprob;
 #endif
 	struct menuvar winedv[] = {
 #ifdef CLASSICAL
 		{"@green@--- WINE ENTANGLE USER VARS, CLASSICAL ---",NULL,D_VOID,0},
 		// inputs
-		{"AliceGlass", &AliceGlass, D_INT},
-		{"AliceBottle", &AliceBottle, D_INT},
-		{"BobGlass", &BobGlass, D_INT},
-		{"BobBottle", &BobBottle, D_INT},
+		{"AliceGlass", &cAliceGlass, D_INT},
+		{"AliceBottle", &cAliceBottle, D_INT},
+		{"BobGlass", &cBobGlass, D_INT},
+		{"BobBottle", &cBobBottle, D_INT},
 		// output
-		{"win",&win, D_FLOAT | D_RDONLY},
-		{"GG",&GG, D_INT | D_RDONLY},
-		{"GB",&GB, D_INT | D_RDONLY},
-		{"BG",&BG, D_INT | D_RDONLY},
-		{"BB",&BB, D_INT | D_RDONLY},
+		{"win",&cwin, D_FLOAT | D_RDONLY},
+		{"GG",&cGG, D_INT | D_RDONLY},
+		{"GB",&cGB, D_INT | D_RDONLY},
+		{"BG",&cBG, D_INT | D_RDONLY},
+		{"BB",&cBB, D_INT | D_RDONLY},
 #endif
 #ifdef QUANTUM
-		{"@green@--- WINE ENTANGLE USER VARS, QUANTUM ---",NULL,D_VOID,0},
+		{"@lightgreen@--- WINE ENTANGLE USER VARS, QUANTUM ---",NULL,D_VOID,0},
 		// inputs
-		{"AliceGlass", &AliceGlass, D_FLOAT},
-		{"AliceBottle", &AliceBottle, D_FLOAT},
-		{"BobGlass", &BobGlass, D_FLOAT},
-		{"BobBottle", &BobBottle, D_FLOAT},
+		{"AliceGlass", &qAliceGlass, D_FLOAT},
+		{"AliceBottle", &qAliceBottle, D_FLOAT},
+		{"BobGlass", &qBobGlass, D_FLOAT},
+		{"BobBottle", &qBobBottle, D_FLOAT},
 		// output
-		{"win",&win, D_FLOAT | D_RDONLY},
-		{"GG",&GG, D_FLOAT | D_RDONLY},
-		{"GB",&GB, D_FLOAT | D_RDONLY},
-		{"BG",&BG, D_FLOAT | D_RDONLY},
-		{"BB",&BB, D_FLOAT | D_RDONLY},
+		{"win",&qwin, D_FLOAT | D_RDONLY},
+		{"GG",&qGG, D_FLOAT | D_RDONLY},
+		{"GB",&qGB, D_FLOAT | D_RDONLY},
+		{"BG",&qBG, D_FLOAT | D_RDONLY},
+		{"BB",&qBB, D_FLOAT | D_RDONLY},
 		{"@lightgreen@--- TEST ANGLES ---",NULL,D_VOID,0},
 		// inputs
-		{"angle", &ang, D_FLOAT,FLOATUP*1},
+		{"angle", &qang, D_FLOAT,FLOATUP*1},
 		// outputs
-		{"Intensity", &intensity, D_FLOAT | D_RDONLY},
-		{"Probability", &prob, D_FLOAT | D_RDONLY},
+		{"Intensity", &qintensity, D_FLOAT | D_RDONLY},
+		{"Probability", &qprob, D_FLOAT | D_RDONLY},
 #endif
 	};
 	const int nwinedv = NUMELEMENTS(winedv);
@@ -1469,50 +1470,145 @@ void doWine()
 {
 #ifdef CLASSICAL
 		// these are all booleans, restrict to 0 or 1
-		AliceGlass &= 1;
-		AliceBottle &= 1;
-		BobGlass &= 1;
-		BobBottle &= 1;
+		cAliceGlass &= 1;
+		cAliceBottle &= 1;
+		cBobGlass &= 1;
+		cBobBottle &= 1;
 		// 4 different cases for the waiters, 16 in all given Alice and Bob's choices
 		// GG
-		GG = AliceGlass != BobGlass;
+		cGG = cAliceGlass != cBobGlass;
 		// GB
-		GB = AliceGlass != BobBottle;
+		cGB = cAliceGlass != cBobBottle;
 		// BG
-		BG = AliceBottle != BobGlass;
+		cBG = cAliceBottle != cBobGlass;
 		// BB
-		BB = AliceBottle == BobBottle;
-		S32 wini = GG + GB + BG + BB;
-		win = wini / 4.0f; // average
+		cBB = cAliceBottle == cBobBottle;
+		S32 cwini = cGG + cGB + cBG + cBB;
+		cwin = cwini / 4.0f; // average
 
 #endif
 #ifdef QUANTUM
 		// game
-		AliceGlass = normalangdeg(AliceGlass);
-		AliceBottle = normalangdeg(AliceBottle);
-		BobGlass = normalangdeg(BobGlass);
-		BobBottle = normalangdeg(BobBottle);
+		qAliceGlass = normalangdeg(qAliceGlass);
+		qAliceBottle = normalangdeg(qAliceBottle);
+		qBobGlass = normalangdeg(qBobGlass);
+		qBobBottle = normalangdeg(qBobBottle);
 		// 4 different cases for the waiters, 16 in all given Alice and Bob's choices
 		// GG
-		GG = 1 - getProb(AliceGlass - BobGlass);
+		qGG = 1 - getProb(qAliceGlass - qBobGlass);
 		// GB
-		GB = 1 - getProb(AliceGlass - BobBottle);
+		qGB = 1 - getProb(qAliceGlass - qBobBottle);
 		// BG
-		BG = 1 - getProb(AliceBottle - BobGlass);
+		qBG = 1 - getProb(qAliceBottle - qBobGlass);
 		// BB
-		BB = getProb(AliceBottle - BobBottle);
+		qBB = getProb(qAliceBottle - qBobBottle);
 
-		win = GG + GB + BG + BB;
-		win /= 4.0f; // average
+		qwin = qGG + qGB + qBG + qBB;
+		qwin /= 4.0f; // average
 
 
 		// test
-		intensity = getIntensity(ang);
-		prob = getProb(ang); // intensity * intensity;
+		qintensity = getIntensity(qang);
+		qprob = getProb(qang); // qintensity * qintensity;
 #endif
 	}
 
-}
+} // end namespace wine
+#endif
+
+#ifdef HAIL1
+namespace hail1 {
+
+	const bool PASS_END = true;
+	const S32 PASS_END_AMOUNT = 5;
+	S32 curPass; // for PASS_END
+
+	S32 hailStep(S32 n)
+	{
+		if (n & 1) {
+			return (3*n  + 1) / 2;
+		} else {
+			return n / 2;
+		}
+	}
+
+	bool doNext(S32 n)
+	{
+		if (PASS_END) {
+			return curPass < PASS_END_AMOUNT;
+		} else {
+			return n > 1;
+		}
+	}
+
+	vector<S32> hailVector(S32 n) {
+		vector<S32> ret;
+		curPass = 0;
+		while (true) {
+			if (!doNext(n))
+				break;
+			ret.push_back(n);
+			n = hailStep(n);
+			++curPass;
+		}
+		ret.push_back(n);
+		return ret;
+	}
+
+	vector<C8> hailUpDown(S32 n) {
+		vector<C8> ret;
+		curPass = 0;
+		while (true) {
+			if (!doNext(n))
+				break;
+			S32 next = hailStep(n);
+			if (next == n) {
+				ret.push_back('0');
+			} else {
+				ret.push_back(next > n ? 'U' : 'D');
+			}
+			n = next;
+			++curPass;
+		}
+		return ret;
+	}
+
+	void dohail1()
+	{
+		logger("############## start do hail 1 ##############\n");
+		logger_disableindent();
+		const S32 MINNUM = 0;
+		const S32 MAXNUM = 40;
+#define DOLIST
+#define DOUPDOWN
+#ifdef DOLIST
+		logger("\nlist of numbers\n");
+		for (S32 i = MINNUM; i <= MAXNUM; ++i) {
+			const vector<S32> hailList = hailVector(i);
+			logger("n = %4d, counti = %4d [", i, hailList.size());
+			for (S32 v : hailList) {
+				logger("%3d ", v);
+			}
+			logger("]\n");
+		}
+#endif
+#ifdef DOUPDOWN
+		logger("\nup down sequence\n");
+		for (S32 i = MINNUM; i <= MAXNUM; ++i) {
+			const vector<C8> upDown = hailUpDown(i);
+			logger("n = %4d, countn = %4d [ ", i, upDown.size());
+			for (auto v : upDown) {
+				logger("%c ", v);
+			}
+			logger("]\n");
+		}
+#endif
+		logger("\n");
+		logger_enableindent();
+		logger("############## end do hail 1 ##############\n");
+	}
+
+} // end namespace hail1
 #endif
 
 
@@ -3083,6 +3179,10 @@ void scratchinit()
 #ifdef WINE_ENTANGLE
 	using namespace wine;
 	adddebvars("wine", winedv, nwinedv);
+#endif
+#ifdef HAIL1
+	using namespace hail1;
+	dohail1();
 #endif
 #ifdef SPINNERS
 #include "u_spinners.h"
