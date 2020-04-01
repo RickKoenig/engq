@@ -1519,23 +1519,29 @@ void doWine()
 #ifdef HAIL1
 namespace hail1 {
 
-	const bool PASS_END = true;
-	const S32 PASS_END_AMOUNT = 5;
-	S32 curPass; // for PASS_END
+	bool passEnd;
+	S32 curPass; // for passEnd
+	S32 largest;
+	S32 maxCount;
 
 	S32 hailStep(S32 n)
 	{
+		S32 ret;
 		if (n & 1) {
-			return (3*n  + 1) / 2;
+			ret = (3*n  + 1) / 2;
 		} else {
-			return n / 2;
+			ret = n / 2;
 		}
+		if (ret > largest)
+			largest = ret;
+		return ret;
 	}
 
 	bool doNext(S32 n)
 	{
-		if (PASS_END) {
-			return curPass < PASS_END_AMOUNT;
+		const S32 PASSEND_AMOUNT = 20;
+		if (passEnd) {
+			return curPass < PASSEND_AMOUNT;
 		} else {
 			return n > 1;
 		}
@@ -1563,7 +1569,7 @@ namespace hail1 {
 				break;
 			S32 next = hailStep(n);
 			if (next == n) {
-				ret.push_back('0');
+				ret.push_back('d');
 			} else {
 				ret.push_back(next > n ? 'U' : 'D');
 			}
@@ -1573,22 +1579,27 @@ namespace hail1 {
 		return ret;
 	}
 
-	void dohail1()
+	void dohail1(bool pe)
 	{
+		passEnd = pe;
 		logger("############## start do hail 1 ##############\n");
 		logger_disableindent();
 		const S32 MINNUM = 0;
-		const S32 MAXNUM = 40;
+		const S32 MAXNUM = 12800;
+		largest = 0;
+		maxCount = 0;
 #define DOLIST
 #define DOUPDOWN
 #ifdef DOLIST
 		logger("\nlist of numbers\n");
 		for (S32 i = MINNUM; i <= MAXNUM; ++i) {
 			const vector<S32> hailList = hailVector(i);
-			logger("n = %4d, counti = %4d [", i, hailList.size());
+			logger("n = %4d, count = %3d [", i, hailList.size());
 			for (S32 v : hailList) {
-				logger("%3d ", v);
+				logger("%4d ", v);
 			}
+			if (hailList.size() > U32(maxCount))
+				maxCount = hailList.size();
 			logger("]\n");
 		}
 #endif
@@ -1596,16 +1607,18 @@ namespace hail1 {
 		logger("\nup down sequence\n");
 		for (S32 i = MINNUM; i <= MAXNUM; ++i) {
 			const vector<C8> upDown = hailUpDown(i);
-			logger("n = %4d, countn = %4d [ ", i, upDown.size());
+			logger("n = %4d, count = %3d [ ", i, upDown.size());
 			for (auto v : upDown) {
 				logger("%c ", v);
 			}
+			if (upDown.size() > U32(maxCount))
+				maxCount = upDown.size();
 			logger("]\n");
 		}
 #endif
 		logger("\n");
 		logger_enableindent();
-		logger("############## end do hail 1 ##############\n");
+		logger("############## end do hail 1 largest %d, maxcount %d ##############\n\n",largest,maxCount);
 	}
 
 } // end namespace hail1
@@ -3182,7 +3195,8 @@ void scratchinit()
 #endif
 #ifdef HAIL1
 	using namespace hail1;
-	dohail1();
+	dohail1(true); // always run a fixed number of steps
+	dohail1(false); // run until <= 1
 #endif
 #ifdef SPINNERS
 #include "u_spinners.h"
