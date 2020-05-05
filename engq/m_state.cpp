@@ -59,6 +59,7 @@ bool stateproc()
 			logger("end exit state %d\n",curstate);
 		}
 		curstate=nextstate;
+		dochangestate = 0; // incase init changes state
 		if (curstate!=(S32)NOSTATE && curstate<numstates) {
 			logger("begin init state %d\n",curstate);
 			logger_indent();
@@ -70,7 +71,7 @@ bool stateproc()
 			logger("end init state %d\n",curstate);
 			wininfo.slacktime=0;	// don't need to catchup when switching states.
 		}
-		dochangestate=0;
+		//dochangestate=0; // moved up before initfunc
 	}
 	if (curstate==(S32)NOSTATE || curstate>=numstates)
 		return 0;

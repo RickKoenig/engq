@@ -461,7 +461,7 @@ S32 lcm(S32 a,S32 b)
 	return (abs(a)/gcd(a,b)*abs(b)); // divides cleanly
 }
 
-// returns true if complex
+// returns false if complex
 bool quadratic(float a,float b,float c,float& r0,float& r1)
 {
 	float radsq = b*b - 4.0f*a*c;
@@ -479,7 +479,7 @@ bool quadratic(float a,float b,float c,float& r0,float& r1)
 	return true;
 }
 
-// returns true if complex
+// returns false if complex
 bool quadratic(float a,float b,float c,compf& r0,compf& r1)
 {
 	float radsq = b*b - 4.0f*a*c;

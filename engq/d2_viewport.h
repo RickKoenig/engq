@@ -40,5 +40,9 @@ struct viewport2 {
 };
 extern viewport2 mainvp,lightvp;//,*curvp;
 
+struct viewport2x : public viewport2 {
+	viewport2x();
+};
+
 //void video_getgdi();
 void doflycam(viewport2* vp);

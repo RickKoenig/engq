@@ -465,16 +465,32 @@ void video_buildworldmatearly(const tree2* t)
 	}
 }
 
-void obj2world(const tree2* t,const pointf3* in,pointf3* out)
+void obj2world(const tree2* t, const pointf3* in, pointf3* out)
 {
 	video_buildworldmatearly(t);
-	xformvec(&t->o2w,in,out);
+	xformvec(&t->o2w, in, out);
 }
 
-void obj2worldn(const tree2* t,const pointf3* in,pointf3* out,U32 nv)
+void obj2worldn(const tree2* t, const pointf3* in, pointf3* out, U32 nv)
 {
 	video_buildworldmatearly(t);
-	xformvecs(&t->o2w,in,out,nv);
+	xformvecs(&t->o2w, in, out, nv);
+}
+
+void world2obj(const tree2* t, const pointf3* in, pointf3* out)
+{
+	video_buildworldmatearly(t);
+	mat4 w2o;
+	inversemat3d(&t->o2w, &w2o);
+	xformvec(&w2o, in, out);
+}
+
+void world2objn(const tree2* t, const pointf3* in, pointf3* out, U32 nv)
+{
+	video_buildworldmatearly(t);
+	mat4 w2o;
+	inversemat3d(&t->o2w, &w2o);
+	xformvecs(&w2o, in, out, nv);
 }
 
 

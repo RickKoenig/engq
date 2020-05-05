@@ -190,6 +190,8 @@
 #include "u_s_holoview3d.h"
 #include "u_s_holoview2db.h"
 
+#include "st2_uplay3.h"
+
 C8 winmain_datadir[]="data"; // folder off of .exe
 C8 winmain_version[]="engqtest 1.00";
 
@@ -277,8 +279,8 @@ struct state states[STATE_NUM]={
 	{0					,0					,0					,0					,0},
 // 65
 	{0					,0					,0					,0					,0},
-	{0					,0					,0					,0					,0},
 	// end plotter2 stuff
+	{uplay3_init		,uplay3_proc		,uplay3_draw3d		,0					,uplay3_exit}, // 88 stunt2 demo
 	{stoidinit			,stoidproc			,0					,stoiddraw2d		,stoidexit},
 	{testres3dinit		,testres3dproc		,testres3ddraw3d	,0					,testres3dexit},
 	{basic3dinit		,basic3dproc		,basic3ddraw3d		,0					,basic3dexit},

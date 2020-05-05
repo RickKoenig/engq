@@ -300,6 +300,9 @@
     <Filter Include="Source Files\user\holoview">
       <UniqueIdentifier>{8f74fe2e-37fc-4567-9a68-e36301b5e725}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\user\uplay3">
+      <UniqueIdentifier>{4c53d08a-383f-45f4-a927-3d3e79b8fd87}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="engqtest.map">
@@ -2768,11 +2771,26 @@
     <ClInclude Include="u_listtest.h">
       <Filter>Source Files\user\user_misc</Filter>
     </ClInclude>
-    <ClInclude Include="u_module_test.h">
-      <Filter>Source Files\user\user_misc</Filter>
-    </ClInclude>
     <ClInclude Include="u_s_plot2bresenham.h">
       <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="st2_uplay3.h">
+      <Filter>Source Files\user\uplay3</Filter>
+    </ClInclude>
+    <ClInclude Include="st2_roadheight.h">
+      <Filter>Source Files\user\uplay3</Filter>
+    </ClInclude>
+    <ClInclude Include="st2_uphysics2.h">
+      <Filter>Source Files\user\uplay3</Filter>
+    </ClInclude>
+    <ClInclude Include="st2_glue.h">
+      <Filter>Source Files\user\uplay3</Filter>
+    </ClInclude>
+    <ClInclude Include="st2_uplay3_internal.h">
+      <Filter>Source Files\user\uplay3</Filter>
+    </ClInclude>
+    <ClInclude Include="st2_game.h">
+      <Filter>Source Files\user\uplay3</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -4078,14 +4096,23 @@
     <ClCompile Include="u_s_plot2soccergoal.cpp">
       <Filter>Source Files\user\user_math\plotter_code</Filter>
     </ClCompile>
-    <ClCompile Include="u_module_test.cpp">
-      <Filter>Source Files\user\user_misc</Filter>
-    </ClCompile>
     <ClCompile Include="u_listtest.cpp">
       <Filter>Source Files\user\user_misc</Filter>
     </ClCompile>
     <ClCompile Include="u_s_plot2bresenham.cpp">
       <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="st2_uplay3.cpp">
+      <Filter>Source Files\user\uplay3</Filter>
+    </ClCompile>
+    <ClCompile Include="st2_roadheight.cpp">
+      <Filter>Source Files\user\uplay3</Filter>
+    </ClCompile>
+    <ClCompile Include="st2_uphysics2.cpp">
+      <Filter>Source Files\user\uplay3</Filter>
+    </ClCompile>
+    <ClCompile Include="st2_glue.cpp">
+      <Filter>Source Files\user\uplay3</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

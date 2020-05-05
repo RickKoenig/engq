@@ -9,7 +9,10 @@
 
 //#define RENAMESHADERS // never call this code again !!!
 //#define PERSORTHO // perspective test with y,z to ys,zp and w
-#define HAIL1
+//#define HAIL1 // basic updown and counts
+//#define HAIL2 // find loops
+//#define HAIL3 // solve 2^M - 1 = 3^N
+//#define GHZ
 //#define WINE_ENTANGLE
 //#define DEBUGTEST
 //#define CUBIC_R6_TEST
@@ -39,7 +42,7 @@
 #endif
 
 // C++11 only
-#define JOBTEST
+//#define JOBTEST
 
 //#include "modernCppTests/modernCppTests.cpp"
 
@@ -1528,8 +1531,9 @@ namespace hail1 {
 	{
 		S32 ret;
 		if (n & 1) {
-			ret = (3*n  + 1) / 2;
-		} else {
+			ret = (3 * n + 1) / 2;
+		}
+		else {
 			ret = n / 2;
 		}
 		if (ret > largest)
@@ -1542,7 +1546,8 @@ namespace hail1 {
 		const S32 PASSEND_AMOUNT = 20;
 		if (passEnd) {
 			return curPass < PASSEND_AMOUNT;
-		} else {
+		}
+		else {
 			return n > 1;
 		}
 	}
@@ -1570,7 +1575,8 @@ namespace hail1 {
 			S32 next = hailStep(n);
 			if (next == n) {
 				ret.push_back('d');
-			} else {
+			}
+			else {
 				ret.push_back(next > n ? 'U' : 'D');
 			}
 			n = next;
@@ -1585,7 +1591,7 @@ namespace hail1 {
 		logger("############## start do hail 1 ##############\n");
 		logger_disableindent();
 		const S32 MINNUM = 0;
-		const S32 MAXNUM = 12800;
+		const S32 MAXNUM = 128;
 		largest = 0;
 		maxCount = 0;
 #define DOLIST
@@ -1594,7 +1600,8 @@ namespace hail1 {
 		logger("\nlist of numbers\n");
 		for (S32 i = MINNUM; i <= MAXNUM; ++i) {
 			const vector<S32> hailList = hailVector(i);
-			logger("n = %4d, count = %3d [", i, hailList.size());
+			S32 cnt = hailList.size();
+			logger("n = %4d, count = %3d [", i, cnt);
 			for (S32 v : hailList) {
 				logger("%4d ", v);
 			}
@@ -1607,7 +1614,8 @@ namespace hail1 {
 		logger("\nup down sequence\n");
 		for (S32 i = MINNUM; i <= MAXNUM; ++i) {
 			const vector<C8> upDown = hailUpDown(i);
-			logger("n = %4d, count = %3d [ ", i, upDown.size());
+			S32 cnt = upDown.size();
+			logger("n = %4d, count = %3d [ ", i, cnt);
 			for (auto v : upDown) {
 				logger("%c ", v);
 			}
@@ -1618,10 +1626,217 @@ namespace hail1 {
 #endif
 		logger("\n");
 		logger_enableindent();
-		logger("############## end do hail 1 largest %d, maxcount %d ##############\n\n",largest,maxCount);
+		logger("############## end do hail 1 largest %d, maxcount %d ##############\n\n", largest, maxCount);
 	}
 
 } // end namespace hail1
+#endif
+
+#ifdef HAIL2
+namespace hail2 {
+	// look for loops
+	const S32 minDigits = 1;
+	const S32 maxDigits = 6;
+	void dohail2()
+	{
+		logger("############## start do hail 2 ##############\n");
+		logger_disableindent();
+		logger("\n");
+
+		logger("find loops\n");
+		for (auto numDigits = minDigits; numDigits <= maxDigits; ++numDigits) {
+			logger("%d digits\n", numDigits);
+			//S32 N = 1 << numDigits;
+			auto maxNum = (1 << numDigits);
+			for (auto packed = 0; packed < maxNum; ++packed) {
+				// MX + B = NX
+				logger("\tj = %3d ", packed);
+				for (auto k = numDigits; k < maxDigits; ++k) {
+					logger(" ");
+				}
+				S32 M = 1;
+				S32 B = 0;
+				S32 N = 1;
+				for (auto k = 0; k < numDigits; ++k) {
+					bool up = (packed & (1 << (numDigits - k - 1))) != 0;
+					if (up) {
+						logger("U");
+						M = 3 * M;
+						B = 3 * B + N;
+					}
+					else {
+						logger("D");
+					}
+					N = 2 * N;
+				}
+				logger(", ");
+				if (M != 1) {
+					logger("%3dx", M);
+				}
+				else {
+					logger("   x");
+				}
+				if (B > 0) {
+					logger(" + %3d = ", B);
+				}
+				else {
+					logger("     =   ");
+				}
+				fraction frcSolution = fraction(B, N - M);
+				S32 numerator = frcSolution.getnum();
+				S32 denominator = frcSolution.getden();
+				//float solution = B/float(N - M);
+				if (denominator == 1) {
+					logger("%3dx,    x = %d\n", N, numerator);
+				}
+				else {
+					logger("%3dx,    x = %d/%d\n", N, numerator, denominator);
+				}
+			}
+		}
+
+		logger("\n");
+		logger_enableindent();
+		logger("############## end do hail 2 ##############\n\n");
+		//poporchangestate(STATE_MAINMENU);
+		popstate();
+	}
+
+} // end namespace hail2
+#endif
+
+#ifdef HAIL3
+namespace hail3 {
+	// solve 2^M - 1 = 3^N, M >= 0 && N >= 0
+	void dohail3()
+	{
+		logger("############## start do hail 3 ##############\n");
+		logger_disableindent();
+		logger("\n");
+
+		logger("solve: 2^M - 3^N = 1\n");
+		S64 M = 0;
+		S64 N = 0;
+		S64 MP = 1;
+		S64 NP = 1;
+		S64 MAXN = numeric_limits<S64>::max() / 3;
+		while (MP < MAXN && NP < MAXN) {
+			S64 D = MP - NP;
+			logger("M^%2lld = %19lld, N^%2lld = %19lld, difference = %20lld\n", M, MP, N, NP, D);
+			if (D <= 1) {
+				MP *= 2;
+				++M;
+			}
+			else {
+				NP *= 3;
+				++N;
+			}
+		}
+
+		logger("\n");
+		logger_enableindent();
+		logger("############## end do hail 3 ##############\n\n");
+		popstate();
+	}
+
+} // end namespace hail3
+#endif
+
+#ifdef GHZ
+namespace ghz {
+	// solve GHZ classically
+	const S32 NUM_DIGS{ 6 };
+	bool incChoices(S32 ch[NUM_DIGS])
+	{
+		S32 dig = 0;
+		while (dig < NUM_DIGS) {
+			S32& d = ch[dig];
+			d ^= 1;
+			if (d) {
+				break;
+			}
+			++dig;
+		}
+		return dig == NUM_DIGS;
+	}
+
+	S32 calcWin(S32 ch[NUM_DIGS])
+	{
+		S32 sum;
+		S32 win = 0;
+		// XXX
+		sum = ch[0] + ch[2] + ch[4];
+		if (sum & 1)
+			++win;
+		// XYY
+		sum = ch[0] + ch[3] + ch[5];
+		if (!(sum & 1))
+			++win;
+		// YXY
+		sum = ch[1] + ch[2] + ch[5];
+		if (!(sum & 1))
+			++win;
+		// YYX
+		sum = ch[1] + ch[3] + ch[4];
+		if (!(sum & 1))
+			++win;
+		return win;
+	}
+
+	void showChoices(S32 ch[NUM_DIGS])
+	{
+		S32 wincount = 3;
+		for (S32 i = 0; i < NUM_DIGS;++i) {
+			S32 v = ch[i];
+			v = 1 - 2 * v;
+			logger("%2d ", v);
+		}
+		logger("  Win %d/4\n",calcWin(ch));
+	}
+
+	void doGHZ()
+	{
+		logger("############## start do GHZ classical ##############\n");
+		logger_disableindent();
+		logger("\n");
+
+		logger("tables\n");
+		S32 choices[NUM_DIGS] {};
+		/* indices
+		AX 0
+		AY 1
+		BX 0
+		BY 1
+		CX 0
+		CY 1
+		*/
+		/* values
+		0 -> 1
+		1 -> -1
+		*/
+		S32 watch = 0;
+		logger("AX AY BX BY CX CY\n");
+		while (watch<100) {
+			if (watch % 4 == 0)
+				logger("\n");
+			if (watch % 16 == 0)
+				logger("\n");
+			++watch;
+			showChoices(choices);
+			bool wrap = incChoices(choices);
+			if (wrap) {
+				break;
+			}
+		}
+		logger("watch = %d\n", watch);
+
+		logger("\n");
+		logger_enableindent();
+		logger("############## end do GHZ classical ##############\n\n");
+		popstate();
+	}
+
+} // end namespace ghz
 #endif
 
 
@@ -3179,12 +3394,6 @@ bitmap32* threatbm;
 
 void scratchinit()
 {
-	// test git ignore
-#include "u_module_test.h"
-	testModuleTest();
-
-
-
 #ifdef PERSORTHO
 	using namespace pers;
 	adddebvars("pers", persdv, npersdv);
@@ -3197,6 +3406,18 @@ void scratchinit()
 	using namespace hail1;
 	dohail1(true); // always run a fixed number of steps
 	dohail1(false); // run until <= 1
+#endif
+#ifdef HAIL2
+	using namespace hail2;
+	dohail2();
+#endif
+#ifdef HAIL3
+	using namespace hail3;
+	dohail3();
+#endif
+#ifdef GHZ
+	using namespace ghz;
+	doGHZ();
 #endif
 #ifdef SPINNERS
 #include "u_spinners.h"

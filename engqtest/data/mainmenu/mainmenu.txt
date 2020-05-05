@@ -63,6 +63,7 @@ statedesc 51 "plotter2 test bresenham algorithms"
 
 // skip some states
 
+statedesc 66 "run the realtime 3d stunt2 demo"
 statedesc 67 "Stoid Command!"
 statedesc 68 "Test 3D res"
 statedesc 69 "Basic 3D"

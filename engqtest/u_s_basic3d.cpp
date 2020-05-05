@@ -6,7 +6,7 @@
 // list of user states
 #include "u_states.h"
 
-// for buildprism
+// for buildprism, or other 3d primitive objects
 #include "u_modelutil.h"
 
 // 3d objects
@@ -21,7 +21,7 @@ void basic3dinit()
 
 // setup trees
 	pushandsetdir("gfxtest"); // default graphics directory
-	roottree = new tree2("roottree");
+	roottree = new tree2("roottree"); // main tree
 	//obj1=buildprism(pointf3x(1,1,1),"maptestnck.tga","tex");
 	obj1 = buildplane_xy(pointf2x(1,1),"maptestnck.tga","tex","basicplane");
 	roottree->trans.z = .5f; // move world forward to see objects
@@ -29,22 +29,7 @@ void basic3dinit()
 	popdir();
 
 // setup viewport
-	mainvp.xres = WX;
-	mainvp.yres = WY;
-	mainvp.xstart = 0;
-	mainvp.ystart = 0;
-	mainvp.backcolor = C32BROWN;
-	mainvp.zfront = .125f;
-	mainvp.zback = 20000;
-	mainvp.camzoom = 1;//3.2f; // it'll getit from tree camattach if you have one
-	mainvp.camtrans.z = 0;//-100;
-	mainvp.camtrans.x = 0;
-	mainvp.camtrans.y = 0;// 50;
-	mainvp.camrot = pointf3x(0,0,0);
-	mainvp.flags = VP_CLEARBG|VP_CHECKER|VP_CLEARWB;
-	mainvp.xsrc = WX;
-	mainvp.ysrc = WY;
-	mainvp.useattachcam = false;
+	mainvp = viewport2x(); // a good default viewport
 }
 
 void basic3dproc()

@@ -174,8 +174,10 @@ void video_drawtreelist();
 
 
 void video_buildworldmatearly(const tree2* t); // call if need o2w early
-void obj2world(const tree2* t,const pointf3* in,pointf3* out);
-void obj2worldn(const tree2* t,const pointf3* in,pointf3* out,U32 nv);
+void obj2world(const tree2* t, const pointf3* in, pointf3* out);
+void obj2worldn(const tree2* t, const pointf3* in, pointf3* out, U32 nv);
+void world2obj(const tree2* t, const pointf3* in, pointf3* out);
+void world2objn(const tree2* t, const pointf3* in, pointf3* out, U32 nv);
 void video_buildworldmats(tree2* t);
 void setcastshadow(tree2* t);
 

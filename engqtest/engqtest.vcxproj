@@ -980,6 +980,12 @@
     <ClInclude Include="racenet\updater.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="rungekutta.h" />
+    <ClInclude Include="st2_game.h" />
+    <ClInclude Include="st2_glue.h" />
+    <ClInclude Include="st2_roadheight.h" />
+    <ClInclude Include="st2_uphysics2.h" />
+    <ClInclude Include="st2_uplay3.h" />
+    <ClInclude Include="st2_uplay3_internal.h" />
     <ClInclude Include="testclassfactory.h" />
     <ClInclude Include="timelogger.h" />
     <ClInclude Include="u_ar_parse.h" />
@@ -1002,7 +1008,6 @@
     <ClInclude Include="u_mandl.h" />
     <ClInclude Include="u_median.h" />
     <ClInclude Include="u_modelutil.h" />
-    <ClInclude Include="u_module_test.h" />
     <ClInclude Include="u_oddOneOut.h" />
     <ClInclude Include="u_packer.h" />
     <ClInclude Include="u_permiter.h" />
@@ -1750,11 +1755,23 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
     </ClCompile>
+    <ClCompile Include="st2_glue.cpp" />
+    <ClCompile Include="st2_roadheight.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="st2_uphysics2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="st2_uplay3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="u_listtest.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="u_module_test.cpp" />
     <ClCompile Include="u_oddOneOut.cpp" />
     <ClCompile Include="u_permiter.cpp" />
     <ClCompile Include="plotter_code\alphatest.cpp">

@@ -4,6 +4,55 @@
 
 viewport2 mainvp,lightvp;
 
+viewport2x::viewport2x() {
+	backcolor = C32LIGHTCYAN;
+	zfront = .125f;
+	zback = 1000;
+	xstart = 0;
+	ystart = 0;
+	xres = WX;
+	yres = WY;
+	xsrc = WX;
+	ysrc = WY;
+	camtrans.z = 0;//-100;
+	camtrans.x = 0;
+	camtrans.y = 0;// 50;
+	camrot = pointf3x(0, 0, 0);
+	usev2w = false;
+	camzoom = 1;//3.2f; // it'll getit from tree camattach if you have one
+	flags = VP_CLEARBG | VP_CHECKER | VP_CLEARWB;
+	isortho = false;
+	useattachcam = false;
+#if 0
+	// bitmaps
+	//	struct bitmap16 *backdrop; // where to draw
+	//	S32 backdroptype;			// format of drawing surface
+	//	struct bitmap16 *wbuffer; // wbuffer for draw
+	//	mat4 w2c;
+	C32 backcolor;
+	// clipping
+	float zfront, zback;
+	S32 xstart, ystart; // used in projection
+	S32 xres, yres; // used in projection
+	S32 xsrc, ysrc;
+	// matrix
+	//	struct mat4 w2c; // derived from camattach,roottree,trans,rot,scale,wbscale,zoom,xsrc,ysrc,xres,yres
+	//	struct tree* roottree;
+	pointf3 camtrans, camrot;
+	mat4 v2w;
+	bool usev2w;
+	//	float wbscale;
+	float camzoom;
+	// flags
+	S32 flags;
+	// for ortho
+	bool isortho;
+	float ortho_size;
+	tree2* camattach;
+	bool useattachcam;
+#endif
+}
+
 void doflycam(viewport2* vp)
 {
 //	extern S32 mousemode;

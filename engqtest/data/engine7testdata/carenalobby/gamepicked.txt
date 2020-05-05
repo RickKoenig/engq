@@ -8,10 +8,10 @@ decal "Decal 14"
 "plasma" 4
 "antimatter" 7
 "chemical" 2
-track "testnew1"
+track "jackiep"
 rules 1
-humanplayers 64
-botplayers 64
-gamenet 0
+humanplayers 8
+botplayers 0
+gamenet 2
 serverip "23.123.140.155"
 serverport 5426
