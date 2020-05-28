@@ -983,6 +983,7 @@
     <ClInclude Include="st2_game.h" />
     <ClInclude Include="st2_glue.h" />
     <ClInclude Include="st2_roadheight.h" />
+    <ClInclude Include="st2_tsp.h" />
     <ClInclude Include="st2_uphysics2.h" />
     <ClInclude Include="st2_uplay3.h" />
     <ClInclude Include="st2_uplay3_internal.h" />
@@ -1070,6 +1071,7 @@
     <ClInclude Include="u_s_lightsout.h" />
     <ClInclude Include="u_s_lighttest.h" />
     <ClInclude Include="u_s_plot2bresenham.h" />
+    <ClInclude Include="u_s_plot2collisions1d.h" />
     <ClInclude Include="u_s_plot2linear.h" />
     <ClInclude Include="u_s_luatest.h" />
     <ClInclude Include="u_s_mainmenu.h" />
@@ -1760,6 +1762,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="st2_tsp.cpp" />
     <ClCompile Include="st2_uphysics2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
@@ -2156,6 +2159,7 @@
     <ClCompile Include="u_s_lightsout.cpp" />
     <ClCompile Include="u_s_lighttest.cpp" />
     <ClCompile Include="u_s_plot2bresenham.cpp" />
+    <ClCompile Include="u_s_plot2collisions1d.cpp" />
     <ClCompile Include="u_s_plot2linear.cpp" />
     <ClCompile Include="u_s_luatest.cpp" />
     <ClCompile Include="u_s_mainmenu.cpp" />

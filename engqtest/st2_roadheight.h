@@ -308,7 +308,7 @@ namespace st2 {
 	//int nprotos;
 
 	////// global functions
-	TREE *alloctree(int nsubs, char *numberc);
+	TREE *alloctree(int nsubs, const char *numberc);
 	TREE *alloctreeid(int nchildren, int id);
 	TREE *duptree(TREE *t);
 	void freetree(TREE *t);

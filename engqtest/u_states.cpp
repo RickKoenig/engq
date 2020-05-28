@@ -192,6 +192,8 @@
 
 #include "st2_uplay3.h"
 
+#include "u_s_plot2collisions1d.h"
+
 C8 winmain_datadir[]="data"; // folder off of .exe
 C8 winmain_version[]="engqtest 1.00";
 
@@ -258,11 +260,10 @@ struct state states[STATE_NUM]={
 	{plot2bezierinit	,plot2bezierproc	,0					,plot2bezierdraw2d	,plot2bezierexit},
 	{plot2octmirrorinit	,plot2octmirrorproc	,0					,plot2octmirrordraw2d,plot2octmirrorexit},
 	{plot2linearinit	,plot2linearproc	,0					,plot2lineardraw2d	,plot2linearexit},
-		
-	// 50
+// 50
 	{plot2soccergoalinit,plot2soccergoalproc,0					,plot2soccergoaldraw2d,plot2soccergoalexit},
 	{plot2bresenhaminit,plot2bresenhamproc,0					,plot2bresenhamdraw2d,plot2bresenhamexit},
-	{0					,0					,0					,0					,0},
+	{plot2collisions1dinit,plot2collisions1dproc,0				,plot2collisions1ddraw2d,plot2collisions1dexit},
 	{0					,0					,0					,0					,0},
 	{0					,0					,0					,0					,0},
 // 55

@@ -20,7 +20,7 @@ struct sagger {
 	soundhandle *sh;
 };
 
-//static struct sagger *asag;
+static struct sagger *asag;
 
 static S32 ReadLong(FILE *fp)
 {
@@ -217,11 +217,11 @@ static void DecodeAdpcm2(struct sagger *s,C8 *indata, S16 *outdata, S32 blen)
 	s->Gvalprev2 = valpred2;
 	s->Gindex2 = index2;
 }
-#if 0
+#if 1
 //Read in ADPCM data decompress and store in buffer that is bsze bytes...
 #define COMPSIZE 128
 #define UNCOMPSIZE (COMPSIZE*4)
-static void saggercallback(C8 *buff,S32 ubytes)
+static void saggercallback(U8 *buff,S32 ubytes)
 {
 //	S32 bptr,eptr,cptr;
 	C8 InData[COMPSIZE];

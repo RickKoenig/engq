@@ -554,7 +554,7 @@ void video_buildtreelist(tree2* t)
 			break;
 		}
 		if (mt2->msflags&SMAT_SHADOW) {
-			t->srt_drawpri=5; // shadows comes after everything else
+			t->srt_drawpri=5; // shadows come after everything else
 			break;
 		}
 		float dc=range(0.0f,t->treecolor.w,1.0f)*mt2->color.w;

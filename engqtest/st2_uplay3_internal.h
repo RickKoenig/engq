@@ -43,5 +43,7 @@ namespace st2 {
 	extern float wheelaccel;
 
 	void playatagsound(int tagidx);
-	void getgridxz(COLLGRID *gc, VEC *v, int *x, int *z);
+	//void getgridxz(COLLGRID *gc, VEC *v, int *x, int *z);
+	void docondom(int numcondoms);
+	void douburst(int numbursts);
 }

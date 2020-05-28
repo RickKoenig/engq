@@ -10,6 +10,8 @@
 #include "st2_uplay3.h"
 #include "st2_uplay3_internal.h"
 #include "st2_uphysics2.h"
+#include "st2_soundlst.h"
+#include "st2_tsp.h"
 
 // list of user states
 #include "u_states.h"
@@ -137,7 +139,7 @@ namespace st2 {
 static int zoomin; // keep at zero for now
 extern int audio_maindriver;
 // new variables added
-extern struct viewport mainvp;
+//extern struct viewport mainvp;
 int st2_loadtrack(char *filename, int override);
 int st2_lastpiece, st2_dir;
 
@@ -350,7 +352,7 @@ extern CARRATE carratings[];
 //struct animtex carbodyanimtex;//,flameranimtex;
 //struct animtex burstanimtex[4];
 
-struct texture *numcointex;
+textureb *numcointex;
 struct tsp *clocktsp, *speedotsp, *bursttsp[4], *flametsp, *specialtsp, *condomtsp, *flashtsp;
 static int oldtt, oldncoins, oldspeed;
 static int burstframe;
@@ -419,12 +421,12 @@ CARRATE carratings[] =
 	  110,8,  100,   9,  9,  9, -1,   //commando 2
 	   90,6.5, 92,   8,  8,  8, -1,   //enforcer 3
 	  120,10,  50,   5,  5,  5,  4,   //flamer   4
-	   90,4.5, 50,   8,  8,  8, -1,   //stingrod 5
+   90,4.5, 50,   8,  8,  8, -1,   //stingrod 5
 	   90,5.5,100,   5,  0,  0, -1,   //tread    6
-	  115,6.1f, 85, 7.5,7.5,7.5, -1,   //shocker  7
+  115,6.1f, 85, 7.5,7.5,7.5, -1,   //shocker  7
 	   90,5,   95,   7,  7,  7,  5,   //tryder   8
-	  100,5.5, 40,   8,  8,  8, -1,   //slideout 9
-	  120,10,  75, 6.5,6.5,6.5,  3,   //surfcrat 10
+  100,5.5, 40,   8,  8,  8, -1,   //slideout 9
+  120,10,  75, 6.5,6.5,6.5,  3,   //surfcrat 10
 	  105,10,  35,   6,  6,  6,  1,   //stepper  11
 	  120,10, 100,  10, 10, 10, -1,   //radar    12
 };
@@ -462,7 +464,7 @@ extern int validroadnorm;
 {
 	int cw;
 // Get the default control word.
-	cw= _controlfp( 0,0 );
+    cw= _controlfp( 0,0 );
 // Set the exception bits ON.
 	if (on) {
 //	   cw &=~(0);
@@ -496,7 +498,8 @@ void playatagsound(int tagidx)
 {
 	playasoundvol(taggetwhbyidx(gardentags, tagidx), 1.0f);
 }
-#if 0
+// UNC , uncomment
+#if 1
 
 /* motor stuff
 	if (KEY=='m')
@@ -542,8 +545,8 @@ static float normang(float ang)
 void initcoins()
 {
 	TREE *c;
-	char **script;
-	int npages;
+	//char **script;
+	//int npages;
 	int i, j; //,nc;
 	char pceidx[NUMBODS], nodel[NUMBODS]; //,baseidx[NUMBODS];
 	int ncoinsatpri;
@@ -554,27 +557,30 @@ void initcoins()
 	//	dorotvels();
 	srand(1234);
 	pushandsetdir("st2_edpieces");
-	script = loadscript("coinpriority.txt", &npages);
+	//script = loadscript("coinpriority.txt", &npages);
+	script sc = script("coinpriority.txt");
+	int npages = sc.num();
 	if (npages & 1)
 		errorexit("bad coinpriority.txt");
 	numcoinprioritys = npages / 2;
 	for (i = 0; i < numcoinprioritys; i++) {
-		strcpy(coinpriority[i].name, script[2 * i]);
-		coinpriority[i].priority = atoi(script[2 * i + 1]);
+		strcpy(coinpriority[i].name, sc.idx(2 * i).c_str());
+		coinpriority[i].priority = atoi(sc.idx(2 * i + 1).c_str());
 	}
-	freescript(script, npages);
+	//freescript(script, npages);
 	popdir();
 	// assign priorities to the pieces 20 max, 0 min, -1 none
 	memset(coinpris, -1, sizeof(coinpris));
 	totcoins = 0;
 	for (i = 0; i < NUMBODS; i++) {
 		p = thetrack[i].piece;
-		c = findtreenamerec(thetrack[i].t, "coin.lwo");
+		//c = findtreenamerec(thetrack[i].t, "coin.lwo");
+		c = thetrack[i].t->find("coin.lwo");
 		if (c) { // coin on this piece
 			totcoins++;
 			coinpris[i] = 2; // at least gets a 2 for priority
 			for (j = 0; j < numcoinprioritys; j++)
-				if (!stricmp(pieces[p].name, coinpriority[j].name))
+				if (!my_stricmp(pieces[p].name, coinpriority[j].name))
 					coinpris[i] = coinpriority[j].priority;
 		}
 	}
@@ -592,15 +598,15 @@ void initcoins()
 		if (ncoinsatpri <= nc) { // all coins at priority will be kept
 			for (j = 0; j < NUMBODS; j++) {
 				if (coinpris[j] == i) {
-					c = findtreenamerec(thetrack[j].t, "coin.lwo");
+					//c = findtreenamerec(thetrack[j].t, "coin.lwo");
+					c = thetrack[j].t->find("coin.lwo");
 					coinlist[ncoins].t = c;
 					obj2world(c, &zerov, &coinlist[ncoins++].pos);
 				}
 			}
-		}
-		else if (nc > 0) { // coins must be randomly kept, and some deleted
+		} else if (nc > 0) { // coins must be randomly kept, and some deleted
 			while (nc) {
-				p = random(ncoinsatpri);
+				p = mt_random(ncoinsatpri);
 				if (nodel[p] == 0) {
 					nodel[p] = 1;
 					nc--;
@@ -608,19 +614,19 @@ void initcoins()
 			}
 			for (j = 0; j < ncoinsatpri; j++) {
 				p = pceidx[j];
-				c = findtreenamerec(thetrack[p].t, "coin.lwo");
+				//c = findtreenamerec(thetrack[p].t, "coin.lwo");
+				c = thetrack[p].t->find("coin.lwo");
 				if (nodel[j]) {
 					coinlist[ncoins].t = c;
 					obj2world(c, &zerov, &coinlist[ncoins++].pos);
-				}
-				else
+				} else
 					freetree(c);
 			}
-		}
-		else { // low priority coins all get deleted
+		} else { // low priority coins all get deleted
 			for (j = 0; j < NUMBODS; j++) {
 				if (coinpris[j] == i) {
-					c = findtreenamerec(thetrack[j].t, "coin.lwo");
+					//c = findtreenamerec(thetrack[j].t, "coin.lwo");
+					c = thetrack[j].t->find("coin.lwo");
 					freetree(c);
 				}
 			}
@@ -710,9 +716,9 @@ void initcoins()
 */
 void coincollisions()
 {
-	extern void docondom();
+	//extern void docondom();
 	int i;
-	struct model *b;
+	modelb *b;
 	TREE *t;
 	float distsq, bestdist;
 	int bestcoin = -1;
@@ -749,8 +755,7 @@ void coincollisions()
 //							douburst(1);
 						docondom(5);
 
-					}
-					else {
+					} else {
 						playatagsound(GREENLIGHT); // caught all coins
 						douburst(3);
 						docondom(15);
@@ -766,11 +771,11 @@ void coincollisions()
 			atan2(coinlist[i].pos.x - objects[0].pos.x, coinlist[i].pos.z - objects[0].pos.z);
 		//		targetradarangle*=PIUNDER180;
 		targetradarangle = normangrad(targetradarangle + (PI / 2.0f));
-	}
-	else {
+	} else {
 		targetradarangle = -1;
 	}
 }
+// UNC
 #endif
 struct dembone dembones[COLBONESX][COLBONESZ] = {
 	{
@@ -784,11 +789,12 @@ struct dembone dembones[COLBONESX][COLBONESZ] = {
 		{"colbone1",{-1,0,-9}},
 	}
 };
-#if 0
+// UNC
+#if 1
 void loadcustomcarsettings()
 {
 	char carname[50];
-	getname(carname, allcars[selectedcar].carname);
+	mgetname(carname, allcars[selectedcar].carname);
 	strcat(carname, ".txt");
 	pushandsetdir("config");
 	if (fileexist(carname)) {
@@ -796,8 +802,7 @@ void loadcustomcarsettings()
 		pushandsetdir("config");
 		loadconfigfile(carname);
 		popdir();
-	}
-	else {
+	} else {
 		logger("custom car config file '%s' not found\n", carname);
 	}
 	popdir();
@@ -848,27 +853,27 @@ void st2_buildcar()
 	linkchildtoparent(carbody, carcenternull);
 	linkchildtoparent(carcenternull, carnull);
 	linkchildtoparent(carnull, root);
-	xxx = findtreename(&mainvp, allcars[selectedcar].mainobject);
-	if (xxx->mod)
-		xxx->mod->drawpri = 1;
-	uaxles[0] = findtreename(&mainvp, "frntl");
-	uaxles[1] = findtreename(&mainvp, "frntr");
-	uaxles[2] = findtreename(&mainvp, "backl");
-	uaxles[3] = findtreename(&mainvp, "backr");
+	xxx = findtreename(root, allcars[selectedcar].mainobject);
+	/*if (xxx->mod)
+		xxx->mod->drawpri = 1;*/
+	uaxles[0] = findtreename(root, "frntl");
+	uaxles[1] = findtreename(root, "frntr");
+	uaxles[2] = findtreename(root, "backl");
+	uaxles[3] = findtreename(root, "backr");
 	// find car bones
 	for (j = 0; j < COLBONESX*COLBONESZ; j++) {
-		dembones[0][j].t = findtreenamerec(carbody, dembones[0][j].name);
+		dembones[0][j].t = findtreename(carbody, dembones[0][j].name);
 		if (!dembones[0][j].t)
 			errorexit("can't find bone %s", dembones[0][j].name);
 		dembones[0][j].curpushin = zerov;
 	}
 	// handle special (lightning around car)
-	uplayspecial1 = findtreename(&mainvp, allcars[selectedcar].spname);
+	uplayspecial1 = findtreename(root, allcars[selectedcar].spname);
 	if (!uplayspecial1)
 		error("Error can't find %s", allcars[selectedcar].spname);
 	uplayspecial1->flags |= TF_DONTDRAW;
 
-	uplayspecial2 = findtreename(&mainvp, allcars[selectedcar].coinsp);
+	uplayspecial2 = findtreename(root, allcars[selectedcar].coinsp);
 	if (!uplayspecial2)
 		error("Error can't find %s", allcars[selectedcar].coinsp);
 	uplayspecial2->flags |= TF_DONTDRAW;
@@ -876,8 +881,8 @@ void st2_buildcar()
 	pushandsetdir("st2_game");
 	uplayflame1 = alloctree(0, "flame.lwo");
 	uplayflame2 = alloctree(0, "flamflip.lwo");
-	uplayflame1->treealphacutoff = 5;
-	uplayflame2->treealphacutoff = 5;
+	uplayflame1->treedissolvecutoff = 5/256.0f;
+	uplayflame2->treedissolvecutoff = 5 / 256.0f;
 	uplayflame1->flags |= TF_DONTDRAW;
 	uplayflame2->flags |= TF_DONTDRAW;
 
@@ -955,7 +960,7 @@ void st2_buildcar()
 	// handle different carbody textures
 	//	pushandsetdir("cars");
 
-	condomtsp = loadtsp("wipe.tsp", "wipea.tsp", mainvp.roottree, allcars[selectedcar].coinsp, "flash", TSP_USE_1ALPHA, 0);
+	condomtsp = loadtsp("wipe.tsp", "wipea.tsp", root, allcars[selectedcar].coinsp, "flash", TSP_USE_1ALPHA, 0);
 	/*	goldencondomanimtex.nframes = ReadTSP(&testsp,"wipe.tsp");
 		ReadTSP(&testspa,"wipea.tsp");
 		xxx=findtreename(&mainvp,allcars[selectedcar].coinsp);
@@ -977,11 +982,11 @@ void st2_buildcar()
 	*/
 	flametsp = loadtsp("flame.tsp", "flamea.tsp", uplayflame1, "flame.lwo", "flame", TSP_USE_1ALPHA, 0);
 	{
-		struct mat *mt;
+/*	CUT	struct mat *mt;
 		mt = findmaterial(uplayflame2, "flamflip");
 		freetexture(mt->thetex);
 		mt->thetex = flametsp->atex;
-		mt->thetex->refcount++;
+		mt->thetex->refcount++; */
 	}
 	/*
 		flameranimtex.nframes = ReadTSP(&testsp,"flame.tsp");
@@ -1004,7 +1009,7 @@ void st2_buildcar()
 	*/
 	popdir();
 
-	flashtsp = loadtsp(allcars[selectedcar].tspname, NULL, mainvp.roottree,
+	flashtsp = loadtsp(allcars[selectedcar].tspname, NULL, root,
 		allcars[selectedcar].mainobject, allcars[selectedcar].surfname, TSP_USE_1ALPHA, 0);
 	nuflashes = 1;	// force texture
 /*	carbodyanimtex.nframes = ReadTSP(&testsp,allcars[selectedcar].tspname);
@@ -1037,7 +1042,7 @@ void st2_buildcar()
 		}
 	else
 		for (i = 0; i < carinfo[selectedcar].nwheels; i++) {
-			wheels[i] = findtreename(&mainvp, carinfo[selectedcar].wheelnames[i]);
+			wheels[i] = findtreename(root, carinfo[selectedcar].wheelnames[i]);
 			freetree(wheels[i]);
 			wheels[i] = alloctree(1, carinfo[selectedcar].wheelnames[i]);
 			wheels[i]->buildo2p = O2P_FROMTRANSQUATSCALE;
@@ -1047,7 +1052,7 @@ void st2_buildcar()
 	linkchildtoparent(uplayflame2, uaxles[3]);
 	//	uflameonback=1;
 	if (selectedcar == RADAR)
-		radartree = findtreename(&mainvp, "Radar Dish Null");
+		radartree = findtreename(root, "Radar Dish Null");
 	else if (selectedcar == TREAD) {
 		//		pushandsetdir("cars");
 		/*		treadanimtex.nframes = ReadTSP(&testsp,"treadwhl.tsp");
@@ -1083,10 +1088,10 @@ void st2_buildcar()
 	shadowb->buildo2p = O2P_FROMTRANSQUATSCALE;
 	shadowb->rot.w = 1;
 	shadowbody = alloctree(0, allcars[selectedcar].shadowname);
-	shadowbody->treealphacutoff = 10;
+	shadowbody->treedissolvecutoff = 10 / 256.0f;
 	//	bodies[shadowbody->bodyid].mat->mhflags|=MHF_HASNOZBUFF;
 	shadowbody->buildo2p = O2P_FROMTRANSQUATSCALE;
-	shadowbody->flags |= TF_CALCLIGHTSONCE;
+	// CUT shadowbody->flags |= TF_CALCLIGHTSONCE;
 	linkchildtoparent(shadowbody, shadowb);
 	linkchildtoparent(shadowb, shadownull);
 	linkchildtoparent(shadownull, root);
@@ -1107,8 +1112,7 @@ void setanullpos(VEC *p, int i, int rel)
 		uplaynulls[i]->trans.x = p->x + objects[0].pos.x;
 		uplaynulls[i]->trans.y = p->y + objects[0].pos.y;
 		uplaynulls[i]->trans.z = p->z + objects[0].pos.z;
-	}
-	else
+	} else
 		uplaynulls[i]->trans = *p;
 }
 
@@ -1144,22 +1148,22 @@ int st2_loadtracklist2(char *filename)
 {
 	int i = 0, j;
 	char temp[64];
-	int numl;
-	char **script;
+	//int numl;
+	//char **script;
 	int nump = 0;
-	script = loadscript(filename, &numl);
-	while (i < numl) {
+	script sc(filename);
+	//= loadscript(filename, &numl);
+	while (i < sc.num()) {
 		j = 0;
-		strcpy(pieces[nump].name, script[i++]); // grab piece
+		strcpy(pieces[nump].name, sc.idx(i++).c_str()); // grab piece
 		pieces[nump].piece = NULL;
 		while (1) {
-			strcpy(temp, script[i++]); // grab changerot OR lwoname
+			strcpy(temp, sc.idx(i++).c_str()); // grab changerot OR lwoname
 			if (temp[1] == '\0' && temp[0] >= '0' && temp[0] <= '9') {
 				pieces[nump].changerot = atoi(temp);
 				pieces[nump].nlwos = j;
 				break;
-			}
-			else {
+			} else {
 				strcpy(pieces[nump].lwonames[j], temp);
 				logger("extra '%s'\n", temp);
 				if (j == NCOLLLWOS)
@@ -1167,13 +1171,14 @@ int st2_loadtracklist2(char *filename)
 				j++;
 			}
 		}
-		pieces[nump].newor = atoi(script[i++]);
+		pieces[nump].newor = atoi(sc.idx(i++).c_str());
 		nump++;
 	}
-	freescript(script, numl);
+	//freescript(script, numl);
 	return nump;
 }
 
+// UNC
 #endif
 
 // init
@@ -1211,7 +1216,8 @@ void canfinish(int yo)
 	else
 		nofinishpiece->flags &= ~TF_DONTDRAW;
 }
-#if 0
+// UNC
+#if 1
 
 void initvisit()
 {
@@ -1227,6 +1233,7 @@ void initvisit()
 	else
 		canfinish(1);
 }
+// UNC
 #endif
 void addvisit(int x, int z)
 {
@@ -1258,7 +1265,8 @@ void setnextcrashloc(int x, int z)
 		curpieceorder++;
 	}
 }
-#if 0
+// UNC
+#if 1
 void scantrackpieces()
 {
 	int bail = 0;
@@ -1351,12 +1359,14 @@ void scantrackpieces()
 
 void kill_bcams(TREE *t)
 {
-	int i;
-	for (i = 0; i < t->nchildren; i++)
-		kill_bcams(t->children[i]);
-	if (!strcmp(t->name, "lwscamera"))
-		freetree(t);
+	//U32 i;
+	//for (i = 0; i < t->children.size(); i++)
+	//	kill_bcams(t->children[i]);
+	for (auto it : t->children)
+	if (!strcmp(it->name.c_str(), "lwscamera"))
+		freetree(it);
 }
+// UNC
 #endif
 
 	void getgridxz(COLLGRID *gc, VEC *v, int *x, int *z)
@@ -1369,7 +1379,8 @@ void kill_bcams(TREE *t)
 			errorexit("grid outa bounds %d %d\n", *x, *z);
 #endif
 	}
-#if 0
+// UNC
+#if 1
 void getvecfromgridxz(COLLGRID *gc, VEC *v, int x, int z)
 {
 	v->x = ((float)x - gc->offx) / gc->mulx;
@@ -1488,8 +1499,8 @@ int tri2rectxz(VEC *t0, VEC *t1, VEC *t2, VEC *b0, VEC *b1)
 void setupmatfuncs()
 {
 	int i, j, k, el;
-	struct model *b;
-	MAT *m;
+	modelb *b;
+	//MAT *m;
 	int nmat;
 	for (i = 0; i < NUMBODS; i++)
 		for (j = 0; j < NCOLLLWOS; j++)
@@ -1501,14 +1512,15 @@ void setupmatfuncs()
 			if (!b)
 				errorexit("bodyid of piece < 0");
 			//			b=&bodies[k];
-			m = b->mats;
-			nmat = b->nmat;
+			//m = b->mats;
+			//nmat = b->nmat;
+			nmat = b->mats.size();
 			if (nmat > MAXMATFUNCS)
 				errorexit("too many mats");
 			//			logger("checking '%s'\n",thetrack[i].tlwos[j]->name);
 			for (k = 0; k < nmat; k++)
 				for (el = 0; el < NMATFUNCS; el++)
-					if (!stricmp(matfuncs[el].matname, b->mats[k].name)) {
+					if (!my_stricmp(matfuncs[el].matname, b->mats[k].name.c_str())) {
 						//						logger("matfunc found for piece '%s' material '%s'\n",
 						//							thetrack[i].tlwos[j]->name,b->surfnames+(k<<4));
 						thetrack[i].clwos[j].matfuncs[k] = matfuncs[el].matfunc;
@@ -1522,10 +1534,11 @@ void setupmatfuncs()
 };
 #define NMATFUNCS 2
 */
+// UNC
 #endif
 int carboost;
-int alphacutoffsave;
-extern int alphacutoff;
+//int alphacutoffsave;
+//extern int alphacutoff;
 int useoldcam;
 
 /////////////////////// particle stuff here
@@ -1551,30 +1564,35 @@ int sub_darkdirtvrandx, sub_darkdirtvrandy, sub_darkdirtvrandz;
 extern float dirtscale, sub_dirtscale, darkdirtscale, sub_darkdirtscale;
 
 #define USCALEDOWN 100.0f
-#if 0
-static void udirtanim(TREE *a)
+// UNC
+#if 1
+static bool udirtanim(TREE *a)
 {
 	a->transvel.y -= 3 / USCALEDOWN;
-	a->user2++;
-	if (a->user2 > a->user3)
+	a->userint[2]++;
+	if (a->userint[2] > a->userint[3])
 		freetree(a);
+	return true;
 }
 
-void udirtcanim(TREE *a)
+bool udirtcanim(TREE *a)
 {
 	a->transvel.y -= 1 / USCALEDOWN;
-	a->user2++;
-	if (a->user2 > a->user3)
+	a->userint[2]++;
+	if (a->userint[2] > a->userint[3])
 		freetree(a);
+	return true;
 }
 
-void udarkdirtanim(TREE *a)
+bool udarkdirtanim(TREE *a)
 {
 	a->transvel.y -= 2 / USCALEDOWN;
-	a->user2++;
-	if (a->user2 > a->user3)
+	a->userint[2]++;
+	if (a->userint[2] > a->userint[3])
 		freetree(a);
+	return true;
 }
+// UNC
 #endif
 	 //float timeinc;
 	//struct object objects[NUMOBJECTS];
@@ -1604,8 +1622,7 @@ void uspawndirt() // no YOU spawndirt!, called when it is time to spawn dirt
 			dirtvbz *= -1;
 		if (sub_dirtvbz >= 0)
 			sub_dirtvbz *= -1;
-	}
-	else {
+	} else {
 		//		axl = wheels[BACKLEFT];
 		//		axr = wheels[BACKRIGHT];
 		axl = wheels[FRONTLEFT];
@@ -1675,7 +1692,8 @@ void uspawndirt() // no YOU spawndirt!, called when it is time to spawn dirt
 		//		linkchildtoparent(unpart,root);
 	}
 }
-#if 0
+// UNC
+#if 1
 #if 0
 void uspawndarkdirt()
 {
@@ -1718,65 +1736,70 @@ void uspawndarkdirt()
 	}
 }
 #endif
+// UNC
 #endif
 void spawndirtparts()
 {
 	uspawndirt();
 	//	uspawndarkdirt();
 }
-#if 0
+// UNC
+#if 1
 static void uinitparticles()
 {
 	pushandsetdir("st2_game");
 	udpart = alloctree(1, "dust4.lwo");
 	udpart->flags |= TF_ALWAYSFACING;
-	udpart->user2 = 0;
-	udpart->user3 = 5;
-	udpart->treealphacutoff = 10;
+	udpart->userint[2] = 0;
+	udpart->userint[3] = 5;
+	udpart->treedissolvecutoff = 10 / 256.0f;
 	setVEC(&udpart->scale, dirtscale, dirtscale, dirtscale);
-	udpart->proc = udirtanim;
-	if (video_maindriver != VIDEO_D3D) {
+	udpart->userproc = udirtanim;
+	if (videoinfo.video_maindriver != VIDEO_D3D_FS || videoinfo.video_maindriver != VIDEO_D3D_WND) {
 		MAT *m;
 		;//togglezbuffer(udpart,"dust",1);
-		m = findmaterial(udpart, "dust");
-		m->mtrans = .5f;
+		//m = findmaterial(udpart, "dust");
+		m = udpart->findmaterial("dust");
+		m->color.w = .5f;
 	}
 
 	udirtpart = alloctree(1, "dirtpart.lwo");
 	udirtpart->flags |= TF_ALWAYSFACING;
-	udirtpart->user2 = 0;
-	udirtpart->user3 = 5;
-	udirtpart->treealphacutoff = 10;
+	udirtpart->userint[2] = 0;
+	udirtpart->userint[3] = 5;
+	udirtpart->treedissolvecutoff = 10 / 256.0f;
 	setVEC(&udirtpart->scale, sub_dirtscale, sub_dirtscale, sub_dirtscale);
-	udirtpart->proc = udirtcanim;
-	if (video_maindriver != VIDEO_D3D) {
+	udirtpart->userproc = udirtcanim;
+	if (videoinfo.video_maindriver != VIDEO_D3D_FS || videoinfo.video_maindriver != VIDEO_D3D_WND) {
 		MAT *m;
 		;//togglezbuffer(udirtpart,"dirt",1);
-		m = findmaterial(udirtpart, "dirt");
-		m->mtrans = .5f;
+		//m = findmaterial(udirtpart, "dirt");
+		m = udirtpart->findmaterial("dirt");
+		m->color.w = .5f;
 	}
 
 	udarkdirt = alloctree(1, "drkdirt.lwo");
 	udarkdirt->flags |= TF_ALWAYSFACING;
-	udarkdirt->user2 = 0;
-	udarkdirt->user3 = 5;
-	udarkdirt->treealphacutoff = 10;
+	udarkdirt->userint[2] = 0;
+	udarkdirt->userint[3] = 5;
+	udarkdirt->treedissolvecutoff = 10 / 256.0f;
 	setVEC(&udarkdirt->scale, darkdirtscale, darkdirtscale, darkdirtscale);
-	udarkdirt->proc = udarkdirtanim;
-	if (video_maindriver != VIDEO_D3D) {
+	udarkdirt->userproc = udarkdirtanim;
+	if (videoinfo.video_maindriver != VIDEO_D3D_FS || videoinfo.video_maindriver != VIDEO_D3D_WND) {
 		MAT *m;
 		;//togglezbuffer(udarkdirt,"dust",1);
-		m = findmaterial(udarkdirt, "dust");
-		m->mtrans = .5f;
+		//m = findmaterial(udarkdirt, "dust");
+		m = udarkdirt->findmaterial( "dust");
+		m->color.w = .5f;
 	}
 
 	udarkdirtpart = alloctree(1, "dkdrtprt.lwo");
 	udarkdirtpart->flags |= TF_ALWAYSFACING;
-	udarkdirtpart->user2 = 0;
-	udarkdirtpart->user3 = 5;
-	udarkdirtpart->treealphacutoff = 10;
+	udarkdirtpart->userint[2] = 0;
+	udarkdirtpart->userint[3] = 5;
+	udarkdirtpart->treedissolvecutoff = 10 / 256.0f;
 	setVEC(&udarkdirtpart->scale, sub_darkdirtscale, sub_darkdirtscale, sub_darkdirtscale);
-	udarkdirtpart->proc = udirtcanim;
+	udarkdirtpart->userproc = udirtcanim;
 	/*    if (usehardware==0) {
 			MAT *m;
 			togglezbuffer(udarkdirtpart,"drkdirt",1);
@@ -1813,11 +1836,14 @@ void initfinishbursts();
 
 void fixpondalphacutoff(TREE *t)
 {
-	int i;
-	if (!stricmp(t->name, "pondw.lwo"))
-		t->treealphacutoff = 10;
-	for (i = 0; i < t->nchildren; i++)
-		fixpondalphacutoff(t->children[i]);
+//	int i;
+	if (!my_stricmp(t->name.c_str(), "pondw.lwo"))
+		t->treedissolvecutoff = 10 / 256.0f;
+//	for (i = 0; i < t->nchildren; i++)
+//		fixpondalphacutoff(t->children[i]);
+	for (auto it : t->children) {
+		fixpondalphacutoff(it);
+	}
 }
 
 //int halfp,halfy,halfr;
@@ -1825,41 +1851,46 @@ void fixpondalphacutoff(TREE *t)
 int st2_loadtrack(char *filename, int override)
 {
 	int i, j = 0, numl;
-	char **script;
+	//char **script;
 	pushandsetdir("st2_tracks");
-	script = loadscript(filename, &numl);
-
+	//script = loadscript(filename, &numl);
+	script sc = script(filename);
+	numl = sc.num();
 	for (i = 0; i < numl; i += 7)
 	{
-		thetrack[j].piece = atoi(script[i]);
+		thetrack[j].piece = atoi(sc.idx(i).c_str());
 		if (override && thetrack[j].piece == PIECE_GRID) thetrack[j].piece = PIECE_BASE;
 		if (!override && thetrack[j].piece == PIECE_BASE) thetrack[j].piece = PIECE_GRID;
-		thetrack[j]. or = (float)atof(script[i + 1]);
-		thetrack[j].lpiece = atoi(script[i + 2]);
-		thetrack[j].previous = atoi(script[i + 3]);
-		st2_curpiece = atoi(script[i + 4]);
-		st2_lastpiece = atoi(script[i + 5]);
-		st2_dir = atoi(script[i + 6]);
+		thetrack[j]. orhey = (float)atof(sc.idx(i + 1).c_str());
+		thetrack[j].lpiece = atoi(sc.idx(i + 2).c_str());
+		thetrack[j].previous = atoi(sc.idx(i + 3).c_str());
+		st2_curpiece = atoi(sc.idx(i + 4).c_str());
+		st2_lastpiece = atoi(sc.idx(i + 5).c_str());
+		st2_dir = atoi(sc.idx(i + 6).c_str());
 		j++;
 	}
-	freescript(script, numl);
+	//freescript(script, numl);
 	popdir();
 
 	return numl;
 }
+// UNC
+#endif
 
 void uplay3_init()
 {
-	extern int clipmap;	// for coins in scoreline
-	int clipmapsave;
-	extern TREE *findtreenamerec(TREE *t, char *n);
+// UNC
+#if 1
+	//extern int clipmap;	// for coins in scoreline
+	//int clipmapsave;
+	//extern TREE *findtreenamerec(TREE *t, char *n);
 	//	SPRITE *testsp;
 	TREE *grid, *gridloco, *xxx;
 	int i, j;//,hflags;
 	extern int drawmouse;
 	extern int selected, saveslowpo;
 	extern int usegdi;
-	struct mat *mt;
+	mater2 *mt;
 	//    int ax,ay,ab,mode;
 
 		// temp
@@ -1880,7 +1911,11 @@ void uplay3_init()
 	newpitch.w *= PIOVER180;
 	popdir();
 	//	halfp=halfy=halfr=0;
-	video_setupwindow(globalxres, globalyres, 565);
+// UNC
+#endif
+// UNC
+#if 1
+	video_setupwindow(GX, GY);
 	intunnels = 0;
 	cantstartdrive = 100;
 	;//fasteropaquetextures=1; // if source data is totally opaque, take advantage of this
@@ -1899,8 +1934,8 @@ void uplay3_init()
 	backcolorred = 41;
 	backcolorgreen = 124;
 	backcolorblue = 42;
-	alphacutoffsave = alphacutoff;
-	alphacutoff = 137;
+	//alphacutoffsave = alphacutoff;
+	//alphacutoff = 137;
 	;//if(!usegdi) fmtorm(saveslowpo);
 	utotalcrashes = utotalstunts = 0;
 	// clock
@@ -1923,7 +1958,7 @@ void uplay3_init()
 	//	linkchildtoparent(root1,root);
 	//	linkchildtoparent(root2,root);
 	//	linkchildtoparent(root3,root);
-	mainvp.backcolor = frgbgreen;
+	mainvp.backcolor = C32GREEN;
 	mainvp.zfront = .125f;
 	mainvp.zback = 25000;
 	if (zoomin) {
@@ -1931,37 +1966,38 @@ void uplay3_init()
 		mainvp.yres = WY / 2;
 		mainvp.xstart = WX / 2;
 		mainvp.ystart = WY / 2;
-	}
-	else {
+	} else {
 		mainvp.xres = WX;
 		mainvp.yres = WY;
 		mainvp.xstart = 0;
 		mainvp.ystart = 0;
 	}
-	mainvp.roottree = root;
+	//mainvp.roottree = root;
 	//	mainvp.camattach=camnull;//getlastcam(); // from last scene loaded, set later when we
 													// get a cam(null)
 	mainvp.camzoom = 3.2f; // it'll getit from tree camattach if you have one
-	setviewportsrc(&mainvp); // from last scene loaded
+	//setviewportsrc(&mainvp); // from last scene loaded
 	mainvp.flags = VP_CLEARWB | VP_CLEARBG;
 
 	// get main scene
 	pushandsetdir("st2_uplay");
-	usescnlights = 1;
+	//usescnlights = 1;
 	grid = loadlws("uplay.lws");
 	linkchildtoparent(grid, root);
-	bigtree = findtreename(&mainvp, "tree1.lwo");
-	gridloco = findtreename(&mainvp, "gridloco"); // fix zbuffer problem, get grass to draw after horizon
+	bigtree = findtreename(root, "tree1.lwo");
+	gridloco = findtreename(root, "gridloco"); // fix zbuffer problem, get grass to draw after horizon
 	unhooktree(gridloco);
 	linkchildtoparent(gridloco, grid);
-	usescnlights = 0;
+	//usescnlights = 0;
 	startpiece = alloctree(0, "start.lwo");
 	finishpiece = loadlws("finish.lws");
 	//	pushandsetdir("edpieces");
 	//	xxx=loadlws("straight.lws");
 	//	popdir();
 	//	linkchildtoparent(xxx,finishpiece);
-	nofinishpiece = findtreenamerec(finishpiece, "redx.lwo");
+	//nofinishpiece = findtreenamerec(finishpiece, "redx.lwo");
+	nofinishpiece = finishpiece->find("coin.lwo");
+
 	linkchildtoparent(startpiece, root);
 	linkchildtoparent(finishpiece, root);
 	initfinishbursts();
@@ -1983,12 +2019,12 @@ void uplay3_init()
 		st2_lastpiece = 6;
 		st2_dir = 0;
 		thetrack[st2_lastpiece].piece = PIECE_GENERIC_3; // straight
-		thetrack[st2_lastpiece]. or = 0;
+		thetrack[st2_lastpiece]. orhey = 0;
 	}
 	// substitute last blank piece with a straight
 //	thetrack[st2_curpiece].piece=PIECE_GENERIC_3;
 	thetrack[st2_curpiece].piece = PIECE_GENERIC_25; // specialfinish.lws
-	thetrack[st2_curpiece]. or = (float)(st2_dir * 90 + 180); // ah theirs is 180 off
+	thetrack[st2_curpiece]. orhey = (float)(st2_dir * 90 + 180); // ah theirs is 180 off
 	for (i = 0; i < NUMBODS; i++) {
 		TREE *aaa;
 		char a[64];
@@ -2007,26 +2043,27 @@ void uplay3_init()
 		}
 		//		getname(b,pieces[p].piece->name);
 		//		strcat(b,".lwo");
-		thetrack[i].t->rot.y = thetrack[i]. or *PIOVER180;
+		thetrack[i].t->rot.y = thetrack[i]. orhey *PIOVER180;
 		thetrack[i].t->scale.x = 1.02f;	// overlap pieces some, 1% to 2% now 2%
 	//	thetrack[i].t->scale.z=1.02f;
-		aaa = findtreename(&mainvp, a);
+		aaa = findtreename(root, a);
 		linkchildtoparent(thetrack[i].t, aaa);
 		//		clone = findtreebodyname(b);
 		//		thetrack[i].bodyid = clone->bodyid;
 		// handle collision lists
 		if (pieces[p].nlwos == 0) { // no collision list, use old system of children[0]
-			thetrack[i].tlwos[0] = thetrack[i].t->children[0];
+			thetrack[i].tlwos[0] = thetrack[i].t->children.front();
+			//thetrack[i].tlwos[0] = thetrack[i].t->children[0];
 			thetrack[i].nlwos = 1;
-		}
-		else {
+		} else {
 			thetrack[i].nlwos = pieces[p].nlwos; // find name of lwo in lws
 			for (j = 0; j < pieces[p].nlwos; j++) {
-				if (!stricmp(pieces[p].lwonames[j], "coin.lwo")) // coin might be freed by current system
+				if (!my_stricmp(pieces[p].lwonames[j], "coin.lwo")) // coin might be freed by current system
 					errorexit("no coins in 'uedit.txt' please");
-				if ((thetrack[i].tlwos[j] = findtreenamerec(thetrack[i].t, pieces[p].lwonames[j])) == NULL)
+				//if ((thetrack[i].tlwos[j] = findtreenamerec(thetrack[i].t, pieces[p].lwonames[j])) == NULL)
+				if ((thetrack[i].tlwos[j]->find( pieces[p].lwonames[j])) == NULL)
 					errorexit("can't find '%s' in '%s'",
-						pieces[p].lwonames[j], thetrack[i].t->name);
+					pieces[p].lwonames[j], thetrack[i].t->name.c_str());
 			}
 		}
 		// build collision grid
@@ -2035,9 +2072,9 @@ void uplay3_init()
 			int gx, gz, gxmin, gzmin, gxmax, gzmax;
 			COLLGRID *cg;
 			TREE *t;
-			struct model *b;
+			model *b;
 			VEC *v;
-			FACE *f;
+			vector<FACE> f;
 			int nf;
 			int nv;
 			logger("<<<<< lwo %d\n", j);
@@ -2048,9 +2085,9 @@ void uplay3_init()
 			b = t->mod;
 			v = b->verts;
 			f = b->faces;
-			nf = b->nface;
-			nv = b->nvert;
-			logger("   '%s has %d faces'\n", thetrack[i].tlwos[j]->name, nf);
+			nf = b->faces.size();
+			nv = b->verts.size();
+			logger("   '%s has %d faces'\n", thetrack[i].tlwos[j]->name.c_str(), nf);
 			cg->mulx = (ST2_COLLGRIDX - .2f) / (b->boxmax.x - b->boxmin.x); // safety factor .1 on each side
 			cg->offx = .1f - cg->mulx*b->boxmin.x;
 			cg->mulz = (ST2_COLLGRIDZ - .2f) / (b->boxmax.z - b->boxmin.z); // safety factor .1 on each side
@@ -2133,7 +2170,7 @@ void uplay3_init()
 						getvecfromgridxz(cg, &minv, gx, gz);
 						getvecfromgridxz(cg, &maxv, gx + 1, gz + 1);
 						if (tri2rectxz(v + f[k].vertidx[0], v + f[k].vertidx[1], v + f[k].vertidx[2], &minv, &maxv)) {
-							cg->faceidx[gz][gx][cg->nfaceidx[gz][gx]] = f + k;
+							cg->faceidx[gz][gx][cg->nfaceidx[gz][gx]] = &f[0] + k;
 							cg->nfaceidx[gz][gx]++;
 						}
 					}
@@ -2156,7 +2193,7 @@ void uplay3_init()
 	rotaxis2quat(&objects[0].carang, &objects[0].carang);
 	// build up our camera
 	//	pushandsetdir("helperobj");
-	camnull = allochelper(1, HELPER_CAMERA, 0);
+	/*camnull = allochelper(1, HELPER_CAMERA, 0);
 	//	camnull=alloctree(1,"helpercamera.lwo");
 	//	popdir();
 	//	camnull=alloctree(1,nullname);
@@ -2167,7 +2204,7 @@ void uplay3_init()
 	;//addlwscam(camnull); // hi level camera
 	;//curlwscam = nlwscams-1; // hi level camera
 	mainvp.camattach = camnull;
-	linkchildtoparent(camnull, root);
+	linkchildtoparent(camnull, root);*/
 	;//cam.useroot=0; // lo level camera
 // set misc variables
 	startstunt = uready = 0;
@@ -2187,17 +2224,17 @@ void uplay3_init()
 		pushandsetdir("st2_hiscrline"); // hires
 	else
 		pushandsetdir("st2_scrline"); // lores
-	clipmapsave = clipmap;	// force all texture to be loaded to be colorkeys
-	clipmap = CLIPMAP_COLORKEY;
+	//clipmapsave = clipmap;	// force all texture to be loaded to be colorkeys
+	//clipmap = CLIPMAP_COLORKEY;
 	scrline = loadlws("scrline.lws");
-	clipmap = clipmapsave;
+	//clipmap = clipmapsave;
 	linkchildtoparent(scrline, camnull);
-	findtreename(&mainvp, "light.lwo")->flags |= TF_DONTDRAW;
-	findtreename(&mainvp, "light2.lwo")->flags |= TF_DONTDRAW;
+	findtreename(root, "light.lwo")->flags |= TF_DONTDRAW;
+	findtreename(root, "light2.lwo")->flags |= TF_DONTDRAW;
 	logger("loading clock textures (digits)..\n");
 	oldtt = oldncoins = oldspeed = -1;
 	// clock
-	clocktsp = loadtsp("clock.tsp", NULL, mainvp.roottree, "scrline.lwo", "clock", TSP_USE_1ALPHA, 1);
+	clocktsp = loadtsp("clock.tsp", NULL, root, "scrline.lwo", "clock", TSP_USE_1ALPHA, 1);
 	;//clockanimtex.mat = findmaterial(xxx,"clock");
 	;//if(!clockanimtex.mat)
 	;//	error("Can't find clock surface");
@@ -2205,10 +2242,10 @@ void uplay3_init()
 	;//if(!clockanimtex.desttex)
 	;//	error("clockdata is null");
 // coin
-	xxx = findtreename(&mainvp, "scrline.lwo");
+	xxx = findtreename(root, "scrline.lwo");
 	if (!xxx)
 		errorexit("cant find scrline.lwo");
-	mt = findmaterial(xxx, "scrline3");
+	mt = xxx->findmaterial("scrline3");
 	if (!mt)
 		errorexit("Can't find coin surface");
 	// coin tex should be same as clock tex
@@ -2219,13 +2256,13 @@ void uplay3_init()
 	freetexture(mt->thetex);
 	mt->thetex=numcointex;
 */
-	numcointex = mt->thetex;
+	numcointex = mt->thetexarr[0];
 
 	;//coinanimtex.desttex=gettexptr(coinanimtex.mat,&coinanimtex.w,&coinanimtex.h,NULL);
 	;//if(!coinanimtex.desttex)
 	;//	error("coindata is null");
 // speedo
-	speedotsp = loadtsp("speed.tsp", NULL, mainvp.roottree, "scrline.lwo", "speed", TSP_USE_1ALPHA, 1);
+	speedotsp = loadtsp("speed.tsp", NULL, root, "scrline.lwo", "speed", TSP_USE_1ALPHA, 1);
 	/*	mt = findmaterial(xxx,"speed");
 		if(!mt)
 			errorexit("Can't find speedo surface");
@@ -2271,7 +2308,7 @@ void uplay3_init()
 	seq_start(grid);
 	seq_start(finishpiece);
 	//	firstsound=1;
-	calclightonce(grid);
+	//calclightonce(grid);
 	// force the issue
 	;//curlwscam=0;
 	;//cam.attach=camnull;
@@ -2283,7 +2320,7 @@ void uplay3_init()
 	//	dirtparticle->proc=partfunc;
 	//	dirtparticle->user1=60;
 	//	dirtparticle->flags|=TF_ALWAYSFACING;
-	//	dirtparticle->treealphacutoff=10;
+	//	dirtparticle->treedissolvecutoff=10/256.0f;
 	//    if (usehardware==0) {
 	//		MAT *m;
 	//		togglezbuffer(dirtparticle,"dust",1);
@@ -2317,17 +2354,20 @@ void uplay3_init()
 	  // setup drawpriority
 	{
 		TREE *skydome;
-		skydome = findtreename(&mainvp, "dome1.lwo");
+		skydome = findtreename(root, "dome1.lwo");
 		//		unhooktree(skydome);
 		//		linkchildtoparent(skydome,root);
-		setdrawprirec(skydome, 0);
+		//setdrawprirec(skydome, 0);
 		//		skydome->mod->drawpri=0;
 		//		settreedraworder(root);
-		useattachcam = 1;
+		//useattachcam = 1;
 	}
-	logviewport(&mainvp, OPT_SOME);
+	//logviewport(&mainvp, OPT_SOME);
+#endif //UNC
 }
 
+// UNC
+#if 1
 
 //////// camera logic
 //(rot)
@@ -2427,8 +2467,7 @@ void targetcamrot()
 		if (testnewcam == 1) {
 			pitchthresh = pitchthreshdown;
 			rollthresh = rollthreshdown;
-		}
-		else {
+		} else {
 			pitchthresh = pitchthreshup;
 			rollthresh = rollthreshup;
 		}
@@ -2442,8 +2481,7 @@ void targetcamrot()
 		camtween += camtweenspeed;
 		if (camtween > 1)
 			camtween = 1;
-	}
-	else {
+	} else {
 		camtween -= camtweenspeed;
 		if (camtween < 0)
 			camtween = 0;
@@ -2485,8 +2523,10 @@ int finishburstsounds[16] = {
 	BSND1,BSND1,BSND1,BSND1,
 	BSND1,BSND1,BSND1,BSND1,
 };
+#endif // UNC
 TREE *fwork[4], *finishpiecenull;
 static float tx = 1.4f;
+#if 1 // UNC
 
 /*// firey finish (not used)
 void burstfinishproc3(TREE *t)
@@ -2495,7 +2535,7 @@ void burstfinishproc3(TREE *t)
 	t->user1++;	// inc living time
 	t->transvel.y-=.001; // gravity
 //	t->dissolve -= .03; // fade
-	if (t->user1>t->user2) { // die if living time > die time
+	if (t->user1>t->userint[2]) { // die if living time > die time
 		fs=finishburstsounds[random(16)];
 		playasound(fs,0);
 		switch(fs) {
@@ -2514,27 +2554,28 @@ void burstfinishproc3(TREE *t)
 */
 
 // spread
-void burstfinishproc2(TREE *t)
+bool burstfinishproc2(TREE *t)
 {
 	//	int fs;
-	t->user1++;	// inc living time
+	t->userint[1]++;	// inc living time
 	t->transvel.y -= .001f; // gravity
-	t->dissolve -= .03f; // fade
-	if (t->user1 > t->user2) { // die if living time > die time
+	t->treedissolvecutoff -= .03f; // fade
+	if (t->userint[1] > t->userint[2]) { // die if living time > die time
 		freetree(t);
 	}
+	return true;
 }
 
 // launch
-void burstfinishproc(TREE *t)
+bool burstfinishproc(TREE *t)
 {
 	int fs, i;
 	TREE *u;
-	t->user1++;	// inc living time
+	t->userint[1]++;	// inc living time
 	t->transvel.y -= .001f; // gravity
 //	t->dissolve -= .03; // fade
-	if (t->user1 > t->user2) { // die if living time > die time
-		fs = finishburstsounds[random(16)];
+	if (t->userint[1] > t->userint[2]) { // die if living time > die time
+		fs = finishburstsounds[mt_random(16)];
 		playatagsound(fs);
 		switch (fs) {
 		case BSND1:
@@ -2549,11 +2590,11 @@ void burstfinishproc(TREE *t)
 		for (i = 0; i < 100; i++) {
 			float lo, la;
 			if (fs == BSND4)
-				u = duptree(fwork[random(4)]);
+				u = duptree(fwork[mt_random(4)]);
 			else
-				u = duptree(fwork[t->user3]);
-			lo = frand() * 2 * PI;
-			la = frand()*1.9999f - .99995f;
+				u = duptree(fwork[t->userint[3]]);
+			lo = mt_frand() * 2 * PI;
+			la = mt_frand()*1.9999f - .99995f;
 			u->transvel.y = .05f*la;
 			la = (float)sqrt(1 - la * la);
 			u->transvel.x = .05f*la*(float)cos(lo);
@@ -2562,16 +2603,17 @@ void burstfinishproc(TREE *t)
 			u->transvel.y += t->transvel.y;
 			u->transvel.z += t->transvel.z;
 			u->trans = t->trans;
-			u->treealphacutoff = 10;
-			u->proc = burstfinishproc2;
-			u->dissolve = .5f;
-			u->user2 = 10 + random(20); // time to live
+			u->treedissolvecutoff = 10 / 256.0f;
+			u->userproc = burstfinishproc2;
+			u->treedissolvecutoff = .5f;
+			u->userint[2] = 10 + mt_random(20); // time to live
 			u->flags |= TF_ALWAYSFACING;
 			setVEC(&u->scale, .02f, .02f, .02f);
 			linkchildtoparent(u, finishpiecenull);
 		}
 		freetree(t);
 	}
+	return true;
 }
 
 void dofinishbursts()
@@ -2584,30 +2626,30 @@ void dofinishbursts()
 	ccc++;
 	if (ccc < ddd)
 		return;
-	ddd = 38 + random(30);
+	ddd = 38 + mt_random(30);
 	ccc = 0;
-	rd = 2 + random(3); // number of launches
+	rd = 2 + mt_random(3); // number of launches
 //	rd=5+random(20);
 	for (i = 0; i < rd; i++) {
-		r = random(4);
+		r = mt_random(4);
 		t = duptree(fwork[r]);
-		t->user3 = r; // keep track of color
-		t->proc = burstfinishproc;
-		t->transvel.x = frand()*.02f - .01f;
-		t->transvel.y = .05f + frand()*.02f;
-		t->transvel.z = frand()*.02f - .01f;
+		t->userint[3] = r; // keep track of color
+		t->userproc = burstfinishproc;
+		t->transvel.x = mt_frand()*.02f - .01f;
+		t->transvel.y = .05f + mt_frand()*.02f;
+		t->transvel.z = mt_frand()*.02f - .01f;
 		t->trans.x = tx;
-		t->dissolve = 240;
+		t->treedissolvecutoff = 240;
 		tx = -tx;
 		t->trans.y = 2.1f;
-		t->treealphacutoff = 10;
-		t->user2 = 30 + random(50); // time to live
+		t->treedissolvecutoff = 10 / 256.0f;
+		t->userint[2] = 30 + mt_random(50); // time to live
 		setVEC(&t->scale, .03f, .03f, .03f);
 		t->flags |= TF_ALWAYSFACING;
 		linkchildtoparent(t, finishpiecenull);
 	}
 }
-
+#endif // UNC
 void initfinishbursts()
 {
 	pushandsetdir("st2_fireworks");
@@ -2615,7 +2657,7 @@ void initfinishbursts()
 	fwork[1] = alloctree(0, "ember2.lwo");
 	fwork[2] = alloctree(0, "ember3.lwo");
 	fwork[3] = alloctree(0, "ember4.lwo");
-	if (video_maindriver != VIDEO_D3D) {
+	if (videoinfo.video_maindriver != VIDEO_D3D_FS || videoinfo.video_maindriver != VIDEO_D3D_WND) {
 		;//togglezbuffer(fwork[0],"ember1",0);
 		;//togglezbuffer(fwork[1],"ember2",0);
 		;//togglezbuffer(fwork[2],"ember3",0);
@@ -2625,7 +2667,7 @@ void initfinishbursts()
 	finishpiecenull = alloctree(4000, NULL);
 	linkchildtoparent(finishpiecenull, finishpiece);
 }
-
+#if 1 // UNC
 void freefinishbursts()
 {
 	int i;
@@ -2646,8 +2688,7 @@ void driftcam(float cd)
 		camnull->trans.x += cd * camdelta.x;
 		camnull->trans.y += cd * camdelta.y;
 		camnull->trans.z += cd * camdelta.z;
-	}
-	else if (clocktickcount > 0) {
+	} else if (clocktickcount > 0) {
 		camnull->trans.y += uloop * .010f;
 		if (dofinish < 250)
 			//		if (dofinish<250 && utotalstunts>=50) // maybe we only want fworks when stunts>=50
@@ -2757,8 +2798,7 @@ static void drawobjects()
 			q.z = 0;
 			q.w = objects[0].wheelyaw*PIOVER180;
 			rotaxis2quat(&q, &q);
-		}
-		else {
+		} else {
 			q.x = 0;
 			q.y = 0;
 			q.z = 0;
@@ -2817,8 +2857,7 @@ static void drawobjects()
 				;//Sound_StopSound(lightningsound);
 			}
 		}
-	}
-	else
+	} else
 		uplayspecial1->flags |= TF_DONTDRAW;
 	// car flashes (blue car)
 	if (nuflashes) {
@@ -2887,8 +2926,7 @@ static void drawobjects()
 			driftcamrot(camrotdrift);
 			pickaircampos();
 			driftcam(camdrift);
-		}
-		else {
+		} else {
 			pickgroundcamrot();
 			driftcamrot(camrotdrift);
 			pickgroundcampos();
@@ -3001,18 +3039,25 @@ void drivecar()
 	//;//extern int dmx,dmy;
 	int doatricksound1 = 0, doatricksound2 = 0, doatricksound3 = 0;
 	// get controls into variables
+	// remove joystick and mouse code for now....
+#if 0
 	if (releasemode) { // use the mouse only in release mode
 		uup = (wininfo.keystate[K_UP] || wininfo.jy < -.5f || (wininfo.jbut & 1) || (MBUT & 1) || wininfo.dmy <= -8);
 		udown = (wininfo.keystate[K_DOWN] || wininfo.jy > .5f || (wininfo.jbut & 2) || (MBUT & 2) || wininfo.dmy >= 8);
 		uleft = (wininfo.keystate[K_LEFT] || wininfo.jx < -.5f || wininfo.dmx <= -8);
 		uright = (wininfo.keystate[K_RIGHT] || wininfo.jx > .5f || wininfo.dmx >= 8);
-	}
-	else {
+	} else {
 		uup = (wininfo.keystate[K_UP] || wininfo.jy < -.5f || (wininfo.jbut & 1));
 		udown = (wininfo.keystate[K_DOWN] || wininfo.jy > .5f || (wininfo.jbut & 2));
 		uleft = (wininfo.keystate[K_LEFT] || wininfo.jx < -.5f);
 		uright = (wininfo.keystate[K_RIGHT] || wininfo.jx > .5f);
 	}
+#else
+	uup = wininfo.keystate[K_UP];
+	udown = wininfo.keystate[K_DOWN];
+	uleft = wininfo.keystate[K_LEFT];
+	uright = wininfo.keystate[K_RIGHT];
+#endif
 	urollright = wininfo.keystate[K_LEFTALT] | wininfo.keystate[K_RIGHTALT] |
 		wininfo.keystate[K_LEFTSHIFT] | wininfo.keystate[K_RIGHTSHIFT];
 	urollleft = wininfo.keystate[K_RIGHTCTRL] | wininfo.keystate[K_LEFTCTRL];
@@ -3038,8 +3083,7 @@ void drivecar()
 				drivemode = CARACCEL;
 				if (accelspin > startaccelspin)
 					drivemode = CARCOAST;
-			}
-			else {
+			} else {
 				drivemode = CARBRAKE;
 			}
 		}
@@ -3048,8 +3092,7 @@ void drivecar()
 				drivemode = CARREVERSEACCEL;
 				if (accelspin < -startaccelspin / 2)
 					drivemode = CARCOAST;
-			}
-			else {
+			} else {
 				drivemode = CARBRAKE;
 			}
 		}
@@ -3082,8 +3125,7 @@ void drivecar()
 			else
 				objects[0].wheelyaw = 0;
 		}
-	}
-	else { // fly
+	} else { // fly
 		if (!startstunt) {
 			// just left ground
 			float t;
@@ -3193,7 +3235,7 @@ void drivecar()
 		}
 	}
 }
-
+// UNC
 #endif
 void getpiece(VEC *v, int *x, int *z)
 {
@@ -3395,7 +3437,8 @@ int st2_line2road(VEC *top, VEC *bot, VEC *bestintsect, VEC *bestnorm)
 		normalize3d(bestnorm, bestnorm);
 	return foundint;
 }
-#if 0
+// UNC
+#if 1
 //////////////// end new roadheight code /////
 float ufireworkscale;
 void douburst(int numbursts)
@@ -3502,8 +3545,7 @@ void uplayupdateclock()
 			//SpriteBlit(clockanimtex.texdata[m],clockanimtex.desttex,14,-2,sw,sh,dw,dh,dw,0);
 			;//SpriteBlit(clockanimtex.texdata[t],clockanimtex.desttex,40,-2,sw,sh,dw,dh,dw,0);
 			;//SpriteBlit(clockanimtex.texdata[o],clockanimtex.desttex,65,-2,sw,sh,dw,dh,dw,0);
-		}
-		else { // lores
+		} else { // lores
 			;//SpriteBlit(clockanimtex.texdata[m],clockanimtex.desttex, 0,-1,sw,sh,dw,dh,dw,0);
 			;//SpriteBlit(clockanimtex.texdata[t],clockanimtex.desttex,15,-1,sw,sh,dw,dh,dw,0);
 			;//SpriteBlit(clockanimtex.texdata[o],clockanimtex.desttex,27,-1,sw,sh,dw,dh,dw,0);
@@ -3522,6 +3564,7 @@ void uplayupdateclock()
 		//	dh=1<<coinanimtex.mat->thetex->logv;
 		//	if (gameplayx>=800) {
 		if (usehires) { // hires
+#if 0 // update coins caught in display....
 			struct bitmap16 *b16;
 			b16 = locktexture(numcointex);
 			clipxpar16(clocktsp->frames[t], b16, 0, 0, 42, 32 - 5, clocktsp->x, clocktsp->y);
@@ -3529,8 +3572,8 @@ void uplayupdateclock()
 			unlocktexture(numcointex);
 			;//SpriteBlit(clockanimtex.texdata[t],coinanimtex.desttex,42,32-1,sw,sh,dw,dh,dw,0);
 			;//SpriteBlit(clockanimtex.texdata[o],coinanimtex.desttex,67,32-1,sw,sh,dw,dh,dw,0);
-		}
-		else { // lores
+#endif
+		} else { // lores
 			;//SpriteBlit(clockanimtex.texdata[t],coinanimtex.desttex,18,16-3,sw,sh,dw,dh,dw,0);
 			;//SpriteBlit(clockanimtex.texdata[o],coinanimtex.desttex,28,16-3,sw,sh,dw,dh,dw,0);
 		}
@@ -3587,8 +3630,7 @@ void uplayupdateclock()
 				uburstb[k]->scale.z = .01f*ufireworkscale;
 				ubursta[k]->flags &= ~TF_DONTDRAW;
 				uburstb[k]->flags &= ~TF_DONTDRAW;
-			}
-			else {
+			} else {
 				ubursta[k]->flags |= TF_DONTDRAW;
 				uburstb[k]->flags |= TF_DONTDRAW;
 			}
@@ -3605,10 +3647,22 @@ void uplayupdateclock()
 		}
 	}
 }
+#else
+void docondom(int)
+{
 
+}
+
+void douburst(int)
+{
+
+}
+
+// UNC
 #endif
 VEC ulastpos;
-#if 0
+// UNC
+#if 1
 int fpucwsw;
 extern int cbairtime;
 void uplay3_proc()
@@ -3622,8 +3676,8 @@ void uplay3_proc()
 	//	fpuexceptions(1);
 	//	if (KEY=='r')
 	//		reversedraw^=1;
-	if (KEY == 's')
-		testcapture();
+	//if (KEY == 's')
+	//	testcapture();
 	if (KEY == K_ESCAPE /* || wininfo.keystate[DIK_JOYBUTTON(3)]) && !dofinish */) {
 		if (!dofinish)
 			Esc_out = 1;
@@ -3639,14 +3693,15 @@ void uplay3_proc()
 			mainvp.yres = WY / 2;
 			mainvp.xstart = WX / 2;
 			mainvp.ystart = WY / 2;
-		}
-		else {
+		} else {
 			mainvp.xres = WX;
 			mainvp.yres = WY;
 			mainvp.xstart = 0;
 			mainvp.ystart = 0;
 		}
 	}
+// disable change resolution on the fly
+#if 0
 	if ((KEY == '-' || KEY == '=') && video_maindriver != VIDEO_D3D) {
 		int dir;
 		if (KEY == '-')
@@ -3660,8 +3715,7 @@ void uplay3_proc()
 				mainvp.yres = WY / 2;
 				mainvp.xstart = WX / 2;
 				mainvp.ystart = WY / 2;
-			}
-			else {
+			} else {
 				mainvp.xres = WX;
 				mainvp.yres = WY;
 				mainvp.xstart = 0;
@@ -3669,7 +3723,7 @@ void uplay3_proc()
 			}
 		}
 	}
-
+#endif
 
 	//#ifdef USETESTNULLS
 	resetnulls();
@@ -3684,8 +3738,7 @@ void uplay3_proc()
 		roadprobenorm.y += roadprobei.y;
 		roadprobenorm.z += roadprobei.z;
 		addnull(&roadprobenorm, 0);
-	}
-	else {
+	} else {
 		addnull(&zerov, 0);
 		addnull(&zerov, 0);
 	}
@@ -3697,12 +3750,10 @@ void uplay3_proc()
 		if (wininfo.fpsavg2 > 25) {// 30
 			uloop = 2;
 			wininfo.fpswanted = 30;
-		}
-		else if (wininfo.fpsavg2 > 17) {// 20
+		} else if (wininfo.fpsavg2 > 17) {// 20
 			uloop = 3;
 			wininfo.fpswanted = 20;
-		}
-		else { //if (avg1fps>13) // 15
+		} else { //if (avg1fps>13) // 15
 			uloop = 4;
 			wininfo.fpswanted = 15;
 		}
@@ -3718,8 +3769,7 @@ void uplay3_proc()
 		if (useoldcam > 3) {
 			useoldcam = 3;
 			testnewcam = 0;
-		}
-		else
+		} else
 			testnewcam = 1;
 		if (intunnels)
 			intunnels--;
@@ -3764,8 +3814,7 @@ void uplay3_proc()
 			else
 				for (i = 0; i < 6; i++)
 					objects[0].wheelvel[i] += 1;
-		}
-		else { // on ground
+		} else { // on ground
 			ucarrotvel = zerov;
 			littleg = littlegground;
 			if (airtime == -1) {
@@ -3779,9 +3828,8 @@ void uplay3_proc()
 				if (yawpiesum >= 2)
 					ttp++;
 				if (ttp == 0) {
-					playatagsound(14 + random(3)); // land
-				}
-				else {
+					playatagsound(14 + mt_random(3)); // land
+				} else {
 					if (ttp > 1) {
 						doblueflash(15);
 						dolightning(8);
@@ -3820,8 +3868,7 @@ void uplay3_proc()
 		if (!manualcar) {
 			// move objects
 			updatetrans();
-		}
-		else {
+		} else {
 			objects[0].carvel = zerov;
 		}
 		if (selectedcar == RADAR) {
@@ -3838,14 +3885,12 @@ void uplay3_proc()
 				if (na >= radarextraang) {
 					if (na < 180) {
 						radardir = -1;
-					}
-					else if (na < 360 - radarextraang) {
+					} else if (na < 360 - radarextraang) {
 						radardir = 1;
 					}
 				}
 			}
-		}
-		else if (selectedcar == TREAD) {
+		} else if (selectedcar == TREAD) {
 			// tread
 		//			if (treadanimtex.curframe!=treadanimtex.lastframe) {
 		//				;//SpriteBlit(treadanimtex.texdata[treadanimtex.curframe],treadanimtex.desttex,0,0,
@@ -3901,8 +3946,7 @@ void uplay3_proc()
 				if (objects[0].pos.z < finishpiece->trans.z && ulastpos.z >= finishpiece->trans.z)
 					dofinish = 1;
 			}
-		}
-		else { // cross in x
+		} else { // cross in x
 			if (objects[0].pos.z > finishpiece->trans.z - 1.5f && objects[0].pos.z < finishpiece->trans.z + 1.5f) {
 				if (objects[0].pos.x > finishpiece->trans.x && ulastpos.x <= finishpiece->trans.x)
 					dofinish = 1;
@@ -3917,20 +3961,33 @@ void uplay3_proc()
 		if (dofinish)
 			playatagsound(ZING2); // finishsound
 	}
-	doanims(root);
+	//doanims(root);
+	root->proc();
 	// hi level camera
 	doflycam(&mainvp);
 	// prepare scene
-	buildtreematrices(root); //roottree,camtree);
-// draw scene
-	video_beginscene(&mainvp); // clear zbuf etc., this one clears zbuff, and will call Begin
-	video_drawscene(&mainvp);
-	video_endscene(&mainvp); // nothing right now
+	//buildtreematrices(root); //roottree,camtree);
+	video_buildworldmats(root);
+	dolights();
+	// draw scene
+	//video_beginscene(&mainvp); // clear zbuf etc., this one clears zbuff, and will call Begin
+	video_setviewport(&mainvp); // clear zbuf etc.
+	video_drawscene(root);
+
+
+	// draw
+	//video_buildworldmats(roottree); // help dolights
+	video_setviewport(&mainvp); // clear zbuf etc.
+	video_drawscene(roottree);
+
+	// disable zoomin
+#if 0
 	if (zoomin) {
 		video_lock();
 		zoombitmap16(B16);
 		video_unlock();
 	}
+#endif
 	framecount++;
 }
 
@@ -3975,8 +4032,8 @@ void uplay3_exit()
 	}
 	;//defaultexit();
 // after defaultexit, no trees are alloced
-	if (nulightnings)
-		;//Sound_StopSound(lightningsound);
+	//if (nulightnings)
+	//	;//Sound_StopSound(lightningsound);
 	nulightnings = nubursts = nucondoms = nuflames = 0;
 	nuflashes = 1;	// force texture
 	;//Sound_StopSound(revsound);
@@ -4066,14 +4123,16 @@ void uplay3_exit()
 	exittags();
 	showcursor(1);
 	free_sagger(sag);
-	usescnlights = 1;
+	//usescnlights = 1;
 }
+// UNC
 #endif
 void usenewcam()
 {
 	useoldcam = 0;
 }
-#if 0
+// UNC
+#if 1
 /*void spawndirtparts()
 {
 	static tm;
@@ -4090,5 +4149,6 @@ void usenewcam()
 	//	playasound(REDLIGHT,0); // caught a coin
 }
 */
+// UNC
 #endif
 }

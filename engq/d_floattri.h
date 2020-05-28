@@ -28,7 +28,7 @@ typedef face FACE;
 #define SMAT_FONT 1024 // special, merges alpha with matcol for colored fonts
 #define SMAT_CLAMPV 2048
 #define SMAT_CLAMP (SMAT_CLAMPU|SMAT_CLAMPV)
-#define SMAT_SHADOW 4096 // special for cars, sets drawpri to 4
+#define SMAT_SHADOW 4096 // special for cars, sets drawpri to 5
 #define SMAT_POINTS 8192
 #define SMAT_LINES 16384
 

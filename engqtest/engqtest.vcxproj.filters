@@ -2792,6 +2792,12 @@
     <ClInclude Include="st2_game.h">
       <Filter>Source Files\user\uplay3</Filter>
     </ClInclude>
+    <ClInclude Include="st2_tsp.h">
+      <Filter>Source Files\user\uplay3</Filter>
+    </ClInclude>
+    <ClInclude Include="u_s_plot2collisions1d.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="helperobj.cpp">
@@ -4113,6 +4119,12 @@
     </ClCompile>
     <ClCompile Include="st2_glue.cpp">
       <Filter>Source Files\user\uplay3</Filter>
+    </ClCompile>
+    <ClCompile Include="st2_tsp.cpp">
+      <Filter>Source Files\user\uplay3</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2collisions1d.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

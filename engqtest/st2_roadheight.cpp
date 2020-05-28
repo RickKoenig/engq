@@ -175,6 +175,7 @@ int line2piece(model *b,VEC *top,VEC *bot,VEC *bestintsect,VEC *bestnorm)
 }
 
 int checkmoretris;
+void getgridxz(COLLGRID *gc,VEC *v,int *x,int *z);
 int line2piecegrid(COLLGRID *cg,VEC *top,VEC *bot,VEC *bestintsect,VEC *bestnorm)
 {
 	int i;
@@ -399,6 +400,11 @@ float st2_getyawfromnorm(VEC *n)
 TREE* duptree(TREE* t)
 {
 	return t->newdup();
+}
+
+void freetree(TREE* t)
+{
+	delete t;
 }
 
 void linkchildtoparent(TREE* c, TREE* p) 

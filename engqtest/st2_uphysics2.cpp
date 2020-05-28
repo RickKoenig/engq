@@ -138,8 +138,7 @@ namespace st2 {
 					op->carvel.x -= g * timeinc*gdir.x;
 					op->carvel.y -= g * timeinc*gdir.y;
 					op->carvel.z -= g * timeinc*gdir.z;
-				}
-				else {
+				} else {
 					op->carvel.y -= g * timeinc;
 				}
 			}
@@ -323,8 +322,7 @@ namespace st2 {
 			impdirfric->x *= impfric * fric;
 			impdirfric->y *= impfric * fric;
 			impdirfric->z *= impfric * fric;
-		}
-		else {
+		} else {
 			impdirfric->x = 0;
 			impdirfric->y = 0;
 			impdirfric->z = 0;
@@ -632,8 +630,7 @@ namespace st2 {
 				ir.x += wa * baser.x*shockmag;
 				ir.y += wa * baser.y*shockmag;
 				ir.z += wa * baser.z*shockmag;
-			}
-			else if (drivemode == CARREVERSEACCEL) {
+			} else if (drivemode == CARREVERSEACCEL) {
 				ir.x -= wheelaccel * baser.x*shockmag;
 				ir.y -= wheelaccel * baser.y*shockmag;
 				ir.z -= wheelaccel * baser.z*shockmag;
@@ -681,11 +678,9 @@ namespace st2 {
 			if (hifrictime > 20) {
 				hifrictime = 20;
 				fb = frictcarbodyroof; // hi friction when no shocks and upsidedown
-			}
-			else
+			} else
 				fb = frictcarbody; // lo friction , oops forgot this...
-		}
-		else {
+		} else {
 			hifrictime = 0;
 			fb = frictcarbody; // lo friction
 		}
@@ -873,8 +868,7 @@ namespace st2 {
 				carstuntrpyrad.y = carstuntrpy.y*PIOVER180;
 				carstuntrpyrad.z = carstuntrpy.z*PIOVER180;
 				rpy2quat(&carstuntrpyrad, &op->carang);
-			}
-			else {
+			} else {
 				//#define DOEXTRAHEADING
 #ifdef DOEXTRAHEADING
 				q2 = zerov;
@@ -968,13 +962,11 @@ namespace st2 {
 					newvel.x += (ramp - dt2)*q.x;
 					newvel.y += (ramp - dt2)*q.y;
 					newvel.z += (ramp - dt2)*q.z;
-				}
-				else if (dt2 < -ramp) { // move from <-ramp to -ramp
+				} else if (dt2 < -ramp) { // move from <-ramp to -ramp
 					newvel.x += (-dt2 - ramp)*q.x;
 					newvel.y += (-dt2 - ramp)*q.y;
 					newvel.z += (-dt2 - ramp)*q.z;
-				}
-				else if (dt*dt2 < 0 && !uright && !uleft) { // move from dot2 to 0
+				} else if (dt*dt2 < 0 && !uright && !uleft) { // move from dot2 to 0
 					newvel.x -= dt2 * q.x;
 					newvel.y -= dt2 * q.y;
 					newvel.z -= dt2 * q.z;
@@ -1055,8 +1047,7 @@ namespace st2 {
 					ulastpos = op->pos;
 					//				lastkludge=1;
 				}
-			}
-			else {
+			} else {
 				//			lastkludge=0;
 			}
 		}
