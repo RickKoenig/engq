@@ -37,26 +37,41 @@ namespace collisions1dp2 {
 		void move();
 		void update();
 		void addImpulse(float imp);
+		void draw() const;
 	};
+
+	void phyobj::draw() const
+	{
+		drawfpoint(pointf2x(current.pos, 0), C32RED);
+		if (im != 0) {
+			drawfcirclef(pointf2x(current.pos, 0), C32(85, 0, 0), rad);
+		} else {
+			drawfline(pointf2x(current.pos, -10), pointf2x(current.pos, 10), C32(85, 0, 0));
+		}
+	}
 
 	void phyobj::update()
 	{
-		if (current.mass != 0.0f) {
+		if (current.mass != 0) {
 			im = 1.0f/current.mass;
 			p = current.mass * current.vel;
 			ke = p * current.vel * .5f;
+			rad = sqrt(current.mass)*INVSQRTPI; // do 2d for now
 		} else {
 			im = 0.0f; // infinite mass, like a wall
 			p = 0; // throw infinities under the rug
 			ke = 0;
+			rad = 0;
+			current.vel = 0;
 		}
-		rad = sqrt(current.mass)*INVSQRTPI; // do 2d for now
 	}
 
 	void phyobj::addImpulse(float imp)
 	{
-		;
-		update();
+		if (current.mass) {
+			current.vel += imp * im;
+			update();
+		}
 	}
 
 	void phyobj::copy(const basePhyobj& bo)
@@ -98,12 +113,12 @@ namespace collisions1dp2 {
 	struct menuvar simpledv[]={
 		{"@lightred@--- PLOTTER2 USER VARS FOR PHYSICS 1D ---",NULL,D_VOID,0},
 		{"--- starting values ---",NULL,D_VOID,0},
-		{"Start P1M",&bobj1.mass,D_FLOAT, FLOATUP / 16},
-		{"Start P1X",&bobj1.pos,D_FLOAT, FLOATUP / 16},
-		{"Start P1V",&bobj1.vel,D_FLOAT, FLOATUP / 16},
-		{"Start P2M",&bobj2.mass,D_FLOAT, FLOATUP / 16},
-		{"Start P2X",&bobj2.pos,D_FLOAT, FLOATUP / 16},
-		{"Start P2V",&bobj2.vel,D_FLOAT, FLOATUP / 16},
+		{"Start P1M",&bobj1.mass,D_FLOAT, FLOATUP / 8},
+		{"Start P1X",&bobj1.pos,D_FLOAT, FLOATUP / 8},
+		{"Start P1V",&bobj1.vel,D_FLOAT, FLOATUP / 8},
+		{"Start P2M",&bobj2.mass,D_FLOAT, FLOATUP / 8},
+		{"Start P2X",&bobj2.pos,D_FLOAT, FLOATUP / 8},
+		{"Start P2V",&bobj2.vel,D_FLOAT, FLOATUP / 8},
 		{"@red@--- current values ---",NULL,D_VOID,0},
 		{"Current P1M",&bobj1.mass,D_FLOAT | D_RDONLY},
 		{"Current P1X",&obj1.current.pos,D_FLOAT | D_RDONLY},
@@ -117,8 +132,8 @@ namespace collisions1dp2 {
 		{"current P2KE",&obj2.ke,D_FLOAT | D_RDONLY},
 		{"@lightred@--- global values ---",NULL,D_VOID,0},
 		{"time",&curTime,D_FLOAT | D_RDONLY},
-		{"maxtime",&maxTime,D_FLOAT, FLOATUP / 16},
-		{"elast",&elast,D_FLOAT, FLOATUP / 16},
+		{"maxtime",&maxTime,D_FLOAT, FLOATUP / 8},
+		{"elast",&elast,D_FLOAT, FLOATUP / 8},
 		{"totalP",&totalP,D_FLOAT | D_RDONLY},
 		{"totalKE",&totalKE,D_FLOAT | D_RDONLY},
 	};
@@ -128,11 +143,20 @@ namespace collisions1dp2 {
 	{
 		float delPos = o2.current.pos - o1.current.pos;
 		float delVel = o2.current.vel - o1.current.vel;
-		if (delPos < 0 /*&& delVel > 0*/)
-			return 1.0f;
+		//if (delPos < 0 /*&& delVel > 0*/)
+		//	return 1.0f;
 		//if (delPos > 0 && delVel < 0)
 		//	return 1.0f;
-		return 0.0f;
+		if (delPos >= 0 && delVel >= 0)
+			return 0; // moving apart
+		if (delPos <= 0 && delVel <= 0)
+			return 0; // moving apart
+		// coming together
+		if (delPos > o1.rad + o2.rad)
+			return 0;
+		// calc impulse
+		float imp = 2.0f*elast*(o1.current.vel - o2.current.vel)/(o1.im + o2.im);
+		return imp;
 	}
 
 	void resetObjs()
@@ -152,7 +176,8 @@ namespace collisions1dp2 {
 		obj2.move();
 		float I = collideObjs(obj1, obj2);
 		if (I != 0.0f) {
-			resetObjs();
+			obj1.addImpulse(-I);
+			obj2.addImpulse(I);
 		}
 		totalP = obj1.p + obj2.p;
 		totalKE = obj1.ke + obj2.ke;
@@ -188,10 +213,8 @@ void plot2collisions1ddraw2d()
 {
 	// draw graph paper
 	plotter2draw2d();
-	drawfpoint(pointf2x(obj1.current.pos, 0), C32RED);
-	drawfcirclef(pointf2x(obj1.current.pos, 0), C32(85, 0, 0), obj1.rad);
-	drawfpoint(pointf2x(obj2.current.pos, 0), C32RED);
-	drawfcirclef(pointf2x(obj2.current.pos, 0), C32(85, 0, 0), obj2.rad);
+	obj1.draw();
+	obj2.draw();
 }
 
 void plot2collisions1dexit()
