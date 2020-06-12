@@ -8,6 +8,8 @@
 #include "objcollisions.h"
 #include "u_s_physics3d.h"
 
+#include "helperobj.h"
+
 namespace physics3d {
 static int changevid;
 static int vi=0;
@@ -15,8 +17,15 @@ static int vtm[2]={2,0};
 static int vts[2]={1,0};
 
 static string ascene;
+static S32 numScenes;
+static S32 curScene;
 static int nextvert[3]={1,2,0};
 static U32 togvidmode;
+static bool keepOldCamera;
+
+static S32 usehelpersave;
+static helperobj *ho;
+static bool showVector = false; // show L and w
 
 static S32 framenum;
 // trees
@@ -28,7 +37,7 @@ static struct phyobject phyobjects[MAXPHYOBJECTS];
 VEC totangmomentum,totangcmmomentum,totangorgmomentum;
 VEC totmomentum;
 float tottransenergy,totrotenergy,totpotenergy,totenergy;
-float littlegee=10.0f; //9.8f;
+float littlegee;// = 10.0f; //9.8f;
 
 // for debprint
 static int nphyobjects;
@@ -343,6 +352,7 @@ static void initphysicsobjects(const char *name)
 	//sc=loadscript(name,&nsc);
 	script sc(name);
 	int nsc = sc.num();
+	littlegee = 10.0f;
 // read script
 	while(tp<nsc) {
 		if (sc.idx(tp) == "object") {
@@ -918,6 +928,7 @@ static float collideground(struct phyobject *p,int imp)
 	b=p->rpnts;
 // collide with walls
 	for (k=0;k<NWALLS;k++) {
+		// something is wrong here, floating objects colliding with walls
 // check bbox with plane
 		bmin=dot3d(&b[0],&wallnorms[k]);
 		for (i=1;i<NCORNERS;i++) {
@@ -1099,9 +1110,28 @@ static void drawprepphysicsobjects()
 		po->t->trans=po->st.pos; // world rel
 		po->t->scale=po->scale; // world rel
 		po->t->rot=po->st.rot;
-		logger("frame = %4d, trans = (%f,%f,%f), rot = (%f,%f,%f,%f)\n",framenum,po->st.pos.x,po->st.pos.y,po->st.pos.z,po->st.rot.x,po->st.rot.y,po->st.rot.z,po->st.rot.w);
-		++framenum;
+		if (showVector) {
+			const float scaleVec = .0055f;
+			const float scaleRotVel = 10.0f;
+			// TODO: please add operator overloads... !!!
+#if 1
+			ho->addvector(roottree, po->st.pos, pointf3x(
+				po->st.pos.x + po->st.angmomentum.x*scaleVec,
+				po->st.pos.y + po->st.angmomentum.y*scaleVec,
+				po->st.pos.z + po->st.angmomentum.z*scaleVec)
+				, F32CYAN); // ang mom
+#endif
+#if 1
+			ho->addvector(roottree, po->st.pos,pointf3x(
+				po->st.pos.x + po->st.rotvel.x*scaleRotVel,
+				po->st.pos.y + po->st.rotvel.y*scaleRotVel,
+				po->st.pos.z + po->st.rotvel.z*scaleRotVel)
+				, F32LIGHTRED); // rot vel
+#endif
+		}
+		//logger("frame = %4d, trans = (%f,%f,%f), rot = (%f,%f,%f,%f)\n",framenum,po->st.pos.x,po->st.pos.y,po->st.pos.z,po->st.rot.x,po->st.rot.y,po->st.rot.z,po->st.rot.w);
 	} 
+	++framenum;
 }
 
 // get data in and out of debprint
@@ -1261,22 +1291,27 @@ void physics3dinit()
 // set extra debprint vars
 	extradebvars(edv,nedv);
 // setup viewport
-	mainvp.backcolor=C32LIGHTBLUE;
-	mainvp.zfront=.025f;
-	mainvp.zback=10000;
-	mainvp.camzoom=3.2f; // 1; // it'll getit from tree camattach if you have one
-	mainvp.flags=VP_CLEARBG|VP_CLEARWB|VP_CHECKER;
-	mainvp.xsrc=4;
-	mainvp.ysrc=3;
-	mainvp.useattachcam=false;
-	mainvp.isortho=false;
-	mainvp.ortho_size=30;
-	mainvp.camtrans.x = 0;
-	mainvp.camtrans.y = 27;
-	mainvp.camtrans.z = -100;
-	mainvp.camrot.x = 0;
-	mainvp.camrot.y = 0;
-	mainvp.camrot.z = 0;
+	mainvp.xsrc = WX;
+	mainvp.ysrc = WY;
+	if (!keepOldCamera) {
+		mainvp.backcolor = C32LIGHTBLUE;
+		mainvp.zfront = .025f;
+		mainvp.zback = 10000;
+		mainvp.camzoom = 3.2f; // 1; // it'll getit from tree camattach if you have one
+		mainvp.flags = VP_CLEARBG | VP_CLEARWB | VP_CHECKER;
+		mainvp.useattachcam = false;
+		mainvp.isortho = false;
+		mainvp.ortho_size = 30;
+		mainvp.camtrans.x = 0;
+		mainvp.camtrans.y = 27;
+		mainvp.camtrans.z = -200;
+		mainvp.camrot.x = 0;
+		mainvp.camrot.y = 0;
+		mainvp.camrot.z = 0;
+		treeinfo.flycamspeed = 1;
+	} else {
+		keepOldCamera = false;
+	}
 // build scene heirarchy
 	roottree=new tree2("roottree");
 	pushandsetdir("physics3d");
@@ -1288,45 +1323,82 @@ void physics3dinit()
 // instances of worldobjects
 	if (ascene.empty()) {
 		script scenes("pickscene.txt");
-		int nscene = scenes.num();
-		if (nscene!=1)
-			errorexit("pick just 1 scene");
-		ascene = scenes.idx(0);
+		numScenes = scenes.num();
+		if (!numScenes)
+			errorexit("must have at least 1 scene");
+		ascene = scenes.idx(curScene);
 	}
 	initphysicsobjects(ascene.c_str());
 	popdir();
 	framenum = 0;
+	usehelpersave = usehelper;
+	usehelper = 1;
+	ho = new helperobj(/*roottree*/);
 }
 
 void physics3dproc()
 {
 // handle input
-	if (KEY==K_ESCAPE)
+	switch (KEY) {
+	case K_ESCAPE:
 		poporchangestate(STATE_MAINMENU);
-	if (KEY=='a')
+		break;
+	case 'v':
+		showVector = !showVector;
+	case 'a':
 		showcursor(1);
-	if (KEY=='h')
+		break;
+	case 'h':
 		showcursor(0);
-	if (KEY==' ')
-		video3dinfo.favorshading^=1;
-	if (wininfo.mmiddleclicks) {
-		logger("setting vidmode from %d to %d\n",togvidmode,togvidmode^1);
-		togvidmode^=1;
-		video_init(togvidmode,0);
+		break;
+	case ' ':
+		keepOldCamera = true;
+		video3dinfo.favorshading ^= 1;
+		break;
+	case 's':
+		keepOldCamera = true;
+		logger("setting vidmode from %d to %d\n", togvidmode, togvidmode ^ 2);
+		togvidmode ^= 2;
+		video_init(togvidmode, 0);
 		changestate(STATE_PHYSICS3D);
-	}
-	if (KEY=='s') {
-		logger("setting vidmode from %d to %d\n",togvidmode,togvidmode^2);
-		togvidmode^=2;
-		video_init(togvidmode,0);
-		changestate(STATE_PHYSICS3D);
-	}
-	if (KEY=='=') {
+		break;
+	case '=':
+		keepOldCamera = true;
 		changeglobalxyres(1);
 		changestate(STATE_PHYSICS3D);
-	}
-	if (KEY=='-') {
+		break;
+	case '-':
+		keepOldCamera = true;
 		changeglobalxyres(-1);
+		changestate(STATE_PHYSICS3D);
+		break;
+	case 'n':
+		keepOldCamera = true;
+		++curScene;
+		if (curScene == numScenes)
+			curScene = 0;
+		ascene.clear();
+		changestate(STATE_PHYSICS3D);
+		break;
+	case 'p':
+		keepOldCamera = true;
+		--curScene;
+		if (curScene < 0)
+			curScene = numScenes - 1;
+		ascene.clear();
+		changestate(STATE_PHYSICS3D);
+		break;
+	case 'r':
+		keepOldCamera = true;
+		changestate(STATE_PHYSICS3D);
+		KEY = 0; // absorb 'r', no camera reset in doflycam
+		break;
+	}
+	if (wininfo.mmiddleclicks) {
+		keepOldCamera = true;
+		logger("setting vidmode from %d to %d\n", togvidmode, togvidmode ^ 1);
+		togvidmode ^= 1;
+		video_init(togvidmode, 0);
 		changestate(STATE_PHYSICS3D);
 	}
 	if (wininfo.justdropped) {
@@ -1336,10 +1408,12 @@ void physics3dproc()
 		if (strcmp(nameext,"objects.txt") && strcmp(nameext,"pickscene.txt")) // if not the start scene and not the list of physics objects
 			changestate(STATE_PHYSICS3D); // must be an actual physics scene
 	}
-// handle physics objs
+	// handle physics objs
+	ho->reset();
 	static int slow;
 	if (slow == 0) {
 		procphysicsobjects(timestep,iterations);
+		//ho->addvector(roottree, pointf3x(0, 2, 0), pointf3x(30, 2, 0),F32CYAN);
 		slow = 1;
 	}
 	--slow;
@@ -1376,4 +1450,6 @@ void physics3dexit()
 		objkindstr[i] = "";
 	logger("logging reference lists after free\n");
 	logrc();
+	delete ho;
+	usehelper = usehelpersave;
 }

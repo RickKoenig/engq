@@ -54,7 +54,7 @@ void collide3dboxes()
 	int ise0,ise1,bn0,bn1;
 	float p0,p1;
 // do x
-	logger("do x\n"); // temp
+	//logger("do x\n"); // temp
 	for (k=0;k<nboxes*2-1;k++) {
 		for (i=k;i>=0;i--) {
 			bn0=sweepx[i];
@@ -105,7 +105,7 @@ void collide3dboxes()
 		}
 	}
 // do y
-	logger("do y\n"); // temp
+	//logger("do y\n"); // temp
 	for (k=0;k<nboxes*2-1;k++) {
 		for (i=k;i>=0;i--) {
 			bn0=sweepy[i];
@@ -156,7 +156,7 @@ void collide3dboxes()
 		}
 	}
 // do z
-	logger("do z\n"); // temp
+	//logger("do z\n"); // temp
 	for (k=0;k<nboxes*2-1;k++) {
 		for (i=k;i>=0;i--) {
 			bn0=sweepz[i];

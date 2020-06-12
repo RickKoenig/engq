@@ -65,7 +65,7 @@ static modelb* buildaprismy()
 // y pyramid base almost +-2 , 0, +-2 top is almost 0,1,0, for vector
 static modelb* buildavectory()
 {
-	modelb* m=model_create("helper_vector_mody");
+	modelb* m=model_create("helper_vector");
 	if (model_getrc(m)==1) {
         pushandsetdir("gfxtest");
 		vector<pointf3> v(prismverts,prismverts+24);
@@ -78,7 +78,7 @@ static modelb* buildavectory()
 			v[i].z -= v[i].z*v[i].y*.8f;
 			uvs[i].u*=1;
 			uvs[i].v*=.5f*thinscaler;
-		}
+		} 
 		m->copyverts(v); // taper to (0,1,0) at y = 1
 		m->copyuvs0(uvs);
  // create a texture

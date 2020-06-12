@@ -475,6 +475,7 @@
     <Text Include="data\physics3d\phyobjs.txt" />
     <Text Include="data\physics3d\pickscene.txt" />
     <Text Include="data\physics3d\simple.txt" />
+    <Text Include="data\physics3d\spinning.txt" />
     <Text Include="data\physics3d\testang.txt" />
     <Text Include="data\physics3d\testcoll.txt" />
     <Text Include="data\physics3d\testtime.txt" />

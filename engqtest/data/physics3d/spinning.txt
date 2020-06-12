@@ -1,0 +1,35 @@
+littlegee 0
+
+object box1
+	mass 50
+	elast .97
+	scale 20 15 10
+	pos -35 25 0
+	rot 2 2 2
+	rotvel 100 0 0
+	
+object box1
+	mass 50
+	elast .97
+	scale 10 20 15
+	pos 0 25 0
+	rot 2 2 2
+	rotvel 100 0 0
+
+object box1
+	mass 50
+	elast .97
+	scale 15 20 10
+	pos 35 25 0
+	rot 2 2 2
+	rotvel 100 0 0
+	
+
+object box1
+	mass 50
+	elast .97
+	scale 5 20 2
+	pos 0 55 0
+	//rot 2 2 2
+	rotvel 30 240 0 
+	

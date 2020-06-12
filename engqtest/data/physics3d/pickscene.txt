@@ -1,8 +1,9 @@
-#phyobjs.txt
-#testang.txt
-#dominos.txt
-#simple.txt
+spinning.txt
 building.txt
-#tops.txt
-#testtime.txt
-#testcoll.txt
+dominos.txt
+phyobjs.txt
+testang.txt
+simple.txt
+tops.txt
+testtime.txt
+testcoll.txt

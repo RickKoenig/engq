@@ -1,7 +1,7 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1222489174076" ID="Freemind_Link_342653302" MODIFIED="1437892084927" TEXT="dx9 code for engq">
-<node CREATED="1222490965675" FOLDED="true" ID="Freemind_Link_1096169223" MODIFIED="1437892088365" POSITION="right" TEXT="m_vid_dx9">
+<node CREATED="1222489174076" ID="Freemind_Link_342653302" MODIFIED="1590901711520" TEXT="dx9 code for engq">
+<node CREATED="1222490965675" ID="Freemind_Link_1096169223" MODIFIED="1590901717700" POSITION="right" TEXT="m_vid_dx9">
 <node CREATED="1222489947584" HGAP="29" ID="Freemind_Link_1403308686" MODIFIED="1437891901065" TEXT="misc" VSHIFT="71">
 <node CREATED="1222490814538" MODIFIED="1222490814538" TEXT="C:\srcw32\engq\engq\m_vid_dx9.cpp(49):        videoinfodx9.d3d9device-&gt;Present( NULL, NULL, NULL, NULL );"/>
 <node CREATED="1222490814539" ID="Freemind_Link_439205654" MODIFIED="1222490944668" TEXT="&#x9;&#x9;&#x9;result= (videoinfodx9.d3d9)-&gt;CreateDevice( D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, (HWND)wininfo.MainWindow,&#xa;&#x9;&#x9;&#x9;&#x9;D3DCREATE_HARDWARE_VERTEXPROCESSING,&amp;videoinfodx9.pp, (LPDIRECT3DDEVICE9*)(&amp;videoinfodx9.d3d9device)) ;&#xa;"/>
@@ -22,7 +22,7 @@
 <node CREATED="1222490814546" MODIFIED="1222490814546" TEXT="C:\srcw32\engq\engq\m_vid_dx9.cpp(153):        videoinfodx9.d3d9device-&gt;SetSamplerState( 1, D3DSAMP_MIPFILTER ,D3DTEXF_LINEAR );"/>
 </node>
 </node>
-<node CREATED="1222491013362" ID="Freemind_Link_763201330" MODIFIED="1508309047965" POSITION="right" TEXT="d2_dx9">
+<node CREATED="1222491013362" FOLDED="true" ID="Freemind_Link_763201330" MODIFIED="1590901713865" POSITION="right" TEXT="d2_dx9">
 <node CREATED="1222489925418" ID="Freemind_Link_161654115" MODIFIED="1437891908456" TEXT="setrenderstate" VSHIFT="-5">
 <node CREATED="1222492160072" MODIFIED="1222492160072" TEXT="C:\srcw32\engq\engq\d2_dx9.cpp(937):                                videoinfodx9.d3d9device-&gt;SetRenderState(D3DRS_ALPHABLENDENABLE ,true);"/>
 <node CREATED="1222492160072" MODIFIED="1222492160072" TEXT="C:\srcw32\engq\engq\d2_dx9.cpp(938):                                videoinfodx9.d3d9device-&gt;SetRenderState(D3DRS_ALPHATESTENABLE, true);"/>

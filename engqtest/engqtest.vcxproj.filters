@@ -1540,6 +1540,9 @@
     <Text Include="data\holoview2dbrush\settings.txt">
       <Filter>text\holoview2dbrush</Filter>
     </Text>
+    <Text Include="data\physics3d\spinning.txt">
+      <Filter>text\physics3d</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="data\shaders\cubemaptest.fx">
