@@ -1,0 +1,49 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 101
+FrameStep 1
+FramesPerSecond 30
+
+LoadObject hijump.lwo
+ShowObject 7 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+
+AmbientColor 63 63 63
+AmbIntensity 0.3
+
+AddLight
+LightName Light01
+ShowLight 0
+LightMotion (unnamed)
+  9
+  1
+  -7.85847 8.51255 -7.35847  45 35 0  0 0 0
+  0 0 0.0 0.0 0.0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 1
+LightType 0
+ShadowCasting 0
+
+ShowCamera 1
+CameraMotion (unnamed)
+  9
+  1
+  0 0.000105761 -24.2204  0 0 0  1 1 1
+  0 0 0.0 0.0 0.0
+EndBehavior 1
+ZoomFactor 3.2
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+
+FogType 0
+
+ViewMode 5

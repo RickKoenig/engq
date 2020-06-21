@@ -1,0 +1,350 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 1725
+FrameStep 1
+PreviewFirstFrame 0
+PreviewLastFrame 52
+PreviewFrameStep 1
+FramesPerSecond 24.000000
+
+LoadObject Bigup\data\scrline\casebck.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0 0 0 0 0 -360 1 1 1
+  0 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  24 0 0 0 0
+EndBehavior 1
+LockedChannels 5
+ParentObject 5
+ShadowOptions 7
+
+LoadObject Bigup\data\scrline\casefrnt.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  0 -212 -24 0 0 0 1 1 1
+  0 0 0 0 0
+  0 -212 -24 0 0 0 1 1 1
+  24 0 0 0 0
+  0 -212 -24 0 0 0 1 1 1
+  32 0 0 0 0
+  0 -212 -24 0 -80.20001 0 1 1 1
+  38 0 0 0 0
+  0 -212 -24 0 -2.395902e-005 0 1 1 1
+  50 0 0 0 0
+  0 -212 -24 0 -2.395902e-005 0 1 1 1
+  52 0 0 0 0
+EndBehavior 1
+LockedChannels 45
+ParentObject 1
+ShadowOptions 7
+
+LoadObject Bigup\data\scrline\winburst.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  24 1 0 0 0
+  0 0 0 0 0 0 1 1 1
+  30 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  32 0 0 0 0
+EndBehavior 1
+ParentObject 6
+ShadowOptions 7
+
+LoadObject Bigup\data\scrline\newcar.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 2 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 414
+ParentObject 7
+ObjDissolve (envelope)
+  1
+  5
+  1
+  0 0 0 0 0
+  1
+  23 1 0 0 0
+  0
+  24 0 0 0 0
+  0
+  44 1 0 0 0
+  1
+  45 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AddNullObject casenull
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  5
+  330 200 0 24.5 -15 0 0.186 0.186 0.186
+  0 0 0 0 0
+  165 200 0 24.5 -15 0 0.186 0.186 0.186
+  24 0 0 0 0
+  165 200 0 24.5 -15 0 0.186 0.186 0.186
+  28 1 0 0 0
+  165 200 0 24.5 -15 0 0.186 0.186 0.186
+  32 0 0 0 0
+  165 200 0 24.5 -15 0 0.186 0.186 0.186
+  52 0 0 0 0
+EndBehavior 1
+LockedChannels 53
+ParentObject 8
+ShadowOptions 7
+
+AddNullObject burstnull
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  -160 200 0 0 0 0 0 0 0
+  0 0 0 0 0
+  -160 200 0 0 0 0 0 0 0
+  16 1 0 0 0
+  -160 200 0 0 0 0 100 100 100
+  24 0 0 0 0
+  -160 200 0 0 0 0 0 0 0
+  32 0 0 0 0
+EndBehavior 1
+LockedChannels 6
+ParentObject 8
+ShadowOptions 7
+
+AddNullObject wincarnull
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  -160 200 0 0 0 19.99999 50 50 50
+  0 0 0 0 0
+  -160 200 0 0 0 20 50 50 50
+  24 1 0 0 0
+  0 231.3701 0 0 0 0 50 50 50
+  36 0 0 0 0
+  175.3879 200 0 0 0 -20 50 50 50
+  45 0 0 0 0
+EndBehavior 1
+LockedChannels 29
+ParentObject 8
+ShadowOptions 7
+
+AddNullObject wincarmaster
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 140 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 3
+ShadowOptions 7
+
+AmbientColor 57 78 159
+AmbIntensity 0.950000
+
+AddLight
+LightName AMBlight1
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  53.49999 9.599999 3 -99 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 21
+LightColor 255 255 255
+LgtIntensity 0.300000
+NoSpecular 1
+LightType 0
+ShadowType 0
+
+AddLight
+LightName SUN
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  0.361 17.66084 0.6291158 0 90 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 250 213 126
+LgtIntensity 1.200000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 3
+CameraMotion (unnamed)
+  9
+  50
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  10 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  20 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  40 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  50 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  60 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  65 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  75 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  85 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  96 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  105 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  115 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  155 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  170 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  180 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  190 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  200 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  210 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  218 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  220 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  230 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  240 0 0 0 0
+  0 0 0 0 0 -0.2758722 1 1 1
+  366 0 0 0 0
+  0 0 0 0 0 -0.2777623 1 1 1
+  369 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  382 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  654 0 0 0 0
+  0 0 0 0 0 20.33195 1 1 1
+  674 0 0 0 0
+  0 0 0 0 0 1.175012 1 1 1
+  739 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  826 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  874 0 0 0 0
+  0 0 0 0 0 6.799998 1 1 1
+  889 0 0 0 0
+  0 0 0 0 0 25.00001 1 1 1
+  926 0 0 0 0
+  0 0 0 0 0 6.999999 1 1 1
+  949 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  964 0 0 0 0
+  0 0 0 0 0 -0.5833333 1 1 1
+  979 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  994 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  1009 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  1024 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  1039 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  1054 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  1064 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  1080 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  1096 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  1112 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  1122 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  1132 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  1592 1 0 0 0
+  0 0 0 173.7999 0 0 1 1 1
+  1642 0 0 0 0
+  0 0 0 180 0 0 1 1 1
+  1652 0 0 0 0
+  0 0 0 180 0 0 1 1 1
+  1719 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ZoomFactor 2.000000
+Resolution 0
+CustomSize 460 300
+PixelAspectRatio 2
+SegmentMemory 8000000
+Antialiasing 0
+AdaptiveSampling 0
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 82 168 220
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 2
+FogMinDist 10.000000
+FogMaxDist 100.000000
+FogMinAmount 0.000000
+FogMaxAmount 0.700000
+FogColor 193 230 230
+BackdropFog 0
+DitherIntensity 1
+AnimatedDither 0
+GlowEffect 1
+GlowIntensity 0.400000
+GlowRadius 12.000000
+
+RenderMode 2
+RayTraceEffects 3
+ClipRayColors 0
+RayRecursionLimit 2
+DataOverlayLabel  
+OutputFilenameFormat 3
+SaveRGBImagesPrefix IMAGES\STNT2ren\beach\bech
+RGBImageFormat 2
+AlphaMode 1
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint -18.697083 2.998116 33.049408
+ViewDirection -7.552038 -0.015708 0.000000
+ViewZoomFactor 57.351578
+GridNumber 100
+GridSize 0.500000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

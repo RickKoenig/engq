@@ -66,6 +66,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <StringPooling>false</StringPooling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Lib>
       <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
@@ -84,6 +85,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <StringPooling>false</StringPooling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Lib>
       <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>

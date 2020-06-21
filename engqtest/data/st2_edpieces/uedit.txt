@@ -1,0 +1,31 @@
+grid.lws 0 0
+base.lws 0 0
+
+90turnl.lws 90turnl.lwo 1 1
+90turnr.lws 1 2
+straight.lws 0 0
+4way.lws 0 0
+jump.lws 0 0
+whoopty.lws 0 0
+
+T90turnl.lws 1 1
+T90turnr.lws 1 2
+Tstraight.lws 0 0
+T4way.lws 0 0
+Tjump.lws 0 0
+halfpipe.lws 0 0
+
+stump.lws 0 0
+loop.lws 0 0
+carrots.lws 0 0
+lbox.lws 0 0
+skboard.lws 0 0
+utrack.lws 0 0
+planjump.lws 0 0
+bridge.lws 0 0
+helix.lws 1 2
+bubbles.lws 0 0
+spade.lws 0 0
+ptowel.lws 0 0
+
+specialfinish.lws 0 0

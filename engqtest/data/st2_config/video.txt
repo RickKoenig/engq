@@ -1,0 +1,7 @@
+#configforcemode 0
+#configresolution 800x600x16
+
+dobench 0
+selected 1
+gameplayx 800
+gameplayy 600

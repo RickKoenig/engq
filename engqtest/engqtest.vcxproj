@@ -71,6 +71,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <AdditionalDependencies>wsock32.lib;winmm.lib;d3d9.lib;dinput8.lib;dsound.lib;dxguid.lib;ddraw.lib;vfw32.lib;d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -103,6 +104,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <AdditionalDependencies>wsock32.lib;winmm.lib;d3d9.lib;dinput8.lib;dsound.lib;dxguid.lib;ddraw.lib;vfw32.lib;d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>

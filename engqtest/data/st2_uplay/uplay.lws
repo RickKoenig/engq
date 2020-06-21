@@ -1,0 +1,1311 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 5000
+PreviewFrameStep 1
+FramesPerSecond 30.000000
+
+AddNullObject carnull
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AddNullObject loconull
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AddNullObject 00
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -30 0 30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 01
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -30 0 20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 02
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -30 0 10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 03
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -30 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 04
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -30 0 -10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 05
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -30 0 -20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 06
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -30 0 -30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 07
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -20 0 30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 08
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -20 0 20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 09
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -20 0 10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 10
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -20 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 11
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -20 0 -10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 12
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -20 0 -20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 13
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -20 0 -30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 14
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -10 0 30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 15
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -10 0 20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 16
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -10 0 10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 17
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -10 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 18
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -10 0 -10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 19
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -10 0 -20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 20
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -10 0 -30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 21
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 22
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 23
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 24
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 25
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 -10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 26
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 -20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 27
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 -30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 28
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  10 0 30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 29
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  10 0 20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 30
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  10 0 10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 31
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  10 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 32
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  10 0 -10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 52
+ShadowOptions 7
+
+AddNullObject 33
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  10 0 -20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 34
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  10 0 -30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 35
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  20 0 30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 36
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  20 0 20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 37
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  20 0 10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 38
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  20 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 39
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  20 0 -10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 40
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  20 0 -20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 41
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  20 0 -30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 42
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  30 0 30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 43
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  30 0 20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 44
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  30 0 10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 45
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  30 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 46
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  30 0 -10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 47
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  30 0 -20 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject 48
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  30 0 -30 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 53
+ShadowOptions 7
+
+AddNullObject gridloco
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 54
+ShadowOptions 7
+
+AddNullObject gridrot
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 52
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\grass1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\grass2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\grass3.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\grass4.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\grass5.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\grass6.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\grass7.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\grass8.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\tree1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ParentObject 80
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1500015 12.625 -0.04999973 39.30001 0 -90.10001 0.38 0.38 0.38
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 21
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  2.199998 13.62501 3.349997 -52.59998 0 23.10001 0.38 0.38 0.38
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.0250017 9.800002 4.475003 -93.10001 0 -30.30002 0.38 0.38 0.38
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1250015 12.525 -0.04999973 -44.8 0 -90.10001 0.38 0.38 0.38
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -2.449998 13.59999 -2.475 -42.29998 0 -30.60002 0.38 0.38 0.38
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 18
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  2.475001 13.75 -2.599999 37.30003 0 24.80001 0.38 0.38 0.38
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -3.875002 10.825 -0.02500001 -3.300001 0 23.10001 0.38 0.38 0.38
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 21
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  4.400002 10.825 0.5 -3.300001 0 -30.30002 0.38 0.38 0.38
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -1.762062e-006 9.65001 -4.450004 -88.5 0 23.10001 0.38 0.38 0.38
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 21
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -2.75 14.55 2.100001 50.29998 0 -30.30002 0.38 0.38 0.38
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.04999712 14.25002 -3.775002 -90.79988 0 -33.3 0.4380004 0.4380004 0.4380004
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -2.824998 13.90003 0 0 0 -33.3 0.4380004 0.4380004 0.4380004
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  2.600003 14.80002 0 -181.2 0 -33.3 0.4380004 0.4380004 0.4380004
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.02500288 14.12503 3.225003 -269.3999 0 -33.3 0.4380004 0.4380004 0.4380004
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.125 16.4 0 -86.99996 0 -89.7 0.4420001 0.4420001 0.4420001
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ParentObject 79
+ShadowOptions 7
+
+LoadObject C:\HWEditor\treelvs.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.125 16.4 0 0 0 -89.7 0.4420001 0.4420001 0.4420001
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 79
+ShadowOptions 7
+
+AddNullObject leavesNull
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.075 -2.074999 0 0 0 0 1.219997 1.187998 1.187998
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 384
+ParentObject 80
+ShadowOptions 7
+
+AddNullObject treeNull
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -55.00645 0 53.48789 0 0 0 1.746 1.746 1.746
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 2
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\gazeebo.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  109.1 0 -57.85 125.4 0 0 0.6720002 0.6720002 0.6720002
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\treetop.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -38.55481 15.99999 -70.61177 89.59998 0 0 0.994 1.1 0.994
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 336
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\sunflwr.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -74.89999 -3.15 -41.95 -99.89999 0 0 0.8460001 0.8460001 0.8460001
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\EDcabge.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -73.9 1.35 0 -90 0 0 1 0.65 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 85
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\EDscrow.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -102.25 0 -4.8 -89.8 0 0 0.65 0.65 0.65
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\bchrock.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  74.66296 2.15 26.97583 155.8 0 0 4.524 4.524 4.524
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 16
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0 3.35 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 3.35 0 360 0 0 1 1 1
+  5000 0 0 0 0
+EndBehavior 1
+LockedChannels 5
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 87
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome3.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 88
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome4.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 89
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome5.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 90
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome6.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 91
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome7.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 92
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome8.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 93
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome1b.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 87
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome1c.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 87
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome2b.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 88
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome2c.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 88
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome3b.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 89
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome3c.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 89
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome4b.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 90
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome4c.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 90
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome5b.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 91
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome5c.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 91
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome6b.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 92
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome6c.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 92
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome7b.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 93
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome7c.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 93
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome8b.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 94
+ShadowOptions 7
+
+LoadObject C:\Bigup\data\uplay\dome8c.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 94
+ShadowOptions 7
+
+AmbientColor 86 99 252
+AmbIntensity 0.790000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -8.262598 21.17498 -65.11317 9.000038 31.30003 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 8
+LightColor 255 224 130
+LgtIntensity 1.000000
+LightType 0
+ShadowType 1
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  0 128.1 0 0 90.20001 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 8
+LightColor 255 255 255
+LgtIntensity 0.500000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  1
+  0 0 -45.26341 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 5
+ZoomFactor 2.000000
+Resolution 1
+PixelAspectRatio 2
+SegmentMemory 2200000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+DataOverlayLabel  
+AlphaMode 1
+FullSceneParamEval 0
+
+ViewMode 2
+ViewAimpoint 109.100037 32.450001 -57.849998
+ViewDirection -2.464405 -0.165805 0.000000
+ViewZoomFactor 0.822287
+GridNumber 50
+GridSize 10.000000
+ShowMotionPath 1
+ShowBGImage 1
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

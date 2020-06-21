@@ -42,7 +42,7 @@
 #endif
 
 // C++11 only
-//#define JOBTEST
+#define JOBTEST
 
 //#include "modernCppTests/modernCppTests.cpp"
 
@@ -58,6 +58,7 @@
 //#define CODERPAD
 //#define PERMUTATION_ITERATOR
 //#define ODD_ONE_OUT
+#define INTERVALS
 
 #ifdef LISTTEST
 #include "u_listtest.h"
@@ -784,6 +785,100 @@ void testZigzag()
 	delete zzp;
 	logger("END testZigzag\n");
 }
+#endif
+
+#ifdef INTERVALS
+//Given a collection of intervals(inclusive), merge all overlapping intervals.
+//Example: Input[[8, 10], [1, 4], [3, 6], [15, 18]] Return[[8, 10], [1, 6], [15, 18]]
+
+struct interval {
+	int start, end;
+};
+
+// TODO: try a lambda, done!
+#if 0
+bool compareIntervals(const interval& a, const interval& b)
+{
+	return a.start < b.start;
+}
+#endif
+
+vector<interval> mergeIntervals(const vector<interval> & inputIntervals)
+{
+	vector<interval> output;
+	if (inputIntervals.empty())
+		return output;
+	vector<interval> sortedIntervals = inputIntervals;
+	sort(sortedIntervals.begin(), sortedIntervals.end(), 
+		[] (const interval& a, const interval& b)
+	{
+		return a.start < b.start;
+	});
+	interval working = sortedIntervals[0];
+	for (auto i = 1U; i < sortedIntervals.size(); ++i) {
+		const interval& intv = sortedIntervals[i];
+		// check for zero size interval
+		if (intv.start == intv.end)
+			continue;
+		if (intv.start <= working.end) { // next interval is inside first one
+			// merge overlapped intervals
+			if (intv.end > working.end)
+				working.end = intv.end;
+		} else {
+			// add to list
+			output.push_back(working);
+			working = sortedIntervals[i];
+		}
+
+	}
+	if (working.start != working.end)
+		output.push_back(working);
+	return output;
+}
+
+void printIntervals(const string& label, const vector<interval>& intv)
+{
+	logger("interval '%s'\n", label.c_str());
+	for (const auto &v : intv) {
+		logger("\t[ %3d, %3d]\n", v.start, v.end);
+	}
+}
+
+void testIntervals()
+{
+	logger("START testIntervals\n");
+	const vector<vector<interval>> intvs {
+		{
+			// empty list
+		},
+		{ // one
+			{50,65},
+		},
+		{ // two
+			{5,6}, {3,4}
+		},
+		{ // another two
+			{10,20}, {5,15}
+		},
+		{ // another two
+			{20,30}, {14,34}
+		},
+		{ // example
+			{8,10}, {1,4}, {3,6}, {15,18}
+		},
+		{ // complex
+			{8,14}, {25,27}, {19,21}, {12,17}, {7,10}, {0,1}, {2,6}, {0,1}, {18,22}, {28,31}, {0,1}, {24,26}, {29,30}, {23,25}, {11,13}, {3,5}, {31,32}
+		}
+	};
+	for (auto intv : intvs) {
+		const vector<interval> intvOut = mergeIntervals(intv);
+		printIntervals("input interval", intv);
+		printIntervals("output interval", intvOut);
+		logger("---------------------------------------\n");
+	}
+	logger("END testIntervals\n");
+}
+
 #endif
 
 //#ifdef JOBTEST
@@ -3447,6 +3542,9 @@ void scratchinit()
 #endif
 #ifdef ZIGZAG
 	testZigzag();
+#endif
+#ifdef INTERVALS
+	testIntervals();
 #endif
 #ifdef CODERPAD
 	testCoderpad();

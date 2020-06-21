@@ -67,6 +67,7 @@
       <ShowIncludes>false</ShowIncludes>
       <LanguageStandard>
       </LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Lib>
       <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
@@ -89,6 +90,7 @@
       <ShowIncludes>false</ShowIncludes>
       <LanguageStandard>
       </LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Lib>
       <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>

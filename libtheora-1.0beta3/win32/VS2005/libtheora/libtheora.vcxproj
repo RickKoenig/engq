@@ -142,6 +142,7 @@
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Lib>
       <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
@@ -167,6 +168,7 @@
       <DebugInformationFormat />
       <CompileAs>CompileAsC</CompileAs>
       <DisableSpecificWarnings>4244;4267;4057;4100;4245;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Lib>
       <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
@@ -192,6 +194,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>CompileAsC</CompileAs>
       <DisableSpecificWarnings>4244;4267;4057;4100;4245;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <AdditionalDependencies>libogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -224,6 +227,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>CompileAsC</CompileAs>
       <DisableSpecificWarnings>4244;4267;4057;4100;4245;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <AdditionalDependencies>libogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -249,6 +253,7 @@
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_RTL_dll|Win32'">
@@ -268,6 +273,7 @@
       <DebugInformationFormat />
       <CompileAs>CompileAsC</CompileAs>
       <DisableSpecificWarnings>4244;4267;4057;4100;4245;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>

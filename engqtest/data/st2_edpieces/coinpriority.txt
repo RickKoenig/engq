@@ -1,0 +1,18 @@
+# coin prioritys, higher number is higher priority, highest number is 20
+# lowest number is 0 
+# pieces not in this list get a low priority of 2
+ptowel.lws 16
+skboard.lws 15
+spade.lws 14
+loop.lws 10
+helix.lws 10
+lbox.lws 8
+T90turnr.lws 7
+T90turnl.lws 6
+jump.lws 5
+90turnl.lws 4
+90turnr.lws 3
+base.lws 1 # lower priority than any normal track piece
+# bad pieces get demoted below that of base.lws
+Tjump.lws 0
+

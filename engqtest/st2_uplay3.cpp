@@ -24,7 +24,7 @@ static tree2* roottree;
 static tree2* obj1;
 
 ////////////////////////// main
-void uplay3_init()
+void uplay3_inito()
 {
 	// setup window size
 	video_setupwindow(GX, GY);
@@ -43,7 +43,7 @@ void uplay3_init()
 	mainvp.backcolor = C32GREEN;
 }
 
-void uplay3_proc()
+void uplay3_proco()
 {
 	// input
 	if (KEY == K_ESCAPE)
@@ -53,7 +53,7 @@ void uplay3_proc()
 	doflycam(&mainvp);
 }
 
-void uplay3_draw3d()
+void uplay3_draw3do()
 {
 	// draw
 	video_buildworldmats(roottree); // help dolights
@@ -62,7 +62,7 @@ void uplay3_draw3d()
 	video_drawscene(roottree);
 }
 
-void uplay3_exit()
+void uplay3_exito()
 {
 	logger("logging roottree\n");
 	roottree->log2();
@@ -107,11 +107,11 @@ void uplay3_exit()
 #endif
 //#include "st2_roadheight.h"
 //#include "st2_uphysics2.h"
-#include "st2_game.h"
-#include "st2_pieces.h"
 
 namespace st2 {
-//#include <winput/winput.h>
+#include "st2_game.h"
+#include "st2_pieces.h"
+	//#include <winput/winput.h>
 //#include <3dlib/engine.h>
 //#include "pieces.h"
 
@@ -136,6 +136,7 @@ namespace st2 {
 
 #include "user0.h"
 #endif
+extern int ufliptime;
 static int zoomin; // keep at zero for now
 extern int audio_maindriver;
 // new variables added
@@ -143,7 +144,7 @@ extern int audio_maindriver;
 int st2_loadtrack(char *filename, int override);
 int st2_lastpiece, st2_dir;
 
-static TREE *root;//,*root0,*root1,*root2,*root3;
+TREE *root;//,*root0,*root1,*root2,*root3;
 #define TREAD 100
 #define RADAR 101
 
@@ -195,7 +196,7 @@ static unsigned char backcolorgreen = 124;
 static unsigned char backcolorblue = 42;
 static int releasemode = 0;
 static int slowpo = 0;
-static int totalcrashs;
+int totalcrashs;
 extern int particleeffects;
 static int grandtotaltrickpoints, MyGoldCoins;
 static int gameplayx = 800;
@@ -881,7 +882,7 @@ void st2_buildcar()
 	pushandsetdir("st2_game");
 	uplayflame1 = alloctree(0, "flame.lwo");
 	uplayflame2 = alloctree(0, "flamflip.lwo");
-	uplayflame1->treedissolvecutoff = 5/256.0f;
+	uplayflame1->treedissolvecutoff = 5 / 256.0f;
 	uplayflame2->treedissolvecutoff = 5 / 256.0f;
 	uplayflame1->flags |= TF_DONTDRAW;
 	uplayflame2->flags |= TF_DONTDRAW;
@@ -889,30 +890,30 @@ void st2_buildcar()
 	if (!slowpo) {
 		specialtsp = loadtsp("trkglow.tsp", "trkglowa.tsp", uplayspecial1, allcars[selectedcar].spname, "trkglow2", TSP_USE_1ALPHA, 0);
 		/*		uplayspecial1		specialanimtex.nframes = ReadTSP(&testsp,"trkglow.tsp");
-				specialanimtex.curframe=0;
-				if(specialanimtex.nframes <=0)
-					errorexit("Can't find trkglow.tsp");
-				tempf = ReadTSP(&testspa,"trkglowa.tsp");
-				if(tempf <=0)
-					errorexit("Can't find trkglowa.tsp");
-				if(tempf != specialanimtex.nframes)
-					errorexit("trkglow.tsp and trkglowa.tsp have diff # of frames");
-				specialanimtex.mat=findmaterial(uplayspecial1,"trkglow2");
-				;//if(!specialanimtex.mat)
-				;//	errorexit("mat special is null");
-				;//specialanimtex.desttex=gettexptr(specialanimtex.mat,&specialanimtex.w,&specialanimtex.h,NULL);
-				logger("building up car lightning effect\n");
-				for(i=0;i<specialanimtex.nframes;i++) {
-					;superconvert24to16((unsigned char *)testsp[i].data,testsp[i].w,testsp[i].h,
-						(unsigned char *)testspa[i].data,testspa[i].w,testspa[i].h,
-						SU_COLORKEY|SU_NEW,
-						&specialanimtex.texdata[i],&specialanimtex.w,&specialanimtex.h,
-						&specialanimtex.mat->mhflags,NULL,1); // take advantage of fasteropaquetextures
-		//				NULL,&hflags,1);
-				}
-				FreeTSP(testsp,tempf);
-				FreeTSP(testspa,tempf);
-		*/
+		specialanimtex.curframe=0;
+		if(specialanimtex.nframes <=0)
+			errorexit("Can't find trkglow.tsp");
+		tempf = ReadTSP(&testspa,"trkglowa.tsp");
+	    if(tempf <=0)
+			errorexit("Can't find trkglowa.tsp");
+	    if(tempf != specialanimtex.nframes)
+			errorexit("trkglow.tsp and trkglowa.tsp have diff # of frames");
+	    specialanimtex.mat=findmaterial(uplayspecial1,"trkglow2");
+		;//if(!specialanimtex.mat)
+		;//	errorexit("mat special is null");
+		;//specialanimtex.desttex=gettexptr(specialanimtex.mat,&specialanimtex.w,&specialanimtex.h,NULL);
+		logger("building up car lightning effect\n");
+		for(i=0;i<specialanimtex.nframes;i++) {
+			;superconvert24to16((unsigned char *)testsp[i].data,testsp[i].w,testsp[i].h,
+				(unsigned char *)testspa[i].data,testspa[i].w,testspa[i].h,
+				SU_COLORKEY|SU_NEW,
+				&specialanimtex.texdata[i],&specialanimtex.w,&specialanimtex.h,
+				&specialanimtex.mat->mhflags,NULL,1); // take advantage of fasteropaquetextures
+//				NULL,&hflags,1);
+		}
+	    FreeTSP(testsp,tempf);
+		FreeTSP(testspa,tempf);
+*/
 	}
 	// car fireworks
 	burstframe = 0;
@@ -920,32 +921,32 @@ void st2_buildcar()
 		ubursta[j] = alloctree(1, burstlwo[j]);
 		bursttsp[j] = loadtsp(burstnames[j], "bursta.tsp", ubursta[j], burstlwo[j], burstmats[j], TSP_USE_1ALPHA, 0);
 		/*		burstanimtex[j].nframes = ReadTSP(&testsp,burstnames[j]);
-				burstanimtex[j].curframe=0;
-				if(burstanimtex[j].nframes <=0)
-					errorexit("Can't find burst.tsp");
-				tempf = ReadTSP(&testspa,"bursta.tsp");
-				if(tempf <=0)
-					errorexit("Can't find bursta.tsp");
-				if(tempf != burstanimtex[j].nframes)
-					errorexit("burst.tsp and bursta.tsp have diff # of frames");
-				logger("building up car burst effect\n");
-				burstanimtex[j].mat = findmaterial(ubursta[j],burstmats[j]);
-				;//if(!burstanimtex[j].mat)
-				;//	errorexit("Can't find burst surface");
-				;//burstanimtex[j].desttex=gettexptr(burstanimtex[j].mat,&burstanimtex[j].w,&burstanimtex[j].h,NULL);
-				;//if(!burstanimtex[j].desttex)
-				;//	errorexit("ouch *burstdata is null");
-				for(i=0;i<burstanimtex[j].nframes;i++) {
-					;superconvert24to16((unsigned char *)testsp[i].data,testsp[i].w,testsp[i].h,
-						(unsigned char *)testspa[i].data,testspa[i].w,testspa[i].h,
-						SU_COLORKEY|SU_NEW,
-						&burstanimtex[j].texdata[i],&burstanimtex[j].w,&burstanimtex[j].h,
-						&burstanimtex[j].mat->mhflags,NULL,1); // take advantage of fasteropaquetextures
-			//			NULL,&hflags,1);
-				}
-				FreeTSP(testsp,tempf);
-				FreeTSP(testspa,tempf);
-		*/		ubursta[j]->scale.x = .01f;
+		burstanimtex[j].curframe=0;
+		if(burstanimtex[j].nframes <=0)
+			errorexit("Can't find burst.tsp");
+		tempf = ReadTSP(&testspa,"bursta.tsp");
+		if(tempf <=0)
+			errorexit("Can't find bursta.tsp");
+		if(tempf != burstanimtex[j].nframes)
+			errorexit("burst.tsp and bursta.tsp have diff # of frames");
+		logger("building up car burst effect\n");
+		burstanimtex[j].mat = findmaterial(ubursta[j],burstmats[j]);
+		;//if(!burstanimtex[j].mat)
+		;//	errorexit("Can't find burst surface");
+		;//burstanimtex[j].desttex=gettexptr(burstanimtex[j].mat,&burstanimtex[j].w,&burstanimtex[j].h,NULL);
+		;//if(!burstanimtex[j].desttex)
+		;//	errorexit("ouch *burstdata is null");
+		for(i=0;i<burstanimtex[j].nframes;i++) {
+			;superconvert24to16((unsigned char *)testsp[i].data,testsp[i].w,testsp[i].h,
+				(unsigned char *)testspa[i].data,testspa[i].w,testspa[i].h,
+				SU_COLORKEY|SU_NEW,
+				&burstanimtex[j].texdata[i],&burstanimtex[j].w,&burstanimtex[j].h,
+				&burstanimtex[j].mat->mhflags,NULL,1); // take advantage of fasteropaquetextures
+	//			NULL,&hflags,1);
+		}
+		FreeTSP(testsp,tempf);
+		FreeTSP(testspa,tempf);
+*/		ubursta[j]->scale.x=.01f;
 		ubursta[j]->scale.y = .01f;
 		ubursta[j]->scale.z = .01f;
 		//	linkchildtoparent(uburst,carnull);
@@ -1876,496 +1877,6 @@ int st2_loadtrack(char *filename, int override)
 }
 // UNC
 #endif
-
-void uplay3_init()
-{
-// UNC
-#if 1
-	//extern int clipmap;	// for coins in scoreline
-	//int clipmapsave;
-	//extern TREE *findtreenamerec(TREE *t, char *n);
-	//	SPRITE *testsp;
-	TREE *grid, *gridloco, *xxx;
-	int i, j;//,hflags;
-	extern int drawmouse;
-	extern int selected, saveslowpo;
-	extern int usegdi;
-	mater2 *mt;
-	//    int ax,ay,ab,mode;
-
-		// temp
-	/*	FILE *fh;
-		pushandsetdir("temp1");
-		fh=fopen3("temp2.txt","rb");
-		fclose3(fh);
-		pushandsetdir("temp2");
-		fh=fopen3("temp1.txt","rb");
-		fclose3(fh);
-		popdir();
-		popdir(); */
-
-	uloop = 2;
-	pushandsetdir("st2_config");
-	loadconfigfile("config.txt"); // probably can't go back to tim's stuff without
-									// reloading the real config.txt
-	newpitch.w *= PIOVER180;
-	popdir();
-	//	halfp=halfy=halfr=0;
-// UNC
-#endif
-// UNC
-#if 1
-	video_setupwindow(GX, GY);
-	intunnels = 0;
-	cantstartdrive = 100;
-	;//fasteropaquetextures=1; // if source data is totally opaque, take advantage of this
-//	selectedcar=TREAD;
-	if (gameplayx >= 800)
-		usehires = 1;
-	else
-		usehires = 0;
-	//	usehires=0; // force the issue
-	useoldcam = 20;
-	cantdrive = 1;
-	carboost = 0;
-	validroadnorm = 0;
-	framecount = 0;
-	dofinish = 0;
-	backcolorred = 41;
-	backcolorgreen = 124;
-	backcolorblue = 42;
-	//alphacutoffsave = alphacutoff;
-	//alphacutoff = 137;
-	;//if(!usegdi) fmtorm(saveslowpo);
-	utotalcrashes = utotalstunts = 0;
-	// clock
-	clocktickcount = (ustarttime * 30 + 29) * 2;	// 2 minutes
-// system
-	;//showcursor(0);
-	//drawmouse = 0;
-// music
-	pushandsetdir("st2_main");
-	sag = play_sagger("menu.sag");
-	popdir();
-	;//loadmenumusic();
-// setup main tree
-	root = alloctree(5000, NULL);
-	//	root0 = alloctree(5000,NULL);
-	//	root1 = alloctree(5000,NULL);
-	//	root2 = alloctree(5000,NULL);
-	//	root3 = alloctree(5000,NULL);
-	//	linkchildtoparent(root0,root);
-	//	linkchildtoparent(root1,root);
-	//	linkchildtoparent(root2,root);
-	//	linkchildtoparent(root3,root);
-	mainvp.backcolor = C32GREEN;
-	mainvp.zfront = .125f;
-	mainvp.zback = 25000;
-	if (zoomin) {
-		mainvp.xres = WX / 2;
-		mainvp.yres = WY / 2;
-		mainvp.xstart = WX / 2;
-		mainvp.ystart = WY / 2;
-	} else {
-		mainvp.xres = WX;
-		mainvp.yres = WY;
-		mainvp.xstart = 0;
-		mainvp.ystart = 0;
-	}
-	//mainvp.roottree = root;
-	//	mainvp.camattach=camnull;//getlastcam(); // from last scene loaded, set later when we
-													// get a cam(null)
-	mainvp.camzoom = 3.2f; // it'll getit from tree camattach if you have one
-	//setviewportsrc(&mainvp); // from last scene loaded
-	mainvp.flags = VP_CLEARWB | VP_CLEARBG;
-
-	// get main scene
-	pushandsetdir("st2_uplay");
-	//usescnlights = 1;
-	grid = loadlws("uplay.lws");
-	linkchildtoparent(grid, root);
-	bigtree = findtreename(root, "tree1.lwo");
-	gridloco = findtreename(root, "gridloco"); // fix zbuffer problem, get grass to draw after horizon
-	unhooktree(gridloco);
-	linkchildtoparent(gridloco, grid);
-	//usescnlights = 0;
-	startpiece = alloctree(0, "start.lwo");
-	finishpiece = loadlws("finish.lws");
-	//	pushandsetdir("edpieces");
-	//	xxx=loadlws("straight.lws");
-	//	popdir();
-	//	linkchildtoparent(xxx,finishpiece);
-	//nofinishpiece = findtreenamerec(finishpiece, "redx.lwo");
-	nofinishpiece = finishpiece->find("coin.lwo");
-
-	linkchildtoparent(startpiece, root);
-	linkchildtoparent(finishpiece, root);
-	initfinishbursts();
-	//	linkchildtoparent(nofinishpiece,root);
-	popdir();
-	// setup some test nulls
-#ifdef USETESTNULLS
-	initnulls();
-#endif
-	initnulls(root, 1);
-	// load and build track
-	pushandsetdir("st2_edpieces");
-	numpieces = st2_loadtracklist2("uedit.txt");
-	popdir();
-	strcpy(uedittrackname, "track1.txt");
-	st2_loadtrack(uedittrackname, 1);
-	if (st2_curpiece == 6) { // add an extra straight for a blank track
-		st2_curpiece = 13;
-		st2_lastpiece = 6;
-		st2_dir = 0;
-		thetrack[st2_lastpiece].piece = PIECE_GENERIC_3; // straight
-		thetrack[st2_lastpiece]. orhey = 0;
-	}
-	// substitute last blank piece with a straight
-//	thetrack[st2_curpiece].piece=PIECE_GENERIC_3;
-	thetrack[st2_curpiece].piece = PIECE_GENERIC_25; // specialfinish.lws
-	thetrack[st2_curpiece]. orhey = (float)(st2_dir * 90 + 180); // ah theirs is 180 off
-	for (i = 0; i < NUMBODS; i++) {
-		TREE *aaa;
-		char a[64];
-		//		char b[64];
-		int p;
-		//		TREE *clone;
-		logger("<<<<<<<<<<<<<<<<<< trackpiece %d\n", i);
-		p = thetrack[i].piece;
-		sprintf(a, "%02d", i);
-		if (pieces[p].piece)
-			thetrack[i].t = duptree(pieces[p].piece);
-		else {
-			pushandsetdir("st2_edpieces");
-			thetrack[i].t = pieces[p].piece = loadlws(pieces[p].name);
-			popdir();
-		}
-		//		getname(b,pieces[p].piece->name);
-		//		strcat(b,".lwo");
-		thetrack[i].t->rot.y = thetrack[i]. orhey *PIOVER180;
-		thetrack[i].t->scale.x = 1.02f;	// overlap pieces some, 1% to 2% now 2%
-	//	thetrack[i].t->scale.z=1.02f;
-		aaa = findtreename(root, a);
-		linkchildtoparent(thetrack[i].t, aaa);
-		//		clone = findtreebodyname(b);
-		//		thetrack[i].bodyid = clone->bodyid;
-		// handle collision lists
-		if (pieces[p].nlwos == 0) { // no collision list, use old system of children[0]
-			thetrack[i].tlwos[0] = thetrack[i].t->children.front();
-			//thetrack[i].tlwos[0] = thetrack[i].t->children[0];
-			thetrack[i].nlwos = 1;
-		} else {
-			thetrack[i].nlwos = pieces[p].nlwos; // find name of lwo in lws
-			for (j = 0; j < pieces[p].nlwos; j++) {
-				if (!my_stricmp(pieces[p].lwonames[j], "coin.lwo")) // coin might be freed by current system
-					errorexit("no coins in 'uedit.txt' please");
-				//if ((thetrack[i].tlwos[j] = findtreenamerec(thetrack[i].t, pieces[p].lwonames[j])) == NULL)
-				if ((thetrack[i].tlwos[j]->find( pieces[p].lwonames[j])) == NULL)
-					errorexit("can't find '%s' in '%s'",
-					pieces[p].lwonames[j], thetrack[i].t->name.c_str());
-			}
-		}
-		// build collision grid
-		for (j = 0; j < thetrack[i].nlwos; j++) {
-			int k;
-			int gx, gz, gxmin, gzmin, gxmax, gzmax;
-			COLLGRID *cg;
-			TREE *t;
-			model *b;
-			VEC *v;
-			vector<FACE> f;
-			int nf;
-			int nv;
-			logger("<<<<< lwo %d\n", j);
-			cg = &thetrack[i].clwos[j];
-			t = thetrack[i].tlwos[j];
-			if (!t->mod)
-				errorexit("bad bodyid in grid control");
-			b = t->mod;
-			v = b->verts;
-			f = b->faces;
-			nf = b->faces.size();
-			nv = b->verts.size();
-			logger("   '%s has %d faces'\n", thetrack[i].tlwos[j]->name.c_str(), nf);
-			cg->mulx = (ST2_COLLGRIDX - .2f) / (b->boxmax.x - b->boxmin.x); // safety factor .1 on each side
-			cg->offx = .1f - cg->mulx*b->boxmin.x;
-			cg->mulz = (ST2_COLLGRIDZ - .2f) / (b->boxmax.z - b->boxmin.z); // safety factor .1 on each side
-			cg->offz = .1f - cg->mulz*b->boxmin.z;
-			cg->verts = v;
-			memset(cg->nfaceidx, 0, ST2_COLLGRIDX*ST2_COLLGRIDZ * sizeof(int));
-			// pass 1, run thru the tris and count them up
-			for (k = 0; k < nf; k++) {
-				getgridxz(cg, v + f[k].vertidx[0], &gxmin, &gzmin);
-				gxmax = gxmin;
-				gzmax = gzmin;
-				getgridxz(cg, v + f[k].vertidx[1], &gx, &gz);
-				if (gx < gxmin)
-					gxmin = gx;
-				if (gz < gzmin)
-					gzmin = gz;
-				if (gx > gxmax)
-					gxmax = gx;
-				if (gz > gzmax)
-					gzmax = gz;
-				getgridxz(cg, v + f[k].vertidx[2], &gx, &gz);
-				if (gx < gxmin)
-					gxmin = gx;
-				if (gz < gzmin)
-					gzmin = gz;
-				if (gx > gxmax)
-					gxmax = gx;
-				if (gz > gzmax)
-					gzmax = gz;
-				//				gzmin=0;
-				//				gzmax=0;
-				//				gxmin=0;
-				//				gxmax=0;
-				for (gz = gzmin; gz <= gzmax; gz++)
-					for (gx = gxmin; gx <= gxmax; gx++) {
-						VEC minv, maxv;
-						getvecfromgridxz(cg, &minv, gx, gz);
-						getvecfromgridxz(cg, &maxv, gx + 1, gz + 1);
-						if (tri2rectxz(v + f[k].vertidx[0], v + f[k].vertidx[1], v + f[k].vertidx[2], &minv, &maxv)) {
-							cg->nfaceidx[gz][gx]++;
-						}
-					}
-			}
-			// alloc memory for grid
-			for (gz = 0; gz < ST2_COLLGRIDZ; gz++)
-				for (gx = 0; gx < ST2_COLLGRIDX; gx++) {
-					cg->faceidx[gz][gx] = (FACE **)memalloc(sizeof(int)*(cg->nfaceidx[gz][gx] + 2));
-					cg->nfaceidx[gz][gx] = 0;
-				}
-			// pass 2, run thru the tris and count them up, collect tri #'s
-			for (k = 0; k < nf; k++) {
-				getgridxz(cg, v + f[k].vertidx[0], &gxmin, &gzmin);
-				gxmax = gxmin;
-				gzmax = gzmin;
-				getgridxz(cg, v + f[k].vertidx[1], &gx, &gz);
-				if (gx < gxmin)
-					gxmin = gx;
-				if (gz < gzmin)
-					gzmin = gz;
-				if (gx > gxmax)
-					gxmax = gx;
-				if (gz > gzmax)
-					gzmax = gz;
-				getgridxz(cg, v + f[k].vertidx[2], &gx, &gz);
-				if (gx < gxmin)
-					gxmin = gx;
-				if (gz < gzmin)
-					gzmin = gz;
-				if (gx > gxmax)
-					gxmax = gx;
-				if (gz > gzmax)
-					gzmax = gz;
-				//				gzmin=0;
-				//				gzmax=0;
-				//				gxmin=0;
-				//				gxmax=0;
-				for (gz = gzmin; gz <= gzmax; gz++)
-					for (gx = gxmin; gx <= gxmax; gx++) {
-						VEC minv, maxv;
-						getvecfromgridxz(cg, &minv, gx, gz);
-						getvecfromgridxz(cg, &maxv, gx + 1, gz + 1);
-						if (tri2rectxz(v + f[k].vertidx[0], v + f[k].vertidx[1], v + f[k].vertidx[2], &minv, &maxv)) {
-							cg->faceidx[gz][gx][cg->nfaceidx[gz][gx]] = &f[0] + k;
-							cg->nfaceidx[gz][gx]++;
-						}
-					}
-			}
-		}
-	}
-	scantrackpieces();
-	initcoins();
-	setupmatfuncs();
-	// build up our car
-	st2_buildcar();
-	// setup objects
-	memcpy(objects, iobjects, sizeof(objects));
-	//	objects[0].pos.x=100;
-	//	roadprobe1.z=100;
-	objects[0].carang.x = 0; // yaw car 90 degrees to the right
-	objects[0].carang.y = 1;
-	objects[0].carang.z = 0;
-	objects[0].carang.w = PI / 2.0f;
-	rotaxis2quat(&objects[0].carang, &objects[0].carang);
-	// build up our camera
-	//	pushandsetdir("helperobj");
-	/*camnull = allochelper(1, HELPER_CAMERA, 0);
-	//	camnull=alloctree(1,"helpercamera.lwo");
-	//	popdir();
-	//	camnull=alloctree(1,nullname);
-	camnull->buildo2p = O2P_FROMTRANSQUATSCALE;
-	camnull->rot.w = 1;
-	camnull->zoom = thecamzoom;
-	camnull->trans = camstart;
-	;//addlwscam(camnull); // hi level camera
-	;//curlwscam = nlwscams-1; // hi level camera
-	mainvp.camattach = camnull;
-	linkchildtoparent(camnull, root);*/
-	;//cam.useroot=0; // lo level camera
-// set misc variables
-	startstunt = uready = 0;
-	accelspin = 0;
-	littleg = littlegground;
-	// get some sound
-	inittags();
-	numwaves = taggetnum(gardentags);
-	;//pushandsetdir("game");
-	;//if (!Sound_LoadTag("garden.tag", &numwaves)) errorexit("Sound_LoadTag Failed");
-	;//popdir();
-//	revsound = Sound_FindSlot(MENUREV1+selectedcar); // good idea but wrong sounds
-// load up scrline
-	if (usehires)
-		//	if (slowpo)
-		//	if (gameplayx>=800)
-		pushandsetdir("st2_hiscrline"); // hires
-	else
-		pushandsetdir("st2_scrline"); // lores
-	//clipmapsave = clipmap;	// force all texture to be loaded to be colorkeys
-	//clipmap = CLIPMAP_COLORKEY;
-	scrline = loadlws("scrline.lws");
-	//clipmap = clipmapsave;
-	linkchildtoparent(scrline, camnull);
-	findtreename(root, "light.lwo")->flags |= TF_DONTDRAW;
-	findtreename(root, "light2.lwo")->flags |= TF_DONTDRAW;
-	logger("loading clock textures (digits)..\n");
-	oldtt = oldncoins = oldspeed = -1;
-	// clock
-	clocktsp = loadtsp("clock.tsp", NULL, root, "scrline.lwo", "clock", TSP_USE_1ALPHA, 1);
-	;//clockanimtex.mat = findmaterial(xxx,"clock");
-	;//if(!clockanimtex.mat)
-	;//	error("Can't find clock surface");
-	;//clockanimtex.desttex=gettexptr(clockanimtex.mat,&clockanimtex.w,&clockanimtex.h,NULL);
-	;//if(!clockanimtex.desttex)
-	;//	error("clockdata is null");
-// coin
-	xxx = findtreename(root, "scrline.lwo");
-	if (!xxx)
-		errorexit("cant find scrline.lwo");
-	mt = xxx->findmaterial("scrline3");
-	if (!mt)
-		errorexit("Can't find coin surface");
-	// coin tex should be same as clock tex
-
-/*	numcointex=buildtexture("ncointex",1<<mt->thetex->logu,1<<mt->thetex->logv,clocktsp->texformat);
-	if (!numcointex)
-		errorexit("can't build cointex");
-	freetexture(mt->thetex);
-	mt->thetex=numcointex;
-*/
-	numcointex = mt->thetexarr[0];
-
-	;//coinanimtex.desttex=gettexptr(coinanimtex.mat,&coinanimtex.w,&coinanimtex.h,NULL);
-	;//if(!coinanimtex.desttex)
-	;//	error("coindata is null");
-// speedo
-	speedotsp = loadtsp("speed.tsp", NULL, root, "scrline.lwo", "speed", TSP_USE_1ALPHA, 1);
-	/*	mt = findmaterial(xxx,"speed");
-		if(!mt)
-			errorexit("Can't find speedo surface");
-		speedotex=mt->thetex; */
-	;//if(!speedoanimtex.mat)
-	;//	error("Can't find speedo surface");
-	;//speedoanimtex.desttex=gettexptr(speedoanimtex.mat,&speedoanimtex.w,&speedoanimtex.h,NULL);
-	;//if(!speedoanimtex.desttex)
-	;//	error("speedodata is null");
-// get clock tsp
-	//loadtsp("clock.tsp");
-//	clockanimtex.nframes = ReadTSP(&testsp,"clock.tsp");
-//	if(clockanimtex.nframes<=0)
-//		error("can't find clock.tsp");
-//	for(i=0;i<clockanimtex.nframes;i++) {
-//		;/*superconvert24to16(
-//			(unsigned char *)testsp[i].data,testsp[i].w,testsp[i].h,
-//			NULL,0,0,
-//			SU_COLORKEY|SU_NEW,
-//			&clockanimtex.texdata[i],&clockanimtex.w,&clockanimtex.h,
-//			NULL,&hflags,1);
-//			&clockanimtex.mat->mhflags,NULL,1); // take advantage of fasteropaquetextures */
-//	}
-//	FreeTSP(testsp,clockanimtex.nframes);
-// get speed tsp
-	logger("loading speedo textures (digits)..\n");
-	//	speedoanimtex.nframes = ReadTSP(&testsp,"speed.tsp");
-	//	if(speedoanimtex.nframes<=0)
-	//		error("can't find speedo.tsp");
-	//	for(i=0;i<speedoanimtex.nframes;i++) {
-	//		;/*superconvert24to16(
-	//			(unsigned char *)testsp[i].data,testsp[i].w,testsp[i].h,
-	//			NULL,0,0,
-	//			SU_COLORKEY|SU_NEW,
-	//			&speedoanimtex.texdata[i],&speedoanimtex.w,&speedoanimtex.h,
-	//			NULL,&hflags,1);
-	//			&speedoanimtex.mat->mhflags,NULL,1); // take advantage of fasteropaquetextures */
-	//	}
-	//	FreeTSP(testsp,speedoanimtex.nframes);
-	popdir();
-	// turn on animation
-	kill_bcams(grid);
-	seq_start(grid);
-	seq_start(finishpiece);
-	//	firstsound=1;
-	//calclightonce(grid);
-	// force the issue
-	;//curlwscam=0;
-	;//cam.attach=camnull;
-	;//lwscamlist[0]=camnull;
-	;//cam.useroot=0;
-	pushandsetdir("st2_game");
-	uinitparticles();
-	//	dirtparticle=alloctree(1,"dust4.lwo");
-	//	dirtparticle->proc=partfunc;
-	//	dirtparticle->user1=60;
-	//	dirtparticle->flags|=TF_ALWAYSFACING;
-	//	dirtparticle->treedissolvecutoff=10/256.0f;
-	//    if (usehardware==0) {
-	//		MAT *m;
-	//		togglezbuffer(dirtparticle,"dust",1);
-	//		m = findmaterial(dirtparticle,"dust");
-	//		m->mtrans=.5f;
-	//	}
-	popdir();
-	// log results
-	fixpondalphacutoff(root);
-
-	/*  if(!usegdi && xres != gameplayx && yres != gameplayy)  //in init
-	  {
-		if(usehardware) flush3d();
-
-		mode = VidFindClosest(gameplayx,gameplayy);
-		if(mode<0) errorexit("can't set %d %d",gameplayx,gameplayy);
-		VidSet(mode);
-		VidGetInfo(mode, &ax,&ay,&ab);
-		gameplayx = ax;
-		gameplayy = ay;
-		bitmode = ab;
-
-		if(usehardware)
-		{
-			Init3d(0, 0, gameplayx, gameplayy);
-			restoreallsurfaces();
-			SetHardwareFlags();
-		}
-	  } */
-	  // put the sky to low priority drawing
-	  // setup drawpriority
-	{
-		TREE *skydome;
-		skydome = findtreename(root, "dome1.lwo");
-		//		unhooktree(skydome);
-		//		linkchildtoparent(skydome,root);
-		//setdrawprirec(skydome, 0);
-		//		skydome->mod->drawpri=0;
-		//		settreedraworder(root);
-		//useattachcam = 1;
-	}
-	//logviewport(&mainvp, OPT_SOME);
-#endif //UNC
-}
-
 // UNC
 #if 1
 
@@ -3665,13 +3176,533 @@ VEC ulastpos;
 #if 1
 int fpucwsw;
 extern int cbairtime;
+
+void usenewcam()
+{
+	useoldcam = 0;
+}
+// UNC
+#if 1
+/*void spawndirtparts()
+{
+	static tm;
+	TREE *t;
+	tm++;
+	if ((tm&15)==0) {
+		t=duptree(dirtparticle);
+		t->transvel.y=.1f;
+		t->transvel.x=frand()*.1f-.05f;
+		t->transvel.z=frand()*.1f-.05f;
+		t->trans=objects[0].pos;
+		linkchildtoparent(t,root);
+	}
+	//	playasound(REDLIGHT,0); // caught a coin
+}
+*/
+// UNC
+#endif
+	extern int grandtotaltrickpoints, MyGoldCoins;
+	extern int totalcrashs, selectedtrack;
+	extern int selected;
+	extern int releasemode;
+
+} // namespace
+using namespace st2;
+void uplay3_init()
+{
+	// UNC
+#if 1
+	//extern int clipmap;	// for coins in scoreline
+	//int clipmapsave;
+	//extern TREE *findtreenamerec(TREE *t, char *n);
+	//	SPRITE *testsp;
+	TREE *grid, *gridloco, *xxx;
+	int i, j;//,hflags;
+	extern int drawmouse;
+	extern int selected, saveslowpo;
+	extern int usegdi;
+	mater2 *mt;
+	//    int ax,ay,ab,mode;
+
+		// temp
+	/*	FILE *fh;
+		pushandsetdir("temp1");
+		fh=fopen3("temp2.txt","rb");
+		fclose3(fh);
+		pushandsetdir("temp2");
+		fh=fopen3("temp1.txt","rb");
+		fclose3(fh);
+		popdir();
+		popdir(); */
+
+	uloop = 2;
+	pushandsetdir("st2_config");
+	loadconfigfile("config.txt"); // probably can't go back to tim's stuff without
+									// reloading the real config.txt
+	newpitch.w *= PIOVER180;
+	popdir();
+	//	halfp=halfy=halfr=0;
+// UNC
+#endif
+// UNC
+#if 1
+	video_setupwindow(GX, GY);
+	intunnels = 0;
+	cantstartdrive = 100;
+	;//fasteropaquetextures=1; // if source data is totally opaque, take advantage of this
+//	selectedcar=TREAD;
+	if (gameplayx >= 800)
+		usehires = 1;
+	else
+		usehires = 0;
+	//	usehires=0; // force the issue
+	useoldcam = 20;
+	cantdrive = 1;
+	carboost = 0;
+	validroadnorm = 0;
+	framecount = 0;
+	dofinish = 0;
+	backcolorred = 41;
+	backcolorgreen = 124;
+	backcolorblue = 42;
+	//alphacutoffsave = alphacutoff;
+	//alphacutoff = 137;
+	;//if(!usegdi) fmtorm(saveslowpo);
+	utotalcrashes = utotalstunts = 0;
+	// clock
+	clocktickcount = (ustarttime * 30 + 29) * 2;	// 2 minutes
+// system
+	;//showcursor(0);
+	//drawmouse = 0;
+// music
+	pushandsetdir("st2_main");
+	sag = play_sagger("menu.sag");
+	popdir();
+	;//loadmenumusic();
+// setup main tree
+	root = alloctree(5000, NULL);
+	//	root0 = alloctree(5000,NULL);
+	//	root1 = alloctree(5000,NULL);
+	//	root2 = alloctree(5000,NULL);
+	//	root3 = alloctree(5000,NULL);
+	//	linkchildtoparent(root0,root);
+	//	linkchildtoparent(root1,root);
+	//	linkchildtoparent(root2,root);
+	//	linkchildtoparent(root3,root);
+	mainvp.backcolor = C32GREEN;
+	mainvp.zfront = .125f;
+	mainvp.zback = 25000;
+	if (zoomin) {
+		mainvp.xres = WX / 2;
+		mainvp.yres = WY / 2;
+		mainvp.xstart = WX / 2;
+		mainvp.ystart = WY / 2;
+	} else {
+		mainvp.xres = WX;
+		mainvp.yres = WY;
+		mainvp.xstart = 0;
+		mainvp.ystart = 0;
+	}
+	//mainvp.roottree = root;
+	//	mainvp.camattach=camnull;//getlastcam(); // from last scene loaded, set later when we
+													// get a cam(null)
+	mainvp.camzoom = 3.2f; // it'll getit from tree camattach if you have one
+	//setviewportsrc(&mainvp); // from last scene loaded
+	mainvp.flags = VP_CLEARWB | VP_CLEARBG;
+
+	// get main scene
+	pushandsetdir("st2_uplay");
+	//usescnlights = 1;
+	grid = loadlws("uplay.lws");
+	linkchildtoparent(grid, root);
+	bigtree = findtreename(root, "tree1.lwo");
+	gridloco = findtreename(root, "gridloco"); // fix zbuffer problem, get grass to draw after horizon
+	unhooktree(gridloco);
+	linkchildtoparent(gridloco, grid);
+	//usescnlights = 0;
+	startpiece = alloctree(0, "start.lwo");
+	finishpiece = loadlws("finish.lws");
+	//	pushandsetdir("edpieces");
+	//	xxx=loadlws("straight.lws");
+	//	popdir();
+	//	linkchildtoparent(xxx,finishpiece);
+	//nofinishpiece = findtreenamerec(finishpiece, "redx.lwo");
+	nofinishpiece = finishpiece->find("coin.lwo");
+
+	linkchildtoparent(startpiece, root);
+	linkchildtoparent(finishpiece, root);
+	initfinishbursts();
+	//	linkchildtoparent(nofinishpiece,root);
+	popdir();
+	// setup some test nulls
+#ifdef USETESTNULLS
+	initnulls();
+#endif
+	initnulls(root, 1);
+	// load and build track
+	pushandsetdir("st2_edpieces");
+	numpieces = st2_loadtracklist2("uedit.txt");
+	popdir();
+	strcpy(uedittrackname, "track1.txt");
+	st2_loadtrack(uedittrackname, 1);
+	if (st2_curpiece == 6) { // add an extra straight for a blank track
+		st2_curpiece = 13;
+		st2_lastpiece = 6;
+		st2_dir = 0;
+		thetrack[st2_lastpiece].piece = PIECE_GENERIC_3; // straight
+		thetrack[st2_lastpiece].orhey = 0;
+	}
+	// substitute last blank piece with a straight
+//	thetrack[st2_curpiece].piece=PIECE_GENERIC_3;
+	thetrack[st2_curpiece].piece = PIECE_GENERIC_25; // specialfinish.lws
+	thetrack[st2_curpiece].orhey = (float)(st2_dir * 90 + 180); // ah theirs is 180 off
+	for (i = 0; i < NUMBODS; i++) {
+		TREE *aaa;
+		char a[64];
+		//		char b[64];
+		int p;
+		//		TREE *clone;
+		logger("<<<<<<<<<<<<<<<<<< trackpiece %d\n", i);
+		p = thetrack[i].piece;
+		sprintf(a, "%02d", i);
+		if (pieces[p].piece)
+			thetrack[i].t = duptree(pieces[p].piece);
+		else {
+			pushandsetdir("st2_edpieces");
+			thetrack[i].t = pieces[p].piece = loadlws(pieces[p].name);
+			popdir();
+		}
+		//		getname(b,pieces[p].piece->name);
+		//		strcat(b,".lwo");
+		thetrack[i].t->rot.y = thetrack[i].orhey *PIOVER180;
+		thetrack[i].t->scale.x = 1.02f;	// overlap pieces some, 1% to 2% now 2%
+	//	thetrack[i].t->scale.z=1.02f;
+		aaa = findtreename(root, a);
+		linkchildtoparent(thetrack[i].t, aaa);
+		//		clone = findtreebodyname(b);
+		//		thetrack[i].bodyid = clone->bodyid;
+		// handle collision lists
+		if (pieces[p].nlwos == 0) { // no collision list, use old system of children[0]
+			thetrack[i].tlwos[0] = thetrack[i].t->children.front();
+			//thetrack[i].tlwos[0] = thetrack[i].t->children[0];
+			thetrack[i].nlwos = 1;
+		} else {
+			thetrack[i].nlwos = pieces[p].nlwos; // find name of lwo in lws
+			for (j = 0; j < pieces[p].nlwos; j++) {
+				if (!my_stricmp(pieces[p].lwonames[j], "coin.lwo")) // coin might be freed by current system
+					errorexit("no coins in 'uedit.txt' please");
+				//if ((thetrack[i].tlwos[j] = findtreenamerec(thetrack[i].t, pieces[p].lwonames[j])) == NULL)
+				if ((thetrack[i].tlwos[j]->find(pieces[p].lwonames[j])) == NULL)
+					errorexit("can't find '%s' in '%s'",
+						pieces[p].lwonames[j], thetrack[i].t->name.c_str());
+			}
+		}
+		// build collision grid
+		for (j = 0; j < thetrack[i].nlwos; j++) {
+			int k;
+			int gx, gz, gxmin, gzmin, gxmax, gzmax;
+			COLLGRID *cg;
+			TREE *t;
+			model *b;
+			VEC *v;
+			vector<FACE> f;
+			int nf;
+			int nv;
+			logger("<<<<< lwo %d\n", j);
+			cg = &thetrack[i].clwos[j];
+			t = thetrack[i].tlwos[j];
+			if (!t->mod)
+				errorexit("bad bodyid in grid control");
+			b = t->mod;
+			v = b->verts;
+			f = b->faces;
+			nf = b->faces.size();
+			nv = b->verts.size();
+			logger("   '%s has %d faces'\n", thetrack[i].tlwos[j]->name.c_str(), nf);
+			cg->mulx = (ST2_COLLGRIDX - .2f) / (b->boxmax.x - b->boxmin.x); // safety factor .1 on each side
+			cg->offx = .1f - cg->mulx*b->boxmin.x;
+			cg->mulz = (ST2_COLLGRIDZ - .2f) / (b->boxmax.z - b->boxmin.z); // safety factor .1 on each side
+			cg->offz = .1f - cg->mulz*b->boxmin.z;
+			cg->verts = v;
+			memset(cg->nfaceidx, 0, ST2_COLLGRIDX*ST2_COLLGRIDZ * sizeof(int));
+			// pass 1, run thru the tris and count them up
+			for (k = 0; k < nf; k++) {
+				getgridxz(cg, v + f[k].vertidx[0], &gxmin, &gzmin);
+				gxmax = gxmin;
+				gzmax = gzmin;
+				getgridxz(cg, v + f[k].vertidx[1], &gx, &gz);
+				if (gx < gxmin)
+					gxmin = gx;
+				if (gz < gzmin)
+					gzmin = gz;
+				if (gx > gxmax)
+					gxmax = gx;
+				if (gz > gzmax)
+					gzmax = gz;
+				getgridxz(cg, v + f[k].vertidx[2], &gx, &gz);
+				if (gx < gxmin)
+					gxmin = gx;
+				if (gz < gzmin)
+					gzmin = gz;
+				if (gx > gxmax)
+					gxmax = gx;
+				if (gz > gzmax)
+					gzmax = gz;
+				//				gzmin=0;
+				//				gzmax=0;
+				//				gxmin=0;
+				//				gxmax=0;
+				for (gz = gzmin; gz <= gzmax; gz++)
+					for (gx = gxmin; gx <= gxmax; gx++) {
+						VEC minv, maxv;
+						getvecfromgridxz(cg, &minv, gx, gz);
+						getvecfromgridxz(cg, &maxv, gx + 1, gz + 1);
+						if (tri2rectxz(v + f[k].vertidx[0], v + f[k].vertidx[1], v + f[k].vertidx[2], &minv, &maxv)) {
+							cg->nfaceidx[gz][gx]++;
+						}
+					}
+			}
+			// alloc memory for grid
+			for (gz = 0; gz < ST2_COLLGRIDZ; gz++)
+				for (gx = 0; gx < ST2_COLLGRIDX; gx++) {
+					cg->faceidx[gz][gx] = (FACE **)memalloc(sizeof(int)*(cg->nfaceidx[gz][gx] + 2));
+					cg->nfaceidx[gz][gx] = 0;
+				}
+			// pass 2, run thru the tris and count them up, collect tri #'s
+			for (k = 0; k < nf; k++) {
+				getgridxz(cg, v + f[k].vertidx[0], &gxmin, &gzmin);
+				gxmax = gxmin;
+				gzmax = gzmin;
+				getgridxz(cg, v + f[k].vertidx[1], &gx, &gz);
+				if (gx < gxmin)
+					gxmin = gx;
+				if (gz < gzmin)
+					gzmin = gz;
+				if (gx > gxmax)
+					gxmax = gx;
+				if (gz > gzmax)
+					gzmax = gz;
+				getgridxz(cg, v + f[k].vertidx[2], &gx, &gz);
+				if (gx < gxmin)
+					gxmin = gx;
+				if (gz < gzmin)
+					gzmin = gz;
+				if (gx > gxmax)
+					gxmax = gx;
+				if (gz > gzmax)
+					gzmax = gz;
+				//				gzmin=0;
+				//				gzmax=0;
+				//				gxmin=0;
+				//				gxmax=0;
+				for (gz = gzmin; gz <= gzmax; gz++)
+					for (gx = gxmin; gx <= gxmax; gx++) {
+						VEC minv, maxv;
+						getvecfromgridxz(cg, &minv, gx, gz);
+						getvecfromgridxz(cg, &maxv, gx + 1, gz + 1);
+						if (tri2rectxz(v + f[k].vertidx[0], v + f[k].vertidx[1], v + f[k].vertidx[2], &minv, &maxv)) {
+							cg->faceidx[gz][gx][cg->nfaceidx[gz][gx]] = &f[0] + k;
+							cg->nfaceidx[gz][gx]++;
+						}
+					}
+			}
+		}
+	}
+	scantrackpieces();
+	initcoins();
+	setupmatfuncs();
+	// build up our car
+	st2_buildcar();
+	// setup objects
+	memcpy(objects, iobjects, sizeof(objects));
+	//	objects[0].pos.x=100;
+	//	roadprobe1.z=100;
+	objects[0].carang.x = 0; // yaw car 90 degrees to the right
+	objects[0].carang.y = 1;
+	objects[0].carang.z = 0;
+	objects[0].carang.w = PI / 2.0f;
+	rotaxis2quat(&objects[0].carang, &objects[0].carang);
+	// build up our camera
+	//	pushandsetdir("helperobj");
+	/*camnull = allochelper(1, HELPER_CAMERA, 0);
+	//	camnull=alloctree(1,"helpercamera.lwo");
+	//	popdir();
+	//	camnull=alloctree(1,nullname);
+	camnull->buildo2p = O2P_FROMTRANSQUATSCALE;
+	camnull->rot.w = 1;
+	camnull->zoom = thecamzoom;
+	camnull->trans = camstart;
+	;//addlwscam(camnull); // hi level camera
+	;//curlwscam = nlwscams-1; // hi level camera
+	mainvp.camattach = camnull;
+	linkchildtoparent(camnull, root);*/
+	;//cam.useroot=0; // lo level camera
+// set misc variables
+	startstunt = uready = 0;
+	accelspin = 0;
+	littleg = littlegground;
+	// get some sound
+	inittags();
+	numwaves = taggetnum(gardentags);
+	;//pushandsetdir("game");
+	;//if (!Sound_LoadTag("garden.tag", &numwaves)) errorexit("Sound_LoadTag Failed");
+	;//popdir();
+//	revsound = Sound_FindSlot(MENUREV1+selectedcar); // good idea but wrong sounds
+// load up scrline
+	if (usehires)
+		//	if (slowpo)
+		//	if (gameplayx>=800)
+		pushandsetdir("st2_hiscrline"); // hires
+	else
+		pushandsetdir("st2_scrline"); // lores
+	//clipmapsave = clipmap;	// force all texture to be loaded to be colorkeys
+	//clipmap = CLIPMAP_COLORKEY;
+	scrline = loadlws("scrline.lws");
+	//clipmap = clipmapsave;
+	linkchildtoparent(scrline, camnull);
+	findtreename(root, "light.lwo")->flags |= TF_DONTDRAW;
+	findtreename(root, "light2.lwo")->flags |= TF_DONTDRAW;
+	logger("loading clock textures (digits)..\n");
+	oldtt = oldncoins = oldspeed = -1;
+	// clock
+	clocktsp = loadtsp("clock.tsp", NULL, root, "scrline.lwo", "clock", TSP_USE_1ALPHA, 1);
+	;//clockanimtex.mat = findmaterial(xxx,"clock");
+	;//if(!clockanimtex.mat)
+	;//	error("Can't find clock surface");
+	;//clockanimtex.desttex=gettexptr(clockanimtex.mat,&clockanimtex.w,&clockanimtex.h,NULL);
+	;//if(!clockanimtex.desttex)
+	;//	error("clockdata is null");
+// coin
+	xxx = findtreename(root, "scrline.lwo");
+	if (!xxx)
+		errorexit("cant find scrline.lwo");
+	mt = xxx->findmaterial("scrline3");
+	if (!mt)
+		errorexit("Can't find coin surface");
+	// coin tex should be same as clock tex
+
+/*	numcointex=buildtexture("ncointex",1<<mt->thetex->logu,1<<mt->thetex->logv,clocktsp->texformat);
+	if (!numcointex)
+		errorexit("can't build cointex");
+	freetexture(mt->thetex);
+	mt->thetex=numcointex;
+*/
+	numcointex = mt->thetexarr[0];
+
+	;//coinanimtex.desttex=gettexptr(coinanimtex.mat,&coinanimtex.w,&coinanimtex.h,NULL);
+	;//if(!coinanimtex.desttex)
+	;//	error("coindata is null");
+// speedo
+	speedotsp = loadtsp("speed.tsp", NULL, root, "scrline.lwo", "speed", TSP_USE_1ALPHA, 1);
+	/*	mt = findmaterial(xxx,"speed");
+		if(!mt)
+			errorexit("Can't find speedo surface");
+		speedotex=mt->thetex; */
+	;//if(!speedoanimtex.mat)
+	;//	error("Can't find speedo surface");
+	;//speedoanimtex.desttex=gettexptr(speedoanimtex.mat,&speedoanimtex.w,&speedoanimtex.h,NULL);
+	;//if(!speedoanimtex.desttex)
+	;//	error("speedodata is null");
+// get clock tsp
+	//loadtsp("clock.tsp");
+//	clockanimtex.nframes = ReadTSP(&testsp,"clock.tsp");
+//	if(clockanimtex.nframes<=0)
+//		error("can't find clock.tsp");
+//	for(i=0;i<clockanimtex.nframes;i++) {
+//		;/*superconvert24to16(
+//			(unsigned char *)testsp[i].data,testsp[i].w,testsp[i].h,
+//			NULL,0,0,
+//			SU_COLORKEY|SU_NEW,
+//			&clockanimtex.texdata[i],&clockanimtex.w,&clockanimtex.h,
+//			NULL,&hflags,1);
+//			&clockanimtex.mat->mhflags,NULL,1); // take advantage of fasteropaquetextures */
+//	}
+//	FreeTSP(testsp,clockanimtex.nframes);
+// get speed tsp
+	logger("loading speedo textures (digits)..\n");
+	//	speedoanimtex.nframes = ReadTSP(&testsp,"speed.tsp");
+	//	if(speedoanimtex.nframes<=0)
+	//		error("can't find speedo.tsp");
+	//	for(i=0;i<speedoanimtex.nframes;i++) {
+	//		;/*superconvert24to16(
+	//			(unsigned char *)testsp[i].data,testsp[i].w,testsp[i].h,
+	//			NULL,0,0,
+	//			SU_COLORKEY|SU_NEW,
+	//			&speedoanimtex.texdata[i],&speedoanimtex.w,&speedoanimtex.h,
+	//			NULL,&hflags,1);
+	//			&speedoanimtex.mat->mhflags,NULL,1); // take advantage of fasteropaquetextures */
+	//	}
+	//	FreeTSP(testsp,speedoanimtex.nframes);
+	popdir();
+	// turn on animation
+	kill_bcams(grid);
+	seq_start(grid);
+	seq_start(finishpiece);
+	//	firstsound=1;
+	//calclightonce(grid);
+	// force the issue
+	;//curlwscam=0;
+	;//cam.attach=camnull;
+	;//lwscamlist[0]=camnull;
+	;//cam.useroot=0;
+	pushandsetdir("st2_game");
+	uinitparticles();
+	//	dirtparticle=alloctree(1,"dust4.lwo");
+	//	dirtparticle->proc=partfunc;
+	//	dirtparticle->user1=60;
+	//	dirtparticle->flags|=TF_ALWAYSFACING;
+	//	dirtparticle->treedissolvecutoff=10/256.0f;
+	//    if (usehardware==0) {
+	//		MAT *m;
+	//		togglezbuffer(dirtparticle,"dust",1);
+	//		m = findmaterial(dirtparticle,"dust");
+	//		m->mtrans=.5f;
+	//	}
+	popdir();
+	// log results
+	fixpondalphacutoff(root);
+
+	/*  if(!usegdi && xres != gameplayx && yres != gameplayy)  //in init
+	  {
+		if(usehardware) flush3d();
+
+		mode = VidFindClosest(gameplayx,gameplayy);
+		if(mode<0) errorexit("can't set %d %d",gameplayx,gameplayy);
+		VidSet(mode);
+		VidGetInfo(mode, &ax,&ay,&ab);
+		gameplayx = ax;
+		gameplayy = ay;
+		bitmode = ab;
+
+		if(usehardware)
+		{
+			Init3d(0, 0, gameplayx, gameplayy);
+			restoreallsurfaces();
+			SetHardwareFlags();
+		}
+	  } */
+	  // put the sky to low priority drawing
+	  // setup drawpriority
+	{
+		TREE *skydome;
+		skydome = findtreename(root, "dome1.lwo");
+		//		unhooktree(skydome);
+		//		linkchildtoparent(skydome,root);
+		//setdrawprirec(skydome, 0);
+		//		skydome->mod->drawpri=0;
+		//		settreedraworder(root);
+		//useattachcam = 1;
+	}
+	//logviewport(&mainvp, OPT_SOME);
+#endif //UNC
+}
+
+
 void uplay3_proc()
 {
 	//	extern int reversedraw;
 	VEC yv;
-	extern int releasemode;
 	int i, j;
-	extern int ufliptime;
 	//	getfpucwsw(&fpucwsw);
 	//	fpuexceptions(1);
 	//	if (KEY=='r')
@@ -3975,6 +4006,10 @@ void uplay3_proc()
 	video_drawscene(root);
 
 
+}
+
+void uplay3_draw3d()
+{
 	// draw
 	//video_buildworldmats(roottree); // help dolights
 	video_setviewport(&mainvp); // clear zbuf etc.
@@ -3994,9 +4029,6 @@ void uplay3_proc()
 void uplay3_exit()
 {
 	//	extern TOURNEY_STRUCT tourney[];
-	extern int grandtotaltrickpoints, MyGoldCoins;
-	extern int totalcrashs, selectedtrack;
-	extern int selected;
 	//;//int ax,ay,ab;
 	//;//int mode;
 	int i, j, k;
@@ -4127,28 +4159,4 @@ void uplay3_exit()
 }
 // UNC
 #endif
-void usenewcam()
-{
-	useoldcam = 0;
-}
-// UNC
-#if 1
-/*void spawndirtparts()
-{
-	static tm;
-	TREE *t;
-	tm++;
-	if ((tm&15)==0) {
-		t=duptree(dirtparticle);
-		t->transvel.y=.1f;
-		t->transvel.x=frand()*.1f-.05f;
-		t->transvel.z=frand()*.1f-.05f;
-		t->trans=objects[0].pos;
-		linkchildtoparent(t,root);
-	}
-	//	playasound(REDLIGHT,0); // caught a coin
-}
-*/
-// UNC
-#endif
-}
+//}

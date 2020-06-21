@@ -409,6 +409,10 @@ void freetree(TREE* t)
 
 void linkchildtoparent(TREE* c, TREE* p) 
 {
+	if (!p)
+		errorexit("linkchildtoparent, parent is null!");
+	if (!c)
+		errorexit("linkchildtoparent, child is null!");
 	p->linkchild(c);
 }
 

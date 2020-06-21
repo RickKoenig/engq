@@ -1,4 +1,5 @@
-void game_init();
+namespace st2 {
+    void game_init();
 void game_proc();
 void game_exit();
 
@@ -136,3 +137,4 @@ typedef struct {
 } SEQPROP;
 
 extern int totalcrashs;
+}

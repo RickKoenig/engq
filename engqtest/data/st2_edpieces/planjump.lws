@@ -1,0 +1,181 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 60
+PreviewFrameStep 1
+FramesPerSecond 30.000000
+
+LoadObject Bigup\data\edpieces\planjump.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 90 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+BoneFalloffType 3
+AddBone
+BoneName Bone
+ShowBone 1 7
+BoneActive 1
+BoneRestPosition 0.000000 0.000000 0.000000
+BoneRestDirection 0.000000 0.000000 0.000000
+BoneRestLength 10.106003
+ScaleBoneStrength 0
+BoneStrength 1.000000
+BoneMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 3
+AddBone
+BoneName Bone
+ShowBone 1 7
+BoneActive 1
+BoneRestPosition 0.000000 45.599995 0.000000
+BoneRestDirection 0.000000 89.699974 0.000000
+BoneRestLength 1.000000
+ScaleBoneStrength 0
+BoneStrength 1.000000
+BoneMotion (unnamed)
+  9
+  3
+  0 9.200006 0 0 89.69997 0 1 1 1
+  0 0 0 0 0
+  0 9.200006 0 0 272.2998 0 1 1 1
+  30 0 0 0 0
+  0 9.200006 0 0 451.7997 0 1 1 1
+  60 0 0 0 0
+EndBehavior 1
+LockedChannels 45
+AddBone
+BoneName Bone
+ShowBone 1 7
+BoneActive 1
+BoneRestPosition 0.000000 0.000000 8.900000
+BoneRestDirection 0.000000 -88.499991 0.000000
+BoneRestLength 1.000000
+ScaleBoneStrength 0
+BoneStrength 1.000000
+BoneMotion (unnamed)
+  9
+  2
+  0 0 8.9 0 -88.49999 0 1 1 1
+  0 0 0 0 0
+  0 0 8.9 0 -88.49999 0.5997187 1 1 1
+  30 0 0 0 0
+EndBehavior 1
+LockedChannels 27
+ParentObject 2
+AddBone
+BoneName Bone
+ShowBone 1 7
+BoneActive 1
+BoneRestPosition 0.000000 -18.399992 0.099999
+BoneRestDirection 0.000000 0.000000 0.000000
+BoneRestLength 1.000000
+ScaleBoneStrength 0
+BoneStrength 1.000000
+BoneMotion (unnamed)
+  9
+  13
+  0 -0.1999903 -1.800001 0 0 0 1 1 1
+  0 0 0 0 0
+  0 -0.1999903 -1.800001 0 0 -180.1 1 1 1
+  5 0 0 0 0
+  0 -0.1999903 -1.800001 0 0 -360.1001 1 1 1
+  10 0 0 0 0
+  0 -0.1999903 -1.800001 0 0 -540.2001 1 1 1
+  15 0 0 0 0
+  0 -0.1999903 -1.800001 0 0 -720.6005 1 1 1
+  20 0 0 0 0
+  0 -0.1999903 -1.800001 0 0 -899.9006 1 1 1
+  25 0 0 0 0
+  0 -0.1999903 -1.800001 0 0 -1080.801 1 1 1
+  30 0 0 0 0
+  0 -0.1999903 -1.800001 0 0 -1260.4 1 1 1
+  35 0 0 0 0
+  0 -0.1999903 -1.800001 0 0 -1440.2 1 1 1
+  40 0 0 0 0
+  0 -0.1999903 -1.800001 0 0 -1620.3 1 1 1
+  45 0 0 0 0
+  0 -0.1999903 -1.800001 0 0 -1800.8 1 1 1
+  50 0 0 0 0
+  0 -0.1999903 -1.800001 0 0 -1980.798 1 1 1
+  55 0 0 0 0
+  0 -0.1999903 -1.800001 0 0 -2160.197 1 1 1
+  60 0 0 0 0
+EndBehavior 1
+LockedChannels 25
+ParentObject 3
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.250000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -2 2 -2 45 35 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  1
+  0 18.48289 -104.0695 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ZoomFactor 3.200000
+Resolution 1
+PixelAspectRatio 2
+SegmentMemory 2200000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+DataOverlayLabel  
+FullSceneParamEval 0
+
+ViewMode 3
+ViewAimpoint 0.400000 8.399999 -0.099999
+ViewDirection 0.300197 -0.314159 0.000000
+ViewZoomFactor 24.744160
+GridNumber 30
+GridSize 20.000000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

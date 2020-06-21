@@ -8927,7 +8927,7 @@ static bool ol_burstfinishproc2(tree2 *t)
 }
 
 // launch
-static bool ol_burstfinishproc(tree2 *t)
+static void ol_burstfinishproc(tree2 *t)
 {
 	int fs,i;
 	tree2 *u;

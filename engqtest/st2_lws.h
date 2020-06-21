@@ -1,0 +1,2 @@
+struct tree *loadlws(char *);
+
