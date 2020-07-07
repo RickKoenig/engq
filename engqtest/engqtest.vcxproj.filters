@@ -2801,6 +2801,9 @@
     <ClInclude Include="u_s_plot2collisions1d.h">
       <Filter>Source Files\user\user_math\plotter_code</Filter>
     </ClInclude>
+    <ClInclude Include="u_dynamic_programming.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="helperobj.cpp">
@@ -4128,6 +4131,9 @@
     </ClCompile>
     <ClCompile Include="u_s_plot2collisions1d.cpp">
       <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_dynamic_programming.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

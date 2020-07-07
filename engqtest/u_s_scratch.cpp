@@ -37,8 +37,12 @@
 //#define MARKOV
 //#define ETEST // 2.718 etc.
 //#define SPINNERS // 3 non transitive spinners with numbers 1 to 6 each with 1 or 2 numbers
+#define DYNAMIC_PROGRAMMING
 #ifdef SPINNERS
 #include "u_spinners.h"
+#endif
+#ifdef DYNAMIC_PROGRAMMING
+#include "u_dynamic_programming.h"
 #endif
 
 // C++11 only
@@ -58,7 +62,7 @@
 //#define CODERPAD
 //#define PERMUTATION_ITERATOR
 //#define ODD_ONE_OUT
-#define INTERVALS
+//#define INTERVALS
 
 #ifdef LISTTEST
 #include "u_listtest.h"
@@ -3517,6 +3521,9 @@ void scratchinit()
 #ifdef SPINNERS
 #include "u_spinners.h"
 	spinnersInit();
+#endif
+#ifdef DYNAMIC_PROGRAMMING
+	do_dynamic();
 #endif
 #ifdef RENAMESHADERS
 	renameShaders(); // convert .vs and .ps to .vert.glsl and .frag.glsl
