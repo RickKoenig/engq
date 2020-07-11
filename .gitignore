@@ -14,12 +14,14 @@
 *.bsc
 *.exe
 *.map
+*.bin
 
 engqtest/data/cout.txt
 engqtest/data/logfile.txt
 engqtest/data/mainmenu/maincfg.txt
 engqtest/data/racenetdata/caweapons.txt
 engqtest/data/racenetdata/onlineopt/online_seltrackcfg.txt
+engqtest/data/qcomp/lastfile.txt
 
 # 3rd party libraries
 

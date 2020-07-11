@@ -1,1 +1,1 @@
-"GHZ XXX.qcmp"
+"grover5link.qcmp"
