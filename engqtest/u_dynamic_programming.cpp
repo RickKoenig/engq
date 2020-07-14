@@ -15,6 +15,7 @@ class lowCostPath {
 		S32 bestSum;
 		bool dirs[NUM_DIR];
 	};
+	U32 width, height;
 	// accumulated results
 	vector<vector<cellInfo>> know;
 	// result
@@ -23,7 +24,6 @@ class lowCostPath {
 public:
 	lowCostPath(const vector<vector<S32>>& board);
 	S32 getBestValue() const;
-	const vector<S32> getABestPath() const;
 	const vector<vector<S32>> getBestPaths() const;
 private:
 	vector<cellInfo> buildFirstRow(const vector<S32>& first) const;
@@ -59,11 +59,10 @@ void lowCostPath::setupFork(S32 col, S32 row, vector<S32>& dirs, vector<S32>& pa
 // move to next best path if available
 bool lowCostPath::doNext(vector<S32>& dirs, vector<S32>& path) const
 {
-	if (know.size() <= 1)
+	if (height <= 1)
 		return false;
 	S32 curCol = path[1];
 	U32 curRow = 1;
-	//while (curRow < S32(know.size())) {
 	while (true) {
 		const cellInfo ci = know[curRow][curCol];
 		S32& dir = dirs[curRow];
@@ -72,10 +71,9 @@ bool lowCostPath::doNext(vector<S32>& dirs, vector<S32>& path) const
 			++dir;
 			if (dir == NUM_DIR) {
 				++curRow; // exhausted this path, move up a level in the chain
-				if (curRow == know.size())
+				if (curRow == height)
 					return false; // no more paths left
 				curCol = path[curRow];
-				//cellInfo ci = know[curRow][curCol];
 				break;
 			} else { // switch over to another path
 				if (!ci.dirs[dir])
@@ -84,8 +82,6 @@ bool lowCostPath::doNext(vector<S32>& dirs, vector<S32>& path) const
 				return true;
 			}
 		}
-		//logger("fork");
-		//break;
 	}
 	logger("never");
 	return false;
@@ -99,9 +95,10 @@ lowCostPath::lowCostPath(const vector<vector<S32>>& board)
 		return;
 	}
 	// make sure is a proper 2d array
-	U32 wid = board[0].size();
-	for (U32 j = 1; j < board.size(); ++j) {
-		if (wid != board[j].size()) {
+	height = board.size();
+	width = board[0].size();
+	for (U32 j = 1; j < height; ++j) {
+		if (width != board[j].size()) {
 			logger("bad board!!\n");
 			bestValue = 0;
 			return;
@@ -109,9 +106,9 @@ lowCostPath::lowCostPath(const vector<vector<S32>>& board)
 	}
 
 	// build up accumulated info from each row
-	know = vector<vector<cellInfo>>(board.size());
+	know = vector<vector<cellInfo>>(height);
 	know[0] = buildFirstRow(board[0]);
-	for (U32 j = 1; j < board.size(); ++j) { // pick a row
+	for (U32 j = 1; j < height; ++j) { // pick a row
 		const auto row = board[j];
 		know[j] = calcNext(know[j-1], row);
 	}
@@ -119,27 +116,24 @@ lowCostPath::lowCostPath(const vector<vector<S32>>& board)
 	// best value is lowest number in last row
 	// calc best value, no walking needed
 	bestValue = INT_MAX;
-	const vector<cellInfo>& bestValues = know[board.size() - 1];
-	for (U32 i = 0; i < bestValues.size(); ++i) {
+	const vector<cellInfo>& bestValues = know[height - 1];
+	for (U32 i = 0; i < width; ++i) {
 		const cellInfo& val = bestValues[i];
 		if (val.bestSum < bestValue) {
 			bestValue = val.bestSum;
 		}
 	}
 
-	vector<S32> directions(know.size(),NUM_DIR); // iterate through this list of directions
-	vector<S32> aBestPath = vector<S32>(know.size());
+	vector<S32> directions(height,NUM_DIR); // iterate through this list of directions
+	vector<S32> aBestPath = vector<S32>(height);
 	// now build some best paths, some roots at the bottom
-	for (U32 i = 0; i < bestValues.size(); ++i) {
+	for (U32 i = 0; i < width; ++i) {
 		if (bestValues[i].bestSum != bestValue) {
 			continue; // not a bestValue
 		}
 		S32 curCol = i;
-		S32 curRow = know.size() - 1;
+		S32 curRow = height - 1;
 		// a good root is here
-		// special test, REMOVE soon
-		//directions[1] = DOWN_RIGHT;
-		//setupFork(curCol, curRow, directions, aBestPath, true);
 		setupFork(curCol, curRow, directions, aBestPath, false);
 		logger("");
 		bestPaths.push_back(aBestPath);
@@ -147,64 +141,6 @@ lowCostPath::lowCostPath(const vector<vector<S32>>& board)
 		while (doNext(directions, aBestPath)) {
 			bestPaths.push_back(aBestPath);
 		}
-#if 0
-		S32 curCol = i;
-		vector<S32> aBestPath = vector<S32>(know.size());
-		// now do multiple nested loops with 'directions'
-		// going backwards
-		// initialize directions that work 'are true'
-		for (U32 j = know.size() - 1; j != 0; --j) {
-			const vector<cellInfo>& knowRow = know[j];
-			const cellInfo& ci = knowRow[curCol];
-			aBestPath[j] = curCol;
-			// find first true direction, could be 1 to 3 of them
-			U32 idx = 0;
-			for (U32 k = 0; k < NUM_DIR; ++k) { // tend to the left
-				if (ci.dirs[k]) {
-					idx = k;
-					break;
-				}
-			}
-			directions[j] = idx;
-			curCol += idx - 1;
-		}
-		aBestPath[0] = curCol;
-		bestPaths.push_back(aBestPath); // save left most path
-		S32 curRow = 1;
-		curCol = aBestPath[curRow];
-		// iterate paths
-		logger("");
-		while (curRow < 2) {
-			++directions[j];
-			const vector<cellInfo>& knowRow = know[curRow];
-			const cellInfo& ci = knowRow[curCol];
-			bool dir = ci.dirs[directions[j]];
-			if ()
-			if (directions[i] == NUM_DIR) {
-				directions[i] = DOWN_LEFT;
-				++curRow;
-			}
-		}
-#if 0
-		for (U32 j = know.size() - 1; j != 0; --j) {
-			const vector<cellInfo>& knowRow = know[j];
-			const cellInfo& ci = knowRow[curCol];
-			aBestPath[j] = curCol;
-			// find first/last true direction, could be 1 to 3 of them
-			U32 idx = 0;
-			for (U32 k = 0; k < NUM_DIR; ++k) { // tend to the left
-			//for (S32 k = NUM_DIR - 1; k >= 0; --k) { // tend to the right
-				if (ci.dirs[k]) {
-					idx = k;
-					break;
-				}
-			}
-			curCol += idx- 1;
-		}
-		aBestPath[0] = curCol;
-		bestPaths.push_back(aBestPath);
-#endif
-#endif
 	}
 }
 
@@ -220,8 +156,8 @@ const vector<vector<S32>> lowCostPath::getBestPaths() const
 
 vector<lowCostPath::cellInfo> lowCostPath::buildFirstRow(const vector<S32>& first) const
 {
-	vector<cellInfo> ret = vector<cellInfo>(first.size());
-	for (U32 i = 0; i < first.size(); ++i) {
+	vector<cellInfo> ret = vector<cellInfo>(width);
+	for (U32 i = 0; i < width; ++i) {
 		ret[i].bestSum = first[i];
 	}
 	return ret;
@@ -229,17 +165,17 @@ vector<lowCostPath::cellInfo> lowCostPath::buildFirstRow(const vector<S32>& firs
 
 vector<lowCostPath::cellInfo> lowCostPath::calcNext(const vector<cellInfo>& acc, const vector<S32>& next) const
 {
-	vector<cellInfo> ret = vector<cellInfo>(acc.size());
+	vector<cellInfo> ret = vector<cellInfo>(width);
 	// find shortest path between acc and next
 	// walk through next and add acc left,center,right finding least value
-	for (S32 i = 0; i < (signed)acc.size(); ++i) {
+	for (S32 i = 0; i < (signed)width; ++i) {
 		S32 least = INT_MAX;
 		cellInfo& node = ret[i];
 		// find least sum from 3 directions
 		for (S32 k = -1; k <= 1; ++k) {
 			S32 sum = next[i];
 			S32 idx = k + i;
-			if (idx >= 0 && idx < (signed)acc.size()) {
+			if (idx >= 0 && idx < (signed)width) {
 				sum += acc[idx].bestSum;
 				if (sum < least) {
 					least = sum;
@@ -250,7 +186,7 @@ vector<lowCostPath::cellInfo> lowCostPath::calcNext(const vector<cellInfo>& acc,
 		for (S32 k = -1; k <= 1; ++k) {
 			S32 sum = next[i];
 			S32 idx = k + i;
-			if (idx >= 0 && idx < (signed)acc.size()) {
+			if (idx >= 0 && idx < (signed)width) {
 				sum += acc[idx].bestSum;
 				if (sum == least) {
 					node.dirs[k + 1] = true;
@@ -266,14 +202,14 @@ vector<lowCostPath::cellInfo> lowCostPath::calcNext(const vector<cellInfo>& acc,
 void do_dynamic()
 {
 	vector<vector<vector<S32>>> boards{
-#if 1
+#if 1 // should be 1,1 2 in all (2)
 		{
 			{1,2,1},
 			{2,1,2},
 		},
 #endif
 #if 1
-		{
+		{ // should be (4) in 2 ways
 			{1,2,1},
 			{1,2,1},
 			{2,1,2},
@@ -294,7 +230,7 @@ void do_dynamic()
 			{},
 		},
 
-		// real cases
+		// real cases (69)
 		{ // (69)
 			{69},
 		},
@@ -317,7 +253,7 @@ void do_dynamic()
 		},
 #endif
 #if 1
-		{ // 5,6,7,6,5 (29)
+		{ // 1,5,6,7,6,5,1 9 in all (20)
 			{1,1,1,1,1},
 			{3,4,5,6,7},
 			{4,5,6,7,3},
@@ -337,7 +273,7 @@ void do_dynamic()
 		},
 #endif
 #if 1
-		{ // 7 , 5 different paths
+		{ // (7) , 5 different paths
 			{8,8,1,8,8},
 			{8,1,8,1,8},
 			{8,8,1,8,1},

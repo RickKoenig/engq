@@ -37,10 +37,26 @@
 //#define MARKOV
 //#define ETEST // 2.718 etc.
 //#define SPINNERS // 3 non transitive spinners with numbers 1 to 6 each with 1 or 2 numbers
-#define DYNAMIC_PROGRAMMING
+//#define DYNAMIC_PROGRAMMING
+#define DO_HEAPSORT
+//#define DO_RANDOM_TESTS
+//#define DO_FIFO
+
 #ifdef SPINNERS
 #include "u_spinners.h"
 #endif
+#ifdef DO_HEAPSORT
+#include "u_heapsort.h"
+#endif
+
+#ifdef DO_RANDOM_TESTS
+#include "u_random_tests.h"
+#endif
+
+#ifdef DO_FIFO
+#include "u_fifo.h"
+#endif
+
 #ifdef DYNAMIC_PROGRAMMING
 #include "u_dynamic_programming.h"
 #endif
@@ -2557,37 +2573,37 @@ void testfunc(T f)
 	T fp2 = f;
 }
 
-bool compnamesrev(const C8* Aconst C8* b)
+bool compnamesrev(const C8* a, const C8* b)
 {
-	return strcmp(Ab) > 0; // normal is less than
+	return strcmp(a,b) > 0; // normal is less than
 }
 
 // sort on 3rd column
-bool compnames2(const C8* Aconst C8* b)
+bool compnames2(const C8* a, const C8* b)
 {
 	const U32 offset = 2;
 	a += min(strlen(a),offset); // don't go past the null
 	b += min(strlen(b),offset);
-	return strcmp(Ab) < 0;
+	return strcmp(a,b) < 0;
 }
 
 class columnselect {
 	U32 column;
 public:
 	columnselect(U32 col) : column(col) {}
-	bool operator() (const C8* Aconst C8* b)
+	bool operator() (const C8* a, const C8* b)
 	{
 		a += min(strlen(a),column); // don't go past the null
 		b += min(strlen(b),column);
-		return strcmp(Ab) < 0;
+		return strcmp(a,b) < 0;
 	}
 
 	// I tried to pass this into sort, won't work, I guess why operator() is there.
-	bool testcomp(const C8* Aconst C8* b)
+	bool testcomp(const C8* a, const C8* b)
 	{
 		a += min(strlen(a),column); // don't go past the null
 		b += min(strlen(b),column);
-		return strcmp(Ab) < 0;
+		return strcmp(a,b) < 0;
 	}
 };
 
@@ -2600,7 +2616,7 @@ void shownames(const C8* title,const C8* names[],U32 numnames)
 		logger("%2d %p name = '%s'\n",i,names[i],names[i]);
 }
 
-typedef bool (*FUNC)(const C8* Aconst C8* b);
+typedef bool (*FUNC)(const C8* a,const C8* b);
 
 // demonstrate what a functor is
 void dofunctor()
@@ -2645,7 +2661,7 @@ void dofunctor()
 #ifdef WITH_FUNCTOR
 	T funcp = second; // doesn't work
 #else
-	bool (*funcp)(const C8* Aconst C8* b) = compnames2; // works
+	bool (*funcp)(const C8* a, const C8* b) = compnames2; // works
 #endif
 
 	sort(names,names+numnames,funcp); // sort with the function pointer
@@ -3521,6 +3537,15 @@ void scratchinit()
 #ifdef SPINNERS
 #include "u_spinners.h"
 	spinnersInit();
+#endif
+#ifdef DO_HEAPSORT
+	do_heapsort();
+#endif
+#ifdef DO_RANDOM_TESTS
+	do_random_tests();
+#endif
+#ifdef DO_FIFO
+	do_fifo();
 #endif
 #ifdef DYNAMIC_PROGRAMMING
 	do_dynamic();

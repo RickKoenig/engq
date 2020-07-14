@@ -2804,6 +2804,15 @@
     <ClInclude Include="u_dynamic_programming.h">
       <Filter>Source Files\user\user_misc</Filter>
     </ClInclude>
+    <ClInclude Include="u_fifo.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_heapsort.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
+    <ClInclude Include="u_random_tests.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="helperobj.cpp">
@@ -4133,6 +4142,15 @@
       <Filter>Source Files\user\user_math\plotter_code</Filter>
     </ClCompile>
     <ClCompile Include="u_dynamic_programming.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_fifo.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_heapsort.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_random_tests.cpp">
       <Filter>Source Files\user\user_misc</Filter>
     </ClCompile>
   </ItemGroup>

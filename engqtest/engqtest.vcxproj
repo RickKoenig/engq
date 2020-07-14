@@ -1000,6 +1000,7 @@
     <ClInclude Include="u_circularA.h" />
     <ClInclude Include="u_circularB.h" />
     <ClInclude Include="u_factory.h" />
+    <ClInclude Include="u_fifo.h" />
     <ClInclude Include="u_file_nh.h" />
     <ClInclude Include="u_fplot.h" />
     <ClInclude Include="u_game2.h" />
@@ -1007,6 +1008,7 @@
     <ClInclude Include="u_goldbach.h" />
     <ClInclude Include="u_groupanalyze.h" />
     <ClInclude Include="u_group_field.h" />
+    <ClInclude Include="u_heapsort.h" />
     <ClInclude Include="u_json.h" />
     <ClInclude Include="u_list.h" />
     <ClInclude Include="u_listtest.h" />
@@ -1030,6 +1032,7 @@
     <ClInclude Include="u_qr_code2scan.h" />
     <ClInclude Include="u_qr_code_layout_v2.h" />
     <ClInclude Include="u_qstate.h" />
+    <ClInclude Include="u_random_tests.h" />
     <ClInclude Include="u_searcher_mandle_thread.h" />
     <ClInclude Include="u_smallgroups.h" />
     <ClInclude Include="u_spinners.h" />
@@ -1776,6 +1779,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="u_dynamic_programming.cpp" />
+    <ClCompile Include="u_fifo.cpp" />
+    <ClCompile Include="u_heapsort.cpp" />
     <ClCompile Include="u_listtest.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
@@ -2107,6 +2112,7 @@
     <ClCompile Include="u_qr_code2scan.cpp" />
     <ClCompile Include="u_qr_code_layout_v2.cpp" />
     <ClCompile Include="u_qstate.cpp" />
+    <ClCompile Include="u_random_tests.cpp" />
     <ClCompile Include="u_searcher_mandle_thread.cpp" />
     <ClCompile Include="u_smallgroups.cpp" />
     <ClCompile Include="u_spinners.cpp" />
