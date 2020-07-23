@@ -1154,6 +1154,7 @@
     <ClInclude Include="u_uipopup_info.h" />
     <ClInclude Include="u_volley.h" />
     <ClInclude Include="u_z2p.h" />
+    <ClInclude Include="u_zero_knowledge.h" />
     <ClInclude Include="wat_physics\QUANT3\quant3.h" />
     <ClInclude Include="wat_physics\QUANT3\quant_sho.h" />
     <ClInclude Include="wat_physics\quant4\quant4.h" />
@@ -2246,6 +2247,7 @@
     <ClCompile Include="u_uipopup_info.cpp" />
     <ClCompile Include="u_volley.cpp" />
     <ClCompile Include="u_z2p.cpp" />
+    <ClCompile Include="u_zero_knowledge.cpp" />
     <ClCompile Include="wat_physics\QUANT3\quant3.cpp">
       <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotSet</EnableEnhancedInstructionSet>
     </ClCompile>

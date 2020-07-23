@@ -285,5 +285,5 @@ void do_heapsort()
 	if (!equal(floatWorkArrB, floatWorkArrB + floatArrSize, floatWorkArrS)) {
 		errorexit("sort between bubble and std::sort failed");
 	}
-	logger("random float array: number of swaps: bubble %d, heap %d\n", swapCountfB, swapCountfH);
+	logger("random float array: sorting %d elements, number of swaps: bubble %d, heap %d\n", floatArrSize, swapCountfB, swapCountfH);
 }

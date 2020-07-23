@@ -38,13 +38,18 @@
 //#define ETEST // 2.718 etc.
 //#define SPINNERS // 3 non transitive spinners with numbers 1 to 6 each with 1 or 2 numbers
 //#define DYNAMIC_PROGRAMMING
-#define DO_HEAPSORT
+//#define DO_HEAPSORT
 //#define DO_RANDOM_TESTS
 //#define DO_FIFO
+#define ZERO_KNOWLEDGE
+#ifdef ZERO_KNOWLEDGE
+#include "u_zero_knowledge.h"
+#endif
 
 #ifdef SPINNERS
 #include "u_spinners.h"
 #endif
+
 #ifdef DO_HEAPSORT
 #include "u_heapsort.h"
 #endif
@@ -3543,6 +3548,9 @@ void scratchinit()
 #endif
 #ifdef DO_RANDOM_TESTS
 	do_random_tests();
+#endif
+#ifdef ZERO_KNOWLEDGE
+	do_zero_knowledge();
 #endif
 #ifdef DO_FIFO
 	do_fifo();

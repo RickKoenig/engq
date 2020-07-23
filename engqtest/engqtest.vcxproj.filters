@@ -2813,6 +2813,9 @@
     <ClInclude Include="u_random_tests.h">
       <Filter>Source Files\user\user_misc</Filter>
     </ClInclude>
+    <ClInclude Include="u_zero_knowledge.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="helperobj.cpp">
@@ -4151,6 +4154,9 @@
       <Filter>Source Files\user\user_misc</Filter>
     </ClCompile>
     <ClCompile Include="u_random_tests.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClCompile>
+    <ClCompile Include="u_zero_knowledge.cpp">
       <Filter>Source Files\user\user_misc</Filter>
     </ClCompile>
   </ItemGroup>
