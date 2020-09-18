@@ -230,6 +230,8 @@ float dist3dsq2(const struct pointf3 *a,const struct pointf3 *b);
 float len3d(const struct pointf3 *a);
 float len3dsq(const struct pointf3 *a);
 
+float dot4d(const struct pointf3 *a, const struct pointf3 *b);
+
 void nanerr(const C8* errstr,float testfloat);
 #define EPSILON 1.0e-20f
 

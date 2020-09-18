@@ -60,11 +60,12 @@ statedesc 49 "plotter2 linear regression"
 statedesc 50 "plotter2 soccer goal angle"
 statedesc 51 "plotter2 test bresenham algorithms"
 statedesc 52 "plotter2 test 1d physics collisions"
+statedesc 53 "plotter2 test Catmull Rom splines"
 
 
 // skip some states
 
-statedesc 66 "run the realtime 3d stunt2 demo"
+statedesc 66 "run the realtime 3d stunt2 demo, NYI !!!"
 statedesc 67 "Stoid Command!"
 statedesc 68 "Test 3D res"
 statedesc 69 "Basic 3D"

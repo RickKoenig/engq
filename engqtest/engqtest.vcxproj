@@ -1078,6 +1078,7 @@
     <ClInclude Include="u_s_lightsout.h" />
     <ClInclude Include="u_s_lighttest.h" />
     <ClInclude Include="u_s_plot2bresenham.h" />
+    <ClInclude Include="u_s_plot2catmullrom.h" />
     <ClInclude Include="u_s_plot2collisions1d.h" />
     <ClInclude Include="u_s_plot2linear.h" />
     <ClInclude Include="u_s_luatest.h" />
@@ -2171,6 +2172,7 @@
     <ClCompile Include="u_s_lightsout.cpp" />
     <ClCompile Include="u_s_lighttest.cpp" />
     <ClCompile Include="u_s_plot2bresenham.cpp" />
+    <ClCompile Include="u_s_plot2catmullrom.cpp" />
     <ClCompile Include="u_s_plot2collisions1d.cpp" />
     <ClCompile Include="u_s_plot2linear.cpp" />
     <ClCompile Include="u_s_luatest.cpp" />

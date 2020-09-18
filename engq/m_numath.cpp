@@ -285,6 +285,21 @@ float len3dsq(const struct pointf3 *a)
 	return a->x*a->x+a->y*a->y+a->z*a->z;
 }
 
+float dot4d(const struct pointf3 *a, const struct pointf3 *b)
+{
+	//	logger("dot4d %g %g %g %g, %g %g %g %g\n",a->x,a->y,a->z,a->w,b->x,b->y,b->z,b->w);
+	float px, py, pz, pw;
+	px = a->x*b->x;
+	py = a->y*b->y;
+	pz = a->z*b->z;
+	pw = a->w*b->w;
+	float acc = px;
+	acc += py;
+	acc += pz;
+	acc += pw;
+	return acc;
+}
+
 S32 proj3d(const struct pointf3 *a,const struct pointf3 *b,struct pointf3 *pr)
 {
 	float k,d;

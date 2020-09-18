@@ -282,5 +282,5 @@ void do_zero_knowledge()
 	}
 
 	logger("========\n");
-	popstate();
+	//popstate();
 }

@@ -28,7 +28,7 @@ extern int showcheckboxes;
 extern int showphysics;
 struct menuvar wininfovars[]={
 
-	{"@lightred@---- wininfo timer -------------------",0,D_VOID,0},
+	{"@lightred@---- wininfo timer --",0,D_VOID,0},
 	{"globalname",&wininfo.globalname,D_STRING},
 	{"fpswanted",&wininfo.fpswanted,D_INT,1},
 	{"hiprioritywanted",&wininfo.hiprioritywanted,D_INT|D_RDONLY,1},

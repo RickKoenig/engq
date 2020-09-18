@@ -21,7 +21,7 @@
 
 struct menuvar wininfovars[]={
 
-	{"@lightred@---- wininfo timer -------------------",0,D_VOID,0},
+	{"@lightred@---- wininfo timer --",0,D_VOID,0},
 	{"fpswanted",&wininfo.fpswanted,D_INT,1},
 	{"hiprioritywanted",&wininfo.hiprioritywanted,D_INT|D_RDONLY,1},
 	{"fpscurrent",&wininfo.fpscurrent,D_FLOAT|D_RDONLY,FLOATUP},

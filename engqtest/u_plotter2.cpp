@@ -503,7 +503,7 @@ static void changefs(float *os,float *delos,float curt)
 
 struct menuvar edv[]={
 // for reference, frame rate
-	{"@red@---- wininfo timer -------------------",0,D_VOID,0},
+	{"@red@---- wininfo timer --",0,D_VOID,0},
 	{"fpswanted",&wininfo.fpswanted,D_INT,1},
 	{"fpscurrent",&wininfo.fpscurrent,D_FLOAT|D_RDONLY,FLOATUP},
 	{"fpsavg",&wininfo.fpsavg,D_FLOAT|D_RDONLY},

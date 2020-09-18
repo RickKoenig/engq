@@ -59,6 +59,8 @@
 #include "u_s_plot2linear.h"
 #include "u_s_plot2soccergoal.h"
 #include "u_s_plot2bresenham.h"
+#include "u_s_plot2collisions1d.h"
+#include "u_s_plot2catmullrom.h"
 
 #include "u_s_many.h"
 #include "u_s_arena1.h"
@@ -192,8 +194,6 @@
 
 #include "st2_uplay3.h"
 
-#include "u_s_plot2collisions1d.h"
-
 C8 winmain_datadir[]="data"; // folder off of .exe
 C8 winmain_version[]="engqtest 1.00";
 
@@ -264,7 +264,7 @@ struct state states[STATE_NUM]={
 	{plot2soccergoalinit,plot2soccergoalproc,0					,plot2soccergoaldraw2d,plot2soccergoalexit},
 	{plot2bresenhaminit,plot2bresenhamproc,0					,plot2bresenhamdraw2d,plot2bresenhamexit},
 	{plot2collisions1dinit,plot2collisions1dproc,0				,plot2collisions1ddraw2d,plot2collisions1dexit},
-	{0					,0					,0					,0					,0},
+	{plot2catmullrominit,plot2catmullromproc,0					,plot2catmullromdraw2d,plot2catmullromexit},
 	{0					,0					,0					,0					,0},
 // 55
 	{0					,0					,0					,0					,0},
