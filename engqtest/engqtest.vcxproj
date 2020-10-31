@@ -1105,6 +1105,7 @@
     <ClInclude Include="u_s_plot2power.h" />
     <ClInclude Include="u_s_plot2quant.h" />
     <ClInclude Include="u_s_plot2quantsho.h" />
+    <ClInclude Include="u_s_plot2random.h" />
     <ClInclude Include="u_s_plot2simple.h" />
     <ClInclude Include="u_s_plot2zeta.h" />
     <ClInclude Include="u_s_plotter.h" />
@@ -2199,6 +2200,7 @@
     <ClCompile Include="u_s_plot2power.cpp" />
     <ClCompile Include="u_s_plot2quant.cpp" />
     <ClCompile Include="u_s_plot2quantsho.cpp" />
+    <ClCompile Include="u_s_plot2random.cpp" />
     <ClCompile Include="u_s_plot2simple.cpp" />
     <ClCompile Include="u_s_plot2zeta.cpp" />
     <ClCompile Include="u_s_plotter.cpp" />
