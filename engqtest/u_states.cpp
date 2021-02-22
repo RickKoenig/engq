@@ -62,6 +62,7 @@
 #include "u_s_plot2collisions1d.h"
 #include "u_s_plot2catmullrom.h"
 #include "u_s_plot2random.h"
+#include "u_s_plot2networkflow.h"
 
 #include "u_s_many.h"
 #include "u_s_arena1.h"
@@ -268,7 +269,7 @@ struct state states[STATE_NUM]={
 	{plot2catmullrominit,plot2catmullromproc,0					,plot2catmullromdraw2d,plot2catmullromexit},
 	{plot2randominit	,plot2randomproc	,0					,plot2randomdraw2d	,plot2randomexit},
 // 55
-	{0					,0					,0					,0					,0},
+	{plot2networkflowinit,plot2networkflowproc,0				,plot2networkflowdraw2d,plot2networkflowexit},
 	{0					,0					,0					,0					,0},
 	{0					,0					,0					,0					,0},
 	{0					,0					,0					,0					,0},

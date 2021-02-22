@@ -14,9 +14,9 @@ namespace u_plotter2 {
 
 // geom
 //float zoom = .075f;//1.0f; //.510f;//.21f;//.15f;//.25f;
-float zoom = .05f;
+float zoom = .5f;
 float lzoom = logf(zoom); // yes, zoom
-pointf2 center = { 0 };// {.25f, .25f};//{2,5}
+pointf2 center = {-.5, 0};// {.25f, .25f};//{2,5}
 //pointf2 center={.5f,0};
 // system colors
 C32  backcolor;

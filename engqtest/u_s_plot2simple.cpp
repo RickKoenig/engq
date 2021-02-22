@@ -6,17 +6,22 @@
 #include <l_misclibm.h>
 
 #include "u_plotter2.h"
-#define BLOCH
-//#define SIMPLE
+//#define BLOCH
+#define SIMPLE
 //#define ISINSIDE
 //#define HALFSPACE
 //#define XYZtoUV
 //#define LOGXY
 //#define EARTHCURVE
+#define HSV2RGB
 
 using namespace u_plotter2;
 
 namespace simplep2 {
+#ifdef HSV2RGB
+float /*hue, */sat, val;
+
+#endif
 #ifdef LOGXY
 pointf2 limp = { 1.125f,1.125f};
 float convergefunc(float t)
@@ -145,6 +150,10 @@ void convertXYZtoUV(const pointf3* xyz,pointf2* auv)
 // for debvars
 struct menuvar simpledv[]={
 	{"@lightred@--- PLOTTER2 USER VARS ---",NULL,D_VOID,0},
+#ifdef HSV2RGB
+	{"sat",&sat,D_FLOAT,FLOATUP / 32},
+	{"val",&val,D_FLOAT,FLOATUP / 32},
+#endif
 #ifdef BLOCH
 	{"|0>R",&((pointf2*)(&ampstate.A0))->x,D_FLOAT,FLOATUP/16},
 	{"|0>I",&((pointf2*)(&ampstate.A0))->y,D_FLOAT,FLOATUP/16},
@@ -248,6 +257,8 @@ void plot2simpleproc()
 {
 	// interact with graph paper
 	plotter2proc();
+#ifdef HSV2RGB
+#endif
 #ifdef LOGXY
 	//limpres = limp.x*limp.y;
 	limpres = log(limp.x)/log(limp.y) + log(limp.y)/log(limp.x);
@@ -361,6 +372,8 @@ void plot2simpledraw2d()
 {
 	// draw graph paper
 	plotter2draw2d();
+#ifdef HSV2RGB
+#endif
 #ifdef LOGXY
 	drawfunctionrange(convergefunc,.125f,8);
 	drawfpoint(limp,C32BROWN);
