@@ -98,7 +98,7 @@ void plot2networkflowdraw2d()
 		node& anode = nodes[i];
 		drawfpoint(anode.loc,C32BLACK);
 		pointi2 pi = math2screen(anode.loc);
-		C8* label = anode.label ? anode.label : "";
+		const C8* label = anode.label ? anode.label : "";
 		C8* comp;
 		if (label) {
 			if (anode.prev.empty()) { // source

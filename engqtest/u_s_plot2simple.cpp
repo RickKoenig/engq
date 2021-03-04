@@ -7,13 +7,15 @@
 
 #include "u_plotter2.h"
 //#define BLOCH
-#define SIMPLE
+//#define SIMPLE
 //#define ISINSIDE
 //#define HALFSPACE
 //#define XYZtoUV
 //#define LOGXY
 //#define EARTHCURVE
-#define HSV2RGB
+//#define HSV2RGB
+#define ARC
+//#define MINBLEND
 
 using namespace u_plotter2;
 
@@ -33,11 +35,84 @@ float limpres;
 #ifdef SIMPLE
 // an int, 2 points, and an average point
 S32 simple = 69;
-pointf2 p0 = {.125f,.25f};
-pointf2 p1 = {.375f,.875f};
+pointf2 p0 = { .125f,.25f };
+pointf2 p1 = { .375f,.875f };
 pointf2 avg;
-float X,SolX;
+float X, SolX;
 #endif
+#ifdef ARC
+float radius = 1.0;
+float slope = 1.0f;
+float A, B, C, D;
+float X0 = .875f;
+float X1 = 1.0f;
+float Y1 = .9375f;
+
+float slopeFunction(float x)
+{
+	if (x < X0)
+		return x;
+	if (x > X1)
+		return Y1;
+	x -= X0;
+	x /= (X1 - X0);
+	float y = ((A * x + B) * x + C) * x + D;
+	return y * (Y1 - X0) + X0;
+}
+
+pointf2 justArcFunc(float t)
+{
+	pointf2 p;
+	float ang = t * PI * .5f - PI * .25f;
+	float rad = radius;
+	p.x = rad * sinf(ang);
+	p.y = rad * cosf(ang);
+	const float sqrt2o2 = sqrtf(2.0f)*.5f;
+	pointf2 q = pointf2x(sqrt2o2 * (p.y + p.x), sqrt2o2 * (p.y - p.x));
+	return q;
+}
+
+void drawDiagonal(float x, C32 c)
+{
+	const float sqrt2o2 = sqrtf(2.0f)*.5f;
+	const float sep = 1;
+	const float p = sqrt2o2 * (x - sep);
+	const float q = sqrt2o2 * (x + sep);
+	pointf2 p0{p, q};
+	pointf2 p1{q, p};
+	drawfline(p0, p1, c);
+}
+
+pointf2 blendArcFunc(float t)
+{
+	pointf2 p;
+	float ang = t * PI * .5f - PI * .25f;
+	float rad = radius;
+	p.x = rad * sinf(ang);
+	p.y = rad * cosf(ang);
+	p.y = slopeFunction(p.y);
+	const float sqrt2o2 = sqrtf(2.0f)*.5f;
+	pointf2 q = pointf2x(sqrt2o2 * (p.y + p.x), sqrt2o2 * (p.y - p.x));
+	return q;
+}
+#endif
+#ifdef MINBLEND
+
+float slopeFunction(float x)
+{
+	if (x < X0)
+		return x;
+	if (x > X1)
+		return Y1;
+	x -= X0;
+	x /= (X1 - X0);
+	float y = ((A * x + B) * x + C) * x + D;
+	return y * (Y1 - X0) + X0;
+}
+
+#endif
+
+
 #ifdef EARTHCURVE
 double earthRadiusMiles = 3963;
 double distToCenterLineMiles = 3; // total of 6 miles
@@ -219,6 +294,27 @@ struct menuvar simpledv[]={
 	{"sqrt problem X",&X,D_FLOAT,FLOATUP/16},
 	{"sqrt problem SolX",&SolX,D_FLOAT|D_RDONLY},
 #endif
+#ifdef ARC
+	{"radius",&radius,D_FLOAT,FLOATUP / 16},
+	{"X0",&X0,D_FLOAT,FLOATUP / 16},
+	{"X1",&X1,D_FLOAT,FLOATUP / 16},
+	{"Y1",&Y1,D_FLOAT,FLOATUP / 16},
+	{"Slope",&slope,D_FLOAT | D_RDONLY,FLOATUP / 16},
+	{"A",&A,D_FLOAT | D_RDONLY,FLOATUP / 16},
+	{"B",&B,D_FLOAT | D_RDONLY,FLOATUP / 16},
+	{"C",&C,D_FLOAT | D_RDONLY,FLOATUP / 16},
+	{"D",&D,D_FLOAT | D_RDONLY,FLOATUP / 16},
+#endif
+#ifdef MINBLEND
+	{"X0",&X0,D_FLOAT,FLOATUP / 16},
+	{"X1",&X1,D_FLOAT,FLOATUP / 16},
+	{"Y1",&Y1,D_FLOAT,FLOATUP / 16},
+	{"Slope",&slope,D_FLOAT | D_RDONLY,FLOATUP / 16},
+	{"A",&A,D_FLOAT | D_RDONLY,FLOATUP / 16},
+	{"B",&B,D_FLOAT | D_RDONLY,FLOATUP / 16},
+	{"C",&C,D_FLOAT | D_RDONLY,FLOATUP / 16},
+	{"D",&D,D_FLOAT | D_RDONLY,FLOATUP / 16},
+#endif
 };
 const int nsimpledv = NUMELEMENTS(simpledv);
 
@@ -384,6 +480,29 @@ void plot2simpledraw2d()
 	drawfpoint(p1,C32RED);
 	drawfline(p0,p1,C32BLUE);
 	drawfpoint(avg,C32MAGENTA);
+#endif
+#ifdef ARC
+	slope = (X1 - X0) / (Y1 - X0);
+	A = slope - 2;
+	B = -2 * slope + 3;
+	C = slope;
+	D = 0;
+	drawDiagonal(X0, C32GREEN);
+	drawDiagonal(X1, C32GREEN);
+	drawDiagonal(Y1, C32RED);
+	drawfunction2(justArcFunc);
+	drawfunction2(blendArcFunc);
+#endif
+#ifdef MINBLEND
+	//drawfunction(minBlendFunction);
+	slope = (X1 - X0) / (Y1 - X0);
+	A = slope - 2;
+	B = -2 * slope + 3;
+	C = slope;
+	D = 0;
+	drawfunction(slopeFunction);
+	drawfpoint(pointf2x(X0, X0), C32BLUE);
+	drawfpoint(pointf2x(X1, Y1), C32BLUE);
 #endif
 #ifdef BLOCH
 	drawfcirclef(orig,C32(85,0,0),1.0f);
