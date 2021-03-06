@@ -487,7 +487,7 @@ void plot2simpledraw2d()
 	B = -2 * slope + 3;
 	C = slope;
 	D = 0;
-	drawDiagonal(X0, C32GREEN);
+	drawDiagonal(X0, C32BLUE);
 	drawDiagonal(X1, C32GREEN);
 	drawDiagonal(Y1, C32RED);
 	drawfunction2(justArcFunc);
