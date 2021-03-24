@@ -8,10 +8,10 @@ decal "Decal 14"
 "plasma" 4
 "antimatter" 7
 "chemical" 2
-track "jackiep"
+track "forksx"
 rules 1
-humanplayers 8
+humanplayers 1
 botplayers 0
-gamenet 2
+gamenet 0
 serverip "23.123.140.155"
 serverport 5426

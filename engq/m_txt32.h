@@ -25,7 +25,7 @@ public:
 	S32 gx,gy; // size of glyph
 	S32 cx,cy; // chars in x and y
 	string name;
-	softfont(C8* filename,S32 gxa,S32 gya,S32 cxa,S32 cya);
+	softfont(C8* filename,S32 gxa,S32 gya,S32 cxa,S32 cya, S32 scaleUpX = 1, S32 scaleUpY = 1);
 	~softfont();
 	// single chr
 	void outchar32 (    const struct bitmap32* b,S32 x,S32 y,C32 col ,         U32 chr) const;

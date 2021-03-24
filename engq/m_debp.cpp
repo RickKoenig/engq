@@ -3,11 +3,16 @@
 #include "d2_font.h"
 
 //#define USESMALL // small font
-#define USELARGE // large font
+#define USEMEDIUM // medium font
+//#define USELARGE // large font
 
 #ifdef USESMALL
 #define DEBFONT SMALLFONT
 #define DEBUGNUMLINES (WY/8)
+#endif
+#ifdef USEMEDIUM
+#define DEBFONT MEDIUMFONT
+#define DEBUGNUMLINES (WY/16)
 #endif
 #ifdef USELARGE
 #define DEBFONT LARGEFONT

@@ -25,13 +25,14 @@ struct vi3d {
 	struct mat4 w2lc;
 	bool inshadowdraw;
 	bitmap32* sysfont,*sysfont2;
-	softfont* smallfont,*largefont;
+	softfont* smallfont,*mediumfont,*largefont;
 	bool canshadow;
 	bool cantoon;
 	bool is3dhardware;
 };
 extern vi3d video3dinfo;
 #define SMALLFONT video3dinfo.smallfont
+#define MEDIUMFONT video3dinfo.mediumfont
 #define LARGEFONT video3dinfo.largefont
 
 // called by user

@@ -258,9 +258,22 @@ void outtextxybfc32(struct bitmap32* b,S32 x,S32 y,C32 colf,C32 colb,const C8* f
 	outtextxyb32(b,x-(strlen(str)<<2),y-4,colf,colb,str);
 }
 
-softfont::softfont(C8* filename,S32 gxa,S32 gya,S32 cxa,S32 cya)
+softfont::softfont(C8* filename,S32 gxa,S32 gya,S32 cxa,S32 cya, S32 scaleUpX, S32 scaleUpY)
 {
 	font = gfxread32(filename);
+	if (scaleUpX == 2 || scaleUpY == 2) {
+		bitmap32* scaledFont = bitmap32alloc(font->size.x * scaleUpX, font->size.y * scaleUpY);
+		bitmap32double(font, scaledFont);
+		bitmap32free(font);
+		font = scaledFont;
+	} else if (scaleUpX != 1 || scaleUpY != 1) {
+		bitmap32* scaledFont = bitmap32alloc(font->size.x * scaleUpX, font->size.y * scaleUpY);
+		clipscaleblit32(font, scaledFont);
+		bitmap32free(font);
+		font = scaledFont;
+	}
+	gxa *= scaleUpX;
+	gya *= scaleUpY;
 	if (gxa*cxa != font->size.x || gya*cya != font->size.y)
 		errorexit("mismatch in soft font constructor '%s'",filename);
 	makeblackxpar(font,filename);

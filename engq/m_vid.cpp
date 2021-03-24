@@ -103,8 +103,8 @@ void figureoutwindowpos(S32 fs)
 {
 	HWND zorder;
 	zorder=HWND_NOTOPMOST; // behind taskbar
-	if (WY+140>=SY && !fs)
-		;//zorder=HWND_TOPMOST; // in front of taskbar
+//	if (WY+140>=SY && !fs)
+//		zorder=HWND_TOPMOST; // in front of taskbar
 //	else
 	S32 wsx,wsy,ww,wh;
 	figureoutwindowposxywh(fs,&wsx,&wsy,&ww,&wh);
@@ -238,7 +238,8 @@ void video_init(S32 maindriver,S32 subdriver)
 		makeblackxpar(video3dinfo.sysfont,"sysfont"); // not necessary
 		makeblackxpar(video3dinfo.sysfont2,"sysfont2");
 		video3dinfo.smallfont = new softfont("sysfont.pcx",8,8,16,8);
-		video3dinfo.largefont = new softfont("font0.png",16,32,8,16);
+		video3dinfo.mediumfont = new softfont("sysfont.pcx", 8, 8, 16, 8, 2, 2);
+		video3dinfo.largefont = new softfont("font0.png", 16, 32, 8, 16);
 		popdir();
 	} else {
 		logger("sysfont already loaded...\n");
@@ -278,10 +279,12 @@ void video_uninit()
 		bitmap32free(video3dinfo.sysfont);
 		bitmap32free(video3dinfo.sysfont2);
 		delete video3dinfo.smallfont;
+		delete video3dinfo.mediumfont;
 		delete video3dinfo.largefont;
 		video3dinfo.sysfont=0;
 		video3dinfo.sysfont2=0;
 		video3dinfo.smallfont = 0;
+		video3dinfo.mediumfont = 0;
 		video3dinfo.largefont = 0;
 	}
 #endif

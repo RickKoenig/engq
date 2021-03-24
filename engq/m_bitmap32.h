@@ -4,7 +4,7 @@ struct bitmap32 {
 	C32* data;
 };
 
-struct bitmap32* bitmap32alloc(S32 x,S32 y,C32 v);
+struct bitmap32* bitmap32alloc(S32 x,S32 y,C32 v = C32BLACK);
 void bitmap32free(struct bitmap32*);
 
 // discreet coords 0,0 to sizex-1,sizey-1, points at center of pixels

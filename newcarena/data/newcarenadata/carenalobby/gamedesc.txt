@@ -59,7 +59,7 @@
 	"nbotplayers" : 0,
 	"net" : {
 		"netdescj" : {
-			"gamenet" : 3,
+			"gamenet" : 0,
 			"serverip" : "127.0.0.1",
 			"serverport" : 5426
 		}
