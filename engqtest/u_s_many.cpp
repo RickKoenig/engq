@@ -106,7 +106,7 @@ void manyinit()
 		}
 	}
 // setup viewport
-	mainvp.backcolor=C32LIGHTBLUE;
+	mainvp.backcolor=C32RED;
 	mainvp.zfront=.01f;
 	mainvp.zback=400;
 	mainvp.camzoom=1;//3.2f; // it'll getit from tree camattach if you have one
