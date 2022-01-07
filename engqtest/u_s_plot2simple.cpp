@@ -14,8 +14,9 @@
 //#define LOGXY
 //#define EARTHCURVE
 //#define HSV2RGB
-#define ARC
+//#define ARC
 //#define MINBLEND
+#define MANDL_PALETTE
 
 using namespace u_plotter2;
 
@@ -95,6 +96,72 @@ pointf2 blendArcFunc(float t)
 	pointf2 q = pointf2x(sqrt2o2 * (p.y + p.x), sqrt2o2 * (p.y - p.x));
 	return q;
 }
+#endif
+#ifdef MANDL_PALETTE
+float paletteOffset { 0.0 }; // 0 to 1
+float inColor{ 0.0 }; // 0 to 4096
+float outColor{ 0.0 }; // 0 to 1
+
+// fi runs from 0.0 to 1.0 in segments each one twice the size of the previous segment
+float getColor(float fi, int n) // n index 0 to 2 for r g b, 3 for log function, output 0.0 to 1.0
+{
+	const float segments = 7.0f;
+	if (fi >= 1.0f) { // in the set, return black
+		return 0.0f;
+	}
+	float lfi; // 0.0 to segments
+	float sm1 = exp2f(segments - 1.0f);
+	if (sm1 * fi >= 1.0f) {
+		lfi = log2(fi) + segments; // 1.0 to segments
+	} else {
+		lfi = fi * sm1; // do linear on first part 0.0 to 1.0
+	}
+	lfi += paletteOffset * segments;
+	if (lfi >= segments) {
+		lfi -= segments;
+	}
+	float r, g, b;
+	if (lfi < 1.0f) {
+		r = lfi * .75f;
+		g = .25f;
+		b = .5f;
+	} else if (lfi < 2.0f) {
+		r = .75f;
+		g = ((lfi - 1.0f) * .5f) + .25f;
+		b = .5f;
+	} else if (lfi < 3.0f) {
+		r = ((lfi - 2.0f) * -.5f) + .75f;
+		g = .75f;
+		b = .5f;
+	} else if (lfi < 4.0f) {
+		r = .25f;
+		g = ((lfi - 3.0f) * -.5f) + .75f;
+		b = ((lfi - 3.0f) * .25f) + .5f;
+	} else if (lfi < 5.0f) {
+		r = ((lfi - 4.0f) * .25f) + .25f;
+		g = .25f;
+		b = ((lfi - 4.0f) * .25f) + .75f;
+	} else if (lfi < 6.0f) {
+		r = ((lfi - 5.0f) * .25f) + .5f;
+		g = ((lfi - 5.0f) * .25f) + .25f;
+		b = ((lfi - 5.0f) * -.25f) + 1.0f;
+	} else {
+		r = ((lfi - 6.0f) * .25f) + .75f;
+		g = ((lfi - 6.0f) * .25f) + .5f;
+		b = ((lfi - 6.0f) * -.25f) + .75f;
+	}
+	if (n == 0) {
+		return r;// / zoom;
+	} else if (n == 1) {
+		return g;// / zoom;
+	} else if (n == 2) {
+		return b;// / zoom;
+	} else {
+		//return fmod(lfi, 1.0f);// / 7.0f; // 0 to 1, segment times
+		return lfi / segments; // 0 to 1
+	}
+}
+
 #endif
 #ifdef MINBLEND
 
@@ -305,6 +372,11 @@ struct menuvar simpledv[]={
 	{"C",&C,D_FLOAT | D_RDONLY,FLOATUP / 16},
 	{"D",&D,D_FLOAT | D_RDONLY,FLOATUP / 16},
 #endif
+#ifdef MANDL_PALETTE
+	{"palletOffset",&paletteOffset,D_FLOAT,FLOATUP / 16},
+	{"inColor",&inColor,D_FLOAT,FLOATUP * 4},
+	{"outColor",&outColor,D_FLOAT | D_RDONLY},
+#endif
 #ifdef MINBLEND
 	{"X0",&X0,D_FLOAT,FLOATUP / 16},
 	{"X1",&X1,D_FLOAT,FLOATUP / 16},
@@ -462,6 +534,14 @@ void plot2simpleproc()
 #ifdef XYZtoUV
 	convertXYZtoUV(&Pxyz,&Muv);
 #endif
+#ifdef MANDL_PALETTE
+	if (paletteOffset >= 1.0) {
+		paletteOffset -= 1.0;
+	} else if (paletteOffset < 0) {
+		paletteOffset += 1.0;
+	}
+	outColor = getColor(inColor, 3);
+#endif
 }
 
 void plot2simpledraw2d()
@@ -492,6 +572,12 @@ void plot2simpledraw2d()
 	drawDiagonal(Y1, C32RED);
 	drawfunction2(justArcFunc);
 	drawfunction2(blendArcFunc);
+#endif
+#ifdef MANDL_PALETTE
+	drawfunctionrange_n(getColor, 0.0, 1.0, 0, C32RED);
+	drawfunctionrange_n(getColor, 0.0, 1.0, 1, C32GREEN);
+	drawfunctionrange_n(getColor, 0.0, 1.0, 2, C32BLUE);
+	drawfunctionrange_n(getColor, 0.0, 1.0, 3, C32BLACK);
 #endif
 #ifdef MINBLEND
 	//drawfunction(minBlendFunction);

@@ -291,7 +291,7 @@ void drawfunctionrange(float (*f)(float),float start,float end,C32 col)
 }
 
 // y = f[n](x) drawer
-void drawfunctionrange_n(float (*f)(float,S32),float start,float end,S32 n)
+void drawfunctionrange_n(float (*f)(float,S32),float start,float end,S32 n, C32 col)
 {
 	pointf2 minxy=getminvisxy();
 	pointf2 maxxy=getmaxvisxy();
@@ -312,7 +312,7 @@ void drawfunctionrange_n(float (*f)(float,S32),float start,float end,S32 n)
 //		c.y=postm*c.y+posta;
 		c.y=f(c.x,n);
 		if (fabs(c.y-p.y)<maxchange) // skip big jumps
-			drawfline(p,c,funccolor);
+			drawfline(p,c,col);
 		p=c;
 	}
 }

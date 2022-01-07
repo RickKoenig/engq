@@ -22,7 +22,7 @@ void drawbox2(const pointf2& a,const pointf2& b,C32 c);
 void drawfunction(float (*f)(float));
 void drawfunction_n(float (*f)(float,S32),S32 n,C32 col);
 void drawfunctionrange(float (*f)(float),float start,float end,C32 col = funccolor);
-void drawfunctionrange_n(float (*f)(float,S32),float start,float end,S32 n);
+void drawfunctionrange_n(float (*f)(float,S32),float start,float end,S32 n,C32 col = funccolor);
 void drawfunction2(pointf2 (*f)(float t));
 void drawfunction2(const vector<pointf2>& f);
 void drawfunctionrk2d(float* objs, S32* offs,S32 noffs,
@@ -44,5 +44,6 @@ float seventh(float x);
 pointf2 circ(float t);
 
 extern float lzoom;
+extern float zoom;
 
 } // end namespace u_plotter2
