@@ -129,7 +129,7 @@ void plot2linearproc()
 
 }
 
-void drawALine(float M, float B, C32 col)
+static void drawALine(float M, float B, C32 col)
 {
 	pointf2 minxy = getminvisxy();
 	pointf2 maxxy = getmaxvisxy();

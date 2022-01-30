@@ -19,6 +19,8 @@
 #define DEBUGNUMLINES (WY/32)
 #endif
 
+#define DEFAULTIDX (DEBUGNUMLINES / 6)
+
 // print location
 #define DEBUGSTARTX	 8 //(WX/2) //8
 #define DEBUGSTARTY	 0 // (WY-DEBUGNUMLINES*8-8) // (WY/2)
@@ -231,6 +233,7 @@ void debprocesskey()
 		case D_FLOAT:
 		case D_FLOATEXP:
 		case D_DOUBLE:
+		case D_DOUBLEEXP:
 			dv->speed = FLOATUP;
 			break;
 		default:
@@ -280,6 +283,7 @@ void debprocesskey()
 		*(float *)p=fv;
 		break;
 	case D_DOUBLE:
+	case D_DOUBLEEXP:
 		dbv = *(double *)p;
 		dbv += (double)(d/(double)FLOATUP);
 		if (z)
@@ -323,6 +327,7 @@ void drawdebline(const menuvar* dv,S32 curmenupos,S32 y,pointf3& pcolor)
 		fv=*(float *)p;
 		break;
 	case D_DOUBLE:
+	case D_DOUBLEEXP:
 		dbv=*(double *)p;
 		break;
 	case D_STRING:
@@ -338,6 +343,7 @@ void drawdebline(const menuvar* dv,S32 curmenupos,S32 y,pointf3& pcolor)
 		case D_FLOAT:
 		case D_FLOATEXP:
 		case D_DOUBLE:
+		case D_DOUBLEEXP:
 			spd = FLOATUP;
 			break;
 		default:
@@ -380,7 +386,10 @@ void drawdebline(const menuvar* dv,S32 curmenupos,S32 y,pointf3& pcolor)
 		sprintf(str,"%s %f [%f]",n,dbv,spd/(float)FLOATUP);
 		break;
 	case D_FLOATEXP:
-		sprintf(str,"%s %e [%e]",n,fv,spd/(float)FLOATUP);
+		sprintf(str, "%s %g [%f]", n, fv, spd / (float)FLOATUP);
+		break;
+	case D_DOUBLEEXP:
+		sprintf(str, "%s %g [%f]", n, dbv, spd / (float)FLOATUP);
 		break;
 	case D_FLOAT|D_RDONLY:
 //		case D_DOUBLE|D_RDONLY:
@@ -389,8 +398,11 @@ void drawdebline(const menuvar* dv,S32 curmenupos,S32 y,pointf3& pcolor)
 	case D_DOUBLE|D_RDONLY:
 		sprintf(str,"%s %f",n,dbv);
 		break;
-	case D_FLOATEXP|D_RDONLY:
-		sprintf(str,"%s %e",n,fv);
+	case D_FLOATEXP | D_RDONLY:
+		sprintf(str, "%s %g", n, fv);
+		break;
+	case D_DOUBLEEXP | D_RDONLY:
+		sprintf(str, "%s %g", n, dbv);
 		break;
 	case D_VOID:
 	case D_VOID|D_RDONLY:
@@ -423,7 +435,7 @@ void drawdebprint()
 	//S32 ndv=nwininfovars+nedv;
 //	video_lock();
 	//menupos=range(0,menupos,ndv-1);
-	startidx=range(0,menupos-(DEBUGNUMLINES/3),max(0,ndv-DEBUGNUMLINES));
+	startidx=range(0,menupos-DEFAULTIDX,max(0,ndv-DEBUGNUMLINES));
 
 
 	// start from index 0 up to where printing is about to begin, looking for color changes
@@ -507,6 +519,7 @@ void doscriptline(string first,string second)
 					*fptr=(float)atof(second.c_str());
 					break;
 				case D_DOUBLE:
+				case D_DOUBLEEXP:
 					dptr=(double*)dv[j].ptr;
 					*dptr=atof(second.c_str());
 					break;

@@ -14,9 +14,9 @@ namespace u_plotter2 {
 
 // geom
 //float zoom = .075f;//1.0f; //.510f;//.21f;//.15f;//.25f;
-float zoom = .5f;
+float zoom = .25f;
 float lzoom = logf(zoom); // yes, zoom
-pointf2 center = {-.5, 0};// {.25f, .25f};//{2,5}
+pointf2 center;// = { -.5, 0 };// {.25f, .25f};//{2,5}
 //pointf2 center={.5f,0};
 // system colors
 C32  backcolor;
@@ -222,23 +222,44 @@ void drawgrid()
 // end grid system
 static const float maxchange = 10000.0f;
 // y = f(x) drawer
-void drawfunction(float (*f)(float))
+void drawfunction(float(*f)(float), C32 col)
 {
-	pointf2 minxy=getminvisxy();
-	pointf2 maxxy=getmaxvisxy();
+	pointf2 minxy = getminvisxy();
+	pointf2 maxxy = getmaxvisxy();
 	S32 i;
 	pointf2 p;
-	p.x=minxy.x; // previous
-	p.y=f(p.x);
-	for (i=1;i<=nsteps;++i) {
+	p.x = minxy.x; // previous
+	p.y = f(p.x);
+	for (i = 1; i <= nsteps; ++i) {
 		pointf2 c;
-		c.x=(maxxy.x-minxy.x)*i/nsteps+minxy.x;
-//		c.y=f(c.x*prem+prea);
-//		c.y=postm*c.y+posta;
-		c.y=f(c.x);
-		if (fabs(c.y-p.y)<maxchange)
-			drawfline(p,c,funccolor);
-		p=c;
+		c.x = (maxxy.x - minxy.x)*i / nsteps + minxy.x;
+		//		c.y=f(c.x*prem+prea);
+		//		c.y=postm*c.y+posta;
+		c.y = f(c.x);
+		if (fabs(c.y - p.y) < maxchange)
+			drawfline(p, c, col);
+		p = c;
+	}
+}
+
+// y = f(x) drawer
+void drawfunction(double(*f)(double), C32 col)
+{
+	pointf2 minxy = getminvisxy();
+	pointf2 maxxy = getmaxvisxy();
+	S32 i;
+	pointf2 p;
+	p.x = minxy.x; // previous
+	p.y = static_cast<float>(f(p.x));
+	for (i = 1; i <= nsteps; ++i) {
+		pointf2 c;
+		c.x = (maxxy.x - minxy.x)*i / nsteps + minxy.x;
+		//		c.y=f(c.x*prem+prea);
+		//		c.y=postm*c.y+posta;
+		c.y = static_cast<float>(f(c.x));
+		if (fabs(c.y - p.y) < maxchange)
+			drawfline(p, c, col);
+		p = c;
 	}
 }
 

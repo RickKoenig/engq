@@ -2825,6 +2825,9 @@
     <ClInclude Include="u_s_plot2networkflow.h">
       <Filter>Source Files\user\user_math\plotter_code</Filter>
     </ClInclude>
+    <ClInclude Include="u_s_plot2neural.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="helperobj.cpp">
@@ -4175,6 +4178,9 @@
       <Filter>Source Files\user\user_math\plotter_code</Filter>
     </ClCompile>
     <ClCompile Include="u_s_plot2networkflow.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2neural.cpp">
       <Filter>Source Files\user\user_math\plotter_code</Filter>
     </ClCompile>
   </ItemGroup>

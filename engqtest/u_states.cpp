@@ -63,6 +63,7 @@
 #include "u_s_plot2catmullrom.h"
 #include "u_s_plot2random.h"
 #include "u_s_plot2networkflow.h"
+#include "u_s_plot2neural.h"
 
 #include "u_s_many.h"
 #include "u_s_arena1.h"
@@ -270,7 +271,7 @@ struct state states[STATE_NUM]={
 	{plot2randominit	,plot2randomproc	,0					,plot2randomdraw2d	,plot2randomexit},
 // 55
 	{plot2networkflowinit,plot2networkflowproc,0				,plot2networkflowdraw2d,plot2networkflowexit},
-	{0					,0					,0					,0					,0},
+	{plot2neuralinit	,plot2neuralproc	,0					,plot2neuraldraw2d	,plot2neuralexit},
 	{0					,0					,0					,0					,0},
 	{0					,0					,0					,0					,0},
 	{0					,0					,0					,0					,0},

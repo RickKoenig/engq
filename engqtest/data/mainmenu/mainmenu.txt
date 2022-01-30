@@ -63,6 +63,7 @@ statedesc 52 "plotter2 test 1d physics collisions"
 statedesc 53 "plotter2 test Catmull Rom splines"
 statedesc 54 "plotter2 random number from an index"
 statedesc 55 "plotter2 network flow"
+statedesc 56 "plotter2 neural network"
 
 
 // skip some states

@@ -1,5 +1,5 @@
 // print types
-enum {D_CHAR,D_SHORT,D_INT,D_HEX,/*D_ENUM,*/D_FLOAT,D_DOUBLE,D_VOID,D_FLOATEXP/*,D_STR*/,D_STRING};
+enum {D_CHAR,D_SHORT,D_INT,D_HEX,/*D_ENUM,*/D_FLOAT,D_DOUBLE,D_VOID,D_FLOATEXP,D_DOUBLEEXP/*,D_STR*/,D_STRING};
 #define D_RDONLY 0x80
 struct menuvar {
 	const C8* name;
