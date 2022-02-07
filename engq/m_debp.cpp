@@ -2,8 +2,8 @@
 #include "m_perf.h"
 #include "d2_font.h"
 
-//#define USESMALL // small font
-#define USEMEDIUM // medium font
+#define USESMALL // small font
+//#define USEMEDIUM // medium font
 //#define USELARGE // large font
 
 #ifdef USESMALL

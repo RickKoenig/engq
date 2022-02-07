@@ -229,8 +229,8 @@ using namespace networkflowp2;
 
 void plot2networkflowinit()
 {
-	adddebvars("networkflow", networkflowdv, nnetworkflowdv);
 	plotter2init();
+	adddebvars("networkflow", networkflowdv, nnetworkflowdv);
 
 	// calc prev and next from edges
 	for (S32 i = 0; i < numedges; ++i) {

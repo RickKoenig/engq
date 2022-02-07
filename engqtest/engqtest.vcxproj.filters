@@ -4183,6 +4183,12 @@
     <ClCompile Include="u_s_plot2neural.cpp">
       <Filter>Source Files\user\user_math\plotter_code</Filter>
     </ClCompile>
+    <ClCompile Include="u_s_plot2neuralReference.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2neuralBack.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="data\scratch\test.xml">

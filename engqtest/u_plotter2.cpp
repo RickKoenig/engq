@@ -524,19 +524,7 @@ static void changefs(float *os,float *delos,float curt)
 
 struct menuvar edv[]={
 // for reference, frame rate
-	{"@red@---- wininfo timer --",0,D_VOID,0},
-	{"fpswanted",&wininfo.fpswanted,D_INT,1},
-	{"fpscurrent",&wininfo.fpscurrent,D_FLOAT|D_RDONLY,FLOATUP},
-	{"fpsavg",&wininfo.fpsavg,D_FLOAT|D_RDONLY},
 // plotter system vars
-	{"@lightcyan@--- PLOTTER SYSTEM VARS ----",NULL,D_VOID,0},
-	{"lzoom",&lzoom,D_FLOAT,FLOATUP/16},
-	{"zoom",&zoom,D_FLOAT|D_RDONLY,FLOATUP},
-	{"centerx",&center.x,D_FLOAT,FLOATUP/16},
-	{"centery",&center.y,D_FLOAT,FLOATUP/16},
-	{"plotx",&plot.x,D_FLOAT|D_RDONLY,FLOATUP/16},
-	{"ploty",&plot.y,D_FLOAT|D_RDONLY,FLOATUP/16},
-	{"nsteps",&nsteps,D_INT,1},
 	{"@lightmagenta@--- PLOTTER SYSTEM COLORS ---",NULL,D_VOID,0},
 	{" backcolor.r", &backcolor.r,D_CHAR,4},
 	{" backcolor.g", &backcolor.g,D_CHAR,4},
@@ -559,6 +547,18 @@ struct menuvar edv[]={
 	{"slopecolor.r",&slopecolor.r,D_CHAR,4},
 	{"slopecolor.g",&slopecolor.g,D_CHAR,4},
 	{"slopecolor.b",&slopecolor.b,D_CHAR,4},
+	{"@lightcyan@--- PLOTTER SYSTEM VARS ----",NULL,D_VOID,0},
+	{"lzoom",&lzoom,D_FLOAT,FLOATUP / 16},
+	{"zoom",&zoom,D_FLOAT | D_RDONLY,FLOATUP},
+	{"centerx",&center.x,D_FLOAT,FLOATUP / 16},
+	{"centery",&center.y,D_FLOAT,FLOATUP / 16},
+	{"plotx",&plot.x,D_FLOAT | D_RDONLY,FLOATUP / 16},
+	{"ploty",&plot.y,D_FLOAT | D_RDONLY,FLOATUP / 16},
+	{"nsteps",&nsteps,D_INT,1},
+	{"@red@---- wininfo timer --",0,D_VOID,0},
+	{"fpswanted",&wininfo.fpswanted,D_INT,1},
+	{"fpscurrent",&wininfo.fpscurrent,D_FLOAT | D_RDONLY,FLOATUP},
+	{"fpsavg",&wininfo.fpsavg,D_FLOAT | D_RDONLY},
 };
 const int nedv = NUMELEMENTS(edv);
 
