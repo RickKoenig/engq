@@ -717,6 +717,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
+    <ClInclude Include="u_neuralNetwork.h" />
     <ClInclude Include="u_s_plot2neural.h" />
     <ClInclude Include="u_s_plot2networkflow.h" />
     <ClInclude Include="u_dynamic_programming.h" />
@@ -1769,6 +1770,7 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
     </ClCompile>
+    <ClCompile Include="u_neuralNetwork.cpp" />
     <ClCompile Include="u_s_plot2neural.cpp" />
     <ClCompile Include="u_s_plot2networkflow.cpp" />
     <ClCompile Include="st2_glue.cpp" />
@@ -2199,6 +2201,10 @@
     <ClCompile Include="u_s_plot2fourducks.cpp" />
     <ClCompile Include="u_s_plot2lens.cpp" />
     <ClCompile Include="u_s_plot2neuralBack.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2neuralFirstGeneral.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>

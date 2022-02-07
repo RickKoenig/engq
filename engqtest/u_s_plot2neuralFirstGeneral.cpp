@@ -16,9 +16,6 @@ U32 randomSeed = 123456;
 U32 randomNext = 1;
 
 // sub switches, what to run in this state
-//#define DO_NEURAL1 // Layers 1 (1 - 1), 2 vars, 2 costs
-//#define DO_NEURAL2 // Layers 2 (1 - 1 - 1), 4 vars, 2 costs
-//#define DO_NEURAL3 // Layers 2 (2 - 2 - 2), 12 vars, 4 costs
 #define DO_NEURAL4 // Layers 3 (3 - 2 - 3 - 2), 25 vars, 4 costs
 #define NEURAL4_VERBOSE // show neural 4 derivatives
 //#define DO_NEURAL5 // NYI Layers 3 (6 - 6 - 4), 70 vars, 60 costs // TODO: check 4 more costs for a total of 64 states
@@ -40,93 +37,6 @@ namespace neural {
 	// for brute force derivatives
 	const double epsilon = 1e-8;
 
-#ifdef DO_NEURAL1
-	// network
-	double weight1;
-	double bias1;
-	// per cost
-	double al0; // current input
-	double al1; // current output
-	double Y; // current desired output
-
-	// inputs, desires, cost
-	const S32 nTrain = 2;
-	double input[nTrain] = { .3, .4 };
-	double output[nTrain];
-	double desired[nTrain] = { .8, .5 };
-	double avgCost;
-
-	// cost derivatives for nTrain
-	// chain rule
-	double DcostDweight1CR;
-	double DcostDbias1CR;
-	// brute force
-	double DcostDweight1BF;
-	double DcostDbias1BF;
-#endif
-#ifdef DO_NEURAL2
-	// network
-	double weight1;
-	double bias1;
-	double weight2;
-	double bias2;
-	// per cost
-	double al0; // current input
-	double al1; // current hidden layer
-	double al2; // current output
-	double Y; // current desired output
-
-	// inputs, desires, cost
-	const S32 nTrain = 2;
-	double input[nTrain] = { .3, .4 };
-	double output[nTrain];
-	double desired[nTrain] = { .8, .5 };
-	double avgCost;
-
-	// cost derivatives for nTrain
-	// chain rule
-	double DcostDweight1CR;
-	double DcostDbias1CR;
-	double DcostDweight2CR;
-	double DcostDbias2CR;
-	// brute force
-	double DcostDweight1BF;
-	double DcostDbias1BF;
-	double DcostDweight2BF;
-	double DcostDbias2BF;
-#endif
-#ifdef DO_NEURAL3
-	// (2 - 2 - 2) // for now hard coded, but using arrays
-	// network
-	double weight1[2][2];
-	double bias1[2];
-	double weight2[2][2];
-	double bias2[2];
-	// per cost
-	double al0[2]; // current input
-	double al1[2]; // current hidden layer
-	double al2[2]; // current output
-	double Y[2]; // current desired output
-
-	// inputs, desires, train/cost
-	const S32 nTrain = 4;
-	double input[nTrain][2] = { {.12, .16},  {.13, .97},  {.94, .18},  {.95, .99} };
-	double output[nTrain][2];
-	double desired[nTrain][2] = { {.11, .12}, {.93, .14}, {.95, .16}, {.97, .98} }; // for now try or and and gates
-	double avgCost;
-
-	// cost derivatives for nTrain
-	// chain rule
-	double DcostDweight1CR[2][2];
-	double DcostDbias1CR[2];
-	double DcostDweight2CR[2][2];
-	double DcostDbias2CR[2];
-	// brute force
-	double DcostDweight1BF[2][2];
-	double DcostDbias1BF[2];
-	double DcostDweight2BF[2][2];
-	double DcostDbias2BF[2];
-#endif
 #ifdef DO_NEURAL4
 	// (3 - 2 - 3 - 2) // for now hard coded, but using arrays
 	// network
@@ -149,14 +59,14 @@ namespace neural {
 		{.12, .16, .26},
 		{.13, .97, .45},
 		{.94, .18, .36},
-		{.95, .54, .79}
+		{.95, .54, .79} 
 	};
 	double output[nTrain][2];
-	double desired[nTrain][2] = {
+	double desired[nTrain][2] = { 
 		{.11, .12},
-		{.93, .14},
-		{.95, .16},
-		{.97, .48}
+		{.93, .14}, 
+		{.95, .16}, 
+		{.97, .48} 
 	}; // for now try or and and gates
 	double avgCost;
 
@@ -187,48 +97,7 @@ namespace neural {
 	double dydx;
 #endif
 #ifdef TESTER
-#ifdef DO_NEURAL1
-	vector<S32> aTesterTopology{ 1, 1 };
-	// inputs, desires
-	vector<vector<double>> inputTester = {
-		{.3},
-		{.4},
-	};
-	vector<vector<double>> desiredTester = {
-		{.8},
-		{.5},
-	}; // simple linear
-#endif
-#ifdef DO_NEURAL2
-	vector<S32> aTesterTopology{ 1, 1, 1 };
-	// inputs, desires
-	vector<vector<double>> inputTester = {
-		{.3},
-		{.4},
-	};
-	vector<vector<double>> desiredTester = {
-		{.8},
-		{.5},
-	}; // simple linear
-#endif
-#ifdef DO_NEURAL3
-	vector<S32> aTesterTopology{ 2, 2, 2 };
-	// inputs, desires
-	vector<vector<double>> inputTester = {
-		{.12, .16},
-		{.13, .97},
-		{.94, .18},
-		{.95, .99}
-	};
-	vector<vector<double>> desiredTester = {
-		{.11, .12},
-		{.93, .14},
-		{.95, .16},
-		{.97, .98}
-	}; // for now try or and and gates
-#endif
-#ifdef DO_NEURAL4
-	vector<S32> aTesterTopology{ 3, 2, 3, 2 };
+	vector<S32> aTesterTopology {3, 2, 3, 2};
 	// inputs, desires
 	vector<vector<double>> inputTester = {
 		{.12, .16, .26},
@@ -243,134 +112,12 @@ namespace neural {
 		{.97, .48}
 	}; // for now try or and and gates
 #endif
-#endif
 	// for debvars
 	struct menuvar plot2neuralDeb[] = {
 		{"@yellow@--- neural network vars ---", NULL, D_VOID, 0},
 		{"calcAmount", &calcAmount, D_INT, 1},
 		{"calcSpeed", &calcSpeed, D_INT, 32},
 		{"learn", &learn, D_DOUBLE, FLOATUP / 32},
-#ifdef DO_NEURAL1
-		// network
-		{"weight1", &weight1, D_DOUBLE, FLOATUP / 8},
-		{"bias1", &bias1, D_DOUBLE, FLOATUP / 8},
-
-		// inputs, desires, outputs, cost
-		{"input0", &input[0], D_DOUBLE, FLOATUP / 8},
-		{"input1", &input[1], D_DOUBLE, FLOATUP / 8},
-		{"desired0", &desired[0], D_DOUBLE, FLOATUP / 8},
-		{"desired1", &desired[1], D_DOUBLE, FLOATUP / 8},
-		{"output0", &output[0], D_DOUBLE | D_RDONLY},
-		{"output1", &output[1], D_DOUBLE | D_RDONLY},
-		{"costAverage", &avgCost, D_DOUBLEEXP | D_RDONLY},
-
-		// cost derivatives
-		// chain rule
-		{"DcostDweight1_cr", &DcostDweight1CR,D_DOUBLEEXP | D_RDONLY},
-		{"DcostDbias1  _cr", &DcostDbias1CR,D_DOUBLEEXP | D_RDONLY},
-		// brute force
-		{"DcostDweight1_bf", &DcostDweight1BF, D_DOUBLEEXP | D_RDONLY},
-		{"DcostDbias1  _bf", &DcostDbias1BF, D_DOUBLEEXP | D_RDONLY},
-#endif
-#ifdef DO_NEURAL2
-		// network
-		{"weight1", &weight1, D_DOUBLE, FLOATUP / 8},
-		{"bias1", &bias1, D_DOUBLE, FLOATUP / 8},
-		{"weight2", &weight2, D_DOUBLE, FLOATUP / 8},
-		{"bias2", &bias2, D_DOUBLE, FLOATUP / 8},
-
-		// inputs, desires, outputs, cost
-		{"input0", &input[0], D_DOUBLE, FLOATUP / 8},
-		{"input1", &input[1], D_DOUBLE, FLOATUP / 8},
-		{"desired0", &desired[0], D_DOUBLE, FLOATUP / 8},
-		{"desired1", &desired[1], D_DOUBLE, FLOATUP / 8},
-		{"output0", &output[0], D_DOUBLE | D_RDONLY},
-		{"output1", &output[1], D_DOUBLE | D_RDONLY},
-		{"costAverage", &avgCost, D_DOUBLEEXP | D_RDONLY},
-
-		// cost derivatives
-		// chain rule and brute force
-		{"DcostDweight1_CR", &DcostDweight1CR,D_DOUBLEEXP | D_RDONLY},
-		{"DcostDweight1_BF", &DcostDweight1BF, D_DOUBLEEXP | D_RDONLY},
-		{"DcostDbias1  _CR", &DcostDbias1CR,D_DOUBLEEXP | D_RDONLY},
-		{"DcostDbias1  _BF", &DcostDbias1BF, D_DOUBLEEXP | D_RDONLY},
-		{"DcostDweight2_CR", &DcostDweight2CR,D_DOUBLEEXP | D_RDONLY},
-		{"DcostDweight2_BF", &DcostDweight2BF, D_DOUBLEEXP | D_RDONLY},
-		{"DcostDbias2  _CR", &DcostDbias2CR,D_DOUBLEEXP | D_RDONLY},
-		{"DcostDbias2  _BF", &DcostDbias2BF, D_DOUBLEEXP | D_RDONLY},
-#endif
-#ifdef DO_NEURAL3
-		// network
-		{"weight1_00", &weight1[0][0], D_DOUBLE, FLOATUP / 8},
-		{"weight1_01", &weight1[0][1], D_DOUBLE, FLOATUP / 8},
-		{"weight1_10", &weight1[1][0], D_DOUBLE, FLOATUP / 8},
-		{"weight1_11", &weight1[1][1], D_DOUBLE, FLOATUP / 8},
-		{"bias1_0", &bias1[0], D_DOUBLE, FLOATUP / 8},
-		{"bias1_1", &bias1[1], D_DOUBLE, FLOATUP / 8},
-		{"weight2_00", &weight2[0][0], D_DOUBLE, FLOATUP / 8},
-		{"weight2_01", &weight2[0][1], D_DOUBLE, FLOATUP / 8},
-		{"weight2_10", &weight2[1][0], D_DOUBLE, FLOATUP / 8},
-		{"weight2_11", &weight2[1][1], D_DOUBLE, FLOATUP / 8},
-		{"bias2_0", &bias2[0], D_DOUBLE, FLOATUP / 8},
-		{"bias2_1", &bias2[1], D_DOUBLE, FLOATUP / 8},
-
-		// inputs, desires, outputs, cost
-		{ "input0_0", &input[0][0], D_DOUBLE, FLOATUP / 8 },
-		{ "input0_1", &input[0][1], D_DOUBLE, FLOATUP / 8 },
-		{ "input1_0", &input[1][0], D_DOUBLE, FLOATUP / 8 },
-		{ "input1_1", &input[1][1], D_DOUBLE, FLOATUP / 8 },
-		{ "input2_0", &input[2][0], D_DOUBLE, FLOATUP / 8 },
-		{ "input2_1", &input[2][1], D_DOUBLE, FLOATUP / 8 },
-		{ "input3_0", &input[3][0], D_DOUBLE, FLOATUP / 8 },
-		{ "input3_1", &input[3][1], D_DOUBLE, FLOATUP / 8 },
-		{ "desired0_0", &desired[0][0], D_DOUBLE, FLOATUP / 8 },
-		{ "output 0_0", &output[0][0], D_DOUBLE | D_RDONLY },
-		{ "desired0_1", &desired[0][1], D_DOUBLE, FLOATUP / 8 },
-		{ "output 0_1", &output[0][1], D_DOUBLE | D_RDONLY },
-		{ "desired1_0", &desired[1][0], D_DOUBLE, FLOATUP / 8 },
-		{ "output 1_0", &output[1][0], D_DOUBLE | D_RDONLY },
-		{ "desired1_1", &desired[1][1], D_DOUBLE, FLOATUP / 8 },
-		{ "output 1_1", &output[1][1], D_DOUBLE | D_RDONLY },
-		{ "desired2_0", &desired[2][0], D_DOUBLE, FLOATUP / 8 },
-		{ "output 2_0", &output[2][0], D_DOUBLE | D_RDONLY },
-		{ "desired2_1", &desired[2][1], D_DOUBLE, FLOATUP / 8 },
-		{ "output 2_1", &output[2][1], D_DOUBLE | D_RDONLY },
-		{ "desired3_0", &desired[3][0], D_DOUBLE, FLOATUP / 8 },
-		{ "output 3_0", &output[3][0], D_DOUBLE | D_RDONLY },
-		{ "desired3_1", &desired[3][1], D_DOUBLE, FLOATUP / 8 },
-		{ "output 3_1", &output[3][1], D_DOUBLE | D_RDONLY },
-		{ "costAverage", &avgCost, D_DOUBLEEXP | D_RDONLY },
-
-		// cost derivatives
-		// chain rule and brute force
-		{ "DcostDweight1_00_CR", &DcostDweight1CR[0][0], D_DOUBLEEXP | D_RDONLY},
-		{ "DcostDweight1_00_BF", &DcostDweight1BF[0][0], D_DOUBLEEXP | D_RDONLY},
-		{ "DcostDweight1_01_CR", &DcostDweight1CR[0][1], D_DOUBLEEXP | D_RDONLY},
-		{ "DcostDweight1_01_BF", &DcostDweight1BF[0][1], D_DOUBLEEXP | D_RDONLY},
-		{ "DcostDweight1_10_CR", &DcostDweight1CR[1][0], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDweight1_10_BF", &DcostDweight1BF[1][0], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDweight1_11_CR", &DcostDweight1CR[1][1], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDweight1_11_BF", &DcostDweight1BF[1][1], D_DOUBLEEXP | D_RDONLY },
-
-		{ "DcostDbias1_0_CR"   , &DcostDbias1CR[0], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDbias1_0_BF"   , &DcostDbias1BF[0], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDbias1_1_CR"   , &DcostDbias1CR[1], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDbias1_1_BF"   , &DcostDbias1BF[1], D_DOUBLEEXP | D_RDONLY },
-
-		{ "DcostDweight2_00_CR", &DcostDweight2CR[0][0], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDweight2_00_BF", &DcostDweight2BF[0][0], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDweight2_01_CR", &DcostDweight2CR[0][1], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDweight2_01_BF", &DcostDweight2BF[0][1], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDweight2_10_CR", &DcostDweight2CR[1][0], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDweight2_10_BF", &DcostDweight2BF[1][0], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDweight2_11_CR", &DcostDweight2CR[1][1], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDweight2_11_BF", &DcostDweight2BF[1][1], D_DOUBLEEXP | D_RDONLY },
-
-		{ "DcostDbias2_0_CR"   , &DcostDbias2CR[0], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDbias2_0_BF"   , &DcostDbias2BF[0], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDbias2_1_CR"   , &DcostDbias2CR[1], D_DOUBLEEXP | D_RDONLY },
-		{ "DcostDbias2_1_BF"   , &DcostDbias2BF[1], D_DOUBLEEXP | D_RDONLY },
-#endif
 #ifdef DO_NEURAL4
 		// network
 		{"@lightgreen@--- neural4 ---", NULL, D_VOID, 0},
@@ -587,7 +334,7 @@ namespace neural {
 			menuvar mv{ copyStr("@green@--- TESTER ---"), NULL, D_VOID, 0 };
 			dbTester.push_back(mv);
 			S32 outputSize = desireds[0].size();
-			outputs = vector<vector<double>>(nTrain, vector<double>(outputSize));
+			outputs = vector<vector<double>>(nTrain, vector<double> (outputSize));
 			Y = vector<double>(outputSize);
 			// build a random network
 			U32 i, j, k;
@@ -655,7 +402,7 @@ namespace neural {
 					stringstream ssOutput;
 					ssOutput << "output " << j << "_" << i;
 					name = copyStr(ssOutput.str().c_str());
-					mv = { name, &anOutput[i], D_DOUBLE | D_RDONLY };
+					mv = { name, &anOutput[i], D_DOUBLE | D_RDONLY};
 					dbTester.push_back(mv);
 				}
 			}
@@ -673,7 +420,7 @@ namespace neural {
 						stringstream ssW;
 						ssW << "DcostDweight" << k << "_" << j << i << "_CR";
 						C8* name = copyStr(ssW.str().c_str());
-						mv = { name, &aRowCR[i], D_DOUBLEEXP | D_RDONLY };
+						mv = { name, &aRowCR[i], D_DOUBLEEXP | D_RDONLY};
 						dbTester.push_back(mv);
 						ssW.str(string()); // clear
 						ssW << "DcostDweight" << k << "_" << j << i << "_BF";
@@ -814,6 +561,7 @@ namespace neural {
 					S32 N = L + 1;
 					S32 Ls = topo[L]; // current layer
 					S32 Ps = topo[P]; // previous layer
+					S32 Ns = topo[N];
 					S32 row = Ls;
 					S32 col = Ps;
 					vector<double>& AL = layers[L].A;
@@ -825,7 +573,6 @@ namespace neural {
 							DcostDA[j] = 2.0*(AL[j] - Y[j]);
 						}
 					} else { // backtrace
-						S32 Ns = topo[N];
 						for (j = 0; j < Ls; ++j) {
 							for (i = 0; i < Ns; ++i) {
 								DcostDA[j] += layers[N].W[i][j] * DcostDZ[i];
@@ -987,368 +734,7 @@ namespace neural {
 	tester* aTester;
 #endif
 
-#ifdef DO_NEURAL1
-	// neural (1 - 1) 2 vars, 2 cost
-	void neuralInit()
-	{
-		weight1 = frand();
-		bias1 = frand();
-	}
 
-	// side effects: al1
-	double runNetwork()
-	{
-		double zl1 = al0 * weight1 + bias1;
-		al1 = sigmoid(zl1);
-		double del = al1 - Y;
-		double retCost = del * del;
-		return retCost;
-	}
-
-	// side effects: weight1, bias1, DcostDweight1BF, DcostDbias1BF, DcostDweight1CR, DcostDbias1CR, avgCost
-	void gradientDescent()
-	{
-		double saveWeight1 = weight1;
-		double saveBias1 = bias1;
-		// brute force derivatives and run network for cost
-		DcostDweight1CR = 0.0;
-		DcostDbias1CR = 0.0;
-		DcostDweight1BF = 0.0;
-		DcostDbias1BF = 0.0;
-		avgCost = 0.0;
-		for (S32 t = 0; t < nTrain; ++t) {
-			al0 = input[t];
-			Y = desired[t];
-
-			// brute force derivatives
-			// weight
-			weight1 += epsilon;
-			double costPweight1 = runNetwork();
-			weight1 = saveWeight1;
-			// bias
-			bias1 += epsilon;
-			double costPbias1 = runNetwork();
-			bias1 = saveBias1;
-			// none
-			double cost = runNetwork();
-			output[t] = al1; // need al1 for chain rule derivatives
-			DcostDweight1BF += (costPweight1 - cost) / epsilon;
-			DcostDbias1BF += (costPbias1 - cost) / epsilon;
-
-			avgCost += cost;
-
-			// chain rule derivatives
-			// DcostDw1 = DcostDal1 * Dal1Dzl1 * Dzl1Dw1
-			// DcostDb1 = DcostDal1 * Dal1Dzl1 * Dzl1Db1
-			// DcostDal1 = 2.0 * (al1 - Y)
-			// Dal1Dzl1 = (1.0 - al1) * al1
-			// Dzl1Dw1 = al0
-			// Dzl1Db1 = 1
-			double DcostDb1 = 2.0 * (al1 - Y) * (1.0 - al1) * al1;
-			double DcostDw1 = al0 * DcostDb1;
-			DcostDbias1CR += DcostDb1;
-			DcostDweight1CR += DcostDw1;
-
-		}
-		// average
-		DcostDweight1BF /= nTrain;
-		DcostDbias1BF /= nTrain;
-		DcostDweight1CR /= nTrain;
-		DcostDbias1CR /= nTrain;
-		avgCost /= nTrain;
-		// run the gradient learn
-		weight1 -= DcostDweight1CR * learn;
-		bias1 -= DcostDbias1CR * learn;
-	}
-#endif
-
-#ifdef DO_NEURAL2
-	// neural (1 - 1 - 1) 4 vars, 2 cost
-	void neuralInit()
-	{
-		weight1 = frand();
-		bias1 = frand();
-		weight2 = frand();
-		bias2 = frand();
-	}
-
-	// side effects: al1, al2
-	double runNetwork()
-	{
-		double zl1 = al0 * weight1 + bias1;
-		al1 = sigmoid(zl1);
-		double zl2 = al1 * weight2 + bias2;
-		al2 = sigmoid(zl2);
-		double del = al2 - Y;
-		double retCost = del * del;
-		return retCost;
-	}
-
-	// side effects: weight?, bias?, DcostDweight?BF, DcostDbias?BF, DcostDweight?CR, DcostDbias?CR, avgCost
-	// ? = 1 or 2
-	void gradientDescent()
-	{
-		double saveWeight1 = weight1;
-		double saveBias1 = bias1;
-		double saveWeight2 = weight2;
-		double saveBias2 = bias2;
-		// brute force derivatives and run network for cost
-		DcostDweight1CR = 0.0;
-		DcostDbias1CR = 0.0;
-		DcostDweight1BF = 0.0;
-		DcostDbias1BF = 0.0;
-		DcostDweight2CR = 0.0;
-		DcostDbias2CR = 0.0;
-		DcostDweight2BF = 0.0;
-		DcostDbias2BF = 0.0;
-		avgCost = 0.0;
-		for (S32 t = 0; t < nTrain; ++t) {
-			al0 = input[t];
-			Y = desired[t];
-
-			// brute force derivatives
-			// weight
-			weight1 += epsilon;
-			double costPweight1 = runNetwork();
-			weight1 = saveWeight1;
-			weight2 += epsilon;
-			double costPweight2 = runNetwork();
-			weight2 = saveWeight2;
-			// bias
-			bias1 += epsilon;
-			double costPbias1 = runNetwork();
-			bias1 = saveBias1;
-			bias2 += epsilon;
-			double costPbias2 = runNetwork();
-			bias2 = saveBias2;
-			// none
-			double cost = runNetwork();
-			output[t] = al2; // need al? for chain rule derivatives
-			DcostDweight1BF += (costPweight1 - cost) / epsilon;
-			DcostDbias1BF += (costPbias1 - cost) / epsilon;
-			DcostDweight2BF += (costPweight2 - cost) / epsilon;
-			DcostDbias2BF += (costPbias2 - cost) / epsilon;
-
-			avgCost += cost;
-
-			// chain rule derivatives
-			// DcostDw2 = DcostDal2 * Dal2Dzl2 * Dzl2Dw2
-			// DcostDb2 = DcostDal2 * Dal2Dzl2 * Dzl2Db2
-			// DcostDal2 = 2.0*(al2 - Y)
-			// Dal1Dzl2 = (1.0 - al2)*al2
-			// Dzl2Dw2 = al1
-			// Dzl2Db2 = 1
-			double DcostDb2 = 2.0*(al2 - Y) * (1.0 - al2)*al2;
-			double DcostDw2 = DcostDb2 * al1;
-			DcostDbias2CR += DcostDb2;
-			DcostDweight2CR += DcostDw2;
-
-			// back one layer
-			// DcostDw1 = DcostDal2 * Dal2Dzl2 * Dzl2Dal1 * Dal1Dzl1 * Dzl1Dw1
-			// DcostDb1 = DcostDal2 * Dal2Dzl2 * Dzl2Dal1 * Dal1Dzl1 * Dzl1Db1
-			// DcostDal2 * Dal2Dzl2 = DcostDb2
-			// Dzl2Dal1 = weight2
-			// Dal1Dzl1 = (1.0 - al1)*al1
-			// Dzl1Dw1 = al0
-			// Dzl1Db1 = 1
-			double DcostDb1 = DcostDb2 * weight2 * (1.0 - al1) * al1;
-			double DcostDw1 = DcostDb1 * al0;
-			DcostDbias1CR += DcostDb1;
-			DcostDweight1CR += DcostDw1;
-
-		}
-		// average
-		DcostDweight1BF /= nTrain;
-		DcostDbias1BF /= nTrain;
-		DcostDweight1CR /= nTrain;
-		DcostDbias1CR /= nTrain;
-		DcostDweight2BF /= nTrain;
-		DcostDbias2BF /= nTrain;
-		DcostDweight2CR /= nTrain;
-		DcostDbias2CR /= nTrain;
-		avgCost /= nTrain;
-		// run the gradient learn
-		weight1 -= DcostDweight1CR * learn;
-		bias1 -= DcostDbias1CR * learn;
-		weight2 -= DcostDweight2CR * learn;
-		bias2 -= DcostDbias2CR * learn;
-	}
-#endif
-#ifdef DO_NEURAL3
-	// neural (2 - 2 - 2) 12 vars, 4 cost
-	void neuralInit()
-	{
-		weight1[0][0] = frand();
-		weight1[0][1] = frand();
-		weight1[1][0] = frand();
-		weight1[1][1] = frand();
-		bias1[0] = frand();
-		bias1[1] = frand();
-		weight2[0][0] = frand();
-		weight2[0][1] = frand();
-		weight2[1][0] = frand();
-		weight2[1][1] = frand();
-		bias2[0] = frand();
-		bias2[1] = frand();
-	}
-
-	// side effects: al1, al2
-	double runNetwork()
-	{
-		double zl1[2];
-		zl1[0] = al0[0] * weight1[0][0] + al0[1] * weight1[0][1] + bias1[0];
-		zl1[1] = al0[0] * weight1[1][0] + al0[1] * weight1[1][1] + bias1[1];
-		al1[0] = sigmoid(zl1[0]);
-		al1[1] = sigmoid(zl1[1]);
-		double zl2[2];
-		zl2[0] = al1[0] * weight2[0][0] + al1[1] * weight2[0][1] + bias2[0];
-		zl2[1] = al1[0] * weight2[1][0] + al1[1] * weight2[1][1] + bias2[1];
-		al2[0] = sigmoid(zl2[0]);
-		al2[1] = sigmoid(zl2[1]);
-		double del[2];
-		del[0] = al2[0] - Y[0];
-		del[1] = al2[1] - Y[1];
-		double retCost = del[0] * del[0] + del[1] * del[1];
-		return retCost;
-	}
-
-	// side effects: weight?, bias?, DcostDweight?BF, DcostDbias?BF, DcostDweight?CR, DcostDbias?CR, avgCost
-	// ? = 1 or 2
-	void gradientDescent()
-	{
-		S32 i, j;// , k;
-		// brute force derivatives and run network for cost
-		fill(&DcostDweight1CR[0][0], &DcostDweight1CR[0][0] + 2 * 2, 0.0);
-		fill(&DcostDbias1CR[0], &DcostDbias1CR[0] + 2, 0.0);
-		fill(&DcostDweight1BF[0][0], &DcostDweight1BF[0][0] + 2 * 2, 0.0);
-		fill(&DcostDbias1BF[0], &DcostDbias1BF[0] + 2, 0.0);
-		fill(&DcostDweight2CR[0][0], &DcostDweight2CR[0][0] + 2 * 2, 0.0);
-		fill(&DcostDbias2CR[0], &DcostDbias2CR[0] + 2, 0.0);
-		fill(&DcostDweight2BF[0][0], &DcostDweight2BF[0][0] + 2 * 2, 0.0);
-		fill(&DcostDbias2BF[0], &DcostDbias2BF[0] + 2, 0.0);
-		avgCost = 0.0;
-		for (S32 t = 0; t < nTrain; ++t) {
-			copy(&input[t][0], &input[t][0] + 2, &al0[0]);
-			copy(&desired[t][0], &desired[t][0] + 2, &Y[0]);
-
-			double cost = runNetwork();
-			// brute force derivatives
-			// weight
-			for (j = 0; j < 2; ++j) {
-				for (i = 0; i < 2; ++i) {
-					double save = weight1[j][i];
-					weight1[j][i] += epsilon;
-					double costPweight = runNetwork();
-					weight1[j][i] = save;
-					DcostDweight1BF[j][i] += (costPweight - cost) / epsilon;
-					save = weight2[j][i];
-					weight2[j][i] += epsilon;
-					costPweight = runNetwork();
-					weight2[j][i] = save;
-					DcostDweight2BF[j][i] += (costPweight - cost) / epsilon;
-				}
-			}
-			// bias
-			for (j = 0; j < 2; ++j) {
-				double save = bias1[j];
-				bias1[j] += epsilon;
-				double costPbias = runNetwork();
-				bias1[j] = save;
-				DcostDbias1BF[j] += (costPbias - cost) / epsilon;
-				runNetwork(); // need correct al? for chain rule derivatives
-
-				save = bias2[j];
-				bias2[j] += epsilon;
-				costPbias = runNetwork();
-				bias2[j] = save;
-				DcostDbias2BF[j] += (costPbias - cost) / epsilon;
-				runNetwork(); // need correct al? for chain rule derivatives
-			}
-			copy(&al2[0], &al2[0] + 2, &output[t][0]);
-
-			avgCost += cost;
-			// chain rule derivatives, the last layer
-			// DcostDw2 = DcostDal2 * Dal2Dzl2 * Dzl2Dw2
-			// DcostDb2 = DcostDal2 * Dal2Dzl2 * Dzl2Db2
-			// derived
-			// DcostDal2 = 2.0*(al2 - Y)
-			// Dal2Dzl2 = (1.0 - al2)*al2
-			// Dzl2Dw2 = al1
-			// Dzl2Db2 = 1
-			double DcostDzl2[2]{}; // same as DcostDb2, used for backtrace
-			double DcostDal1[2]{};
-			for (j = 0; j < 2; ++j) {
-				// cost
-				double DcostDal2 = 2.0*(al2[j] - Y[j]);
-				// z
-				double Da2Dz2 = (1.0 - al2[j])*al2[j];
-				// bias
-				DcostDzl2[j] = DcostDal2 * Da2Dz2; // same as DcostDb2
-				DcostDbias2CR[j] += DcostDzl2[j]; // add to train/cost
-				// weight
-				for (i = 0; i < 2; ++i) {
-					double DcostDw2 = DcostDzl2[j] * al1[i];
-					DcostDweight2CR[j][i] += DcostDw2; // add to train/cost
-				}
-			}
-			double DcostDzl1[2]{}; // same as DcostDb1, used for backtrace
-			// backtrace
-			// DcostDal1 = [DcostDal2 * Dal2Dzl2] * Dzl2Dal1 = DcostDzl2 * Dzl2Dal1
-			for (j = 0; j < 2; ++j) {
-				for (i = 0; i < 2; ++i) {
-					DcostDal1[j] += weight2[i][j] * DcostDzl2[i];
-				}
-			}
-
-			// chain rule derivatives, the previous layer
-			// DcostDw1 = DcostDal1 * Dal1Dzl1 * Dzl1Dw1
-			// DcostDb1 = DcostDal1 * Dal1Dzl1 * Dzl1Db1
-			// derived
-			// Dal1Dzl1 = (1.0 - al1)*al1
-			// Dzl1Dw1 = al0
-			// Dzl1Db1 = 1
-			for (j = 0; j < 2; ++j) {
-				// z
-				double Da1Dz1 = (1.0 - al1[j])*al1[j];
-				// bias
-				DcostDzl1[j] = DcostDal1[j] * Da1Dz1; // same as DcostDb1
-				DcostDbias1CR[j] += DcostDzl1[j]; // add to train/cost
-				// weight
-				for (i = 0; i < 2; ++i) {
-					double DcostDw1 = DcostDzl1[j] * al0[i];
-					DcostDweight1CR[j][i] += DcostDw1; // add to train/cost
-				}
-			}
-		}
-		// average
-		for (j = 0; j < 2; ++j) {
-			for (i = 0; i < 2; ++i) {
-				DcostDweight1BF[j][i] /= nTrain;
-				DcostDweight1CR[j][i] /= nTrain;
-				DcostDweight2BF[j][i] /= nTrain;
-				DcostDweight2CR[j][i] /= nTrain;
-			}
-		}
-		for (j = 0; j < 2; ++j) {
-			DcostDbias1BF[j] /= nTrain;
-			DcostDbias1CR[j] /= nTrain;
-			DcostDbias2BF[j] /= nTrain;
-			DcostDbias2CR[j] /= nTrain;
-		}
-		avgCost /= nTrain;
-		// run the gradient learn
-		for (j = 0; j < 2; ++j) {
-			for (i = 0; i < 2; ++i) {
-				weight1[j][i] -= DcostDweight1CR[j][i] * learn;
-				weight2[j][i] -= DcostDweight2CR[j][i] * learn;
-			}
-		}
-		for (j = 0; j < 2; ++j) {
-			bias1[j] -= DcostDbias1CR[j] * learn;
-			bias2[j] -= DcostDbias2CR[j] * learn;
-		}
-	}
-#endif
 #ifdef DO_NEURAL4
 	// neural (3 - 2 - 3 - 2) 25 vars, 4 cost
 	void neuralInit()
@@ -1774,7 +1160,7 @@ void plot2neuraldraw2d()
 {
 	// draw graph paper
 	plotter2draw2d();
-	// test gradient descent
+// test gradient descent
 #ifdef DO_GRAD_TEST
 	drawfunction(polyFunction, C32CYAN);
 	drawfunction(polyFunctionPrime, C32RED);
