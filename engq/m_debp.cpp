@@ -179,6 +179,7 @@ static menuvar* getmenuvarfrompos(S32 pos)
 
 void debprocesskey()
 {
+	S32 pageSpeed = 9;
 	//if (KEY=='`')
 	//	wininfo.indebprint^=1;
 	S32 d=0,z=0;		// delta for changing a variable
@@ -190,6 +191,9 @@ void debprocesskey()
 	//S32 ndv=nwininfovars+nedv;
 	if (!wininfo.enabledebprint)
 		return;
+	if (wininfo.keystate[K_LEFTSHIFT] || wininfo.keystate[K_RIGHTSHIFT]) {
+		pageSpeed *= 5; // faster page up / page down when a shift key is pressed
+	};
 	if (KEY=='`')
 		wininfo.indebprint^=1;
 	if (!wininfo.indebprint)
@@ -206,9 +210,9 @@ void debprocesskey()
 		if (KEY==K_NUMDOWN)
 			menupos++;
 		if (KEY==K_NUMPAGEUP)
-			menupos-=9;
+			menupos-=pageSpeed;
 		if (KEY==K_NUMPAGEDOWN)
-			menupos+=9;
+			menupos+=pageSpeed;
 	} else {
 		if (KEY==K_NUM5)
 			z=1;
@@ -221,9 +225,9 @@ void debprocesskey()
 		if (KEY==K_DOWN)
 			menupos++;
 		if (KEY==K_PAGEUP)
-			menupos-=9;
+			menupos-=pageSpeed;
 		if (KEY==K_PAGEDOWN)
-			menupos+=9;
+			menupos+=pageSpeed;
 	}
 	menupos=range(0,menupos,totalvars - 1);
 	menuvar* dv = getmenuvarfrompos(menupos);

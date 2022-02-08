@@ -14,6 +14,9 @@ neuralNet::neuralNet(const vector<U32>& topology
 	: inputs(inTrain), desireds(desTrain), nTrain(desTrain.size())
 	,inputsTest(inTester), desiredsTest(desTester), nTest(desTester.size())
 {
+	if (inTrain.empty()) {
+		errorexit("intrain needs data!");
+	}
 	// check dimensions of everything
 	if (topology.size() < 2) {
 		errorexit("topology must be 2 layers or more!");

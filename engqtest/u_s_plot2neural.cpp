@@ -16,11 +16,11 @@ U32 randomSeed = 123456;
 U32 randomNext = 1;
 
 // sub switches, what to run in this state
-#define DO_NEURAL1 // Layers 1 (1 - 1), 2 vars, 2 costs, test 1 more, total 3
+//#define DO_NEURAL1 // Layers 1 (1 - 1), 2 vars, 2 costs, test 1 more, total 3
 //#define DO_NEURAL2 // Layers 2 (1 - 1 - 1), 4 vars, 2 costs, test 1 more, total 3
 //#define DO_NEURAL3 // Layers 2 (2 - 2 - 2), 12 vars, 4 costs, test 1 more, total 5
 //#define DO_NEURAL4 // Layers 3 (3 - 2 - 3 - 2), 25 vars, 4 costs, test 2 more, total 6
-//#define DO_NEURAL5 // NYI Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 states
+#define DO_NEURAL5 // NYI Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 states
 //#define DO_NEURAL6 // NYI Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs, test 10,000 more costs total 70,000
 #define DO_GRAD_TEST // 1 var, minimize the adjustable quartic equation
 #define SHOW_SIGMOID
@@ -90,7 +90,7 @@ namespace neuralPlot {
 
 #endif
 #ifdef DO_NEURAL3
-	vector<U32> aTesterTopology{2, 2, 2};
+	vector<U32> aTesterTopology{ 2, 2, 2 };
 	// train
 	// inputs, desires
 	vector<vector<double>> inputTrain = {
@@ -117,7 +117,7 @@ namespace neuralPlot {
 	}; // for now try or and and gates
 #endif
 #ifdef DO_NEURAL4
-	vector<U32> aTesterTopology {3, 2, 3, 2};
+	vector<U32> aTesterTopology{ 3, 2, 3, 2 };
 	// train
 	// inputs, desires
 	vector<vector<double>> inputTrain = {
@@ -142,6 +142,58 @@ namespace neuralPlot {
 		{.111, .123},
 		{.933, .144},
 	}; // for now try or and and gates
+#endif
+#ifdef DO_NEURAL5 // add 2 3 digit binary numbers to make 1 4 digit binary number
+	vector<U32> aTesterTopology{ 6, 6, 4 };
+	// train
+	// inputs, desires
+	vector<vector<double>> inputTrain;
+	vector<vector<double>> desiredTrain;
+	// for now try or and and gates
+	// test
+	// inputs, desires
+	vector<vector<double>> inputTest;
+	vector<vector<double>> desiredTest;
+
+	void nerual5init()
+	{
+		// add 2 3bit binary numbers to get a 4bit binary number
+		const U32 doTrain = 60;
+		const U32 doTest = 4;
+		const U32 doTotal = doTrain + doTest;
+		const double LO = .1;
+		const double HI = .9;
+		// input size 6
+		// output size 4
+		inputTrain.clear();
+		desiredTrain.clear();
+		inputTest.clear();
+		desiredTest.clear();
+		for (U32 k = 0; k < doTotal; ++k) {
+			vector<double>in(6);
+			vector<double>des(4);
+			// convert k to binary 6bit
+			U32 val = k;
+			for (U32 i = 0; i < 6; ++i) {
+				in[i] = LO + (HI - LO) * (val & 1);
+				val >>= 1;
+			}
+			U32 add = (k & 7) + (k >> 3);
+			val = add;
+			for (U32 i = 0; i < 4; ++i) {
+				des[i] = LO + (HI - LO) * (val & 1);
+				val >>= 1;
+			}
+			if (k < doTrain) {
+				inputTrain.push_back(in);
+				desiredTrain.push_back(des);
+			} else {
+				inputTest.push_back(in);
+				desiredTest.push_back(des);
+			}
+		}
+	}
+
 #endif
 	// for debvars
 	struct menuvar plot2neuralDeb[] = {
@@ -304,6 +356,9 @@ void plot2neuralinit()
 	adddebvars("neural_network", plot2neuralDeb, nplot2neuralDeb);
 #ifdef DO_GRAD_TEST
 	gradTestInit();
+#endif
+#ifdef DO_NEURAL5
+	nerual5init();
 #endif
 	randomInit();
 	aNeuralNet = new neuralNet(aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest);
