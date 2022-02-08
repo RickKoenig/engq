@@ -16,12 +16,12 @@ U32 randomSeed = 123456;
 U32 randomNext = 1;
 
 // sub switches, what to run in this state
-//#define DO_NEURAL1 // Layers 1 (1 - 1), 2 vars, 2 costs
-//#define DO_NEURAL2 // Layers 2 (1 - 1 - 1), 4 vars, 2 costs
-//#define DO_NEURAL3 // Layers 2 (2 - 2 - 2), 12 vars, 4 costs
-#define DO_NEURAL4 // Layers 3 (3 - 2 - 3 - 2), 25 vars, 4 costs
-//#define DO_NEURAL5 // NYI Layers 3 (6 - 6 - 4), 70 vars, 60 costs // TODO: check 4 more costs for a total of 64 states
-//#define DO_NEURAL6 // NYI Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs // TODO: check 10,000 more costs
+#define DO_NEURAL1 // Layers 1 (1 - 1), 2 vars, 2 costs, test 1 more, total 3
+//#define DO_NEURAL2 // Layers 2 (1 - 1 - 1), 4 vars, 2 costs, test 1 more, total 3
+//#define DO_NEURAL3 // Layers 2 (2 - 2 - 2), 12 vars, 4 costs, test 1 more, total 5
+//#define DO_NEURAL4 // Layers 3 (3 - 2 - 3 - 2), 25 vars, 4 costs, test 2 more, total 6
+//#define DO_NEURAL5 // NYI Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 states
+//#define DO_NEURAL6 // NYI Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs, test 10,000 more costs total 70,000
 #define DO_GRAD_TEST // 1 var, minimize the adjustable quartic equation
 #define SHOW_SIGMOID
 
@@ -35,7 +35,7 @@ namespace neuralPlot {
 	double learn = 0.0; // .03125;
 	S32 calcAmount = 1; // negative run forever
 	S32 calcSpeed = 1;
-	
+
 #ifdef SHOW_SIGMOID
 	double sigmoidIn = 0.0;
 	double sigmoidOut;
@@ -47,69 +47,100 @@ namespace neuralPlot {
 	double dydx;
 #endif
 #ifdef DO_NEURAL1
-	vector<S32> aTesterTopology{ 1, 1 };
+	vector<U32> aTesterTopology{ 1, 1 };
 	// train
 	// inputs, desires
-	vector<vector<double>> inputTester = {
+	vector<vector<double>> inputTrain = {
 		{.3},
 		{.4},
 	};
-	vector<vector<double>> desiredTester = {
+	vector<vector<double>> desiredTrain = {
 		{.8},
 		{.5},
 	}; // simple linear
 	// test
+	// inputs, desires
 	vector<vector<double>> inputTest = {
 		{.35},
 	};
 	vector<vector<double>> desiredTest = {
 		{.65},
 	};
-	vector<vector<double>> outputTest = vector<vector<double>>(1, vector<double>(1));
-	double costTest;
 #endif
 #ifdef DO_NEURAL2
-	vector<S32> aTesterTopology{ 1, 1, 1 };
+	vector<U32> aTesterTopology{ 1, 1, 1 };
+	// train
 	// inputs, desires
-	vector<vector<double>> inputTester = {
+	vector<vector<double>> inputTrain = {
 		{.3},
 		{.4},
 	};
-	vector<vector<double>> desiredTester = {
+	vector<vector<double>> desiredTrain = {
 		{.8},
 		{.5},
 	}; // simple linear
+	// test
+	// inputs, desires
+	vector<vector<double>> inputTest = {
+		{.35},
+	};
+	vector<vector<double>> desiredTest = {
+		{.65},
+	};
+
 #endif
 #ifdef DO_NEURAL3
-	vector<S32> aTesterTopology{2, 2, 2};
+	vector<U32> aTesterTopology{2, 2, 2};
+	// train
 	// inputs, desires
-	vector<vector<double>> inputTester = {
+	vector<vector<double>> inputTrain = {
 		{.12, .16},
 		{.13, .97},
 		{.94, .18},
 		{.95, .99}
 	};
-	vector<vector<double>> desiredTester = {
+	vector<vector<double>> desiredTrain = {
 		{.11, .12},
 		{.93, .14},
 		{.95, .16},
 		{.97, .98}
 	}; // for now try or and and gates
+	// test
+	// inputs, desires
+	vector<vector<double>> inputTest = {
+		{.1, .3},
+		{.4, .7},
+	};
+	vector<vector<double>> desiredTest = {
+		{.2, .21},
+		{.93, .94},
+	}; // for now try or and and gates
 #endif
 #ifdef DO_NEURAL4
-	vector<S32> aTesterTopology {3, 2, 3, 2};
+	vector<U32> aTesterTopology {3, 2, 3, 2};
+	// train
 	// inputs, desires
-	vector<vector<double>> inputTester = {
+	vector<vector<double>> inputTrain = {
 		{.12, .16, .26},
 		{.13, .97, .45},
 		{.94, .18, .36},
 		{.95, .54, .79}
 	};
-	vector<vector<double>> desiredTester = {
+	vector<vector<double>> desiredTrain = {
 		{.11, .12},
 		{.93, .14},
 		{.95, .16},
 		{.97, .48}
+	}; // for now try or and and gates
+	// test
+	// inputs, desires
+	vector<vector<double>> inputTest = {
+		{.123, .167, .265},
+		{.134, .978, .456},
+	};
+	vector<vector<double>> desiredTest = {
+		{.111, .123},
+		{.933, .144},
 	}; // for now try or and and gates
 #endif
 	// for debvars
@@ -133,13 +164,6 @@ namespace neuralPlot {
 		{"@brown@--- sigmoid graph ---", NULL, D_VOID, 0},
 		{"sigmoid in", &sigmoidIn, D_DOUBLE, FLOATUP / 8},
 		{"sigmoid out", &sigmoidOut, D_DOUBLEEXP | D_RDONLY},
-#endif
-#ifdef DO_NEURAL1
-		{"@magenta@--- test the neural network ---", NULL, D_VOID, 0},
-		{"inputTest0_0", &inputTest[0][0], D_DOUBLE, FLOATUP / 32},
-		{"desiredTest0_0", &desiredTest[0][0], D_DOUBLE, FLOATUP / 32},
-		{"outputTest0_0", &outputTest[0][0], D_DOUBLE | D_RDONLY},
-		{"costTest0_0", &costTest, D_DOUBLEEXP | D_RDONLY},
 #endif
 	};
 	const int nplot2neuralDeb = NUMELEMENTS(plot2neuralDeb);
@@ -240,7 +264,7 @@ namespace neuralPlot {
 			randomInit();
 			delete aNeuralNet;
 			randomInit();
-			aNeuralNet = new neuralNet(aTesterTopology, inputTester, desiredTester);
+			aNeuralNet = new neuralNet(aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest);
 			randomNextSeed();
 		}
 		learn = range(0.0, learn, 100.0);
@@ -257,9 +281,7 @@ namespace neuralPlot {
 				--calcAmount;
 			}
 		}
-#ifdef DO_NEURAL1
-		costTest = aNeuralNet->testNetwork(inputTest, desiredTest, outputTest);
-#endif
+		aNeuralNet->testNetwork();
 #ifdef DO_GRAD_TEST
 		yVar = polyFunction(xVar);
 		dydx = polyFunctionPrime(xVar);
@@ -284,7 +306,7 @@ void plot2neuralinit()
 	gradTestInit();
 #endif
 	randomInit();
-	aNeuralNet = new neuralNet(aTesterTopology, inputTester, desiredTester);
+	aNeuralNet = new neuralNet(aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest);
 	randomNextSeed();
 }
 

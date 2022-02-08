@@ -1,11 +1,12 @@
 // some switches
 #define SHOW_WEIGHT_BIAS
 #define SHOW_TRAINING_DATA
+#define SHOW_TESTING_DATA
 #define DO_BRUTE_FORCE_DERIVATIVES
 #define SHOW_DERIVATIVES
 
 class neuralNet {
-	vector<S32> topo; // the structure of the network
+	vector<U32> topo; // the structure of the network
 
 	// a layer of the network, layer 0 is the input layer, no weights or biases on layer 0
 	// the topo.size() - 1 layer is the output layer
@@ -28,9 +29,14 @@ class neuralNet {
 	vector<vector<double>>& desireds;
 	vector<vector<double>> outputs;
 	U32 nTrain;
+	vector<vector<double>>& inputsTest;
+	vector<vector<double>>& desiredsTest;
+	vector<vector<double>> outputsTest;
+	U32 nTest;
 	vector<double> Y;
 
 	double avgCost{};
+	double avgCostTest{};
 
 	// for debvars
 	vector<menuvar> dbNeuralNet; // debprint menu
@@ -39,7 +45,7 @@ class neuralNet {
 	C8* copyStr(const C8* in); // free with delete, all string names in dbNeuralNet are allocated and are to be freed
 
 	// generate a random number in range [0 - 1)
-	double frand()
+    double frand()
 	{
 		return rand() / (RAND_MAX + 1.0);
 	}
@@ -52,8 +58,10 @@ class neuralNet {
 	double runNetwork();
 
 public:
-	neuralNet(const vector<S32>& topology, vector<vector<double>>& inTrain, vector<vector<double>>& desTrain);
-	double testNetwork(vector<vector<double>>& inTest, vector<vector<double>>& desTest, vector<vector<double>>& outTest);
+	neuralNet(const vector<U32>& topology
+		, vector<vector<double>>& inTrain, vector<vector<double>>& desTrain
+		, vector<vector<double>>& inTester, vector<vector<double>>& desTester);
 	void gradientDescent(double learn); // gradient descent training
+	void testNetwork();
 	~neuralNet();
 };
