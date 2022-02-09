@@ -8,10 +8,10 @@ C8* neuralNet::copyStr(const C8* in) // free with delete, all string names in db
 	return ret;
 }
 
-neuralNet::neuralNet(const vector<U32>& topology
+neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	, vector<vector<double>>& inTrain, vector<vector<double>>& desTrain
 	,vector<vector<double>>& inTester, vector<vector<double>>& desTester)
-	: inputs(inTrain), desireds(desTrain), nTrain(desTrain.size())
+	: name(namea), inputs(inTrain), desireds(desTrain), nTrain(desTrain.size())
 	,inputsTest(inTester), desiredsTest(desTester), nTest(desTester.size())
 {
 	if (inTrain.empty()) {
@@ -47,7 +47,9 @@ neuralNet::neuralNet(const vector<U32>& topology
 	outputs = vector<vector<double>>(nTrain, vector<double>(outputSize));
 	outputsTest = vector<vector<double>>(nTest, vector<double>(outputSize));
 	Y = vector<double>(outputSize);
-	menuvar mv{ copyStr("@green@--- Neural Network ---"), NULL, D_VOID, 0 };
+	menuvar mv{ copyStr("@cyan@--- Neural Network ---"), NULL, D_VOID, 0 };
+	dbNeuralNet.push_back(mv);
+	mv = { copyStr(name.c_str()), NULL, D_VOID, 0 };
 	dbNeuralNet.push_back(mv);
 	// build a random network
 	U32 k;
@@ -71,6 +73,7 @@ neuralNet::neuralNet(const vector<U32>& topology
 #ifdef SHOW_WEIGHT_BIAS
 	mv = { copyStr("@lightgreen@--- Weights and Biases ---"), NULL, D_VOID, 0 };
 	dbNeuralNet.push_back(mv);
+#endif
 	// add network to debprint menu
 	for (k = 1; k < layers.size(); ++k) {
 		layer& lay = layers[k];
@@ -80,23 +83,26 @@ neuralNet::neuralNet(const vector<U32>& topology
 			vector<double>& aRow = lay.W[j];
 			for (U32 i = 0; i < colsW; ++i) {
 				aRow[i] = frand();
+#ifdef SHOW_WEIGHT_BIAS
 				stringstream ssW;
 				ssW << "weight" << k << "_" << j << i;
 				C8* name = copyStr(ssW.str().c_str());
 				mv = { name, &aRow[i], D_DOUBLE, FLOATUP / 8 };
 				dbNeuralNet.push_back(mv);
+#endif
 			}
 		}
 		for (U32 j = 0; j < rowsW; ++j) {
 			lay.B[j] = frand();
+#ifdef SHOW_WEIGHT_BIAS
 			stringstream ssB;
 			ssB << "bias" << k << "_" << j;
 			C8* name = copyStr(ssB.str().c_str());
 			mv = { name, &lay.B[j], D_DOUBLE, FLOATUP / 8 };
 			dbNeuralNet.push_back(mv);
+#endif
 		}
 	}
-#endif
 #ifdef SHOW_TRAINING_DATA
 	mv = { copyStr("@yellow@--- Training data ---"), NULL, D_VOID, 0 };
 	dbNeuralNet.push_back(mv);
@@ -131,6 +137,8 @@ neuralNet::neuralNet(const vector<U32>& topology
 #endif
 	mv = { copyStr("@yellow@Training Cost Average"), &avgCost, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
 	dbNeuralNet.push_back(mv);
+	mv = { copyStr("Training Cost Total"), &totalCost, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
+	dbNeuralNet.push_back(mv);
 #ifdef SHOW_TESTING_DATA
 	mv = { copyStr("@brown@--- Testing data ---"), NULL, D_VOID, 0 };
 	dbNeuralNet.push_back(mv);
@@ -162,9 +170,11 @@ neuralNet::neuralNet(const vector<U32>& topology
 			dbNeuralNet.push_back(mv);
 		}
 	}
-	mv = { copyStr("Testing Cost Average"), &avgCostTest, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
-	dbNeuralNet.push_back(mv);
 #endif
+	mv = { copyStr("@brown@Testing Cost Average"), &avgCostTest, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
+	dbNeuralNet.push_back(mv);
+	mv = { copyStr("Testing Cost Total"), &totalCostTest, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
+	dbNeuralNet.push_back(mv);
 #ifdef SHOW_DERIVATIVES
 	mv = { copyStr("@lightgreen@--- Derivatives of Weights and Biases ---"), NULL, D_VOID, 0 };
 	dbNeuralNet.push_back(mv);
@@ -222,6 +232,68 @@ neuralNet::~neuralNet()
 	}
 }
 
+bool neuralNet::loadNetwork(U32 slot)
+{
+	//return false;
+	pushandsetdir("neural");
+	stringstream ss;
+	ss << name << "_" << slot << ".mdl";
+	string fname = ss.str();
+	if (!fileexist(fname.c_str())) {
+		popdir();
+		return false; // can't open file, doesn't exist
+	}
+	FILE* fh = fopen2(fname.c_str(), "rb");
+	if (!fh) {
+		popdir();
+		return false; // can't open file
+	}
+	// load and check topo
+	U32 ts = filereadU32LE(fh);
+	if (ts != topo.size()) {
+		fclose(fh); // wrong topology size
+		popdir();
+		return false;
+	}
+	vector<U32> tpo (topo.size());
+	fileread(fh, &tpo[0], topo.size() * sizeof tpo[0]);
+	if (tpo != topo) {
+		fclose(fh); // wrong topology configuration
+		popdir();
+		return false;
+	}
+	// load weights and biases for each layer
+	for (U32 k = 1; k < topo.size(); ++k) {
+		for (U32 j = 0; j < topo[k]; ++j) {
+			fileread(fh, &layers[k].W[j][0], topo[k - 1] * sizeof layers[k].W[0][0]);
+		}
+		fileread(fh, &layers[k].B[0], topo[k] * sizeof layers[k].B[0]);
+	}
+	fclose(fh);
+	popdir();
+	return true;
+}
+
+void neuralNet::saveNetwork(U32 slot)
+{
+	pushandsetdir("neural");
+	stringstream ss;
+	ss << name << "_" << slot << ".mdl";
+	FILE* fh = fopen2(ss.str().c_str(), "wb");
+	// save topo
+	filewriteU32LE(fh, topo.size());
+	filewrite(fh, &topo[0], topo.size() * sizeof topo[0] );
+	// save weights and biases for each layer
+	for (U32 k = 1; k < topo.size(); ++k) {
+		for (U32 j = 0; j < topo[k]; ++j) {
+			filewrite(fh, &layers[k].W[j][0], topo[k - 1] * sizeof layers[k].W[0][0]);
+		}
+		filewrite(fh, &layers[k].B[0], topo[k] * sizeof layers[k].B[0]);
+	}
+	fclose(fh);
+	popdir();
+}
+
 double neuralNet::runNetwork()
 {
 	// TODO: optimize
@@ -251,7 +323,7 @@ double neuralNet::runNetwork()
 
 void neuralNet::testNetwork()
 {
-	avgCostTest = 0.0;
+	totalCostTest = 0.0;
 	vector<double>& Ain = layers[0].A;
 	S32 lastLayer = topo.size() - 1;
 	vector<double>& Aout = layers[lastLayer].A;
@@ -262,16 +334,15 @@ void neuralNet::testNetwork()
 		copy(&desiredsTest[t][0], &desiredsTest[t][0] + lastLayerSize, &Y[0]);
 		double cost = runNetwork();
 		copy(&Aout[0], &Aout[0] + lastLayerSize, &outputsTest[t][0]);
-		avgCostTest += cost;
+		totalCostTest += cost;
 	}
-	avgCostTest /= nTest;
+	avgCostTest = totalCostTest / nTest;
 }
 
 void neuralNet::gradientDescent(double learn) // gradient descent
 {
 	S32 i, j;
 	U32 k;
-#ifdef DO_BRUTE_FORCE_DERIVATIVES
 	// brute force derivatives and run network for cost
 	for (k = 1; k < topo.size(); ++k) {
 		S32 lastK = k - 1;
@@ -281,17 +352,20 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 		for (j = 0; j < row; ++j) {
 			addr = &layers[k].dCdW_CR[j][0];
 			fill(addr, addr + col, 0.0);
+#ifdef DO_BRUTE_FORCE_DERIVATIVES
 			addr = &layers[k].dCdW_BF[j][0];
 			fill(addr, addr + col, 0.0);
+#endif
 		}
 		addr = &layers[k].dCdB_CR[0];
 		fill(addr, addr + row, 0.0);
+#ifdef DO_BRUTE_FORCE_DERIVATIVES
 		addr = &layers[k].dCdB_BF[0];
 		fill(addr, addr + row, 0.0);
-	}
 #endif
+	}
 
-	avgCost = 0.0;
+	totalCost = 0.0;
 	vector<double>& Ain = layers[0].A;
 	S32 lastLayer = topo.size() - 1;
 	vector<double>& Aout = layers[lastLayer].A;
@@ -329,7 +403,7 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 #endif
 		copy(&Aout[0], &Aout[0] + lastLayerSize, &outputs[t][0]);
 
-		avgCost += cost;
+		totalCost += cost;
 
 		//S32 outSize = topo.size() - 1;
 		//S32 ls = topo[outSize];
@@ -403,7 +477,7 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 			layers[k].dCdB_CR[j] /= nTrain;
 		}
 	}
-	avgCost /= nTrain;
+	avgCost  = totalCost / nTrain;
 
 	// run the gradient descent learn
 	// TODO: optimize

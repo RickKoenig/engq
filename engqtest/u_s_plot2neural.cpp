@@ -11,16 +11,13 @@ using namespace u_plotter2;
 // lots of switches
 // random only
 //#define USE_TIMEB // randomize based on time
-// these are not on time
-U32 randomSeed = 123456;
-U32 randomNext = 1;
 
 // sub switches, what to run in this state
 //#define DO_NEURAL1 // Layers 1 (1 - 1), 2 vars, 2 costs, test 1 more, total 3
 //#define DO_NEURAL2 // Layers 2 (1 - 1 - 1), 4 vars, 2 costs, test 1 more, total 3
 //#define DO_NEURAL3 // Layers 2 (2 - 2 - 2), 12 vars, 4 costs, test 1 more, total 5
 //#define DO_NEURAL4 // Layers 3 (3 - 2 - 3 - 2), 25 vars, 4 costs, test 2 more, total 6
-#define DO_NEURAL5 // NYI Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 states
+#define DO_NEURAL5 // Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 states
 //#define DO_NEURAL6 // NYI Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs, test 10,000 more costs total 70,000
 #define DO_GRAD_TEST // 1 var, minimize the adjustable quartic equation
 #define SHOW_SIGMOID
@@ -31,9 +28,20 @@ U32 randomNext = 1;
 
 namespace neuralPlot {
 	// common data
+	const U32 uiCounter = 30; // for load and save models
+// these are not on time
+	U32 randomSeed = 123456;
+	U32 randomNext = 1;
+	// for load and save weights and biases
+	U32 loadSaveSlot = 0;
+	// counters
+	U32 loading = 0;
+	U32 noLoad = 0;
+	U32 yesLoad = 0;
+	U32 saving = 0;
 	// calc gradient descent
 	double learn = 0.0; // .03125;
-	S32 calcAmount = 1; // negative run forever
+	S32 calcAmount = -1; // negative run forever
 	S32 calcSpeed = 1;
 
 #ifdef SHOW_SIGMOID
@@ -47,6 +55,7 @@ namespace neuralPlot {
 	double dydx;
 #endif
 #ifdef DO_NEURAL1
+	const string neuralName{ "Neural1" };
 	vector<U32> aTesterTopology{ 1, 1 };
 	// train
 	// inputs, desires
@@ -68,6 +77,7 @@ namespace neuralPlot {
 	};
 #endif
 #ifdef DO_NEURAL2
+	const string neuralName{ "Neural2" };
 	vector<U32> aTesterTopology{ 1, 1, 1 };
 	// train
 	// inputs, desires
@@ -90,6 +100,7 @@ namespace neuralPlot {
 
 #endif
 #ifdef DO_NEURAL3
+	const string neuralName{ "Neural3" };
 	vector<U32> aTesterTopology{ 2, 2, 2 };
 	// train
 	// inputs, desires
@@ -117,6 +128,7 @@ namespace neuralPlot {
 	}; // for now try or and and gates
 #endif
 #ifdef DO_NEURAL4
+	const string neuralName{ "Neural4" };
 	vector<U32> aTesterTopology{ 3, 2, 3, 2 };
 	// train
 	// inputs, desires
@@ -144,6 +156,7 @@ namespace neuralPlot {
 	}; // for now try or and and gates
 #endif
 #ifdef DO_NEURAL5 // add 2 3 digit binary numbers to make 1 4 digit binary number
+	const string neuralName{ "Neural5" };
 	vector<U32> aTesterTopology{ 6, 6, 4 };
 	// train
 	// inputs, desires
@@ -312,12 +325,35 @@ namespace neuralPlot {
 	void commonProc()
 	{
 		// range check gradient descent
-		if (KEY == 'r') { // reset weights and biases
-			randomInit();
-			delete aNeuralNet;
-			randomInit();
-			aNeuralNet = new neuralNet(aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest);
-			randomNextSeed();
+		bool busy = loading || saving || noLoad || yesLoad;
+		if (!busy) {
+			switch (KEY) {
+				// re randomize weights and biases
+			case 'r':
+				randomInit();
+				delete aNeuralNet;
+				randomInit();
+				aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest);
+				randomNextSeed();
+				break;
+				// load
+			case 'l':
+				if (!busy) {
+					loading = uiCounter;
+				}
+				break;
+				// save
+			case 's':
+				if (loading == 0 && saving == 0 && noLoad == 0 && yesLoad == 0) {
+					saving = uiCounter;
+					aNeuralNet->saveNetwork(loadSaveSlot);
+				}
+				break;
+			}
+			// pick load save slot
+			if (KEY >= '0' && KEY <= '9') {
+				loadSaveSlot = KEY - '0';
+			}
 		}
 		learn = range(0.0, learn, 100.0);
 		calcAmount = range(-1, calcAmount, 1000000);
@@ -351,6 +387,9 @@ using namespace neuralPlot;
 
 void plot2neuralinit()
 {
+	loading = 0;
+	noLoad = 0;
+	saving = 0;
 	// initialize graph paper
 	plotter2init();
 	adddebvars("neural_network", plot2neuralDeb, nplot2neuralDeb);
@@ -361,7 +400,7 @@ void plot2neuralinit()
 	nerual5init();
 #endif
 	randomInit();
-	aNeuralNet = new neuralNet(aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest);
+	aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest);
 	randomNextSeed();
 }
 
@@ -400,6 +439,34 @@ void plot2neuraldraw2d()
 	pointf2x point(static_cast<float>(sigmoidIn), static_cast<float>(sigmoidOut));
 	drawfcirclef(point, C32BLACK, .0625f);
 #endif
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 3, C32LIGHTGREEN, C32BLACK, "'~': Control Menu");
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 20, C32LIGHTGREEN, C32BLACK, "'r': Randomize Network");
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 37, C32LIGHTGREEN, C32BLACK, "'l': Load Network");
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 54, C32LIGHTGREEN, C32BLACK, "'s': Save Network");
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 71, C32LIGHTGREEN, C32BLACK, "'0'-'9': Load/Save Slot = '%d'", loadSaveSlot);
+	if (loading > 0) {
+		MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 88, C32LIGHTMAGENTA, C32BLACK, "Loading from Slot '%d'", loadSaveSlot);
+		loading--;
+		if (loading == 0) {
+			if (aNeuralNet->loadNetwork(loadSaveSlot)) {
+				yesLoad = uiCounter;
+			} else {
+				noLoad = uiCounter;
+			}
+		}
+	}
+	if (noLoad > 0) {
+		MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 88, C32LIGHTRED, C32BLACK, " Slot '%d' NOT loaded", loadSaveSlot);
+		noLoad--;
+	}
+	if (yesLoad > 0) {
+		MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 88, C32WHITE, C32BLACK, " Slot '%d' loaded!", loadSaveSlot);
+		yesLoad--;
+	}
+	if (saving > 0) {
+		MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 88, C32LIGHTMAGENTA, C32BLACK, "Saving to Slot '%d'", loadSaveSlot);
+		saving--;
+	}
 }
 
 void plot2neuralexit()

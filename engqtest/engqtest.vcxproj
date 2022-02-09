@@ -1770,7 +1770,10 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
     </ClCompile>
-    <ClCompile Include="u_neuralNetwork.cpp" />
+    <ClCompile Include="u_neuralNetwork.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotSet</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotSet</EnableEnhancedInstructionSet>
+    </ClCompile>
     <ClCompile Include="u_s_plot2neural.cpp" />
     <ClCompile Include="u_s_plot2networkflow.cpp" />
     <ClCompile Include="st2_glue.cpp" />
