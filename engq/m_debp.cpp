@@ -193,7 +193,10 @@ void debprocesskey()
 		return;
 	if (wininfo.keystate[K_LEFTSHIFT] || wininfo.keystate[K_RIGHTSHIFT]) {
 		pageSpeed *= 5; // faster page up / page down when a shift key is pressed
-	};
+	}
+	if (wininfo.keystate[K_LEFTALT] || wininfo.keystate[K_RIGHTALT]) {
+		pageSpeed *= 25; // faster page up / page down when an alt key is pressed
+	}
 	if (KEY=='`')
 		wininfo.indebprint^=1;
 	if (!wininfo.indebprint)

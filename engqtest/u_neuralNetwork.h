@@ -1,8 +1,8 @@
 // some switches
 #define SHOW_WEIGHT_BIAS
-//#define SHOW_TRAINING_DATA
+#define SHOW_TRAINING_DATA
 #define SHOW_TESTING_DATA
-//#define DO_BRUTE_FORCE_DERIVATIVES
+#define DO_BRUTE_FORCE_DERIVATIVES
 #define SHOW_DERIVATIVES
 
 class neuralNet {
@@ -12,7 +12,7 @@ class neuralNet {
 	// a layer of the network, layer 0 is the input layer, no weights or biases on layer 0
 	// the topo.size() - 1 layer is the output layer
 	struct layer {
-		vector<double> A;
+		vector<double> A; // layer 0 and layer nL - 1 don't have an A, instead it's input and output
 		vector<vector<double>> W;
 		vector<double> B;
 		vector<vector<double>> dCdW_CR;
@@ -34,7 +34,6 @@ class neuralNet {
 	vector<vector<double>>& desiredsTest;
 	vector<vector<double>> outputsTest;
 	U32 nTest;
-	vector<double> Y;
 
 	double totalCost{};
 	double totalCostTest{};
@@ -58,12 +57,12 @@ class neuralNet {
 		return 1.0 / (1.0 + exp(-x));
 	}
 
-	double runNetwork();
 
 public:
 	neuralNet(const string& name, const vector<U32>& topology
 		, vector<vector<double>>& inTrain, vector<vector<double>>& desTrain
 		, vector<vector<double>>& inTester, vector<vector<double>>& desTester);
+	double runNetwork(const vector<double>& in, const vector<double>& des, vector<double>& out);
 	void gradientDescent(double learn); // gradient descent training
 	void testNetwork();
 	bool loadNetwork(U32 slot); // true if loaded, false if not loaded

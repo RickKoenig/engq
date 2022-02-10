@@ -17,7 +17,7 @@ using namespace u_plotter2;
 //#define DO_NEURAL2 // Layers 2 (1 - 1 - 1), 4 vars, 2 costs, test 1 more, total 3
 //#define DO_NEURAL3 // Layers 2 (2 - 2 - 2), 12 vars, 4 costs, test 1 more, total 5
 //#define DO_NEURAL4 // Layers 3 (3 - 2 - 3 - 2), 25 vars, 4 costs, test 2 more, total 6
-#define DO_NEURAL5 // Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 states
+#define DO_NEURAL5 // Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 costs
 //#define DO_NEURAL6 // NYI Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs, test 10,000 more costs total 70,000
 #define DO_GRAD_TEST // 1 var, minimize the adjustable quartic equation
 #define SHOW_SIGMOID
@@ -40,9 +40,11 @@ namespace neuralPlot {
 	U32 yesLoad = 0;
 	U32 saving = 0;
 	// calc gradient descent
-	double learn = 0.0; // .03125;
-	S32 calcAmount = -1; // negative run forever
-	S32 calcSpeed = 1;
+	double learn = 0.0; // .03125; // how fast to learn, too small too slow, too large too unstable
+	S32 calcAmount = -1; // how many calcs to do, negative run forever, positive decrements every frame until 0 
+	S32 calcSpeed = 1; // number of calculations per frame
+	S32 runTestCount = 5; // how many frames to wait to run test and user
+	S32 runTest = 0;
 
 #ifdef SHOW_SIGMOID
 	double sigmoidIn = 0.0;
@@ -208,12 +210,13 @@ namespace neuralPlot {
 	}
 
 #endif
+	// one user set to run on runNetwork
+	vector<double> userInputs(aTesterTopology[0]);
+	vector<double> userDesireds(aTesterTopology[aTesterTopology.size() - 1]);
+	vector<double> userOutputs(aTesterTopology[aTesterTopology.size() - 1]);
+	double userCost = 0;
 	// for debvars
 	struct menuvar plot2neuralDeb[] = {
-		{"@yellow@--- neural network vars ---", NULL, D_VOID, 0},
-		{"calcAmount", &calcAmount, D_INT, 1},
-		{"calcSpeed", &calcSpeed, D_INT, 32},
-		{"learn", &learn, D_DOUBLE, FLOATUP / 32},
 #ifdef DO_GRAD_TEST
 		{"@lightblue@--- gradient descent test ---", NULL, D_VOID, 0},
 		{"Ax^4 +", &Acoeff, D_DOUBLE, FLOATUP / 32},
@@ -230,6 +233,57 @@ namespace neuralPlot {
 		{"sigmoid in", &sigmoidIn, D_DOUBLE, FLOATUP / 8},
 		{"sigmoid out", &sigmoidOut, D_DOUBLEEXP | D_RDONLY},
 #endif
+		{"@yellow@--- neural network vars ---", NULL, D_VOID, 0},
+		{"calcAmount", &calcAmount, D_INT, 1},
+		{"calcSpeed", &calcSpeed, D_INT, 32},
+		{"learn", &learn, D_DOUBLE, FLOATUP / 32},
+		{"runTestcount", &runTestCount, D_INT, 32},
+		// for now, hand code these
+		{"@lightcyan@--- neural network user ---", NULL, D_VOID, 0},
+#ifdef DO_NEURAL1
+		{"userInput0", &userInputs[0], D_DOUBLE, FLOATUP / 4},
+		{"userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
+		{"userOutput0", &userOutputs[0], D_DOUBLE | D_RDONLY},
+#endif
+#ifdef DO_NEURAL2
+		{"userInput0", &userInputs[0], D_DOUBLE, FLOATUP / 4},
+		{"userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
+		{"userOutput0", &userOutputs[0], D_DOUBLE | D_RDONLY},
+#endif
+#ifdef DO_NEURAL3
+		{"userInput0", &userInputs[0], D_DOUBLE, FLOATUP / 4},
+		{"userInput1", &userInputs[1], D_DOUBLE, FLOATUP / 4},
+		{"userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
+		{"userDesired1", &userDesireds[1], D_DOUBLE, FLOATUP / 4},
+		{"userOutput0", &userOutputs[0], D_DOUBLE | D_RDONLY},
+		{"userOutput1", &userOutputs[1], D_DOUBLE | D_RDONLY},
+#endif
+#ifdef DO_NEURAL4
+		{"userInput0", &userInputs[0], D_DOUBLE, FLOATUP / 4},
+		{"userInput1", &userInputs[1], D_DOUBLE, FLOATUP / 4},
+		{"userInput2", &userInputs[2], D_DOUBLE, FLOATUP / 4},
+		{"userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
+		{"userDesired1", &userDesireds[1], D_DOUBLE, FLOATUP / 4},
+		{"userOutput0", &userOutputs[0], D_DOUBLE | D_RDONLY},
+		{"userOutput1", &userOutputs[1], D_DOUBLE | D_RDONLY},
+#endif
+#ifdef DO_NEURAL5
+		{"userInput0", &userInputs[0], D_DOUBLE, FLOATUP / 4},
+		{"userInput1", &userInputs[1], D_DOUBLE, FLOATUP / 4},
+		{"userInput2", &userInputs[2], D_DOUBLE, FLOATUP / 4},
+		{"userInput3", &userInputs[3], D_DOUBLE, FLOATUP / 4},
+		{"userInput4", &userInputs[4], D_DOUBLE, FLOATUP / 4},
+		{"userInput5", &userInputs[5], D_DOUBLE, FLOATUP / 4},
+		{"userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
+		{"userDesired1", &userDesireds[1], D_DOUBLE, FLOATUP / 4},
+		{"userDesired2", &userDesireds[2], D_DOUBLE, FLOATUP / 4},
+		{"userDesired3", &userDesireds[3], D_DOUBLE, FLOATUP / 4},
+		{"userOutput0", &userOutputs[0], D_DOUBLE | D_RDONLY},
+		{"userOutput1", &userOutputs[1], D_DOUBLE | D_RDONLY},
+		{"userOutput2", &userOutputs[2], D_DOUBLE | D_RDONLY},
+		{"userOutput3", &userOutputs[3], D_DOUBLE | D_RDONLY},
+#endif
+		{"userCost", &userCost, D_DOUBLEEXP | D_RDONLY},
 	};
 	const int nplot2neuralDeb = NUMELEMENTS(plot2neuralDeb);
 
@@ -358,6 +412,7 @@ namespace neuralPlot {
 		learn = range(0.0, learn, 100.0);
 		calcAmount = range(-1, calcAmount, 1000000);
 		calcSpeed = range(1, calcSpeed, 10000);
+		runTestCount = range(0, runTestCount, 1000);
 		if (calcAmount != 0) {
 			for (S32 step = 0; step < calcSpeed; ++step) {
 #ifdef DO_GRAD_TEST
@@ -369,7 +424,17 @@ namespace neuralPlot {
 				--calcAmount;
 			}
 		}
-		aNeuralNet->testNetwork();
+		// test neural network, no training here
+		if (runTestCount > 0) {
+			if (runTest == 0) {
+				// test suite
+				runTest = runTestCount;
+				aNeuralNet->testNetwork();
+				// run 1 user setting
+				userCost = aNeuralNet->runNetwork(userInputs, userDesireds, userOutputs);
+			}
+			--runTest;
+		}
 #ifdef DO_GRAD_TEST
 		yVar = polyFunction(xVar);
 		dydx = polyFunctionPrime(xVar);

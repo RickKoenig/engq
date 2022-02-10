@@ -46,18 +46,28 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	S32 outputSize = desireds[0].size();
 	outputs = vector<vector<double>>(nTrain, vector<double>(outputSize));
 	outputsTest = vector<vector<double>>(nTest, vector<double>(outputSize));
-	Y = vector<double>(outputSize);
 	menuvar mv{ copyStr("@cyan@--- Neural Network ---"), NULL, D_VOID, 0 };
 	dbNeuralNet.push_back(mv);
-	mv = { copyStr(name.c_str()), NULL, D_VOID, 0 };
+	stringstream title;
+	title << name << " [ ";
+	for (auto v : topo) {
+		title << v << " ";
+	}
+	title << "]";
+
+	mv = { copyStr(title.str().c_str()), NULL, D_VOID, 0 }; // name of the neural network
 	dbNeuralNet.push_back(mv);
 	// build a random network
 	U32 k;
 	for (k = 0; k < topology.size(); ++k) {
 		S32 cols = topology[k];
 		layer aLayer;
-		aLayer.A = vector<double>(cols);
 		if (k > 0) {
+			if (k != topology.size() - 1) {
+				// no need for A[0] or A[nL - 1], it comes from input and output
+				aLayer.A = vector<double>(cols);
+			}
+			// Layer 0 has none of this, it's the input layer
 			S32 rows = topology[k - 1];
 			aLayer.B = vector<double>(cols);
 			aLayer.W = vector<vector<double>>(cols, vector<double>(rows));
@@ -142,7 +152,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 #ifdef SHOW_TESTING_DATA
 	mv = { copyStr("@brown@--- Testing data ---"), NULL, D_VOID, 0 };
 	dbNeuralNet.push_back(mv);
-	// add inputs to debprint menu
+	// add testing inputs to debprint menu
 	for (U32 j = 0; j < nTest; ++j) {
 		vector<double>& anInput = inputsTest[j];
 		for (U32 i = 0; i < anInput.size(); ++i) {
@@ -153,7 +163,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 			dbNeuralNet.push_back(mv);
 		}
 	}
-	// add desireds and outputs to debprint menu
+	// add testing desireds and outputs to debprint menu
 	for (U32 j = 0; j < nTest; ++j) {
 		vector<double>& aDesired = desiredsTest[j];
 		vector<double>& anOutput = outputsTest[j];
@@ -294,7 +304,7 @@ void neuralNet::saveNetwork(U32 slot)
 	popdir();
 }
 
-double neuralNet::runNetwork()
+double neuralNet::runNetwork(const vector<double>& in, const vector<double>& des, vector<double>& out)
 {
 	// TODO: optimize
 	U32 i, j;
@@ -304,18 +314,21 @@ double neuralNet::runNetwork()
 	for (k = 1; k < topo.size(); ++k) {
 		Z.resize(topo[k]);
 		lastK = k - 1;
+		vector<double>& curA = k == topo.size() - 1 ? out : layers[k].A;
+		const vector<double>& lastA = lastK ? layers[lastK].A : in;
 		for (j = 0; j < topo[k]; ++j) {
 			Z[j] = layers[k].B[j];
 			for (i = 0; i < topo[lastK]; ++i) {
-				Z[j] += layers[lastK].A[i] * layers[k].W[j][i];
+				Z[j] += lastA[i] * layers[k].W[j][i];
 			}
-			layers[k].A[j] = sigmoid(Z[j]);
+			curA[j] = sigmoid(Z[j]);
 		}
 	}
 	double retCost = 0.0;
 	lastK = k - 1;
 	for (j = 0; j < topo[lastK]; ++j) {
-		double del = layers[lastK].A[j] - Y[j];
+		//double del = layers[lastK].A[j] - Y[j];
+		double del = out[j] - des[j];
 		retCost += del * del;
 	}
 	return retCost;
@@ -330,10 +343,10 @@ void neuralNet::testNetwork()
 	S32 firstLayerSize = topo[0];
 	S32 lastLayerSize = topo[lastLayer];
 	for (U32 t = 0; t < nTest; ++t) {
-		copy(&inputsTest[t][0], &inputsTest[t][0] + firstLayerSize, &Ain[0]);
-		copy(&desiredsTest[t][0], &desiredsTest[t][0] + lastLayerSize, &Y[0]);
-		double cost = runNetwork();
-		copy(&Aout[0], &Aout[0] + lastLayerSize, &outputsTest[t][0]);
+		//copy(&inputsTest[t][0], &inputsTest[t][0] + firstLayerSize, &Ain[0]);
+		//copy(&desiredsTest[t][0], &desiredsTest[t][0] + lastLayerSize, &Y[0]);
+		double cost = runNetwork(inputsTest[t], desiredsTest[t], outputsTest[t]);
+		//copy(&Aout[0], &Aout[0] + lastLayerSize, &outputsTest[t][0]);
 		totalCostTest += cost;
 	}
 	avgCostTest = totalCostTest / nTest;
@@ -373,10 +386,10 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 	S32 lastLayerSize = topo[lastLayer];
 
 	for (U32 t = 0; t < nTrain; ++t) {
-		copy(&inputs[t][0], &inputs[t][0] + firstLayerSize, &Ain[0]);
-		copy(&desireds[t][0], &desireds[t][0] + lastLayerSize, &Y[0]);
+		//copy(&inputs[t][0], &inputs[t][0] + firstLayerSize, &Ain[0]);
+		//copy(&desireds[t][0], &desireds[t][0] + lastLayerSize, &Y[0]);
 
-		double cost = runNetwork(); // baseline
+		double cost = runNetwork(inputs[t], desireds[t], outputs[t]); // baseline
 #ifdef DO_BRUTE_FORCE_DERIVATIVES
 		// TODO: optimize
 		for (k = 1; k < topo.size(); ++k) {
@@ -388,20 +401,20 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 				for (i = 0; i < col; ++i) {
 					double save = layers[k].W[j][i];
 					layers[k].W[j][i] += epsilon;
-					double costPweight = runNetwork();
+					double costPweight = runNetwork(inputs[t], desireds[t], outputs[t]);
 					layers[k].W[j][i] = save;
 					layers[k].dCdW_BF[j][i] += (costPweight - cost) / epsilon;
 				}
 				double save = layers[k].B[j];
 				layers[k].B[j] += epsilon;
-				double costPbias = runNetwork();
+				double costPbias = runNetwork(inputs[t], desireds[t], outputs[t]);
 				layers[k].B[j] = save;
 				layers[k].dCdB_BF[j] += (costPbias - cost) / epsilon;
 			}
 		}
-		runNetwork(); // need correct A? for chain rule derivatives and output
+		runNetwork(inputs[t], desireds[t], outputs[t]); // need correct A? for chain rule derivatives and output
 #endif
-		copy(&Aout[0], &Aout[0] + lastLayerSize, &outputs[t][0]);
+		//copy(&Aout[0], &Aout[0] + lastLayerSize, &outputs[t][0]);
 
 		totalCost += cost;
 
@@ -426,13 +439,13 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 			S32 Ps = topo[P]; // previous layer
 			//S32 row = Ls;
 			//S32 col = Ps;
-			vector<double>& AL = layers[L].A;
-			vector<double>& AP = layers[P].A;
+			vector<double>& AL = N == topo.size() ? outputs[t] : layers[L].A;
+			vector<double>& AP = P ? layers[P].A : inputs[t];
 			// cost
 			DcostDA = vector<double>(Ls);
 			if (k == topo.size() - 1) {
 				for (j = 0; j < Ls; ++j) {
-					DcostDA[j] = 2.0*(AL[j] - Y[j]);
+					DcostDA[j] = 2.0*(AL[j] - desireds[t][j]);
 				}
 			} else { // backtrace
 				S32 Ns = topo[N];
