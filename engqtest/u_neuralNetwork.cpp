@@ -1,5 +1,6 @@
 #include <m_eng.h>
 #include "u_neuralNetwork.h"
+#include "m_perf.h"
 
 C8* neuralNet::copyStr(const C8* in) // free with delete, all string names in dbNeuralNet are allocated and are to be freed
 {
@@ -306,42 +307,50 @@ void neuralNet::saveNetwork(U32 slot)
 
 double neuralNet::runNetwork(const vector<double>& in, const vector<double>& des, vector<double>& out)
 {
-	// TODO: optimize
+	perf_start(RUN_NETWORK);
 	U32 i, j;
 	U32 k;
-	vector<double> Z;
 	U32 lastK;
 	for (k = 1; k < topo.size(); ++k) {
 		Z.resize(topo[k]);
 		lastK = k - 1;
-		vector<double>& curA = k == topo.size() - 1 ? out : layers[k].A;
-		const vector<double>& lastA = lastK ? layers[lastK].A : in;
-		for (j = 0; j < topo[k]; ++j) {
-			Z[j] = layers[k].B[j];
-			for (i = 0; i < topo[lastK]; ++i) {
-				Z[j] += lastA[i] * layers[k].W[j][i];
+		layer& lastLayer = layers[lastK];
+		layer& curLayer = layers[k];
+		vector<double>& curA = k == topo.size() - 1 ? out : curLayer.A;
+		const vector<double>& lastA = lastK ? lastLayer.A : in;
+		U32 ic = topo[lastK];
+		U32 jc = topo[k];
+		vector<double>& curB = curLayer.B;
+		vector<vector<double>>& curW = curLayer.W;
+		for (j = 0; j < jc; ++j) {
+			vector<double>& curWrow = curW[j];
+			Z[j] = curB[j];
+			double& ZjRow = Z[j];
+			for (i = 0; i < ic; ++i) {
+				ZjRow += lastA[i] * curWrow[i];
 			}
-			curA[j] = sigmoid(Z[j]);
+			curA[j] = sigmoid(ZjRow);
 		}
 	}
 	double retCost = 0.0;
 	lastK = k - 1;
-	for (j = 0; j < topo[lastK]; ++j) {
-		//double del = layers[lastK].A[j] - Y[j];
+	U32 jc = topo[lastK];
+	for (j = 0; j < jc; ++j) {
 		double del = out[j] - des[j];
 		retCost += del * del;
 	}
+	perf_end(RUN_NETWORK);
 	return retCost;
 }
 
 void neuralNet::testNetwork()
 {
 	totalCostTest = 0.0;
-	vector<double>& Ain = layers[0].A;
-	S32 lastLayer = topo.size() - 1;
-	vector<double>& Aout = layers[lastLayer].A;
-	S32 firstLayerSize = topo[0];
-	S32 lastLayerSize = topo[lastLayer];
+	//vector<double>& Ain = layers[0].A;
+	//S32 lastLayer = topo.size() - 1;
+	//vector<double>& Aout = layers[lastLayer].A;
+	//S32 firstLayerSize = topo[0];
+	//S32 lastLayerSize = topo[lastLayer];
 	for (U32 t = 0; t < nTest; ++t) {
 		//copy(&inputsTest[t][0], &inputsTest[t][0] + firstLayerSize, &Ain[0]);
 		//copy(&desiredsTest[t][0], &desiredsTest[t][0] + lastLayerSize, &Y[0]);
@@ -354,6 +363,7 @@ void neuralNet::testNetwork()
 
 void neuralNet::gradientDescent(double learn) // gradient descent
 {
+	perf_start(GRAD_DESCENT);
 	S32 i, j;
 	U32 k;
 	// brute force derivatives and run network for cost
@@ -361,29 +371,36 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 		S32 lastK = k - 1;
 		S32 row = topo[k];
 		S32 col = topo[lastK];
+		layer& curLayer = layers[k];
+		vector<double>& curdCdB_CR = curLayer.dCdB_CR;
+		vector<vector<double>>& curdCdW_CR = curLayer.dCdW_CR;
+#ifdef DO_BRUTE_FORCE_DERIVATIVES
+		vector<double>& curdCdB_BF = curLayer.dCdB_BF;
+		vector<vector<double>>& curdCdW_BF = curLayer.dCdW_BF;
+#endif
 		double* addr;
 		for (j = 0; j < row; ++j) {
-			addr = &layers[k].dCdW_CR[j][0];
+			addr = &curdCdW_CR[j][0];
 			fill(addr, addr + col, 0.0);
 #ifdef DO_BRUTE_FORCE_DERIVATIVES
-			addr = &layers[k].dCdW_BF[j][0];
+			addr = &curdCdW_BF[j][0];
 			fill(addr, addr + col, 0.0);
 #endif
 		}
-		addr = &layers[k].dCdB_CR[0];
+		addr = &curdCdB_CR[0];
 		fill(addr, addr + row, 0.0);
 #ifdef DO_BRUTE_FORCE_DERIVATIVES
-		addr = &layers[k].dCdB_BF[0];
+		addr = &curdCdB_BF[0];
 		fill(addr, addr + row, 0.0);
 #endif
 	}
 
 	totalCost = 0.0;
-	vector<double>& Ain = layers[0].A;
-	S32 lastLayer = topo.size() - 1;
-	vector<double>& Aout = layers[lastLayer].A;
-	S32 firstLayerSize = topo[0];
-	S32 lastLayerSize = topo[lastLayer];
+	//vector<double>& Ain = layers[0].A;
+	//S32 lastLayer = topo.size() - 1;
+	//vector<double>& Aout = layers[lastLayer].A;
+	//S32 firstLayerSize = topo[0];
+	//S32 lastLayerSize = topo[lastLayer];
 
 	for (U32 t = 0; t < nTrain; ++t) {
 		//copy(&inputs[t][0], &inputs[t][0] + firstLayerSize, &Ain[0]);
@@ -391,25 +408,32 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 
 		double cost = runNetwork(inputs[t], desireds[t], outputs[t]); // baseline
 #ifdef DO_BRUTE_FORCE_DERIVATIVES
-		// TODO: optimize
 		for (k = 1; k < topo.size(); ++k) {
 			S32 lastK = k - 1;
 			S32 row = topo[k];
 			S32 col = topo[lastK];
+			layer& curLayer = layers[k];
+			vector<double>& curB = curLayer.B;
+			vector<double>& curdCdB_BF = curLayer.dCdB_BF;
+			vector<vector<double>>& curW = curLayer.W;
+			vector<vector<double>>& curdCdW_BF = curLayer.dCdW_BF;
 			// brute force derivatives
 			for (j = 0; j < row; ++j) {
+				vector<double>& curWrow = curW[j];
+				vector<double>& curdcDw_CRrow = curdCdW_BF[j];
 				for (i = 0; i < col; ++i) {
-					double save = layers[k].W[j][i];
-					layers[k].W[j][i] += epsilon;
+					double save = curWrow[i];
+					curWrow[i] += epsilon;
 					double costPweight = runNetwork(inputs[t], desireds[t], outputs[t]);
-					layers[k].W[j][i] = save;
-					layers[k].dCdW_BF[j][i] += (costPweight - cost) / epsilon;
+					curWrow[i] = save;
+					curdcDw_CRrow[i] += (costPweight - cost) / epsilon;
 				}
-				double save = layers[k].B[j];
-				layers[k].B[j] += epsilon;
+				double& curBrow = curB[j];
+				double save = curBrow;
+				curBrow += epsilon;
 				double costPbias = runNetwork(inputs[t], desireds[t], outputs[t]);
-				layers[k].B[j] = save;
-				layers[k].dCdB_BF[j] += (costPbias - cost) / epsilon;
+				curBrow = save;
+				curdCdB_BF[j] += (costPbias - cost) / epsilon;
 			}
 		}
 		runNetwork(inputs[t], desireds[t], outputs[t]); // need correct A? for chain rule derivatives and output
@@ -420,10 +444,9 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 
 		//S32 outSize = topo.size() - 1;
 		//S32 ls = topo[outSize];
-		vector<double> DcostDZ;// (Ls); // same as DcostDBL, used for backtrace
-		vector<double> DcostDA;// (Ls);
+		//vector<double> DcostDZ;// (Ls); // same as DcostDBL, used for backtrace
+		//vector<double> DcostDA;// (Ls);
 		for (k = topo.size() - 1; k > 0; --k) {
-			// TODO: optimize
 			// chain rule derivatives, the last layer
 			// DcostDWL = DcostDAL * DALDZL * DZLDWL
 			// DcostDBL = DcostDAL * DALDZL * DZLDBL
@@ -442,68 +465,101 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 			vector<double>& AL = N == topo.size() ? outputs[t] : layers[L].A;
 			vector<double>& AP = P ? layers[P].A : inputs[t];
 			// cost
-			DcostDA = vector<double>(Ls);
+			DcostDA.resize(Ls);
+			//DcostDA = vector<double>(Ls);
 			if (k == topo.size() - 1) {
 				for (j = 0; j < Ls; ++j) {
 					DcostDA[j] = 2.0*(AL[j] - desireds[t][j]);
 				}
 			} else { // backtrace
 				S32 Ns = topo[N];
-				for (j = 0; j < Ls; ++j) {
-					for (i = 0; i < Ns; ++i) {
-						DcostDA[j] += layers[N].W[i][j] * DcostDZ[i];
+				layer& curLayerN = layers[N];
+				vector<vector<double>>& curW = curLayerN.W;
+#if 1
+				//for (j = 0; j < Ls; ++j) {
+				//	DcostDA[j] = 0.0;
+				//}
+				fill(&DcostDA[0], &DcostDA[0] + Ls, 0.0);
+				for (j = 0; j < Ns; ++j) {
+					double& DcostDZrow = DcostDZ[j];
+					vector<double>& curWrow = curW[j];
+					for (i = 0; i < Ls; ++i) {
+						DcostDA[i] += curWrow[i] * DcostDZrow;
 					}
 				}
+#else
+				for (j = 0; j < Ls; ++j) {
+					double& DcostDArow = DcostDA[j];
+					DcostDArow = 0.0;
+					for (i = 0; i < Ns; ++i) {
+						DcostDArow += curW[i][j] * DcostDZ[i]; // TODO, why is i and j reversed?
+					}
+				}
+#endif
 			}
-			DcostDZ = vector<double>(Ls);
+			DcostDZ.resize(Ls);
+			//DcostDZ = vector<double>(Ls);
+			layer& curLayerL = layers[L];
+			vector<double>& curdCdB_CR = curLayerL.dCdB_CR;
+			vector<vector<double>>& curdCdW_CR = curLayerL.dCdW_CR;
 			for (j = 0; j < Ls; ++j) {
 				// z
 				double DALDZL = (1.0 - AL[j])*AL[j];
 				// bias
-				DcostDZ[j] = DcostDA[j] * DALDZL; // same as DcostDBL
-				layers[L].dCdB_CR[j] += DcostDZ[j]; // add to train/cost
+				double& DcostDZrow = DcostDZ[j];
+				DcostDZrow = DcostDA[j] * DALDZL; // same as DcostDBL
+				curdCdB_CR[j] += DcostDZrow / nTrain; // add to train/cost
 				// weight
+				vector<double>& curdCdW_CRrow = curdCdW_CR[j];
 				for (i = 0; i < Ps; ++i) {
-					double DcostDWL = DcostDZ[j] * AP[i];
-					layers[L].dCdW_CR[j][i] += DcostDWL; // add to train/cost
+					double DcostDWL = DcostDZrow * AP[i];
+					curdCdW_CRrow[i] += DcostDWL / nTrain; // add to train/cost
 				}
 			}
 		}
 	} // end train
 
-	// average derivatives and cost
+#ifdef DO_BRUTE_FORCE_DERIVATIVES
+	// average brute force derivatives
 	// TODO: optimize
 	for (k = 1; k < topo.size(); ++k) {
 		S32 lastK = k - 1;
 		S32 row = topo[k];
 		S32 col = topo[lastK];
+		layer& curLayer = layers[k];
+		vector<double>& curdCdB_BF = curLayer.dCdB_BF;
+		vector<vector<double>>& curdCdW_BF = curLayer.dCdW_BF;
 		for (j = 0; j < row; ++j) {
+			vector<double>& curdCdW_CRrow = curdCdW_BF[j];
 			for (i = 0; i < col; ++i) {
-#ifdef DO_BRUTE_FORCE_DERIVATIVES
-				layers[k].dCdW_BF[j][i] /= nTrain;
-#endif
-				layers[k].dCdW_CR[j][i] /= nTrain;
+				curdCdW_CRrow[i] /= nTrain;
 			}
-#ifdef DO_BRUTE_FORCE_DERIVATIVES
-			layers[k].dCdB_BF[j] /= nTrain;
-#endif
-			layers[k].dCdB_CR[j] /= nTrain;
+			curdCdB_BF[j] /= nTrain;
 		}
 	}
+#endif
+	// average cost
 	avgCost  = totalCost / nTrain;
 
 	// run the gradient descent learn
-	// TODO: optimize
 	for (k = 1; k < topo.size(); ++k) {
 		S32 lastK = k - 1;
 		S32 row = topo[k];
 		S32 col = topo[lastK];
+		layer& curLayer = layers[k];
+		vector<double>& curB = curLayer.B;
+		vector<double>& curdCdB_CR = curLayer.dCdB_CR;
+		vector<vector<double>>& curW = curLayer.W;
+		vector<vector<double>>& curdCdW_CR = curLayer.dCdW_CR;
 		// average
 		for (j = 0; j < row; ++j) {
+			vector<double>& curWrow = curW[j];
+			vector<double>& curdCdW_CRrow = curdCdW_CR[j];
 			for (i = 0; i < col; ++i) {
-				layers[k].W[j][i] -= layers[k].dCdW_CR[j][i] * learn;
+				curWrow[i] -= curdCdW_CRrow[i] * learn;
 			}
-			layers[k].B[j] -= layers[k].dCdB_CR[j] * learn;
+			curB[j] -= curdCdB_CR[j] * learn;
 		}
 	}
+	perf_end(GRAD_DESCENT);
 }

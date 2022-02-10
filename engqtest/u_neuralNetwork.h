@@ -1,6 +1,6 @@
 // some switches
 #define SHOW_WEIGHT_BIAS
-#define SHOW_TRAINING_DATA
+//#define SHOW_TRAINING_DATA
 #define SHOW_TESTING_DATA
 #define DO_BRUTE_FORCE_DERIVATIVES
 #define SHOW_DERIVATIVES
@@ -22,6 +22,11 @@ class neuralNet {
 		vector<double> dCdB_BF;
 #endif
 	};
+	//temporaries, for optimization
+	vector<double> Z;
+	vector<double> DcostDZ;// (Ls); // same as DcostDBL, used for backtrace
+	vector<double> DcostDA;// (Ls);
+
 	// the network
 	vector<layer> layers;
 

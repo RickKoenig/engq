@@ -1,4 +1,4 @@
-//#define PERF_ON
+#define PERF_ON
 #define PERF_FRAMES 64 // power of 2 , 128 is a good value
 // user section
 enum {
@@ -140,7 +140,17 @@ enum {
 	MEDIAN_FAST,
 	MEDIAN_MYHEAP,
 	MEDIAN_SLOW,
-
+//	neural
+	RUN_NETWORK,
+	RUN_NETWORK1,
+	RUN_NETWORK2,
+	RUN_NETWORK3,
+	GRAD_DESCENT,
+	GRAD_DESCENT1,
+	GRAD_DESCENT2,
+	GRAD_DESCENT3,
+	GRAD_DESCENT4,
+	GRAD_DESCENT5,
 };
 
 #ifdef PERF_ON
@@ -284,6 +294,17 @@ C8* perfnames[]={
 	"MEDIAN FAST",
 	"MEDIAN MY HEAP",
 	"MEDIAN SLOW",
+		//	neural
+	"RUN_NETWORK",
+	"RUN_NETWORK1",
+	"RUN_NETWORK2",
+	"RUN_NETWORK3",
+	"GRAD_DESCENT",
+	"GRAD_DESCENT1",
+	"GRAD_DESCENT2",
+	"GRAD_DESCENT3",
+	"GRAD_DESCENT4",
+	"GRAD_DESCENT5",
 };
 // end user section
 

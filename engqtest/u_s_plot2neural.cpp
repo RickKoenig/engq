@@ -4,6 +4,7 @@
 #include <m_eng.h>
 #include "u_plotter2.h"
 #include "u_neuralNetwork.h"
+#include "m_perf.h"
 
 using namespace u_plotter2;
 // Keyboard shortcuts, 'r' to reset/randomize weights and biases
@@ -43,7 +44,7 @@ namespace neuralPlot {
 	double learn = 0.0; // .03125; // how fast to learn, too small too slow, too large too unstable
 	S32 calcAmount = -1; // how many calcs to do, negative run forever, positive decrements every frame until 0 
 	S32 calcSpeed = 1; // number of calculations per frame
-	S32 runTestCount = 5; // how many frames to wait to run test and user
+	S32 runTestCount = 20; // how many frames to wait to run test and user
 	S32 runTest = 0;
 
 #ifdef SHOW_SIGMOID
@@ -471,14 +472,17 @@ void plot2neuralinit()
 
 void plot2neuralproc()
 {
+	perf_start(TEST2);
 	// interact with graph paper
 	plotter2proc();
 	// calc neural interactive
 	commonProc();
+	perf_end(TEST2);
 }
 
 void plot2neuraldraw2d()
 {
+	perf_start(TEST1);
 	// draw graph paper
 	plotter2draw2d();
 // test gradient descent
@@ -532,6 +536,7 @@ void plot2neuraldraw2d()
 		MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 88, C32LIGHTMAGENTA, C32BLACK, "Saving to Slot '%d'", loadSaveSlot);
 		saving--;
 	}
+	perf_end(TEST1);
 }
 
 void plot2neuralexit()
