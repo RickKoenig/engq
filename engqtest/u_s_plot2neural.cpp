@@ -18,8 +18,8 @@ using namespace u_plotter2;
 //#define DO_NEURAL2 // Layers 2 (1 - 1 - 1), 4 vars, 2 costs, test 1 more, total 3
 //#define DO_NEURAL3 // Layers 2 (2 - 2 - 2), 12 vars, 4 costs, test 1 more, total 5
 //#define DO_NEURAL4 // Layers 3 (3 - 2 - 3 - 2), 25 vars, 4 costs, test 2 more, total 6
-#define DO_NEURAL5 // Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 costs
-//#define DO_NEURAL6 // NYI Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs, test 10,000 more costs total 70,000
+//#define DO_NEURAL5 // Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 costs
+#define DO_NEURAL6 // Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs, test 10,000 more costs total 70,000
 #define DO_GRAD_TEST // 1 var, minimize the adjustable quartic equation
 #define SHOW_SIGMOID
 
@@ -42,7 +42,7 @@ namespace neuralPlot {
 	U32 saving = 0;
 	// calc gradient descent
 	double learn = 0.0; // .03125; // how fast to learn, too small too slow, too large too unstable
-	S32 calcAmount = -1; // how many calcs to do, negative run forever, positive decrements every frame until 0 
+	S32 calcAmount = 0; // how many calcs to do, negative run forever, positive decrements every frame until 0 
 	S32 calcSpeed = 1; // number of calculations per frame
 	S32 runTestCount = 20; // how many frames to wait to run test and user
 	S32 runTest = 0;
@@ -186,8 +186,8 @@ namespace neuralPlot {
 		inputTest.clear();
 		desiredTest.clear();
 		for (U32 k = 0; k < doTotal; ++k) {
-			vector<double>in(6);
-			vector<double>des(4);
+			vector<double>in(aTesterTopology[0]);
+			vector<double>des(aTesterTopology[aTesterTopology.size() - 1]);
 			// convert k to binary 6bit
 			U32 val = k;
 			for (U32 i = 0; i < 6; ++i) {
@@ -209,8 +209,177 @@ namespace neuralPlot {
 			}
 		}
 	}
+#endif
+
+
+
+
+
+
+
+
+#ifdef DO_NEURAL6 // handwritten digit recognition 28 by 28 grid
+	class idxFile {
+		vector<vector<double>> input;
+		vector<vector<double>> desired;
+		vector<vector<vector<U8>>> rawInput;
+		vector<U8> rawDesired;
+
+	public:
+		idxFile(const C8* fNameInput, const C8* fNameDesired);
+		~idxFile();
+		vector<vector<double>>* getInput();
+		vector<vector<double>>* getDesired();
+	};
+
+	idxFile::idxFile(const C8* fNameInput, const C8* fNameDesired)
+	{
+		pushandsetdir("neural");
+
+		// mock data for neuralNet
+		vector<double> anInput = vector<double>(784);
+		input.push_back(anInput);
+		input.push_back(anInput);
+		vector<double> aDesired = vector<double>(10);
+		desired.push_back(aDesired);
+		desired.push_back(aDesired);
+
+
+		// input
+		FILE* fh = fopen2(fNameInput, "rb");
+		if (!fh) {
+			return;
+		}
+		U32 magic = filereadU32BE(fh); // big endian file
+		const U32 goodMagic3{ 0x803 }; // unsigned byte, 3 dimensions
+		if (magic != goodMagic3) {
+			logger("bad magic %08x, should be %08x\n", magic, goodMagic3);
+			fclose(fh);
+			return;
+		}
+		logger("file = %s, magic = %08x\n", fNameInput, magic);
+		U32 dataSize3 = filereadU32BE(fh); // how many bitmap are there
+		U32 height = filereadU32BE(fh);
+		U32 width = filereadU32BE(fh);
+		for (U32 k = 0; k < dataSize3; ++k) {
+			vector<vector<U8>> abm(height, vector<U8>(width));
+			for (U32 j = 0; j < height; ++j) {
+				vector<U8>& arow = abm[j];
+				fileread(fh, &arow[0], width);
+			}
+		}
+		fclose(fh);
+
+		// desired
+		fh = fopen2(fNameDesired, "rb");
+		if (!fh) {
+			return;
+		}
+		magic = filereadU32BE(fh); // big endian file
+		const U32 goodMagic1{ 0x801 }; // unsigned byte, 1 dimension
+		if (magic != goodMagic1) {
+			logger("bad magic %08x, should be %08x\n", magic, goodMagic1);
+			fclose(fh);
+			return;
+		}
+		logger("file = %s, magic = %08x\n", fNameDesired, magic);
+		U32 dataSize1 = filereadU32BE(fh);
+		rawDesired.resize(dataSize1);
+		fileread(fh, &rawDesired[0], dataSize1);
+		fclose(fh);
+
+
+#if 0
+		void loadDES(const C8* fname, const vector<U8>& des)
+		{
+			FILE* fh = fopen2(fname, "rb");
+			if (!fh) {
+				return;
+			}
+			U32 magic = filereadU32BE(fh); // big endian file
+			const U32 goodMagic{ 0x801 }; // unsigned byte, 1 dimension
+			if (magic != goodMagic) {
+				logger("bad magic %08x, should be %08x\n", magic, goodMagic);
+				fclose(fh);
+				return;
+			}
+			logger("file = %s, magic = %08x\n", fname, magic);
+			fclose(fh);
+		}
+		void loadBitmaps(const C8* fname, const vector<bitmap32*>& input)
+		{
+			FILE* fh = fopen2(fname, "rb");
+			if (!fh) {
+				return;
+			}
+			U32 magic = filereadU32BE(fh); // big endian file
+			const U32 goodMagic{ 0x803 }; // unsigned byte, 3 dimensions
+			if (magic != goodMagic) {
+				logger("bad magic %08x, should be %08x\n", magic, goodMagic);
+				fclose(fh);
+				return;
+			}
+			logger("file = %s, magic = %08x\n", fname, magic);
+			fclose(fh);
+		}
 
 #endif
+		popdir();
+	}
+
+	vector<vector<double>>* idxFile::getInput()
+	{
+		return &input;
+	}
+
+	vector<vector<double>>* idxFile::getDesired()
+	{
+		return &desired;
+	}
+
+	idxFile::~idxFile()
+	{
+#if 0
+		for (auto aBM : trainingBM) {
+			bitmap32free(aBM);
+		}
+		for (auto aBM : testBM) {
+			bitmap32free(aBM);
+		}
+#endif
+	}
+
+	idxFile* idxFileTrain;
+	idxFile* idxFileTest;
+	const string neuralName{ "Neural6" };
+	vector<U32> aTesterTopology{ 784, 16, 16, 10 }; // a big one!
+	// train
+	// inputs, desires
+	vector<vector<double>>* inputTrain; // get these from idxFile
+	vector<vector<double>>* desiredTrain;
+	// test
+	// inputs, desires
+	vector<vector<double>>* inputTest;
+	vector<vector<double>>* desiredTest;
+
+	void nerual6init()
+	{
+		// read MNIST data
+		idxFileTrain = new idxFile("train-images.idx3-ubyte.bin", "train-labels.idx1-ubyte.bin");
+		idxFileTest = new idxFile("t10k-images.idx3-ubyte.bin", "t10k-labels.idx1-ubyte.bin");
+		// reference from idxFile to args for new neuralNet
+		inputTrain = idxFileTrain->getInput();
+		desiredTrain = idxFileTrain->getDesired();
+		inputTest = idxFileTest->getInput();
+		desiredTest = idxFileTest->getDesired();
+	}
+#endif
+
+
+
+
+
+
 	// one user set to run on runNetwork
 	vector<double> userInputs(aTesterTopology[0]);
 	vector<double> userDesireds(aTesterTopology[aTesterTopology.size() - 1]);
@@ -255,8 +424,8 @@ namespace neuralPlot {
 		{"userInput0", &userInputs[0], D_DOUBLE, FLOATUP / 4},
 		{"userInput1", &userInputs[1], D_DOUBLE, FLOATUP / 4},
 		{"userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
-		{"userDesired1", &userDesireds[1], D_DOUBLE, FLOATUP / 4},
 		{"userOutput0", &userOutputs[0], D_DOUBLE | D_RDONLY},
+		{"userDesired1", &userDesireds[1], D_DOUBLE, FLOATUP / 4},
 		{"userOutput1", &userOutputs[1], D_DOUBLE | D_RDONLY},
 #endif
 #ifdef DO_NEURAL4
@@ -264,8 +433,8 @@ namespace neuralPlot {
 		{"userInput1", &userInputs[1], D_DOUBLE, FLOATUP / 4},
 		{"userInput2", &userInputs[2], D_DOUBLE, FLOATUP / 4},
 		{"userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
-		{"userDesired1", &userDesireds[1], D_DOUBLE, FLOATUP / 4},
 		{"userOutput0", &userOutputs[0], D_DOUBLE | D_RDONLY},
+		{"userDesired1", &userDesireds[1], D_DOUBLE, FLOATUP / 4},
 		{"userOutput1", &userOutputs[1], D_DOUBLE | D_RDONLY},
 #endif
 #ifdef DO_NEURAL5
@@ -276,13 +445,36 @@ namespace neuralPlot {
 		{"userInput4", &userInputs[4], D_DOUBLE, FLOATUP / 4},
 		{"userInput5", &userInputs[5], D_DOUBLE, FLOATUP / 4},
 		{"userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
-		{"userDesired1", &userDesireds[1], D_DOUBLE, FLOATUP / 4},
-		{"userDesired2", &userDesireds[2], D_DOUBLE, FLOATUP / 4},
-		{"userDesired3", &userDesireds[3], D_DOUBLE, FLOATUP / 4},
 		{"userOutput0", &userOutputs[0], D_DOUBLE | D_RDONLY},
+		{"userDesired1", &userDesireds[1], D_DOUBLE, FLOATUP / 4},
 		{"userOutput1", &userOutputs[1], D_DOUBLE | D_RDONLY},
+		{"userDesired2", &userDesireds[2], D_DOUBLE, FLOATUP / 4},
 		{"userOutput2", &userOutputs[2], D_DOUBLE | D_RDONLY},
+		{"userDesired3", &userDesireds[3], D_DOUBLE, FLOATUP / 4},
 		{"userOutput3", &userOutputs[3], D_DOUBLE | D_RDONLY},
+#endif
+#ifdef DO_NEURAL6
+		// userInput is a 28 by 28 grid 784, too big for here, do it graphically instead
+		{"userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
+		{"userOutput0", &userOutputs[0], D_DOUBLE | D_RDONLY},
+		{"userDesired1", &userDesireds[1], D_DOUBLE, FLOATUP / 4},
+		{"userOutput1", &userOutputs[1], D_DOUBLE | D_RDONLY},
+		{"userDesired2", &userDesireds[2], D_DOUBLE, FLOATUP / 4},
+		{"userOutput2", &userOutputs[2], D_DOUBLE | D_RDONLY},
+		{"userDesired3", &userDesireds[3], D_DOUBLE, FLOATUP / 4},
+		{"userOutput3", &userOutputs[3], D_DOUBLE | D_RDONLY},
+		{"userDesired4", &userDesireds[4], D_DOUBLE, FLOATUP / 4},
+		{"userOutput4", &userOutputs[4], D_DOUBLE | D_RDONLY},
+		{"userDesired5", &userDesireds[5], D_DOUBLE, FLOATUP / 4},
+		{"userOutput5", &userOutputs[5], D_DOUBLE | D_RDONLY},
+		{"userDesired6", &userDesireds[6], D_DOUBLE, FLOATUP / 4},
+		{"userOutput6", &userOutputs[6], D_DOUBLE | D_RDONLY},
+		{"userDesired7", &userDesireds[7], D_DOUBLE, FLOATUP / 4},
+		{"userOutput7", &userOutputs[7], D_DOUBLE | D_RDONLY},
+		{"userDesired8", &userDesireds[8], D_DOUBLE, FLOATUP / 4},
+		{"userOutput8", &userOutputs[8], D_DOUBLE | D_RDONLY},
+		{"userDesired9", &userDesireds[9], D_DOUBLE, FLOATUP / 4},
+		{"userOutput9", &userOutputs[9], D_DOUBLE | D_RDONLY},
 #endif
 		{"userCost", &userCost, D_DOUBLEEXP | D_RDONLY},
 	};
@@ -388,7 +580,11 @@ namespace neuralPlot {
 				randomInit();
 				delete aNeuralNet;
 				randomInit();
+#ifdef DO_NEURAL6
+				aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, *inputTest, *desiredTest);
+#else
 				aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest);
+#endif
 				randomNextSeed();
 				break;
 				// load
@@ -465,8 +661,15 @@ void plot2neuralinit()
 #ifdef DO_NEURAL5
 	nerual5init();
 #endif
+#ifdef DO_NEURAL6
+	nerual6init();
+#endif
 	randomInit();
+#ifdef DO_NEURAL6
+	aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, *inputTest, *desiredTest);
+#else
 	aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest);
+#endif
 	randomNextSeed();
 }
 
@@ -545,5 +748,9 @@ void plot2neuralexit()
 	plotter2exit();
 	removedebvars("neural_network");
 	delete aNeuralNet;
+#ifdef DO_NEURAL6
+	delete idxFileTrain;
+	delete idxFileTest;
+#endif
 	aNeuralNet = nullptr;
 }

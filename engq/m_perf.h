@@ -1,4 +1,4 @@
-#define PERF_ON
+//#define PERF_ON
 #define PERF_FRAMES 64 // power of 2 , 128 is a good value
 // user section
 enum {

@@ -96,7 +96,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 				aRow[i] = frand();
 #ifdef SHOW_WEIGHT_BIAS
 				stringstream ssW;
-				ssW << "weight" << k << "_" << j << i;
+				ssW << "weight" << k << "_" << j << "_" << i;
 				C8* name = copyStr(ssW.str().c_str());
 				mv = { name, &aRow[i], D_DOUBLE, FLOATUP / 8 };
 				dbNeuralNet.push_back(mv);
@@ -146,10 +146,22 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 		}
 	}
 #endif
+	stringstream ssOutput;
+	ssOutput << "@yellow@Training Cost " << inputs.size() << " Average";
+	const C8* name = copyStr(ssOutput.str().c_str());
+	mv = { name, &avgCost, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
+	dbNeuralNet.push_back(mv);
+	ssOutput.str(string());
+	ssOutput << "Testing Cost " << inputs.size() << " Total";
+	name = copyStr(ssOutput.str().c_str());
+	mv = { name, &totalCost, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
+	dbNeuralNet.push_back(mv);
+#if 0
 	mv = { copyStr("@yellow@Training Cost Average"), &avgCost, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
 	dbNeuralNet.push_back(mv);
 	mv = { copyStr("Training Cost Total"), &totalCost, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
 	dbNeuralNet.push_back(mv);
+#endif
 #ifdef SHOW_TESTING_DATA
 	mv = { copyStr("@brown@--- Testing data ---"), NULL, D_VOID, 0 };
 	dbNeuralNet.push_back(mv);
@@ -182,9 +194,15 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 		}
 	}
 #endif
-	mv = { copyStr("@brown@Testing Cost Average"), &avgCostTest, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
+	ssOutput.str(string());
+	ssOutput << "@brown@Testing Cost " << inputsTest.size() << " Average";
+	name = copyStr(ssOutput.str().c_str());
+	mv = { name, &avgCostTest, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
 	dbNeuralNet.push_back(mv);
-	mv = { copyStr("Testing Cost Total"), &totalCostTest, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
+	ssOutput.str(string());
+	ssOutput << "Testing Cost " << inputsTest.size() << " Total";
+	name = copyStr(ssOutput.str().c_str());
+	mv = { name, &totalCostTest, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
 	dbNeuralNet.push_back(mv);
 #ifdef SHOW_DERIVATIVES
 	mv = { copyStr("@lightgreen@--- Derivatives of Weights and Biases ---"), NULL, D_VOID, 0 };
@@ -201,13 +219,13 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 #endif
 			for (U32 i = 0; i < colsW; ++i) {
 				stringstream ssW;
-				ssW << "DcostDweight" << k << "_" << j << i << "_CR";
+				ssW << "DcostDweight" << k << "_" << j << "_" << i << "_CR";
 				C8* name = copyStr(ssW.str().c_str());
 				mv = { name, &aRowCR[i], D_DOUBLEEXP | D_RDONLY };
 				dbNeuralNet.push_back(mv);
 #ifdef DO_BRUTE_FORCE_DERIVATIVES
 				ssW.str(string()); // clear
-				ssW << "DcostDweight" << k << "_" << j << i << "_BF";
+				ssW << "DcostDweight" << k << "_" << j << "_" << i << "_BF";
 				name = copyStr(ssW.str().c_str());
 				mv = { name, &aRowBF[i], D_DOUBLEEXP | D_RDONLY };
 				dbNeuralNet.push_back(mv);

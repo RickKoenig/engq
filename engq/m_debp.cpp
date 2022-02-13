@@ -19,7 +19,7 @@
 #define DEBUGNUMLINES (WY/32)
 #endif
 
-#define DEFAULTIDX (DEBUGNUMLINES / 6)
+#define DEFAULTIDX (DEBUGNUMLINES / 3)
 
 // print location
 #define DEBUGSTARTX	 8 //(WX/2) //8
@@ -195,7 +195,10 @@ void debprocesskey()
 		pageSpeed *= 5; // faster page up / page down when a shift key is pressed
 	}
 	if (wininfo.keystate[K_LEFTALT] || wininfo.keystate[K_RIGHTALT]) {
-		pageSpeed *= 25; // faster page up / page down when an alt key is pressed
+		pageSpeed *= 25; // much faster page up / page down when an alt key is pressed
+	}
+	if (wininfo.keystate[K_LEFTCTRL] || wininfo.keystate[K_RIGHTCTRL]) {
+		pageSpeed *= 125; // much much faster page up / page down when an cltl key is pressed
 	}
 	if (KEY=='`')
 		wininfo.indebprint^=1;
