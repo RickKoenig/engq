@@ -252,6 +252,16 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	adddebvars("neuralNet", dbNeuralNet.data(), dbNeuralNet.size());
 }
 
+vector<double>& neuralNet::getOneTrainOutput(U32 idx)
+{
+	return outputs[idx];
+}
+
+vector<double>& neuralNet::getOneTestOutput(U32 idx)
+{
+	return outputsTest[idx];
+}
+
 neuralNet::~neuralNet()
 {
 	// unpublish the debprint menu

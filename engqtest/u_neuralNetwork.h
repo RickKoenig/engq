@@ -72,5 +72,7 @@ public:
 	void testNetwork();
 	bool loadNetwork(U32 slot); // true if loaded, false if not loaded
 	void saveNetwork(U32 slot);
+	vector<double>& getOneTrainOutput(U32 idx);
+	vector<double>& getOneTestOutput(U32 idx);
 	~neuralNet();
 };

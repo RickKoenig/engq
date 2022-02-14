@@ -211,28 +211,26 @@ namespace neuralPlot {
 	}
 #endif
 
-
-
-
-
-
-
-
 #ifdef DO_NEURAL6 // handwritten digit recognition 28 by 28 grid
 	class idxFile {
+		// for network
 		vector<vector<double>> input;
 		vector<vector<double>> desired;
+		// for display
 		vector<vector<vector<U8>>> rawInput;
 		vector<U8> rawDesired;
-
 	public:
-		idxFile(const C8* fNameInput, const C8* fNameDesired);
-		~idxFile();
+		idxFile(const C8* fNameInput, const C8* fNameDesired, U32 limit = 0);
+		U32 getNumData();
+		// for network
 		vector<vector<double>>* getInput();
 		vector<vector<double>>* getDesired();
+		// for display
+		U32 getOneDesired(U32 idx);
+		vector<vector<U8>>* getOneImage(U32 idx);
 	};
 
-	idxFile::idxFile(const C8* fNameInput, const C8* fNameDesired)
+	idxFile::idxFile(const C8* fNameInput, const C8* fNameDesired, U32 limit)
 	{
 		pushandsetdir("neural");
 
@@ -243,7 +241,6 @@ namespace neuralPlot {
 		vector<double> aDesired = vector<double>(10);
 		desired.push_back(aDesired);
 		desired.push_back(aDesired);
-
 
 		// input
 		FILE* fh = fopen2(fNameInput, "rb");
@@ -258,7 +255,10 @@ namespace neuralPlot {
 			return;
 		}
 		logger("file = %s, magic = %08x\n", fNameInput, magic);
-		U32 dataSize3 = filereadU32BE(fh); // how many bitmap are there
+		U32 dataSize3 = filereadU32BE(fh); // how many bitmaps are there
+		if (limit && dataSize3 > limit) {
+			dataSize3 = limit;
+		}
 		U32 height = filereadU32BE(fh);
 		U32 width = filereadU32BE(fh);
 		for (U32 k = 0; k < dataSize3; ++k) {
@@ -267,6 +267,7 @@ namespace neuralPlot {
 				vector<U8>& arow = abm[j];
 				fileread(fh, &arow[0], width);
 			}
+			rawInput.push_back(abm);
 		}
 		fclose(fh);
 
@@ -284,47 +285,18 @@ namespace neuralPlot {
 		}
 		logger("file = %s, magic = %08x\n", fNameDesired, magic);
 		U32 dataSize1 = filereadU32BE(fh);
+		if (limit && dataSize1 > limit) {
+			dataSize1 = limit;
+		}
 		rawDesired.resize(dataSize1);
 		fileread(fh, &rawDesired[0], dataSize1);
 		fclose(fh);
-
-
-#if 0
-		void loadDES(const C8* fname, const vector<U8>& des)
-		{
-			FILE* fh = fopen2(fname, "rb");
-			if (!fh) {
-				return;
-			}
-			U32 magic = filereadU32BE(fh); // big endian file
-			const U32 goodMagic{ 0x801 }; // unsigned byte, 1 dimension
-			if (magic != goodMagic) {
-				logger("bad magic %08x, should be %08x\n", magic, goodMagic);
-				fclose(fh);
-				return;
-			}
-			logger("file = %s, magic = %08x\n", fname, magic);
-			fclose(fh);
-		}
-		void loadBitmaps(const C8* fname, const vector<bitmap32*>& input)
-		{
-			FILE* fh = fopen2(fname, "rb");
-			if (!fh) {
-				return;
-			}
-			U32 magic = filereadU32BE(fh); // big endian file
-			const U32 goodMagic{ 0x803 }; // unsigned byte, 3 dimensions
-			if (magic != goodMagic) {
-				logger("bad magic %08x, should be %08x\n", magic, goodMagic);
-				fclose(fh);
-				return;
-			}
-			logger("file = %s, magic = %08x\n", fname, magic);
-			fclose(fh);
-		}
-
-#endif
 		popdir();
+	}
+
+	U32 idxFile::getNumData()
+	{
+		return rawDesired.size();
 	}
 
 	vector<vector<double>>* idxFile::getInput()
@@ -337,20 +309,20 @@ namespace neuralPlot {
 		return &desired;
 	}
 
-	idxFile::~idxFile()
+	U32 idxFile::getOneDesired(U32 idx)
 	{
-#if 0
-		for (auto aBM : trainingBM) {
-			bitmap32free(aBM);
-		}
-		for (auto aBM : testBM) {
-			bitmap32free(aBM);
-		}
-#endif
+		return rawDesired[idx];
+	}
+
+	vector<vector<U8>>* idxFile::getOneImage(U32 idx)
+	{
+		return &rawInput[idx];
 	}
 
 	idxFile* idxFileTrain;
 	idxFile* idxFileTest;
+	S32 idxTrain;
+	S32 idxTest;
 	const string neuralName{ "Neural6" };
 	vector<U32> aTesterTopology{ 784, 16, 16, 10 }; // a big one!
 	// train
@@ -362,29 +334,61 @@ namespace neuralPlot {
 	vector<vector<double>>* inputTest;
 	vector<vector<double>>* desiredTest;
 
+	bitmap32* userBM; // draw hand numbers here
+
+	// helper
+	bitmap32* makeBMfromImage(const vector<vector<U8>>& img)
+	{
+		U32 wid = img[0].size();
+		U32 hit = img.size();
+		bitmap32* ret = bitmap32alloc(wid, hit);
+		U32 i, j;
+		C32* data = ret->data;
+		for (j = 0; j < hit; ++j) {
+			const vector<U8>& row = img[j];
+			for (i = 0; i < wid; ++i) {
+				U8 rawVal = row[i];
+				C32 c32Val = C32(rawVal, rawVal, rawVal);
+				*data++ = c32Val;
+			}
+		}
+		return ret;
+	}
+
+	bitmap32* scale8(bitmap32* in)
+	{
+		bitmap32* bm2 = bitmap32double(in);
+		bitmap32* bm4 = bitmap32double(bm2);
+		bitmap32* bm8 = bitmap32double(bm4);
+		bitmap32free(bm2);
+		bitmap32free(bm4);
+		return bm8;
+	}
+
 	void nerual6init()
 	{
+		idxTrain = 0;
+		idxTest = 0;
 		// read MNIST data
-		idxFileTrain = new idxFile("train-images.idx3-ubyte.bin", "train-labels.idx1-ubyte.bin");
-		idxFileTest = new idxFile("t10k-images.idx3-ubyte.bin", "t10k-labels.idx1-ubyte.bin");
+		idxFileTrain = new idxFile("train-images.idx3-ubyte.bin", "train-labels.idx1-ubyte.bin", 100);
+		idxFileTest = new idxFile("t10k-images.idx3-ubyte.bin", "t10k-labels.idx1-ubyte.bin", 10);
 		// reference from idxFile to args for new neuralNet
 		inputTrain = idxFileTrain->getInput();
 		desiredTrain = idxFileTrain->getDesired();
 		inputTest = idxFileTest->getInput();
 		desiredTest = idxFileTest->getDesired();
+		// create a user hand drawing bitmap
+		vector<vector<U8>>* anImage = idxFileTrain->getOneImage(0);
+		userBM = bitmap32alloc(anImage[0].size(), anImage->size(),C32CYAN);
 	}
 #endif
-
-
-
-
-
 
 	// one user set to run on runNetwork
 	vector<double> userInputs(aTesterTopology[0]);
 	vector<double> userDesireds(aTesterTopology[aTesterTopology.size() - 1]);
 	vector<double> userOutputs(aTesterTopology[aTesterTopology.size() - 1]);
 	double userCost = 0;
+
 	// for debvars
 	struct menuvar plot2neuralDeb[] = {
 #ifdef DO_GRAD_TEST
@@ -455,7 +459,9 @@ namespace neuralPlot {
 #endif
 #ifdef DO_NEURAL6
 		// userInput is a 28 by 28 grid 784, too big for here, do it graphically instead
-		{"userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
+		{"@lightmagenta@idxTrain", &idxTrain, D_INT, 1},
+		{"idxTest", &idxTest, D_INT, 1},
+		{"@lightcyan@userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
 		{"userOutput0", &userOutputs[0], D_DOUBLE | D_RDONLY},
 		{"userDesired1", &userDesireds[1], D_DOUBLE, FLOATUP / 4},
 		{"userOutput1", &userOutputs[1], D_DOUBLE | D_RDONLY},
@@ -610,6 +616,14 @@ namespace neuralPlot {
 		calcAmount = range(-1, calcAmount, 1000000);
 		calcSpeed = range(1, calcSpeed, 10000);
 		runTestCount = range(0, runTestCount, 1000);
+#ifdef DO_NEURAL6
+		// range check idx for showing data
+		S32 nd = idxFileTrain->getNumData();
+		idxTrain = range(0, idxTrain, nd - 1);
+		nd = idxFileTest->getNumData();
+		idxTest = range(0, idxTest, nd - 1);
+#endif
+
 		if (calcAmount != 0) {
 			for (S32 step = 0; step < calcSpeed; ++step) {
 #ifdef DO_GRAD_TEST
@@ -676,6 +690,9 @@ void plot2neuralinit()
 void plot2neuralproc()
 {
 	perf_start(TEST2);
+#ifdef DO_NEURAL6
+	MBUT = 0; // don't move graph paper when hand drawing numbers
+#endif
 	// interact with graph paper
 	plotter2proc();
 	// calc neural interactive
@@ -683,12 +700,21 @@ void plot2neuralproc()
 	perf_end(TEST2);
 }
 
+void showOutput(U32 yoffset, const vector<double>& outputs)
+{
+	for (U32 i = 0; i < 10; ++i) {
+		double val = outputs[i];
+		bool hilit = i == 9;
+		MEDIUMFONT->outtextxybf32(B32, WX / 2 + 28, yoffset + i * 16, hilit ? C32LIGHTGREEN : C32(255, 150, 255), C32BLACK, "D %d, V = %6.2f%%", i, 100 * val);
+	}
+}
+
 void plot2neuraldraw2d()
 {
 	perf_start(TEST1);
 	// draw graph paper
 	plotter2draw2d();
-// test gradient descent
+	// test gradient descent
 #ifdef DO_GRAD_TEST
 	drawfunction(polyFunction, C32CYAN);
 	drawfunction(polyFunctionPrime, C32RED);
@@ -739,6 +765,40 @@ void plot2neuraldraw2d()
 		MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 88, C32LIGHTMAGENTA, C32BLACK, "Saving to Slot '%d'", loadSaveSlot);
 		saving--;
 	}
+#ifdef DO_NEURAL6
+	// draw images from mnist database
+	// train
+	bitmap32* abm = makeBMfromImage(*idxFileTrain->getOneImage(idxTrain));
+	bitmap32* bigger = scale8(abm);
+	clipblit32(bigger, B32, 0, 0, 3 * WX / 4, WY / 2, bigger->size.x, bigger->size.y);
+	bitmap32free(abm);
+	bitmap32free(bigger);
+	U32 des = idxFileTrain->getOneDesired(idxTrain);
+	LARGEFONT->outtextxybf32(B32, WX / 2 + 28, WY / 2, C32LIGHTMAGENTA, C32BLACK, "Train Desired '%d'", des);
+	showOutput(WY / 2 + 40, aNeuralNet->getOneTrainOutput(idxTrain));
+
+	// test
+	abm = makeBMfromImage(*idxFileTest->getOneImage(idxTest));
+	bigger = scale8(abm);
+	clipblit32(bigger, B32, 0, 0, 3 * WX / 4, 3 * WY / 4, bigger->size.x, bigger->size.y);
+	bitmap32free(abm);
+	bitmap32free(bigger);
+	des = idxFileTest->getOneDesired(idxTest);
+	LARGEFONT->outtextxybf32(B32, WX / 2 + 28, 3 * WY / 4, C32LIGHTMAGENTA, C32BLACK, " Test Desired '%d'", des);
+	showOutput(3 * WY / 4 + 40, aNeuralNet->getOneTestOutput(idxTest));
+
+	// user
+	bigger = scale8(userBM);
+	clipblit32(bigger, B32, 0, 0, 3 * WX / 4, WY / 4, bigger->size.x, bigger->size.y);
+	bitmap32free(bigger);
+	LARGEFONT->outtextxybf32(B32, WX / 2 + 28, WY / 4, C32LIGHTMAGENTA, C32BLACK, "User", des);
+	showOutput(WY / 4 + 40, userOutputs);
+
+	// instructions for user
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 154, C32YELLOW, C32BLACK, "'LMB': Draw Foreground (white)");
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 174, C32YELLOW, C32BLACK, "'RMB': Draw Background (black)");
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 194, C32YELLOW, C32BLACK, "'c': Clear Image");
+#endif
 	perf_end(TEST1);
 }
 
@@ -751,6 +811,7 @@ void plot2neuralexit()
 #ifdef DO_NEURAL6
 	delete idxFileTrain;
 	delete idxFileTest;
+	bitmap32free(userBM);
 #endif
 	aNeuralNet = nullptr;
 }
