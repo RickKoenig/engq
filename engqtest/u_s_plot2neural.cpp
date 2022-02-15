@@ -612,6 +612,18 @@ namespace neuralPlot {
 	}
 #endif
 
+#ifdef DO_NEURAL6
+	void getUserInputsFromBM(const bitmap32* userBM, vector<double>& userInputs)
+	{
+		U32 outIdx = 0;
+		U32 prod = userBM->size.x * userBM->size.y;
+		const C32* bmData = userBM->data;
+		for (U32 i = 0; i < prod; ++i) {
+			userInputs[i] = LO + (HI - LO) * bmData[i].g / 255.0;
+		}
+	}
+#endif
+
 	void commonProc()
 	{
 		// range check gradient descent
@@ -685,6 +697,9 @@ namespace neuralPlot {
 				runTest = runTestCount;
 				aNeuralNet->testNetwork();
 				// run 1 user setting
+#ifdef DO_NEURAL6
+				getUserInputsFromBM(userBM, userInputs);
+#endif
 				userCost = aNeuralNet->runNetwork(userInputs, userDesireds, userOutputs);
 			}
 			--runTest;
@@ -724,10 +739,15 @@ namespace neuralPlot {
 		MEDIUMFONT->outtextxybf32(B32, WX / 2 + 28, yoffset + 160, C32LIGHTMAGENTA, C32BLACK, "Cost = %f", cost);
 	}
 
+#ifdef DO_NEURAL6
+	void getUserInputsFromBM()
+	{
+
+	}
+#endif
 } // end namespace neuralPlot
 
 using namespace neuralPlot;
-
 void plot2neuralinit()
 {
 	runinbackgroundSave = wininfo.runinbackground;
