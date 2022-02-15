@@ -5,6 +5,12 @@
 //#define DO_BRUTE_FORCE_DERIVATIVES
 //#define SHOW_DERIVATIVES
 
+// try some stuff
+//#define CLAMP_SIGMOID
+#ifdef CLAMP_SIGMOID
+#define CLAMP_AMOUNT 25.0
+#endif
+
 class neuralNet {
 	string name;
 	vector<U32> topo; // the structure of the network
@@ -13,6 +19,7 @@ class neuralNet {
 	// the topo.size() - 1 layer is the output layer
 	struct layer {
 		vector<double> A; // layer 0 and layer nL - 1 don't have an A, instead it's input and output
+		vector<double> Z; // layer 0 doesn't have a Z
 		vector<vector<double>> W;
 		vector<double> B;
 		vector<vector<double>> dCdW_CR;
@@ -23,7 +30,6 @@ class neuralNet {
 #endif
 	};
 	//temporaries, for optimization
-	vector<double> Z;
 	vector<double> DcostDZ;// (Ls); // same as DcostDBL, used for backtrace
 	vector<double> DcostDA;// (Ls);
 
@@ -31,9 +37,9 @@ class neuralNet {
 	vector<layer> layers;
 
 	// inputs and outputs
-	vector<vector<double>>& inputs;
-	vector<vector<double>>& desireds;
-	vector<vector<double>> outputs;
+	vector<vector<double>>& inputsTrain;
+	vector<vector<double>>& desiredsTrain;
+	vector<vector<double>> outputsTrain;
 	U32 nTrain;
 	vector<vector<double>>& inputsTest;
 	vector<vector<double>>& desiredsTest;
@@ -74,5 +80,7 @@ public:
 	void saveNetwork(U32 slot);
 	vector<double>& getOneTrainOutput(U32 idx);
 	vector<double>& getOneTestOutput(U32 idx);
+	vector<double>& getOneTrainDesired(U32 idx);
+	vector<double>& getOneTestDesired(U32 idx);
 	~neuralNet();
 };

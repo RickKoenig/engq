@@ -12,7 +12,7 @@ C8* neuralNet::copyStr(const C8* in) // free with delete, all string names in db
 neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	, vector<vector<double>>& inTrain, vector<vector<double>>& desTrain
 	,vector<vector<double>>& inTester, vector<vector<double>>& desTester)
-	: name(namea), inputs(inTrain), desireds(desTrain), nTrain(desTrain.size())
+	: name(namea), inputsTrain(inTrain), desiredsTrain(desTrain), nTrain(desTrain.size())
 	,inputsTest(inTester), desiredsTest(desTester), nTest(desTester.size())
 {
 	if (inTrain.empty()) {
@@ -44,8 +44,8 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	}
 	topo = topology;
 	// create outputs for both training and testing
-	S32 outputSize = desireds[0].size();
-	outputs = vector<vector<double>>(nTrain, vector<double>(outputSize));
+	S32 outputSize = desiredsTrain[0].size();
+	outputsTrain = vector<vector<double>>(nTrain, vector<double>(outputSize));
 	outputsTest = vector<vector<double>>(nTest, vector<double>(outputSize));
 	menuvar mv{ copyStr("@cyan@--- Neural Network ---"), NULL, D_VOID, 0 };
 	dbNeuralNet.push_back(mv);
@@ -68,6 +68,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 				// no need for A[0] or A[nL - 1], it comes from input and output
 				aLayer.A = vector<double>(cols);
 			}
+			aLayer.Z = vector<double>(cols);
 			// Layer 0 has none of this, it's the input layer
 			S32 rows = topology[k - 1];
 			aLayer.B = vector<double>(cols);
@@ -93,7 +94,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 		for (U32 j = 0; j < rowsW; ++j) {
 			vector<double>& aRow = lay.W[j];
 			for (U32 i = 0; i < colsW; ++i) {
-				aRow[i] = frand();
+				aRow[i] = frand() * 20.0 - 10.0;
 #ifdef SHOW_WEIGHT_BIAS
 				stringstream ssW;
 				ssW << "weight" << k << "_" << j << "_" << i;
@@ -104,7 +105,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 			}
 		}
 		for (U32 j = 0; j < rowsW; ++j) {
-			lay.B[j] = frand();
+			lay.B[j] = frand() * 20.0 - 10.0;
 #ifdef SHOW_WEIGHT_BIAS
 			stringstream ssB;
 			ssB << "bias" << k << "_" << j;
@@ -119,7 +120,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	dbNeuralNet.push_back(mv);
 	// add inputs to debprint menu
 	for (U32 j = 0; j < nTrain; ++j) {
-		vector<double>& anInput = inputs[j];
+		vector<double>& anInput = inputsTrain[j];
 		for (U32 i = 0; i < anInput.size(); ++i) {
 			stringstream ssInput;
 			ssInput << "input" << j << "_" << i;
@@ -130,8 +131,8 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	}
 	// add desireds and outputs to debprint menu
 	for (U32 j = 0; j < nTrain; ++j) {
-		vector<double>& aDesired = desireds[j];
-		vector<double>& anOutput = outputs[j];
+		vector<double>& aDesired = desiredsTrain[j];
+		vector<double>& anOutput = outputsTrain[j];
 		for (U32 i = 0; i < aDesired.size(); ++i) {
 			stringstream ssDesired;
 			ssDesired << "desired" << j << "_" << i;
@@ -147,12 +148,12 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	}
 #endif
 	stringstream ssOutput;
-	ssOutput << "@yellow@Training Cost " << inputs.size() << " Average";
+	ssOutput << "@yellow@Training Cost " << inputsTrain.size() << " Average";
 	const C8* name = copyStr(ssOutput.str().c_str());
 	mv = { name, &avgCost, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
 	dbNeuralNet.push_back(mv);
 	ssOutput.str(string());
-	ssOutput << "Testing Cost " << inputs.size() << " Total";
+	ssOutput << "Testing Cost " << inputsTrain.size() << " Total";
 	name = copyStr(ssOutput.str().c_str());
 	mv = { name, &totalCost, D_DOUBLEEXP | D_RDONLY, FLOATUP / 8 };
 	dbNeuralNet.push_back(mv);
@@ -254,12 +255,22 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 
 vector<double>& neuralNet::getOneTrainOutput(U32 idx)
 {
-	return outputs[idx];
+	return outputsTrain[idx];
 }
 
 vector<double>& neuralNet::getOneTestOutput(U32 idx)
 {
 	return outputsTest[idx];
+}
+
+vector<double>& neuralNet::getOneTrainDesired(U32 idx)
+{
+	return desiredsTrain[idx];
+}
+
+vector<double>& neuralNet::getOneTestDesired(U32 idx)
+{
+	return desiredsTest[idx];
 }
 
 neuralNet::~neuralNet()
@@ -336,11 +347,19 @@ void neuralNet::saveNetwork(U32 slot)
 double neuralNet::runNetwork(const vector<double>& in, const vector<double>& des, vector<double>& out)
 {
 	perf_start(RUN_NETWORK);
+#if 0
+	static U32 count;
+	double inputSum = 0.0;
+	for (auto v : in) {
+		inputSum += v;
+	}
+#endif
+
 	U32 i, j;
 	U32 k;
 	U32 lastK;
 	for (k = 1; k < topo.size(); ++k) {
-		Z.resize(topo[k]);
+		//Z.resize(topo[k]);
 		lastK = k - 1;
 		layer& lastLayer = layers[lastK];
 		layer& curLayer = layers[k];
@@ -350,13 +369,17 @@ double neuralNet::runNetwork(const vector<double>& in, const vector<double>& des
 		U32 jc = topo[k];
 		vector<double>& curB = curLayer.B;
 		vector<vector<double>>& curW = curLayer.W;
+		vector<double>& curZ = curLayer.Z;
 		for (j = 0; j < jc; ++j) {
 			vector<double>& curWrow = curW[j];
-			Z[j] = curB[j];
-			double& ZjRow = Z[j];
+			curZ[j] = curB[j];
+			double& ZjRow = curZ[j];
 			for (i = 0; i < ic; ++i) {
 				ZjRow += lastA[i] * curWrow[i];
 			}
+#ifdef CLAMP_SIGMOID
+			ZjRow = range(-CLAMP_AMOUNT, ZjRow, CLAMP_AMOUNT);
+#endif
 			curA[j] = sigmoid(ZjRow);
 		}
 	}
@@ -367,6 +390,13 @@ double neuralNet::runNetwork(const vector<double>& in, const vector<double>& des
 		double del = out[j] - des[j];
 		retCost += del * del;
 	}
+#if 0
+	double outputSum = 0.0;
+	for (auto v : out) {
+		outputSum += v;
+	}
+	logger("run network %d, insum = %f, outsum = %f\n", count++, inputSum, outputSum);
+#endif
 	perf_end(RUN_NETWORK);
 	return retCost;
 }
@@ -434,7 +464,7 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 		//copy(&inputs[t][0], &inputs[t][0] + firstLayerSize, &Ain[0]);
 		//copy(&desireds[t][0], &desireds[t][0] + lastLayerSize, &Y[0]);
 
-		double cost = runNetwork(inputs[t], desireds[t], outputs[t]); // baseline
+		double cost = runNetwork(inputsTrain[t], desiredsTrain[t], outputsTrain[t]); // baseline
 #ifdef DO_BRUTE_FORCE_DERIVATIVES
 		for (k = 1; k < topo.size(); ++k) {
 			S32 lastK = k - 1;
@@ -452,19 +482,19 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 				for (i = 0; i < col; ++i) {
 					double save = curWrow[i];
 					curWrow[i] += epsilon;
-					double costPweight = runNetwork(inputs[t], desireds[t], outputs[t]);
+					double costPweight = runNetwork(inputsTrain[t], desiredsTrain[t], outputsTrain[t]);
 					curWrow[i] = save;
 					curdcDw_CRrow[i] += (costPweight - cost) / epsilon;
 				}
 				double& curBrow = curB[j];
 				double save = curBrow;
 				curBrow += epsilon;
-				double costPbias = runNetwork(inputs[t], desireds[t], outputs[t]);
+				double costPbias = runNetwork(inputsTrain[t], desiredsTrain[t], outputsTrain[t]);
 				curBrow = save;
 				curdCdB_BF[j] += (costPbias - cost) / epsilon;
 			}
 		}
-		runNetwork(inputs[t], desireds[t], outputs[t]); // need correct A? for chain rule derivatives and output
+		runNetwork(inputsTrain[t], desiredsTrain[t], outputsTrain[t]); // need correct A? for chain rule derivatives and output
 #endif
 		//copy(&Aout[0], &Aout[0] + lastLayerSize, &outputs[t][0]);
 
@@ -490,14 +520,14 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 			S32 Ps = topo[P]; // previous layer
 			//S32 row = Ls;
 			//S32 col = Ps;
-			vector<double>& AL = N == topo.size() ? outputs[t] : layers[L].A;
-			vector<double>& AP = P ? layers[P].A : inputs[t];
+			vector<double>& AL = N == topo.size() ? outputsTrain[t] : layers[L].A;
+			vector<double>& AP = P ? layers[P].A : inputsTrain[t];
 			// cost
 			DcostDA.resize(Ls);
 			//DcostDA = vector<double>(Ls);
 			if (k == topo.size() - 1) {
 				for (j = 0; j < Ls; ++j) {
-					DcostDA[j] = 2.0*(AL[j] - desireds[t][j]);
+					DcostDA[j] = 2.0*(AL[j] - desiredsTrain[t][j]);
 				}
 			} else { // backtrace
 				S32 Ns = topo[N];
@@ -530,9 +560,13 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 			layer& curLayerL = layers[L];
 			vector<double>& curdCdB_CR = curLayerL.dCdB_CR;
 			vector<vector<double>>& curdCdW_CR = curLayerL.dCdW_CR;
+			vector<double>& ZL = curLayerL.Z;
 			for (j = 0; j < Ls; ++j) {
 				// z
-				double DALDZL = (1.0 - AL[j])*AL[j];
+				//double DALDZL = (1.0 - AL[j])*AL[j];
+				double e = exp(ZL[j]);
+				double ep1 = e + 1.0;
+				double DALDZL = e / (ep1 * ep1);
 				// bias
 				double& DcostDZrow = DcostDZ[j];
 				DcostDZrow = DcostDA[j] * DALDZL; // same as DcostDBL

@@ -22,6 +22,7 @@ using namespace u_plotter2;
 #define DO_NEURAL6 // Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs, test 10,000 more costs total 70,000
 #define DO_GRAD_TEST // 1 var, minimize the adjustable quartic equation
 #define SHOW_SIGMOID
+//#define SHOW_DESIREDS_OVER_OUTPUT // for DO_NEURAL6
 
 #ifdef USE_TIMEB
 #include <sys/timeb.h>
@@ -29,9 +30,15 @@ using namespace u_plotter2;
 
 namespace neuralPlot {
 	// common data
+#ifdef SHOW_DESIREDS_OVER_OUTPUT
+	const bool showDesireds = true;
+#else
+	const bool showDesireds = false;
+#endif
+	S32 runinbackgroundSave;
 	const U32 uiCounter = 30; // for load and save models
 // these are not on time
-	U32 randomSeed = 123456;
+	U32 randomSeed = 456;
 	U32 randomNext = 1;
 	// for load and save weights and biases
 	U32 loadSaveSlot = 0;
@@ -42,14 +49,19 @@ namespace neuralPlot {
 	U32 saving = 0;
 	// calc gradient descent
 	double learn = 0.0; // .03125; // how fast to learn, too small too slow, too large too unstable
-	S32 calcAmount = 0; // how many calcs to do, negative run forever, positive decrements every frame until 0 
+	S32 calcAmount = 1; // how many calcs to do, negative run forever, positive decrements every frame until 0 
 	S32 calcSpeed = 1; // number of calculations per frame
-	S32 runTestCount = 20; // how many frames to wait to run test and user
+	S32 runTestCount = 0;// 20; // how many frames to wait to run test and user
 	S32 runTest = 0;
+
+	const double LO = .1;
+	const double HI = .9;
 
 #ifdef SHOW_SIGMOID
 	double sigmoidIn = 0.0;
 	double sigmoidOut;
+	double sigmoidOutPrime;
+	double sigmoidOutPrime2;
 #endif
 #ifdef DO_GRAD_TEST
 	// 4th order polynomial
@@ -177,8 +189,6 @@ namespace neuralPlot {
 		const U32 doTrain = 60;
 		const U32 doTest = 4;
 		const U32 doTotal = doTrain + doTest;
-		const double LO = .1;
-		const double HI = .9;
 		// input size 6
 		// output size 4
 		inputTrain.clear();
@@ -234,14 +244,6 @@ namespace neuralPlot {
 	{
 		pushandsetdir("neural");
 
-		// mock data for neuralNet
-		vector<double> anInput = vector<double>(784);
-		input.push_back(anInput);
-		input.push_back(anInput);
-		vector<double> aDesired = vector<double>(10);
-		desired.push_back(aDesired);
-		desired.push_back(aDesired);
-
 		// input
 		FILE* fh = fopen2(fNameInput, "rb");
 		if (!fh) {
@@ -261,6 +263,7 @@ namespace neuralPlot {
 		}
 		U32 height = filereadU32BE(fh);
 		U32 width = filereadU32BE(fh);
+		U32 prod = width * height;
 		for (U32 k = 0; k < dataSize3; ++k) {
 			vector<vector<U8>> abm(height, vector<U8>(width));
 			for (U32 j = 0; j < height; ++j) {
@@ -292,6 +295,26 @@ namespace neuralPlot {
 		fileread(fh, &rawDesired[0], dataSize1);
 		fclose(fh);
 		popdir();
+		// data for neuralNet
+		for (U32 k = 0; k < dataSize1; ++k) {
+			// input image
+			vector<double> anInput = vector<double>(prod);
+			double* dest = &anInput[0];
+			for (U32 j = 0; j < height; ++j) {
+				vector<U8>& aRow = rawInput[k][j];
+				for (U32 i = 0; i < width; ++i) {
+					// 0 to 255 ==> LO to HI
+					*dest++ = LO + (HI - LO) * aRow[i] / 255.0;
+				}
+			}
+			input.push_back(anInput);
+			// desired output
+			vector<double> aDesired = vector<double>(10); // number of digits
+			for (U32 j = 0; j < 10; ++j) {
+				aDesired[j] = j == rawDesired[k] ? HI : LO;
+			}
+			desired.push_back(aDesired);
+		}
 	}
 
 	U32 idxFile::getNumData()
@@ -335,6 +358,8 @@ namespace neuralPlot {
 	vector<vector<double>>* desiredTest;
 
 	bitmap32* userBM; // draw hand numbers here
+	bitmap32* trainBM;
+	bitmap32* testBM;
 
 	// helper
 	bitmap32* makeBMfromImage(const vector<vector<U8>>& img)
@@ -371,7 +396,7 @@ namespace neuralPlot {
 		idxTest = 0;
 		// read MNIST data
 		idxFileTrain = new idxFile("train-images.idx3-ubyte.bin", "train-labels.idx1-ubyte.bin", 100);
-		idxFileTest = new idxFile("t10k-images.idx3-ubyte.bin", "t10k-labels.idx1-ubyte.bin", 10);
+		idxFileTest = new idxFile("t10k-images.idx3-ubyte.bin", "t10k-labels.idx1-ubyte.bin", 2);
 		// reference from idxFile to args for new neuralNet
 		inputTrain = idxFileTrain->getInput();
 		desiredTrain = idxFileTrain->getDesired();
@@ -379,7 +404,9 @@ namespace neuralPlot {
 		desiredTest = idxFileTest->getDesired();
 		// create a user hand drawing bitmap
 		vector<vector<U8>>* anImage = idxFileTrain->getOneImage(0);
-		userBM = bitmap32alloc(anImage[0].size(), anImage->size(),C32CYAN);
+		userBM = bitmap32alloc(anImage[0].size(), anImage->size(), C32CYAN);
+		trainBM = bitmap32alloc(anImage[0].size(), anImage->size(), C32CYAN);
+		testBM = bitmap32alloc(anImage[0].size(), anImage->size(), C32CYAN);
 	}
 #endif
 
@@ -406,6 +433,8 @@ namespace neuralPlot {
 		{"@brown@--- sigmoid graph ---", NULL, D_VOID, 0},
 		{"sigmoid in", &sigmoidIn, D_DOUBLE, FLOATUP / 8},
 		{"sigmoid out", &sigmoidOut, D_DOUBLEEXP | D_RDONLY},
+		{"sigmoid out prime", &sigmoidOutPrime, D_DOUBLEEXP | D_RDONLY},
+		{"sigmoid out prime2", &sigmoidOutPrime2, D_DOUBLEEXP | D_RDONLY},
 #endif
 		{"@yellow@--- neural network vars ---", NULL, D_VOID, 0},
 		{"calcAmount", &calcAmount, D_INT, 1},
@@ -492,11 +521,19 @@ namespace neuralPlot {
 		return 1.0 / (1.0 + exp(-x));
 	}
 
-	// derivative of sigmoid
+	// derivative of sigmoid, simpler
 	double delSigmoid(double x)
 	{
 		double s = sigmoid(x);
 		return s * (1.0 - s);
+	}
+
+	// derivative of sigmoid, better precision
+	double delSigmoid2(double x)
+	{
+		double e = exp(x);
+		double ep1 = 1 + e;
+		return e / (ep1 * ep1);
 	}
 
 	// random stuff
@@ -593,6 +630,12 @@ namespace neuralPlot {
 #endif
 				randomNextSeed();
 				break;
+#ifdef DO_NEURAL6
+			case 'c':
+				//clipclear32(userBM, C32YELLOW);
+				clipblit32(trainBM, userBM, 0, 0, 0, 0, userBM->size.x, userBM->size.y);
+				break;
+#endif
 				// load
 			case 'l':
 				if (!busy) {
@@ -653,9 +696,33 @@ namespace neuralPlot {
 #ifdef SHOW_SIGMOID
 		// show a point on the sigmoid function
 		sigmoidOut = sigmoid(sigmoidIn);
+		sigmoidOutPrime = delSigmoid(sigmoidIn);
+		sigmoidOutPrime2 = delSigmoid2(sigmoidIn);
 #endif
 	}
 
+	void showOutput(U32 yoffset, const vector<double>& desireds, const vector<double>& outputs, bool showDes)
+	{
+		double maxVal = -1.0;
+		U32 maxValIdx = -1;
+		const vector<double>& data = showDes ? desireds : outputs;
+		for (U32 i = 0; i < 10; ++i) { // digits
+			double val = data[i];
+			if (val > maxVal) {
+				maxVal = val;
+				maxValIdx = i;
+			}
+		}
+		double cost = 0.0;
+		for (U32 i = 0; i < 10; ++i) { // digits
+			double val = data[i];
+			bool hilit = i == maxValIdx;
+			MEDIUMFONT->outtextxybf32(B32, WX / 2 + 28, yoffset + i * 16, hilit ? C32WHITE : C32MAGENTA, C32BLACK, "D %d, V = %8.4f%%", i, 100 * val);
+			double del = outputs[i] - desireds[i];
+			cost += del * del;
+		}
+		MEDIUMFONT->outtextxybf32(B32, WX / 2 + 28, yoffset + 160, C32LIGHTMAGENTA, C32BLACK, "Cost = %f", cost);
+	}
 
 } // end namespace neuralPlot
 
@@ -663,6 +730,8 @@ using namespace neuralPlot;
 
 void plot2neuralinit()
 {
+	runinbackgroundSave = wininfo.runinbackground;
+	wininfo.runinbackground = 1;
 	loading = 0;
 	noLoad = 0;
 	saving = 0;
@@ -698,15 +767,6 @@ void plot2neuralproc()
 	// calc neural interactive
 	commonProc();
 	perf_end(TEST2);
-}
-
-void showOutput(U32 yoffset, const vector<double>& outputs)
-{
-	for (U32 i = 0; i < 10; ++i) {
-		double val = outputs[i];
-		bool hilit = i == 9;
-		MEDIUMFONT->outtextxybf32(B32, WX / 2 + 28, yoffset + i * 16, hilit ? C32LIGHTGREEN : C32(255, 150, 255), C32BLACK, "D %d, V = %6.2f%%", i, 100 * val);
-	}
 }
 
 void plot2neuraldraw2d()
@@ -769,30 +829,32 @@ void plot2neuraldraw2d()
 	// draw images from mnist database
 	// train
 	bitmap32* abm = makeBMfromImage(*idxFileTrain->getOneImage(idxTrain));
+	clipblit32(abm, trainBM, 0, 0, 0, 0, abm->size.x, abm->size.y);
 	bitmap32* bigger = scale8(abm);
 	clipblit32(bigger, B32, 0, 0, 3 * WX / 4, WY / 2, bigger->size.x, bigger->size.y);
 	bitmap32free(abm);
 	bitmap32free(bigger);
 	U32 des = idxFileTrain->getOneDesired(idxTrain);
 	LARGEFONT->outtextxybf32(B32, WX / 2 + 28, WY / 2, C32LIGHTMAGENTA, C32BLACK, "Train Desired '%d'", des);
-	showOutput(WY / 2 + 40, aNeuralNet->getOneTrainOutput(idxTrain));
+	showOutput(WY / 2 + 40, aNeuralNet->getOneTrainDesired(idxTrain), aNeuralNet->getOneTrainOutput(idxTrain), showDesireds);
 
 	// test
 	abm = makeBMfromImage(*idxFileTest->getOneImage(idxTest));
+	clipblit32(abm, testBM, 0, 0, 0, 0, abm->size.x, abm->size.y);
 	bigger = scale8(abm);
 	clipblit32(bigger, B32, 0, 0, 3 * WX / 4, 3 * WY / 4, bigger->size.x, bigger->size.y);
 	bitmap32free(abm);
 	bitmap32free(bigger);
 	des = idxFileTest->getOneDesired(idxTest);
 	LARGEFONT->outtextxybf32(B32, WX / 2 + 28, 3 * WY / 4, C32LIGHTMAGENTA, C32BLACK, " Test Desired '%d'", des);
-	showOutput(3 * WY / 4 + 40, aNeuralNet->getOneTestOutput(idxTest));
+	showOutput(3 * WY / 4 + 40, aNeuralNet->getOneTestDesired(idxTest), aNeuralNet->getOneTestOutput(idxTest), showDesireds);
 
 	// user
 	bigger = scale8(userBM);
 	clipblit32(bigger, B32, 0, 0, 3 * WX / 4, WY / 4, bigger->size.x, bigger->size.y);
 	bitmap32free(bigger);
 	LARGEFONT->outtextxybf32(B32, WX / 2 + 28, WY / 4, C32LIGHTMAGENTA, C32BLACK, "User", des);
-	showOutput(WY / 4 + 40, userOutputs);
+	showOutput(WY / 4 + 40, userDesireds, userOutputs, showDesireds);
 
 	// instructions for user
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 154, C32YELLOW, C32BLACK, "'LMB': Draw Foreground (white)");
@@ -804,6 +866,7 @@ void plot2neuraldraw2d()
 
 void plot2neuralexit()
 {
+	wininfo.runinbackground = runinbackgroundSave;
 	// free graph paper, free debvars, write out colors to plotter.bin
 	plotter2exit();
 	removedebvars("neural_network");
@@ -812,6 +875,8 @@ void plot2neuralexit()
 	delete idxFileTrain;
 	delete idxFileTest;
 	bitmap32free(userBM);
+	bitmap32free(trainBM);
+	bitmap32free(testBM);
 #endif
 	aNeuralNet = nullptr;
 }
