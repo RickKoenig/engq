@@ -517,27 +517,6 @@ namespace neuralPlot {
 	};
 	const int nplot2neuralDeb = NUMELEMENTS(plot2neuralDeb);
 
-	// common code
-	double sigmoid(double x)
-	{
-		return 1.0 / (1.0 + exp(-x));
-	}
-
-	// derivative of sigmoid, simpler
-	double delSigmoid(double x)
-	{
-		double s = sigmoid(x);
-		return s * (1.0 - s);
-	}
-
-	// derivative of sigmoid, better precision
-	double delSigmoid2(double x)
-	{
-		double e = exp(x);
-		double ep1 = 1 + e;
-		return e / (ep1 * ep1);
-	}
-
 	// random stuff
 	// time based or seed based
 	void randomInit()
@@ -651,6 +630,9 @@ namespace neuralPlot {
 			case 'd':
 				clipblit32(trainBM, userBM, 0, 0, 0, 0, userBM->size.x, userBM->size.y);
 				break;
+			case 'e':
+				clipblit32(testBM, userBM, 0, 0, 0, 0, userBM->size.x, userBM->size.y);
+				break;
 #endif
 				// load
 			case 'l':
@@ -715,9 +697,9 @@ namespace neuralPlot {
 #endif
 #ifdef SHOW_SIGMOID
 		// show a point on the sigmoid function
-		sigmoidOut = sigmoid(sigmoidIn);
-		sigmoidOutPrime = delSigmoid(sigmoidIn);
-		sigmoidOutPrime2 = delSigmoid2(sigmoidIn);
+		sigmoidOut = neuralNet::sigmoid(sigmoidIn);
+		sigmoidOutPrime = neuralNet::delSigmoid(sigmoidIn);
+		sigmoidOutPrime2 = neuralNet::delSigmoid2(sigmoidIn);
 #endif
 	}
 
@@ -747,9 +729,57 @@ namespace neuralPlot {
 	}
 
 #ifdef DO_NEURAL6
-	void getUserInputsFromBM()
+	void drawToUser(C32 drawColor)
 	{
+		const S32 xMin = 3 * WX / 4;
+		const S32 yMin = WY / 4;
+		const S32 nPix = 28;
+		if (MX >= xMin && MX < xMin + nPix * 8 && MY >= yMin && MY < yMin + nPix * 8) {
+			U32 x = (MX - xMin) / 8;
+			U32 y = (MY - yMin) / 8;
+			const U32 A = 255;
+			const U32 B = 240;
+			const U32 C = 128;
+			const U32 D = 64;
+			const U32 E = 32;
+			const U32 F = 0;
+			vector<vector<U32>> brush{
+				{F,E,D,E,F},
+				{E,C,B,C,E},
+				{D,B,A,B,D},
+				{E,C,B,C,E},
+				{F,E,D,E,F},
+			};
+			if (drawColor == C32BLACK) {
+				// erase: just clear to black if brush is non zero
+				for (S32 j = 0; j < 5; ++j) {
+					for (S32 i = 0; i < 5; ++i) {
+						U32 brushVal = brush[j][i];
+						if (brushVal) {
+							S32 xi = x + i - 2;
+							S32 yj = y + j - 2;
+							clipputpixel32(userBM, xi, yj, drawColor);
+						}
 
+					}
+				}
+			} else { // 
+				// draw: only when output would be greater then the input
+				for (S32 j = 0; j < 5; ++j) {
+					for (S32 i = 0; i < 5; ++i) {
+						U32 brushVal = brush[j][i];
+						if (brushVal) {
+							S32 xi = x + i - 2;
+							S32 yj = y + j - 2;
+							C32 oldVal = clipgetpixel32(userBM, xi, yj);
+							if (oldVal.g < brushVal) {
+								clipputpixel32(userBM, xi, yj, C32(brushVal, brushVal, brushVal));
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 #endif
 } // end namespace neuralPlot
@@ -820,8 +850,8 @@ void plot2neuraldraw2d()
 	drawfpoint(pNextPoint, C32GREEN);
 #endif
 #ifdef SHOW_SIGMOID
-	drawfunction(sigmoid, C32GREEN);
-	drawfunction(delSigmoid, C32RED);
+	drawfunction(neuralNet::sigmoid, C32GREEN);
+	drawfunction(neuralNet::delSigmoid, C32RED);
 	pointf2x point(static_cast<float>(sigmoidIn), static_cast<float>(sigmoidOut));
 	drawfcirclef(point, C32BLACK, .0625f);
 #endif
@@ -885,10 +915,11 @@ void plot2neuraldraw2d()
 	showOutput(WY / 4 + 40, userDesireds, userOutputs, showDesireds, true);
 
 	// instructions for user
-	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 154, C32YELLOW, C32BLACK, "'LMB': Draw Foreground (white)");
-	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 174, C32YELLOW, C32BLACK, "'RMB': Draw Background (black)");
-	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 194, C32YELLOW, C32BLACK, "'c': Clear Image");
-	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 214, C32YELLOW, C32BLACK, "'d': Copy image from train");
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 134, C32YELLOW, C32BLACK, "'LMB': Draw Foreground (white)");
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 154, C32YELLOW, C32BLACK, "'RMB': Draw Background (black)");
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 174, C32YELLOW, C32BLACK, "'c': Clear Image");
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 194, C32YELLOW, C32BLACK, "'d': Copy image from train");
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 214, C32YELLOW, C32BLACK, "'e': Copy image from test");
 
 	// draw to userBM
 	bool draw = false;
@@ -901,14 +932,7 @@ void plot2neuraldraw2d()
 		drawColor = C32BLACK;
 	}
 	if (draw) {
-		const S32 xMin = 3 * WX / 4;
-		const S32 yMin = WY / 4;
-		const S32 nPix = 28;
-		if (MX >= xMin && MX < xMin + nPix * 8 && MY >= yMin && MY < yMin + nPix * 8) {
-			U32 x = (MX - xMin) / 8;
-			U32 y = (MY - yMin) / 8;
-			clipputpixel32(userBM, x, y, drawColor);
-		}
+		drawToUser(drawColor);
 	}
 #endif
 	perf_end(TEST1);

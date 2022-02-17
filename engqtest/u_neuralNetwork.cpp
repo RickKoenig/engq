@@ -380,7 +380,7 @@ double neuralNet::runNetwork(const vector<double>& in, const vector<double>& des
 #ifdef CLAMP_SIGMOID
 			ZjRow = range(-CLAMP_AMOUNT, ZjRow, CLAMP_AMOUNT);
 #endif
-			curA[j] = sigmoid(ZjRow);
+			curA[j] = neuralNet::sigmoid(ZjRow);
 		}
 	}
 	double retCost = 0.0;
@@ -625,3 +625,25 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 	}
 	perf_end(GRAD_DESCENT);
 }
+
+// common code
+double neuralNet::sigmoid(double x)
+{
+	return 1.0 / (1.0 + exp(-x));
+}
+
+// derivative of sigmoid, simpler
+double neuralNet::delSigmoid(double x)
+{
+	double s = sigmoid(x);
+	return s * (1.0 - s);
+}
+
+// derivative of sigmoid, better precision
+double neuralNet::delSigmoid2(double x)
+{
+	double e = exp(x);
+	double ep1 = 1 + e;
+	return e / (ep1 * ep1);
+}
+

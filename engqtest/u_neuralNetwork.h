@@ -62,12 +62,12 @@ class neuralNet {
 	{
 		return rand() / (RAND_MAX + 1.0);
 	}
-
+#if 0
 	double sigmoid(double x)
 	{
 		return 1.0 / (1.0 + exp(-x));
 	}
-
+#endif
 
 public:
 	neuralNet(const string& name, const vector<U32>& topology
@@ -83,4 +83,7 @@ public:
 	vector<double>& getOneTrainDesired(U32 idx);
 	vector<double>& getOneTestDesired(U32 idx);
 	~neuralNet();
+	static double sigmoid(double in);
+	static double delSigmoid(double in);
+	static double delSigmoid2(double in);
 };
