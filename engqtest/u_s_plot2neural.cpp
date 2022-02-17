@@ -361,6 +361,8 @@ namespace neuralPlot {
 	bitmap32* trainBM;
 	bitmap32* testBM;
 
+	U32 MBUTuserBM;
+
 	// helper
 	bitmap32* makeBMfromImage(const vector<vector<U8>>& img)
 	{
@@ -404,7 +406,7 @@ namespace neuralPlot {
 		desiredTest = idxFileTest->getDesired();
 		// create a user hand drawing bitmap
 		vector<vector<U8>>* anImage = idxFileTrain->getOneImage(0);
-		userBM = bitmap32alloc(anImage[0].size(), anImage->size(), C32CYAN);
+		userBM = bitmap32alloc(anImage[0].size(), anImage->size(), C32BLACK);
 		trainBM = bitmap32alloc(anImage[0].size(), anImage->size(), C32CYAN);
 		testBM = bitmap32alloc(anImage[0].size(), anImage->size(), C32CYAN);
 	}
@@ -644,7 +646,9 @@ namespace neuralPlot {
 				break;
 #ifdef DO_NEURAL6
 			case 'c':
-				//clipclear32(userBM, C32YELLOW);
+				clipclear32(userBM, C32BLACK);
+				break;
+			case 'd':
 				clipblit32(trainBM, userBM, 0, 0, 0, 0, userBM->size.x, userBM->size.y);
 				break;
 #endif
@@ -677,6 +681,7 @@ namespace neuralPlot {
 		idxTrain = range(0, idxTrain, nd - 1);
 		nd = idxFileTest->getNumData();
 		idxTest = range(0, idxTest, nd - 1);
+
 #endif
 
 		if (calcAmount != 0) {
@@ -716,7 +721,7 @@ namespace neuralPlot {
 #endif
 	}
 
-	void showOutput(U32 yoffset, const vector<double>& desireds, const vector<double>& outputs, bool showDes)
+	void showOutput(U32 yoffset, const vector<double>& desireds, const vector<double>& outputs, bool showDes, bool noCost = false)
 	{
 		double maxVal = -1.0;
 		U32 maxValIdx = -1;
@@ -736,7 +741,9 @@ namespace neuralPlot {
 			double del = outputs[i] - desireds[i];
 			cost += del * del;
 		}
-		MEDIUMFONT->outtextxybf32(B32, WX / 2 + 28, yoffset + 160, C32LIGHTMAGENTA, C32BLACK, "Cost = %f", cost);
+		if (!noCost) {
+			MEDIUMFONT->outtextxybf32(B32, WX / 2 + 28, yoffset + 160, C32LIGHTMAGENTA, C32BLACK, "Cost = %f", cost);
+		}
 	}
 
 #ifdef DO_NEURAL6
@@ -780,6 +787,7 @@ void plot2neuralproc()
 {
 	perf_start(TEST2);
 #ifdef DO_NEURAL6
+	MBUTuserBM = MBUT;
 	MBUT = 0; // don't move graph paper when hand drawing numbers
 #endif
 	// interact with graph paper
@@ -874,12 +882,34 @@ void plot2neuraldraw2d()
 	clipblit32(bigger, B32, 0, 0, 3 * WX / 4, WY / 4, bigger->size.x, bigger->size.y);
 	bitmap32free(bigger);
 	LARGEFONT->outtextxybf32(B32, WX / 2 + 28, WY / 4, C32LIGHTMAGENTA, C32BLACK, "User", des);
-	showOutput(WY / 4 + 40, userDesireds, userOutputs, showDesireds);
+	showOutput(WY / 4 + 40, userDesireds, userOutputs, showDesireds, true);
 
 	// instructions for user
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 154, C32YELLOW, C32BLACK, "'LMB': Draw Foreground (white)");
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 174, C32YELLOW, C32BLACK, "'RMB': Draw Background (black)");
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 194, C32YELLOW, C32BLACK, "'c': Clear Image");
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 214, C32YELLOW, C32BLACK, "'d': Copy image from train");
+
+	// draw to userBM
+	bool draw = false;
+	C32 drawColor = C32BLACK;
+	if (MBUTuserBM & M_LBUTTON) {
+		draw = true;
+		drawColor = C32WHITE;
+	} else if (MBUTuserBM & M_RBUTTON) {
+		draw = true;
+		drawColor = C32BLACK;
+	}
+	if (draw) {
+		const S32 xMin = 3 * WX / 4;
+		const S32 yMin = WY / 4;
+		const S32 nPix = 28;
+		if (MX >= xMin && MX < xMin + nPix * 8 && MY >= yMin && MY < yMin + nPix * 8) {
+			U32 x = (MX - xMin) / 8;
+			U32 y = (MY - yMin) / 8;
+			clipputpixel32(userBM, x, y, drawColor);
+		}
+	}
 #endif
 	perf_end(TEST1);
 }
