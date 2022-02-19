@@ -1,14 +1,17 @@
 // some switches
-//#define SHOW_WEIGHT_BIAS
+#define SHOW_WEIGHT_BIAS
 //#define SHOW_TRAINING_DATA
-//#define SHOW_TESTING_DATA
+#define SHOW_TESTING_DATA
 //#define DO_BRUTE_FORCE_DERIVATIVES
-//#define SHOW_DERIVATIVES
+#define SHOW_DERIVATIVES
+#define USE_TANH_HIDDEN // tanh is to be used in hidden layers instead of sigmoid
+
 
 // try some stuff
-//#define CLAMP_SIGMOID
-#ifdef CLAMP_SIGMOID
-#define CLAMP_AMOUNT 25.0
+// try to kill saturated neurons, used for both sigmoid and tanh
+#define EXTRA_SLOPE
+#ifdef EXTRA_SLOPE
+#define EXTRA_SLOPE_AMOUNT .01
 #endif
 
 class neuralNet {
@@ -85,5 +88,6 @@ public:
 	~neuralNet();
 	static double sigmoid(double in);
 	static double delSigmoid(double in);
-	static double delSigmoid2(double in);
+	static double tangentH(double in);
+	static double delTangentH(double in);
 };

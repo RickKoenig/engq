@@ -2203,18 +2203,6 @@
     <ClCompile Include="u_s_plot2eigen.cpp" />
     <ClCompile Include="u_s_plot2fourducks.cpp" />
     <ClCompile Include="u_s_plot2lens.cpp" />
-    <ClCompile Include="u_s_plot2neuralBack.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="u_s_plot2neuralFirstGeneral.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="u_s_plot2neuralReference.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="u_s_plot2octmirror.cpp" />
     <ClCompile Include="u_s_plot2pointcloud.cpp" />
     <ClCompile Include="u_s_plot2poles.cpp" />

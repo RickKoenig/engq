@@ -94,7 +94,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 		for (U32 j = 0; j < rowsW; ++j) {
 			vector<double>& aRow = lay.W[j];
 			for (U32 i = 0; i < colsW; ++i) {
-				aRow[i] = frand() * 20.0 - 10.0;
+				aRow[i] = frand() * 2.0 - 1.0;
 #ifdef SHOW_WEIGHT_BIAS
 				stringstream ssW;
 				ssW << "weight" << k << "_" << j << "_" << i;
@@ -105,7 +105,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 			}
 		}
 		for (U32 j = 0; j < rowsW; ++j) {
-			lay.B[j] = frand() * 20.0 - 10.0;
+			lay.B[j] = frand() * 2.0 - 1.0;
 #ifdef SHOW_WEIGHT_BIAS
 			stringstream ssB;
 			ssB << "bias" << k << "_" << j;
@@ -347,23 +347,15 @@ void neuralNet::saveNetwork(U32 slot)
 double neuralNet::runNetwork(const vector<double>& in, const vector<double>& des, vector<double>& out)
 {
 	perf_start(RUN_NETWORK);
-#if 0
-	static U32 count;
-	double inputSum = 0.0;
-	for (auto v : in) {
-		inputSum += v;
-	}
-#endif
-
 	U32 i, j;
 	U32 k;
 	U32 lastK;
 	for (k = 1; k < topo.size(); ++k) {
-		//Z.resize(topo[k]);
 		lastK = k - 1;
 		layer& lastLayer = layers[lastK];
 		layer& curLayer = layers[k];
-		vector<double>& curA = k == topo.size() - 1 ? out : curLayer.A;
+		bool outputLayer = k == topo.size() - 1;
+		vector<double>& curA = outputLayer ? out : curLayer.A;
 		const vector<double>& lastA = lastK ? lastLayer.A : in;
 		U32 ic = topo[lastK];
 		U32 jc = topo[k];
@@ -377,10 +369,11 @@ double neuralNet::runNetwork(const vector<double>& in, const vector<double>& des
 			for (i = 0; i < ic; ++i) {
 				ZjRow += lastA[i] * curWrow[i];
 			}
-#ifdef CLAMP_SIGMOID
-			ZjRow = range(-CLAMP_AMOUNT, ZjRow, CLAMP_AMOUNT);
-#endif
+#ifdef USE_TANH_HIDDEN
+			curA[j] = outputLayer ? neuralNet::sigmoid(ZjRow) : neuralNet::tangentH(ZjRow);
+#else
 			curA[j] = neuralNet::sigmoid(ZjRow);
+#endif
 		}
 	}
 	double retCost = 0.0;
@@ -390,13 +383,6 @@ double neuralNet::runNetwork(const vector<double>& in, const vector<double>& des
 		double del = out[j] - des[j];
 		retCost += del * del;
 	}
-#if 0
-	double outputSum = 0.0;
-	for (auto v : out) {
-		outputSum += v;
-	}
-	logger("run network %d, insum = %f, outsum = %f\n", count++, inputSum, outputSum);
-#endif
 	perf_end(RUN_NETWORK);
 	return retCost;
 }
@@ -533,10 +519,6 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 				S32 Ns = topo[N];
 				layer& curLayerN = layers[N];
 				vector<vector<double>>& curW = curLayerN.W;
-#if 1
-				//for (j = 0; j < Ls; ++j) {
-				//	DcostDA[j] = 0.0;
-				//}
 				fill(&DcostDA[0], &DcostDA[0] + Ls, 0.0);
 				for (j = 0; j < Ns; ++j) {
 					double& DcostDZrow = DcostDZ[j];
@@ -545,15 +527,6 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 						DcostDA[i] += curWrow[i] * DcostDZrow;
 					}
 				}
-#else
-				for (j = 0; j < Ls; ++j) {
-					double& DcostDArow = DcostDA[j];
-					DcostDArow = 0.0;
-					for (i = 0; i < Ns; ++i) {
-						DcostDArow += curW[i][j] * DcostDZ[i]; // TODO, why is i and j reversed?
-					}
-				}
-#endif
 			}
 			DcostDZ.resize(Ls);
 			//DcostDZ = vector<double>(Ls);
@@ -563,10 +536,22 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 			vector<double>& ZL = curLayerL.Z;
 			for (j = 0; j < Ls; ++j) {
 				// z
+#if 0
 				//double DALDZL = (1.0 - AL[j])*AL[j];
 				double e = exp(ZL[j]);
 				double ep1 = e + 1.0;
 				double DALDZL = e / (ep1 * ep1);
+#ifdef EXTRA_SLOPE
+				DALDZL += EXTRA_SLOPE_AMOUNT;
+#endif
+#else
+#ifdef USE_TANH_HIDDEN
+				bool outputLayer = k == topo.size() - 1;
+				double DALDZL = outputLayer ? delSigmoid(ZL[j]) : delTangentH(ZL[j]); // this activation function should match the one in runNetwork
+#else
+				double DALDZL = delSigmoid(ZL[j]); // this activation function should match the one in runNetwork
+#endif
+#endif
 				// bias
 				double& DcostDZrow = DcostDZ[j];
 				DcostDZrow = DcostDA[j] * DALDZL; // same as DcostDBL
@@ -629,21 +614,43 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 // common code
 double neuralNet::sigmoid(double x)
 {
+#ifdef EXTRA_SLOPE
+	return 1.0 / (1.0 + exp(-x)) + x * EXTRA_SLOPE_AMOUNT;
+#else
 	return 1.0 / (1.0 + exp(-x));
+#endif
 }
 
-// derivative of sigmoid, simpler
+// derivative of sigmoid more precision
 double neuralNet::delSigmoid(double x)
 {
-	double s = sigmoid(x);
-	return s * (1.0 - s);
+	double e = exp(x);
+	double ep1 = e + 1.0;
+	double ret = e / (ep1 * ep1);
+#ifdef EXTRA_SLOPE
+	return ret + EXTRA_SLOPE_AMOUNT;
+#else
+	return ret;
+#endif
 }
 
-// derivative of sigmoid, better precision
-double neuralNet::delSigmoid2(double x)
+double neuralNet::tangentH(double x)
 {
-	double e = exp(x);
-	double ep1 = 1 + e;
-	return e / (ep1 * ep1);
+#ifdef EXTRA_SLOPE
+	return tanh(x) + x * EXTRA_SLOPE_AMOUNT;
+#else
+	return tanh(x);
+#endif
 }
+
+double neuralNet::delTangentH(double x)
+{
+	double chsq = cosh(x);
+#ifdef EXTRA_SLOPE
+	return 1.0 / (chsq * chsq) + EXTRA_SLOPE_AMOUNT;
+#else
+	return 1.0 / (chsq * chsq);
+#endif
+}
+
 

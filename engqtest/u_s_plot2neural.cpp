@@ -18,11 +18,12 @@ using namespace u_plotter2;
 //#define DO_NEURAL2 // Layers 2 (1 - 1 - 1), 4 vars, 2 costs, test 1 more, total 3
 //#define DO_NEURAL3 // Layers 2 (2 - 2 - 2), 12 vars, 4 costs, test 1 more, total 5
 //#define DO_NEURAL4 // Layers 3 (3 - 2 - 3 - 2), 25 vars, 4 costs, test 2 more, total 6
-//#define DO_NEURAL5 // Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 costs
-#define DO_NEURAL6 // Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs, test 10,000 more costs total 70,000
+#define DO_NEURAL5 // Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 costs
+//#define DO_NEURAL6 // Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs, test 10,000 more costs total 70,000
 #define DO_GRAD_TEST // 1 var, minimize the adjustable quartic equation
-#define SHOW_SIGMOID
+//#define SHOW_SIGMOID
 //#define SHOW_DESIREDS_OVER_OUTPUT // for DO_NEURAL6
+#define DO_NORMALIZE // all data is normalized to mean = 0, standard deviation = 1
 
 #ifdef USE_TIMEB
 #include <sys/timeb.h>
@@ -49,7 +50,7 @@ namespace neuralPlot {
 	U32 saving = 0;
 	// calc gradient descent
 	double learn = 0.0; // .03125; // how fast to learn, too small too slow, too large too unstable
-	S32 calcAmount = 1; // how many calcs to do, negative run forever, positive decrements every frame until 0 
+	S32 calcAmount = -1; // how many calcs to do, negative run forever, positive decrements every frame until 0 
 	S32 calcSpeed = 1; // number of calculations per frame
 	S32 runTestCount = 0;// 20; // how many frames to wait to run test and user
 	S32 runTest = 0;
@@ -61,7 +62,8 @@ namespace neuralPlot {
 	double sigmoidIn = 0.0;
 	double sigmoidOut;
 	double sigmoidOutPrime;
-	double sigmoidOutPrime2;
+	double tanhOut;
+	double tanhOutPrime;
 #endif
 #ifdef DO_GRAD_TEST
 	// 4th order polynomial
@@ -240,6 +242,31 @@ namespace neuralPlot {
 		vector<vector<U8>>* getOneImage(U32 idx);
 	};
 
+	void normalize(vector<double>& anInput, double& mean, double& stdDev)
+	{
+		mean = 0.0;
+		U32 N = anInput.size();
+		for (auto val : anInput) {
+			mean += val;
+		}
+		mean /= N;
+		double variance = 0.0;
+		for (auto val : anInput) {
+			double diff = val - mean;
+			variance += diff * diff;
+		}
+		if (variance < EPSILON) {
+			logger("no variance!\n");
+			stdDev = 0.0;
+			return; // no variance, don't divide by zero
+		}
+		variance /= N;
+		stdDev = sqrt(variance);
+		for (auto& v : anInput) {
+			v = (v - mean) / stdDev;
+		}
+	}
+
 	idxFile::idxFile(const C8* fNameInput, const C8* fNameDesired, U32 limit)
 	{
 		pushandsetdir("neural");
@@ -307,6 +334,15 @@ namespace neuralPlot {
 					*dest++ = LO + (HI - LO) * aRow[i] / 255.0;
 				}
 			}
+#ifdef DO_NORMALIZE
+			// normalize data 0 mean, 1 standard deviation
+			double mean;
+			double stdDev;
+			normalize(anInput, mean, stdDev);
+			logger("normalizing file data 1, mean = %f, stdDev = %f\n", mean, stdDev);
+			//normalize(anInput, mean, stdDev);
+			//logger("normalizing file data 2, mean = %f, stdDev = %f\n", mean, stdDev);
+#endif
 			input.push_back(anInput);
 			// desired output
 			vector<double> aDesired = vector<double>(10); // number of digits
@@ -433,10 +469,11 @@ namespace neuralPlot {
 #endif
 #ifdef SHOW_SIGMOID
 		{"@brown@--- sigmoid graph ---", NULL, D_VOID, 0},
-		{"sigmoid in", &sigmoidIn, D_DOUBLE, FLOATUP / 8},
+		{"activation in", &sigmoidIn, D_DOUBLE, FLOATUP / 8},
 		{"sigmoid out", &sigmoidOut, D_DOUBLEEXP | D_RDONLY},
 		{"sigmoid out prime", &sigmoidOutPrime, D_DOUBLEEXP | D_RDONLY},
-		{"sigmoid out prime2", &sigmoidOutPrime2, D_DOUBLEEXP | D_RDONLY},
+		{"tanh out", &tanhOut, D_DOUBLEEXP | D_RDONLY},
+		{"tanh out prime", &tanhOutPrime, D_DOUBLEEXP | D_RDONLY},
 #endif
 		{"@yellow@--- neural network vars ---", NULL, D_VOID, 0},
 		{"calcAmount", &calcAmount, D_INT, 1},
@@ -594,14 +631,23 @@ namespace neuralPlot {
 #endif
 
 #ifdef DO_NEURAL6
-	void getUserInputsFromBM(const bitmap32* userBM, vector<double>& userInputs)
+	void getUserInputsFromBM(const bitmap32* userBM, vector<double>& userInput)
 	{
 		U32 outIdx = 0;
 		U32 prod = userBM->size.x * userBM->size.y;
 		const C32* bmData = userBM->data;
 		for (U32 i = 0; i < prod; ++i) {
-			userInputs[i] = LO + (HI - LO) * bmData[i].g / 255.0;
+			userInput[i] = LO + (HI - LO) * bmData[i].g / 255.0;
 		}
+#ifdef DO_NORMALIZE
+		// normalize data 0 mean, 1 standard deviation
+		double mean;
+		double stdDev;
+		normalize(userInput, mean, stdDev);
+		logger("normalizing user input 1, mean = %f, stdDev = %f\n", mean, stdDev);
+		//normalize(userInput, mean, stdDev);
+		//logger("normalizing user input 2, mean = %f, stdDev = %f\n", mean, stdDev);
+#endif
 	}
 #endif
 
@@ -699,7 +745,8 @@ namespace neuralPlot {
 		// show a point on the sigmoid function
 		sigmoidOut = neuralNet::sigmoid(sigmoidIn);
 		sigmoidOutPrime = neuralNet::delSigmoid(sigmoidIn);
-		sigmoidOutPrime2 = neuralNet::delSigmoid2(sigmoidIn);
+		tanhOut = neuralNet::tangentH(sigmoidIn);
+		tanhOutPrime = neuralNet::delTangentH(sigmoidIn);
 #endif
 	}
 
@@ -738,8 +785,8 @@ namespace neuralPlot {
 			U32 x = (MX - xMin) / 8;
 			U32 y = (MY - yMin) / 8;
 			const U32 A = 255;
-			const U32 B = 240;
-			const U32 C = 128;
+			const U32 B = 180;
+			const U32 C = 92;
 			const U32 D = 64;
 			const U32 E = 32;
 			const U32 F = 0;
@@ -850,10 +897,14 @@ void plot2neuraldraw2d()
 	drawfpoint(pNextPoint, C32GREEN);
 #endif
 #ifdef SHOW_SIGMOID
-	drawfunction(neuralNet::sigmoid, C32GREEN);
-	drawfunction(neuralNet::delSigmoid, C32RED);
+	drawfunction(neuralNet::sigmoid, C32LIGHTGREEN);
+	drawfunction(neuralNet::delSigmoid, C32GREEN);
+	drawfunction(neuralNet::tangentH, C32LIGHTRED);
+	drawfunction(neuralNet::delTangentH, C32RED);
 	pointf2x point(static_cast<float>(sigmoidIn), static_cast<float>(sigmoidOut));
 	drawfcirclef(point, C32BLACK, .0625f);
+	point = pointf2x(static_cast<float>(sigmoidIn), static_cast<float>(tanhOut));
+	drawfcirclef(point, C32BLUE, .0625f);
 #endif
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 3, C32LIGHTGREEN, C32BLACK, "'~': Control Menu");
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 20, C32LIGHTGREEN, C32BLACK, "'r': Randomize Network");

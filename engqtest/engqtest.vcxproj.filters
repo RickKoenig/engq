@@ -4186,15 +4186,6 @@
     <ClCompile Include="u_s_plot2neural.cpp">
       <Filter>Source Files\user\user_math\plotter_code</Filter>
     </ClCompile>
-    <ClCompile Include="u_s_plot2neuralReference.cpp">
-      <Filter>Source Files\user\user_math\plotter_code</Filter>
-    </ClCompile>
-    <ClCompile Include="u_s_plot2neuralBack.cpp">
-      <Filter>Source Files\user\user_math\plotter_code</Filter>
-    </ClCompile>
-    <ClCompile Include="u_s_plot2neuralFirstGeneral.cpp">
-      <Filter>Source Files\user\user_math\plotter_code</Filter>
-    </ClCompile>
     <ClCompile Include="u_neuralNetwork.cpp">
       <Filter>Source Files\user\user_math</Filter>
     </ClCompile>
