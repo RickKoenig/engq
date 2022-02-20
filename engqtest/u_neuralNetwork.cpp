@@ -147,6 +147,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 		}
 	}
 #endif
+	// TODO: maybe add min cost and max cost and number correct
 	stringstream ssOutput;
 	ssOutput << "@yellow@Training Cost " << inputsTrain.size() << " Average";
 	const C8* name = copyStr(ssOutput.str().c_str());

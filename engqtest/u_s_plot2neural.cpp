@@ -6,6 +6,14 @@
 #include "u_neuralNetwork.h"
 #include "m_perf.h"
 
+#if 1
+#include <array>        // std::array
+#include <chrono>       // std::chrono::system_clock
+#include <iostream>     // std::cout
+#include <algorithm>    // std::shuffle
+#include <random>       // std::default_random_engine
+#endif
+
 using namespace u_plotter2;
 // Keyboard shortcuts, 'r' to reset/randomize weights and biases
 
@@ -18,8 +26,8 @@ using namespace u_plotter2;
 //#define DO_NEURAL2 // Layers 2 (1 - 1 - 1), 4 vars, 2 costs, test 1 more, total 3
 //#define DO_NEURAL3 // Layers 2 (2 - 2 - 2), 12 vars, 4 costs, test 1 more, total 5
 //#define DO_NEURAL4 // Layers 3 (3 - 2 - 3 - 2), 25 vars, 4 costs, test 2 more, total 6
-#define DO_NEURAL5 // Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 costs
-//#define DO_NEURAL6 // Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs, test 10,000 more costs total 70,000
+//#define DO_NEURAL5 // Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 costs
+#define DO_NEURAL6 // Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs, test 10,000 more costs total 70,000
 #define DO_GRAD_TEST // 1 var, minimize the adjustable quartic equation
 //#define SHOW_SIGMOID
 //#define SHOW_DESIREDS_OVER_OUTPUT // for DO_NEURAL6
@@ -339,8 +347,8 @@ namespace neuralPlot {
 			double mean;
 			double stdDev;
 			normalize(anInput, mean, stdDev);
-			logger("normalizing file data 1, mean = %f, stdDev = %f\n", mean, stdDev);
-			//normalize(anInput, mean, stdDev);
+			//logger("normalizing file data 1, mean = %f, stdDev = %f\n", mean, stdDev);
+			//normalize(anInput, mean, stdDev); // check that mean = 0 and stdDev = 1
 			//logger("normalizing file data 2, mean = %f, stdDev = %f\n", mean, stdDev);
 #endif
 			input.push_back(anInput);
@@ -699,6 +707,9 @@ namespace neuralPlot {
 				loadSaveSlot = KEY - '0';
 			}
 		}
+		if (MBUTuserBM & M_MBUTTON) {
+			clipclear32(userBM, C32BLACK);
+		}
 		learn = range(0.0, learn, 100.0);
 		calcAmount = range(-1, calcAmount, 1000000);
 		calcSpeed = range(1, calcSpeed, 10000);
@@ -829,11 +840,31 @@ namespace neuralPlot {
 		}
 	}
 #endif
+
+	void testShuffle()
+	{
+		logger("TEST SHUFFLE!\n");
+		// shuffle algorithm example
+		vector<S32> foo{ 1, 2, 3, 4, 5};
+		// use a fixed seed
+		U32 rndSeed = 1257;
+		logger("shuffled elements\n");
+		auto eng = default_random_engine(rndSeed);
+		for (auto i = 0; i < 100; ++i) {
+			for (const S32 x : foo) {
+				logger("%d ", x);
+			}
+			shuffle(foo.begin(), foo.end(), eng);
+			logger("\n");
+		}
+	}
+
 } // end namespace neuralPlot
 
 using namespace neuralPlot;
 void plot2neuralinit()
 {
+	testShuffle();
 	runinbackgroundSave = wininfo.runinbackground;
 	wininfo.runinbackground = 1;
 	loading = 0;
@@ -968,7 +999,7 @@ void plot2neuraldraw2d()
 	// instructions for user
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 134, C32YELLOW, C32BLACK, "'LMB': Draw Foreground (white)");
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 154, C32YELLOW, C32BLACK, "'RMB': Draw Background (black)");
-	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 174, C32YELLOW, C32BLACK, "'c': Clear Image");
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 174, C32YELLOW, C32BLACK, "'c' or 'MMB': Clear Image");
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 194, C32YELLOW, C32BLACK, "'d': Copy image from train");
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 214, C32YELLOW, C32BLACK, "'e': Copy image from test");
 

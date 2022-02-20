@@ -1,9 +1,9 @@
 // some switches
-#define SHOW_WEIGHT_BIAS
+//#define SHOW_WEIGHT_BIAS
 //#define SHOW_TRAINING_DATA
-#define SHOW_TESTING_DATA
+//#define SHOW_TESTING_DATA
 //#define DO_BRUTE_FORCE_DERIVATIVES
-#define SHOW_DERIVATIVES
+//#define SHOW_DERIVATIVES
 #define USE_TANH_HIDDEN // tanh is to be used in hidden layers instead of sigmoid
 
 
