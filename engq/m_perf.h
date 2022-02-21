@@ -1,4 +1,4 @@
-//#define PERF_ON
+#define PERF_ON
 #define PERF_FRAMES 64 // power of 2 , 128 is a good value
 // user section
 enum {
@@ -151,6 +151,11 @@ enum {
 	GRAD_DESCENT3,
 	GRAD_DESCENT4,
 	GRAD_DESCENT5,
+	READ_IDX1,
+	READ_IDX2,
+	READ_IDX3,
+	READ_IDX4,
+	READ_IDX5,
 };
 
 #ifdef PERF_ON
@@ -305,6 +310,11 @@ C8* perfnames[]={
 	"GRAD_DESCENT3",
 	"GRAD_DESCENT4",
 	"GRAD_DESCENT5",
+	"READ_IDX1",
+	"READ_IDX2",
+	"READ_IDX3",
+	"READ_IDX4",
+	"READ_IDX5",
 };
 // end user section
 

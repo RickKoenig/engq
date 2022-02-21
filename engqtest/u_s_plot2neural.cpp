@@ -39,6 +39,7 @@ using namespace u_plotter2;
 
 namespace neuralPlot {
 	// common data
+	bool busy;
 #ifdef SHOW_DESIREDS_OVER_OUTPUT
 	const bool showDesireds = true;
 #else
@@ -60,7 +61,7 @@ namespace neuralPlot {
 	double learn = 0.0; // .03125; // how fast to learn, too small too slow, too large too unstable
 	S32 calcAmount = -1; // how many calcs to do, negative run forever, positive decrements every frame until 0 
 	S32 calcSpeed = 1; // number of calculations per frame
-	S32 runTestCount = 0;// 20; // how many frames to wait to run test and user
+	S32 runTestCount = 32;// 20; // how many frames to wait to run test and user
 	S32 runTest = 0;
 
 	const double LO = .1;
@@ -233,12 +234,17 @@ namespace neuralPlot {
 
 #ifdef DO_NEURAL6 // handwritten digit recognition 28 by 28 grid
 	class idxFile {
-		// for network
-		vector<vector<double>> input;
-		vector<vector<double>> desired;
+		// input
 		// for display
-		vector<vector<vector<U8>>> rawInput;
-		vector<U8> rawDesired;
+		vector<vector<vector<U8>>> rawInput; // 3D
+		// for network
+		vector<vector<double>> input; // 2D
+
+		// desired
+		// for display
+		vector<U8> rawDesired; // 1D
+		// for network
+		vector<vector<double>> desired; // 2D
 	public:
 		idxFile(const C8* fNameInput, const C8* fNameDesired, U32 limit = 0);
 		U32 getNumData();
@@ -277,11 +283,13 @@ namespace neuralPlot {
 
 	idxFile::idxFile(const C8* fNameInput, const C8* fNameDesired, U32 limit)
 	{
+		perf_start(READ_IDX1);
 		pushandsetdir("neural");
 
-		// input
+		// input data
 		FILE* fh = fopen2(fNameInput, "rb");
 		if (!fh) {
+			perf_end(READ_IDX1);
 			return;
 		}
 		U32 magic = filereadU32BE(fh); // big endian file
@@ -289,6 +297,7 @@ namespace neuralPlot {
 		if (magic != goodMagic3) {
 			logger("bad magic %08x, should be %08x\n", magic, goodMagic3);
 			fclose(fh);
+			perf_end(READ_IDX1);
 			return;
 		}
 		logger("file = %s, magic = %08x\n", fNameInput, magic);
@@ -299,19 +308,67 @@ namespace neuralPlot {
 		U32 height = filereadU32BE(fh);
 		U32 width = filereadU32BE(fh);
 		U32 prod = width * height;
+
+		string doubleName = string() + fNameInput + ".doubleRaw.bin";
+		bool readRawDoubles = false;
+		if (fileexist(doubleName.c_str())) {
+			readRawDoubles = true;
+		}
+		readRawDoubles = false;
+
+		FILE* fhd;
+		if (readRawDoubles) { // cache normalized double data
+			fhd = fopen2(doubleName.c_str(), "rb"); // read cached double data
+		} else {
+			fhd = fopen2(doubleName.c_str(), "wb"); // else calc and save them doubles
+		}
+
+
 		for (U32 k = 0; k < dataSize3; ++k) {
 			vector<vector<U8>> abm(height, vector<U8>(width));
 			for (U32 j = 0; j < height; ++j) {
 				vector<U8>& arow = abm[j];
 				fileread(fh, &arow[0], width);
 			}
-			rawInput.push_back(abm);
-		}
-		fclose(fh);
+			rawInput.push_back(abm); // populate rawInput
 
-		// desired
+									 
+			// data for neuralNet
+			// input image
+			vector<double> anInput = vector<double>(prod);
+			if (readRawDoubles) {
+				fileread(fhd, &anInput[0], anInput.size() * sizeof anInput[0]);
+			} else {
+				double* dest = &anInput[0];
+				for (U32 j = 0; j < height; ++j) {
+					//vector<U8>& aRow = rawInput[k][j];
+					vector<U8>& aRow = abm[j];
+					for (U32 i = 0; i < width; ++i) {
+						// 0 to 255 ==> LO to HI
+						*dest++ = LO + (HI - LO) * aRow[i] / 255.0;
+					}
+				}
+#ifdef DO_NORMALIZE
+				// normalize data 0 mean, 1 standard deviation
+				double mean;
+				double stdDev;
+				normalize(anInput, mean, stdDev);
+				//logger("normalizing file data 1, mean = %f, stdDev = %f\n", mean, stdDev);
+				//normalize(anInput, mean, stdDev); // check that mean = 0 and stdDev = 1
+				//logger("normalizing file data 2, mean = %f, stdDev = %f\n", mean, stdDev);
+#endif
+				//filewrite(fhd, &anInput[0], anInput.size() * sizeof anInput[0]);
+			}
+			input.push_back(anInput); // populate input
+		}
+
+		fclose(fh);
+		fclose(fhd);
+
+		// desired data
 		fh = fopen2(fNameDesired, "rb");
 		if (!fh) {
+			perf_end(READ_IDX1);
 			return;
 		}
 		magic = filereadU32BE(fh); // big endian file
@@ -319,6 +376,7 @@ namespace neuralPlot {
 		if (magic != goodMagic1) {
 			logger("bad magic %08x, should be %08x\n", magic, goodMagic1);
 			fclose(fh);
+			perf_end(READ_IDX1);
 			return;
 		}
 		logger("file = %s, magic = %08x\n", fNameDesired, magic);
@@ -326,39 +384,24 @@ namespace neuralPlot {
 		if (limit && dataSize1 > limit) {
 			dataSize1 = limit;
 		}
+		if (dataSize1 != dataSize3) {
+			logger("mismatched dataSize!");
+			perf_end(READ_IDX1);
+			return;
+		}
 		rawDesired.resize(dataSize1);
-		fileread(fh, &rawDesired[0], dataSize1);
+		fileread(fh, &rawDesired[0], dataSize1); // populate rawDesired
 		fclose(fh);
 		popdir();
-		// data for neuralNet
 		for (U32 k = 0; k < dataSize1; ++k) {
-			// input image
-			vector<double> anInput = vector<double>(prod);
-			double* dest = &anInput[0];
-			for (U32 j = 0; j < height; ++j) {
-				vector<U8>& aRow = rawInput[k][j];
-				for (U32 i = 0; i < width; ++i) {
-					// 0 to 255 ==> LO to HI
-					*dest++ = LO + (HI - LO) * aRow[i] / 255.0;
-				}
-			}
-#ifdef DO_NORMALIZE
-			// normalize data 0 mean, 1 standard deviation
-			double mean;
-			double stdDev;
-			normalize(anInput, mean, stdDev);
-			//logger("normalizing file data 1, mean = %f, stdDev = %f\n", mean, stdDev);
-			//normalize(anInput, mean, stdDev); // check that mean = 0 and stdDev = 1
-			//logger("normalizing file data 2, mean = %f, stdDev = %f\n", mean, stdDev);
-#endif
-			input.push_back(anInput);
-			// desired output
+				// desired output
 			vector<double> aDesired = vector<double>(10); // number of digits
 			for (U32 j = 0; j < 10; ++j) {
 				aDesired[j] = j == rawDesired[k] ? HI : LO;
 			}
-			desired.push_back(aDesired);
+			desired.push_back(aDesired); // populate desired
 		}
+		perf_end(READ_IDX1);
 	}
 
 	U32 idxFile::getNumData()
@@ -401,7 +444,7 @@ namespace neuralPlot {
 	vector<vector<double>>* inputTest;
 	vector<vector<double>>* desiredTest;
 
-	bitmap32* userBM; // draw hand numbers here
+	bitmap32* userBM; // hand draw numbers here
 	bitmap32* trainBM;
 	bitmap32* testBM;
 
@@ -441,8 +484,18 @@ namespace neuralPlot {
 		idxTrain = 0;
 		idxTest = 0;
 		// read MNIST data
-		idxFileTrain = new idxFile("train-images.idx3-ubyte.bin", "train-labels.idx1-ubyte.bin", 100);
-		idxFileTest = new idxFile("t10k-images.idx3-ubyte.bin", "t10k-labels.idx1-ubyte.bin", 2);
+#if 1
+		const U32 trainSize = 100;
+		const U32 testSize = 2;
+#elif 0
+		const U32 trainSize = 100;
+		const U32 testSize = 2;
+#else
+		const U32 trainSize = 0;
+		const U32 testSize = 0;
+#endif
+		idxFileTrain = new idxFile("train-images.idx3-ubyte.bin", "train-labels.idx1-ubyte.bin", trainSize);
+		idxFileTest = new idxFile("t10k-images.idx3-ubyte.bin", "t10k-labels.idx1-ubyte.bin", testSize);
 		// reference from idxFile to args for new neuralNet
 		inputTrain = idxFileTrain->getInput();
 		desiredTrain = idxFileTrain->getDesired();
@@ -662,7 +715,7 @@ namespace neuralPlot {
 	void commonProc()
 	{
 		// range check gradient descent
-		bool busy = loading || saving || noLoad || yesLoad;
+		busy = loading || saving || noLoad || yesLoad;
 		if (!busy) {
 			switch (KEY) {
 				// re randomize weights and biases
@@ -942,6 +995,7 @@ void plot2neuraldraw2d()
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 37, C32LIGHTGREEN, C32BLACK, "'l': Load Network");
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 54, C32LIGHTGREEN, C32BLACK, "'s': Save Network");
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 71, C32LIGHTGREEN, C32BLACK, "'0'-'9': Load/Save Slot = '%d'", loadSaveSlot);
+	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 105, C32GREEN, C32BLACK, "busy = %d", busy);
 	if (loading > 0) {
 		MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 88, C32LIGHTMAGENTA, C32BLACK, "Loading from Slot '%d'", loadSaveSlot);
 		loading--;
