@@ -59,9 +59,9 @@ namespace neuralPlot {
 	U32 saving = 0;
 	// calc gradient descent
 	double learn = 0.0; // .03125; // how fast to learn, too small too slow, too large too unstable
-	S32 calcAmount = -1; // how many calcs to do, negative run forever, positive decrements every frame until 0 
+	S32 calcAmount = 0; // how many calcs to do, negative run forever, positive decrements every frame until 0 
 	S32 calcSpeed = 1; // number of calculations per frame
-	S32 runTestCount = 32;// 20; // how many frames to wait to run test and user
+	S32 runTestCount = 0;// 32;// 20; // how many frames to wait to run test and user
 	S32 runTest = 0;
 
 	const double LO = .1;
@@ -323,14 +323,15 @@ namespace neuralPlot {
 			fhd = fopen2(doubleName.c_str(), "wb"); // else calc and save them doubles
 		}
 
-
+		rawInput.resize(dataSize3);
+		input.resize(dataSize3);
 		for (U32 k = 0; k < dataSize3; ++k) {
 			vector<vector<U8>> abm(height, vector<U8>(width));
 			for (U32 j = 0; j < height; ++j) {
 				vector<U8>& arow = abm[j];
 				fileread(fh, &arow[0], width);
 			}
-			rawInput.push_back(abm); // populate rawInput
+			rawInput[k] = abm; // populate rawInput
 
 									 
 			// data for neuralNet
@@ -359,7 +360,7 @@ namespace neuralPlot {
 #endif
 				filewrite(fhd, &anInput[0], anInput.size() * sizeof anInput[0]);
 			}
-			input.push_back(anInput); // populate input
+			input[k] = anInput; // populate input
 		}
 
 		fclose(fh);
@@ -390,6 +391,7 @@ namespace neuralPlot {
 			return;
 		}
 		rawDesired.resize(dataSize1);
+		desired.resize(dataSize1);
 		fileread(fh, &rawDesired[0], dataSize1); // populate rawDesired
 		fclose(fh);
 		popdir();
@@ -399,7 +401,7 @@ namespace neuralPlot {
 			for (U32 j = 0; j < 10; ++j) {
 				aDesired[j] = j == rawDesired[k] ? HI : LO;
 			}
-			desired.push_back(aDesired); // populate desired
+			desired[k] = aDesired; // populate desired
 		}
 		perf_end(READ_IDX1);
 	}
@@ -484,13 +486,19 @@ namespace neuralPlot {
 		idxTrain = 0;
 		idxTest = 0;
 		// read MNIST data
-#if 1
+#define SMALL_DATA
+//#define MED_DATA
+//#define ALL_DATA
+
+#ifdef SMALL_DATA
+		const U32 trainSize = 100;
+		const U32 testSize = 10;
+#endif
+#ifdef MED_DATA
 		const U32 trainSize = 100;
 		const U32 testSize = 2;
-#elif 0
-		const U32 trainSize = 100;
-		const U32 testSize = 2;
-#else
+#endif
+#ifdef ALL_DATA
 		const U32 trainSize = 0;
 		const U32 testSize = 0;
 #endif
@@ -903,7 +911,7 @@ namespace neuralPlot {
 		U32 rndSeed = 1257;
 		logger("shuffled elements\n");
 		auto eng = default_random_engine(rndSeed);
-		for (auto i = 0; i < 100; ++i) {
+		for (auto i = 0; i < 10; ++i) {
 			for (const S32 x : foo) {
 				logger("%d ", x);
 			}
