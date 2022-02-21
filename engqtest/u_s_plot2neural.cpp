@@ -314,7 +314,7 @@ namespace neuralPlot {
 		if (fileexist(doubleName.c_str())) {
 			readRawDoubles = true;
 		}
-		readRawDoubles = false;
+		//readRawDoubles = false;
 
 		FILE* fhd;
 		if (readRawDoubles) { // cache normalized double data
@@ -357,7 +357,7 @@ namespace neuralPlot {
 				//normalize(anInput, mean, stdDev); // check that mean = 0 and stdDev = 1
 				//logger("normalizing file data 2, mean = %f, stdDev = %f\n", mean, stdDev);
 #endif
-				//filewrite(fhd, &anInput[0], anInput.size() * sizeof anInput[0]);
+				filewrite(fhd, &anInput[0], anInput.size() * sizeof anInput[0]);
 			}
 			input.push_back(anInput); // populate input
 		}
