@@ -4,10 +4,10 @@
 //#define SHOW_TESTING_DATA
 //#define DO_BRUTE_FORCE_DERIVATIVES
 //#define SHOW_DERIVATIVES
+
 #define USE_TANH_HIDDEN // tanh is to be used in hidden layers instead of sigmoid
 
-
-// try some stuff
+// try some adjustment stuff
 // try to kill saturated neurons, used for both sigmoid and tanh
 #define EXTRA_SLOPE
 #ifdef EXTRA_SLOPE
@@ -17,6 +17,8 @@
 class neuralNet {
 	string name;
 	vector<U32> topo; // the structure of the network
+	 // for brute force derivatives
+	const double epsilon = 1e-8;
 
 	// a layer of the network, layer 0 is the input layer, no weights or biases on layer 0
 	// the topo.size() - 1 layer is the output layer
@@ -44,48 +46,65 @@ class neuralNet {
 	vector<vector<double>>& desiredsTrain;
 	vector<vector<double>> outputsTrain;
 	U32 nTrain;
+
+// not used in training, but used for debprint menu and calculating costs
 	vector<vector<double>>& inputsTest;
 	vector<vector<double>>& desiredsTest;
 	vector<vector<double>> outputsTest;
 	U32 nTest;
 
-	double totalCost{};
+	// cost of train and test, not used for training
+	double totalCostTrain{};
+	double avgCostTrain{};
 	double totalCostTest{};
-	double avgCost{};
 	double avgCostTest{};
 
 	// for debvars
-	vector<menuvar> dbNeuralNet; // debprint menu
-	const double epsilon = 1e-8; // for brute force derivatives
+	vector<menuvar> dbNeuralNet; // debprint menu for neuralNet
 
-	C8* copyStr(const C8* in); // free with delete, all string names in dbNeuralNet are allocated and are to be freed
+	// functions
+
+	C8* copyStr(const C8* in); // make a copy of cstr, free with delete, all string names in dbNeuralNet are allocated and are to be freed
 
 	// generate a random number in range [0 - 1)
-    double frand()
+	double frand()
 	{
 		return rand() / (RAND_MAX + 1.0);
 	}
-#if 0
-	double sigmoid(double x)
-	{
-		return 1.0 / (1.0 + exp(-x));
-	}
-#endif
 
 public:
+	// constructor
+	// tester is just for cost and display
 	neuralNet(const string& name, const vector<U32>& topology
 		, vector<vector<double>>& inTrain, vector<vector<double>>& desTrain
 		, vector<vector<double>>& inTester, vector<vector<double>>& desTester);
-	double runNetwork(const vector<double>& in, const vector<double>& des, vector<double>& out);
+
+	// run the network
+	void runNetwork(const vector<double>& in, vector<double>& out);
+
+	// next step in gradientDescent
 	void gradientDescent(double learn); // gradient descent training
-	void testNetwork();
+
+	// load and save weights and bias
 	bool loadNetwork(U32 slot); // true if loaded, false if not loaded
 	void saveNetwork(U32 slot);
-	vector<double>& getOneTrainOutput(U32 idx);
+
+	// getters for train data and test data
 	vector<double>& getOneTestOutput(U32 idx);
-	vector<double>& getOneTrainDesired(U32 idx);
 	vector<double>& getOneTestDesired(U32 idx);
+	vector<double>& getOneTrainOutput(U32 idx);
+	vector<double>& getOneTrainDesired(U32 idx);
+
+	// update train and test outputs and costs
+	void calcCostTrainAndTest();
+
+	// good for user calculations
+	double calcOneCost(const vector<double>& des, vector<double>& out);
+
+	// clean up
 	~neuralNet();
+
+	// activation functions and their derivatives
 	static double sigmoid(double in);
 	static double delSigmoid(double in);
 	static double tangentH(double in);

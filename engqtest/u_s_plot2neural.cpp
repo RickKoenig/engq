@@ -59,9 +59,9 @@ namespace neuralPlot {
 	U32 saving = 0;
 	// calc gradient descent
 	double learn = 0.0; // .03125; // how fast to learn, too small too slow, too large too unstable
-	S32 calcAmount = 0; // how many calcs to do, negative run forever, positive decrements every frame until 0 
+	S32 calcAmount = -1; // how many calcs to do, negative run forever, positive decrements every frame until 0 
 	S32 calcSpeed = 1; // number of calculations per frame
-	S32 runTestCount = 0;// 32;// 20; // how many frames to wait to run test and user
+	S32 runTestCount = 32;// 32;// 20; // how many frames to wait to run test and user
 	S32 runTest = 0;
 
 	const double LO = .1;
@@ -598,7 +598,7 @@ namespace neuralPlot {
 		// userInput is a 28 by 28 grid 784, too big for here, do it graphically instead
 		{"@lightmagenta@idxTrain", &idxTrain, D_INT, 1},
 		{"idxTest", &idxTest, D_INT, 1},
-		{"@lightcyan@userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
+/*		{"@lightcyan@userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
 		{"userOutput0", &userOutputs[0], D_DOUBLE | D_RDONLY},
 		{"userDesired1", &userDesireds[1], D_DOUBLE, FLOATUP / 4},
 		{"userOutput1", &userOutputs[1], D_DOUBLE | D_RDONLY},
@@ -617,9 +617,9 @@ namespace neuralPlot {
 		{"userDesired8", &userDesireds[8], D_DOUBLE, FLOATUP / 4},
 		{"userOutput8", &userOutputs[8], D_DOUBLE | D_RDONLY},
 		{"userDesired9", &userDesireds[9], D_DOUBLE, FLOATUP / 4},
-		{"userOutput9", &userOutputs[9], D_DOUBLE | D_RDONLY},
+		{"userOutput9", &userOutputs[9], D_DOUBLE | D_RDONLY}, */
 #endif
-		{"userCost", &userCost, D_DOUBLEEXP | D_RDONLY},
+		//{"userCost", &userCost, D_DOUBLEEXP | D_RDONLY},
 	};
 	const int nplot2neuralDeb = NUMELEMENTS(plot2neuralDeb);
 
@@ -732,9 +732,17 @@ namespace neuralPlot {
 				delete aNeuralNet;
 				randomInit();
 #ifdef DO_NEURAL6
+
 				aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, *inputTest, *desiredTest);
+#if 0
+				aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain);
+#endif
 #else
+
 				aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest);
+#if 0
+				aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain);
+#endif
 #endif
 				randomNextSeed();
 				break;
@@ -768,9 +776,11 @@ namespace neuralPlot {
 				loadSaveSlot = KEY - '0';
 			}
 		}
+#ifdef DO_NEURAL6
 		if (MBUTuserBM & M_MBUTTON) {
 			clipclear32(userBM, C32BLACK);
 		}
+#endif
 		learn = range(0.0, learn, 100.0);
 		calcAmount = range(-1, calcAmount, 1000000);
 		calcSpeed = range(1, calcSpeed, 10000);
@@ -800,12 +810,13 @@ namespace neuralPlot {
 			if (runTest == 0) {
 				// test suite
 				runTest = runTestCount;
-				aNeuralNet->testNetwork();
+				aNeuralNet->calcCostTrainAndTest();
 				// run 1 user setting
 #ifdef DO_NEURAL6
 				getUserInputsFromBM(userBM, userInputs);
 #endif
-				userCost = aNeuralNet->runNetwork(userInputs, userDesireds, userOutputs);
+				aNeuralNet->runNetwork(userInputs, userOutputs);
+				userCost = aNeuralNet->calcOneCost(userDesireds, userOutputs);
 			}
 			--runTest;
 		}
@@ -822,7 +833,7 @@ namespace neuralPlot {
 #endif
 	}
 
-	void showOutput(U32 yoffset, const vector<double>& desireds, const vector<double>& outputs, bool showDes, bool noCost = false)
+	void showOutput(U32 yoffset, const vector<double>& desireds, const vector<double>& outputs, bool showDes, bool showCost = true)
 	{
 		double maxVal = -1.0;
 		U32 maxValIdx = -1;
@@ -842,7 +853,7 @@ namespace neuralPlot {
 			double del = outputs[i] - desireds[i];
 			cost += del * del;
 		}
-		if (!noCost) {
+		if (showCost) {
 			MEDIUMFONT->outtextxybf32(B32, WX / 2 + 28, yoffset + 160, C32LIGHTMAGENTA, C32BLACK, "Cost = %f", cost);
 		}
 	}
@@ -946,8 +957,14 @@ void plot2neuralinit()
 	randomInit();
 #ifdef DO_NEURAL6
 	aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, *inputTest, *desiredTest);
+#if 0
+	aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain);
+#endif
 #else
 	aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest);
+#if 0
+	aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain);
+#endif
 #endif
 	randomNextSeed();
 }
@@ -1049,14 +1066,17 @@ void plot2neuraldraw2d()
 	bitmap32free(bigger);
 	des = idxFileTest->getOneDesired(idxTest);
 	LARGEFONT->outtextxybf32(B32, WX / 2 + 28, 3 * WY / 4, C32LIGHTMAGENTA, C32BLACK, " Test Desired '%d'", des);
+//#ifdef OLD_COST
+	// TODO: add something here
 	showOutput(3 * WY / 4 + 40, aNeuralNet->getOneTestDesired(idxTest), aNeuralNet->getOneTestOutput(idxTest), showDesireds);
+//#endif
 
 	// user
 	bigger = scale8(userBM);
 	clipblit32(bigger, B32, 0, 0, 3 * WX / 4, WY / 4, bigger->size.x, bigger->size.y);
 	bitmap32free(bigger);
 	LARGEFONT->outtextxybf32(B32, WX / 2 + 28, WY / 4, C32LIGHTMAGENTA, C32BLACK, "User", des);
-	showOutput(WY / 4 + 40, userDesireds, userOutputs, showDesireds, true);
+	showOutput(WY / 4 + 40, userDesireds, userOutputs, showDesireds, false); // don't show costs for user
 
 	// instructions for user
 	MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8 - 24, 134, C32YELLOW, C32BLACK, "'LMB': Draw Foreground (white)");
