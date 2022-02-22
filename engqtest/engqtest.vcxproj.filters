@@ -2831,6 +2831,9 @@
     <ClInclude Include="u_neuralNetwork.h">
       <Filter>Source Files\user\user_math</Filter>
     </ClInclude>
+    <ClInclude Include="u_idxfile.h">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="helperobj.cpp">
@@ -4187,6 +4190,9 @@
       <Filter>Source Files\user\user_math\plotter_code</Filter>
     </ClCompile>
     <ClCompile Include="u_neuralNetwork.cpp">
+      <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_idxfile.cpp">
       <Filter>Source Files\user\user_math</Filter>
     </ClCompile>
   </ItemGroup>

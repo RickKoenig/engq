@@ -238,96 +238,6 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	adddebvars("neuralNet", dbNeuralNet.data(), dbNeuralNet.size());
 }
 
-vector<double>& neuralNet::getOneTrainOutput(U32 idx)
-{
-	return outputsTrain[idx];
-}
-
-vector<double>& neuralNet::getOneTrainDesired(U32 idx)
-{
-	return desiredsTrain[idx];
-}
-
-vector<double>& neuralNet::getOneTestOutput(U32 idx)
-{
-	return outputsTest[idx];
-}
-
-vector<double>& neuralNet::getOneTestDesired(U32 idx)
-{
-	return desiredsTest[idx];
-}
-
-neuralNet::~neuralNet()
-{
-	// unpublish the debprint menu
-	removedebvars("neuralNet");
-	for (auto mv : dbNeuralNet) {
-		delete mv.name;
-	}
-}
-
-bool neuralNet::loadNetwork(U32 slot)
-{
-	pushandsetdir("neural");
-	stringstream ss;
-	ss << name << "_" << slot << ".mdl";
-	string fname = ss.str();
-	if (!fileexist(fname.c_str())) {
-		popdir();
-		return false; // can't open file, doesn't exist
-	}
-	FILE* fh = fopen2(fname.c_str(), "rb");
-	if (!fh) {
-		popdir();
-		return false; // can't open file
-	}
-	// load and check topo
-	U32 ts = filereadU32LE(fh);
-	if (ts != topo.size()) {
-		fclose(fh); // wrong topology size
-		popdir();
-		return false;
-	}
-	vector<U32> tpo (topo.size());
-	fileread(fh, &tpo[0], topo.size() * sizeof tpo[0]);
-	if (tpo != topo) {
-		fclose(fh); // wrong topology configuration
-		popdir();
-		return false;
-	}
-	// load weights and biases for each layer
-	for (U32 k = 1; k < topo.size(); ++k) {
-		for (U32 j = 0; j < topo[k]; ++j) {
-			fileread(fh, &layers[k].W[j][0], topo[k - 1] * sizeof layers[k].W[0][0]);
-		}
-		fileread(fh, &layers[k].B[0], topo[k] * sizeof layers[k].B[0]);
-	}
-	fclose(fh);
-	popdir();
-	return true;
-}
-
-void neuralNet::saveNetwork(U32 slot)
-{
-	pushandsetdir("neural");
-	stringstream ss;
-	ss << name << "_" << slot << ".mdl";
-	FILE* fh = fopen2(ss.str().c_str(), "wb");
-	// save topo
-	filewriteU32LE(fh, topo.size());
-	filewrite(fh, &topo[0], topo.size() * sizeof topo[0] );
-	// save weights and biases for each layer
-	for (U32 k = 1; k < topo.size(); ++k) {
-		for (U32 j = 0; j < topo[k]; ++j) {
-			filewrite(fh, &layers[k].W[j][0], topo[k - 1] * sizeof layers[k].W[0][0]);
-		}
-		filewrite(fh, &layers[k].B[0], topo[k] * sizeof layers[k].B[0]);
-	}
-	fclose(fh);
-	popdir();
-}
-
 void neuralNet::runNetwork(const vector<double>& in, vector<double>& out)
 {
 	perf_start(RUN_NETWORK);
@@ -361,38 +271,6 @@ void neuralNet::runNetwork(const vector<double>& in, vector<double>& out)
 		}
 	}
 	perf_end(RUN_NETWORK);
-}
-
-void neuralNet::calcCostTrainAndTest()
-{
-	// train
-	totalCostTrain = 0.0;
-	for (U32 t = 0; t < nTrain; ++t) {
-		runNetwork(inputsTrain[t],  outputsTrain[t]);
-		double cost = calcOneCost(desiredsTrain[t], outputsTrain[t]);
-		totalCostTrain += cost;
-	}
-	avgCostTrain = totalCostTrain / nTrain;
-
-	// test
-	totalCostTest = 0.0;
-	for (U32 t = 0; t < nTest; ++t) {
-		runNetwork(inputsTest[t], outputsTest[t]);
-		double cost = calcOneCost(desiredsTest[t], outputsTest[t]);
-		totalCostTest += cost;
-	}
-	avgCostTest = totalCostTest / nTest;
-}
-
-double neuralNet::calcOneCost(const vector<double>& des, vector<double>& out)
-{
-	double retCost = 0.0;
-	U32 jc = des.size();
-	for (U32 j = 0; j < jc; ++j) {
-		double del = out[j] - des[j];
-		retCost += del * del;
-	}
-	return retCost;
 }
 
 void neuralNet::gradientDescent(double learn) // gradient descent
@@ -570,7 +448,129 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 	perf_end(GRAD_DESCENT);
 }
 
-// common code
+bool neuralNet::loadNetwork(U32 slot)
+{
+	pushandsetdir("neural");
+	stringstream ss;
+	ss << name << "_" << slot << ".mdl";
+	string fname = ss.str();
+	if (!fileexist(fname.c_str())) {
+		popdir();
+		return false; // can't open file, doesn't exist
+	}
+	FILE* fh = fopen2(fname.c_str(), "rb");
+	if (!fh) {
+		popdir();
+		return false; // can't open file
+	}
+	// load and check topo
+	U32 ts = filereadU32LE(fh);
+	if (ts != topo.size()) {
+		fclose(fh); // wrong topology size
+		popdir();
+		return false;
+	}
+	vector<U32> tpo(topo.size());
+	fileread(fh, &tpo[0], topo.size() * sizeof tpo[0]);
+	if (tpo != topo) {
+		fclose(fh); // wrong topology configuration
+		popdir();
+		return false;
+	}
+	// load weights and biases for each layer
+	for (U32 k = 1; k < topo.size(); ++k) {
+		for (U32 j = 0; j < topo[k]; ++j) {
+			fileread(fh, &layers[k].W[j][0], topo[k - 1] * sizeof layers[k].W[0][0]);
+		}
+		fileread(fh, &layers[k].B[0], topo[k] * sizeof layers[k].B[0]);
+	}
+	fclose(fh);
+	popdir();
+	return true;
+}
+
+void neuralNet::saveNetwork(U32 slot)
+{
+	pushandsetdir("neural");
+	stringstream ss;
+	ss << name << "_" << slot << ".mdl";
+	FILE* fh = fopen2(ss.str().c_str(), "wb");
+	// save topo
+	filewriteU32LE(fh, topo.size());
+	filewrite(fh, &topo[0], topo.size() * sizeof topo[0]);
+	// save weights and biases for each layer
+	for (U32 k = 1; k < topo.size(); ++k) {
+		for (U32 j = 0; j < topo[k]; ++j) {
+			filewrite(fh, &layers[k].W[j][0], topo[k - 1] * sizeof layers[k].W[0][0]);
+		}
+		filewrite(fh, &layers[k].B[0], topo[k] * sizeof layers[k].B[0]);
+	}
+	fclose(fh);
+	popdir();
+}
+
+vector<double>& neuralNet::getOneTrainOutput(U32 idx)
+{
+	return outputsTrain[idx];
+}
+
+vector<double>& neuralNet::getOneTrainDesired(U32 idx)
+{
+	return desiredsTrain[idx];
+}
+
+vector<double>& neuralNet::getOneTestOutput(U32 idx)
+{
+	return outputsTest[idx];
+}
+
+vector<double>& neuralNet::getOneTestDesired(U32 idx)
+{
+	return desiredsTest[idx];
+}
+
+void neuralNet::calcCostTrainAndTest()
+{
+	// train
+	totalCostTrain = 0.0;
+	for (U32 t = 0; t < nTrain; ++t) {
+		runNetwork(inputsTrain[t], outputsTrain[t]);
+		double cost = calcOneCost(desiredsTrain[t], outputsTrain[t]);
+		totalCostTrain += cost;
+	}
+	avgCostTrain = totalCostTrain / nTrain;
+
+	// test
+	totalCostTest = 0.0;
+	for (U32 t = 0; t < nTest; ++t) {
+		runNetwork(inputsTest[t], outputsTest[t]);
+		double cost = calcOneCost(desiredsTest[t], outputsTest[t]);
+		totalCostTest += cost;
+	}
+	avgCostTest = totalCostTest / nTest;
+}
+
+double neuralNet::calcOneCost(const vector<double>& des, vector<double>& out)
+{
+	double retCost = 0.0;
+	U32 jc = des.size();
+	for (U32 j = 0; j < jc; ++j) {
+		double del = out[j] - des[j];
+		retCost += del * del;
+	}
+	return retCost;
+}
+
+neuralNet::~neuralNet()
+{
+	// unpublish the debprint menu
+	removedebvars("neuralNet");
+	for (auto mv : dbNeuralNet) {
+		delete mv.name;
+	}
+}
+
+// activation functions and their derivatives
 double neuralNet::sigmoid(double x)
 {
 #ifdef EXTRA_SLOPE

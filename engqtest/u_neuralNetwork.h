@@ -17,8 +17,6 @@
 class neuralNet {
 	string name;
 	vector<U32> topo; // the structure of the network
-	 // for brute force derivatives
-	const double epsilon = 1e-8;
 
 	// a layer of the network, layer 0 is the input layer, no weights or biases on layer 0
 	// the topo.size() - 1 layer is the output layer
@@ -30,6 +28,7 @@ class neuralNet {
 		vector<vector<double>> dCdW_CR;
 		vector<double> dCdB_CR;
 #ifdef DO_BRUTE_FORCE_DERIVATIVES
+		const double epsilon = 1e-8;
 		vector<vector<double>> dCdW_BF;
 		vector<double> dCdB_BF;
 #endif
@@ -90,10 +89,10 @@ public:
 	void saveNetwork(U32 slot);
 
 	// getters for train data and test data
-	vector<double>& getOneTestOutput(U32 idx);
-	vector<double>& getOneTestDesired(U32 idx);
 	vector<double>& getOneTrainOutput(U32 idx);
 	vector<double>& getOneTrainDesired(U32 idx);
+	vector<double>& getOneTestOutput(U32 idx);
+	vector<double>& getOneTestDesired(U32 idx);
 
 	// update train and test outputs and costs
 	void calcCostTrainAndTest();
