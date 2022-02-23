@@ -126,7 +126,7 @@ public:
 	vector<double>& getOneTestDesired(U32 idx);
 
 	// good for user calculations and brute force derivatives, fast
-	double calcOneCost(const vector<double>& des, vector<double>& out);
+	static double calcOneCost(const vector<double>& des, const vector<double>& out);
 	// array of costs, includes avg, total, min, max, and optional correct costs
 	void calcCostArr(const vector<vector<double>>& inArr
 		, const vector<vector<double>>& desArr

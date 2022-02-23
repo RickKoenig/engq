@@ -40,8 +40,8 @@ using namespace u_plotter2;
 
 // how much data to process
 //#define SMALL_DATA
-//#define MED_DATA
-#define ALL_DATA
+#define MED_DATA
+//#define ALL_DATA
 
 #include "u_idxfile.h"
 // what guess correct function to run
@@ -76,7 +76,7 @@ namespace neuralPlot {
 	U32 saving = 0;
 	// calc gradient descent
 	double learn = 0.0; // .03125; // how fast to learn, too small too slow, too large too unstable
-	S32 calcAmount = -1; // how many calcs to do, negative run forever, positive decrements every frame until 0 
+	S32 calcAmount = 0;// -1; // how many calcs to do, negative run forever, positive decrements every frame until 0 
 	S32 calcSpeed = 1; // number of calculations per frame
 	S32 runTestCount = 32;// 32;// 20; // how many frames to wait to run test and user
 	S32 runTest = 0;
@@ -290,6 +290,8 @@ namespace neuralPlot {
 	bitmap32* testBM;
 
 	U32 MBUTuserBM;
+	S32 lastMX;
+	S32 lastMY;
 
 	// helper
 	bitmap32* makeBMfromImage(const vector<vector<U8>>& img)
@@ -372,6 +374,7 @@ namespace neuralPlot {
 		{"calcSpeed", &calcSpeed, D_INT, 32},
 		{"learn", &learn, D_DOUBLE, FLOATUP / 32},
 		{"runTestcount", &runTestCount, D_INT, 32},
+		{"runTest", &runTest, D_INT | D_RDONLY},
 		// for now, hand code these
 		{"@lightcyan@--- neural network user ---", NULL, D_VOID, 0},
 #ifdef DO_NEURAL1
@@ -543,6 +546,11 @@ namespace neuralPlot {
 
 	void commonProc()
 	{
+		bool doRun = true;
+		if (KEY || MBUTuserBM) {
+			runTest = runTestCount; // don't run costly cost functions when using the UI
+			doRun = false;
+		}
 		// range check gradient descent
 		busy = loading || saving || noLoad || yesLoad;
 		if (!busy) {
@@ -614,7 +622,9 @@ namespace neuralPlot {
 #ifdef DO_GRAD_TEST
 				gradientDescentPoly();
 #endif
-				aNeuralNet->gradientDescent(learn);
+				if (doRun) { // only run when no keys or mouse buttons
+					aNeuralNet->gradientDescent(learn);
+				}
 			}
 			if (calcAmount > 0) {
 				--calcAmount;
@@ -627,14 +637,14 @@ namespace neuralPlot {
 				runTest = runTestCount;
 				aNeuralNet->calcCostTrainAndTest();
 				// run 1 user setting
-#ifdef DO_NEURAL6
-				getUserInputsFromBM(userBM, userInputs);
-#endif
-				aNeuralNet->runNetwork(userInputs, userOutputs);
-				userCost = aNeuralNet->calcOneCost(userDesireds, userOutputs);
 			}
 			--runTest;
 		}
+#ifdef DO_NEURAL6
+		getUserInputsFromBM(userBM, userInputs);
+#endif
+		aNeuralNet->runNetwork(userInputs, userOutputs);
+		userCost = neuralNet::calcOneCost(userDesireds, userOutputs);
 #ifdef DO_GRAD_TEST
 		yVar = polyFunction(xVar);
 		dydx = polyFunctionPrime(xVar);
@@ -660,14 +670,12 @@ namespace neuralPlot {
 				maxValIdx = i;
 			}
 		}
-		double cost = 0.0;
 		for (U32 i = 0; i < 10; ++i) { // digits
 			double val = data[i];
 			bool hilit = i == maxValIdx;
 			MEDIUMFONT->outtextxybf32(B32, WX / 2 + 28, yoffset + i * 16, hilit ? C32WHITE : C32MAGENTA, C32BLACK, "D %d, V = %8.4f%%", i, 100 * val);
-			double del = outputs[i] - desireds[i];
-			cost += del * del;
 		}
+		double cost = neuralNet::calcOneCost(desireds, outputs);
 		if (showCost) {
 			MEDIUMFONT->outtextxybf32(B32, WX / 2 + 28, yoffset + 160, C32LIGHTMAGENTA, C32BLACK, "Cost = %f", cost);
 		}
@@ -680,8 +688,11 @@ namespace neuralPlot {
 		const S32 yMin = WY / 4;
 		const S32 nPix = 28;
 		if (MX >= xMin && MX < xMin + nPix * 8 && MY >= yMin && MY < yMin + nPix * 8) {
-			U32 x = (MX - xMin) / 8;
-			U32 y = (MY - yMin) / 8;
+			//logger("MX = %d, MY = %d, lastMX = %d, lastMY = %d\n", MX, MY, lastMX, lastMY);
+			S32 x = (MX - xMin) / 8;
+			S32 y = (MY - yMin) / 8;
+			S32 xl = (lastMX - xMin) / 8;
+			S32 yl = (lastMY - yMin) / 8;
 			const U32 A = 255;
 			const U32 B = 180;
 			const U32 C = 92;
@@ -695,36 +706,33 @@ namespace neuralPlot {
 				{E,C,B,C,E},
 				{F,E,D,E,F},
 			};
-			if (drawColor == C32BLACK) {
-				// erase: just clear to black if brush is non zero
+			const S32 lineStep = 20;
+			for (S32 k = 0; k <= lineStep; ++k) {
+				S32 xc = xl + (x - xl) * k / lineStep;
+				S32 yc = yl + (y - yl) * k / lineStep;
 				for (S32 j = 0; j < 5; ++j) {
 					for (S32 i = 0; i < 5; ++i) {
 						U32 brushVal = brush[j][i];
 						if (brushVal) {
-							S32 xi = x + i - 2;
-							S32 yj = y + j - 2;
-							clipputpixel32(userBM, xi, yj, drawColor);
-						}
-
-					}
-				}
-			} else { // 
-				// draw: only when output would be greater then the input
-				for (S32 j = 0; j < 5; ++j) {
-					for (S32 i = 0; i < 5; ++i) {
-						U32 brushVal = brush[j][i];
-						if (brushVal) {
-							S32 xi = x + i - 2;
-							S32 yj = y + j - 2;
-							C32 oldVal = clipgetpixel32(userBM, xi, yj);
-							if (oldVal.g < brushVal) {
-								clipputpixel32(userBM, xi, yj, C32(brushVal, brushVal, brushVal));
+							S32 xi = xc + i - 2;
+							S32 yj = yc + j - 2;
+							if (drawColor == C32BLACK) {
+								// erase: just clear to black if brush is non zero
+								clipputpixel32(userBM, xi, yj, drawColor);
+							} else {
+								// draw: only when output would be greater then the input
+								C32 oldVal = clipgetpixel32(userBM, xi, yj);
+								if (oldVal.g < brushVal) {
+									clipputpixel32(userBM, xi, yj, C32(brushVal, brushVal, brushVal));
+								}
 							}
 						}
 					}
 				}
 			}
 		}
+		lastMX = MX;
+		lastMY = MY;
 	}
 #endif
 
@@ -900,6 +908,9 @@ void plot2neuraldraw2d()
 	} else if (MBUTuserBM & M_RBUTTON) {
 		draw = true;
 		drawColor = C32BLACK;
+	} else {
+		lastMX = MX;
+		lastMY = MY;
 	}
 	if (draw) {
 		drawToUser(drawColor);

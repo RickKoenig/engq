@@ -584,7 +584,7 @@ vector<double>& neuralNet::getOneTestDesired(U32 idx)
 }
 
 // one, fast
-double neuralNet::calcOneCost(const vector<double>& des, vector<double>& out)
+double neuralNet::calcOneCost(const vector<double>& des, const vector<double>& out)
 {
 	double retCost = 0.0;
 	U32 jc = des.size();
