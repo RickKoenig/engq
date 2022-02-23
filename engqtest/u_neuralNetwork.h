@@ -1,9 +1,11 @@
 // some switches
-//#define SHOW_WEIGHT_BIAS
-//#define SHOW_TRAINING_DATA
-//#define SHOW_TESTING_DATA
-//#define DO_BRUTE_FORCE_DERIVATIVES
-//#define SHOW_DERIVATIVES
+#if 0
+#define SHOW_WEIGHT_BIAS
+#define SHOW_TRAINING_DATA
+#define SHOW_TESTING_DATA
+#define DO_BRUTE_FORCE_DERIVATIVES
+#define SHOW_DERIVATIVES
+#endif
 
 #define USE_TANH_HIDDEN // tanh is to be used in hidden layers instead of sigmoid
 
@@ -15,6 +17,22 @@
 #endif
 
 class neuralNet {
+public:
+	enum class costCorr {
+		NONE,
+		THRESHHOLD, // both < LO_THRESH or >= HI_THRESH
+		DIGITS, // max matches desired digit
+	};
+private:
+	// begin for correct guesses
+	const double LO = .1; // TODO: many copies of LO and HI, should be just one
+	const double HI = .9;
+	const double THR = .5; // how close to go to LO and HI from middle
+	const double AVG = (LO + HI) * .5;
+	const double SPREAD = (HI - LO) * .5 * THR;
+	const double LO_THRESH = AVG - SPREAD;
+	const double HI_THRESH = AVG + SPREAD;
+	// end for correct guesses
 	string name;
 	vector<U32> topo; // the structure of the network
 
@@ -28,11 +46,13 @@ class neuralNet {
 		vector<vector<double>> dCdW_CR;
 		vector<double> dCdB_CR;
 #ifdef DO_BRUTE_FORCE_DERIVATIVES
-		const double epsilon = 1e-8;
 		vector<vector<double>> dCdW_BF;
 		vector<double> dCdB_BF;
 #endif
 	};
+#ifdef DO_BRUTE_FORCE_DERIVATIVES
+	const double epsilon = 1e-8;
+#endif
 	//temporaries, for optimization
 	vector<double> DcostDZ;// (Ls); // same as DcostDBL, used for backtrace
 	vector<double> DcostDA;// (Ls);
@@ -53,10 +73,19 @@ class neuralNet {
 	U32 nTest;
 
 	// cost of train and test, not used for training
+	costCorr doCorrect{ costCorr::NONE};
+
 	double totalCostTrain{};
 	double avgCostTrain{};
+	double minCostTrain{};
+	double maxCostTrain{};
+	U32 correctTrain{34}; // if doCorrect != NONE // TODO:: remove 34
+
 	double totalCostTest{};
 	double avgCostTest{};
+	double minCostTest{};
+	double maxCostTest{};
+	U32 correctTest{56}; // if doCorrect != NONE // TODO:: remove 56
 
 	// for debvars
 	vector<menuvar> dbNeuralNet; // debprint menu for neuralNet
@@ -76,7 +105,8 @@ public:
 	// tester is just for cost and display
 	neuralNet(const string& name, const vector<U32>& topology
 		, vector<vector<double>>& inTrain, vector<vector<double>>& desTrain
-		, vector<vector<double>>& inTester, vector<vector<double>>& desTester);
+		, vector<vector<double>>& inTester, vector<vector<double>>& desTester
+		, costCorr corrCost);
 
 	// run the network
 	void runNetwork(const vector<double>& in, vector<double>& out);
@@ -94,11 +124,17 @@ public:
 	vector<double>& getOneTestOutput(U32 idx);
 	vector<double>& getOneTestDesired(U32 idx);
 
+	// good for user calculations and brute force derivatives, fast
+	double calcOneCost(const vector<double>& des, vector<double>& out);
+	// array of costs, includes avg, total, min, max, and optional correct costs
+	void calcCostArr(const vector<vector<double>>& inArr
+		, const vector<vector<double>>& desArr
+		, vector<vector<double>>& outArr
+		, costCorr costCorrKind
+		, double& totalCost, double& avgCost, double& minCost, double& maxCost, U32& correct);
 	// update train and test outputs and costs
 	void calcCostTrainAndTest();
 
-	// good for user calculations
-	double calcOneCost(const vector<double>& des, vector<double>& out);
 
 	// clean up
 	~neuralNet();

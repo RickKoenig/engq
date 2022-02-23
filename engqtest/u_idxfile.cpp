@@ -56,7 +56,7 @@ idxFile::idxFile(const C8* fNameInput, const C8* fNameDesired, U32 limit)
 	U32 width = filereadU32BE(fh);
 	U32 prod = width * height;
 
-	string doubleName = string() + fNameInput + ".doubleRaw.bin";
+	string doubleName = string() + fNameInput + ".doubleNorm.bin";
 	bool readRawDoubles = false;
 	if (fileexist(doubleName.c_str())) {
 		readRawDoubles = true;

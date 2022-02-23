@@ -28,7 +28,7 @@ using namespace u_plotter2;
 //#define DO_NEURAL4 // Layers 3 (3 - 2 - 3 - 2), 25 vars, 4 costs, test 2 more, total 6
 //#define DO_NEURAL5 // Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 costs
 #define DO_NEURAL6 // Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs, test 10,000 more costs total 70,000
-#define DO_GRAD_TEST // 1 var, minimize the adjustable quartic equation
+//#define DO_GRAD_TEST // 1 var, minimize the adjustable quartic equation
 //#define SHOW_SIGMOID
 //#define SHOW_DESIREDS_OVER_OUTPUT // for DO_NEURAL6
 
@@ -37,6 +37,13 @@ using namespace u_plotter2;
 #endif
 #ifdef DO_NEURAL6
 #include "u_idxfile.h"
+const neuralNet::costCorr costCorrect = neuralNet::costCorr::DIGITS; // show how many digits are correct for train and test data
+#else
+#ifdef DO_NEURAL5
+const neuralNet::costCorr costCorrect = neuralNet::costCorr::THRESHHOLD; // match those that are both < .5 or both >= .5
+#else
+const neuralNet::costCorr costCorrect = neuralNet::costCorr::NONE;
+#endif
 #endif
 
 namespace neuralPlot {
@@ -290,17 +297,17 @@ namespace neuralPlot {
 		idxTrain = 0;
 		idxTest = 0;
 		// read MNIST data
-#define SMALL_DATA
-//#define MED_DATA
+//#define SMALL_DATA
+#define MED_DATA
 //#define ALL_DATA
 
 #ifdef SMALL_DATA
 		const U32 trainSize = 100;
-		const U32 testSize = 10;
+		const U32 testSize = 2;
 #endif
 #ifdef MED_DATA
 		const U32 trainSize = 100;
-		const U32 testSize = 2;
+		const U32 testSize = 50;
 #endif
 #ifdef ALL_DATA
 		const U32 trainSize = 0;
@@ -535,16 +542,10 @@ namespace neuralPlot {
 				randomInit();
 #ifdef DO_NEURAL6
 
-				aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, *inputTest, *desiredTest);
-#if 0
-				aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain);
-#endif
+				aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, *inputTest, *desiredTest, costCorrect);
 #else
 
-				aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest);
-#if 0
-				aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain);
-#endif
+				aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest, costCorrect);
 #endif
 				randomNextSeed();
 				break;
@@ -758,15 +759,9 @@ void plot2neuralinit()
 #endif
 	randomInit();
 #ifdef DO_NEURAL6
-	aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, *inputTest, *desiredTest);
-#if 0
-	aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain);
-#endif
+	aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, *inputTest, *desiredTest, costCorrect);
 #else
-	aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest);
-#if 0
-	aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain);
-#endif
+	aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest, costCorrect);
 #endif
 	randomNextSeed();
 }
