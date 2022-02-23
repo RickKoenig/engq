@@ -10,13 +10,19 @@ C8* neuralNet::copyStr(const C8* in) // free with delete, all string names in db
 }
 
 neuralNet::neuralNet(const string& namea, const vector<U32>& topology
-	, vector<vector<double>>& inTrain, vector<vector<double>>& desTrain
+	, vector<vector<double>>& inTrain, vector<vector<double>>& desTrain, U32 trainLim
 	,vector<vector<double>>& inTester, vector<vector<double>>& desTester
 	,costCorr doCorr)
-	: name(namea), inputsTrain(inTrain), desiredsTrain(desTrain), nTrain(desTrain.size())
+	: name(namea), inputsTrain(inTrain), desiredsTrain(desTrain)
 	,inputsTest(inTester), desiredsTest(desTester), nTest(desTester.size())
 	,doCorrect(doCorr)
 {
+	nTotalTrain = desTrain.size();
+	if (trainLim) {
+		nTrain = min(trainLim, nTotalTrain);
+	} else {
+		nTrain = desTrain.size();
+	}
 	if (inTrain.empty()) {
 		errorexit("intrain needs data!");
 	}
@@ -37,7 +43,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	topo = topology;
 	// create outputs for both training and testing
 	S32 outputSize = desiredsTrain[0].size();
-	outputsTrain = vector<vector<double>>(nTrain, vector<double>(outputSize));
+	outputsTrain = vector<vector<double>>(nTotalTrain, vector<double>(outputSize));
 	outputsTest = vector<vector<double>>(nTest, vector<double>(outputSize));
 	menuvar mv{ copyStr("@cyan@--- Neural Network ---"), NULL, D_VOID, 0 };
 	dbNeuralNet.push_back(mv);
@@ -141,32 +147,34 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 #endif
 	// TODO: maybe add min cost and max cost and number correct
 	stringstream ssOutput;
-	ssOutput << "@yellow@Training Cost " << inputsTrain.size() << " Average";
+	//U32 nt = nTrain;
+	U32 nt = nTotalTrain;
+	ssOutput << "@yellow@Training Cost " << nt << " Average";
 	const C8* name = copyStr(ssOutput.str().c_str());
 	mv = { name, &avgCostTrain, D_DOUBLEEXP | D_RDONLY};
 	dbNeuralNet.push_back(mv);
 
 	ssOutput.str(string());
-	ssOutput << "Training Cost " << inputsTrain.size() << " Total";
+	ssOutput << "Training Cost " << nt << " Total";
 	name = copyStr(ssOutput.str().c_str());
 	mv = { name, &totalCostTrain, D_DOUBLEEXP | D_RDONLY};
 	dbNeuralNet.push_back(mv);
 
 	ssOutput.str(string());
-	ssOutput << "Training Cost " << inputsTrain.size() << " Minimum";
+	ssOutput << "Training Cost " << nt << " Minimum";
 	name = copyStr(ssOutput.str().c_str());
 	mv = { name, &minCostTrain, D_DOUBLEEXP | D_RDONLY};
 	dbNeuralNet.push_back(mv);
 
 	ssOutput.str(string());
-	ssOutput << "Training Cost " << inputsTrain.size() << " Maximum";
+	ssOutput << "Training Cost " << nt << " Maximum";
 	name = copyStr(ssOutput.str().c_str());
 	mv = { name, &maxCostTrain, D_DOUBLEEXP | D_RDONLY};
 	dbNeuralNet.push_back(mv);
 
 	if (doCorrect != costCorr::NONE) {
 		ssOutput.str(string());
-		ssOutput << "Training Cost " << inputsTrain.size() << " Correct";
+		ssOutput << "Training Cost " << nt << " Correct";
 		name = copyStr(ssOutput.str().c_str());
 		mv = { name, &correctTrain, D_INT | D_RDONLY };
 		dbNeuralNet.push_back(mv);
@@ -591,16 +599,16 @@ double neuralNet::calcOneCost(const vector<double>& des, vector<double>& out)
 void neuralNet::calcCostArr(const vector<vector<double>>& inArr
 	, const vector<vector<double>>& desArr
 	, vector<vector<double>>& outArr
+	, U32 nSteps
 	, costCorr costCorrKind
 	, double& totalCost, double& avgCost, double& minCost, double& maxCost, U32& correct)
 {
 	// costs
-	U32 n = desArr.size();
 	totalCost = 0.0;
 	minCost = numeric_limits<double>::max();
 	maxCost = 0.0;
 	correct = 0;
-	for (U32 t = 0; t < n; ++t) {
+	for (U32 t = 0; t < nSteps; ++t) {
 		const vector<double>& des = desArr[t];
 		vector<double>& out = outArr[t];
 		runNetwork(inArr[t], out);
@@ -643,53 +651,20 @@ void neuralNet::calcCostArr(const vector<vector<double>>& inArr
 			++correct;
 		}
 	}
-	avgCost = totalCost / n;
+	avgCost = totalCost / nSteps;
 }
 
 void neuralNet::calcCostTrainAndTest()
 {
-#if 1
 	calcCostArr(inputsTrain, desiredsTrain, outputsTrain
+//		, nTrain
+		, nTotalTrain
 		, doCorrect
 		, totalCostTrain, avgCostTrain, minCostTrain, maxCostTrain, correctTrain);
 	calcCostArr(inputsTest, desiredsTest, outputsTest
+		, nTest
 		, doCorrect
 		, totalCostTest, avgCostTest, minCostTest, maxCostTest, correctTest);
-#else
-	// train
-	totalCostTrain = 0.0;
-	minCostTrain = numeric_limits<double>::max();
-	maxCostTrain = 0.0;
-	for (U32 t = 0; t < nTrain; ++t) {
-		runNetwork(inputsTrain[t], outputsTrain[t]);
-		double cost = calcOneCost(desiredsTrain[t], outputsTrain[t]);
-		totalCostTrain += cost;
-		if (cost < minCostTrain) {
-			minCostTrain = cost;
-		}
-		if (cost > maxCostTrain) {
-			maxCostTrain = cost;
-		}
-	}
-	avgCostTrain = totalCostTrain / nTrain;
-
-	// test
-	totalCostTest = 0.0;
-	minCostTest = numeric_limits<double>::max();
-	maxCostTest = 0.0;
-	for (U32 t = 0; t < nTest; ++t) {
-		runNetwork(inputsTest[t], outputsTest[t]);
-		double cost = calcOneCost(desiredsTest[t], outputsTest[t]);
-		totalCostTest += cost;
-		if (cost < minCostTest) {
-			minCostTest = cost;
-		}
-		if (cost > maxCostTest) {
-			maxCostTest = cost;
-		}
-	}
-	avgCostTest = totalCostTest / nTest;
-#endif
 }
 
 neuralNet::~neuralNet()

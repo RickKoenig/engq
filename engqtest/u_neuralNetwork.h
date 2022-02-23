@@ -64,7 +64,8 @@ private:
 	vector<vector<double>>& inputsTrain;
 	vector<vector<double>>& desiredsTrain;
 	vector<vector<double>> outputsTrain;
-	U32 nTrain;
+	U32 nTrain; // maybe 100 or so, currently in use
+	U32 nTotalTrain; // the full 60,000
 
 // not used in training, but used for debprint menu and calculating costs
 	vector<vector<double>>& inputsTest;
@@ -104,7 +105,7 @@ public:
 	// constructor
 	// tester is just for cost and display
 	neuralNet(const string& name, const vector<U32>& topology
-		, vector<vector<double>>& inTrain, vector<vector<double>>& desTrain
+		, vector<vector<double>>& inTrain, vector<vector<double>>& desTrain, U32 trainLimit
 		, vector<vector<double>>& inTester, vector<vector<double>>& desTester
 		, costCorr corrCost);
 
@@ -130,6 +131,7 @@ public:
 	void calcCostArr(const vector<vector<double>>& inArr
 		, const vector<vector<double>>& desArr
 		, vector<vector<double>>& outArr
+		, U32 nSteps
 		, costCorr costCorrKind
 		, double& totalCost, double& avgCost, double& minCost, double& maxCost, U32& correct);
 	// update train and test outputs and costs

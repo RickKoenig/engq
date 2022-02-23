@@ -35,12 +35,20 @@ using namespace u_plotter2;
 #ifdef USE_TIMEB
 #include <sys/timeb.h>
 #endif
+
 #ifdef DO_NEURAL6
+
+// how much data to process
+//#define SMALL_DATA
+//#define MED_DATA
+#define ALL_DATA
+
 #include "u_idxfile.h"
+// what guess correct function to run
 const neuralNet::costCorr costCorrect = neuralNet::costCorr::DIGITS; // show how many digits are correct for train and test data
 #else
 #ifdef DO_NEURAL5
-const neuralNet::costCorr costCorrect = neuralNet::costCorr::THRESHHOLD; // match those that are both < .5 or both >= .5
+const neuralNet::costCorr costCorrect = neuralNet::costCorr::THRESHHOLD; // match those that are both < .3 or both >= .7
 #else
 const neuralNet::costCorr costCorrect = neuralNet::costCorr::NONE;
 #endif
@@ -89,6 +97,26 @@ namespace neuralPlot {
 	double xVar, yVar;
 	double dydx;
 #endif
+#ifdef DO_NEURAL6
+#ifdef SMALL_DATA
+	const U32 trainLimitIdx = 100;
+	const U32 trainLimitNeural = 100;
+	const U32 testLimitIdx = 2;
+#endif
+#ifdef MED_DATA
+	const U32 trainLimitIdx = 200;
+	const U32 trainLimitNeural = 0;
+	const U32 testLimitIdx = 500;
+#endif
+#ifdef ALL_DATA
+	const U32 trainLimitIdx = 0;
+	const U32 trainLimitNeural = 0;
+	const U32 testLimitIdx = 0;
+#endif
+#else
+	const U32 trainLimitNeural = 0; // use all data for neural network
+#endif
+
 #ifdef DO_NEURAL1
 	const string neuralName{ "Neural1" };
 	vector<U32> aTesterTopology{ 1, 1 };
@@ -297,24 +325,8 @@ namespace neuralPlot {
 		idxTrain = 0;
 		idxTest = 0;
 		// read MNIST data
-//#define SMALL_DATA
-#define MED_DATA
-//#define ALL_DATA
-
-#ifdef SMALL_DATA
-		const U32 trainSize = 100;
-		const U32 testSize = 2;
-#endif
-#ifdef MED_DATA
-		const U32 trainSize = 100;
-		const U32 testSize = 50;
-#endif
-#ifdef ALL_DATA
-		const U32 trainSize = 0;
-		const U32 testSize = 0;
-#endif
-		idxFileTrain = new idxFile("train-images.idx3-ubyte.bin", "train-labels.idx1-ubyte.bin", trainSize);
-		idxFileTest = new idxFile("t10k-images.idx3-ubyte.bin", "t10k-labels.idx1-ubyte.bin", testSize);
+		idxFileTrain = new idxFile("train-images.idx3-ubyte.bin", "train-labels.idx1-ubyte.bin", trainLimitIdx);
+		idxFileTest = new idxFile("t10k-images.idx3-ubyte.bin", "t10k-labels.idx1-ubyte.bin", testLimitIdx);
 		// reference from idxFile to args for new neuralNet
 		inputTrain = idxFileTrain->getInput();
 		desiredTrain = idxFileTrain->getDesired();
@@ -542,10 +554,10 @@ namespace neuralPlot {
 				randomInit();
 #ifdef DO_NEURAL6
 
-				aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, *inputTest, *desiredTest, costCorrect);
+				aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, trainLimitNeural, *inputTest, *desiredTest, costCorrect);
 #else
 
-				aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest, costCorrect);
+				aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, 0, inputTest, desiredTest, costCorrect);
 #endif
 				randomNextSeed();
 				break;
@@ -759,9 +771,9 @@ void plot2neuralinit()
 #endif
 	randomInit();
 #ifdef DO_NEURAL6
-	aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, *inputTest, *desiredTest, costCorrect);
+	aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, trainLimitNeural, *inputTest, *desiredTest, costCorrect);
 #else
-	aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, inputTest, desiredTest, costCorrect);
+	aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, 0, inputTest, desiredTest, costCorrect);
 #endif
 	randomNextSeed();
 }

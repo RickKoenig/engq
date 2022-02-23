@@ -16,9 +16,9 @@
 #endif
 
 // one of these
-#define CHECKPTRS // includes CHECKMEMLEAKS features, keeps track of mem alloced in a huge hash table, does dup frees
+//#define CHECKPTRS // includes CHECKMEMLEAKS features, keeps track of mem alloced in a huge hash table, does dup frees
 //#define CHECKMEMLEAKS // check for leaks, keeps track of total numchunks and sizes, no checks for dup frees
-//#define CHECKNONE // pass thru
+#define CHECKNONE // pass thru
 
 // sub options
 #define CHECKBOUNDS // catches buffer overruns and underruns, used with CHECKPTRS
