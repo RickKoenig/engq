@@ -66,6 +66,7 @@ private:
 	vector<vector<double>> outputsTrain;
 	U32 nTrain; // maybe 100 or so, currently in use
 	U32 nTotalTrain; // the full 60,000
+	vector<U32> shuffleIdx;
 
 // not used in training, but used for debprint menu and calculating costs
 	vector<vector<double>>& inputsTest;
@@ -92,15 +93,7 @@ private:
 	vector<menuvar> dbNeuralNet; // debprint menu for neuralNet
 
 	// functions
-
 	C8* copyStr(const C8* in); // make a copy of cstr, free with delete, all string names in dbNeuralNet are allocated and are to be freed
-
-	// generate a random number in range [0 - 1)
-	double frand()
-	{
-		return rand() / (RAND_MAX + 1.0);
-	}
-
 public:
 	// constructor
 	// tester is just for cost and display
@@ -114,6 +107,9 @@ public:
 
 	// next step in gradientDescent
 	void gradientDescent(double learn); // gradient descent training
+
+	// stochastic sampling
+	void reShuffle();
 
 	// load and save weights and bias
 	bool loadNetwork(U32 slot); // true if loaded, false if not loaded

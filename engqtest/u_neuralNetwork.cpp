@@ -1,6 +1,7 @@
 #include <m_eng.h>
 #include "u_neuralNetwork.h"
 #include "m_perf.h"
+#include "u_random.h"
 
 C8* neuralNet::copyStr(const C8* in) // free with delete, all string names in dbNeuralNet are allocated and are to be freed
 {
@@ -25,6 +26,10 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	}
 	if (inTrain.empty()) {
 		errorexit("intrain needs data!");
+	}
+	shuffleIdx = vector<U32>(nTotalTrain);
+	for (U32 k = 0U; k < nTotalTrain; ++k) {
+		shuffleIdx[k] = k;
 	}
 	// check dimensions of everything
 	if (topology.size() < 2) {
@@ -52,13 +57,12 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	for (auto v : topo) {
 		title << v << " ";
 	}
-	title << "]";
+	title << "] Sample " << nTrain;
 
 	mv = { copyStr(title.str().c_str()), NULL, D_VOID, 0 }; // name of the neural network
 	dbNeuralNet.push_back(mv);
 	// build a random network
-	U32 k;
-	for (k = 0; k < topology.size(); ++k) {
+	for (U32 k = 0; k < topology.size(); ++k) {
 		S32 cols = topology[k];
 		layer aLayer;
 		if (k > 0) {
@@ -85,14 +89,14 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	dbNeuralNet.push_back(mv);
 #endif
 	// add network to debprint menu
-	for (k = 1; k < layers.size(); ++k) {
+	for (U32 k = 1; k < layers.size(); ++k) {
 		layer& lay = layers[k];
 		U32 rowsW = lay.W.size();
 		U32 colsW = lay.W[0].size();
 		for (U32 j = 0; j < rowsW; ++j) {
 			vector<double>& aRow = lay.W[j];
 			for (U32 i = 0; i < colsW; ++i) {
-				aRow[i] = frand() * 2.0 - 1.0;
+				aRow[i] = randomF() * 2.0 - 1.0;
 #ifdef SHOW_WEIGHT_BIAS
 				stringstream ssW;
 				ssW << "weight" << k << "_" << j << "_" << i;
@@ -103,7 +107,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 			}
 		}
 		for (U32 j = 0; j < rowsW; ++j) {
-			lay.B[j] = frand() * 2.0 - 1.0;
+			lay.B[j] = randomF() * 2.0 - 1.0;
 #ifdef SHOW_WEIGHT_BIAS
 			stringstream ssB;
 			ssB << "bias" << k << "_" << j;
@@ -117,7 +121,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	mv = { copyStr("@yellow@--- Training data ---"), NULL, D_VOID, 0 };
 	dbNeuralNet.push_back(mv);
 	// add inputs to debprint menu
-	for (U32 j = 0; j < nTrain; ++j) {
+	for (U32 j = 0; j < nTotalTrain; ++j) {
 		vector<double>& anInput = inputsTrain[j];
 		for (U32 i = 0; i < anInput.size(); ++i) {
 			stringstream ssInput;
@@ -128,7 +132,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 		}
 	}
 	// add desireds and outputs to debprint menu
-	for (U32 j = 0; j < nTrain; ++j) {
+	for (U32 j = 0; j < nTotalTrain; ++j) {
 		vector<double>& aDesired = desiredsTrain[j];
 		vector<double>& anOutput = outputsTrain[j];
 		for (U32 i = 0; i < aDesired.size(); ++i) {
@@ -248,7 +252,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	mv = { copyStr("@lightgreen@--- Derivatives of Weights and Biases ---"), NULL, D_VOID, 0 };
 	dbNeuralNet.push_back(mv);
 	// add derivatives to debprint menu
-	for (k = 1; k < layers.size(); ++k) {
+	for (U32 k = 1; k < layers.size(); ++k) {
 		layer& lay = layers[k];
 		U32 rowsW = lay.W.size();
 		U32 colsW = lay.W[0].size();
@@ -361,9 +365,10 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 #endif
 	}
 	for (U32 t = 0; t < nTrain; ++t) {
-		runNetwork(inputsTrain[t], outputsTrain[t]); // baseline
+		U32 tIdx = shuffleIdx[t];
+		runNetwork(inputsTrain[tIdx], outputsTrain[tIdx]); // baseline
 #ifdef DO_BRUTE_FORCE_DERIVATIVES
-		double cost = calcOneCost(desiredsTrain[t], outputsTrain[t]);
+		double cost = calcOneCost(desiredsTrain[tIdx], outputsTrain[tIdx]);
 		for (k = 1; k < topo.size(); ++k) {
 			S32 lastK = k - 1;
 			S32 row = topo[k];
@@ -380,21 +385,21 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 				for (i = 0; i < col; ++i) {
 					double save = curWrow[i];
 					curWrow[i] += epsilon;
-					runNetwork(inputsTrain[t], outputsTrain[t]);
-					double costPweight = calcOneCost(desiredsTrain[t], outputsTrain[t]);
+					runNetwork(inputsTrain[tIdx], outputsTrain[tIdx]);
+					double costPweight = calcOneCost(desiredsTrain[tIdx], outputsTrain[tIdx]);
 					curWrow[i] = save;
 					curdcDw_CRrow[i] += (costPweight - cost) / epsilon;
 				}
 				double& curBrow = curB[j];
 				double save = curBrow;
 				curBrow += epsilon;
-				runNetwork(inputsTrain[t], outputsTrain[t]);
-				double costPbias = calcOneCost(desiredsTrain[t], outputsTrain[t]);
+				runNetwork(inputsTrain[tIdx], outputsTrain[tIdx]);
+				double costPbias = calcOneCost(desiredsTrain[tIdx], outputsTrain[tIdx]);
 				curBrow = save;
 				curdCdB_BF[j] += (costPbias - cost) / epsilon;
 			}
 		}
-		runNetwork(inputsTrain[t], outputsTrain[t]); // need correct A? for chain rule derivatives and output
+		runNetwork(inputsTrain[tIdx], outputsTrain[tIdx]); // need correct A? for chain rule derivatives and output
 #endif
 		// back trace
 		for (k = topo.size() - 1; k > 0; --k) {
@@ -411,13 +416,13 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 			S32 N = L + 1;
 			S32 Ls = topo[L]; // current layer
 			S32 Ps = topo[P]; // previous layer
-			vector<double>& AL = N == topo.size() ? outputsTrain[t] : layers[L].A;
-			vector<double>& AP = P ? layers[P].A : inputsTrain[t];
+			vector<double>& AL = N == topo.size() ? outputsTrain[tIdx] : layers[L].A;
+			vector<double>& AP = P ? layers[P].A : inputsTrain[tIdx];
 			// cost
 			DcostDA.resize(Ls);
 			if (k == topo.size() - 1) {
 				for (j = 0; j < Ls; ++j) {
-					DcostDA[j] = 2.0*(AL[j] - desiredsTrain[t][j]);
+					DcostDA[j] = 2.0*(AL[j] - desiredsTrain[tIdx][j]);
 				}
 			} else { // backtrace
 				S32 Ns = topo[N];
@@ -501,6 +506,15 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 	}
 	perf_end(GRAD_DESCENT);
 }
+
+void neuralNet::reShuffle()
+{
+	if (nTrain >= nTotalTrain) {
+		return; // no need to shuffle, we are including everything anyway
+	}
+	shortShuffle(shuffleIdx, nTrain);
+}
+
 
 bool neuralNet::loadNetwork(U32 slot)
 {

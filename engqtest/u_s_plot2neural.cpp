@@ -6,7 +6,7 @@
 #include "u_neuralNetwork.h"
 #include "m_perf.h"
 
-#if 1
+#if 0
 #include <array>        // std::array
 #include <chrono>       // std::chrono::system_clock
 #include <iostream>     // std::cout
@@ -14,8 +14,13 @@
 #include <random>       // std::default_random_engine
 #endif
 
+#include "u_random.h"
+
 using namespace u_plotter2;
 // Keyboard shortcuts, 'r' to reset/randomize weights and biases
+
+//#define TEST_RANDOM
+//#define TEST_SHUFFLE
 
 // lots of switches
 // random only
@@ -40,8 +45,8 @@ using namespace u_plotter2;
 
 // how much data to process
 //#define SMALL_DATA
-#define MED_DATA
-//#define ALL_DATA
+//#define MED_DATA
+#define ALL_DATA
 
 #include "u_idxfile.h"
 // what guess correct function to run
@@ -80,6 +85,8 @@ namespace neuralPlot {
 	S32 calcSpeed = 1; // number of calculations per frame
 	S32 runTestCount = 32;// 32;// 20; // how many frames to wait to run test and user
 	S32 runTest = 0;
+	S32 runShuffleCount = 0;
+	S32 runShuffle = 0;
 
 	const double LO = .1;
 	const double HI = .9;
@@ -110,11 +117,9 @@ namespace neuralPlot {
 #endif
 #ifdef ALL_DATA
 	const U32 trainLimitIdx = 0;
-	const U32 trainLimitNeural = 0;
+	const U32 trainLimitNeural = 200;
 	const U32 testLimitIdx = 0;
 #endif
-#else
-	const U32 trainLimitNeural = 0; // use all data for neural network
 #endif
 
 #ifdef DO_NEURAL1
@@ -138,6 +143,7 @@ namespace neuralPlot {
 	vector<vector<double>> desiredTest = {
 		{.65},
 	};
+	const U32 trainLimitNeural = 0; // use all data for neural network
 #endif
 #ifdef DO_NEURAL2
 	const string neuralName{ "Neural2" };
@@ -160,7 +166,7 @@ namespace neuralPlot {
 	vector<vector<double>> desiredTest = {
 		{.65},
 	};
-
+	const U32 trainLimitNeural = 0; // use all data for neural network
 #endif
 #ifdef DO_NEURAL3
 	const string neuralName{ "Neural3" };
@@ -189,6 +195,7 @@ namespace neuralPlot {
 		{.2, .21},
 		{.93, .94},
 	}; // for now try or and and gates
+	const U32 trainLimitNeural = 0; // use all data for neural network
 #endif
 #ifdef DO_NEURAL4
 	const string neuralName{ "Neural4" };
@@ -217,6 +224,7 @@ namespace neuralPlot {
 		{.111, .123},
 		{.933, .144},
 	}; // for now try or and and gates
+	const U32 trainLimitNeural = 0; // use all data for neural network
 #endif
 #ifdef DO_NEURAL5 // add 2 3 digit binary numbers to make 1 4 digit binary number
 	const string neuralName{ "Neural5" };
@@ -267,6 +275,7 @@ namespace neuralPlot {
 			}
 		}
 	}
+	const U32 trainLimitNeural = 4; // use all data for neural network
 #endif
 
 #ifdef DO_NEURAL6 // handwritten digit recognition 28 by 28 grid
@@ -375,6 +384,8 @@ namespace neuralPlot {
 		{"learn", &learn, D_DOUBLE, FLOATUP / 32},
 		{"runTestcount", &runTestCount, D_INT, 32},
 		{"runTest", &runTest, D_INT | D_RDONLY},
+		{"runShufflecount", &runShuffleCount, D_INT, 1024},
+		{"runShuffle", &runShuffle, D_INT | D_RDONLY},
 		// for now, hand code these
 		{"@lightcyan@--- neural network user ---", NULL, D_VOID, 0},
 #ifdef DO_NEURAL1
@@ -453,11 +464,11 @@ namespace neuralPlot {
 	// time based or seed based
 	void randomInit()
 	{
-		srand(randomSeed);
+		randomSetSeed(randomSeed);
 		// and mix it up
-		rand();
-		rand();
-		rand();
+		randomF();
+		randomF();
+		randomF();
 	}
 
 	void randomNextSeed()
@@ -547,10 +558,13 @@ namespace neuralPlot {
 	void commonProc()
 	{
 		bool doRun = true;
+#ifdef DO_NEURAL6
 		if (KEY || MBUTuserBM) {
 			runTest = runTestCount; // don't run costly cost functions when using the UI
+			runShuffle = runShuffleCount;
 			doRun = false;
 		}
+#endif
 		// range check gradient descent
 		busy = loading || saving || noLoad || yesLoad;
 		if (!busy) {
@@ -565,7 +579,7 @@ namespace neuralPlot {
 				aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, trainLimitNeural, *inputTest, *desiredTest, costCorrect);
 #else
 
-				aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, 0, inputTest, desiredTest, costCorrect);
+				aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, trainLimitNeural, inputTest, desiredTest, costCorrect);
 #endif
 				randomNextSeed();
 				break;
@@ -608,6 +622,7 @@ namespace neuralPlot {
 		calcAmount = range(-1, calcAmount, 1000000);
 		calcSpeed = range(1, calcSpeed, 10000);
 		runTestCount = range(0, runTestCount, 1000);
+		runShuffleCount = range(0, runShuffleCount, 1000);
 #ifdef DO_NEURAL6
 		// range check idx for showing data
 		S32 nd = idxFileTrain->getNumData();
@@ -624,6 +639,15 @@ namespace neuralPlot {
 #endif
 				if (doRun) { // only run when no keys or mouse buttons
 					aNeuralNet->gradientDescent(learn);
+					if (runShuffleCount > 0) {
+						if (runShuffle == 0) {
+							// test suite
+							runShuffle = runShuffleCount;
+							aNeuralNet->reShuffle();
+							// run 1 user setting
+						}
+						--runShuffle;
+					}
 				}
 			}
 			if (calcAmount > 0) {
@@ -736,30 +760,17 @@ namespace neuralPlot {
 	}
 #endif
 
-	void testShuffle()
-	{
-		logger("TEST SHUFFLE!\n");
-		// shuffle algorithm example
-		vector<S32> foo{ 1, 2, 3, 4, 5};
-		// use a fixed seed
-		U32 rndSeed = 1257;
-		logger("shuffled elements\n");
-		auto eng = default_random_engine(rndSeed);
-		for (auto i = 0; i < 10; ++i) {
-			for (const S32 x : foo) {
-				logger("%d ", x);
-			}
-			shuffle(foo.begin(), foo.end(), eng);
-			logger("\n");
-		}
-	}
-
 } // end namespace neuralPlot
 
 using namespace neuralPlot;
 void plot2neuralinit()
 {
+#ifdef TEST_RANDOM
+	testRandom();
+#endif
+#ifdef TEST_SHUFFLE
 	testShuffle();
+#endif
 	runinbackgroundSave = wininfo.runinbackground;
 	wininfo.runinbackground = 1;
 	loading = 0;
@@ -781,7 +792,7 @@ void plot2neuralinit()
 #ifdef DO_NEURAL6
 	aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, trainLimitNeural, *inputTest, *desiredTest, costCorrect);
 #else
-	aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, 0, inputTest, desiredTest, costCorrect);
+	aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, trainLimitNeural, inputTest, desiredTest, costCorrect);
 #endif
 	randomNextSeed();
 }
