@@ -85,7 +85,7 @@ namespace neuralPlot {
 	S32 calcSpeed = 1; // number of calculations per frame
 	S32 runTestCount = 32;// 32;// 20; // how many frames to wait to run test and user
 	S32 runTest = 0;
-	S32 runShuffleCount = 0;
+	S32 runShuffleCount = 2;
 	S32 runShuffle = 0;
 
 	const double LO = .1;
@@ -117,7 +117,7 @@ namespace neuralPlot {
 #endif
 #ifdef ALL_DATA
 	const U32 trainLimitIdx = 0;
-	const U32 trainLimitNeural = 200;
+	const U32 trainLimitNeural = 2000;
 	const U32 testLimitIdx = 0;
 #endif
 #endif
@@ -384,7 +384,7 @@ namespace neuralPlot {
 		{"learn", &learn, D_DOUBLE, FLOATUP / 32},
 		{"runTestcount", &runTestCount, D_INT, 32},
 		{"runTest", &runTest, D_INT | D_RDONLY},
-		{"runShufflecount", &runShuffleCount, D_INT, 1024},
+		{"runShufflecount", &runShuffleCount, D_INT, 8},
 		{"runShuffle", &runShuffle, D_INT | D_RDONLY},
 		// for now, hand code these
 		{"@lightcyan@--- neural network user ---", NULL, D_VOID, 0},
