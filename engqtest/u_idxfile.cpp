@@ -17,7 +17,7 @@ void idxFile::normalize(vector<double>& anInput, double& mean, double& stdDev)
 		variance += diff * diff;
 	}
 	if (variance < EPSILON) {
-		logger("no variance!\n");
+		//logger("no variance!\n");
 		stdDev = 0.0;
 		return; // no variance, don't divide by zero
 	}
@@ -56,20 +56,28 @@ idxFile::idxFile(const C8* fNameInput, const C8* fNameDesired, U32 limit)
 	U32 width = filereadU32BE(fh);
 	U32 prod = width * height;
 
-	string doubleName = string() + fNameInput + ".doubleNorm.bin";
-	bool readRawDoubles = false;
-	if (fileexist(doubleName.c_str())) {
-		readRawDoubles = true;
-	}
-	//readRawDoubles = false;
-
-	FILE* fhd;
-	if (readRawDoubles) { // cache normalized double data
-		fhd = fopen2(doubleName.c_str(), "rb"); // read cached double data
-	} else {
-		fhd = fopen2(doubleName.c_str(), "wb"); // else calc and save them doubles
+	string doubleNormName = string() + fNameInput + ".doubleNorm.bin";
+	bool readNormDoubles = false;
+	bool writeNormDoubles = true;
+	if (fileexist(doubleNormName.c_str())) {
+		readNormDoubles = true;
+		writeNormDoubles = false;
 	}
 
+	// override
+	//readNormDoubles = false;
+	//writeNormDoubles = false;
+
+
+	FILE* fhdr = nullptr, *fhdw = nullptr;
+	if (readNormDoubles) { // cache normalized double data
+		fhdr = fopen2(doubleNormName.c_str(), "rb"); // read cached double data
+	} 
+	if (writeNormDoubles) {
+		fhdw = fopen2(doubleNormName.c_str(), "wb"); // else calc and save them doubles
+	}
+
+	// always read raw U8 data
 	rawInput.resize(dataSize3);
 	input.resize(dataSize3);
 	for (U32 k = 0; k < dataSize3; ++k) {
@@ -84,8 +92,8 @@ idxFile::idxFile(const C8* fNameInput, const C8* fNameDesired, U32 limit)
 		// data for neuralNet
 		// input image
 		vector<double> anInput = vector<double>(prod);
-		if (readRawDoubles) {
-			fileread(fhd, &anInput[0], anInput.size() * sizeof anInput[0]);
+		if (readNormDoubles) {
+			fileread(fhdr, &anInput[0], anInput.size() * sizeof anInput[0]);
 		} else {
 			double* dest = &anInput[0];
 			for (U32 j = 0; j < height; ++j) {
@@ -105,13 +113,20 @@ idxFile::idxFile(const C8* fNameInput, const C8* fNameDesired, U32 limit)
 			//normalize(anInput, mean, stdDev); // check that mean = 0 and stdDev = 1
 			//logger("normalizing file data 2, mean = %f, stdDev = %f\n", mean, stdDev);
 #endif
-			filewrite(fhd, &anInput[0], anInput.size() * sizeof anInput[0]);
+			if (writeNormDoubles) {
+				filewrite(fhdw, &anInput[0], anInput.size() * sizeof anInput[0]);
+			}
 		}
 		input[k] = anInput; // populate input
 	}
 
 	fclose(fh);
-	fclose(fhd);
+	if (fhdr) {
+		fclose(fhdr);
+	}
+	if (fhdw) {
+		fclose(fhdw);
+	}
 
 	// desired data
 	fh = fopen2(fNameDesired, "rb");
