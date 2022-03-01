@@ -108,7 +108,7 @@ namespace neuralPlot {
 #ifdef SMALL_DATA
 	const U32 trainLimitIdx = 100;
 	const U32 trainLimitNeural = 100;
-	const U32 testLimitIdx = 2;
+	const U32 testLimitIdx = 100;
 #endif
 #ifdef MED_DATA
 	const U32 trainLimitIdx = 200;

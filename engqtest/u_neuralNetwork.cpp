@@ -316,11 +316,11 @@ void neuralNet::runNetwork(const vector<double>& in, vector<double>& out)
 		vector<double>& curZ = curLayer.Z;
 		for (j = 0; j < jc; ++j) {
 			vector<double>& curWrow = curW[j];
-			curZ[j] = curB[j];
-			double& ZjRow = curZ[j];
+			double ZjRow = curB[j];
 			for (i = 0; i < ic; ++i) {
 				ZjRow += lastA[i] * curWrow[i];
 			}
+			curZ[j] = ZjRow;
 #ifdef USE_TANH_HIDDEN
 			curA[j] = outputLayer ? neuralNet::sigmoid(ZjRow) : neuralNet::tangentH(ZjRow);
 #else
