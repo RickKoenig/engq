@@ -44,9 +44,9 @@ using namespace u_plotter2;
 #ifdef DO_NEURAL6
 
 // how much data to process
-#define SMALL_DATA
+//#define SMALL_DATA
 //#define MED_DATA
-//#define ALL_DATA
+#define ALL_DATA
 
 #include "u_idxfile.h"
 // what guess correct function to run
@@ -83,7 +83,7 @@ namespace neuralPlot {
 	double learn = 0.0; // .03125; // how fast to learn, too small too slow, too large too unstable
 	S32 calcAmount = 0;// -1; // how many calcs to do, negative run forever, positive decrements every frame until 0 
 	S32 calcSpeed = 1; // number of calculations per frame
-	S32 runTestCount = 32;// 0; // how many frames to wait to run test and user
+	S32 runTestCount = 256;// 0; // how many frames to wait to run test and user
 	S32 runTest = 0;
 	S32 runShuffleCount = 2;
 	S32 runShuffle = 0;
@@ -117,7 +117,7 @@ namespace neuralPlot {
 #endif
 #ifdef ALL_DATA
 	const U32 trainLimitIdx = 0;
-	const U32 trainLimitNeural = 60000;
+	const U32 trainLimitNeural = 0;
 	const U32 testLimitIdx = 0;
 #endif
 #endif

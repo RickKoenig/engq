@@ -622,6 +622,8 @@ void neuralNet::calcCostArr(const vector<vector<double>>& inArr
 	minCost = numeric_limits<double>::max();
 	maxCost = 0.0;
 	correct = 0;
+	vector<U32> histoDigits(outArr[0].size()); // for digits only
+	vector<U32> histoDigitsRight(outArr[0].size()); // for digits only
 	for (U32 t = 0; t < nSteps; ++t) {
 		const vector<double>& des = desArr[t];
 		vector<double>& out = outArr[t];
@@ -635,8 +637,10 @@ void neuralNet::calcCostArr(const vector<vector<double>>& inArr
 			maxCost = cost;
 		}
 		bool curCorrect = true;
-		double maxVal = 0;
-		U32 maxIdx = 0;
+		double maxOutVal = 0;
+		U32 maxOutIdx = 0;
+		double maxDesVal = 0;
+		U32 maxDesIdx = 0;
 		switch (costCorrKind) {
 		case costCorr::THRESHHOLD:
 			for (U32 j = 0; j < out.size(); ++j) {
@@ -653,12 +657,21 @@ void neuralNet::calcCostArr(const vector<vector<double>>& inArr
 		case costCorr::DIGITS:
 			for (U32 j = 0; j < out.size(); ++j) {
 				double ov = out[j];
-				if (ov > maxVal) {
-					maxVal = ov;
-					maxIdx = j;
+				if (ov > maxOutVal) {
+					maxOutVal = ov;
+					maxOutIdx = j;
+				}
+				double dv = des[j];
+				if (dv > maxDesVal) {
+					maxDesVal = dv;
+					maxDesIdx = j;
 				}
 			}
-			curCorrect = des[maxIdx] > .5;
+			curCorrect = maxDesIdx == maxOutIdx;
+			if (curCorrect) {
+				++histoDigitsRight[maxDesIdx];
+			}
+			++histoDigits[maxDesIdx];
 			break;
 		}
 		if (curCorrect) {
@@ -666,6 +679,15 @@ void neuralNet::calcCostArr(const vector<vector<double>>& inArr
 		}
 	}
 	avgCost = totalCost / nSteps;
+	if (costCorrKind == costCorr::DIGITS) {
+		logger("digit counts %d\n", nSteps);
+		for (U32 i = 0u; i < outArr[0].size(); ++i) {
+			U32 dig = histoDigits[i];
+			U32 digCorrect = histoDigitsRight[i];
+			logger("digit %u: correct %5d, all %5d, score %8.4f%%\n", i, digCorrect, dig, static_cast<double>(digCorrect) * 100.0 / dig);
+		}
+		logger("total  : correct %5d, all %5d, score %8.4f%%\n\n", correct, nSteps, static_cast<double>(correct) * 100.0 / nSteps);
+	}
 }
 
 void neuralNet::calcCostTrainAndTest()
