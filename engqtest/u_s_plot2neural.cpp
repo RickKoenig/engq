@@ -716,12 +716,24 @@ namespace neuralPlot {
 			S32 y = (MY - yMin) / 8;
 			S32 xl = (lastMX - xMin) / 8;
 			S32 yl = (lastMY - yMin) / 8;
+#define SMALL_BRUSH
+//#define LARGE_BRUSH
+#ifdef SMALL_BRUSH
+			const U32 A = 255;
+			const U32 B = 180;
+			const U32 C = 90;
+			const U32 D = 45;
+			const U32 E = 0;
+			const U32 F = 0;
+#endif
+#ifdef LARGE_BRUSH
 			const U32 A = 255;
 			const U32 B = 180;
 			const U32 C = 92;
 			const U32 D = 64;
 			const U32 E = 32;
 			const U32 F = 0;
+#endif
 			vector<vector<U32>> brush{
 				{F,E,D,E,F},
 				{E,C,B,C,E},
