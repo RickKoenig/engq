@@ -358,7 +358,8 @@ U32 filereadU32LE(FILE* fh)
 
 void filewrite(FILE* fh,const void* src,U32 len)
 {
-	fwrite(src,1,len,fh);
+	U32 wrote = fwrite(src,1,len,fh);
+	//logger("wrote = %d, with write %d\n", wrote, len); // TODO: test
 }
 
 void filewriteU8(FILE* fh,U32 d)

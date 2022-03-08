@@ -15,7 +15,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	,vector<vector<double>>& inTester, vector<vector<double>>& desTester
 	,costCorr doCorr)
 	: name(namea), inputsTrain(inTrain), desiredsTrain(desTrain)
-	,inputsTest(inTester), desiredsTest(desTester), nTest(desTester.size())
+	,inputsTest(inTester), desiredsTest(desTester), nTotalTest(desTester.size())
 	,doCorrect(doCorr)
 {
 	nTotalTrain = desTrain.size();
@@ -49,7 +49,7 @@ neuralNet::neuralNet(const string& namea, const vector<U32>& topology
 	// create outputs for both training and testing
 	S32 outputSize = desiredsTrain[0].size();
 	outputsTrain = vector<vector<double>>(nTotalTrain, vector<double>(outputSize));
-	outputsTest = vector<vector<double>>(nTest, vector<double>(outputSize));
+	outputsTest = vector<vector<double>>(nTotalTest, vector<double>(outputSize));
 	menuvar mv{ copyStr("@cyan@--- Neural Network ---"), NULL, D_VOID, 0 };
 	dbNeuralNet.push_back(mv);
 	stringstream title;
@@ -563,6 +563,11 @@ void neuralNet::saveNetwork(U32 slot)
 	stringstream ss;
 	ss << name << "_" << slot << ".mdl";
 	FILE* fh = fopen2(ss.str().c_str(), "wb");
+	if (!fh) {
+		error("can't save file '%s'", ss.str().c_str());
+		fclose(fh);
+		popdir();
+	}
 	// save topo
 	filewriteU32LE(fh, topo.size());
 	filewrite(fh, &topo[0], topo.size() * sizeof topo[0]);
@@ -622,8 +627,11 @@ void neuralNet::calcCostArr(const vector<vector<double>>& inArr
 	minCost = numeric_limits<double>::max();
 	maxCost = 0.0;
 	correct = 0;
+//#define LOG_DIGITS
+#ifdef LOG_DIGITS
 	vector<U32> histoDigits(outArr[0].size()); // for digits only
 	vector<U32> histoDigitsRight(outArr[0].size()); // for digits only
+#endif
 	for (U32 t = 0; t < nSteps; ++t) {
 		const vector<double>& des = desArr[t];
 		vector<double>& out = outArr[t];
@@ -668,10 +676,12 @@ void neuralNet::calcCostArr(const vector<vector<double>>& inArr
 				}
 			}
 			curCorrect = maxDesIdx == maxOutIdx;
+#ifdef LOG_DIGITS
 			if (curCorrect) {
 				++histoDigitsRight[maxDesIdx];
 			}
 			++histoDigits[maxDesIdx];
+#endif
 			break;
 		}
 		if (curCorrect) {
@@ -679,6 +689,7 @@ void neuralNet::calcCostArr(const vector<vector<double>>& inArr
 		}
 	}
 	avgCost = totalCost / nSteps;
+#ifdef LOG_DIGITS
 	if (costCorrKind == costCorr::DIGITS) {
 		logger("digit counts %d\n", nSteps);
 		for (U32 i = 0u; i < outArr[0].size(); ++i) {
@@ -688,6 +699,7 @@ void neuralNet::calcCostArr(const vector<vector<double>>& inArr
 		}
 		logger("total  : correct %5d, all %5d, score %8.4f%%\n\n", correct, nSteps, static_cast<double>(correct) * 100.0 / nSteps);
 	}
+#endif
 }
 
 void neuralNet::calcCostTrainAndTest()
@@ -698,7 +710,7 @@ void neuralNet::calcCostTrainAndTest()
 		, doCorrect
 		, totalCostTrain, avgCostTrain, minCostTrain, maxCostTrain, correctTrain);
 	calcCostArr(inputsTest, desiredsTest, outputsTest
-		, nTest
+		, nTotalTest
 		, doCorrect
 		, totalCostTest, avgCostTest, minCostTest, maxCostTest, correctTest);
 }

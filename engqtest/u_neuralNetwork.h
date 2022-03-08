@@ -72,7 +72,8 @@ private:
 	vector<vector<double>>& inputsTest;
 	vector<vector<double>>& desiredsTest;
 	vector<vector<double>> outputsTest;
-	U32 nTest;
+	//U32 nTest;
+	U32 nTotalTest;
 
 	// cost of train and test, not used for training
 	costCorr doCorrect{ costCorr::NONE};
@@ -132,7 +133,6 @@ public:
 		, double& totalCost, double& avgCost, double& minCost, double& maxCost, U32& correct);
 	// update train and test outputs and costs
 	void calcCostTrainAndTest();
-
 
 	// clean up
 	~neuralNet();

@@ -5,15 +5,6 @@
 #include "u_plotter2.h"
 #include "u_neuralNetwork.h"
 #include "m_perf.h"
-
-#if 0
-#include <array>        // std::array
-#include <chrono>       // std::chrono::system_clock
-#include <iostream>     // std::cout
-#include <algorithm>    // std::shuffle
-#include <random>       // std::default_random_engine
-#endif
-
 #include "u_random.h"
 
 using namespace u_plotter2;
@@ -31,23 +22,26 @@ using namespace u_plotter2;
 //#define DO_NEURAL2 // Layers 2 (1 - 1 - 1), 4 vars, 2 costs, test 1 more, total 3
 //#define DO_NEURAL3 // Layers 2 (2 - 2 - 2), 12 vars, 4 costs, test 1 more, total 5
 //#define DO_NEURAL4 // Layers 3 (3 - 2 - 3 - 2), 25 vars, 4 costs, test 2 more, total 6
-//#define DO_NEURAL5 // Layers 3 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 costs
-#define DO_NEURAL6 // Layers 3 (784 - 16 - 16 - 10), 13,002 vars, 60,000 costs, test 10,000 more costs total 70,000
+//#define DO_NEURAL5 // Layers 2 (6 - 6 - 4), 70 vars, 60 costs, test 4 more costs for a total of 64 costs
+// DO_DIGITS
+//#define DO_NEURAL6 // Layers 3 (784 - 16 - 16 - 10), 13,002 vars, train 60,000 costs, test 10,000 more costs total 70,000
+//#define DO_NEURAL7 //  Layers 1 (784 - 10), simplest neural network,  7,850 vars, 60,000 costs, test 10,000 more costs total 70,000
+#define DO_NEURAL8 // Layers 2 (784 - 25 - 10), 19,885 vars, train 60,000 costs, test 10,000 more costs total 70,000
+//#define DO_NEURAL9 // Layers 2 (784 - 800 - 10), 636,010 vars, train 60,000 costs, test 10,000 more costs total 70,000
+
+#if defined(DO_NEURAL6) || defined(DO_NEURAL7) || defined(DO_NEURAL8) || defined(DO_NEURAL9)
+#define DO_DIGITS
+#endif
+
 //#define DO_GRAD_TEST // 1 var, minimize the adjustable quartic equation
 //#define SHOW_SIGMOID
-//#define SHOW_DESIREDS_OVER_OUTPUT // for DO_NEURAL6
+//#define SHOW_DESIREDS_OVER_OUTPUT // for DO_DIGITS
 
 #ifdef USE_TIMEB
 #include <sys/timeb.h>
 #endif
 
-#ifdef DO_NEURAL6
-
-// how much data to process
-//#define SMALL_DATA
-//#define MED_DATA
-#define ALL_DATA
-
+#ifdef DO_DIGITS
 #include "u_idxfile.h"
 // what guess correct function to run
 const neuralNet::costCorr costCorrect = neuralNet::costCorr::DIGITS; // show how many digits are correct for train and test data
@@ -83,7 +77,7 @@ namespace neuralPlot {
 	double learn = 0.0; // .03125; // how fast to learn, too small too slow, too large too unstable
 	S32 calcAmount = 0;// -1; // how many calcs to do, negative run forever, positive decrements every frame until 0 
 	S32 calcSpeed = 1; // number of calculations per frame
-	S32 runTestCount = 256;// 0; // how many frames to wait to run test and user
+	S32 runTestCount = 128;// 0; // how many frames to wait to run train and test
 	S32 runTest = 0;
 	S32 runShuffleCount = 2;
 	S32 runShuffle = 0;
@@ -104,24 +98,6 @@ namespace neuralPlot {
 	double xVar, yVar;
 	double dydx;
 #endif
-#ifdef DO_NEURAL6
-#ifdef SMALL_DATA
-	const U32 trainLimitIdx = 100;
-	const U32 trainLimitNeural = 100;
-	const U32 testLimitIdx = 100;
-#endif
-#ifdef MED_DATA
-	const U32 trainLimitIdx = 200;
-	const U32 trainLimitNeural = 0;
-	const U32 testLimitIdx = 500;
-#endif
-#ifdef ALL_DATA
-	const U32 trainLimitIdx = 0;
-	const U32 trainLimitNeural = 0;
-	const U32 testLimitIdx = 0;
-#endif
-#endif
-
 #ifdef DO_NEURAL1
 	const string neuralName{ "Neural1" };
 	vector<U32> aTesterTopology{ 1, 1 };
@@ -143,7 +119,7 @@ namespace neuralPlot {
 	vector<vector<double>> desiredTest = {
 		{.65},
 	};
-	const U32 trainLimitNeural = 0; // use all data for neural network
+	const U32 trainLimitSample = 0; // use all data for neural network
 #endif
 #ifdef DO_NEURAL2
 	const string neuralName{ "Neural2" };
@@ -166,7 +142,7 @@ namespace neuralPlot {
 	vector<vector<double>> desiredTest = {
 		{.65},
 	};
-	const U32 trainLimitNeural = 0; // use all data for neural network
+	const U32 trainLimitSample = 0; // use all data for neural network
 #endif
 #ifdef DO_NEURAL3
 	const string neuralName{ "Neural3" };
@@ -195,7 +171,7 @@ namespace neuralPlot {
 		{.2, .21},
 		{.93, .94},
 	}; // for now try or and and gates
-	const U32 trainLimitNeural = 0; // use all data for neural network
+	const U32 trainLimitSample = 0; // use all data for neural network
 #endif
 #ifdef DO_NEURAL4
 	const string neuralName{ "Neural4" };
@@ -224,7 +200,7 @@ namespace neuralPlot {
 		{.111, .123},
 		{.933, .144},
 	}; // for now try or and and gates
-	const U32 trainLimitNeural = 0; // use all data for neural network
+	const U32 trainLimitSample = 0; // use all data for neural network
 #endif
 #ifdef DO_NEURAL5 // add 2 3 digit binary numbers to make 1 4 digit binary number
 	const string neuralName{ "Neural5" };
@@ -275,16 +251,111 @@ namespace neuralPlot {
 			}
 		}
 	}
-	const U32 trainLimitNeural = 4; // use all data for neural network
+	const U32 trainLimitSample = 4; // sample train data randomly for neural network
 #endif
 
-#ifdef DO_NEURAL6 // handwritten digit recognition 28 by 28 grid
+#ifdef DO_DIGITS // handwritten digit recognition 28 by 28 grid
 	idxFile* idxFileTrain;
 	idxFile* idxFileTest;
 	S32 idxTrain;
 	S32 idxTest;
+
+#ifdef DO_NEURAL6
+	// how much data to process
+#define SMALL_DATA
+//#define MED_DATA
+//#define ALL_DATA
+#ifdef SMALL_DATA
+	const U32 trainLimitIdx = 0;
+	const U32 trainLimitSample = 10000; // very small training samples
+	const U32 testLimitIdx = 0;
+#endif
+#ifdef MED_DATA
+	const U32 trainLimitIdx = 0;
+	const U32 trainLimitSample = 12000; // less training samples
+	const U32 testLimitIdx = 0;
+#endif
+#ifdef ALL_DATA
+	const U32 trainLimitIdx = 0;
+	const U32 trainLimitSample = 0;
+	const U32 testLimitIdx = 0;
+#endif
 	const string neuralName{ "Neural6" };
 	vector<U32> aTesterTopology{ 784, 16, 16, 10 }; // a big one!
+#endif
+
+#ifdef DO_NEURAL7
+// how much data to process
+#define SMALL_DATA
+//#define MED_DATA
+//#define ALL_DATA
+#ifdef SMALL_DATA
+	const U32 trainLimitIdx = 0;
+	const U32 trainLimitSample = 10000; // very small training samples
+	const U32 testLimitIdx = 0;
+#endif
+#ifdef MED_DATA
+	const U32 trainLimitIdx = 0;
+	const U32 trainLimitSample = 12000; // less training samples
+	const U32 testLimitIdx = 0;
+#endif
+#ifdef ALL_DATA
+	const U32 trainLimitIdx = 0;
+	const U32 trainLimitSample = 0;
+	const U32 testLimitIdx = 0;
+#endif
+	const string neuralName{ "Neural7" };
+	vector<U32> aTesterTopology{ 784, 10 }; // smallest neural network for this problem, only one layer
+#endif
+
+#ifdef DO_NEURAL8
+// how much data to process
+#define SMALL_DATA
+//#define MED_DATA
+//#define ALL_DATA
+#ifdef SMALL_DATA
+	const U32 trainLimitIdx = 0;
+	const U32 trainLimitSample = 10000; // very small training samples
+	const U32 testLimitIdx = 0;
+#endif
+#ifdef MED_DATA
+	const U32 trainLimitIdx = 0;
+	const U32 trainLimitSample = 12000; // less training samples
+	const U32 testLimitIdx = 0;
+#endif
+#ifdef ALL_DATA
+	const U32 trainLimitIdx = 0;
+	const U32 trainLimitSample = 0;
+	const U32 testLimitIdx = 0;
+#endif
+	const string neuralName{ "Neural8" };
+	vector<U32> aTesterTopology{ 784, 25, 10 }; // one less layer than DO_NEURAL6, bigger hidden layer
+#endif
+
+#ifdef DO_NEURAL9
+// how much data to process
+#define SMALL_DATA
+//#define MED_DATA
+//#define ALL_DATA
+#ifdef SMALL_DATA
+	const U32 trainLimitIdx = 0;
+	const U32 trainLimitSample = 10000; // very small training samples
+	const U32 testLimitIdx = 0;
+#endif
+#ifdef MED_DATA
+	const U32 trainLimitIdx = 0;
+	const U32 trainLimitSample = 12000; // less training samples
+	const U32 testLimitIdx = 0;
+#endif
+#ifdef ALL_DATA
+	const U32 trainLimitIdx = 0;
+	const U32 trainLimitSample = 0;
+	const U32 testLimitIdx = 0;
+#endif
+	const string neuralName{ "Neural9" };
+	vector<U32> aTesterTopology{ 784, 800, 10 }; // one very large hidden layer
+#endif
+
 	// train
 	// inputs, desires
 	vector<vector<double>>* inputTrain; // get these from idxFile
@@ -331,7 +402,7 @@ namespace neuralPlot {
 		return bm8;
 	}
 
-	void nerual6init()
+	void neuralDigitsInit()
 	{
 		idxTrain = 0;
 		idxTest = 0;
@@ -382,7 +453,7 @@ namespace neuralPlot {
 		{"calcAmount", &calcAmount, D_INT, 1},
 		{"calcSpeed", &calcSpeed, D_INT, 32},
 		{"learn", &learn, D_DOUBLE, FLOATUP / 32},
-		{"runTestcount", &runTestCount, D_INT, 32},
+		{"runTestcount", &runTestCount, D_INT, 4},
 		{"runTest", &runTest, D_INT | D_RDONLY},
 		{"runShufflecount", &runShuffleCount, D_INT, 8},
 		{"runShuffle", &runShuffle, D_INT | D_RDONLY},
@@ -431,32 +502,11 @@ namespace neuralPlot {
 		{"userDesired3", &userDesireds[3], D_DOUBLE, FLOATUP / 4},
 		{"userOutput3", &userOutputs[3], D_DOUBLE | D_RDONLY},
 #endif
-#ifdef DO_NEURAL6
+#ifdef DO_DIGITS
 		// userInput is a 28 by 28 grid 784, too big for here, do it graphically instead
 		{"@lightmagenta@idxTrain", &idxTrain, D_INT, 1},
 		{"idxTest", &idxTest, D_INT, 1},
-/*		{"@lightcyan@userDesired0", &userDesireds[0], D_DOUBLE, FLOATUP / 4},
-		{"userOutput0", &userOutputs[0], D_DOUBLE | D_RDONLY},
-		{"userDesired1", &userDesireds[1], D_DOUBLE, FLOATUP / 4},
-		{"userOutput1", &userOutputs[1], D_DOUBLE | D_RDONLY},
-		{"userDesired2", &userDesireds[2], D_DOUBLE, FLOATUP / 4},
-		{"userOutput2", &userOutputs[2], D_DOUBLE | D_RDONLY},
-		{"userDesired3", &userDesireds[3], D_DOUBLE, FLOATUP / 4},
-		{"userOutput3", &userOutputs[3], D_DOUBLE | D_RDONLY},
-		{"userDesired4", &userDesireds[4], D_DOUBLE, FLOATUP / 4},
-		{"userOutput4", &userOutputs[4], D_DOUBLE | D_RDONLY},
-		{"userDesired5", &userDesireds[5], D_DOUBLE, FLOATUP / 4},
-		{"userOutput5", &userOutputs[5], D_DOUBLE | D_RDONLY},
-		{"userDesired6", &userDesireds[6], D_DOUBLE, FLOATUP / 4},
-		{"userOutput6", &userOutputs[6], D_DOUBLE | D_RDONLY},
-		{"userDesired7", &userDesireds[7], D_DOUBLE, FLOATUP / 4},
-		{"userOutput7", &userOutputs[7], D_DOUBLE | D_RDONLY},
-		{"userDesired8", &userDesireds[8], D_DOUBLE, FLOATUP / 4},
-		{"userOutput8", &userOutputs[8], D_DOUBLE | D_RDONLY},
-		{"userDesired9", &userDesireds[9], D_DOUBLE, FLOATUP / 4},
-		{"userOutput9", &userOutputs[9], D_DOUBLE | D_RDONLY}, */
 #endif
-		//{"userCost", &userCost, D_DOUBLEEXP | D_RDONLY},
 	};
 	const int nplot2neuralDeb = NUMELEMENTS(plot2neuralDeb);
 
@@ -536,7 +586,7 @@ namespace neuralPlot {
 	}
 #endif
 
-#ifdef DO_NEURAL6
+#ifdef DO_DIGITS
 	void getUserInputsFromBM(const bitmap32* userBM, vector<double>& userInput)
 	{
 		U32 prod = userBM->size.x * userBM->size.y;
@@ -557,7 +607,7 @@ namespace neuralPlot {
 	void commonProc()
 	{
 		bool doRun = true;
-#ifdef DO_NEURAL6
+#ifdef DO_DIGITS
 		if (KEY || MBUTuserBM) {
 			runTest = runTestCount; // don't run costly cost functions when using the UI
 			runShuffle = runShuffleCount;
@@ -573,16 +623,16 @@ namespace neuralPlot {
 				randomInit();
 				delete aNeuralNet;
 				randomInit();
-#ifdef DO_NEURAL6
+#ifdef DO_DIGITS
 
-				aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, trainLimitNeural, *inputTest, *desiredTest, costCorrect);
+				aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, trainLimitSample, *inputTest, *desiredTest, costCorrect);
 #else
 
-				aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, trainLimitNeural, inputTest, desiredTest, costCorrect);
+				aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, trainLimitSample, inputTest, desiredTest, costCorrect);
 #endif
 				randomNextSeed();
 				break;
-#ifdef DO_NEURAL6
+#ifdef DO_DIGITS
 			case 'c':
 				clipclear32(userBM, C32BLACK);
 				break;
@@ -612,7 +662,7 @@ namespace neuralPlot {
 				loadSaveSlot = KEY - '0';
 			}
 		}
-#ifdef DO_NEURAL6
+#ifdef DO_DIGITS
 		if (MBUTuserBM & M_MBUTTON) {
 			clipclear32(userBM, C32BLACK);
 		}
@@ -622,7 +672,7 @@ namespace neuralPlot {
 		calcSpeed = range(1, calcSpeed, 10000);
 		runTestCount = range(0, runTestCount, 1000);
 		runShuffleCount = range(0, runShuffleCount, 1000);
-#ifdef DO_NEURAL6
+#ifdef DO_DIGITS
 		// range check idx for showing data
 		S32 nd = idxFileTrain->getNumData();
 		idxTrain = range(0, idxTrain, nd - 1);
@@ -659,11 +709,10 @@ namespace neuralPlot {
 				// test suite
 				runTest = runTestCount;
 				aNeuralNet->calcCostTrainAndTest();
-				// run 1 user setting
 			}
 			--runTest;
 		}
-#ifdef DO_NEURAL6
+#ifdef DO_DIGITS
 		getUserInputsFromBM(userBM, userInputs);
 #endif
 		aNeuralNet->runNetwork(userInputs, userOutputs);
@@ -704,7 +753,7 @@ namespace neuralPlot {
 		}
 	}
 
-#ifdef DO_NEURAL6
+#ifdef DO_DIGITS
 	void drawToUser(C32 drawColor)
 	{
 		const S32 xMin = 3 * WX / 4;
@@ -796,14 +845,14 @@ void plot2neuralinit()
 #ifdef DO_NEURAL5
 	nerual5init();
 #endif
-#ifdef DO_NEURAL6
-	nerual6init();
+#ifdef DO_DIGITS
+	neuralDigitsInit();
 #endif
 	randomInit();
-#ifdef DO_NEURAL6
-	aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, trainLimitNeural, *inputTest, *desiredTest, costCorrect);
+#ifdef DO_DIGITS
+	aNeuralNet = new neuralNet(neuralName, aTesterTopology, *inputTrain, *desiredTrain, trainLimitSample, *inputTest, *desiredTest, costCorrect);
 #else
-	aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, trainLimitNeural, inputTest, desiredTest, costCorrect);
+	aNeuralNet = new neuralNet(neuralName, aTesterTopology, inputTrain, desiredTrain, trainLimitSample, inputTest, desiredTest, costCorrect);
 #endif
 	randomNextSeed();
 }
@@ -811,7 +860,7 @@ void plot2neuralinit()
 void plot2neuralproc()
 {
 	perf_start(TEST2);
-#ifdef DO_NEURAL6
+#ifdef DO_DIGITS
 	MBUTuserBM = MBUT;
 	MBUT = 0; // don't move graph paper when hand drawing numbers
 #endif
@@ -883,7 +932,7 @@ void plot2neuraldraw2d()
 		MEDIUMFONT->outtextxybf32(B32, 5 * WX / 8, 88, C32LIGHTMAGENTA, C32BLACK, "Saving to Slot '%d'", loadSaveSlot);
 		saving--;
 	}
-#ifdef DO_NEURAL6
+#ifdef DO_DIGITS
 	// draw images from mnist database
 	// train
 	bitmap32* abm = makeBMfromImage(*idxFileTrain->getOneImage(idxTrain));
@@ -948,7 +997,7 @@ void plot2neuralexit()
 	plotter2exit();
 	removedebvars("neural_network");
 	delete aNeuralNet;
-#ifdef DO_NEURAL6
+#ifdef DO_DIGITS
 	delete idxFileTrain;
 	delete idxFileTest;
 	bitmap32free(userBM);
