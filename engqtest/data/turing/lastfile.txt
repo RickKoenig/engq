@@ -1,1 +1,1 @@
-"copy.tur"
+"busy beaver.tur"
