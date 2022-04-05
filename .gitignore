@@ -15,6 +15,8 @@
 *.exe
 *.map
 *.bin
+*.bin2
+*.MOV
 
 engqtest/data/cout.txt
 engqtest/data/logfile.txt
