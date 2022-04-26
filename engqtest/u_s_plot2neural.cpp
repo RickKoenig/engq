@@ -310,17 +310,17 @@ namespace neuralPlot {
 
 #ifdef DO_NEURAL8
 // how much data to process
-#define SMALL_DATA
-//#define MED_DATA
+//#define SMALL_DATA
+#define MED_DATA
 //#define ALL_DATA
 #ifdef SMALL_DATA
-	const U32 trainLimitIdx = 0;
+	const U32 trainLimitIdx = 100;
 	const U32 trainLimitSample = 10000; // very small training samples
 	const U32 testLimitIdx = 0;
 #endif
 #ifdef MED_DATA
 	const U32 trainLimitIdx = 0;
-	const U32 trainLimitSample = 12000; // less training samples
+	const U32 trainLimitSample = 5000; // less training samples
 	const U32 testLimitIdx = 0;
 #endif
 #ifdef ALL_DATA

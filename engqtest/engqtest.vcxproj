@@ -66,7 +66,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -99,7 +99,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;TIXML_USE_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -353,6 +353,11 @@
     <Text Include="data\engine7testdata\constructed\newnameres.txt" />
     <Text Include="data\engine7testdata\rematchres\online_rematchres.txt" />
     <Text Include="data\fifteen.txt" />
+    <Text Include="data\game2_endgame\27kpvskp.txt" />
+    <Text Include="data\game2_endgame\28kqrvskr.txt" />
+    <Text Include="data\game2_endgame\29krvskp.txt" />
+    <Text Include="data\game2_endgame\29krvskpQ.txt" />
+    <Text Include="data\game2_endgame\29krvskpR.txt" />
     <Text Include="data\game2_endgame\30krrvsk.txt" />
     <Text Include="data\game2_endgame\31krvskr.txt" />
     <Text Include="data\game2_endgame\32krpvskr.txt" />

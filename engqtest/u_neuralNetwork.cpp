@@ -421,8 +421,10 @@ void neuralNet::gradientDescent(double learn) // gradient descent
 			// cost
 			DcostDA.resize(Ls);
 			if (k == topo.size() - 1) {
+				const vector<double>& desiredsTrainOne = desiredsTrain[tIdx];
 				for (j = 0; j < Ls; ++j) {
-					DcostDA[j] = 2.0*(AL[j] - desiredsTrain[tIdx][j]);
+					//DcostDA[j] = 2.0*(AL[j] - desiredsTrain[tIdx][j]);
+					DcostDA[j] = 2.0*(AL[j] - desiredsTrainOne[j]);
 				}
 			} else { // backtrace
 				S32 Ns = topo[N];

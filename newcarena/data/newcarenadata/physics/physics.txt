@@ -32,7 +32,7 @@
 	"carflipheight" : 2.375,
 	"carstartheight" : 1.125,
 	"defuextraheading" : 0.570312,
-	"drivemode" : 0,
+	"drivemode" : 2,
 	"elast" : 0.59375,
 	"extrashocklen" : [
 		1,

@@ -6,6 +6,14 @@
 #include "u_game2.h"
 #include "u_s_game2_endgame.h"
 
+// chess endgame solver
+// has all the rules except:
+// castling
+// en passant
+// pawn promotion only promotes to a queen
+// 50 move draw rule
+// 3 same position draw rule
+
 class board_endgame : public board {
 public:
 	board_endgame(const board& ba) : board(ba) {}
@@ -250,7 +258,14 @@ void board_endgame::movepiece(S32 stidx,const pointi2b8x& endpos)
 {
 	pieces[stidx].pos = endpos; // move the piece
 	if (endpos.y == 7 && pieces[stidx].kind == 'P') // pawn promotion
+#define PROMOTE_TO_QUEEN
+//#define PROMOTE_TO_ROOK
+#ifdef PROMOTE_TO_QUEEN
 		pieces[stidx].kind = 'Q';
+#endif
+#ifdef PROMOTE_TO_ROOK
+	pieces[stidx].kind = 'R';
+#endif
 	S32 i,n = pieces.size();
 	for (i=0;i<n;++i) { // any other pieces in this position?
 		if (i == stidx)
@@ -339,7 +354,7 @@ void game2_endgameinit()
 	S32 i;
 	for (i=0;i<sc->num();++i)
 		logger("game2 endgame level %2d: '%s'\n",i,(*sc).printidx(i).c_str());
-	curlevel = 11;//sc->num() - 1;
+	curlevel = 0;//sc->num() - 1;
 	curlevelname = sc->idx(curlevel);
 	agame = new game<board_endgame>(curlevelname);
 	agame->studygames();

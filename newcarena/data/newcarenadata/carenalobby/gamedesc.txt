@@ -18,11 +18,7 @@
 				"buzz",
 				"charger",
 				"emb",
-				"ferrite",
-				"forklift",
-				"grapple",
 				"intake",
-				"laser",
 				"minigun"
 			]
 		}
@@ -34,26 +30,26 @@
 			"trackhash" : {
 				"hash" : {
 					"data" : [
-						243,
-						187,
-						7,
-						217,
-						2,
+						143,
+						171,
+						152,
+						239,
+						42,
+						48,
+						4,
+						246,
+						89,
+						185,
 						140,
-						50,
-						21,
-						43,
-						204,
-						3,
-						233,
-						203,
-						58,
-						52,
-						222
+						12,
+						184,
+						246,
+						56,
+						63
 					]
 				}
 			},
-			"trackname" : "turns"
+			"trackname" : "verytiny"
 		}
 	},
 	"nbotplayers" : 0,

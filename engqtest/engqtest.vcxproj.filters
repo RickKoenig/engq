@@ -1543,6 +1543,21 @@
     <Text Include="data\physics3d\spinning.txt">
       <Filter>text\physics3d</Filter>
     </Text>
+    <Text Include="data\game2_endgame\29krvskpQ.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\29krvskpR.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\27kpvskp.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\28kqrvskr.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\game2_endgame\29krvskp.txt">
+      <Filter>text\game2\game2 endgame</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="data\shaders\cubemaptest.fx">
