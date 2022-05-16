@@ -725,6 +725,7 @@
     <ClInclude Include="u_idxfile.h" />
     <ClInclude Include="u_neuralNetwork.h" />
     <ClInclude Include="u_random.h" />
+    <ClInclude Include="u_s_plot2basel.h" />
     <ClInclude Include="u_s_plot2neural.h" />
     <ClInclude Include="u_s_plot2networkflow.h" />
     <ClInclude Include="u_dynamic_programming.h" />
@@ -1783,6 +1784,7 @@
       <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotSet</EnableEnhancedInstructionSet>
     </ClCompile>
     <ClCompile Include="u_random.cpp" />
+    <ClCompile Include="u_s_plot2basel.cpp" />
     <ClCompile Include="u_s_plot2neural.cpp" />
     <ClCompile Include="u_s_plot2networkflow.cpp" />
     <ClCompile Include="st2_glue.cpp" />

@@ -133,7 +133,6 @@ void plot2bezierinit()
 	adddebvars("bezier",bezierdv,nbezierdv);
 	plotter2init();
 	//lzoom = -2.5f;
-	//initgrid(ingrid);
 #ifdef METHOD2
 	BEZPARMS2COEFFS.e[0][0] = -1;
 	BEZPARMS2COEFFS.e[0][1] = 3;

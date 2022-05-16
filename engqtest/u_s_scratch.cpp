@@ -41,8 +41,9 @@
 //#define DO_HEAPSORT
 //#define DO_RANDOM_TESTS
 //#define DO_FIFO
-#define ZERO_KNOWLEDGE
+//#define ZERO_KNOWLEDGE
 #ifdef ZERO_KNOWLEDGE
+
 #include "u_zero_knowledge.h"
 #endif
 
@@ -3514,6 +3515,18 @@ bitmap32* threatbm;
 
 void scratchinit()
 {
+#define TESTVEC
+#ifdef TESTVEC
+	logger("hi in scratch\n");
+	vector<pointf2> arr;
+	for (S32 i = 0; i < 20; ++i) {
+		arr.push_back(pointf2x(i + 1.0f, i * 3.0f));
+	}
+	for (S32 i = 0; i < 20; ++i) {
+		logger("arr [%2d] = ( %f, %f)\n", i, arr[i].x, arr[i].y);
+	}
+#endif
+
 #ifdef PERSORTHO
 	using namespace pers;
 	adddebvars("pers", persdv, npersdv);

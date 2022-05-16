@@ -2852,6 +2852,9 @@
     <ClInclude Include="u_random.h">
       <Filter>Source Files\user\user_math</Filter>
     </ClInclude>
+    <ClInclude Include="u_s_plot2basel.h">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="helperobj.cpp">
@@ -4215,6 +4218,9 @@
     </ClCompile>
     <ClCompile Include="u_random.cpp">
       <Filter>Source Files\user\user_math</Filter>
+    </ClCompile>
+    <ClCompile Include="u_s_plot2basel.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

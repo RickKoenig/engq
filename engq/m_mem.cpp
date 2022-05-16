@@ -2,12 +2,6 @@
 #include <m_eng.h>
 #include "m_perf.h"
 
-//#define BATTLEMEM
-
-#ifdef BATTLEMEM
-#include <npapi.h>
-#endif
-
 // global option
 #ifdef WIN32
 #define OVERRIDE_NEW_DELETE // global override, used with everything
@@ -16,9 +10,9 @@
 #endif
 
 // one of these
-//#define CHECKPTRS // includes CHECKMEMLEAKS features, keeps track of mem alloced in a huge hash table, does dup frees
+#define CHECKPTRS // includes CHECKMEMLEAKS features, keeps track of mem alloced in a huge hash table, does dup frees
 //#define CHECKMEMLEAKS // check for leaks, keeps track of total numchunks and sizes, no checks for dup frees
-#define CHECKNONE // pass thru
+//#define CHECKNONE // pass thru
 
 // sub options
 #define CHECKBOUNDS // catches buffer overruns and underruns, used with CHECKPTRS
@@ -223,11 +217,7 @@ void memfree(void *ptr)
 			if (!cmem((U8 *)ptr,beforebytes,sizeof(beforebytes)))
 				errorexit("corrupt beforebytes %p",ptr);
 #endif
-#ifdef BATTLEMEM
-			NPN_MemFree(ptr);
-#else
 			free(ptr);
-#endif
 			mp=mt.hs[hash].mc;
 			numm=mt.hs[hash].nummem;
 			if (i!=numm)
@@ -295,17 +285,9 @@ void *memalloc(U32 amount)
 	if (amount==0)
 		errorexit("can't alloc 0 bytes");
 #ifdef CHECKBOUNDS
-#ifdef BATTLEMEM
-	retptr=(U8 *)NPN_MemAlloc(amount+sizeof(beforebytes)+sizeof(afterbytes));
-#else
 	retptr=(U8 *)malloc(amount+sizeof(beforebytes)+sizeof(afterbytes));
-#endif
-#else
-#ifdef BATTLEMEM
-	retptr=(U8 *)NPN_MemAalloc(amount);
 #else
 	retptr=(U8 *)malloc(amount);
-#endif
 #endif
 	checkalign(retptr);
 	if (retptr==0)
@@ -322,17 +304,9 @@ void *memalloc(U32 amount)
 	numm=mt.hs[hash].nummem;
 	if (numm>=MAXMEM) {
 #ifdef CHECKBOUNDS
-#ifdef BATTLEMEM
-		NPN_MemFree(retptr-sizeof(beforebytes));
-#else
 		free(retptr-sizeof(beforebytes));
-#endif
-#else
-#ifdef BATTLEMEM
-		NPN_MemFree(retptr);
 #else
 		free(retptr);
-#endif
 #endif
 		errorexit("not enough memory slots (full hash table)");
 	}
@@ -649,12 +623,7 @@ void *operator new(size_t t)
 {
 	if (t==0)
 		t=1;
-#ifdef BATTLEMEM
-	void *ret=NPN_MemAlloc(t+EXTRASIZE);
-#else
 	void *ret=memalloc(t+EXTRASIZE);
-#endif
-
 	return ret;
 }
 // can delete null ptrs, they just do nothing

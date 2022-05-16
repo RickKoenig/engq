@@ -242,7 +242,6 @@ void plot2fourducksinit()
 	adddebvars("ducks",ducksdv,nducksdv);
 	plotter2init();
 	//lzoom = -2.5f;
-	//initgrid(ingrid);
 	calcducks();
 }
 

@@ -46,5 +46,6 @@ pointf2 circ(float t);
 
 extern float lzoom;
 extern float zoom;
+extern pointf2 center;
 
 } // end namespace u_plotter2
