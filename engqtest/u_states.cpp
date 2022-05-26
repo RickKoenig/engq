@@ -198,6 +198,8 @@
 
 #include "st2_uplay3.h"
 
+#include "user_ai/u_s_selfdriving.h"
+
 C8 winmain_datadir[]="data"; // folder off of .exe
 C8 winmain_version[]="engqtest 1.00";
 
@@ -397,6 +399,10 @@ struct state states[STATE_NUM]={
 	{holoview2dinit		,holoview2dproc		,0					,holoview2ddraw2d	,holoview2dexit},
 	{holoview3dinit		,holoview3dproc		,holoview3ddraw3d	,0					,holoview3dexit},
 	{holoview2dbinit	,holoview2dbproc	,0					,holoview2dbdraw2d	,holoview2dbexit },
+// 160
+	{ selfdrivinginit	,selfdrivingproc	,0					,selfdrivingdraw2d	,selfdrivingexit },
+	//{ scratchinit		,scratchproc		,0					,scratchdraw2d		,scratchexit },
+
 };
 
 S32 numstates=sizeof(states)/sizeof(states[0]);

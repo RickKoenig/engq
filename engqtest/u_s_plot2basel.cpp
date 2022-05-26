@@ -251,8 +251,8 @@ void plot2baselinit()
 
 	calcBasel();
 	showInvPyth = 0;
-	showDoubleAng = 1;
-	showTestAng = 1;
+	showDoubleAng = 0;
+	showTestAng = 0;
 	depth = 3;
 	lhIndex = 0;
 

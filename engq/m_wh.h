@@ -40,3 +40,6 @@ void argcvexit();
 void checkmessages();
 void setusermessage(U32 offs,void (*func)(U32 messnum,U32 wParam, S32 lParam));
 void waitframe();
+
+void changeWindowTitle(C8* str);
+

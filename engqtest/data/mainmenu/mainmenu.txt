@@ -178,6 +178,8 @@ statedesc 157 "four view tests 2d"
 statedesc 158 "four view tests 3d"
 statedesc 159 "four view tests 2d brush"
 
+statedesc 160 "self driving car"
+
 // for reference
 /*
 from engine7test

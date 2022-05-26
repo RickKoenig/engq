@@ -546,6 +546,7 @@
     <Text Include="data\scratch\textxmlout.txt" />
     <Text Include="data\searcher\filtermode.txt" />
     <Text Include="data\searcher\redirstrs.txt" />
+    <Text Include="data\selfdriving\selfdriving.txt" />
     <Text Include="data\shaders\mat2shader.txt" />
     <Text Include="data\shaders\shadelistasm.txt" />
     <Text Include="data\shaders\shadelistfx.txt" />
@@ -722,6 +723,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
+    <ClInclude Include="user_ai\u_s_selfdriving.h" />
     <ClInclude Include="u_idxfile.h" />
     <ClInclude Include="u_neuralNetwork.h" />
     <ClInclude Include="u_random.h" />
@@ -1778,6 +1780,7 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
     </ClCompile>
+    <ClCompile Include="user_ai\u_s_selfdriving.cpp" />
     <ClCompile Include="u_idxfile.cpp" />
     <ClCompile Include="u_neuralNetwork.cpp">
       <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotSet</EnableEnhancedInstructionSet>

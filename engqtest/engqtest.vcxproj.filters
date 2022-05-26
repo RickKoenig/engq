@@ -303,6 +303,12 @@
     <Filter Include="Source Files\user\uplay3">
       <UniqueIdentifier>{4c53d08a-383f-45f4-a927-3d3e79b8fd87}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\user\user_ai">
+      <UniqueIdentifier>{56223a63-c71a-45d4-ab2a-5937054e0a0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text\selfdriving">
+      <UniqueIdentifier>{881a9009-daf9-4116-aac4-f194a749c351}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="engqtest.map">
@@ -1557,6 +1563,9 @@
     </Text>
     <Text Include="data\game2_endgame\29krvskp.txt">
       <Filter>text\game2\game2 endgame</Filter>
+    </Text>
+    <Text Include="data\selfdriving\selfdriving.txt">
+      <Filter>text\selfdriving</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
@@ -2854,6 +2863,9 @@
     </ClInclude>
     <ClInclude Include="u_s_plot2basel.h">
       <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClInclude>
+    <ClInclude Include="user_ai\u_s_selfdriving.h">
+      <Filter>Source Files\user\user_ai</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -4221,6 +4233,9 @@
     </ClCompile>
     <ClCompile Include="u_s_plot2basel.cpp">
       <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
+    <ClCompile Include="user_ai\u_s_selfdriving.cpp">
+      <Filter>Source Files\user\user_ai</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

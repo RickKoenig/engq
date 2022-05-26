@@ -209,6 +209,11 @@ U32 wininit()
 	return 1;
 }
 
+void changeWindowTitle(C8* str)
+{
+	SetWindowText((HWND)wininfo.MainWindow, str);
+}
+
 //static S32 oscur=1,showcur=1;
 
 void showcursor(S32 show)
