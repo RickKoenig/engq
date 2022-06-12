@@ -3,74 +3,212 @@
 #include <l_misclibm.h>
 #include "../u_states.h"
 
-static bitmap32* threatbm2;
-static shape *rl, *focus, *oldfocus;
-static hscroll* hslide1, *hslide2;
-static vscroll* vslide1, *vslide2, *vslideiter;
-static text* textiter, *textzoom, *text1, *text2;
-static pbut* pbutzoomin, *pbutzoomout, *pbutquit;
+#include "u_s_selfdriving.h"
+
+#ifdef DONAMESPACE
+namespace selfdriving {
+#endif
+
+
+#include "u_utils.h"
+#include "u_road.h"
+#include "u_controls.h"
+#include "u_network.h"
+#include "u_sensor.h"
+#include "u_car.h"
+#include "u_visualizer.h"
+
+// UI
+shape *rl, *focus, *oldfocus;
+// user UI
+hscroll* hslideiter;
+text* textiter;
+pbut* pbutreset, *pbutquit;
+
+
+// higher frame rate, was 30 now 60, TODO: should make everything at least 60 ...
+S32 fpsSave;
+
+// self driving
+S32 carCanvasWidth = 200;
+S32 networkCanvasWidth = 250;
+Road* road;
+Car* myCar;
+pointf2 carCamera; // global
+S32 autoCarCamera = 1;
+pointf2 visualizerCamera; // global
+vector<Car*> traffic;
+S32 simSpeed = 1;
+S32 maxSimSpeed = 10;
+
+// for debvars
+struct menuvar selfdrivingdv[] = {
+	{"@green@--- self driving ---",NULL,D_VOID,0},
+	{"autoCarCamera",&autoCarCamera,D_INT,1},
+	{"carCameraX",&carCamera.x,D_FLOAT, FLOATUP * 16},
+	{"carCameraY",&carCamera.y,D_FLOAT, FLOATUP * 16},
+	{"visualizerCameraX",&visualizerCamera.x,D_FLOAT, FLOATUP * 16},
+	{"visualizerCameraY",&visualizerCamera.y,D_FLOAT, FLOATUP * 16},
+	{"simSpeed",&simSpeed,D_INT,1},
+	{"fpswanted",&wininfo.fpswanted,D_INT,1},
+	{"fpscurrent",&wininfo.fpscurrent,D_FLOAT | D_RDONLY,FLOATUP},
+	{"fpsavg",&wininfo.fpsavg,D_FLOAT | D_RDONLY},
+};
+const int nselfdrivingdv = NUMELEMENTS(selfdrivingdv);
+
+
+const vector<vector<S32>> trafficData = {
+	// tunnel
+	{0, 1, 1},
+	{0, 1, 1},
+	{0, 1, 1},
+	{1, 0, 1},
+	{1, 0, 1},
+	{1, 0, 1},
+	{1, 1, 0},
+	{1, 1, 0},
+	{1, 1, 0},
+	{0, 1, 1},
+	{0, 1, 1},
+	{0, 1, 1},
+
+	// standard
+	{0, 1, 0},
+	{1, 0, 1},
+	{1, 1, 0},
+	{0, 1, 1},
+
+	// easy
+	{0, 0, 0},
+	{0, 0, 0},
+	{1, 0, 0},
+
+	{0, 0, 0},
+	{0, 0, 0},
+	{0, 1, 0},
+
+	{0, 0, 0},
+	{0, 0, 0},
+	{0, 0, 1},
+
+	// hard
+	{1, 1, 0},
+	{1, 0, 1},
+	{1, 1, 0},
+	{1, 0, 1},
+	{0, 1, 1},
+	{1, 0, 1},
+	{0, 1, 1},
+	{1, 0, 1},
+	{1, 1, 0},
+	{1, 0, 1},
+	{1, 1, 0},
+
+	// small break
+	{0, 0, 0},
+
+	// harder
+	{0, 1, 1},
+	{1, 1, 0},
+	{0, 1, 1},
+	{1, 1, 0},
+
+	// tunnel
+	{0, 1, 1},
+	{0, 1, 1},
+	{0, 1, 1},
+	{1, 0, 1},
+	{1, 0, 1},
+	{1, 0, 1},
+	{1, 1, 0},
+	{1, 1, 0},
+	{1, 1, 0},
+	{0, 1, 1},
+	{0, 1, 1},
+	{0, 1, 1}
+};
+
+vector<Car*> generateTraffic(const vector<vector<S32>>& trafficData) {
+	vector<Car*> traffic;
+	//const float trafficSpeed = 2;
+	const float trafficSpeed = 0;
+	const float carYStart = -100;
+	const float carYStep = -200;
+	for (auto i = 0U; i < trafficData.size(); ++i) {
+		for (auto j = 0U; j < trafficData[i].size(); ++j) {
+			if (trafficData[i][j]) {
+				const auto car = new Car(
+					road->getLaneCenter(j)
+					, carYStart + i * carYStep
+					, 30, 50, Controls::ControlType::DUMMY, trafficSpeed);
+				traffic.push_back(car);
+			}
+		}
+	}
+	return traffic;
+}
+
+void updateUI()
+{
+	char str[100];
+	//hslideiter->setidx(simSpeed);
+	simSpeed = hslideiter->getidx();
+	//iter = hslideiter->getidx();
+	sprintf(str, "Simulation speed = %d", simSpeed);
+	textiter->settname(str);
+}
+
+
+#ifdef DONAMESPACE
+} // end namespace selfdriving
+using namespace selfdriving;
+#endif
 
 void selfdrivinginit()
 {
-	//changeWindowTitle("this is self driving");
+	// window
+	//changeWindowTitle("this is self driving"); // experimental
 	video_setupwindow(1024, 768);
-	pushandsetdir("scratch");
-	threatbm2 = gfxread32("dhs_threat1.jpg");
-	popdir();
+
+	// UI
 	pushandsetdir("selfdriving");
 	script sc;
-	rl = res_loadfile("selfdriving.txt");
-	hslide1 = rl->find<hscroll>("HSLIDE1");
-	hslide2 = rl->find<hscroll>("HSLIDE2");
-	vslide1 = rl->find<vscroll>("VSLIDE1");
-	vslide2 = rl->find<vscroll>("VSLIDE2");
-	vslideiter = rl->find<vscroll>("VSLIDEITER");
-	textiter = rl->find<text>("TEXTITER");
-	textzoom = rl->find<text>("TEXTZOOM");
-	text1 = rl->find<text>("TEXT1");
-	text2 = rl->find<text>("TEXT2");
-	pbutzoomin = rl->find<pbut>("PBUTZOOMIN");
-	pbutzoomout = rl->find<pbut>("PBUTZOOMOUT");
+	rl = res_loadfile("selfdrivingres.txt");
+	// text
+	textiter = rl->find<text>("TEXTSIMSPEED");
+	// pbuts
+	pbutreset = rl->find<pbut>("PBUTRESET");
 	pbutquit = rl->find<pbut>("PBUTQUIT");
-	//	setresrange(rl,HSLIDE1,-256,256);
-	hslide1->setminmaxval(-1024, 1024);
-	//	setresrange(rl,HSLIDE2,-256,256);
-	hslide2->setminmaxval(-1024, 1024);
-	//	setresrange(rl,VSLIDE1,-256,256);
-	vslide1->setminmaxval(-1024, 1024);
-	//	setresrange(rl,VSLIDE2,-256,256);
-	vslide2->setminmaxval(-1024, 1024);
-	//	setresrange(rl,ITER,1,10000);
-	vslideiter->setminmaxval(1, 10000);
-	//xc = xf = yc = yf = 0;
-	//	setresval(rl,HSLIDE1,xc);
-	hslide1->setidx(10);
-	//	setresval(rl,HSLIDE2,xf);
-	hslide2->setidx(20);
-	//	setresval(rl,VSLIDE1,yc);
-	vslide1->setidx(30);
-	//	setresval(rl,VSLIDE2,yf);
-	vslide2->setidx(40);
-	//	setresval(rl,ITER,10000);
-	{
-		char str[100];
-		int iter = 1234;
-		vslideiter->setidx(10001 - iter);
-		iter = 10001 - vslideiter->getidx();
-		sprintf(str, "%d", iter);
-		textiter->settname(str);
-	}
-	//	setresname(rl,ITERTEXT,str);
-	//dozoom(0);
+	// sliders
+	hslideiter = rl->find<hscroll>("HSCROLLSIMSPEED");
+	hslideiter->setminmaxval(1, maxSimSpeed);
+	hslideiter->setidx(simSpeed);
+	updateUI();
+	// rest of UI setup
 	focus = oldfocus = 0;
+
+	// faster frame rate
+	fpsSave = wininfo.fpswanted;
+	wininfo.fpswanted = 60;
+
+
+	// self driving
+	mt_setseed(getmicrosec());
+	carCamera = { -3.0f * WX / 4.0f, 0 };
+	visualizerCamera = { -450, 0 };
+	road = new Road(carCanvasWidth / 2.0f, carCanvasWidth * .9f);
+	adddebvars("selfdriving", selfdrivingdv, nselfdrivingdv);
+	myCar = new Car(road->getLaneCenter(1), 100, 30, 50, Controls::ControlType::HUMAN);
+	traffic = generateTraffic(trafficData);
 }
 
 void selfdrivingproc()
 {
-	//	changestate(NOSTATE);
 	if (KEY == K_ESCAPE)
 		poporchangestate(STATE_MAINMENU);
-	// handle buttons and editboxes
+
+	// UI
+	// handle buttons and sliders
 	if (wininfo.mleftclicks || wininfo.mrightclicks) {
 		focus = rl->getfocus();
 	}
@@ -86,26 +224,282 @@ void selfdrivingproc()
 		if (ret == 1 || ret == 2) {
 			poporchangestate(STATE_MAINMENU);
 		}
-	} else if (focus == vslideiter) {
-		int iter = 10001 - ret;
-		char str[100];
-		sprintf(str, "%d", iter);
-		//		setresname(rl,ITERTEXT,str);
-		textiter->settname(str);
+	} else if (focus == pbutreset) {
+		if (ret == 1 || ret == 2) {
+			changestate(STATE_SELFDRIVING);
+		}
+	} else if (focus == hslideiter) {
+		updateUI();
 	}
+
+
+	// self driving
+	autoCarCamera = range(0, autoCarCamera, 1);
+	simSpeed = range(0, simSpeed, maxSimSpeed);
+	vector<Car*> noTraffic;
+	for (auto k = 0; k < simSpeed; ++k) {
+		for (auto i = 0U; i < traffic.size(); ++i) {
+			traffic[i]->update(road->borders,noTraffic);
+		}
+		myCar->update(road->borders, traffic);
+	}
+	if (autoCarCamera) {
+		carCamera.y = myCar->y - WY * .7f;
+	}
+#if 0
+	for (let k = 0; k < simSpeed; ++k) {
+		for (let i = 0; i < cars.length; ++i) {
+			cars[i].update(road.borders, traffic);
+		}
+
+		bestCar = cars.find(
+			c = > c.y == Math.min(
+				...cars.map(c = > c.y)
+			));
+
+	}
+	carCanvas.height = window.innerHeight;
+	networkCanvas.height = window.innerHeight;
+	carCtx.save();
+	carCtx.translate(0, -bestCar.y + carCanvas.height * .7);
+	for (let i = 0; i < traffic.length; ++i) {
+		traffic[i].draw(carCtx, "red"); // traffic in red
+	}
+	carCtx.globalAlpha = .1;
+	for (let i = 0; i < cars.length; ++i) {
+		cars[i].draw(carCtx, "blue"); // other ai cars in blue
+	}
+	carCtx.globalAlpha = 1;
+	bestCar.draw(carCtx, "purple", true); // lead car in purple and draw sensors
+
+	// if car 0 is the same as lead car then draw cyan for car 0
+	cars[0].draw(carCtx, cars[0] == bestCar ? "cyan" : "green", true); // car 0 in green and draw sensors
+
+	carCtx.restore();
+
+	networkCtx.lineDashOffset = -time / 50;
+	if (bestCar.brain) {
+		Visualizer.drawNetwork(networkCtx, bestCar.brain);
+	}
+	requestAnimationFrame(animate);
+#endif
 }
 
 void selfdrivingdraw2d()
 {
 	C32 col;
 	clipclear32(B32, C32(0, 0, 255));
-	clipblit32(threatbm2, B32, 0, 0, 20, 20, threatbm2->size.x, threatbm2->size.y);
+
+	// visualizer
+	if (myCar->brain) {
+		Visualizer::drawNetwork(myCar->brain);
+	}
+
+	// self driving
+	road->draw();
+	for (auto i = 0U; i < traffic.size(); ++i) {
+		traffic[i]->draw(C32RED); // traffic in red
+	}
+	myCar->draw(C32GREEN, true);
+
+	// UI
 	rl->draw();
 }
 
 void selfdrivingexit()
 {
-	bitmap32free(threatbm2);
+	delete road;
+	delete myCar;
+	for (auto car : traffic) {
+		delete car;
+	}
+	traffic.clear();
+
 	delete rl;
 	popdir();
+	removedebvars("selfdriving");
+	wininfo.fpswanted = fpsSave;
 }
+
+#if 0
+const carCanvas = document.getElementById("carCanvas");
+carCanvas.width = 200;
+const networkCanvas = document.getElementById("networkCanvas");
+networkCanvas.width = 300;
+
+const carCtx = carCanvas.getContext("2d");
+const networkCtx = networkCanvas.getContext("2d");
+const road = new Road(carCanvas.width / 2, carCanvas.width*.9);
+
+const N = 250;
+const mutateRate = .1;
+const simSpeed = 5;
+
+const cars = generateCars(N);
+let bestCar = cars[0];
+if (localStorage.getItem("bestBrain")) {
+	for (let i = 0; i < cars.length; ++i) {
+		cars[i].brain = JSON.parse(
+			localStorage.getItem("bestBrain")
+		);
+		if (i != 0) {
+			NeuralNetwork.mutate(cars[i].brain, mutateRate);
+		}
+	}
+}
+
+const trafficData = [
+
+	// tunnel
+	[0, 1, 1],
+		[0, 1, 1],
+		[0, 1, 1],
+		[1, 0, 1],
+		[1, 0, 1],
+		[1, 0, 1],
+		[1, 1, 0],
+		[1, 1, 0],
+		[1, 1, 0],
+		[0, 1, 1],
+		[0, 1, 1],
+		[0, 1, 1],
+
+		// standard
+		[0, 1, 0],
+		[1, 0, 1],
+		[1, 1, 0],
+		[0, 1, 1],
+
+		// easy
+		[0, 0, 0],
+		[0, 0, 0],
+		[1, 0, 0],
+
+		[0, 0, 0],
+		[0, 0, 0],
+		[0, 1, 0],
+
+		[0, 0, 0],
+		[0, 0, 0],
+		[0, 0, 1],
+
+		// hard
+		[1, 1, 0],
+		[1, 0, 1],
+		[1, 1, 0],
+		[1, 0, 1],
+		[0, 1, 1],
+		[1, 0, 1],
+		[0, 1, 1],
+		[1, 0, 1],
+		[1, 1, 0],
+		[1, 0, 1],
+		[1, 1, 0],
+
+		// small break
+		[0, 0, 0],
+
+		// harder
+		[0, 1, 1],
+		[1, 1, 0],
+		[0, 1, 1],
+		[1, 1, 0],
+
+		// tunnel
+		[0, 1, 1],
+		[0, 1, 1],
+		[0, 1, 1],
+		[1, 0, 1],
+		[1, 0, 1],
+		[1, 0, 1],
+		[1, 1, 0],
+		[1, 1, 0],
+		[1, 1, 0],
+		[0, 1, 1],
+		[0, 1, 1],
+		[0, 1, 1]
+];
+
+function generateTraffic(trafficData) {
+	let traffic = [];
+	const carYStart = -100;
+	const carYStep = -200;
+	for (let i = 0; i < trafficData.length; ++i) {
+		for (let j = 0; j < trafficData[i].length; ++j) {
+			if (trafficData[i][j]) {
+				const car = new Car(
+					road.getLaneCenter(j)
+					, carYStart + i * carYStep
+					, 30, 50, "DUMMY", 2);
+				traffic.push(car);
+			}
+		}
+
+	}
+	return traffic;
+}
+
+const traffic = generateTraffic(trafficData);
+
+animate();
+
+function save() {
+	localStorage.setItem("bestBrain",
+		JSON.stringify(bestCar.brain)
+	);
+}
+
+function discard() {
+	localStorage.removeItem("bestBrain");
+}
+
+function generateCars(N) {
+	const cars = [];
+	for (let i = 1; i <= N; ++i) {
+		cars.push(new Car(road.getLaneCenter(1), 100, 30, 50, "AI"));
+	}
+	return cars;
+}
+
+function animate(time) {
+	for (let k = 0; k < simSpeed; ++k) {
+		for (let i = 0; i < traffic.length; ++i) {
+			traffic[i].update(road.borders, []);
+		}
+		for (let i = 0; i < cars.length; ++i) {
+			cars[i].update(road.borders, traffic);
+		}
+
+		bestCar = cars.find(
+			c = > c.y == Math.min(
+				...cars.map(c = > c.y)
+			));
+
+	}
+	carCanvas.height = window.innerHeight;
+	networkCanvas.height = window.innerHeight;
+	carCtx.save();
+	carCtx.translate(0, -bestCar.y + carCanvas.height * .7);
+	road.draw(carCtx);
+	for (let i = 0; i < traffic.length; ++i) {
+		traffic[i].draw(carCtx, "red"); // traffic in red
+	}
+	carCtx.globalAlpha = .1;
+	for (let i = 0; i < cars.length; ++i) {
+		cars[i].draw(carCtx, "blue"); // other ai cars in blue
+	}
+	carCtx.globalAlpha = 1;
+	bestCar.draw(carCtx, "purple", true); // lead car in purple and draw sensors
+
+	// if car 0 is the same as lead car then draw cyan for car 0
+	cars[0].draw(carCtx, cars[0] == bestCar ? "cyan" : "green", true); // car 0 in green and draw sensors
+
+	carCtx.restore();
+
+	networkCtx.lineDashOffset = -time / 50;
+	if (bestCar.brain) {
+		Visualizer.drawNetwork(networkCtx, bestCar.brain);
+	}
+	requestAnimationFrame(animate);
+}
+#endif

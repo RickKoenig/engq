@@ -1,0 +1,22 @@
+shape gametheoryres 0 0 {
+
+	pbut PBUTRESET
+	40 40
+	60 30
+	Reset
+
+	pbut PBUTQUIT
+	40 100
+	60 30
+	Quit
+
+	text TEXTSIMSPEED
+	40 200
+	180 20
+	"Simulation speed"
+	
+	hscroll HSCROLLSIMSPEED
+	40 260
+	250 20
+
+}
