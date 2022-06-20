@@ -4,6 +4,7 @@ public:
 	float y;
 	float width;
 	float height;
+	float rad;
 	float speed;
 	float acceleration;
 	float maxSpeed;
@@ -13,8 +14,10 @@ public:
 	vector<pointf2> polygon;
 	class Controls controls;
 	Sensor* sensor;
+	vector<float> offsets;
 	bool useBrain;
 	NeuralNetwork* brain;
+	const S32 carSides = 4;
 
 public:
 	Car(float x, float y, float width, float height, Controls::ControlType controlType, float maxSpeed = 3);
@@ -22,7 +25,7 @@ public:
 	void update(const vector<vector<pointf2>>& roadBorders, const vector<Car*>& traffic);
 	void draw(C32 color, bool drawSensor = false);
 private:
-	vector<pointf2> createPolygon();
+	void createPolygon();
 	void move();
 	bool assessDamage(const vector<vector<pointf2>>& roadBorders, const vector<Car*>& traffic);
 };

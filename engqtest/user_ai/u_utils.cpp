@@ -1,21 +1,67 @@
 #include <m_eng.h>
 
+#include "m_perf.h"
+
 #include "u_s_selfdriving.h"
 #ifdef DONAMESPACE
 namespace selfdriving {
 #endif
 
+S32 intsectCount;
+S32 intsectEarlyOut;
+	
 float lerp(float A, float B, float t)
 {
 	return A + (B - A) * t;
 }
 
-struct intersectionResult {
-	//pointf2 
-};
+// pass in len = 5, index = [0,4] , P0 = 3, P1 = 4 we get [3, 3.25, 3.5, 3.75, 4]
+// pass in len = 3, index = [0,2] , P0 = 3, P1 = 4 we get [3, 3.5, 4]
+// pass in len = 1, index = 0 , P0 = 3, P1 = 4 we get [3.5] // no divide by zero
+float lerpStep(U32 len, S32 index, float P0, float P1) {
+	return lerp(
+		P0,
+		P1,
+		len == 1
+		? .5f
+		: static_cast<float>(index) / (len - 1)
+	);
+}
 
 bool getIntersection(const pointf2& A, const pointf2& B, const pointf2& C, const pointf2& D, pointf3* I)
 {
+	//perf_start(TEST3);
+	++intsectCount;
+	// early out for y
+	float min0y = min(A.y, B.y);
+	float max1y = max(C.y, D.y);
+	if (min0y > max1y) {
+		++intsectEarlyOut;
+		//perf_end(TEST3);
+		return false;
+	}
+	float max0y = max(A.y, B.y);
+	float min1y = min(C.y, D.y);
+	if (min1y > max0y) {
+		++intsectEarlyOut;
+		//perf_end(TEST3);
+		return false;
+	}
+	// early out for x
+	float min0x = min(A.x, B.x);
+	float max1x = max(C.x, D.x);
+	if (min0x > max1x) {
+		++intsectEarlyOut;
+		//perf_end(TEST3);
+		return false;
+	}
+	float max0x = max(A.x, B.x);
+	float min1x = min(C.x, D.x);
+	if (min1x > max0x) {
+		++intsectEarlyOut;
+		//perf_end(TEST3);
+		return false;
+	}
 	const float tTop = (D.x - C.x) * (A.y - C.y)
 		- (D.y - C.y) * (A.x - C.x);
 	const float uTop = (C.y - A.y) * (A.x - B.x)
@@ -32,20 +78,24 @@ bool getIntersection(const pointf2& A, const pointf2& B, const pointf2& C, const
 				I->y = lerp(A.y, B.y, t);
 				I->z = t; // offset
 			}
+			//perf_end(TEST3);
 			return true;
 		}
 	}
+	//perf_end(TEST3);
 	return false;
 }
 
 bool polysIntersect(const vector<pointf2>& poly1, const vector<pointf2>& poly2)
 {
+	perf_start(TEST4);
 	U32 p1size = poly1.size();
 	U32 p2size = poly2.size();
 	U32 p1sizeMod = p1size;
 	U32 p2sizeMod = p2size;
 	// optimize getIntersection calls
 	if (p1size <= 1 || p2size <= 1) { // points cannot intersect anything
+		perf_end(TEST4);
 		return false;
 	}
 	if (p1size == 2) {
@@ -64,10 +114,12 @@ bool polysIntersect(const vector<pointf2>& poly1, const vector<pointf2>& poly2)
 				nullptr
 			);
 			if (touch) {
+				perf_end(TEST4);
 				return true;
 			}
 		}
 	}
+	perf_end(TEST4);
 	return false;
 }
 

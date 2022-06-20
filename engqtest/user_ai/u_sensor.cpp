@@ -1,5 +1,7 @@
 #include <m_eng.h>
 
+#include "m_perf.h"
+
 #include "u_s_selfdriving.h"
 #ifdef DONAMESPACE
 namespace selfdriving {
@@ -17,6 +19,7 @@ Sensor::Sensor(class Car* car)
 	, rayCount(5)
 	, rayLength(150)
 	, raySpread(PI / 2)
+	, rays(rayCount, vector<pointf2>(2))
 {
 }
 
@@ -32,6 +35,8 @@ void Sensor::update(const vector<vector<pointf2>>& roadBorders, const vector<Car
 pointf3 Sensor::getReading(const vector<pointf2>& ray, const vector<vector<pointf2>>& roadBorders, const vector<Car*>& traffic)
 {
 	pointf3 bestTouch{ray[1].x, ray[1].y, 1};
+#if 1
+	perf_start(TEST1);
 	for (auto i = 0U; i < roadBorders.size(); ++i) {
 		pointf3 touch;
 		const bool isTouch = getIntersection(
@@ -45,9 +50,26 @@ pointf3 Sensor::getReading(const vector<pointf2>& ray, const vector<vector<point
 			bestTouch = touch;
 		}
 	}
+	perf_end(TEST1);
 
+	perf_start(TEST2);
 	for (auto i = 0U; i < traffic.size(); ++i) {
-		auto poly = traffic[i]->polygon;
+		++sensorCount;
+		const Car* c = traffic[i];
+#if 1
+		const float rayLenPlusCarRad = rayLength + c->rad;
+		const float delx = c->x - ray[0].x;
+		const float dely = c->y - ray[0].y;
+		const float dist2 = delx * delx + dely * dely;
+		const pointf2& trafficCarPos = pointf2{ c->x, c->y };
+		//const float farDist2 = c->width * c->width + c->height * c->height;
+		if (rayLenPlusCarRad * rayLenPlusCarRad < dist2) {
+			++sensorEarlyOut;
+			continue;
+		}
+#endif
+
+		const auto& poly = c->polygon;
 		for (auto j = 0U; j < poly.size(); ++j) {
 			pointf3 touch;
 			const bool isTouch = getIntersection(
@@ -62,6 +84,8 @@ pointf3 Sensor::getReading(const vector<pointf2>& ray, const vector<vector<point
 			}
 		}
 	}
+	perf_end(TEST2);
+#endif
 	return bestTouch;
 }
 
@@ -70,22 +94,33 @@ void Sensor::castRays()
 	float x = car->x;
 	float y = car->y;
 	float angle = car->angle;
-	rays.clear();
+//	rays.clear();
 	for (auto i = 0; i < rayCount; ++i) {
+
+#if 0
 		const float rayAngle = lerp(
 			raySpread / 2,
 			-raySpread / 2,
 			rayCount == 1 ? .5f : static_cast<float>(i) / (rayCount - 1)
-
 		) + angle;
+#else
+		const float rayAngle = lerpStep(
+			rayCount,
+			i,
+			raySpread / 2,
+			-raySpread / 2
+		) + angle;
+#endif
 
 		const pointf2 start = { x, y };
 		const pointf2 end = {
 			x - sin(rayAngle) * rayLength,
 			y - cos(rayAngle) * rayLength
 		};
-		vector<pointf2> ray{ start, end };
-		rays.push_back(ray);
+		//vector<pointf2> ray{ start, end };
+		vector<pointf2>& aRay = rays[i];
+		aRay[0] = start;
+		aRay[1] = end;
 	};
 }
 
@@ -108,6 +143,10 @@ void Sensor::draw()
 			, C32BLACK);
 	}
 }
+
+S32 Sensor::sensorCount;
+S32 Sensor::sensorEarlyOut;
+
 
 #ifdef DONAMESPACE
 } // end namespace selfdriving

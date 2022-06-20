@@ -10,6 +10,21 @@ shape gametheoryres 0 0 {
 	60 30
 	Quit
 
+	pbut PBUTHUMANCAMERA
+	140 40
+	160 30
+	"Human Camera"
+
+	pbut PBUTSAVE
+	140 100
+	60 30
+	"Save"
+
+	pbut PBUTDISCARD
+	220 100
+	80 30
+	"Discard"
+
 	text TEXTSIMSPEED
 	40 200
 	180 20

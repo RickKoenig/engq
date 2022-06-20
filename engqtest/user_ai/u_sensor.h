@@ -1,13 +1,15 @@
 class Sensor {
 	class Car* car;
 public:
+	static S32 sensorCount;
+	static S32 sensorEarlyOut;
 	S32 rayCount;
 private:
 	float rayLength;
 	float raySpread;
 	vector<vector<pointf2>> rays;
-	vector<pointf3> readings;
 public:
+	vector<pointf3> readings;
 	Sensor(class Car* car);
 	void update(const vector<vector<pointf2>>& roadBorders, const vector<Car*>&  traffic);
 
