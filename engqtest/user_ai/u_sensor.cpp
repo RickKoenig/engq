@@ -126,6 +126,11 @@ void Sensor::castRays()
 
 void Sensor::draw()
 {
+#if 0
+	if (readings.empty()) {
+		return;
+	}
+#endif
 	for (auto i = 0; i < rayCount; ++i) {
 		pointf2 end{ readings[i].x, readings[i].y };
 

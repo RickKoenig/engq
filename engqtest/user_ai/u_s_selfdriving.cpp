@@ -170,8 +170,11 @@ void selfdrivinginit()
 	pbutdiscard = rl->find<pbut>("PBUTDISCARD");
 
 	// simspeed
+	if (!simSpeed) {
+		simSpeed = 1;
+	}
 	hslidesimspeed = rl->find<hscroll>("HSCROLLSIMSPEED");
-	hslidesimspeed->setminmaxval(1, maxSimSpeed);
+	hslidesimspeed->setminmaxval(0, maxSimSpeed);
 	hslidesimspeed->setidx(simSpeed);
 	textsimspeed = rl->find<text>("TEXTSIMSPEED");
 
