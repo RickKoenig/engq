@@ -7,6 +7,7 @@ namespace selfdriving {
 
 extern pointf2 carCamera; // global
 extern pointf2 visualizerCamera; // global
+extern S32 carLineWidth;
 
 #ifdef DONAMESPACE
 } // end namespace selfdriving

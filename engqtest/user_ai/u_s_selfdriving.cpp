@@ -22,8 +22,18 @@ namespace selfdriving {
 // UI
 shape *rl, *focus, *oldfocus;
 // user UI
-hscroll* hslideiter;
-text* textiter;
+hscroll* hslidesimspeed;
+text* textsimspeed;
+
+hscroll* hslidecarlinewidth;
+text* textcarlinewidth;
+
+hscroll* hslidenumaicars;
+text* textnumaicars;
+
+hscroll* hslidemutation;
+text* textmutation;
+
 pbut* pbutreset, *pbutquit, *pbuthumancamera;
 pbut* pbutsave, *pbutdiscard;
 
@@ -34,13 +44,27 @@ S32 fpsSave;
 // parameters
 S32 carCanvasWidth = 200;
 S32 networkCanvasWidth = 250;
-S32 numAICars = 1500;
+
+S32 numAICars;
+S32 newNumAICars = 50;
+const S32 maxAICars = 2500;
+
+S32 carLineWidth = 1;
+const S32 maxCarLineWidth = 8;
+
 bool humanAICar = true;
-const float mutateRate = .1f;
+
+S32 mutateRate;
+S32 newMutateRate = 10;
+S32 mutateDen = 100;
+
 S32 simSpeed = 1;
-S32 maxSimSpeed = 10;
-const C8* brainFile{ "brainHardCoded.bin" };
+S32 maxSimSpeed = 20;
+
+const C8* brainFile{ "brainHardCoded.brn" };
+
 const float trafficSpeed = 2;
+
 const float carYStart = -100;
 const float carYStep = -200;
 
@@ -96,9 +120,21 @@ vector<Car*> generateTraffic(const vector<vector<S32>>& trafficData) {
 void updateUI()
 {
 	char str[100];
-	simSpeed = hslideiter->getidx();
+	simSpeed = hslidesimspeed->getidx();
 	sprintf(str, "Simulation speed = %d", simSpeed);
-	textiter->settname(str);
+	textsimspeed->settname(str);
+
+	carLineWidth = hslidecarlinewidth->getidx();
+	sprintf(str, "Car Line Width = %d", carLineWidth);
+	textcarlinewidth->settname(str);
+
+	newNumAICars = hslidenumaicars->getidx();
+	sprintf(str, "Num AI Cars %d ==> %d, Reset to Apply", newNumAICars, numAICars);
+	textnumaicars->settname(str);
+
+	newMutateRate = hslidemutation->getidx();
+	sprintf(str, "Mutate %5.2f ==> %5.2f, Reset to Apply", static_cast<float>(newMutateRate) / mutateDen, static_cast<float>(mutateRate) / mutateDen);
+	textmutation->settname(str);
 }
 
 vector<Car*> generateAICars(S32 numAICars) 
@@ -125,18 +161,40 @@ void selfdrivinginit()
 	pushandsetdir("selfdriving");
 	script sc;
 	rl = res_loadfile("selfdrivingres.txt");
-	// text
-	textiter = rl->find<text>("TEXTSIMSPEED");
+
 	// pbuts
 	pbutreset = rl->find<pbut>("PBUTRESET");
 	pbutquit = rl->find<pbut>("PBUTQUIT");
 	pbuthumancamera = rl->find<pbut>("PBUTHUMANCAMERA");
 	pbutsave = rl->find<pbut>("PBUTSAVE");
 	pbutdiscard = rl->find<pbut>("PBUTDISCARD");
-	// sliders
-	hslideiter = rl->find<hscroll>("HSCROLLSIMSPEED");
-	hslideiter->setminmaxval(1, maxSimSpeed);
-	hslideiter->setidx(simSpeed);
+
+	// simspeed
+	hslidesimspeed = rl->find<hscroll>("HSCROLLSIMSPEED");
+	hslidesimspeed->setminmaxval(1, maxSimSpeed);
+	hslidesimspeed->setidx(simSpeed);
+	textsimspeed = rl->find<text>("TEXTSIMSPEED");
+
+	// carlinewidth
+	hslidecarlinewidth = rl->find<hscroll>("HSCROLLCARLINEWIDTH");
+	hslidecarlinewidth->setminmaxval(0, maxCarLineWidth);
+	hslidecarlinewidth->setidx(carLineWidth);
+	textcarlinewidth = rl->find<text>("TEXTCARLINEWIDTH");
+
+	// numaicars
+	hslidenumaicars = rl->find<hscroll>("HSCROLLNUMAICARS");
+	hslidenumaicars->setminmaxval(0, maxAICars);
+	hslidenumaicars->setidx(newNumAICars);
+	textnumaicars = rl->find<text>("TEXTNUMAICARS");
+
+	// mutate
+	hslidemutation = rl->find<hscroll>("HSCROLLMUTATION");
+	hslidemutation->setminmaxval(0, 100);
+	hslidemutation->setidx(newMutateRate);
+	textmutation = rl->find<text>("TEXTMUTATION");
+
+	numAICars = newNumAICars;
+	mutateRate = newMutateRate;
 	updateUI();
 	// rest of UI setup
 	focus = oldfocus = 0;
@@ -155,6 +213,7 @@ void selfdrivinginit()
 		myCar = new Car(road->getLaneCenter(1), 100, 30, 50, Controls::ControlType::HUMAN);
 	}
 	aiCars = generateAICars(numAICars);
+	bestCar = nullptr;
 	if (numAICars) {
 		bestCar = aiCars[0];
 	}
@@ -166,7 +225,7 @@ void selfdrivinginit()
 			}
 			aiCars[i]->brain = new NeuralNetwork(masterBrain);
 			if (i != 0) {
-				aiCars[i]->brain->mutate(mutateRate);
+				aiCars[i]->brain->mutate(static_cast<float>(mutateRate) / mutateDen);
 			}
 		}
 		if (myCar) {
@@ -197,7 +256,10 @@ void selfdrivingproc()
 		oldfocus->deactivate();
 	}
 	oldfocus = focus;
-	if (focus == hslideiter) {
+	if (focus == hslidesimspeed 
+		|| focus == hslidenumaicars 
+		|| focus == hslidemutation 
+		|| focus == hslidecarlinewidth) {
 		updateUI();
 	} else if (ret == 1 || ret == 2) {
 		if (focus == pbutquit) {

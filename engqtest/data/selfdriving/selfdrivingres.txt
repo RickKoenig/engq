@@ -27,11 +27,33 @@ shape gametheoryres 0 0 {
 
 	text TEXTSIMSPEED
 	40 200
-	180 20
+	360 20
 	"Simulation speed"
-	
 	hscroll HSCROLLSIMSPEED
-	40 260
+	40 230
+	250 20v
+
+	text TEXTCARLINEWIDTH
+	40 300
+	360 20
+	"Car Line Width"
+	hscroll HSCROLLCARLINEWIDTH
+	40 330
 	250 20
 
+	text TEXTNUMAICARS
+	40 400
+	360 20
+	"Num AI cars"
+	hscroll HSCROLLNUMAICARS
+	40 430
+	250 20
+
+	text TEXTMUTATION
+	40 500
+	360 20
+	"Mutation rate"
+	hscroll HSCROLLMUTATION
+	40 530
+	250 20
 }

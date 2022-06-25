@@ -92,9 +92,8 @@ void Car::draw(C32 color, bool drawSensor)
 	}
 	for (U32 i = 0; i < polygon.size(); ++i) {
 		auto j = (i + 1) % polygon.size();
-		const S32 wid = 0;
-		for (auto n = -wid; n <= wid; ++n) {
-			for (auto m = -wid; m <= wid; ++m) {
+		for (auto n = -carLineWidth; n <= carLineWidth; ++n) {
+			for (auto m = -carLineWidth; m <= carLineWidth; ++m) {
 				clipline32(B32
 					, static_cast<S32>(polygon[i].x - carCamera.x + m)
 					, static_cast<S32>(polygon[i].y - carCamera.y + n)
