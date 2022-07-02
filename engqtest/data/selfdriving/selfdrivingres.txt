@@ -3,7 +3,7 @@ shape gametheoryres 0 0 {
 	pbut PBUTRESET
 	40 40
 	60 30
-	Reset
+	RESET
 
 	pbut PBUTQUIT
 	40 100
@@ -17,43 +17,55 @@ shape gametheoryres 0 0 {
 
 	pbut PBUTSAVE
 	140 100
-	60 30
-	"Save"
+	80 30
+	"Save '*'"
 
 	pbut PBUTDISCARD
-	220 100
-	80 30
-	"Discard"
+	260 100
+	100 30
+	"Discard '*'"
+
+	pbut PBUTDEFAULTTRAINING
+	140 140
+	180 30
+	"Default Training '*'"
+
 
 	text TEXTSIMSPEED
-	40 200
+	40 300
 	360 20
-	"Simulation speed"
+	"Simulation Speed"
 	hscroll HSCROLLSIMSPEED
-	40 230
+	40 330
 	250 20v
 
 	text TEXTCARLINEWIDTH
-	40 300
+	40 400
 	360 20
 	"Car Line Width"
 	hscroll HSCROLLCARLINEWIDTH
-	40 330
-	250 20
-
-	text TEXTNUMAICARS
-	40 400
-	360 20
-	"Num AI cars"
-	hscroll HSCROLLNUMAICARS
 	40 430
 	250 20
 
-	text TEXTMUTATION
+	text TEXTNUMAICARS
 	40 500
 	360 20
-	"Mutation rate"
-	hscroll HSCROLLMUTATION
+	"Num AI Cars"
+	hscroll HSCROLLNUMAICARS
 	40 530
 	250 20
+
+	text TEXTMUTATION
+	40 600
+	360 20
+	"Mutation Rate"
+	hscroll HSCROLLMUTATION
+	40 630
+	250 20
+
+
+	text TEXTRESETTOAPPLY
+	40 200
+	360 30
+	"'*' Press 'RESET' To Apply Changes"
 }

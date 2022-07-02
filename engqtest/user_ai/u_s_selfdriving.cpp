@@ -35,7 +35,7 @@ hscroll* hslidemutation;
 text* textmutation;
 
 pbut* pbutreset, *pbutquit, *pbuthumancamera;
-pbut* pbutsave, *pbutdiscard;
+pbut* pbutsave, *pbutdiscard, *pbutdefaulttraining;
 
 // higher frame rate, was 30 now 60, TODO: should make everything at least 60 ...
 S32 fpsSave;
@@ -52,7 +52,7 @@ const S32 maxAICars = 2500;
 S32 carLineWidth = 1;
 const S32 maxCarLineWidth = 8;
 
-bool humanAICar = true;
+const bool humanAICar = true;
 
 S32 mutateRate;
 S32 newMutateRate = 10;
@@ -62,6 +62,8 @@ S32 simSpeed = 1;
 S32 maxSimSpeed = 20;
 
 const C8* brainFile{ "brainHardCoded.brn" };
+const C8* defaultBrainFile{ "brainHardCodedDefaultTrained.brn" };
+bool useDefaultBrainFile;
 
 const float trafficSpeed = 2;
 
@@ -121,7 +123,7 @@ void updateUI()
 {
 	char str[100];
 	simSpeed = hslidesimspeed->getidx();
-	sprintf(str, "Simulation speed = %d", simSpeed);
+	sprintf(str, "Simulation Speed = %d", simSpeed);
 	textsimspeed->settname(str);
 
 	carLineWidth = hslidecarlinewidth->getidx();
@@ -129,11 +131,11 @@ void updateUI()
 	textcarlinewidth->settname(str);
 
 	newNumAICars = hslidenumaicars->getidx();
-	sprintf(str, "Num AI Cars %d ==> %d, Reset to Apply", newNumAICars, numAICars);
+	sprintf(str, "Num AI Cars %d ==> %d, '*'", newNumAICars, numAICars);
 	textnumaicars->settname(str);
 
 	newMutateRate = hslidemutation->getidx();
-	sprintf(str, "Mutate %5.2f ==> %5.2f, Reset to Apply", static_cast<float>(newMutateRate) / mutateDen, static_cast<float>(mutateRate) / mutateDen);
+	sprintf(str, "Mutate Rate %5.2f ==> %5.2f, '*'", static_cast<float>(newMutateRate) / mutateDen, static_cast<float>(mutateRate) / mutateDen);
 	textmutation->settname(str);
 }
 
@@ -168,7 +170,7 @@ void selfdrivinginit()
 	pbuthumancamera = rl->find<pbut>("PBUTHUMANCAMERA");
 	pbutsave = rl->find<pbut>("PBUTSAVE");
 	pbutdiscard = rl->find<pbut>("PBUTDISCARD");
-
+	pbutdefaulttraining = rl->find<pbut>("PBUTDEFAULTTRAINING");
 	// simspeed
 	if (!simSpeed) {
 		simSpeed = 1;
@@ -220,8 +222,10 @@ void selfdrivinginit()
 	if (numAICars) {
 		bestCar = aiCars[0];
 	}
-	if (fileexist(brainFile)) {
-		NeuralNetwork masterBrain(brainFile);
+	const C8* bf = useDefaultBrainFile ? defaultBrainFile : brainFile;
+	useDefaultBrainFile = false;
+	if (fileexist(bf)) {
+		NeuralNetwork masterBrain(bf);
 		for (auto i = 0U; i < aiCars.size(); ++i) {
 			if (aiCars[i]->brain) { // TODO: look into unique_ptr
 				delete (aiCars[i]->brain);
@@ -259,11 +263,13 @@ void selfdrivingproc()
 		oldfocus->deactivate();
 	}
 	oldfocus = focus;
+	// sliders
 	if (focus == hslidesimspeed 
 		|| focus == hslidenumaicars 
 		|| focus == hslidemutation 
 		|| focus == hslidecarlinewidth) {
 		updateUI();
+	// buttons
 	} else if (ret == 1 || ret == 2) {
 		if (focus == pbutquit) {
 			poporchangestate(STATE_MAINMENU);
@@ -275,6 +281,8 @@ void selfdrivingproc()
 			if (bestCar) {
 				bestCar->brain->save(brainFile);
 			}
+		} else if (focus == pbutdefaulttraining) {
+			useDefaultBrainFile = true; // one shot
 		} else if (focus == pbutdiscard) {
 			remove(brainFile);
 		}
@@ -314,7 +322,9 @@ void selfdrivingproc()
 
 	// position the camera on either the best car or the human car if it exists
 	if (!myCar && !bestCar) {
-		return; // nothing to show
+		carCamera.y = 100; // nothing to show
+		carCamera.y -= WY * .7f;
+		return;
 	}
 	if (humanCamera && myCar) {
 		carCamera.y = myCar->y;
@@ -336,7 +346,9 @@ void selfdrivingdraw2d()
 	clipclear32(B32, C32(0, 0, 255));
 
 	// visualizer
-	if (bestCar && bestCar->brain) {
+	if (myCar && humanCamera) {
+		Visualizer::drawNetwork(myCar->brain, myCar->offsets);
+	} else if (bestCar && bestCar->brain) {
 		Visualizer::drawNetwork(bestCar->brain, bestCar->offsets);
 	} else if (myCar) {
 		Visualizer::drawNetwork(myCar->brain, myCar->offsets);
