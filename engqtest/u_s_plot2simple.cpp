@@ -7,7 +7,7 @@
 
 #include "u_plotter2.h"
 //#define BLOCH
-//#define SIMPLE
+#define SIMPLE
 //#define ISINSIDE
 //#define HALFSPACE
 //#define XYZtoUV
@@ -16,7 +16,7 @@
 //#define HSV2RGB
 //#define ARC
 //#define MINBLEND
-#define MANDL_PALETTE
+//#define MANDL_PALETTE
 
 using namespace u_plotter2;
 

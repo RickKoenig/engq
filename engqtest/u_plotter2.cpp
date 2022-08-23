@@ -595,7 +595,7 @@ void plotter2proc()
 			lzoomspeed *= 4;
 		lzoom += m * lzoomspeed;
 	}
-	zoom=expf(lzoom);
+	zoom = expf(lzoom);
 	if (wininfo.dmz) { // zoom where the mouse is
 		center = newcenter(p,plot);
 	}
@@ -604,7 +604,6 @@ void plotter2proc()
 		// where is the mouse in float coords
 		center.x -= wininfo.dmx*f;
 		center.y += wininfo.dmy*f;
-
 	}
 	switch(KEY) {
 	case K_ESCAPE:
