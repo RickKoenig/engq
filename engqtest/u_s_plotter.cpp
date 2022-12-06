@@ -559,6 +559,7 @@ void calcstuff()
 //#include "plotter_code/zeta.cpp" // study zeta function
 //#include "plotter_code/poles.cpp" // study complex analysis
 //#include "plotter_code/makeasmallfont.cpp" // very small font
+#include "plotter_code/passport.cpp"
 
 
 void calcstuff()
@@ -1080,6 +1081,9 @@ void plotterinit()
 #endif
 #ifdef PASSPORT
 	dopassport();
+#endif
+#ifdef PALETTE_DPAINT2
+	doPalette();
 #endif
 #ifdef NEEDLE
 	doneedle();

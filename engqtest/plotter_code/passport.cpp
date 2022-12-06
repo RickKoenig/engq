@@ -1,4 +1,5 @@
 //#define PASSPORT
+#define PALETTE_DPAINT2
 #ifdef PASSPORT
 void scaledown(bitmap32 *b)
 {
@@ -24,4 +25,28 @@ void dospassprot()
 	bitmap32free(bigb);
 }
 #endif
+#ifdef PALETTE_DPAINT2
+// read in a snipped palette, sample, scale down to 16 by 16, 1 pixel per palette entry
+void doPalette()
+{
+	bitmap32 *b = gfxread32("dpaint2PaletteLarge.png");
+	bitmap32 *bs = bitmap32alloc(16, 16);
+	const S32 offx = 14;
+	const S32 offy = 16;
+	const S32 stepx = 16;
+	const S32 stepy = 10;
+	for (S32 j = 0; j < 16; ++j) {
+		const S32 posy = offy + stepy * j;
+		for (S32 i = 0; i < 16; ++i) {
+			const S32 posx = offx + stepx * i;
+			const C32 val = clipgetpixel32(b, posx, posy);
+			clipputpixel32(bs, j, i, val);
+		}
+	}
+	gfxwrite32("dpaint2Palette.png", bs);
+	bitmap32free(b);
+	bitmap32free(bs);
+}
+#endif
+
 
