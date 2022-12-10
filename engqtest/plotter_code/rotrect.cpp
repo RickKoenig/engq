@@ -1,6 +1,7 @@
 #define ROTRECT
 #ifdef ROTRECT
 
+#if 0
 void do_doppler()
 {
 	logger("do doppler\n");
@@ -15,6 +16,7 @@ void do_doppler()
 		logger("vw = %8.5f, fc = %8.5f\n",vw,fc);
 	}
 }
+#endif
 
 struct rotrect_parms {
 	float width;
@@ -30,7 +32,7 @@ rotrect_parms rrp;
 void rotrect_init()
 {
 	// test some doppler
-	do_doppler();
+	//do_doppler();
 	rrp.width = 4;
 	rrp.height = 4;
 	rrp.rot = 0;

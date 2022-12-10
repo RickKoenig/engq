@@ -1082,6 +1082,9 @@ void plotterinit()
 #ifdef PASSPORT
 	dopassport();
 #endif
+#ifdef DOPCXHEATHOUSE
+	dopcxheathouse();
+#endif
 #ifdef PALETTE_DPAINT2
 	doPalette();
 #endif
