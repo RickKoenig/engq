@@ -167,7 +167,7 @@ void doheat()
 				c+=p[RX];
 			c+=2;
 			c>>=2;
-			p2[0]=c;
+			p2[0] = c; // 64 << 18;// c;
 		}
 	}
 }
@@ -315,8 +315,8 @@ void heathousedraw2d()
 	clipmask8(bigroom,B8,andor);
 	//clipblit8(bigroom, B8, 0, 0, 0, 0, bigroom->size.x, bigroom->size.y);
 
-	for (i=0;i<256;i++)
-		cliprect8(B8,i*4,0,i*4+4,16,i);
+	for (i = 0; i < 256; i++)
+		cliprect8(B8, i * 4, 0, i * 4 + 4, 16, i);
 	i=clipgetpixel8(B8,MX,MY);
 	clipline8(B8,i*4-1,0,i*4-1,15,black);
 	clipline8(B8,i*4-2,0,i*4-2,15,black);
