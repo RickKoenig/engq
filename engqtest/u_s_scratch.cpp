@@ -42,8 +42,12 @@
 //#define DO_RANDOM_TESTS
 //#define DO_FIFO
 //#define ZERO_KNOWLEDGE
-#ifdef ZERO_KNOWLEDGE
+#define CODE_PRACTICE
+#ifdef CODE_PRACTICE
+#include "u_code_practice.h"
+#endif
 
+#ifdef ZERO_KNOWLEDGE
 #include "u_zero_knowledge.h"
 #endif
 
@@ -3515,7 +3519,7 @@ bitmap32* threatbm;
 
 void scratchinit()
 {
-#define TESTVEC
+//#define TESTVEC
 #ifdef TESTVEC
 	logger("hi in scratch\n");
 	vector<pointf2> arr;
@@ -3561,6 +3565,9 @@ void scratchinit()
 #endif
 #ifdef DO_RANDOM_TESTS
 	do_random_tests();
+#endif
+#ifdef CODE_PRACTICE
+	do_code_practice();
 #endif
 #ifdef ZERO_KNOWLEDGE
 	do_zero_knowledge();

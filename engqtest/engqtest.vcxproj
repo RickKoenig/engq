@@ -732,6 +732,7 @@
     <ClInclude Include="user_ai\u_trafficdata.h" />
     <ClInclude Include="user_ai\u_utils.h" />
     <ClInclude Include="user_ai\u_visualizer.h" />
+    <ClInclude Include="u_code_practice.h" />
     <ClInclude Include="u_idxfile.h" />
     <ClInclude Include="u_neuralNetwork.h" />
     <ClInclude Include="u_random.h" />
@@ -1796,6 +1797,7 @@
     <ClCompile Include="user_ai\u_trafficdata.cpp" />
     <ClCompile Include="user_ai\u_utils.cpp" />
     <ClCompile Include="user_ai\u_visualizer.cpp" />
+    <ClCompile Include="u_code_practice.cpp" />
     <ClCompile Include="u_idxfile.cpp" />
     <ClCompile Include="u_neuralNetwork.cpp">
       <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotSet</EnableEnhancedInstructionSet>

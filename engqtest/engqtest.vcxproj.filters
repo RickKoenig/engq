@@ -2891,6 +2891,9 @@
     <ClInclude Include="user_ai\u_trafficdata.h">
       <Filter>Source Files\user\user_ai</Filter>
     </ClInclude>
+    <ClInclude Include="u_code_practice.h">
+      <Filter>Source Files\user\user_misc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="helperobj.cpp">
@@ -4281,6 +4284,9 @@
     </ClCompile>
     <ClCompile Include="user_ai\u_trafficdata.cpp">
       <Filter>Source Files\user\user_ai</Filter>
+    </ClCompile>
+    <ClCompile Include="u_code_practice.cpp">
+      <Filter>Source Files\user\user_misc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
