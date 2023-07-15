@@ -1080,7 +1080,10 @@ void plotterinit()
 	con32_printf(con,"sizeof contdata = %d\n",sizeof(contdata));
 #endif
 #ifdef PASSPORT
-	dopassport();
+	u_s_plotter::dopassport();
+#endif
+#ifdef VISA
+	u_s_plotter::dovisa();
 #endif
 #ifdef DOPCXHEATHOUSE
 	dopcxheathouse();

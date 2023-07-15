@@ -1,27 +1,61 @@
 //#define PASSPORT
 //#define PALETTE_DPAINT2
-#define DOPCXHEATHOUSE
+#define VISA
+//#define DOPCXHEATHOUSE
 #ifdef PASSPORT
 void scaledown(bitmap32 *b)
 {
 	const int up = 5;
 	const int down = 8;
-	bitmap32 *nb = bitmap32alloc(b->size.x * up/down,b->size.y * up/down,C32BLACK);
-	clipscaleblit32(b,nb);
-	clipclear32(b,C32WHITE);
-	clipblit32(nb,b,0,0,(b->size.x-nb->size.x)/2,(b->size.y-nb->size.y)/2,nb->size.x,nb->size.y);
+	bitmap32 *nb = bitmap32alloc(b->size.x * up / down, b->size.y * up / down, C32BLACK);
+	clipscaleblit32(b, nb);
+	clipclear32(b, C32WHITE);
+	clipblit32(nb, b, 0, 0, (b->size.x - nb->size.x) / 2, (b->size.y - nb->size.y) / 2, nb->size.x, nb->size.y);
 	bitmap32free(nb);
 }
-void dospassprot()
-	{
+void dopassport()
+{
 	bitmap32 *b = gfxread32("c:/download/pics/xiaoxia-3.jpg");
 	scaledown(b);
 	bitmap32 *bigb = bitmap32alloc(b->size.x << 1, b->size.y << 1, C32WHITE);
-	clipblit32(b,bigb,0,0,0,0,b->size.x,b->size.y);
-	clipblit32(b,bigb,0,0,0,b->size.y,b->size.x,b->size.y);
-	clipblit32(b,bigb,0,0,b->size.x,0,b->size.x,b->size.y);
-	clipblit32(b,bigb,0,0,b->size.x,b->size.y,b->size.x,b->size.y);
-	gfxwrite32("c:/download/pics/xiaoxia-3_2by2.png",bigb);
+	clipblit32(b, bigb, 0, 0, 0, 0, b->size.x, b->size.y);
+	clipblit32(b, bigb, 0, 0, 0, b->size.y, b->size.x, b->size.y);
+	clipblit32(b, bigb, 0, 0, b->size.x, 0, b->size.x, b->size.y);
+	clipblit32(b, bigb, 0, 0, b->size.x, b->size.y, b->size.x, b->size.y);
+	gfxwrite32("c:/download/pics/xiaoxia-3_2by2.png", bigb);
+	bitmap32free(b);
+	bitmap32free(bigb);
+}
+#endif
+#ifdef VISA
+/*
+void scaleit(bitmap32 *b)
+{
+	const int up = 5;
+	const int down = 8;
+	bitmap32 *nb = bitmap32alloc(b->size.x * up / down, b->size.y * up / down, C32BLACK);
+	clipscaleblit32(b, nb);
+	clipclear32(b, C32WHITE);
+	clipblit32(nb, b, 0, 0, (b->size.x - nb->size.x) / 2, (b->size.y - nb->size.y) / 2, nb->size.x, nb->size.y);
+	bitmap32free(nb);
+}*/
+void dovisa()
+{
+	bitmap32 *b = gfxread32("jackie_visa_photo_raw.jpg");
+	//u_s_plotter::scaledown(b);
+	bitmap32 *bigb = bitmap32alloc(b->size.y * 2, b->size.y * 3, C32WHITE);
+	clipblit32(b, bigb, 0, 0, 210, 426, b->size.x, b->size.y);
+	clipblit32(b, bigb, 0, 0, 210, 2133, b->size.x, b->size.y);
+	clipblit32(b, bigb, 0, 0, 1385, 426, b->size.x, b->size.y);
+	clipblit32(b, bigb, 0, 0, 1385, 2133, b->size.x, b->size.y);
+	C32* data = bigb->data;
+	U32 p = bigb->size.x * bigb->size.y;
+	for (U32 i = 0; i < p; ++i) {
+		C32& v = data[i];
+		v.c32 ^= 0xffffff;
+	}
+
+	gfxwrite32("jackie_visa_photo_fixed.png", bigb);
 	bitmap32free(b);
 	bitmap32free(bigb);
 }
