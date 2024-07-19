@@ -1402,51 +1402,6 @@
     <Text Include="data\simplex\simplexres.txt">
       <Filter>text\simplex</Filter>
     </Text>
-    <Text Include="data\game2_endgame\30krrvsk.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\31krvskr.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\32krpvskr.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\40kpvsk.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\41kpvsk.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\42kpvsk.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\43kpvsk.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\44kpvsk.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\50kqvsk.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\51knnvsk.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\52krvsk.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\53kbnvsk.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\55test.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\56kvsk.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\57kbbvsk.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
     <Text Include="data\game2_nim\nim1.txt">
       <Filter>text\game2\game2_nim</Filter>
     </Text>
@@ -1548,21 +1503,6 @@
     </Text>
     <Text Include="data\physics3d\spinning.txt">
       <Filter>text\physics3d</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\29krvskpQ.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\29krvskpR.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\27kpvskp.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\28kqrvskr.txt">
-      <Filter>text\game2\game2 endgame</Filter>
-    </Text>
-    <Text Include="data\game2_endgame\29krvskp.txt">
-      <Filter>text\game2\game2 endgame</Filter>
     </Text>
     <Text Include="data\selfdriving\selfdrivingres.txt">
       <Filter>text\selfdriving</Filter>

@@ -1,7 +1,7 @@
 {
 	"avatar" : {
 		"avaj" : {
-			"carbodyname" : "dodgecharger",
+			"carbodyname" : "fordf150",
 			"decal" : 7,
 			"energies" : [
 				3,
@@ -16,9 +16,10 @@
 			"playername" : "altplayer3",
 			"weaps" : [
 				"dielectric",
-				"klondyke",
+				"energywall",
+				"flasher",
 				"laser",
-				"sonic",
+				"rpd",
 				"transducer"
 			]
 		}

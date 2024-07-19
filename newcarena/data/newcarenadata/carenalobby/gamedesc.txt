@@ -1,8 +1,8 @@
 {
 	"avatar" : {
 		"avaj" : {
-			"carbodyname" : "100twinmill",
-			"decal" : 22,
+			"carbodyname" : "247",
+			"decal" : 25,
 			"energies" : [
 				5,
 				17,
@@ -12,7 +12,7 @@
 				3
 			],
 			"ownerid" : -1,
-			"paint" : 19,
+			"paint" : 15,
 			"playername" : "rickers",
 			"weaps" : [
 				"buzz",
@@ -26,30 +26,30 @@
 	"environment" : {
 		"envj" : {
 			"nlaps" : 1,
-			"rules" : 6,
+			"rules" : 0,
 			"trackhash" : {
 				"hash" : {
 					"data" : [
-						143,
-						171,
-						152,
-						239,
-						42,
-						48,
-						4,
-						246,
-						89,
+						242,
+						173,
 						185,
-						140,
-						12,
+						10,
+						143,
+						9,
+						120,
+						134,
+						168,
+						214,
 						184,
-						246,
-						56,
-						63
+						229,
+						245,
+						43,
+						109,
+						70
 					]
 				}
 			},
-			"trackname" : "verytiny"
+			"trackname" : "tester"
 		}
 	},
 	"nbotplayers" : 0,

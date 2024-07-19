@@ -1,7 +1,7 @@
 {
 	"environment" : {
 		"envj" : {
-			"nlaps" : 1,
+			"nlaps" : 10,
 			"pc" : {
 				"calc" : {
 					"airfric" : 0.0625,
@@ -37,7 +37,7 @@
 					"carflipheight" : 2.375,
 					"carstartheight" : 1.125,
 					"defuextraheading" : 0.570312,
-					"drivemode" : 2,
+					"drivemode" : 0,
 					"elast" : 0.59375,
 					"extrashocklen" : [
 						1,
@@ -205,32 +205,32 @@
 					"wheelrad" : 0.625
 				}
 			},
-			"rules" : 6,
+			"rules" : 0,
 			"trackhash" : {
 				"hash" : {
 					"data" : [
-						150,
-						231,
-						120,
-						5,
-						10,
-						186,
-						157,
-						202,
-						100,
-						202,
+						44,
 						183,
-						165,
-						38,
-						224,
-						9,
-						69
+						0,
+						243,
+						157,
+						182,
+						240,
+						57,
+						160,
+						26,
+						22,
+						150,
+						78,
+						145,
+						11,
+						164
 					]
 				}
 			},
-			"trackname" : "verytiny"
+			"trackname" : "tester"
 		}
 	},
-	"numplayers" : 2,
-	"yourid" : 1
+	"numplayers" : 8,
+	"yourid" : 3
 }

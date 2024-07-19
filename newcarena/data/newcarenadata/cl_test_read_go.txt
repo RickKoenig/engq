@@ -2,11 +2,11 @@
 	"carojs" : {
 		"caroj" : [
 			{
-				"carbodyname" : "hyperliner",
+				"carbodyname" : "100twinmill",
 				"decal" : 22,
 				"energies" : [
 					5,
-					1,
+					17,
 					4,
 					2,
 					6,
@@ -19,16 +19,12 @@
 					"buzz",
 					"charger",
 					"emb",
-					"ferrite",
-					"forklift",
-					"grapple",
 					"intake",
-					"laser",
 					"minigun"
 				]
 			},
 			{
-				"carbodyname" : "dodgecharger",
+				"carbodyname" : "fordf150",
 				"decal" : 7,
 				"energies" : [
 					3,
@@ -43,11 +39,94 @@
 				"playername" : "altplayer3",
 				"weaps" : [
 					"dielectric",
-					"klondyke",
+					"energywall",
+					"flasher",
 					"laser",
-					"sonic",
+					"rpd",
 					"transducer"
 				]
+			},
+			{
+				"carbodyname" : "fordf150",
+				"decal" : 7,
+				"energies" : [
+					3,
+					1,
+					5,
+					4,
+					6,
+					2
+				],
+				"ownerid" : 2,
+				"paint" : 6,
+				"playername" : "altplayer3",
+				"weaps" : [
+					"dielectric",
+					"energywall",
+					"flasher",
+					"laser",
+					"rpd",
+					"transducer"
+				]
+			},
+			{
+				"carbodyname" : "fordf150",
+				"decal" : 7,
+				"energies" : [
+					3,
+					1,
+					5,
+					4,
+					6,
+					2
+				],
+				"ownerid" : 3,
+				"paint" : 6,
+				"playername" : "altplayer3",
+				"weaps" : [
+					"dielectric",
+					"energywall",
+					"flasher",
+					"laser",
+					"rpd",
+					"transducer"
+				]
+			},
+			{
+				"carbodyname" : "schlbus",
+				"decal" : 32,
+				"energies" : [],
+				"ownerid" : -1,
+				"paint" : 7,
+				"playername" : "landslide",
+				"weaps" : []
+			},
+			{
+				"carbodyname" : "247",
+				"decal" : 18,
+				"energies" : [],
+				"ownerid" : -1,
+				"paint" : 15,
+				"playername" : "shifter",
+				"weaps" : []
+			},
+			{
+				"carbodyname" : "backdraft",
+				"decal" : 3,
+				"energies" : [],
+				"ownerid" : -1,
+				"paint" : 6,
+				"playername" : "quantum",
+				"weaps" : []
+			},
+			{
+				"carbodyname" : "suzuka",
+				"decal" : 24,
+				"energies" : [],
+				"ownerid" : -1,
+				"paint" : 4,
+				"playername" : "bill",
+				"weaps" : []
 			}
 		]
 	}

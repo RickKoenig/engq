@@ -1,7 +1,7 @@
 {
 	"avatar" : {
 		"avaj" : {
-			"carbodyname" : "dodgecharger",
+			"carbodyname" : "fordf150",
 			"decal" : 7,
 			"energies" : [
 				3,
@@ -16,9 +16,10 @@
 			"playername" : "altplayer3",
 			"weaps" : [
 				"dielectric",
-				"klondyke",
+				"energywall",
+				"flasher",
 				"laser",
-				"sonic",
+				"rpd",
 				"transducer"
 			]
 		}
@@ -30,32 +31,32 @@
 			"trackhash" : {
 				"hash" : {
 					"data" : [
-						137,
-						250,
-						151,
-						28,
-						156,
-						125,
-						253,
-						178,
-						53,
-						139,
-						0,
-						113,
-						148,
-						49,
-						87,
-						73
+						230,
+						33,
+						119,
+						128,
+						167,
+						42,
+						228,
+						77,
+						140,
+						194,
+						126,
+						245,
+						97,
+						159,
+						10,
+						124
 					]
 				}
 			},
-			"trackname" : "track1"
+			"trackname" : "smallestxx"
 		}
 	},
 	"nbotplayers" : 0,
 	"net" : {
 		"netdescj" : {
-			"gamenet" : 2,
+			"gamenet" : 0,
 			"serverip" : "127.0.0.1",
 			"serverport" : 5426
 		}
