@@ -62,7 +62,7 @@ pbut *bstop;
 
 // non powers of 2
 #define MAXANIMSPEED (ANIMSIZE/200)
-#define MAXENERGY 512 // 0 to 31 // actually not energy but different eigenstates
+#define MAXENERGY 512 // 0 to MAXENERGY // actually not energy but different eigenstates of energy
 #define ENERGYARRSIZE (MAXENERGY+1)
 #define MAXAMP 100
 enum {T_RI_X,T_P_X,T_RI,T_RIX,
@@ -99,16 +99,14 @@ float angsx[SPACESIZE][ENERGYARRSIZE]; // [x][n]
 #endif
 // end arrays
 float sumk; // sum of the energies
-float isumk; // graphical normalizer
-float normk; // sqrt(2/(sum of squared energies)) // real normalizer
 float sint(S32 t)
 {
-	return sintb[(TRIGSIZE-1)&t];
+	return sintb[(TRIGSIZE - 1) & t];
 }
 
 float cost(S32 t)
 {
-	return sintb[(TRIGSIZE-1)&(t+TRIGSIZE/4)];
+	return sintb[(TRIGSIZE - 1) & (t + TRIGSIZE / 4)];
 }
 
 
@@ -131,11 +129,18 @@ void compute()
 	comptime=0;
 }
 
+void addQState(float& accAmp, S32& accPhase, float amp, S32 phase)
+{
+	accAmp += amp;
+	accPhase = phase;
+}
+
 void computeproc()
 {
 	S32 x,t,n,rt,rx;
 	static S32 exlate[ENERGYARRSIZE];
 	static S32 nexlate; // build a list of non zero energies
+	static float normk;
 	if (comptime==0) {
 		sumk=0;
 		float sumk2=0;
@@ -147,9 +152,13 @@ void computeproc()
 			comptime=TIMESIZE;
 			return;
 		}
-// not so important
-		isumk=1.0f/sumk; // this scales/looks better
-		normk=sqrtf(2.0f/sumk2); // this one is the correct normalizer
+// minor differences for normalization
+#define LOOK_BETTER
+#ifdef LOOK_BETTER
+		normk = 1.0f / sumk; // this scales/looks better
+#elif
+		normk = sqrtf(2.0f / sumk2); // this one is the correct normalizer
+#endif
 		nexlate=0;
 		for (n=1;n<ENERGYARRSIZE;n++) {
 			if (ak[n]) {
@@ -162,11 +171,11 @@ void computeproc()
 				rx=lshift(n*x,LTRIGSIZE-LSPACESIZE-1);
 				angsx[x][n]=sint(rx)*ak[n];
 			}
-		for (t=0;t<TIMESIZE;t++) {
-			for (n=1;n<ENERGYARRSIZE;n++) {
-				rt=lshift(n*n*t+phk[n],LTRIGSIZE-LTIMESIZE);
-				angstreal[t][n]=cost(rt);
-				angstimag[t][n]=sint(rt);
+		for (t = 0; t <TIMESIZE; ++t) {
+			for (n = 1; n < ENERGYARRSIZE; ++n) {
+				rt = lshift(n * n * t + phk[n], LTRIGSIZE - LTIMESIZE);
+				angstreal[t][n] = cost(rt);
+				angstimag[t][n] = sint(rt);
 			}
 		}
 		perf_end(TEST1);
@@ -220,8 +229,8 @@ void computeproc()
 			}
 			perf_end(TEST3);
 			perf_start(TEST4);
-			ampr*=isumk; // go with graphical normals, better scaling
-			ampi*=isumk;
+			ampr*=normk; // go with graphical normals, better scaling
+			ampi*=normk;
 			realst[x]=ampr;
 			imagst[x]=ampi;
 //			probst[x]=ampr*ampr+ampi*ampi;
@@ -231,6 +240,7 @@ void computeproc()
 	comptime=endtime;
 	perf_end(TEST2);
 }
+
 void update_energy_list()
 {
 	S32 i;
@@ -330,6 +340,23 @@ void quant3_init()
 	for (i=0;i<TRIGSIZE;i++) {
 		sintb[i]=sinf(i*TWOPI/TRIGSIZE);
 	}
+
+	
+	// test trig
+	S32 pi = S32(TIMESIZE / 2.5f);
+	float pf = pi * TWOPI / TIMESIZE;
+	const float psf = sinf(pf);
+	const float pcf = cosf(pf);
+	const S32 idx = lshift(pi, LTRIGSIZE - LTIMESIZE);
+	const float pst = sint(idx);
+	const float pct = cost(idx);
+	logger("test trig 30 degrees  calc: sin %f, cos %f\n", psf, pcf);
+	logger("test trig 30 degrees table: sin %f, cos %f\n", pst, pct);
+	// TODO: add atan2
+	// end test trig
+
+
+	
 // init energies
 #ifdef USEVECTOR
 	ak.assign(ENERGYARRSIZE,0);
@@ -443,34 +470,41 @@ void quant3_proc()
 	} else if (focus == hpc) {
 		update_text();
 	} else if (focus == baddbell) {
-		if (ret==1) {
-			float mean=(float)(hmean->getidx());
-			float wid=float(hwidth->getidx());
-			float mamp=float(hmamp->getidx());
-			int phase=hpc->getidx();
-			S32 x;
-			for (x=1;x<ENERGYARRSIZE;x++) {
+		if (ret== 1) {
+			S32 mean = hmean->getidx();
+			float wid = float(hwidth->getidx());
+			float mamp = float(hmamp->getidx());
+			S32 phaseDelta = hpc->getidx();
+			for (S32 x = 1; x < ENERGYARRSIZE; ++x) {
 				float a;
-				if (wid==0)	{
-					if (x==mean)
-						a=mamp;
-					else
-						a=0;
-				} else {
-					float temp=(x-mean)/wid;
-					a=mamp*expf(-temp*temp);
-					if (a>=.125f)
-						phk[x]=(x-S32(mean))*phase;
-					else
-						a=0;
+				S32 p;
+				if (wid == 0) { // delta function
+					if (x == mean) {
+						a = mamp;
+						p = phaseDelta;
+					} else {
+						a = 0;
+						p = 0;
+					}
+				} else { // bell curve
+					float vi = (x - mean) / wid;
+					a = mamp * expf(-vi * vi);
+					if (a >= .125f) {
+						p = (x - mean) * phaseDelta;
+					} else {
+						a = 0;
+					}
 				}
-				ak[x]+=a;
+				// for now add a, replace ph
+				addQState(ak[x], phk[x], a, p);
+				//ak[x] += a;
+				//phk[x] = p;
 			}
 			update_energy_list();
-			docomp=true;
-			focus=lenergies;
-			if (mean>0)
-				lenergies->setidxc(S32(mean)-1);
+			docomp = true;
+			focus = lenergies;
+			if (mean > 0)
+				lenergies->setidxc(S32(mean) - 1);
 		}
 	} else if (focus==hcntval && MBUT&1) {
 		countr=hcntval->getidx();

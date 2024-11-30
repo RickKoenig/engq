@@ -92,7 +92,7 @@ shape quant3res 0 0 {
 	pbut BADD
 	869 413
 	146 20
-	"Add Energy"
+	"Replace Energy"
 
 // add bell energies	
 	pbut BADDBELL
