@@ -131,9 +131,45 @@ void compute()
 
 void addQState(float& accAmp, S32& accPhase, float amp, S32 phase)
 {
-	accAmp += amp;
-	accPhase = phase;
+	const S32 idx1 = lshift(accPhase, LTRIGSIZE - LTIMESIZE);
+	const float yt1 = accAmp * sint(idx1);
+	const float xt1 = accAmp * cost(idx1);
+	const S32 idx2 = lshift(phase, LTRIGSIZE - LTIMESIZE);
+	const float yt2 = amp * sint(idx2);
+	const float xt2 = amp * cost(idx2);
+	const float xtacc = xt1 + xt2;
+	const float ytacc = yt1 + yt2;
+	accAmp = sqrt(xtacc * xtacc + ytacc * ytacc);
+	//logger("atan value = %f", atan2(ytacc, xtacc));
+	accPhase = S32(atan2(ytacc, xtacc) * TIMESIZE / TWOPI);
+
+	//accAmp = amp;
+	//accPhase = 2048;// phase;
+	//logger("addQState amp acc = %f, ph acc = %f\n", ampacc, phacc);
 }
+/*
+	const S32 idx = lshift(pf, LTRIGSIZE - LTIMESIZE);
+	const float yt = sint(idx);
+	const float xt = cost(idx);
+{
+		// standard radian calc
+		const float yf1 = amp1 * sin(ph1 * PIOVER180);
+		const float xf1 = amp1 * cos(ph1 * PIOVER180);
+		const float yf2 = amp2 * sin(ph2 * PIOVER180);
+		const float xf2 = amp2 * cos(ph2 * PIOVER180);
+		const float xfacc = xf1 + xf2;
+		const float yfacc = yf1 + yf2;
+		const float ampacc = sqrt(xfacc * xfacc + yfacc * yfacc);
+		const float phacc = atan2(yfacc, xfacc) * PIUNDER180;
+		logger("standard amp acc = %f, ph acc = %f\n", ampacc, phacc);
+	// table driven
+	// convert to timesize then to trigsize
+	const S32 ph1t = S32(ph1 * TIMESIZE / 360);
+	const S32 ph2t = S32(ph2 * TIMESIZE / 360);
+	S32 phacc = ph1t;
+	float ampacc = amp1;
+}
+*/
 
 void computeproc()
 {
@@ -281,78 +317,122 @@ void update_text()
 
 void quant3_init()
 {
-	video_setupwindow(1024,768);
+	video_setupwindow(1024, 768);
 	pushandsetdir("wat_physics/quant3");
-// ui
-	rl=res_loadfile("quant3res.txt");
-	bquit=rl->find<pbut>("BQUIT");
+	// ui
+	rl = res_loadfile("quant3res.txt");
+	bquit = rl->find<pbut>("BQUIT");
 
-	lenergies=rl->find<listbox>("LENERGIES");
+	lenergies = rl->find<listbox>("LENERGIES");
 
-	breset=rl->find<pbut>("BRESET");
+	breset = rl->find<pbut>("BRESET");
 
-	tenergy=rl->find<text>("TENERGY");
-	henergy=rl->find<hscroll>("HENERGY");
-	henergy->setminmaxval(1,MAXENERGY);
-	tamp=rl->find<text>("TAMP");
-	hamp=rl->find<hscroll>("HAMP");
-	hamp->setminmaxval(0,MAXAMP);
-	tph=rl->find<text>("TPH");
-	hph=rl->find<hscroll>("HPH");
-	hph->setminmaxval(-TIMESIZE/2,TIMESIZE/2);
+	tenergy = rl->find<text>("TENERGY");
+	henergy = rl->find<hscroll>("HENERGY");
+	henergy->setminmaxval(1, MAXENERGY);
+	tamp = rl->find<text>("TAMP");
+	hamp = rl->find<hscroll>("HAMP");
+	hamp->setminmaxval(0, MAXAMP);
+	tph = rl->find<text>("TPH");
+	hph = rl->find<hscroll>("HPH");
+	hph->setminmaxval(-TIMESIZE / 2, TIMESIZE / 2);
 	hph->setidx(0);
-	badd=rl->find<pbut>("BADD");
+	badd = rl->find<pbut>("BADD");
 
-	tmean=rl->find<text>("TMEAN");
-	hmean=rl->find<hscroll>("HMEAN");
-	hmean->setminmaxval(0,MAXENERGY*2);
-	tmamp=rl->find<text>("TMAMP");
-	hmamp=rl->find<hscroll>("HMAMP");
-	hmamp->setminmaxval(0,MAXAMP);
-	twidth=rl->find<text>("TWIDTH");
-	hwidth=rl->find<hscroll>("HWIDTH");
-	hwidth->setminmaxval(0,MAXENERGY);
-	tpc=rl->find<text>("TPC");
-	hpc=rl->find<hscroll>("HPC");
-	hpc->setminmaxval(-TIMESIZE/2,TIMESIZE/2);
+	tmean = rl->find<text>("TMEAN");
+	hmean = rl->find<hscroll>("HMEAN");
+	hmean->setminmaxval(0, MAXENERGY * 2);
+	tmamp = rl->find<text>("TMAMP");
+	hmamp = rl->find<hscroll>("HMAMP");
+	hmamp->setminmaxval(0, MAXAMP);
+	twidth = rl->find<text>("TWIDTH");
+	hwidth = rl->find<hscroll>("HWIDTH");
+	hwidth->setminmaxval(0, MAXENERGY);
+	tpc = rl->find<text>("TPC");
+	hpc = rl->find<hscroll>("HPC");
+	hpc->setminmaxval(-TIMESIZE / 2, TIMESIZE / 2);
 	hpc->setidx(0);
-	baddbell=rl->find<pbut>("BADDBELL");
-	bcalc=rl->find<pbut>("BCALC");
-	hcntvel=rl->find<hscroll>("HCNTVEL");
-	hcntvel->setminmaxval(-MAXANIMSPEED,MAXANIMSPEED);
+	baddbell = rl->find<pbut>("BADDBELL");
+	bcalc = rl->find<pbut>("BCALC");
+	hcntvel = rl->find<hscroll>("HCNTVEL");
+	hcntvel->setminmaxval(-MAXANIMSPEED, MAXANIMSPEED);
 	hcntvel->setidx(0);
-	tcntinfo=rl->find<text>("TCNTINFO");
-	hcntval=rl->find<hscroll>("HCNTVAL");
-	bprev=rl->find<pbut>("BPREV");
-	bnext=rl->find<pbut>("BNEXT");
-	tcomp=rl->find<text>("TCOMP");
-	tinfo3d=rl->find<text>("TINFO3D");
-	bstop=rl->find<pbut>("BSTOP");
-	focus=oldfocus=0;
-// end ui
-// init arrays
-// init trig tables
+	tcntinfo = rl->find<text>("TCNTINFO");
+	hcntval = rl->find<hscroll>("HCNTVAL");
+	bprev = rl->find<pbut>("BPREV");
+	bnext = rl->find<pbut>("BNEXT");
+	tcomp = rl->find<text>("TCOMP");
+	tinfo3d = rl->find<text>("TINFO3D");
+	bstop = rl->find<pbut>("BSTOP");
+	focus = oldfocus = 0;
+	// end ui
+	// init arrays
+	// init trig tables
 	S32 i;
 	printf("init trig\n");
 #ifdef USEVECTOR
-	sintb.assign(TRIGSIZE,0);
+	sintb.assign(TRIGSIZE, 0);
 #endif
-	for (i=0;i<TRIGSIZE;i++) {
-		sintb[i]=sinf(i*TWOPI/TRIGSIZE);
+	for (i = 0; i < TRIGSIZE; i++) {
+		sintb[i] = sinf(i*TWOPI / TRIGSIZE);
 	}
 
-	
+
 	// test trig
-	S32 pi = S32(TIMESIZE / 2.5f);
-	float pf = pi * TWOPI / TIMESIZE;
-	const float psf = sinf(pf);
-	const float pcf = cosf(pf);
-	const S32 idx = lshift(pi, LTRIGSIZE - LTIMESIZE);
-	const float pst = sint(idx);
-	const float pct = cost(idx);
-	logger("test trig 30 degrees  calc: sin %f, cos %f\n", psf, pcf);
-	logger("test trig 30 degrees table: sin %f, cos %f\n", pst, pct);
+	/*
+	//S32 phi = S32(30 * 1);
+	float deg = 30;
+	float rad = deg * PIOVER180;
+	//standard radian calc
+	const float yf = sinf(rad);
+	const float xf = cosf(rad);
+	// convert to timesize then to trigsize
+	S32 pf = (S32)(deg * TIMESIZE / 360);
+	const S32 idx = lshift(pf, LTRIGSIZE - LTIMESIZE);
+	const float yt = sint(idx);
+	const float xt = cost(idx);
+	logger("test trig %f degrees  function: sin %f, cos %f\n", deg, yf, xf);
+	logger("test trig %f degrees     table: sin %f, cos %f\n", deg, yt, xt);
 	// TODO: add atan2
+	const float ang = atan2(yt, xt);
+	logger("atan ang degrees = %f\n", ang * PIUNDER180);
+	*/
+	const float amp1 = 10;
+	const float ph1 = 45;
+	const float amp2 = 15;
+	const float ph2 = 39;
+	{
+		// standard radian calc
+		const float yf1 = amp1 * sin(ph1 * PIOVER180);
+		const float xf1 = amp1 * cos(ph1 * PIOVER180);
+		const float yf2 = amp2 * sin(ph2 * PIOVER180);
+		const float xf2 = amp2 * cos(ph2 * PIOVER180);
+		const float xfacc = xf1 + xf2;
+		const float yfacc = yf1 + yf2;
+		const float ampacc = sqrt(xfacc * xfacc + yfacc * yfacc);
+		const float phacc = atan2(yfacc, xfacc) * PIUNDER180;
+		logger("standard amp acc = %f, ph acc = %f\n", ampacc, phacc);
+	}
+	{
+		// table driven
+		// convert to timesize then to trigsize
+		const S32 ph1t = S32(ph1 * TIMESIZE / 360);
+		const S32 ph2t = S32(ph2 * TIMESIZE / 360);
+		S32 phacc = ph1t;
+		float ampacc = amp1;
+		addQState(ampacc, phacc, amp2, ph2t);
+		logger("table amp acc = %f, ph acc = %f\n", ampacc, phacc* 360.0f / TIMESIZE);
+	}
+
+	/*
+	void addQState(float& accAmp, S32& accPhase, float amp, S32 phase)
+	{
+		accAmp += amp;
+		accPhase = phase;
+	}
+	*/
+
+
 	// end test trig
 
 
@@ -441,13 +521,13 @@ void quant3_proc()
 			hph->setidx(p);
 		}
 		update_text();
-// add energy
 	} else if (focus == henergy) {
 		update_text();
 	} else if (focus == hamp) {
 		update_text();
 	} else if (focus == hph) {
 		update_text();
+		// replace energy
 	} else if (focus == badd) {
 		if (ret==1) {
 			S32 n=henergy->getidx();
