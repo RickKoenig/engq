@@ -99,6 +99,10 @@ float angsx[SPACESIZE][ENERGYARRSIZE]; // [x][n]
 #endif
 // end arrays
 float sumk; // sum of the energies
+
+pointf3 startCol{ .66f, .66f, .66f, 1 };
+float gainCol = 1.5f;
+
 float sint(S32 t)
 {
 	return sintb[(TRIGSIZE - 1) & t];
@@ -140,36 +144,8 @@ void addQState(float& accAmp, S32& accPhase, float amp, S32 phase)
 	const float xtacc = xt1 + xt2;
 	const float ytacc = yt1 + yt2;
 	accAmp = sqrt(xtacc * xtacc + ytacc * ytacc);
-	//logger("atan value = %f", atan2(ytacc, xtacc));
 	accPhase = S32(atan2(ytacc, xtacc) * TIMESIZE / TWOPI);
-
-	//accAmp = amp;
-	//accPhase = 2048;// phase;
-	//logger("addQState amp acc = %f, ph acc = %f\n", ampacc, phacc);
 }
-/*
-	const S32 idx = lshift(pf, LTRIGSIZE - LTIMESIZE);
-	const float yt = sint(idx);
-	const float xt = cost(idx);
-{
-		// standard radian calc
-		const float yf1 = amp1 * sin(ph1 * PIOVER180);
-		const float xf1 = amp1 * cos(ph1 * PIOVER180);
-		const float yf2 = amp2 * sin(ph2 * PIOVER180);
-		const float xf2 = amp2 * cos(ph2 * PIOVER180);
-		const float xfacc = xf1 + xf2;
-		const float yfacc = yf1 + yf2;
-		const float ampacc = sqrt(xfacc * xfacc + yfacc * yfacc);
-		const float phacc = atan2(yfacc, xfacc) * PIUNDER180;
-		logger("standard amp acc = %f, ph acc = %f\n", ampacc, phacc);
-	// table driven
-	// convert to timesize then to trigsize
-	const S32 ph1t = S32(ph1 * TIMESIZE / 360);
-	const S32 ph2t = S32(ph2 * TIMESIZE / 360);
-	S32 phacc = ph1t;
-	float ampacc = amp1;
-}
-*/
 
 void computeproc()
 {
@@ -238,13 +214,11 @@ void computeproc()
 #ifdef USEVECTOR
 		vector<float> & realst=reals[t]; // try and speed this up
 		vector<float> & imagst=imags[t];
-//		vector<float> & probst=probs[t];
 		vector<float> & angstrealt=angstreal[t];
 		vector<float> & angstimagt=angstimag[t];
 #else
 		float* realst=reals[t]; // try and speed this up
 		float* imagst=imags[t];
-//		float* probst=probs[t];
 		float* angstrealt=angstreal[t];
 		float* angstimagt=angstimag[t];
 #endif
@@ -269,7 +243,6 @@ void computeproc()
 			ampi*=normk;
 			realst[x]=ampr;
 			imagst[x]=ampi;
-//			probst[x]=ampr*ampr+ampi*ampi;
 			perf_end(TEST4);
 		}
 	}
@@ -310,6 +283,27 @@ void update_text()
 		twidth->settname(str);
 		sprintf(str,"PhaseDelta %d",hpc->getidx());
 		tpc->settname(str);
+}
+
+void runTestComplexColors()
+{
+	const S32 count = 40;
+	const S32 centerX = VIEWXSTART + VIEWXSIZE / 2;
+	const S32 centerY = VIEWYSTART + VIEWYSIZE / 2;
+	const S32 stepX = VIEWXSIZE / (2 * count);
+	const S32 stepY = VIEWYSIZE / (2 * count);
+	const S32 rad = 2;
+	for (S32 i = -count; i <= count; ++i) {
+		const float fi = float(-i) / count; // flip Y
+		for (S32 r = -count; r <= count; ++r) {
+			const float fr = float(r) / count;
+			if (fr * fr + fi * fi < 1) {
+				pointf3 fcol = { fr, fi, 0.0f, 1.0f };
+				C32 col = fplot3d::makeComplexColor(fr, fi, startCol, gainCol);
+				clipcircle32(B32, centerX + stepX * r, centerY + stepY * i, rad, col);
+			}
+		}
+	}
 }
 
 } // end anonymous namespace
@@ -557,7 +551,7 @@ void quant3_proc()
 			S32 phaseDelta = hpc->getidx();
 			for (S32 x = 1; x < ENERGYARRSIZE; ++x) {
 				float a;
-				S32 p;
+				S32 p = 0;
 				if (wid == 0) { // delta function
 					if (x == mean) {
 						a = mamp;
@@ -652,6 +646,7 @@ void quant3_draw2d()
 	clipclear32(B32,C32(0,0,128));
 	rl->draw();
 	S32 i;
+	const bool doTestComplexColors = false;
 	switch(kind) {
 // r,i against x, animate t
 	case T_RI_X: 
@@ -719,9 +714,12 @@ void quant3_draw2d()
 				float x=reals[lshift(countr,LTIMESIZE-LANIMSIZE)][i];
 				float y=imags[lshift(countr,LTIMESIZE-LANIMSIZE)][i];
 				float z=i*(1.0f/SPACESIZE);
-				afplot3d.flinev(x,y,z,C32LIGHTGRAY,1.5f);
+				afplot3d.flinev(x,y,z,startCol, gainCol);
 			}
-			afplot3d.flinev(0.0f,0.0f,1.0f,C32LIGHTGRAY,1.5f);
+			afplot3d.flinev(0.0f,0.0f,1.0f,startCol, gainCol);
+			if (doTestComplexColors) {
+				runTestComplexColors();
+			}
 			break;
 		}
 // r,i against t, animate x
@@ -799,12 +797,15 @@ void quant3_draw2d()
 				float x=reals[i][lshift(countr,LSPACESIZE-LANIMSIZE)];
 				float y=imags[i][lshift(countr,LSPACESIZE-LANIMSIZE)];
 				float z=i*(1.0f/TIMESIZE);
-				afplot3d.flinev(x,y,z,C32LIGHTGRAY,1.5f);
+				afplot3d.flinev(x,y,z,startCol, gainCol);
 			}
 			float x=reals[0][lshift(countr,LSPACESIZE-LANIMSIZE)];
 			float y=imags[0][lshift(countr,LSPACESIZE-LANIMSIZE)];
-			afplot3d.flinev(x,y,1.0f,C32LIGHTGRAY,1.5f);
-			break;
+			afplot3d.flinev(x,y,1.0f,startCol, gainCol);
+			if (doTestComplexColors) {
+				runTestComplexColors();
+				break;
+			}
 		}
 	default:
 		break;

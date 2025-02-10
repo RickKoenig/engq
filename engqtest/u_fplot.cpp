@@ -77,7 +77,6 @@ void fplot::flinev(float xa,float ya,C32 c)
 }
 
 // fplot 3d class
-
 fplot3d::fplot3d(S32 xs0a,S32 ys0a, S32 xswa,S32 ysha,
 			 float x0a,float y0a,float z0a,float x1a,float y1a,float z1a,
 			 const bitmap32* da,const C8* xlabela,const C8* ylabela,const C8* zlabela,
@@ -113,9 +112,9 @@ void fplot3d::f2s(float cxa,float cya,float cza,S32* cxsa,S32* cysa)
 void fplot3d::drawaxis()
 {
 	cliprect32(d,xs0,ys0,xsw,ysh,C32BLACK);
-	fline(x0,0,0,x1,0,0,C32WHITE);
-	fline(0,y0,0,0,y1,0,C32WHITE);
-	fline(0,0,z0,0,0,z1,C32WHITE);
+	fline(x0,0,0,x1,0,0,F32WHITE, 0);
+	fline(0,y0,0,0,y1,0,F32WHITE, 0);
+	fline(0,0,z0,0,0,z1,F32WHITE, 0);
 }
 
 void fplot3d::drawlabels()
@@ -138,24 +137,15 @@ void fplot3d::drawlabels()
 	outtextxy32(d,cx,cy,C32WHITE,zlabel);
 }
 
-void fplot3d::fline(float x0a,float y0a,float z0a,float x1a,float y1a,float z1a,C32 c,float phasehilight)
+void fplot3d::fline(float x0a,float y0a,float z0a,float x1a,float y1a,float z1a, pointf3 startCol, float gain)
 {
 	S32 cx0,cy0,cx1,cy1;
 	f2s(x0a,y0a,z0a,&cx0,&cy0);
 	f2s(x1a,y1a,z1a,&cx1,&cy1);
-	if (phasehilight) {
-		pointf3 fc=C32topointf3(c);
-		float cx=.5f*(x0a+x1a);
-		float cy=.5f*(y0a+y1a);
-		float dr=cx*phasehilight;
-		float dg=cy*phasehilight;
-		fc.x+=dr;
-		fc.y+=dg;
-		fc.x=range(0.0f,fc.x,1.0f);
-		fc.y=range(0.0f,fc.y,1.0f);
-		c=pointf3toC32(&fc);
-	}
-	clipline32(d,cx0,cy0,cx1,cy1,c);
+	float cr = .5f*(x0a + x1a);
+	float ci = .5f*(y0a + y1a);
+	C32 col = fplot3d::makeComplexColor(cr, ci, startCol, gain);
+	clipline32(d,cx0,cy0,cx1,cy1,col);
 }
 
 void fplot3d::startlinev()
@@ -163,10 +153,10 @@ void fplot3d::startlinev()
 	lastline=false;
 }
 
-void fplot3d::flinev(float xa,float ya,float za,C32 c,float p)
+void fplot3d::flinev(float xa,float ya,float za, pointf3 startCol, float gain)
 {
 	if (lastline) {
-		fline(lx,ly,lz,xa,ya,za,c,p);
+		fline(lx,ly,lz,xa,ya,za,startCol,gain);
 	} else {
 		lastline=true;
 	}
@@ -174,3 +164,58 @@ void fplot3d::flinev(float xa,float ya,float za,C32 c,float p)
 	ly=ya;
 	lz=za;
 }
+
+#define NEW_MAKE_COLOR
+#ifdef NEW_MAKE_COLOR
+C32 fplot3d::makeComplexColor(float real, float imag, pointf3 fColor, float gain)
+{
+	if (!gain) {
+		C32 col = pointf3toC32(&fColor);
+		return col;
+	}
+
+	float mag = gain * sqrt(real * real + imag * imag);
+	float ang = atan2(imag, real);
+	float red = mag * cos(ang);
+	float green = mag * cos(ang - 2 * PI / 3);
+	float blue = mag * cos(ang + 2 * PI / 3);
+	fColor.x += red;
+	fColor.y += green;
+	fColor.z += blue;
+	fColor.x = range(0.0f, fColor.x, 1.0f);
+	fColor.y = range(0.0f, fColor.y, 1.0f);
+	fColor.z = range(0.0f, fColor.z, 1.0f);
+	C32 col = pointf3toC32(&fColor);
+	return col;
+}
+#else
+C32 fplot3d::makeComplexColor(float real, float imag, pointf3 fColor, float gain)
+{
+	//const float start = .66f;
+	//const float gain = 1.5f;
+	//pointf3 fColor = { start, start, start };
+	if (!gain) {
+		C32 col = pointf3toC32(&fColor);
+		return col;
+	}
+	float dr = real * gain;
+	float dg = imag * gain;
+	fColor.x += dr;
+	fColor.y += dg;
+	fColor.x = range(0.0f, fColor.x, 1.0f);
+	fColor.y = range(0.0f, fColor.y, 1.0f);
+	C32 col = pointf3toC32(&fColor);
+	return col;
+}
+#endif
+
+/*
+scratch.getCssColorFromComplex = function(val) {
+	var mg = compf.abs(val);
+	var ang = Math.atan2(val[1],val[0]);
+	ang *= 180/Math.PI;
+	brt = 55*mg;
+	return "hsl(" + ang + ",100%," + brt + "%)";
+//	return "rgb(" + r + "," + g + "," + b + ")";
+};
+*/

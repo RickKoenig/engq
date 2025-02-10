@@ -39,7 +39,8 @@ public:
 		float pitcha,float yawa);
 	void drawaxis();
 	void drawlabels();
-	void fline(float x0,float y0,float z0,float x1,float y1,float z1,C32 c,float phasehilight=0.0f);
+	void fline(float x0,float y0,float z0,float x1,float y1,float z1, pointf3 startCol, float gain);
 	void startlinev();
-	void flinev(float x,float y,float z,C32 c,float phasehilight=0.0f);
+	void flinev(float x,float y,float z, pointf3 startCol, float gain);
+	static C32 makeComplexColor(float real, float imag,pointf3 startCol, float gain);
 };

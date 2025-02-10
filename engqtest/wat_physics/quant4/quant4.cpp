@@ -743,6 +743,9 @@ void quant4_draw2d()
 	rl->draw();
 	S32 i;
 	computet(lshift(countr,LTIMESIZE-LANIMSIZE));
+	pointf3 startCol{ .66f, .66f, .66f, 1 };
+	float gainCol = 1.5f;
+
 	switch(kind) {
 // r,i against x, animate t
 	case T_RI_X: 
@@ -820,20 +823,20 @@ void quant4_draw2d()
 			afplot3d.drawaxis();
 			afplot3d.drawlabels();
 			afplot3d.startlinev();
-			afplot3d.flinev(0.0f,0.0f,0.0f,C32YELLOW);
-			afplot3d.flinev(0.0f,0.0f,v1start,C32YELLOW);
-			afplot3d.flinev(0.0f,v1*vscale,v1start,C32YELLOW);
-			afplot3d.flinev(0.0f,v1*vscale,v1end,C32YELLOW);
-			afplot3d.flinev(0.0f,0.0f,v1end,C32YELLOW);
-			afplot3d.flinev(0.0f,0.0f,1.0f,C32YELLOW);
+			afplot3d.flinev(0.0f,0.0f,0.0f,F32YELLOW, 0);
+			afplot3d.flinev(0.0f,0.0f,v1start,F32YELLOW, 0);
+			afplot3d.flinev(0.0f,v1*vscale,v1start,F32YELLOW, 0);
+			afplot3d.flinev(0.0f,v1*vscale,v1end,F32YELLOW, 0);
+			afplot3d.flinev(0.0f,0.0f,v1end,F32YELLOW, 0);
+			afplot3d.flinev(0.0f,0.0f,1.0f,F32YELLOW, 0);
 			afplot3d.startlinev();
 			for (i=0;i<SPACESIZE;++i) {
 				float x=realst[i]*pscale;
 				float y=imagst[i]*pscale;
 				float z=i*(1.0f/SPACESIZE);
-				afplot3d.flinev(x,y,z,C32LIGHTGRAY,1.5f);
+				afplot3d.flinev(x,y,z,startCol,gainCol);
 			}
-			afplot3d.flinev(0.0f,0.0f,1.0f,C32LIGHTGRAY,1.5f);
+			afplot3d.flinev(0.0f,0.0f,1.0f,startCol,gainCol);
 			break;
 		}
 #if 0

@@ -102,6 +102,10 @@ float angsx[SPACESIZE][ENERGYARRSIZE]; // [x][n]
 float sumk; // sum of the energies
 float isumk; // graphical normalizer
 float normk; // sqrt(2/(sum of squared energies)) // real normalizer
+
+pointf3 startCol { .66f, .66f, .66f, 1 };
+float gainCol = 1.5f;
+
 float sint(S32 t)
 {
 	return sintb[(TRIGSIZE-1)&t];
@@ -729,9 +733,9 @@ void quantsho_draw2d()
 				float x=reals[lshift(countr,LTIMESIZE-LANIMSIZE)][i];
 				float y=imags[lshift(countr,LTIMESIZE-LANIMSIZE)][i];
 				float z=i*(1.0f/SPACESIZE);
-				afplot3d.flinev(x,y,z,C32LIGHTGRAY,1.5f);
+				afplot3d.flinev(x,y,z, startCol, gainCol);
 			}
-			afplot3d.flinev(0.0f,0.0f,1.0f,C32LIGHTGRAY,1.5f);
+			afplot3d.flinev(0.0f,0.0f,1.0f, startCol, gainCol);
 			break;
 		}
 // r,i against t, animate x
@@ -809,11 +813,11 @@ void quantsho_draw2d()
 				float x=reals[i][lshift(countr,LSPACESIZE-LANIMSIZE)];
 				float y=imags[i][lshift(countr,LSPACESIZE-LANIMSIZE)];
 				float z=i*(1.0f/TIMESIZE);
-				afplot3d.flinev(x,y,z,C32LIGHTGRAY,1.5f);
+				afplot3d.flinev(x,y,z, startCol, gainCol);
 			}
 			float x=reals[0][lshift(countr,LSPACESIZE-LANIMSIZE)];
 			float y=imags[0][lshift(countr,LSPACESIZE-LANIMSIZE)];
-			afplot3d.flinev(x,y,1.0f,C32LIGHTGRAY,1.5f);
+			afplot3d.flinev(x,y,1.0f, startCol, gainCol);
 			break;
 		}
 	default:
