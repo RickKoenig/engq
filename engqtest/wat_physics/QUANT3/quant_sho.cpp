@@ -22,7 +22,7 @@ text* tamp;
 hscroll* hamp;
 text* tph;
 hscroll* hph;
-pbut* badd;
+pbut* bAddOne;
 // add bell curve of energies
 text* tmean;
 hscroll* hmean;
@@ -32,7 +32,7 @@ text* twidth;
 hscroll* hwidth;
 text* tpc;
 hscroll* hpc;
-pbut* baddbell;
+pbut* bAddBell;
 // reset energies
 pbut* breset;
 // calc
@@ -357,7 +357,7 @@ void update_energy_list()
 			phk[i]=0;
 //		if (ak[i]) {
 			//lenergies->printf("E %3d %5d:A %6.2f,P %4d",i,i*i,ak[i],phk[i]);
-			lenergies->printf("E %3d %5d:A %6.2f,P %4d",i,1+2*i,ak[i],phk[i]);
+			lenergies->printf("E %3d %5d:A %6.2f,P %4d",i + 1,1+2*i,ak[i],phk[i]);
 //		}
 	}
 	lenergies->setidxc(oldidx);
@@ -401,7 +401,8 @@ void quantsho_init()
 
 	tenergy=rl->find<text>("TENERGY");
 	henergy=rl->find<hscroll>("HENERGY");
-	henergy->setminmaxval(0,MAXENERGY);
+	henergy->setminmaxval(1, MAXENERGY + 1);
+	//henergy->setminmaxval(0, MAXENERGY);
 	tamp=rl->find<text>("TAMP");
 	hamp=rl->find<hscroll>("HAMP");
 	hamp->setminmaxval(0,MAXAMP);
@@ -409,7 +410,7 @@ void quantsho_init()
 	hph=rl->find<hscroll>("HPH");
 	hph->setminmaxval(-TIMESIZE/2,TIMESIZE/2);
 	hph->setidx(0);
-	badd=rl->find<pbut>("BADD");
+	bAddOne=rl->find<pbut>("BADD");
 
 	tmean=rl->find<text>("TMEAN");
 	hmean=rl->find<hscroll>("HMEAN");
@@ -424,7 +425,7 @@ void quantsho_init()
 	hpc=rl->find<hscroll>("HPC");
 	hpc->setminmaxval(-TIMESIZE/2,TIMESIZE/2);
 	hpc->setidx(0);
-	baddbell=rl->find<pbut>("BADDBELL");
+	bAddBell=rl->find<pbut>("BADDBELL");
 	bcalc=rl->find<pbut>("BCALC");
 	hcntvel=rl->find<hscroll>("HCNTVEL");
 	hcntvel->setminmaxval(-MAXANIMSPEED,MAXANIMSPEED);
@@ -529,13 +530,14 @@ void quantsho_proc()
 		}
 // click in energies list
 	} else if (focus == lenergies) { // 0 to 30
-		if (ret>=0 && ret<ENERGYARRSIZE) {
-			//++ret;
-			henergy->setidx(ret); // 1 to 31
-			hmean->setidx(ret);
-			hamp->setidx((S32)(ak[ret]));
+		//if (ret >= 1 && ret < ENERGYARRSIZE + 1) {
+		if (ret >= 0 && ret < ENERGYARRSIZE) {
+			const S32 retp1 = ret + 1;
+			henergy->setidx(retp1); // 1 to 31
+			hmean->setidx(retp1);
+			hamp->setidx((S32)(ak[retp1]));
 			S32 p;
-			p=phk[ret];
+			p=phk[retp1];
 			p&=TIMESIZE-1;
 			if (p>=TIMESIZE/2)
 				p-=TIMESIZE;
@@ -549,9 +551,10 @@ void quantsho_proc()
 		update_text();
 	} else if (focus == hph) {
 		update_text();
-	} else if (focus == badd) {
+	} else if (focus == bAddOne) {
 		if (ret==1) {
-			S32 n=henergy->getidx();
+			S32 n = henergy->getidx();
+			--n; // internal qnums start with 0, not 1
 			S32 a=hamp->getidx();
 			S32 p=hph->getidx();
 			ak[n]=(float)a;
@@ -570,9 +573,10 @@ void quantsho_proc()
 		update_text();
 	} else if (focus == hpc) {
 		update_text();
-	} else if (focus == baddbell) {
+	} else if (focus == bAddBell) {
 		if (ret==1) {
 			float mean=(float)(hmean->getidx());
+			--mean; // internal qnums start with 0, not 1
 			float wid=float(hwidth->getidx());
 			float mamp=float(hmamp->getidx());
 			int phase=hpc->getidx();
@@ -598,7 +602,7 @@ void quantsho_proc()
 			docomp=true;
 			focus=lenergies;
 			if (mean>0)
-				lenergies->setidxc(S32(mean)-1);
+				lenergies->setidxc((S32)mean);
 		}
 	} else if (focus==hcntval && MBUT&1) {
 		countr=hcntval->getidx();
