@@ -4228,6 +4228,9 @@
     <ClCompile Include="u_code_practice.cpp">
       <Filter>Source Files\user\user_misc</Filter>
     </ClCompile>
+    <ClCompile Include="plotter_code\ladybug.cpp">
+      <Filter>Source Files\user\user_math\plotter_code</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="data\scratch\test.xml">

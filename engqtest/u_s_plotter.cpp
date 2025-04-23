@@ -553,17 +553,24 @@ void calcstuff()
 //#include "plotter_code/hough_test.cpp" // test hough lines
 //#include "plotter_code/pers.cpp" // test perspective correction
 //#include "plotter_code/dds2png.cpp" // converts dds and tga's to png's
-#include "plotter_code/rotrect.cpp" // find bounding box of rotated rectangle
+//#include "plotter_code/rotrect.cpp" // find bounding box of rotated rectangle
 //#include "plotter_code/testline2btri.cpp" // test line to triangle
 //#include "plotter_code/power.cpp" // complex power
 //#include "plotter_code/zeta.cpp" // study zeta function
 //#include "plotter_code/poles.cpp" // study complex analysis
 //#include "plotter_code/makeasmallfont.cpp" // very small font
-#include "plotter_code/passport.cpp"
+//#include "plotter_code/passport.cpp"
+#include "plotter_code/ladybug.cpp"
 
 
 void calcstuff()
 {
+#ifdef LADYBUG
+	procladybug();
+#endif
+#ifdef LADYBUG2
+	procladybug2();
+#endif
 #ifdef INTERP
 	calcpoly();
 #endif
@@ -618,6 +625,12 @@ void drawstuff()
 	drawquantsho();
 #endif
 
+#ifdef LADYBUG
+	drawladybug();
+#endif
+#ifdef LADYBUG2
+	drawladybug2();
+#endif
 #ifdef LENS
 	drawlens();
 #endif
@@ -782,12 +795,14 @@ struct menuvar edv[]={
 	{"linregM",&lrm,D_FLOAT|D_RDONLY},
 	{"linregB",&lrb,D_FLOAT|D_RDONLY},
 #endif
+#ifdef LADYBUG
+#endif
 #ifdef LENS
-	{"focus",&focus,D_FLOAT,FLOATUP/16},
-	{"objx",&objx,D_FLOAT,FLOATUP/16},
-	{"objy",&objy,D_FLOAT,FLOATUP/16},
-	{"imgx",&imgx,D_FLOAT|D_RDONLY},
-	{"imgy",&imgy,D_FLOAT|D_RDONLY},
+	{ "focus",&focus,D_FLOAT,FLOATUP / 16 },
+	{ "objx",&objx,D_FLOAT,FLOATUP / 16 },
+	{ "objy",&objy,D_FLOAT,FLOATUP / 16 },
+	{ "imgx",&imgx,D_FLOAT | D_RDONLY },
+	{ "imgy",&imgy,D_FLOAT | D_RDONLY },
 #endif
 #ifdef BELL
 	// namespace bell
@@ -1180,6 +1195,12 @@ void plotterinit()
 #ifdef PERS
 	initpers();
 #endif
+#ifdef LADYBUG
+	initladybug();
+#endif
+#ifdef LADYBUG2
+	initladybug2();
+#endif
 }
 
 void plotterproc()
@@ -1269,5 +1290,11 @@ void plotterexit()
 #endif
 #ifdef POLES
 	poles_exit();
+#endif
+#ifdef LADYBUG
+	exitladybug();
+#endif
+#ifdef LADYBUG2
+	exitladybug2();
 #endif
 }

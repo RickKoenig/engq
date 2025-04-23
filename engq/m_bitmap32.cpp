@@ -974,7 +974,7 @@ void con32_printfvs(const struct con32* con,const C8* fmt,va_list arglist)
 	static C8 str[40960];
 	C8 *strptr=str; // danger, danger!
 	vsprintf(str,fmt,arglist);
-	//logger("%s",str); // sometimes commented out
+	logger("%s",str); // sometimes commented out
 	if (!con)
 		return;
 	while(*strptr) {

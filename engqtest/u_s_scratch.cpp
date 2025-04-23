@@ -42,7 +42,7 @@
 //#define DO_RANDOM_TESTS
 //#define DO_FIFO
 //#define ZERO_KNOWLEDGE
-#define CODE_PRACTICE
+//#define CODE_PRACTICE
 #ifdef CODE_PRACTICE
 #include "u_code_practice.h"
 #endif
@@ -81,7 +81,7 @@
 //#define STRTOKTEST
 //#define LEIATEST1 // task cooldown
 //#define LEIATEST2 // median class
-//#define LEIATEST3 // Strobogrammatic number
+#define LEIATEST3 // Strobogrammatic number
 //#define ZIGZAG
 //#define REVERSELINKLIST
 //#define CYCLICCOPY

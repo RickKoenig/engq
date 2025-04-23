@@ -58,7 +58,7 @@ struct con32 {
 	mutable S32 x,y;
 	struct bitmap32* b32;
 };
-	
+
 con32 *con32_alloc(S32 w,S32 h,C32 fc,C32 bc);
 void con32_clear(struct con32* c);
 struct bitmap32 *con32_getbitmap32(const struct con32* c);
