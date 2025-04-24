@@ -1010,7 +1010,7 @@ struct menuvar edv[]={
 };
 const int nedv = NUMELEMENTS(edv);
 
-int cntr;
+int cntr2;
 
 #ifdef USEPLOTTERNAMESPACE
 } // namespace u_s_plotter
@@ -1025,7 +1025,7 @@ void plotterinit()
 	setfpuroundprec(FPUCW_RND_NEAR,FPUCW_PREC_80);
 	//aclass* pc = 0;
 	//pc->amethod();
-	cntr = 0;
+	cntr2 = 0;
 	video_setupwindow(GX,GY);
 	extradebvars(edv,nedv);
 // read the cfg file (if exists)
@@ -1237,8 +1237,8 @@ void plotterproc()
 		break;
 	}
 	calcstuff();
-	//con32_printf(con,"cntr = %d\n",cntr);
-	++cntr;
+	//con32_printf(con,"cntr2 = %d\n",cntr2);
+	++cntr2;
 #ifdef PROVIDER
 	procprovider();
 #endif
