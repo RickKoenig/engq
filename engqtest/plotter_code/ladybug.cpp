@@ -106,6 +106,7 @@ public:
 	// depth first iteration for now, tricky
 	// return true if keep going
 	bool nextPos() {
+		Sleep(200);
 		++ladyCount;
 		// try to go deeper
 		if (numTokens < maxTokens) {
@@ -182,10 +183,10 @@ private:
 enum stepRet { STEP_CONTINUE, STEP_DONE, STEP_ABORT };
 
 class simLadybug {
-	S32 minLeaves;
-	S32 maxLeaves;
-	S32 maxTokens;
-	S32 maxTokensPlayed;
+	const S32 minLeaves;
+	const S32 maxLeaves;
+	const S32 maxTokens;
+	const S32 maxTokensPlayed;
 	S32 numLeaves;
 	board* game;
 public:
@@ -195,25 +196,39 @@ public:
 		con32_printf(ladyCon ,"\nNUM LEAVES = %d\n", numLeaves);
 	}
 
-	stepRet step(S64* lc) {
-		bool go = game->nextPos();
-		*lc = game->ladyCount;
-		if (go) {
+	stepRet step(S64* lc, S32 numSteps) {
+		winproc();
+		if (KEY == 'p') {
 			*lc = game->ladyCount;
-			return STEP_CONTINUE; // keep going
+			return STEP_ABORT;
 		}
-		con32_printf(ladyCon, "\nfinal ladyCount = %lld\n", game->ladyCount);
-		if (numLeaves == maxLeaves) {
-			numLeaves = minLeaves;
+		while (numSteps--) {
+			bool go = game->nextPos();
+			if (go) {
+				*lc = game->ladyCount;
+				//continue;
+				return STEP_CONTINUE; // keep going
+			}
+			con32_printf(ladyCon, "\nfinal ladyCount = %lld\n", game->ladyCount);
+			if (numLeaves == maxLeaves) {
+				numLeaves = minLeaves;
+				delete game;
+				game = new board(numLeaves, maxTokens);
+				return STEP_DONE;
+			}
+			++numLeaves;
+			con32_printf(ladyCon, "\nNUM LEAVES = %d\n", numLeaves);
 			delete game;
 			game = new board(numLeaves, maxTokens);
-			return STEP_DONE;
+			return STEP_CONTINUE;
 		}
-		++numLeaves;
-		con32_printf(ladyCon, "\nNUM LEAVES = %d\n", numLeaves);
+		return STEP_CONTINUE;
+	}
+
+	void reset() {
+		numLeaves = minLeaves;
 		delete game;
 		game = new board(numLeaves, maxTokens);
-		return STEP_CONTINUE;
 	}
 
 	void printBoard() {
@@ -416,6 +431,7 @@ void procladybug2() {
 		con32_printf(ladyCon, "reset\n");
 		running = false;
 		done = false;
+		sim->reset();
 		break;
 	}
 	while (running && !done) {
@@ -426,11 +442,9 @@ void procladybug2() {
 				//const S64 outerWatch = 98'234'567'890L;
 			sim->printBoard();
 		}
-		S64 lc;
-		stepRet ret = sim->step(&lc);
-		//++ladyCount;
-
-
+		S64 lc; // lady count
+		const S32 numSteps = 1;
+		stepRet ret = sim->step(&lc, numSteps);
 		switch (ret) {
 		case STEP_DONE:
 			//con32_printf(ladyCon, "done");
