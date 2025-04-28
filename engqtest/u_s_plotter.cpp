@@ -568,9 +568,6 @@ void calcstuff()
 #ifdef LADYBUG
 	procladybug();
 #endif
-#ifdef LADYBUG2
-	procladybug2();
-#endif
 #ifdef INTERP
 	calcpoly();
 #endif
@@ -627,9 +624,6 @@ void drawstuff()
 
 #ifdef LADYBUG
 	drawladybug();
-#endif
-#ifdef LADYBUG2
-	drawladybug2();
 #endif
 #ifdef LENS
 	drawlens();
@@ -1198,9 +1192,6 @@ void plotterinit()
 #ifdef LADYBUG
 	initladybug();
 #endif
-#ifdef LADYBUG2
-	initladybug2();
-#endif
 }
 
 void plotterproc()
@@ -1293,8 +1284,5 @@ void plotterexit()
 #endif
 #ifdef LADYBUG
 	exitladybug();
-#endif
-#ifdef LADYBUG2
-	exitladybug2();
 #endif
 }

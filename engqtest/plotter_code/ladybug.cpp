@@ -1,8 +1,7 @@
 #include <Windows.h>
 
-#define LADYBUG2
+#define LADYBUG
 con32* ladyCon;
-//S64 ladyCount;
 bool running;
 bool done;
 
@@ -58,11 +57,7 @@ public:
 
 	// print a 2d vector of S32
 	void printBoard() {
-		con32_printf(ladyCon, "\nladyCount = %lld\n", ladyCount);
-		if (numTokens > maxTokensPlayed) {
-			maxTokensPlayed = numTokens;
-			con32_printf(ladyCon, "maxTokensPlayed now at %d\n", maxTokensPlayed);
-		}
+		con32_printf(ladyCon, "ladyCount = %lld\n", ladyCount);
 		stringstream ss;
 #define SHOW_LEAVES
 #ifdef SHOW_LEAVES
@@ -80,12 +75,12 @@ public:
 			}
 			ss << "]";
 			if (j + 1 < leaves.size()) {
-				ss << ",";
+				ss << "\n";
 			}
 		}
 		con32_printf(ladyCon, "%s\n", ss.str().c_str());
 #endif 
-#define SHOW_TOKENPOS
+//#define SHOW_TOKENPOS
 #ifdef SHOW_TOKENPOS
 		ss.str("");
 		ss.clear();
@@ -106,7 +101,13 @@ public:
 	// depth first iteration for now, tricky
 	// return true if keep going
 	bool nextPos() {
-		Sleep(200);
+		//printBoard();
+		if (numTokens > maxTokensPlayed) {
+			maxTokensPlayed = numTokens;
+			con32_printf(ladyCon, "\nmaxTokensPlayed now at %d\n", maxTokensPlayed);
+			printBoard();
+		}
+		//Sleep(200);
 		++ladyCount;
 		// try to go deeper
 		if (numTokens < maxTokens) {
@@ -127,9 +128,6 @@ public:
 				return false;
 			}
 			// try to move.numTokens across
-			if (numTokens == 0) {
-				return false;
-			}
 			removeToken();
 			++leaf;
 			if (leaf < numLeaves) {
@@ -151,7 +149,8 @@ public:
 			//console.log("going back up");
 			continue;
 		}
-		//console.log("done sequence");
+		con32_printf(ladyCon, "done sequence for numleaves = %d, maxTokensPlayed %d\n", numLeaves, maxTokensPlayed);
+		//printBoard();
 		return false;
 	}
 private:
@@ -174,7 +173,7 @@ private:
 	// return true if allowed
 	bool checkToken() {
 		//return true; // always good
-		//return leaves[leaf].length < 2; // can't be placed if 2 or more leafs already present
+		//return leaves[leaf].size() < 2; // can't be placed if 2 or more leafs already present
 		const S32 newToken = numTokens + 1;
 		return !doSumCheck(leaves[leaf], newToken); // leaf can't be sum of 2 other leaves
 	}
@@ -202,12 +201,13 @@ public:
 			*lc = game->ladyCount;
 			return STEP_ABORT;
 		}
+		con32_printf(ladyCon, "STEP ladyCount = %16lld\n", game->ladyCount);
 		while (numSteps--) {
 			bool go = game->nextPos();
 			if (go) {
 				*lc = game->ladyCount;
-				//continue;
-				return STEP_CONTINUE; // keep going
+				continue;
+				//return STEP_CONTINUE; // keep going
 			}
 			con32_printf(ladyCon, "\nfinal ladyCount = %lld\n", game->ladyCount);
 			if (numLeaves == maxLeaves) {
@@ -231,10 +231,6 @@ public:
 		game = new board(numLeaves, maxTokens);
 	}
 
-	void printBoard() {
-		game->printBoard();
-	}
-
 	~simLadybug() {
 		delete game;
 	}
@@ -242,181 +238,19 @@ public:
 
 simLadybug* sim;
 
-/*
-void doLadybug() {
-	con32_printf(ladyCon, "doing ladybug puzzle\n");
-	const S32 minLeaves = 1;
-	const S32 maxLeaves = 3;
-	const S32 maxTokens = 1000;
-	S32 maxTokensPlayed = 0;
-	for (S32 numLeaves = minLeaves; numLeaves <= maxLeaves; ++numLeaves) {
-		con32_printf(ladyCon, "\nNUM LEAVES = %d\n", numLeaves);
-		board* game = new board(numLeaves, maxTokens);
-		S64 outerWatch = 0L;
-		const S64 maxOuterWatch = 20'000'000'000L;
-		do {
-			if (game->numTokens > maxTokensPlayed) {
-				maxTokensPlayed = game->numTokens;
-				con32_printf(ladyCon, "maxTokensPlayed now at %d\n", maxTokensPlayed);
-			}
-			//if (true) {
-			if (false) {
-			//if (outerWatch % 20000000 == 0) {
-			//if (game.numTokens >= maxTokensPlayed) {
-				con32_printf(ladyCon, "\nouterWatch now at %lld\n", outerWatch);
-				game->printBoard();
-			}
-			++outerWatch;
-			if (outerWatch >= maxOuterWatch) {
-				con32_printf(ladyCon, "outer watch hit\n");
-				break;
-			}
-		} while (game->nextPos());
-		con32_printf(ladyCon, "total positions = %lld\n", outerWatch);
-		delete game;
-	}
-	con32_printf(ladyCon, "\ndone ladybug puzzle\n");
-}
-
-
-void stepLadybug2() {
-	con32_printf(ladyCon, "starting ladybug puzzle");
-	const S32 numLeaves = 1;
-	const S32 maxTokens = 1'000;
-	S32 maxTokensPlayed = 0;
-	S64 outerWatch = 0L;
-	const S64 maxOuterWatch = 20'000'000L;
-	con32_printf(ladyCon, "\nNUM LEAVES = " + numLeaves);
-	board* game = new board(numLeaves, maxTokens);
-	do {
-		if (game->numTokens > maxTokensPlayed) {
-			maxTokensPlayed = game->numTokens;
-			con32_printf(ladyCon, "maxTokensPlayed now at " + maxTokensPlayed);
-		}
-		if (outerWatch % 20'000'000 == 0) {
-			//if (game.numTokens >= maxTokensPlayed) {
-			con32_printf(ladyCon, "outerWatch now at " + outerWatch);
-			game->printBoard();
-		}
-		++outerWatch;
-		if (outerWatch >= maxOuterWatch) {
-			con32_printf(ladyCon, "outer watch hit");
-			break;
-		}
-	} while (game->nextPos());
-	con32_printf(ladyCon, "total positions = " + outerWatch);
-	con32_printf(ladyCon, "\ndone ladybug puzzle");
-	delete game;
-}*/
-
-// return should keep going, opposite of done
-/*
-stepRet stepladybug1() {
-	++ladyCount;
-	if ((ladyCount % numSteps) == 0) {
-		winproc();
-	}
-	switch (KEY) {
-	case 'p':
-		con32_printf(ladyCon, "steplaybug1 pause, go back to main loop\n");
-		return STEP_ABORT;
-		break;
-	}
-	return ladyCount < maxLadyCount ? STEP_CONTINUE : STEP_DONE;
-}
-
 void initladybug() {
-	logger("--- init ladybug ---\n");
-	ladyCon = con32_alloc(600, 400, C32WHITE, C32BLACK);
-	con32_printf(ladyCon, "init ladybug\n");
-	con32_printf(ladyCon, "sizeof ladyCount = %d\n", sizeof ladyCount);
-	ladyCount = 0L;
-	running = false;
-	done = false;
-}
-
-void procladybug() {
-	//logger("proc ladybug\n");
-	switch (KEY) {
-	case 'c':
-		con32_printf(ladyCon, "running\n");
-		running = true;
-		break;
-	case 'p':
-		con32_printf(ladyCon, "paused\n");
-		running = false;
-		break;
-	case 'r':
-		con32_printf(ladyCon, "reset\n");
-		running = false;
-		done = false;
-		ladyCount = 0L;
-		break;
-	}
-	if (running) {
-		if (done) {
-			con32_printf(ladyCon, "done !, ladyCount = %lld\n", ladyCount);
-			running = false;
-		} else {
-			while (true) {
-				stepRet ret = stepladybug1();
-				switch (ret) {
-				case STEP_DONE:
-					//con32_printf(ladyCon, "done");
-					done = true;
-					return;
-				case STEP_CONTINUE:
-					break;
-				case STEP_ABORT:
-					running = false;
-					return;
-				}
-				if ((ladyCount % numSteps) == 0) {
-					con32_printf(ladyCon, "ladyCount = %lld\n", ladyCount);
-				}
-
-			}
-			done = true;
-			//con32_printf(ladyCon, "count = %lld\n", ladyCount);
-		}
-	}
-}
-
-void drawladybug()
-{
-	//logger("draw ladybug\n");
-	bitmap32* cbm = con32_getbitmap32(ladyCon);
-	clipblit32(cbm, B32, 0, 0, 20, WY - 32 - cbm->size.y, cbm->size.x, cbm->size.y);
-	outtextxyb32(B32, 30, 30, C32WHITE, C32BLACK, "press 'c' to start / continue");
-	outtextxyb32(B32, 30, 38, C32WHITE, C32BLACK, "press 'p' to pause");
-	outtextxyb32(B32, 30, 46, C32WHITE, C32BLACK, "press 'r' to reset");
-}
-
-void exitladybug() {
-	logger("--- exit ladybug ---\n");
-	con32_free(ladyCon);
-}
-*/
-
-
-
-
-
-
-void initladybug2() {
 	logger("--- init ladybug2 ---\n");
 	ladyCon = con32_alloc(600, 400, C32WHITE, C32BLACK);
 	con32_printf(ladyCon, "init ladybug2\n");
-//	doLadybug();
 	running = false;
 	done = false;
 	const S32 minLeaves = 1;
-	const S32 maxLeaves = 2;
+	const S32 maxLeaves = 4;
 	const S32 maxTokens = 1000;
 	sim = new simLadybug(minLeaves, maxLeaves, maxTokens);
 }
 
-void procladybug2() {
+void procladybug() {
 	//logger("proc ladybug\n");
 	switch (KEY) {
 	case 'c':
@@ -435,20 +269,12 @@ void procladybug2() {
 		break;
 	}
 	while (running && !done) {
-		if (true) {
-			//if (false) {
-			//if (outerWatch % 20000000 == 0) {
-			//if (game.numTokens >= maxTokensPlayed) {
-				//const S64 outerWatch = 98'234'567'890L;
-			sim->printBoard();
-		}
 		S64 lc; // lady count
-		const S32 numSteps = 1;
+		const S32 numSteps = 100'000'000;
 		stepRet ret = sim->step(&lc, numSteps);
 		switch (ret) {
 		case STEP_DONE:
-			//con32_printf(ladyCon, "done");
-			con32_printf(ladyCon, "done !, ladyCount = %lld\n", lc);
+			con32_printf(ladyCon, "ALL done !\n");
 			done = true;
 			running = false;
 			//ladyCount = 0;
@@ -460,24 +286,19 @@ void procladybug2() {
 			running = false;
 			break;
 		}
-		//if ((ladyCount % numSteps) == 0) {
-			//con32_printf(ladyCon, "ladyCount = %lld\n", ladyCount);
-		//}
 	}
 }
 
-void drawladybug2()
+void drawladybug()
 {
-	//logger("draw ladybug\n");
 	bitmap32* cbm = con32_getbitmap32(ladyCon);
 	clipblit32(cbm, B32, 0, 0, 20, WY - 32 - cbm->size.y, cbm->size.x, cbm->size.y);
 	outtextxyb32(B32, 30, 30, C32WHITE, C32BLACK, "press 'c' to start / continue");
 	outtextxyb32(B32, 30, 38, C32WHITE, C32BLACK, "press 'p' to pause");
 	outtextxyb32(B32, 30, 46, C32WHITE, C32BLACK, "press 'r' to reset");
-	//Sleep(200);
 }
 
-void exitladybug2() {
+void exitladybug() {
 	logger("--- exit ladybug2 ---\n");
 	delete sim;
 	con32_free(ladyCon);
