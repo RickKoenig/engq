@@ -430,9 +430,9 @@ void mainmenuproc()
 void mainmenudraw2d()
 {
 //	video_lock();
-//	cliprect32(B32,0,0,WX,WY,C32GREEN); // test
+	cliprect32(B32,0,0,WX,WY,C32GREEN); // test
 	menushapes->draw();
-	outtextxyf32(B32,WX/2-5*4,10,C32CYAN,"main menu");
+	outtextxyf32(B32, WX / 2 - 5 * 4, 10, C32CYAN, "main menu");
 	rgbcol.r=idxr;
 	rgbcol.g=idxg;
 	rgbcol.b=idxb;
